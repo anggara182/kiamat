@@ -97,6 +97,7 @@ export const Transitions: React.FC = () => {
 /* ---------------- captions ---------------- */
 type Page = { words: Word[]; start: number; end: number; lines: Word[][] };
 const MAX_LINE = 21;
+const CAPTION_TAIL = 0.6; // s the last caption page lingers after its last word
 const len = (ws: Word[]) => ws.reduce((a, w) => a + w.text.length + 1, 0) - 1;
 const lineify = (ws: Word[]) => {
   const lines: Word[][] = [[]];
@@ -116,7 +117,8 @@ const paginate = (words: Word[], shotEnd: number): Page[] => {
     if (/[.!?…]$/.test(w.text) && len(cur) > 10) { pages.push(cur); cur = []; }
   }
   if (cur.length) pages.push(cur);
-  return pages.map((ws, i) => ({ words: ws, lines: lineify(ws), start: ws[0].start, end: i < pages.length - 1 ? pages[i + 1][0].start : shotEnd }));
+  // last page ends shortly after its last word (not at the shot end), so end cards/title cards stay clean
+  return pages.map((ws, i) => ({ words: ws, lines: lineify(ws), start: ws[0].start, end: i < pages.length - 1 ? pages[i + 1][0].start : Math.min(shotEnd, ws[ws.length - 1].end + CAPTION_TAIL) }));
 };
 const PAGES = SPANS.flatMap((s) => (NO_CAPTION.has(s.shot.id) ? [] : paginate(s.shot.words, (s.from + s.dur) / FPS).map((p) => ({ ...p, shot: s.shot.id, shotFrom: s.from }))));
 
@@ -125,7 +127,8 @@ export const Captions: React.FC = () => {
   const t = f / FPS;
   const page = PAGES.find((p) => t >= p.start - 0.05 && t < p.end);
   const span = SPANS.find((s) => f >= s.from && f < s.from + s.dur);
-  const scrimOn = span && !NO_CAPTION.has(span.shot.id) ? 1 : 0;
+  const lastWord = span?.shot.words[span.shot.words.length - 1];
+  const scrimOn = span && !NO_CAPTION.has(span.shot.id) && (!lastWord || t < lastWord.end + CAPTION_TAIL) ? 1 : 0;
   return (
     <AbsoluteFill style={{ pointerEvents: 'none' }}>
       {/* fixed lower-third scrim */}
