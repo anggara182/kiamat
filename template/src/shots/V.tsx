@@ -61,3 +61,28 @@ export const S12: React.FC = () => {
     </AbsoluteFill>
   );
 };
+
+/** shot 14 — CONTOH MODE TERANG. Siang terik, rumah sepi, pintu terbuka gelap dan ada yang berdiri di dalamnya. Slow push-in.
+ *  Seramnya dari kontras: semua terang dan wajar, kecuali satu lubang gelap. */
+export const S14: React.FC = () => {
+  const { p } = useShot();
+  const z = 1.25 + 0.2 * ramp(p, 0, 1, EIO);
+  const cam: Cam = { zoom: z, dx: 0, dy: 0, ty: -60, ox: 655, oy: 1180 };
+  const D = VG.DOOR;
+  const fig = ramp(p, 0.35, 0.7);
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#b9d0de' }}>
+      <BandImg id="village/day" k={0.9} cam={cam} />
+      <Live k={0.9} cam={cam}>
+        {/* pintu terbuka: interior hitam pekat di siang bolong */}
+        <rect x={D.x} y={D.y} width={D.w} height={D.h} fill="#0a0807" />
+        <rect x={D.x} y={D.y} width={D.w * 0.2} height={D.h} fill="#5a4a38" />
+        {/* sosok samar di dalam pintu, hanya siluet sedikit lebih terang dari gelapnya */}
+        <g opacity={fig} fill="#2a2420">
+          <ellipse cx={D.x + D.w * 0.6} cy={D.y + 52} rx={17} ry={21} />
+          <path d={`M ${D.x + D.w * 0.6 - 26} ${D.y + D.h} L ${D.x + D.w * 0.6 - 22} ${D.y + 80} Q ${D.x + D.w * 0.6} ${D.y + 68} ${D.x + D.w * 0.6 + 22} ${D.y + 80} L ${D.x + D.w * 0.6 + 26} ${D.y + D.h} Z`} />
+        </g>
+      </Live>
+    </AbsoluteFill>
+  );
+};

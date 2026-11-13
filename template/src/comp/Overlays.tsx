@@ -13,10 +13,15 @@ export const GREEN = EP.accent ?? '#7dffb0'; // caption keyword colour (per epis
  * The grain tiles are pre-converted to signed alpha noise (white/black + alpha), so a plain alpha
  * blend reproduces the old overlay-blend look without forcing a blend-mode composite of the whole frame.
  */
-/** Vignette only: grain is added at the final ffmpeg encode (scripts/finish.sh), so it can be tuned without re-rendering. */
-export const Vignette: React.FC<{ vignette?: number }> = ({ vignette = 0.7 }) => (
-  <AbsoluteFill style={{ pointerEvents: 'none', background: `radial-gradient(ellipse 75% 60% at 50% 48%, rgba(0,0,0,0) 55%, rgba(8,4,16,${vignette}) 100%)` }} />
-);
+/** Vignette only: grain is added at the final ffmpeg encode (scripts/finish.sh), so it can be tuned without re-rendering.
+ *  Strength follows the current shot's `light`: night .7, dawn .5, day .3 (bright shots keep their light, edges still settle). */
+export const VIGNETTE_BY_LIGHT = { night: 0.7, dawn: 0.5, day: 0.3 } as const;
+export const Vignette: React.FC<{ vignette?: number }> = ({ vignette }) => {
+  const f = useCurrentFrame();
+  const span = SPANS.find((s) => f >= s.from && f < s.from + s.dur) ?? SPANS[SPANS.length - 1];
+  const v = vignette ?? VIGNETTE_BY_LIGHT[span.shot.light ?? 'night'];
+  return <AbsoluteFill style={{ pointerEvents: 'none', background: `radial-gradient(ellipse 75% 60% at 50% 48%, rgba(0,0,0,0) 55%, rgba(8,4,16,${v}) 100%)` }} />;
+};
 
 export const Grain: React.FC<{ opacity?: number; vignette?: number }> = ({ opacity = 0.075, vignette = 0.75 }) => {
   const f = useCurrentFrame();

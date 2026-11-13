@@ -7,7 +7,7 @@ Contoh frame: `contoh-frame.jpg` (dari EP07, EP04, EP13, EP19).
 ## 1. Look
 - **Vektor semi-realis yang distilisasi.** Siluet berlapis di depan cahaya gradien yang kaya, nuansa wayang / poster sinematik.
 - **100% SVG kode di Remotion.** Tanpa 3D, tanpa gambar AI.
-- **Gelap dan sunyi.** Latar hampir rata, biru-hitam keunguan. Ada satu sumber cahaya yang jelas (lampu jalan, jendela, lilin, sinar dari atas), dan hero diletakkan di area paling terang itu.
+- **Sunyi, dengan satu sumber cahaya yang jelas.** Default-nya malam: latar hampir rata, biru-hitam keunguan, dengan lampu jalan, jendela, lilin, atau sinar dari atas. Hero diletakkan di area paling terang itu. Shot terang (siang, sore, subuh, ruangan terang) juga boleh, lihat §4b.
 - **Hantu lebih banyak tersirat:** siluet, rambut, tangan, pantulan, mata, jejak. Seram, tidak gore.
 - **Hard cut saja.** Tanpa light leak, transisi, glitch, chromatic aberration, flash, atau shake sebagai efek.
 
@@ -32,6 +32,26 @@ Setiap episode punya palet sendiri, tapi polanya selalu sama:
 - Rim light dingin, mis. `#a9c4e8`, kadang ditambah rim hangat dari sumber cahaya.
 - Hero kain / kulit pucat: off-white dengan bayangan dingin, mis. `#e9e4d6` / `#9aa0b0`.
 - **Satu warna aksen per episode** untuk kata kunci caption dan judul (mis. `#ffcc4d`, `#ff6b8a`, `#4fd1c5`).
+
+## 4b. Mode terang (siang / sore / subuh / dalam ruangan terang)
+Tidak semua shot harus malam. Look-nya tetap sama (siluet berlapis, satu sumber cahaya, low detail kecuali hero); yang berubah hanya nilai warnanya.
+
+**Prinsip seram di tempat terang:** semuanya wajar dan cerah, **kecuali satu hal yang salah**: lubang gelap (pintu terbuka, jendela, kolong, sumur), bayangan yang arahnya salah, sosok diam di kejauhan, atau benda yang tidak semestinya ada. Kontrasnya dibalik: di malam hari hero terang di depan gelap, di siang hari **hero gelap di depan terang**.
+
+| Mode | Langit / latar | Cahaya | Siluet / bayangan | Kapan dipakai |
+|---|---|---|---|---|
+| Siang terik | Gradien pucat berkabut panas, mis. `#7fa6c4` → `#b9d0de` → `#eee3c8` | Matahari putih-kuning `#fffdf2` + glow radial besar | Bayangan keras dan pendek, cokelat gelap opacity .2–.35; vegetasi hijau-abu `#4d5a49` | Hook yang kontradiktif ("siang bolong…"), adegan biasa sebelum kejadian, ending yang menenangkan lalu twist |
+| Sore / golden hour | `#f2b880` → `#e0896a` → `#5a4060` | Matahari rendah oranye, rim hangat panjang | Bayangan panjang miring, siluet ungu tua | Peralihan ke malam, firasat |
+| Subuh / mendung | `#3a4152` → `#6d7180` → `#a59a94` | Cahaya datar, tanpa bayangan tegas | Siluet abu kebiruan `#262a33` | Pagi setelah kejadian, bukti yang tertinggal |
+| Dalam ruangan terang | Dinding krem/putih, lampu neon atau jendela siang | Neon putih dingin atau sinar jendela | Sudut dan kolong tetap gelap | Kamar mandi, dapur, kantor, sekolah |
+
+Aturan tambahan untuk shot terang:
+- Isi field `light` di shot (`"day"` / `"dawn"` / `"night"`, default `night`). Vignette global otomatis menyesuaikan: night .7, dawn .5, day .3.
+- Pertahankan 3 lapis kedalaman. Di siang hari, foreground dibuat lebih gelap dan lebih dingin dari midground supaya tetap ada framing.
+- Warna aksen episode tetap sama di shot terang dan gelap.
+- Caption tetap terbaca karena scrim bawah global. Cek tiap shot terang di preview, terutama kalau bagian bawah frame berwarna putih atau krem.
+- Pola dalam satu episode: boleh mulai terang lalu makin gelap, atau gelap dengan satu shot terang sebagai jeda / bukti. Jangan bolak-balik terang-gelap tiap shot.
+- Contoh di template: set `village` punya band `village/bg` (malam), `village/dawn` (subuh), dan `village/day` (siang, palet di `PAL` dalam `src/sets/village.tsx`); shot 14 (`S14`) adalah contoh shot siang. Lihat `contoh-terang.jpg`.
 
 ## 5. Karakter
 - Wajah tidak detail. Karakter lebih sering terlihat dari belakang, samping, atau sebagai siluet. Mulut hantu tidak pernah ditunjukkan.
@@ -63,7 +83,7 @@ Setiap episode punya palet sendiri, tapi polanya selalu sama:
 ## 9. Isi repo
 | Path | Isi |
 |---|---|
-| `template/` | Kit Remotion siap pakai: `src/comp/Camera.tsx` (kamera, band, Live), `Bands.tsx`, `Overlays.tsx` (vignette + caption), `Episode.tsx`, `data/ep.ts` (`wordAt`, `spanOf`). Berisi satu episode contoh dari set EP15 (village, inside, graphic) dengan caption placeholder. |
+| `template/` | Kit Remotion siap pakai: `src/comp/Camera.tsx` (kamera, band, Live), `Bands.tsx`, `Overlays.tsx` (vignette + caption), `Episode.tsx`, `data/ep.ts` (`wordAt`, `spanOf`). Berisi satu episode contoh dari set EP15 (village, inside, graphic) dengan caption placeholder, plus shot 14 sebagai contoh mode terang. |
 | `template/scripts/` | `bake.mjs`, `preview.mjs`, `contact.mjs` (alat cek visual), `finish.sh` + `grain.py` (grain encode, opsional) |
 | `library/episodes/<ep>/` | Kode `art/`, `sets/`, `shots/`, dan `STYLE.md` (palet, karakter) EP02–EP20 |
 | `library/LIBRARY.md`, `library/catalog.json` | Indeks 249 komponen per kategori (character, face, hand, prop, fx, environment, set) |

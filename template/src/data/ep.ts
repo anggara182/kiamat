@@ -5,6 +5,8 @@ export type Shot = {
   id: number; start: number; end: number; act: number; set: string; framing: string; camera: string;
   vo: string; voKind: string; notes: string; words: Word[];
   trans?: 'cut' | 'dip' | 'flash' | 'white'; caption?: boolean; leak?: number; cool?: boolean; hero?: string; owner?: string;
+  /** mode cahaya shot: night (default) | dawn | day. Mengatur kekuatan vignette global. */
+  light?: 'night' | 'dawn' | 'day';
 };
 type Ep = { accent?: string; fps: number; width: number; height: number; durationSec: number; audio?: boolean; shots: Shot[] };
 

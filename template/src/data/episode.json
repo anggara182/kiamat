@@ -4,7 +4,7 @@
  "fps": 30,
  "width": 1080,
  "height": 1920,
- "durationSec": 58.287,
+ "durationSec": 61.787,
  "accent": "#ff7a59",
  "timingSource": "ai33 eleven_v3 transcript, tempo x1.05",
  "shots": [
@@ -554,6 +554,51 @@
    "cool": false,
    "hero": "CTA with a phone and door motif",
    "notes": "No caption (on-screen text)."
+  },
+  {
+   "id": 14,
+   "start": 58.287,
+   "end": 61.787,
+   "act": 1,
+   "set": "village",
+   "owner": "V",
+   "framing": "Wide, rumah di siang terik",
+   "camera": "Slow push-in",
+   "vo": "",
+   "voKind": "narration",
+   "speaker": "narr",
+   "trans": "cut",
+   "caption": true,
+   "cool": false,
+   "hero": "Pintu terbuka gelap dengan sosok samar",
+   "notes": "CONTOH MODE TERANG",
+   "light": "day",
+   "words": [
+    {
+     "text": "siang",
+     "highlight": false,
+     "start": 58.287,
+     "end": 59.162
+    },
+    {
+     "text": "bolong",
+     "highlight": false,
+     "start": 59.162,
+     "end": 60.037
+    },
+    {
+     "text": "pintunya",
+     "highlight": true,
+     "start": 60.037,
+     "end": 60.912
+    },
+    {
+     "text": "kebuka",
+     "highlight": false,
+     "start": 60.912,
+     "end": 61.787
+    }
+   ]
   }
  ],
  "audio": false

@@ -1,10 +1,14 @@
 # kiamat
 
-Kit visual untuk short horor 9:16 dengan gaya visual dari `anggara182/horrorluar`: vektor semi-realis, siluet berlapis di depan cahaya gradien, satu hero terang per shot, 100% SVG di Remotion.
+Kit visual untuk short horor 9:16 dengan gaya visual dari `anggara182/horrorluar`: vektor semi-realis, siluet berlapis di depan cahaya gradien, satu hero terang per shot, 100% SVG di Remotion. Default-nya malam, tapi ada mode terang (siang, sore, subuh, ruangan terang) dengan look yang sama.
 
 **Hanya visual.** Cerita, topik, VO, dan pace akun ini ditentukan terpisah, tidak mengikuti horrorluar. Repo horrorluar tidak diubah.
 
 ![contoh](contoh-frame.jpg)
+
+Mode terang (malam, subuh, siang dari set yang sama):
+
+![contoh terang](contoh-terang.jpg)
 
 ## Isi
 | Path | Isi |
@@ -22,4 +26,4 @@ Kit visual untuk short horor 9:16 dengan gaya visual dari `anggara182/horrorluar
 5. `node scripts/bake.mjs`, lalu `node scripts/contact.mjs 0.6` untuk contact sheet seluruh episode.
 6. Render penuh Remotion. Opsional: `scripts/finish.sh in.mp4 out.mp4` untuk grain + mux audio.
 
-Cek cepat template: `cd template && npm install && npx tsc -p . && node scripts/preview.mjs village 1,11 0.5`.
+Cek cepat template: `cd template && npm install && npx tsc -p . && node scripts/preview.mjs village 1,12,14 0.6`.
