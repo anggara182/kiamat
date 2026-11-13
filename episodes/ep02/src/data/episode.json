@@ -1,0 +1,1675 @@
+{
+ "id": "EP02",
+ "title": "Faster Than the Truth",
+ "series": "The Last Days",
+ "chapter": 2,
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 68.086,
+ "accent": "#d9a441",
+ "timingSource": "ESTIMATE (VO pending: ai33 task 9c9147ad)",
+ "audio": true,
+ "quote": {
+  "text": "Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.",
+  "source": "QUR’AN 49:6 · ABDEL HALEEM",
+  "fromShot": 22,
+  "toShot": 23
+ },
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 2.231,
+   "act": 1,
+   "set": "market",
+   "owner": "H",
+   "framing": "HOOK. Close-medium: hands grabbing the last water gallons off a small shop shelf at dawn",
+   "camera": "Handheld, push-in",
+   "vo_markup": "By sunrise, the whole city *knew.*",
+   "vo": "By sunrise, the whole city knew.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 0.1,
+     "end": 0.237
+    },
+    {
+     "text": "sunrise,",
+     "highlight": false,
+     "start": 0.237,
+     "end": 0.783
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 0.783,
+     "end": 0.988
+    },
+    {
+     "text": "whole",
+     "highlight": false,
+     "start": 0.988,
+     "end": 1.33
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 1.33,
+     "end": 1.603
+    },
+    {
+     "text": "knew.",
+     "highlight": true,
+     "start": 1.603,
+     "end": 2.081
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Several hands (sleeves, bracelets, a child's hand) yanking gallons and bottles off a nearly empty shelf; a gallon tips over",
+   "notes": "Frame 0 already chaotic and moving (twos). Shelf wobbles (ones). Gallon thud on \"knew\".",
+   "sync": [
+    "knew"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 2.231,
+   "end": 5.089,
+   "act": 1,
+   "set": "market",
+   "owner": "H",
+   "framing": "Wide: a shop rolling door rising at dawn, a queue already outside",
+   "camera": "Slow push-in",
+   "vo_markup": "The only problem… none of it was *true.*",
+   "vo": "The only problem… none of it was true.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 2.331,
+     "end": 2.568
+    },
+    {
+     "text": "only",
+     "highlight": false,
+     "start": 2.568,
+     "end": 2.884
+    },
+    {
+     "text": "problem…",
+     "highlight": false,
+     "start": 2.884,
+     "end": 3.516
+    },
+    {
+     "text": "none",
+     "highlight": false,
+     "start": 3.516,
+     "end": 3.832
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 3.832,
+     "end": 3.99
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 3.99,
+     "end": 4.148
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 4.148,
+     "end": 4.386
+    },
+    {
+     "text": "true.",
+     "highlight": true,
+     "start": 4.386,
+     "end": 4.939
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Rolling door rattling up; a line of people with empty jerrycans; a woman hugging three bottles",
+   "notes": "Door finishes rising on \"problem\"; everyone turns at \"true\" (twos).",
+   "sync": [
+    "problem",
+    "true"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 5.089,
+   "end": 8.26,
+   "act": 1,
+   "set": "market",
+   "owner": "H",
+   "framing": "Medium two-shot at a small breakfast stall: a woman leans in and whispers into the stall owner's ear",
+   "camera": "Slow push-in",
+   "vo_markup": "It started as one *whisper* at a food stall.",
+   "vo": "It started as one whisper at a food stall.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 5.189,
+     "end": 5.351
+    },
+    {
+     "text": "started",
+     "highlight": false,
+     "start": 5.351,
+     "end": 5.919
+    },
+    {
+     "text": "as",
+     "highlight": false,
+     "start": 5.919,
+     "end": 6.081
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 6.081,
+     "end": 6.325
+    },
+    {
+     "text": "whisper",
+     "highlight": true,
+     "start": 6.325,
+     "end": 7.055
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 7.055,
+     "end": 7.217
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 7.217,
+     "end": 7.299
+    },
+    {
+     "text": "food",
+     "highlight": false,
+     "start": 7.299,
+     "end": 7.623
+    },
+    {
+     "text": "stall.",
+     "highlight": false,
+     "start": 7.623,
+     "end": 8.11
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Stall owner (40s, headscarf) frozen mid-ladle as a customer whispers; steam from the pot",
+   "notes": "Lean-in lands on \"whisper\".",
+   "sync": [
+    "whisper"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 8.26,
+   "end": 9.864,
+   "act": 1,
+   "set": "whisper",
+   "owner": "P",
+   "framing": "Extreme close-up: lips near an ear (profile), headscarf edge",
+   "camera": "Locked, tiny drift",
+   "vo_markup": "The water is *poisoned.*",
+   "vo": "The water is poisoned.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 8.36,
+     "end": 8.553
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 8.553,
+     "end": 8.876
+    },
+    {
+     "text": "is",
+     "highlight": false,
+     "start": 8.876,
+     "end": 9.005
+    },
+    {
+     "text": "poisoned.",
+     "highlight": true,
+     "start": 9.005,
+     "end": 9.714
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "A mouth whispering into an ear; the listener's eye widens (only the eye corner visible)",
+   "notes": "Faces simplified; no detailed lips/teeth, stylised profile. Eye widens on \"poisoned\".",
+   "sync": [
+    "poisoned"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 9.864,
+   "end": 13.349,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "IMAGINED (rumour image): the neighbourhood water tower at night, a faceless silhouette standing at its foot",
+   "camera": "Slow push-in",
+   "vo_markup": "Someone saw a *stranger* by the water tower last night.",
+   "vo": "Someone saw a stranger by the water tower last night.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Someone",
+     "highlight": false,
+     "start": 9.964,
+     "end": 10.456
+    },
+    {
+     "text": "saw",
+     "highlight": false,
+     "start": 10.456,
+     "end": 10.667
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 10.667,
+     "end": 10.737
+    },
+    {
+     "text": "stranger",
+     "highlight": true,
+     "start": 10.737,
+     "end": 11.441
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 11.441,
+     "end": 11.581
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 11.581,
+     "end": 11.792
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 11.792,
+     "end": 12.144
+    },
+    {
+     "text": "tower",
+     "highlight": false,
+     "start": 12.144,
+     "end": 12.496
+    },
+    {
+     "text": "last",
+     "highlight": false,
+     "start": 12.496,
+     "end": 12.777
+    },
+    {
+     "text": "night.",
+     "highlight": false,
+     "start": 12.777,
+     "end": 13.199
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "A tall faceless silhouette by the water tower, rendered as an unreliable rumour (desaturated, slightly grainy-looking flat tones, no detail)",
+   "notes": "This is what people IMAGINE, not what happened: keep it stylised, cold, flat. Silhouette fades in on \"stranger\".",
+   "sync": [
+    "stranger"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 13.349,
+   "end": 15.266,
+   "act": 1,
+   "set": "whisper",
+   "owner": "P",
+   "framing": "Close: two passengers in an angkot, one leaning to the other's ear",
+   "camera": "Slight vehicle sway",
+   "vo_markup": "Nobody asked who saw him.",
+   "vo": "Nobody asked who saw him.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Nobody",
+     "highlight": false,
+     "start": 13.449,
+     "end": 13.925
+    },
+    {
+     "text": "asked",
+     "highlight": false,
+     "start": 13.925,
+     "end": 14.322
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 14.322,
+     "end": 14.56
+    },
+    {
+     "text": "saw",
+     "highlight": false,
+     "start": 14.56,
+     "end": 14.799
+    },
+    {
+     "text": "him.",
+     "highlight": false,
+     "start": 14.799,
+     "end": 15.116
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Mouth-to-ear in the angkot, window light strobing",
+   "notes": "Chain of whispers part 1. Sway on ones; people on twos.",
+   "sync": []
+  },
+  {
+   "id": 7,
+   "start": 15.266,
+   "end": 17.184,
+   "act": 1,
+   "set": "whisper",
+   "owner": "P",
+   "framing": "Close: men at a pos ronda (guard post) huddled, one whispering",
+   "camera": "Locked, slight drift",
+   "vo_markup": "Nobody asked how they knew.",
+   "vo": "Nobody asked how they knew.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Nobody",
+     "highlight": false,
+     "start": 15.366,
+     "end": 15.801
+    },
+    {
+     "text": "asked",
+     "highlight": false,
+     "start": 15.801,
+     "end": 16.164
+    },
+    {
+     "text": "how",
+     "highlight": false,
+     "start": 16.164,
+     "end": 16.381
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 16.381,
+     "end": 16.671
+    },
+    {
+     "text": "knew.",
+     "highlight": false,
+     "start": 16.671,
+     "end": 17.034
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Three men leaning in at the guard post; one cups a hand to whisper",
+   "notes": "Chain part 2.",
+   "sync": []
+  },
+  {
+   "id": 8,
+   "start": 17.184,
+   "end": 19.414,
+   "act": 1,
+   "set": "market",
+   "owner": "H",
+   "framing": "Medium: the same shop shelves, now completely empty, a handwritten \"HABIS\" (sold out) card",
+   "camera": "Slow lateral",
+   "vo_markup": "By seven, the shelves were *empty.*",
+   "vo": "By seven, the shelves were empty.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 17.284,
+     "end": 17.416
+    },
+    {
+     "text": "seven,",
+     "highlight": false,
+     "start": 17.416,
+     "end": 17.812
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 17.812,
+     "end": 18.01
+    },
+    {
+     "text": "shelves",
+     "highlight": false,
+     "start": 18.01,
+     "end": 18.472
+    },
+    {
+     "text": "were",
+     "highlight": false,
+     "start": 18.472,
+     "end": 18.736
+    },
+    {
+     "text": "empty.",
+     "highlight": true,
+     "start": 18.736,
+     "end": 19.264
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Empty shelves; the stall owner standing behind them, arms crossed",
+   "notes": "Card can say \"HABIS\" (Indonesian for sold out). Dust motes in the light.",
+   "sync": [
+    "empty"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 19.414,
+   "end": 21.645,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium: in front of a small house, a mother pours a bucket of water into the gutter; her small daughter with a doll watches from the doorstep",
+   "camera": "Locked, slight handheld",
+   "vo_markup": "Mothers poured water down the *drain.*",
+   "vo": "Mothers poured water down the drain.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Mothers",
+     "highlight": false,
+     "start": 19.514,
+     "end": 19.935
+    },
+    {
+     "text": "poured",
+     "highlight": false,
+     "start": 19.935,
+     "end": 20.295
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 20.295,
+     "end": 20.595
+    },
+    {
+     "text": "down",
+     "highlight": false,
+     "start": 20.595,
+     "end": 20.835
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 20.835,
+     "end": 21.015
+    },
+    {
+     "text": "drain.",
+     "highlight": true,
+     "start": 21.015,
+     "end": 21.495
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Mother tipping the bucket; water splashing into the gutter; daughter clutching a doll",
+   "notes": "Pour starts on \"poured\", splash on \"drain\".",
+   "sync": [
+    "poured",
+    "drain"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 21.645,
+   "end": 24.19,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "Medium-wide: two old men (peci, sarong) arguing at the mosque gate; one jabs a finger",
+   "camera": "Slow push-in",
+   "vo_markup": "Old men *argued* at the mosque gate.",
+   "vo": "Old men argued at the mosque gate.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Old",
+     "highlight": false,
+     "start": 21.745,
+     "end": 21.975
+    },
+    {
+     "text": "men",
+     "highlight": false,
+     "start": 21.975,
+     "end": 22.204
+    },
+    {
+     "text": "argued",
+     "highlight": true,
+     "start": 22.204,
+     "end": 22.816
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 22.816,
+     "end": 22.969
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 22.969,
+     "end": 23.198
+    },
+    {
+     "text": "mosque",
+     "highlight": false,
+     "start": 23.198,
+     "end": 23.657
+    },
+    {
+     "text": "gate.",
+     "highlight": false,
+     "start": 23.657,
+     "end": 24.04
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Two old men in heated argument; others watching from the side",
+   "notes": "Finger jab on \"argued\".",
+   "sync": [
+    "argued"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 24.19,
+   "end": 27.674,
+   "act": 1,
+   "set": "whisper",
+   "owner": "P",
+   "framing": "Fast montage inside one shot: mouth-to-ear passes in different places (school gate mothers, market sellers, a barber chair), each 0.5–0.7 s",
+   "camera": "Quick hard cuts inside the shot (allowed: hard cuts only)",
+   "vo_markup": "And the story grew with every mouth it passed through.",
+   "vo": "And the story grew with every mouth it passed through.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 24.29,
+     "end": 24.505
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.505,
+     "end": 24.721
+    },
+    {
+     "text": "story",
+     "highlight": false,
+     "start": 24.721,
+     "end": 25.08
+    },
+    {
+     "text": "grew",
+     "highlight": false,
+     "start": 25.08,
+     "end": 25.368
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 25.368,
+     "end": 25.655
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 25.655,
+     "end": 26.015
+    },
+    {
+     "text": "mouth",
+     "highlight": false,
+     "start": 26.015,
+     "end": 26.374
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 26.374,
+     "end": 26.518
+    },
+    {
+     "text": "passed",
+     "highlight": false,
+     "start": 26.518,
+     "end": 26.949
+    },
+    {
+     "text": "through.",
+     "highlight": false,
+     "start": 26.949,
+     "end": 27.524
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A relay of whispers getting faster",
+   "notes": "Each pass is a new mini-composition; keep faces simple.",
+   "sync": []
+  },
+  {
+   "id": 12,
+   "start": 27.674,
+   "end": 30.532,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "IMAGINED: the rumour image of the water tower again; the silhouette multiplies into three; then red lines/arrows of a \"plan\" appear around the tower like a crude conspiracy drawing",
+   "camera": "Slow push-in",
+   "vo_markup": "One stranger became *three.* Poison became a *plan.*",
+   "vo": "One stranger became three. Poison became a plan.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "One",
+     "highlight": false,
+     "start": 27.774,
+     "end": 27.948
+    },
+    {
+     "text": "stranger",
+     "highlight": false,
+     "start": 27.948,
+     "end": 28.412
+    },
+    {
+     "text": "became",
+     "highlight": false,
+     "start": 28.412,
+     "end": 28.76
+    },
+    {
+     "text": "three.",
+     "highlight": true,
+     "start": 28.76,
+     "end": 29.223
+    },
+    {
+     "text": "Poison",
+     "highlight": false,
+     "start": 29.223,
+     "end": 29.571
+    },
+    {
+     "text": "became",
+     "highlight": false,
+     "start": 29.571,
+     "end": 29.919
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 29.919,
+     "end": 29.977
+    },
+    {
+     "text": "plan.",
+     "highlight": true,
+     "start": 29.977,
+     "end": 30.382
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Three faceless silhouettes; crude red marker lines and arrows around the tower",
+   "notes": "Multiply exactly on \"three\"; red lines draw on \"plan\". Same stylised rumour look as shot 5.",
+   "sync": [
+    "three",
+    "plan"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 30.532,
+   "end": 32.45,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Wide: a crowd turning into a narrow kampung alley, a man at the front pointing",
+   "camera": "Slow push forward behind the crowd",
+   "vo_markup": "By noon, they *found* him.",
+   "vo": "By noon, they found him.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 30.632,
+     "end": 30.784
+    },
+    {
+     "text": "noon,",
+     "highlight": false,
+     "start": 30.784,
+     "end": 31.163
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 31.163,
+     "end": 31.466
+    },
+    {
+     "text": "found",
+     "highlight": true,
+     "start": 31.466,
+     "end": 31.997
+    },
+    {
+     "text": "him.",
+     "highlight": false,
+     "start": 31.997,
+     "end": 32.3
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Crowd of 8–12 simplified figures, the leader pointing down the alley",
+   "notes": "Point on \"found\". Harsh noon light, short shadows.",
+   "sync": [
+    "found"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 32.45,
+   "end": 34.994,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Medium: a young man (20s, work T-shirt, tool bag) kneeling by a leaking pipe at the alley wall; he looks up",
+   "camera": "Locked, slight push",
+   "vo_markup": "A young man, new in the neighborhood.",
+   "vo": "A young man, new in the neighborhood.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 32.55,
+     "end": 32.624
+    },
+    {
+     "text": "young",
+     "highlight": false,
+     "start": 32.624,
+     "end": 32.994
+    },
+    {
+     "text": "man,",
+     "highlight": false,
+     "start": 32.994,
+     "end": 33.29
+    },
+    {
+     "text": "new",
+     "highlight": false,
+     "start": 33.29,
+     "end": 33.512
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 33.512,
+     "end": 33.66
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 33.66,
+     "end": 33.882
+    },
+    {
+     "text": "neighborhood.",
+     "highlight": false,
+     "start": 33.882,
+     "end": 34.844
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The young man looking up, wrench in hand, water dripping from the pipe",
+   "notes": "He looks up on \"man\".",
+   "sync": [
+    "man"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 34.994,
+   "end": 38.165,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Close: his hands tightening a pipe joint; the drip slows and stops",
+   "camera": "Locked",
+   "vo_markup": "He had been fixing a leaking pipe… for *free.*",
+   "vo": "He had been fixing a leaking pipe… for free.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 35.094,
+     "end": 35.248
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 35.248,
+     "end": 35.478
+    },
+    {
+     "text": "been",
+     "highlight": false,
+     "start": 35.478,
+     "end": 35.786
+    },
+    {
+     "text": "fixing",
+     "highlight": false,
+     "start": 35.786,
+     "end": 36.247
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 36.247,
+     "end": 36.324
+    },
+    {
+     "text": "leaking",
+     "highlight": false,
+     "start": 36.324,
+     "end": 36.862
+    },
+    {
+     "text": "pipe…",
+     "highlight": false,
+     "start": 36.862,
+     "end": 37.247
+    },
+    {
+     "text": "for",
+     "highlight": false,
+     "start": 37.247,
+     "end": 37.477
+    },
+    {
+     "text": "free.",
+     "highlight": true,
+     "start": 37.477,
+     "end": 38.015
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Hands with a wrench on a pipe joint; the last drop falls",
+   "notes": "Drip stops on \"free\".",
+   "sync": [
+    "free"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 38.165,
+   "end": 39.769,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Low angle from the young man's eye level: the crowd closing in around him, faces in shadow against the bright sky",
+   "camera": "Slow push-in",
+   "vo_markup": "The crowd closed *in.*",
+   "vo": "The crowd closed in.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 38.265,
+     "end": 38.479
+    },
+    {
+     "text": "crowd",
+     "highlight": false,
+     "start": 38.479,
+     "end": 38.835
+    },
+    {
+     "text": "closed",
+     "highlight": false,
+     "start": 38.835,
+     "end": 39.263
+    },
+    {
+     "text": "in.",
+     "highlight": true,
+     "start": 39.263,
+     "end": 39.619
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A ring of dark silhouettes closing in",
+   "notes": "Crowd steps forward on \"in\" (twos).",
+   "sync": [
+    "in"
+   ]
+  },
+  {
+   "id": 17,
+   "start": 39.769,
+   "end": 41.687,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Extreme close-up: a hand picking up a stone from the dirt",
+   "camera": "Locked",
+   "vo_markup": "Someone picked up a *stone.*",
+   "vo": "Someone picked up a stone.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Someone",
+     "highlight": false,
+     "start": 39.869,
+     "end": 40.356
+    },
+    {
+     "text": "picked",
+     "highlight": false,
+     "start": 40.356,
+     "end": 40.772
+    },
+    {
+     "text": "up",
+     "highlight": false,
+     "start": 40.772,
+     "end": 40.911
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 40.911,
+     "end": 40.981
+    },
+    {
+     "text": "stone.",
+     "highlight": true,
+     "start": 40.981,
+     "end": 41.537
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A hand closing around a stone",
+   "notes": "Grip on \"stone\". Then hold: tension.",
+   "sync": [
+    "stone"
+   ]
+  },
+  {
+   "id": 18,
+   "start": 41.687,
+   "end": 43.604,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "Low angle: the mosque loudspeaker horns on a pole against the sky",
+   "camera": "Slight tilt",
+   "vo_markup": "Then the mosque speaker *crackled.*",
+   "vo": "Then the mosque speaker crackled.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 41.787,
+     "end": 42.002
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 42.002,
+     "end": 42.163
+    },
+    {
+     "text": "mosque",
+     "highlight": false,
+     "start": 42.163,
+     "end": 42.486
+    },
+    {
+     "text": "speaker",
+     "highlight": false,
+     "start": 42.486,
+     "end": 42.862
+    },
+    {
+     "text": "crackled.",
+     "highlight": true,
+     "start": 42.862,
+     "end": 43.454
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The loudspeaker horns; a bird lifts off",
+   "notes": "Speaker \"jolts\" (tiny shake) on \"crackled\".",
+   "sync": [
+    "crackled"
+   ]
+  },
+  {
+   "id": 19,
+   "start": 43.604,
+   "end": 47.716,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "Medium: inside the mosque, the marbot (caretaker) reads a paper into a microphone; through the door, the crowd outside looks up",
+   "camera": "Slow push-in",
+   "vo_markup": "The water had been tested. It was *clean.* It always had been.",
+   "vo": "The water had been tested. It was clean. It always had been.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 43.704,
+     "end": 43.931
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 43.931,
+     "end": 44.31
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 44.31,
+     "end": 44.537
+    },
+    {
+     "text": "been",
+     "highlight": false,
+     "start": 44.537,
+     "end": 44.84
+    },
+    {
+     "text": "tested.",
+     "highlight": false,
+     "start": 44.84,
+     "end": 45.37
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 45.37,
+     "end": 45.521
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 45.521,
+     "end": 45.749
+    },
+    {
+     "text": "clean.",
+     "highlight": true,
+     "start": 45.749,
+     "end": 46.354
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 46.354,
+     "end": 46.506
+    },
+    {
+     "text": "always",
+     "highlight": false,
+     "start": 46.506,
+     "end": 46.96
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 46.96,
+     "end": 47.187
+    },
+    {
+     "text": "been.",
+     "highlight": false,
+     "start": 47.187,
+     "end": 47.566
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Marbot side view at the microphone with a paper (official stamp visible as a simple shape)",
+   "notes": "He lifts the paper on \"tested\"; crowd faces turn up on \"clean\".",
+   "sync": [
+    "tested",
+    "clean"
+   ]
+  },
+  {
+   "id": 20,
+   "start": 47.716,
+   "end": 49.32,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Close: the hand opens and the stone drops into the dirt; feet turn away",
+   "camera": "Locked",
+   "vo_markup": "The crowd went *home.*",
+   "vo": "The crowd went home.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 47.816,
+     "end": 48.03
+    },
+    {
+     "text": "crowd",
+     "highlight": false,
+     "start": 48.03,
+     "end": 48.386
+    },
+    {
+     "text": "went",
+     "highlight": false,
+     "start": 48.386,
+     "end": 48.671
+    },
+    {
+     "text": "home.",
+     "highlight": true,
+     "start": 48.671,
+     "end": 49.17
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The stone falling; feet walking off",
+   "notes": "Stone drops on \"home\".",
+   "sync": [
+    "home"
+   ]
+  },
+  {
+   "id": 21,
+   "start": 49.32,
+   "end": 52.805,
+   "act": 1,
+   "set": "alley",
+   "owner": "S",
+   "framing": "Medium-wide: the young man alone in the alley picking up his scattered tools; the backs of the crowd leaving at the end of the alley",
+   "camera": "Slow pull-back",
+   "vo_markup": "No one said sorry. No one asked who started it.",
+   "vo": "No one said sorry. No one asked who started it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 49.42,
+     "end": 49.59
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 49.59,
+     "end": 49.845
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 49.845,
+     "end": 50.186
+    },
+    {
+     "text": "sorry.",
+     "highlight": false,
+     "start": 50.186,
+     "end": 50.697
+    },
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 50.697,
+     "end": 50.867
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 50.867,
+     "end": 51.122
+    },
+    {
+     "text": "asked",
+     "highlight": false,
+     "start": 51.122,
+     "end": 51.548
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 51.548,
+     "end": 51.803
+    },
+    {
+     "text": "started",
+     "highlight": false,
+     "start": 51.803,
+     "end": 52.399
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 52.399,
+     "end": 52.655
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The young man kneeling, collecting tools",
+   "notes": "He stays (twos breathing); crowd backs recede.",
+   "sync": []
+  },
+  {
+   "id": 22,
+   "start": 52.805,
+   "end": 55.349,
+   "act": 1,
+   "set": "kampung",
+   "owner": "C",
+   "framing": "Wide: the water tower at dusk, birds circling, the kampung roofs below",
+   "camera": "Very slow push-in",
+   "vo_markup": "The warning had been written long ago.",
+   "vo": "The warning had been written long ago.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 52.905,
+     "end": 53.12
+    },
+    {
+     "text": "warning",
+     "highlight": false,
+     "start": 53.12,
+     "end": 53.622
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 53.622,
+     "end": 53.837
+    },
+    {
+     "text": "been",
+     "highlight": false,
+     "start": 53.837,
+     "end": 54.123
+    },
+    {
+     "text": "written",
+     "highlight": false,
+     "start": 54.123,
+     "end": 54.625
+    },
+    {
+     "text": "long",
+     "highlight": false,
+     "start": 54.625,
+     "end": 54.912
+    },
+    {
+     "text": "ago.",
+     "highlight": false,
+     "start": 54.912,
+     "end": 55.199
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The real water tower at dusk (warm, NOT the rumour style)",
+   "notes": "QUOTE hovers over shots 22–23 (Qur'an 49:6). Keep the upper 40% of the frame calm/dark enough for the quote.",
+   "sync": []
+  },
+  {
+   "id": 23,
+   "start": 55.349,
+   "end": 59.461,
+   "act": 1,
+   "set": "market",
+   "owner": "H",
+   "framing": "Medium: the stall owner pulling down her stall shutter at dusk, pausing, looking down",
+   "camera": "Slow push-in",
+   "vo_markup": "And the Prophet said that repeating everything you hear is lie enough.",
+   "vo": "And the Prophet said that repeating everything you hear is lie enough.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 55.449,
+     "end": 55.645
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 55.645,
+     "end": 55.842
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 55.842,
+     "end": 56.3
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 56.3,
+     "end": 56.562
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 56.562,
+     "end": 56.823
+    },
+    {
+     "text": "repeating",
+     "highlight": false,
+     "start": 56.823,
+     "end": 57.413
+    },
+    {
+     "text": "everything",
+     "highlight": false,
+     "start": 57.413,
+     "end": 58.067
+    },
+    {
+     "text": "you",
+     "highlight": false,
+     "start": 58.067,
+     "end": 58.263
+    },
+    {
+     "text": "hear",
+     "highlight": false,
+     "start": 58.263,
+     "end": 58.525
+    },
+    {
+     "text": "is",
+     "highlight": false,
+     "start": 58.525,
+     "end": 58.656
+    },
+    {
+     "text": "lie",
+     "highlight": false,
+     "start": 58.656,
+     "end": 58.852
+    },
+    {
+     "text": "enough.",
+     "highlight": false,
+     "start": 58.852,
+     "end": 59.311
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The stall owner pausing with her hand on the shutter, eyes down",
+   "notes": "She pauses on \"Prophet\"; shutter comes down on \"enough\". Keep the upper 40% calm for the quote.",
+   "sync": [
+    "enough"
+   ]
+  },
+  {
+   "id": 24,
+   "start": 59.461,
+   "end": 63.886,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium-wide: a dark terrace, two heads close together, one whispering; across the alley the lit window of the mosque",
+   "camera": "Slow push-in",
+   "vo_markup": "That night, a new whisper began. This time, it named someone everyone *trusted.*",
+   "vo": "That night, a new whisper began. This time, it named someone everyone trusted.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "That",
+     "highlight": false,
+     "start": 59.561,
+     "end": 59.806
+    },
+    {
+     "text": "night,",
+     "highlight": false,
+     "start": 59.806,
+     "end": 60.175
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 60.175,
+     "end": 60.236
+    },
+    {
+     "text": "new",
+     "highlight": false,
+     "start": 60.236,
+     "end": 60.42
+    },
+    {
+     "text": "whisper",
+     "highlight": false,
+     "start": 60.42,
+     "end": 60.85
+    },
+    {
+     "text": "began.",
+     "highlight": false,
+     "start": 60.85,
+     "end": 61.218
+    },
+    {
+     "text": "This",
+     "highlight": false,
+     "start": 61.218,
+     "end": 61.464
+    },
+    {
+     "text": "time,",
+     "highlight": false,
+     "start": 61.464,
+     "end": 61.771
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 61.771,
+     "end": 61.894
+    },
+    {
+     "text": "named",
+     "highlight": false,
+     "start": 61.894,
+     "end": 62.201
+    },
+    {
+     "text": "someone",
+     "highlight": false,
+     "start": 62.201,
+     "end": 62.631
+    },
+    {
+     "text": "everyone",
+     "highlight": false,
+     "start": 62.631,
+     "end": 63.122
+    },
+    {
+     "text": "trusted.",
+     "highlight": true,
+     "start": 63.122,
+     "end": 63.736
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Two silhouettes on a terrace, one whispering, both turning to look toward the lit mosque window on \"trusted\"",
+   "notes": "Hard cut to black at the shot end.",
+   "sync": [
+    "whisper",
+    "trusted"
+   ]
+  },
+  {
+   "id": 25,
+   "start": 63.886,
+   "end": 68.086,
+   "act": 1,
+   "set": "whisper",
+   "owner": "P",
+   "framing": "TITLE CARD on black",
+   "camera": "Very slow push-in",
+   "vo_markup": "",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "\"FASTER THAN THE TRUTH\" + \"CHAPTER 2 · THE LAST DAYS\"",
+   "notes": "Same title design as EP01 shot 25 (copy from episodes/ep01/src/shots/P.tsx S25).",
+   "sync": []
+  }
+ ]
+}
