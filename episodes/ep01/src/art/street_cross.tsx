@@ -157,7 +157,8 @@ export const CrossTraffic: React.FC = () => {
 
 /** people at time t (s): shadows first, then bodies */
 export const CrossPeople: React.FC<{ t: number }> = ({ t }) => {
-  const pos = PEDS.map((p) => ({ p, ...along(p.pts, p.s0 + p.v * t) }));
+  // t is the ON-TWOS clock; shoulders swing a little with each step
+  const pos = PEDS.map((p) => { const d = p.s0 + p.v * t, q = along(p.pts, d); return { p, ...q, dir: q.dir + Math.sin((d / (0.36 * M)) * Math.PI) * 11 }; });
   return (
     <g>
       <g fill="#1c1a18" opacity={0.32}>{pos.map(({ p, x, y }, i) => <ellipse key={i} cx={x + SH.dx * p.r} cy={y + SH.dy * p.r} rx={0.42 * M * p.r} ry={0.2 * M * p.r} transform={`rotate(32 ${x + SH.dx} ${y + SH.dy})`} />)}</g>

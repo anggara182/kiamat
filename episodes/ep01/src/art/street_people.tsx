@@ -97,7 +97,7 @@ export const Figure: React.FC<{ x: number; y: number; h: number; dir?: number; p
   const hat = (() => {
     const c = look.hatCol ?? look.body;
     switch (look.hat) {
-      case 'peci': return <rect x={hd[0] - 5.2} y={hd[1] - 9.4} width={10} height={4.2} rx={0.6} fill={c} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />;
+      case 'peci': return <path d={`M ${hd[0] - 5.6} ${hd[1] - 3.2} L ${hd[0] - 5.2} ${hd[1] - 7.6} Q ${hd[0]} ${hd[1] - 8.6} ${hd[0] + 5.2} ${hd[1] - 7.6} L ${hd[0] + 5.6} ${hd[1] - 3.2} Z`} fill={c} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />;
       case 'hardhat': return <g transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`}><path d={`M ${hd[0] - 6.4} ${hd[1] - 3} Q ${hd[0] - 6} ${hd[1] - 11.5} ${hd[0] + 0.5} ${hd[1] - 11.2} Q ${hd[0] + 6.6} ${hd[1] - 10.6} ${hd[0] + 6.4} ${hd[1] - 3} Z`} fill={c} /><rect x={hd[0] - 7.6} y={hd[1] - 3.6} width={16.4} height={1.8} rx={0.8} fill={c} /></g>;
       case 'cap': return <g transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`}><path d={`M ${hd[0] - 5.6} ${hd[1] - 3} Q ${hd[0] - 5} ${hd[1] - 9.4} ${hd[0] + 1} ${hd[1] - 8.8} Q ${hd[0] + 5.6} ${hd[1] - 8} ${hd[0] + 5.4} ${hd[1] - 3} Z`} fill={c} /><path d={`M ${hd[0] + 3} ${hd[1] - 3.6} L ${hd[0] + 10} ${hd[1] - 2.6}`} stroke={c} strokeWidth={1.6} strokeLinecap="round" /></g>;
       case 'hijab': return <path d={`M ${hd[0] - 6.4} ${hd[1] + 1} Q ${hd[0] - 7} ${hd[1] - 9.5} ${hd[0] + 0.5} ${hd[1] - 9.4} Q ${hd[0] + 7} ${hd[1] - 9} ${hd[0] + 6.6} ${hd[1] + 0.5} Q ${hd[0] + 6} ${hd[1] + 6} ${sh[0] + px * 8} ${sh[1] + py * 8 + 4} L ${sh[0] - px * 8} ${sh[1] - py * 8 + 5} Q ${hd[0] - 7.4} ${hd[1] + 6} ${hd[0] - 6.4} ${hd[1] + 1} Z`} fill={c} />;
@@ -125,7 +125,7 @@ export const Figure: React.FC<{ x: number; y: number; h: number; dir?: number; p
       {look.hat !== 'hijab' && <path d={`M ${hd[0] - 5.4} ${hd[1] + 1} Q ${hd[0] - 6} ${hd[1] - 7.4} ${hd[0] + 0.5} ${hd[1] - 6.9} Q ${hd[0] + 4.8} ${hd[1] - 6.6} ${hd[0] + 5.2} ${hd[1] - 3} Q ${hd[0]} ${hd[1] - 4.8} ${hd[0] - 3} ${hd[1] + 3} Z`} fill={far} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />}
       {hat}
       {arm(P.uaA, P.faA, look.body, skin, 'aa', false)}
-      {look.rim && <path d={`M ${hd[0] - 4.6} ${hd[1] - 3.5} Q ${hd[0] - 1} ${hd[1] - 7.6} ${hd[0] + 3.6} ${hd[1] - 5.4} M ${sh[0] - px * 6.5} ${sh[1] - py * 6.5} Q ${sh[0] - px * 7.6} ${(sh[1] + hip[1]) / 2} ${hip[0] - px * 6.2} ${hip[1] - py * 6.2}`} stroke={look.rim} strokeWidth={1.1} fill="none" opacity={look.rimO ?? 0.8} />}
+      {look.rim && <path d={`${look.hat === 'peci' || look.hat === 'hijab' ? '' : `M ${hd[0] - 4.6} ${hd[1] - 3.5} Q ${hd[0] - 1} ${hd[1] - 7.6} ${hd[0] + 3.6} ${hd[1] - 5.4} `}M ${sh[0] - px * 6.5} ${sh[1] - py * 6.5} Q ${sh[0] - px * 7.6} ${(sh[1] + hip[1]) / 2} ${hip[0] - px * 6.2} ${hip[1] - py * 6.2}`} stroke={look.rim} strokeWidth={1.1} fill="none" opacity={look.rimO ?? 0.8} />}
     </g>
   );
 };

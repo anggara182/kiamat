@@ -98,8 +98,8 @@ export const KitchenBand: React.FC = () => {
       {/* under-counter curtain, half open: LPG tank */}
       <rect x={530} y={1140} width={600} height={560} fill="#2b2a2e" />
       <g>
-        <rect x={570} y={1330} width={120} height={200} rx={50} fill="#5f8a45" />
-        <rect x={570} y={1330} width={34} height={200} rx={17} fill="#7fa65f" opacity={0.6} />
+        <rect x={570} y={1330} width={120} height={200} rx={50} fill="#46663a" />
+        <rect x={570} y={1330} width={34} height={200} rx={17} fill="#5f8050" opacity={0.6} />
         <rect x={612} y={1300} width={36} height={40} rx={6} fill="#8c8f92" />
       </g>
       <path d="M720 1140 L1130 1140 L1130 1700 L700 1700 Q740 1420 720 1140 Z" fill="#6f8d88" />
@@ -155,9 +155,10 @@ export const Tube: React.FC<{ L: number }> = ({ L }) => {
   const { x1, x2, y } = K.tube;
   return (
     <g>
-      <Glow id="hkTubeG" x={(x1 + x2) / 2} y={y + 10} rx={520} ry={260} c="#eef6ff" o={0.75 * L} mid={0.25} />
-      <rect x={x1} y={y - 6} width={x2 - x1} height={18} rx={9} fill={L > 0.05 ? '#ffffff' : '#c9c8c2'} />
-      <rect x={x1} y={y - 6} width={x2 - x1} height={18} rx={9} fill="#dfe9f5" opacity={1 - L} />
+      <Glow id="hkTubeG" x={(x1 + x2) / 2} y={y + 10} rx={560} ry={300} c="#f4f9ff" o={0.9 * L} mid={0.2} />
+      <Glow id="hkTubeG2" x={(x1 + x2) / 2} y={y + 4} rx={300} ry={40} c="#ffffff" o={L} mid={0.5} />
+      <rect x={x1} y={y - 6} width={x2 - x1} height={18} rx={9} fill="#4a4f60" />
+      <rect x={x1} y={y - 6} width={x2 - x1} height={18} rx={9} fill="#ffffff" opacity={L} />
     </g>
   );
 };
@@ -265,17 +266,19 @@ export const MotherKitchen: React.FC<{ reachL: number; press: number; reachR: nu
       <g transform={`rotate(${headRot} ${cx} ${shY - 40})`}>
         {/* cheek sliver when she turns toward the stove */}
         <path d={`M${hx + 58} ${hy - 30} Q${hx + 86} ${hy + 4} ${hx + 70} ${hy + 50} Q${hx + 58} ${hy + 64} ${hx + 50} ${hy + 40} Z`} fill={MOM.skin} opacity={turn} />
-        <ellipse cx={hx} cy={hy} rx={72} ry={86} fill={MOM.scarf} />
+        <ellipse cx={hx} cy={hy} rx={68} ry={82} fill={MOM.scarf} />
+        <ellipse cx={hx - 6} cy={hy + 48} rx={46} ry={34} fill={MOM.scarf} />
+        <path d={`M${hx - 44} ${hy + 40} Q${hx - 6} ${hy + 30} ${hx + 36} ${hy + 42}`} stroke={MOM.scarfD} strokeWidth={4} fill="none" opacity={0.6} />
         <path d={`M${hx + 30} ${hy - 78} Q${hx + 76} ${hy - 40} ${hx + 72} ${hy + 20} L${hx + 40} ${hy + 30} Z`} fill={MOM.scarfD} opacity={0.6} />
         <path d={`M${hx - 60} ${hy - 44} Q${hx - 20} ${hy - 92} ${hx + 36} ${hy - 80}`} stroke={MOM.rim} strokeWidth={5} fill="none" opacity={0.75 * rimO} strokeLinecap="round" />
       </g>
-      {/* scarf cape over the shoulders: the bergo silhouette */}
-      <path d={`M${hx - 66} ${hy + 20} Q${cx - 120} ${shY - 10} ${cx - 128} ${shY + 54} Q${cx - 120} ${shY + 140} ${cx - 60} ${shY + 166} Q${cx} ${shY + 182} ${cx + 66} ${shY + 166} Q${cx + 126} ${shY + 140} ${cx + 130} ${shY + 54} Q${cx + 122} ${shY - 10} ${hx + 66} ${hy + 20} Z`} fill={MOM.scarf} />
-      <path d={`M${cx + 30} ${shY - 20} Q${cx + 110} ${shY} ${cx + 130} ${shY + 54} Q${cx + 126} ${shY + 140} ${cx + 66} ${shY + 166} Q${cx + 50} ${shY + 100} ${cx + 30} ${shY - 20} Z`} fill={MOM.scarfD} opacity={0.7} />
-      <path d={`M${cx - 20} ${shY + 10} Q${cx - 10} ${shY + 90} ${cx - 4} ${shY + 176}`} stroke={MOM.scarfD} strokeWidth={5} fill="none" opacity={0.7} />
-      <path d={`M${cx - 70} ${shY + 20} Q${cx - 80} ${shY + 100} ${cx - 56} ${shY + 160}`} stroke={MOM.scarfD} strokeWidth={4} fill="none" opacity={0.5} />
-      <path d={`M${hx - 66} ${hy + 20} Q${cx - 120} ${shY - 10} ${cx - 128} ${shY + 54}`} stroke={MOM.rim} strokeWidth={4} fill="none" opacity={0.7 * rimO} strokeLinecap="round" />
-      <path d={`M${cx - 128} ${shY + 54} Q${cx - 120} ${shY + 140} ${cx - 60} ${shY + 166}`} stroke={MOM.scarfL} strokeWidth={3} fill="none" opacity={0.5 * rimO} />
+      {/* scarf cape over the shoulders: the bergo silhouette (narrow neck, clear shoulders, rounded hem) */}
+      <path d={`M${hx - 52} ${hy + 50} Q${hx - 50} ${shY - 26} ${cx - 104} ${shY - 6} Q${cx - 142} ${shY + 12} ${cx - 142} ${shY + 60} L${cx - 132} ${shY + 118} Q${cx - 70} ${shY + 150} ${cx} ${shY + 156} Q${cx + 70} ${shY + 150} ${cx + 134} ${shY + 118} L${cx + 144} ${shY + 60} Q${cx + 144} ${shY + 12} ${cx + 106} ${shY - 6} Q${hx + 52} ${shY - 26} ${hx + 52} ${hy + 50} Z`} fill={MOM.scarf} />
+      <path d={`M${cx + 34} ${shY - 16} Q${cx + 80} ${shY - 12} ${cx + 106} ${shY - 6} Q${cx + 144} ${shY + 12} ${cx + 144} ${shY + 60} L${cx + 134} ${shY + 118} Q${cx + 90} ${shY + 140} ${cx + 52} ${shY + 150} Q${cx + 50} ${shY + 60} ${cx + 34} ${shY - 16} Z`} fill={MOM.scarfD} opacity={0.75} />
+      <path d={`M${cx - 18} ${shY + 6} Q${cx - 10} ${shY + 80} ${cx - 4} ${shY + 152}`} stroke={MOM.scarfD} strokeWidth={5} fill="none" opacity={0.7} />
+      <path d={`M${cx - 76} ${shY + 20} Q${cx - 84} ${shY + 90} ${cx - 70} ${shY + 140}`} stroke={MOM.scarfD} strokeWidth={4} fill="none" opacity={0.5} />
+      <path d={`M${hx - 52} ${hy + 50} Q${hx - 50} ${shY - 26} ${cx - 104} ${shY - 6} Q${cx - 142} ${shY + 12} ${cx - 142} ${shY + 60}`} stroke={MOM.rim} strokeWidth={4} fill="none" opacity={0.75 * rimO} strokeLinecap="round" />
+      <path d={`M${cx - 142} ${shY + 60} L${cx - 132} ${shY + 118} Q${cx - 70} ${shY + 150} ${cx} ${shY + 156}`} stroke={MOM.scarfL} strokeWidth={3} fill="none" opacity={0.45 * rimO} />
     </g>
   );
 };

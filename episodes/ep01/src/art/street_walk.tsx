@@ -241,10 +241,11 @@ export const OldMan: React.FC<{ t2: number }> = ({ t2 }) => {
   return (
     <g>
       {/* plastic bag beside him on the bench */}
-      <path d={`M 560 ${BUS.seat} q -10 -70 30 -84 q 40 -10 48 40 q 6 30 -4 44 Z`} fill="#c9c2d6" opacity={0.75} />
+      <path d={`M 600 ${BUS.seat} l 6 -58 l 62 0 l 6 58 Z`} fill="#4a3a44" />
+      <path d={`M 618 ${BUS.seat - 58} q 19 -30 38 0`} stroke="#4a3a44" strokeWidth={5} fill="none" />
       {/* cane: from the floor to under his hands */}
       <path d={`M ${x + 40 * s} ${y} L ${x + 34 * s} ${y - 40 * s} q 0 -6 -5 -6`} stroke="#1a1426" strokeWidth={3 * s} fill="none" strokeLinecap="round" />
-      <Figure x={x} y={y} h={BUS.man} dir={1} pose={pose} look={{ body: '#2e2632', far: '#1c1722', skin: '#4a3a3e', hat: 'peci', hatCol: '#0b0a10', rim: '#e8f1ff', rimO: 0.7 }} />
+      <Figure x={x} y={y} h={BUS.man} dir={1} pose={pose} look={{ body: '#2e2632', far: '#1c1722', skin: '#4a3a3e', hat: 'peci', hatCol: '#0b0a10', rim: '#e8f1ff', rimO: 0.4 }} />
     </g>
   );
 };

@@ -164,14 +164,14 @@ export const WindowHouse: React.FC<{ reach: number; lamp: number; br: number; wa
   const room = lit > 0.5 ? '#e9b874' : '#1a2034';
   // mother: side view facing right, standing left of centre
   const u = 50; // head unit
-  const mx = wx + 80, my = wy + wh + 120; // feet (below the sill, hidden)
-  const bend = 0.14 * reach + 0.03 * Math.sin(br);
+  const mx = wx + 48, my = wy + wh + 120; // feet (below the sill, hidden)
+  const bend = 0.26 * reach + 0.03 * Math.sin(br);
   const shX = mx + u * 0.15 + u * 0.9 * bend, shY = wy + 128 + u * 0.5 * bend;
   const hx = shX + u * 0.32 + u * 0.4 * bend, hy = shY - u * 0.62;
-  const hand: [number, number] = [shX + u * (0.6 + 1.55 * reach), shY + u * (1.75 - 1.3 * reach)];
-  const elbow: [number, number] = [shX + u * (0.35 + 0.5 * reach), shY + u * (1.05 - 0.35 * reach)];
+  const lampX = wx + 232, lampY = wy + 214;
+  const hand: [number, number] = [shX + u * 0.6 + (lampX - 8 - shX - u * 0.6) * reach, shY + u * 1.75 + (lampY + 6 - shY - u * 1.75) * reach];
+  const elbow: [number, number] = [(shX + hand[0]) / 2 + u * 0.1, Math.max(shY, hand[1]) + u * (0.5 - 0.2 * reach)];
   const sil = lit > 0.5 ? '#2a1a14' : '#0c0f1a';
-  const lampX = wx + 246, lampY = wy + 214;
   return (
     <g>
       <defs>
@@ -194,17 +194,17 @@ export const WindowHouse: React.FC<{ reach: number; lamp: number; br: number; wa
       <path d={`M${wx + ww} ${wy} L${wx + ww - 30} ${wy} Q${wx + ww - 18} ${wy + wh * 0.5} ${wx + ww - 26} ${wy + wh} L${wx + ww} ${wy + wh} Z`} fill={lit > 0.5 ? '#b0703f' : '#141a2c'} />
       {/* table lamp on a small cabinet */}
       <g fill={sil}>
-        <rect x={lampX - 34} y={lampY + 50} width={70} height={wh - (lampY - wy) - 50} />
+        <rect x={lampX - 22} y={lampY + 50} width={60} height={wh - (lampY - wy) - 50} />
         <rect x={lampX - 4} y={lampY + 8} width={8} height={44} />
         <ellipse cx={lampX} cy={lampY + 50} rx={18} ry={5} />
       </g>
       <path d={`M${lampX - 26} ${lampY + 10} L${lampX + 26} ${lampY + 10} L${lampX + 17} ${lampY - 26} L${lampX - 17} ${lampY - 26} Z`} fill={lit > 0.5 ? '#fff0c8' : '#20263a'} />
-      {/* sleeping child on a floor mattress: pillow, head, blanket mound */}
+      {/* sleeping child on a floor mattress: blanket mound, head on the pillow near the lamp */}
       <g fill={sil}>
-        <rect x={wx + 40} y={wy + wh - 40} width={170} height={40} />
-        <ellipse cx={wx + 72} cy={wy + wh - 50} rx={32} ry={12} fill={lit > 0.5 ? '#c98a4e' : '#1a2032'} />
-        <ellipse cx={wx + 80} cy={wy + wh - 66} rx={19} ry={17} />
-        <path d={`M${wx + 96} ${wy + wh - 40} Q${wx + 110} ${wy + wh - 78 - 2 * Math.sin(br * 0.8)} ${wx + 150} ${wy + wh - 70 - 2 * Math.sin(br * 0.8)} Q${wx + 196} ${wy + wh - 64} ${wx + 206} ${wy + wh - 40} Z`} fill={lit > 0.5 ? '#6a3c22' : '#10141f'} />
+        <rect x={wx + 70} y={wy + wh - 34} width={150} height={34} />
+        <ellipse cx={wx + 186} cy={wy + wh - 44} rx={30} ry={11} fill={lit > 0.5 ? '#d39a5c' : '#1a2032'} />
+        <ellipse cx={wx + 180} cy={wy + wh - 62} rx={17} ry={16} />
+        <path d={`M${wx + 76} ${wy + wh - 34} Q${wx + 84} ${wy + wh - 70 - 2 * Math.sin(br * 0.8)} ${wx + 120} ${wy + wh - 66 - 2 * Math.sin(br * 0.8)} Q${wx + 156} ${wy + wh - 64} ${wx + 166} ${wy + wh - 34} Z`} fill={lit > 0.5 ? '#6a3c22' : '#10141f'} />
       </g>
       {/* mother in a headscarf, side view, reaching for the lamp */}
       <g fill={sil}>
