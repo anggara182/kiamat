@@ -15,7 +15,7 @@ export type Mood = 'day' | 'night';
 export const BR = { deck: 1030, deckH: 40, water: 1300, bankL: 150, bankR: 1150, pierL: 470, pierR: 830 };
 const PAL = {
   day: { sky: ['#cfd6dc', '#e6e8ea'], far: '#b9bfc0', far2: '#a9afb0', bank: '#8a8270', bank2: '#6f685a', water: ['#9aa8ae', '#6f7f86'], tree: '#6f7a66', conc: '#b8b2a6', concD: '#8f8a80' },
-  night: { sky: ['#06080f', '#111628'], far: '#0d1120', far2: '#141a2c', bank: '#0e1018', bank2: '#0a0c12', water: ['#0f131c', '#0b0e14'], tree: '#0a0d14', conc: '#2a2c34', concD: '#1c1e26' },
+  night: { sky: ['#06080f', '#111628'], far: '#0d1120', far2: '#141a2c', bank: '#0e1018', bank2: '#0a0c12', water: ['#0f131c', '#0b0e14'], tree: '#0a0d14', conc: '#454857', concD: '#2c2e3a' },
 };
 
 /** river, banks, far town; the bridge itself is live */
@@ -89,6 +89,7 @@ export const Bridge: React.FC<BridgeProps> = ({ mood, stage, t, sag = 0, fall = 
         <rect x={x0} y={D} width={x1 - x0} height={dh} fill={build ? '#9a7a54' : C.conc} />
         <rect x={x0} y={D + dh - 10} width={x1 - x0} height={10} fill={build ? '#7a5a3a' : C.concD} />
         {!build && <rect x={x0} y={D - 50} width={x1 - x0} height={6} fill={C.concD} />}
+        {mood === 'night' && <rect x={x0} y={D - 2} width={x1 - x0} height={4} fill="#ffb347" opacity={0.45} />}
         {rail}
       </g>
     );
@@ -165,7 +166,8 @@ export const EndBand: React.FC = () => {
       {Array.from({ length: 14 }, (_, i) => { const w = 50 + r() * 80, h = 60 + r() * 160; return <g key={i}><rect x={i * 96 - 20} y={1280 - h} width={w} height={h + 30} fill="#0d1120" />{r() < 0.6 && <rect x={i * 96 + 10} y={1280 - h * 0.6} width={8} height={10} fill="#ffcf86" opacity={0.7} />}</g>; })}
       <rect x={0} y={1300} width={W} height={H - 1300} fill="#0b0e14" />
       {/* the deck from the left, broken off mid-air: jagged end, bent railing, dangling rebar */}
-      <polygon points={`-40,880 760,880 800,900 770,930 810,960 760,990 -40,990`} fill="#2a2c34" />
+      <polygon points={`-40,880 760,880 800,900 770,930 810,960 760,990 -40,990`} fill="#454857" />
+      <rect x={-40} y={878} width={800} height={4} fill="#ffb347" opacity={0.4} />
       <rect x={-40} y={960} width={760} height={30} fill="#1c1e26" />
       <rect x={-40} y={820} width={720} height={8} fill="#1c1e26" />
       {Array.from({ length: 20 }, (_, i) => <rect key={i} x={i * 36} y={820} width={5} height={60} fill="#1c1e26" />)}

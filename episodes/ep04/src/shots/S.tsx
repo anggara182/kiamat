@@ -53,9 +53,9 @@ export const S10: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tC = wordAt(10, /^cheered/i, 0.69);
   const cam: Cam = { zoom: 1.22 + 0.08 * ramp(p, 0, 1, EIO), dx: 30, dy: 0, ox: 420, oy: 820 };
-  const D = BR.deck, rx = 300;
+  const D = BR.deck, rx = 420;
   const cut = t >= tC, cu = Math.max(0, t - tC);
-  const crowd = Array.from({ length: 30 }, (_, i) => ({ x: 360 + i * 27 + (i % 3) * 6, h: 74 + (i % 4) * 6, c: ['#3a4a5a', '#6a3a32', '#2f3530', '#8a7a5a', '#4a3a52', '#9a4a3a', '#d8d4c8'][i % 7] }));
+  const crowd = Array.from({ length: 28 }, (_, i) => ({ x: 540 + i * 24 + (i % 3) * 6, h: 74 + (i % 4) * 6, c: ['#3a4a5a', '#6a3a32', '#2f3530', '#8a7a5a', '#4a3a52', '#9a4a3a', '#d8d4c8'][i % 7] }));
   const conf = Array.from({ length: 60 }, (_, i) => ({ x: 200 + ((i * 97) % 900), v: 120 + (i % 7) * 30, c: ['#c94f3d', '#e8c24a', '#4f6f8a', '#f2efe6', '#3f7a5a'][i % 5], ph: i }));
   return (
     <AbsoluteFill style={{ backgroundColor: '#e6e8ea' }}>

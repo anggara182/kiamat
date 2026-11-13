@@ -13,6 +13,19 @@ const LOUDCOAT: Pal = { ...LOUD, top: '#f2f4f2', topD: '#cfd4d0' };
 const NURSE: Pal = { skin: '#b07a5e', skinD: '#7a4f3e', top: '#8ac0b0', topD: '#5e9484', bottom: '#8ac0b0', headC: '#f2f4f2', headD: '#c8ccc8', rim: '#ffffff' };
 const NURSE2: Pal = { ...NURSE, skin: '#9a6650', skinD: '#6a4434', headC: '#5a7a8a', headD: '#3e5a68' };
 
+/** simple frontal legs (trousers + shoes) for a Front figure, origin feet */
+const Legs: React.FC<{ x: number; y: number; h: number; c: string; shoe?: string; spread?: number }> = ({ x, y, h, c, shoe = '#1d1a1e', spread = 0 }) => {
+  const s = h / 1000;
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <path d={`M-96 -320 L-4 -320 L${-20 - spread} -20 L${-90 - spread} -20 Z`} fill={c} />
+      <path d={`M4 -320 L96 -320 L${90 + spread} -20 L${20 + spread} -20 Z`} fill={c} />
+      <path d={`M${-100 - spread} -30 L${-14 - spread} -30 L${-10 - spread} 0 L${-110 - spread} 0 Z`} fill={shoe} />
+      <path d={`M${14 + spread} -30 L${100 + spread} -30 L${110 + spread} 0 L${10 + spread} 0 Z`} fill={shoe} />
+    </g>
+  );
+};
+
 /* ============ shot 5: the doctor is walked out of the hospital, looking back; the push lands on "aside" ============ */
 export const S05: React.FC = () => {
   const { t, t2, p } = useShot();
@@ -53,6 +66,7 @@ export const S06: React.FC = () => {
       <BandImg id="institutions/hospital" cam={cam} />
       <Live cam={cam}>
         <Fr>
+          <Legs x={560} y={HF.landing} h={mH} c={LOUD.bottom} spread={20} />
           <Front x={560} y={HF.landing} h={mH} pal={LOUD} head="short" handL={[-190, -1060 - 90 * pump]} handR={handR} tilt={-6 - 4 * up} eyes="open" bob={4 * pump} rimO={0.4} />
           <Megaphone x={hr[0]} y={hr[1] - 10} ang={lerp(-150, -120, up)} s={1.1} />
         </Fr>
@@ -79,6 +93,7 @@ export const S07: React.FC = () => {
       <BandImg id="institutions/corridor" cam={cam} />
       <Live cam={cam}>
         <Fr>
+          <Legs x={540} y={mY} h={mH} c={LOUD.bottom} />
           <Front x={540} y={mY} h={mH} pal={LOUDCOAT} head="short" handL={handL} handR={handR} tilt={8 * grab} eyes="open" bob={3 * Math.sin(t2 * 2.4)} rimO={0.2} />
           {/* the coat is far too big: long hem past the knees, sleeves flapping */}
           <path d={`M${540 - 128} ${mY - 330} L${540 + 128} ${mY - 330} L${540 + 160} ${mY - 110} L${540 - 160} ${mY - 110} Z`} fill="#f2f4f2" />

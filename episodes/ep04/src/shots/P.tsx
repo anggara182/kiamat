@@ -20,7 +20,7 @@ const CAST: Record<string, FigSpec> = {
   teacher: { skin: '#c48d6e', hair: 'scarf', hairC: '#6a4a7a', top: '#d9c9a8', topD: '#b0a080', legs: '#3a3a44', coat: true },
   engineer: { skin: '#8a5a44', hair: 'short', hairC: '#1a1512', top: '#c9a24a', topD: '#94742c', legs: '#3a4a5e' },
   child: { skin: '#c48d6e', hair: 'long', hairC: '#1a1412', top: '#c4504a', topD: '#943a34', legs: '#2e3a5e' },
-  loud: { skin: '#9c6b52', hair: 'bald', hairC: '#2a2420', top: '#8a2e2a', topD: '#5e1e1a', legs: '#2a2a30' },
+  loud: { skin: '#9c6b52', hair: 'short', hairC: '#141010', top: '#8a2e2a', topD: '#5e1e1a', legs: '#2a2a30' },
 };
 
 /* ============ shot 14 (day, quote): an abandoned council office, dust in one beam, the empty chair ============ */
@@ -141,7 +141,7 @@ export const S16: React.FC = () => {
           <path d="M240 1340 L880 1340 L960 1580 L160 1580 Z" fill="#4a5664" opacity={0.6} />
           <rect x={160} y={1280} width={800} height={30} rx={14} fill="#3a3c44" />
           <g transform={`translate(560 1290) scale(0.86)`}>
-            <Figure f={CAST.loud} armF={[122, 150]} armB={[160 + (12 + 14 * big) * wave, -30 + 30 * wave]} walk={0}
+            <Figure f={CAST.loud} armF={[122, 150]} armB={[205 + (8 + 14 * big) * wave, -10 + 30 * wave]} walk={0}
               hold={(fh) => (
                 <g transform={`translate(${fh.x + 10} ${fh.y + 6}) rotate(${-8 + 3 * Math.sin(t2 * 13)})`}>
                   <path d="M0 -26 L150 -70 L150 70 L0 26 Z" fill="#e8e4da" />

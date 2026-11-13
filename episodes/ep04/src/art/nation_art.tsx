@@ -55,15 +55,15 @@ export const MarchBand: React.FC = () => {
     </g>
   );
 };
-/** the endless column: people along the road, front at u = front; walk phase on twos */
+/** the endless column: marcher i sits at u = f - u0*1.1 (f grows over time); u > 1 = through the gate. Walk phase on twos. */
 const MARCHERS = (() => {
   const r = rng(11);
   return Array.from({ length: 520 }).map(() => ({ u0: r(), lat: (r() * 2 - 1) * 0.42, h: 0.9 + r() * 0.2, col: ['#3a2e3e', '#4a3a40', '#2e2a3a', '#5a4448', '#3e3446'][Math.floor(r() * 5)], hijab: r() < 0.35, banner: r() < 0.035, ph: r() * 6 }));
 })();
-export const Column: React.FC<{ t2: number; front: number; flow: number; rim: string }> = ({ t2, front, flow, rim }) => (
+export const Column: React.FC<{ t2: number; f: number; rim: string }> = ({ t2, f, rim }) => (
   <g>
-    {MARCHERS.map((m, i) => ({ m, u: front - ((m.u0 + flow) % 1) * front * 1.02, i }))
-      .filter((q) => q.u > -0.02)
+    {MARCHERS.map((m, i) => ({ m, u: f - m.u0 * 1.1, i }))
+      .filter((q) => q.u > 0.1 && q.u <= 1)
       .sort((a, b) => b.u - a.u)
       .map(({ m, u, i }) => {
         const q = road(Math.max(0, u)); const hh = 300 * q.s * m.h; const x = q.x + m.lat * q.w; const y = q.y + 10 * q.s;
@@ -71,7 +71,7 @@ export const Column: React.FC<{ t2: number; front: number; flow: number; rim: st
         const bw = hh * 0.13;
         return (
           <g key={i}>
-            {m.banner && <g><rect x={x + bw * 0.6} y={y - hh * 1.9} width={hh * 0.025 + 1} height={hh * 1.4} fill="#2a2228" /><path d={`M${x + bw * 0.6} ${y - hh * 1.9} q${hh * 0.4} ${-hh * 0.06 + Math.sin(t2 * 5 + m.ph) * hh * 0.03} ${hh * 0.8} 0 l0 ${hh * 0.45} q${-hh * 0.4} ${hh * 0.05} ${-hh * 0.8} 0 Z`} fill={BANNER} /></g>}
+            {m.banner && q.s < 0.42 && <g><rect x={x + bw * 0.6} y={y - hh * 1.9} width={hh * 0.025 + 1} height={hh * 1.4} fill="#2a2228" /><path d={`M${x + bw * 0.6} ${y - hh * 1.9} q${hh * 0.4} ${-hh * 0.06 + Math.sin(t2 * 5 + m.ph) * hh * 0.03} ${hh * 0.8} 0 l0 ${hh * 0.45} q${-hh * 0.4} ${hh * 0.05} ${-hh * 0.8} 0 Z`} fill={BANNER} /></g>}
             <path d={`M${x - bw} ${y} L${x - bw * 1.1} ${y - hh * 0.78 - bob} Q${x} ${y - hh * 0.84 - bob} ${x + bw * 1.1} ${y - hh * 0.78 - bob} L${x + bw} ${y} Z`} fill={m.col} />
             <ellipse cx={x} cy={y - hh * 0.89 - bob} rx={bw * (m.hijab ? 0.75 : 0.6)} ry={bw * (m.hijab ? 0.85 : 0.7)} fill={m.hijab ? '#4a3a4e' : '#2a2026'} />
             {q.s > 0.3 && <path d={`M${x - bw * 0.6} ${y - hh * 0.95 - bob} Q${x} ${y - hh * 1.02 - bob} ${x + bw * 0.6} ${y - hh * 0.95 - bob}`} stroke={rim} strokeOpacity={0.6} strokeWidth={Math.max(1, bw * 0.12)} fill="none" />}
