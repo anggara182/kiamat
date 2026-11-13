@@ -114,45 +114,57 @@ export const Doll: React.FC<{ x: number; y: number; rot: number }> = ({ x, y, ro
 );
 
 /* ---------------- night terrace ---------------- */
-export const TR = { win: { x: 700, y: 760, w: 170, h: 250 }, bench: 1230 };
+/** city hall on a rise in the distance (generic civic building: steps, columns, clock tower, blank flagpole) */
+export const TR = { hall: { cx: 790, base: 820 }, bench: 1250 };
 
 export const TerraceBand: React.FC = () => {
-  const { win } = TR;
+  const { cx, base } = TR.hall;
+  const cols = Array.from({ length: 7 }, (_, i) => cx - 150 + i * 50);
   return (
     <g>
       <defs>
-        <linearGradient id="htSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#05070f" /><stop offset="1" stopColor="#141a30" /></linearGradient>
+        <linearGradient id="htSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#05070f" /><stop offset="0.55" stopColor="#141a30" /><stop offset="1" stopColor="#2a2c44" /></linearGradient>
+        <radialGradient id="htHaze" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#4a4258" stopOpacity={0.9} /><stop offset="1" stopColor="#4a4258" stopOpacity={0} /></radialGradient>
       </defs>
-      <rect x={-108} y={-192} width={1296} height={1100} fill="url(#htSky)" />
-      {/* across the alley: houses + the mosque wall with one lit arched window and a small dome */}
-      <path d="M-108 700 L120 640 L300 680 L300 1100 L-108 1100 Z" fill="#0c1020" />
-      <rect x={560} y={420} width={628} height={700} fill="#10152a" />
-      <ellipse cx={870} cy={420} rx={140} ry={110} fill="#10152a" />
-      <rect x={866} y={280} width={8} height={40} fill="#10152a" />
-      <path d={`M${win.x} ${win.y + win.h} L${win.x} ${win.y + 60} Q${win.x + win.w / 2} ${win.y - 30} ${win.x + win.w} ${win.y + 60} L${win.x + win.w} ${win.y + win.h} Z`} fill="#ffcf86" />
-      <path d={`M${win.x + win.w / 2} ${win.y + 10} L${win.x + win.w / 2} ${win.y + win.h}`} stroke="#8a5a2a" strokeWidth={6} />
-      <rect x={300} y={760} width={260} height={340} fill="#0a0d1a" />
-      {/* the alley floor + a faint light patch below the window */}
-      <rect x={-108} y={1100} width={1296} height={60} fill="#181c2c" />
-      <ellipse cx={785} cy={1130} rx={260} ry={34} fill="#ffcf86" opacity={0.16} />
-      <rect x={560} y={600} width={460} height={500} fill="#1c2036" opacity={0.8} />
-      {/* our terrace: pillar, eave, low wall, floor */}
+      <rect x={-108} y={-192} width={1296} height={1400} fill="url(#htSky)" />
+      <ellipse cx={cx - 120} cy={base + 40} rx={700} ry={330} fill="url(#htHaze)" />
+      {/* the rise + the city hall */}
+      <path d={`M-108 ${base + 120} Q${cx - 300} ${base - 10} ${cx} ${base - 6} Q${cx + 300} ${base} 1188 ${base + 80} L1188 1300 L-108 1300 Z`} fill="#141626" />
+      <path d={`M${cx - 200} ${base} L${cx + 200} ${base} L${cx + 230} ${base + 30} L${cx - 230} ${base + 30} Z`} fill="#c9b08a" />
+      <rect x={cx - 180} y={base - 150} width={360} height={150} fill="#b89c78" />
+      {cols.map((x) => <rect key={x} x={x - 9} y={base - 140} width={18} height={140} fill="#e8d2a8" />)}
+      <path d={`M${cx - 200} ${base - 150} L${cx} ${base - 220} L${cx + 200} ${base - 150} Z`} fill="#a88c68" />
+      <rect x={cx - 34} y={base - 330} width={68} height={130} fill="#b89c78" />
+      <circle cx={cx} cy={base - 290} r={20} fill="#f4e6c8" />
+      <path d={`M${cx} ${base - 290} L${cx} ${base - 304} M${cx} ${base - 290} L${cx + 9} ${base - 286}`} stroke="#5a4a3a" strokeWidth={3} />
+      <path d={`M${cx - 40} ${base - 330} L${cx} ${base - 372} L${cx + 40} ${base - 330} Z`} fill="#8a7050" />
+      <rect x={cx + 262} y={base - 250} width={5} height={250} fill="#6a5a4a" />
+      <path d={`M${cx + 267} ${base - 248} L${cx + 330} ${base - 236} L${cx + 267} ${base - 222} Z`} fill="#8a8478" />
+      {/* city roofs across the alley (dark), a small unlit mosque far left */}
+      <ellipse cx={120} cy={930} rx={60} ry={50} fill="#0d1020" /><rect x={116} y={860} width={6} height={30} fill="#0d1020" />
+      <path d="M-108 1000 L40 950 L200 980 L330 930 L470 990 L600 960 L760 1000 L900 950 L1060 990 L1188 960 L1188 1300 L-108 1300 Z" fill="#0b0d1a" />
+      {[[240, 1020], [700, 1030], [980, 1015]].map(([x, y], i) => <rect key={i} x={x} y={y} width={22} height={18} fill="#ffcf86" opacity={0.35} />)}
+      {/* our terrace: pillar, eave, floor */}
       <rect x={-108} y={-192} width={1296} height={250} fill="#05060c" />
       <rect x={-108} y={40} width={1296} height={24} fill="#0b0d18" />
       <rect x={20} y={40} width={70} height={1400} fill="#07080f" />
-      <rect x={-108} y={1160} width={1296} height={80} fill="#0c0e1a" />
-      <rect x={-108} y={1236} width={1296} height={900} fill="#090a14" />
-      {/* bench */}
-      <rect x={380} y={TR.bench} width={640} height={26} fill="#1a1622" />
-      <rect x={410} y={TR.bench + 26} width={22} height={130} fill="#12101a" /><rect x={970} y={TR.bench + 26} width={22} height={130} fill="#12101a" />
-      <path d={`M380 ${TR.bench} L1020 ${TR.bench}`} stroke="#ffcf86" strokeWidth={3} opacity={0.25} />
+      <rect x={-108} y={1180} width={1296} height={70} fill="#0c0e1a" />
+      <rect x={-108} y={1250} width={1296} height={900} fill="#090a14" />
+      <rect x={160} y={TR.bench} width={760} height={26} fill="#1a1622" />
+      <rect x={190} y={TR.bench + 26} width={22} height={130} fill="#12101a" /><rect x={870} y={TR.bench + 26} width={22} height={130} fill="#12101a" />
+      <path d={`M160 ${TR.bench} L920 ${TR.bench}`} stroke="#ffcf86" strokeWidth={3} opacity={0.2} />
     </g>
   );
 };
 
-/** live: window glow flicker (ones) */
-export const MosqueGlow: React.FC<{ t: number; o?: number }> = ({ t, o = 1 }) => (
-  <g>
-    <Glow id="htWin" x={TR.win.x + TR.win.w / 2} y={TR.win.y + TR.win.h / 2} rx={420} ry={380} c="#ffcf86" o={(0.55 + 0.03 * Math.sin(t * 9)) * o} mid={0.25} />
-  </g>
-);
+/** live: the city hall floodlights (ones) */
+export const CityGlow: React.FC<{ t: number }> = ({ t }) => {
+  const { cx, base } = TR.hall;
+  return (
+    <g>
+      <Glow id="htHall" x={cx} y={base - 120} rx={420} ry={300} c="#ffcf86" o={0.38 + 0.02 * Math.sin(t * 7)} mid={0.25} />
+      {[-190, 190].map((d) => <Glow key={d} id={`htF${d}`} x={cx + d} y={base + 20} rx={90} ry={60} c="#fff0c8" o={0.8} mid={0.3} />)}
+      <Glow id="htClock" x={cx} y={base - 290} rx={50} c="#fff4d8" o={0.7} mid={0.3} />
+    </g>
+  );
+};

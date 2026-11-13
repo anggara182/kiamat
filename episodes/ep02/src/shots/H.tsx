@@ -6,7 +6,7 @@ import { Fr, lerp, bump } from '../art/market_kit';
 import { Side, Front, toFrame, Pal } from '../art/market_people';
 import { SH, FrontShelf, Gallon, Bottle, GrabArm, DawnMood, DayShaft, HabisCard } from '../art/market_shop';
 import { RollDoor, FrontLight, Jerrycan } from '../art/market_front';
-import { HS, GutterFlow, Pour, Bucket, Doll, TR, MosqueGlow } from '../art/homes_art';
+import { HS, GutterFlow, Pour, Bucket, Doll, TR, CityGlow } from '../art/homes_art';
 import { ST, StallLife, Shutter, Ladle, StallCounter, STALL_DAWN, STALL_DUSK } from '../art/market_stall';
 
 /** keyframe track [[t, x, y], ...] eased between keys */
@@ -252,25 +252,25 @@ export const S09: React.FC = () => {
   );
 };
 
-/* ============ shot 24: night terrace, one whispers to the other (lean lands on "whisper"); both turn to the lit mosque window on "trusted" ============ */
+/* ============ shot 24: night terrace, one whispers to the other (lean lands on "whisper"); both turn to the lit city hall on "trusted" ============ */
 export const S24: React.FC = () => {
   const { t, t2, sec } = useShot();
   const tW = wordAt(24, /^whisper/i, 0.22);
   const tT = wordAt(24, /^trusted/i, 0.83);
   const SIL: Pal = { skin: '#07080e', skinD: '#06070c', top: '#08090f', topD: '#06070c', bottom: '#07080e', headC: '#08090f', headD: '#06070c', rim: '#ffcf86' };
-  const lean = 6 + 18 * ramp(t2, tW - 0.35, tW, EOUT) - 10 * ramp(t2, tT - 0.05, tT + 0.15);
+  const lean = 4 + 14 * ramp(t2, tW - 0.35, tW, EOUT) - 10 * ramp(t2, tT - 0.05, tT + 0.15);
   const turned = t2 >= tT;
   const breath = Math.sin(t2 * 2.2);
-  const cam: Cam = { zoom: 1.22 + 0.08 * EIO(t / sec), dx: 0, dy: 0, ox: 720, oy: 1000 };
-  const Hh = 720, feet = TR.bench + Hh * 0.47;
+  const cam: Cam = { zoom: 1.08 + 0.07 * EIO(t / sec), dx: 0, dy: 0, ox: 560, oy: 1000 };
+  const Hh = 880, feet = TR.bench + Hh * 0.47;
   return (
     <AbsoluteFill style={{ backgroundColor: '#05070f' }}>
       <BandImg id="homes/terrace" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <MosqueGlow t={t} />
-          <Side x={620} y={feet} h={Hh} dir={-1} pal={SIL} head="scarf" skirt sit lean={-3 + 2 * breath} face={turned ? 'back' : 'side'} headTilt={turned ? 0 : 6 * ramp(t2, tW - 0.2, tW + 0.2)} handN={[110, -470]} handF={[90, -480]} rimO={0.9} />
-          <Side x={815} y={feet} h={Hh * 1.04} dir={-1} pal={SIL} head="peci" male sit lean={lean} face={turned ? 'back' : 'side'} handN={turned ? [110, -480] : [120, -860]} handF={[90, -480]} bob={2 * breath} rimO={0.9} />
+          <CityGlow t={t} />
+          <Side x={330} y={feet} h={Hh} dir={-1} pal={SIL} head="scarf" skirt sit lean={-3 + 2 * breath} face={turned ? 'back' : 'side'} headTilt={turned ? 0 : 6 * ramp(t2, tW - 0.2, tW + 0.2)} handN={[110, -470]} handF={[90, -480]} rimO={0.9} />
+          <Side x={700} y={feet} h={Hh * 1.04} dir={-1} pal={SIL} head="peci" male sit lean={lean} face={turned ? 'back' : 'side'} handN={turned ? [110, -480] : [120, -860]} handF={[90, -480]} bob={2 * breath} rimO={0.9} />
         </Fr>
       </Live>
     </AbsoluteFill>

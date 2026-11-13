@@ -1,0 +1,1670 @@
+{
+ "id": "EP03",
+ "title": "The Man From Nowhere",
+ "series": "The Last Days",
+ "chapter": 3,
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 68.886,
+ "accent": "#d9a441",
+ "timingSource": "ESTIMATE (VO pending)",
+ "audio": true,
+ "quote": {
+  "text": "…till about thirty Dajjals (liars) appear, and each one of them will claim that he is Allah’s Messenger.",
+  "source": "SAHIH AL-BUKHARI 7121",
+  "fromShot": 22,
+  "toShot": 22
+ },
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 1.917,
+   "act": 1,
+   "set": "cityhall",
+   "owner": "C",
+   "framing": "HOOK. Wide: the city hall burning at night, a crowd of silhouettes in front",
+   "camera": "Slow push-in, slight handheld",
+   "vo_markup": "The *fire* started at midnight.",
+   "vo": "The fire started at midnight.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 0.1,
+     "end": 0.285
+    },
+    {
+     "text": "fire",
+     "highlight": true,
+     "start": 0.285,
+     "end": 0.656
+    },
+    {
+     "text": "started",
+     "highlight": false,
+     "start": 0.656,
+     "end": 1.088
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 1.088,
+     "end": 1.212
+    },
+    {
+     "text": "midnight.",
+     "highlight": false,
+     "start": 1.212,
+     "end": 1.767
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The city hall (civic building: wide steps, columns, clock tower) engulfed in flames; dark crowd silhouettes with raised arms; embers rising",
+   "notes": "Frame 0 already burning and moving. Flames, smoke, embers on ones; crowd on twos. Flames flare on \"fire\". No bodies, no injuries.",
+   "sync": [
+    "fire"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 1.917,
+   "end": 4.148,
+   "act": 1,
+   "set": "cityhall",
+   "owner": "C",
+   "framing": "Wide: the smoking ruins of city hall at sunrise, grey ash everywhere",
+   "camera": "Slow pull-back",
+   "vo_markup": "By sunrise, city hall was *gone.*",
+   "vo": "By sunrise, city hall was gone.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 2.017,
+     "end": 2.159
+    },
+    {
+     "text": "sunrise,",
+     "highlight": false,
+     "start": 2.159,
+     "end": 2.725
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 2.725,
+     "end": 3.008
+    },
+    {
+     "text": "hall",
+     "highlight": false,
+     "start": 3.008,
+     "end": 3.291
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 3.291,
+     "end": 3.503
+    },
+    {
+     "text": "gone.",
+     "highlight": true,
+     "start": 3.503,
+     "end": 3.998
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Blackened columns and a collapsed clock tower; a lone street sweeper silhouette pushing ash",
+   "notes": "Smoke drifts (ones). Sweeper (twos). Last column visible clearly on \"gone\".",
+   "sync": [
+    "gone"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 4.148,
+   "end": 7.006,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "Close: two men at a night coffee stall leaning in to whisper, looking up at the lit city hall on the hill",
+   "camera": "Locked, slight drift",
+   "vo_markup": "Three days earlier, it was only a *whisper.*",
+   "vo": "Three days earlier, it was only a whisper.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Three",
+     "highlight": false,
+     "start": 4.248,
+     "end": 4.601
+    },
+    {
+     "text": "days",
+     "highlight": false,
+     "start": 4.601,
+     "end": 4.883
+    },
+    {
+     "text": "earlier,",
+     "highlight": false,
+     "start": 4.883,
+     "end": 5.446
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 5.446,
+     "end": 5.587
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 5.587,
+     "end": 5.799
+    },
+    {
+     "text": "only",
+     "highlight": false,
+     "start": 5.799,
+     "end": 6.081
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 6.081,
+     "end": 6.151
+    },
+    {
+     "text": "whisper.",
+     "highlight": true,
+     "start": 6.151,
+     "end": 6.856
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Two profiles whispering; the lit city hall small in the background",
+   "notes": "Callback to the end of Chapter 2. Lean-in on \"whisper\".",
+   "sync": [
+    "whisper"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 7.006,
+   "end": 9.55,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "Close: a hand spray-painting big letters on a wall: \"HE SOLD OUR WATER\"",
+   "camera": "Locked",
+   "vo_markup": "The mayor had sold the city's *water.*",
+   "vo": "The mayor had sold the city's water.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 7.106,
+     "end": 7.321
+    },
+    {
+     "text": "mayor",
+     "highlight": false,
+     "start": 7.321,
+     "end": 7.68
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 7.68,
+     "end": 7.895
+    },
+    {
+     "text": "sold",
+     "highlight": false,
+     "start": 7.895,
+     "end": 8.182
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 8.182,
+     "end": 8.397
+    },
+    {
+     "text": "city's",
+     "highlight": false,
+     "start": 8.397,
+     "end": 8.827
+    },
+    {
+     "text": "water.",
+     "highlight": true,
+     "start": 8.827,
+     "end": 9.4
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Spray can, paint drips, the letters appearing",
+   "notes": "The last word of the graffiti completes on \"water\". Text exactly: HE SOLD OUR WATER.",
+   "sync": [
+    "water"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 9.55,
+   "end": 12.722,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "Medium: a wall where copies of the same poster multiply (a mayor silhouette, no face, crossed out in red)",
+   "camera": "Slow push-in",
+   "vo_markup": "There was no *proof.* There didn't need to be.",
+   "vo": "There was no proof. There didn't need to be.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "There",
+     "highlight": false,
+     "start": 9.65,
+     "end": 10.035
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 10.035,
+     "end": 10.265
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 10.265,
+     "end": 10.419
+    },
+    {
+     "text": "proof.",
+     "highlight": true,
+     "start": 10.419,
+     "end": 11.034
+    },
+    {
+     "text": "There",
+     "highlight": false,
+     "start": 11.034,
+     "end": 11.419
+    },
+    {
+     "text": "didn't",
+     "highlight": false,
+     "start": 11.419,
+     "end": 11.88
+    },
+    {
+     "text": "need",
+     "highlight": false,
+     "start": 11.88,
+     "end": 12.187
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 12.187,
+     "end": 12.341
+    },
+    {
+     "text": "be.",
+     "highlight": false,
+     "start": 12.341,
+     "end": 12.572
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Posters appearing one after another until the wall is covered",
+   "notes": "A new poster slaps on every half-second; \"proof\" lands on a big red X. The mayor is a generic silhouette in a suit, no face, no party colours.",
+   "sync": [
+    "proof"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 12.722,
+   "end": 16.207,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "High wide: a huge boulevard completely filled with people",
+   "camera": "Slow crane-down",
+   "vo_markup": "By the second day, a *million* people filled the streets.",
+   "vo": "By the second day, a million people filled the streets.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 12.822,
+     "end": 12.957
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 12.957,
+     "end": 13.159
+    },
+    {
+     "text": "second",
+     "highlight": false,
+     "start": 13.159,
+     "end": 13.563
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 13.563,
+     "end": 13.833
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 13.833,
+     "end": 13.9
+    },
+    {
+     "text": "million",
+     "highlight": true,
+     "start": 13.9,
+     "end": 14.507
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 14.507,
+     "end": 14.911
+    },
+    {
+     "text": "filled",
+     "highlight": false,
+     "start": 14.911,
+     "end": 15.315
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 15.315,
+     "end": 15.517
+    },
+    {
+     "text": "streets.",
+     "highlight": false,
+     "start": 15.517,
+     "end": 16.057
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "An ocean of tiny figures, flags without symbols, smoke flares",
+   "notes": "Crowd motion on twos (shimmer of heads/arms), camera on ones. \"million\": the crowd surges.",
+   "sync": [
+    "million"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 16.207,
+   "end": 18.124,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Low angle: a flyover with long cloth banners hanging, people on top",
+   "camera": "Lateral track",
+   "vo_markup": "Banners hung from every *bridge.*",
+   "vo": "Banners hung from every bridge.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Banners",
+     "highlight": false,
+     "start": 16.307,
+     "end": 16.709
+    },
+    {
+     "text": "hung",
+     "highlight": false,
+     "start": 16.709,
+     "end": 16.939
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 16.939,
+     "end": 17.169
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 17.169,
+     "end": 17.457
+    },
+    {
+     "text": "bridge.",
+     "highlight": true,
+     "start": 17.457,
+     "end": 17.974
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Banners reading \"STEP DOWN\" and \"HE IS INNOCENT\" (two sides)",
+   "notes": "Banner cloth waves (ones). Text exactly: STEP DOWN / HE IS INNOCENT.",
+   "sync": [
+    "bridge"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 18.124,
+   "end": 20.355,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium: a family at a dinner table; the father stands and points at a TV in the background",
+   "camera": "Locked, small jolt",
+   "vo_markup": "Half the city wanted him *gone.*",
+   "vo": "Half the city wanted him gone.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Half",
+     "highlight": false,
+     "start": 18.224,
+     "end": 18.517
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 18.517,
+     "end": 18.738
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 18.738,
+     "end": 19.031
+    },
+    {
+     "text": "wanted",
+     "highlight": false,
+     "start": 19.031,
+     "end": 19.471
+    },
+    {
+     "text": "him",
+     "highlight": false,
+     "start": 19.471,
+     "end": 19.691
+    },
+    {
+     "text": "gone.",
+     "highlight": true,
+     "start": 19.691,
+     "end": 20.205
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Father shouting and pointing; plates; TV glow in the back (no readable screen)",
+   "notes": "Point on \"gone\".",
+   "sync": [
+    "gone"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 20.355,
+   "end": 22.899,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Reverse: the grown son stands up across the table; the mother between them",
+   "camera": "Locked",
+   "vo_markup": "The other half swore he was *innocent.*",
+   "vo": "The other half swore he was innocent.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 20.455,
+     "end": 20.663
+    },
+    {
+     "text": "other",
+     "highlight": false,
+     "start": 20.663,
+     "end": 21.011
+    },
+    {
+     "text": "half",
+     "highlight": false,
+     "start": 21.011,
+     "end": 21.289
+    },
+    {
+     "text": "swore",
+     "highlight": false,
+     "start": 21.289,
+     "end": 21.637
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 21.637,
+     "end": 21.776
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 21.776,
+     "end": 21.984
+    },
+    {
+     "text": "innocent.",
+     "highlight": true,
+     "start": 21.984,
+     "end": 22.749
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Son arguing back; mother reaching out to both",
+   "notes": "Son slams the table on \"innocent\".",
+   "sync": [
+    "innocent"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 22.899,
+   "end": 26.071,
+   "act": 1,
+   "set": "cityhall",
+   "owner": "C",
+   "framing": "Close: a hand throwing a lit bottle in an arc toward the dark city hall",
+   "camera": "Slow-motion feel (camera drift)",
+   "vo_markup": "On the third night, someone threw the first *flame.*",
+   "vo": "On the third night, someone threw the first flame.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "On",
+     "highlight": false,
+     "start": 22.999,
+     "end": 23.132
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 23.132,
+     "end": 23.331
+    },
+    {
+     "text": "third",
+     "highlight": false,
+     "start": 23.331,
+     "end": 23.663
+    },
+    {
+     "text": "night,",
+     "highlight": false,
+     "start": 23.663,
+     "end": 24.062
+    },
+    {
+     "text": "someone",
+     "highlight": false,
+     "start": 24.062,
+     "end": 24.526
+    },
+    {
+     "text": "threw",
+     "highlight": false,
+     "start": 24.526,
+     "end": 24.858
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.858,
+     "end": 25.057
+    },
+    {
+     "text": "first",
+     "highlight": false,
+     "start": 25.057,
+     "end": 25.389
+    },
+    {
+     "text": "flame.",
+     "highlight": true,
+     "start": 25.389,
+     "end": 25.921
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "A silhouette arm and the arc of fire across the frame",
+   "notes": "Throw on \"flame\". Stylised, no instructional detail, no victims.",
+   "sync": [
+    "flame"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 26.071,
+   "end": 27.571,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "Medium: an empty mayor's office, the chair turned away, papers blowing from an open window",
+   "camera": "Slow push-in",
+   "vo_markup": "The mayor *vanished.*",
+   "vo": "The mayor vanished.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 26.171,
+     "end": 26.368
+    },
+    {
+     "text": "mayor",
+     "highlight": false,
+     "start": 26.368,
+     "end": 26.697
+    },
+    {
+     "text": "vanished.",
+     "highlight": true,
+     "start": 26.697,
+     "end": 27.421
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The empty chair; papers drifting",
+   "notes": "Papers lift on \"vanished\".",
+   "sync": [
+    "vanished"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 27.571,
+   "end": 31.369,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "Wide: an empty road at night, the red tail lights of one car disappearing; a car door left open in the foreground",
+   "camera": "Locked",
+   "vo_markup": "No one knows if he ran… or if he was *taken.*",
+   "vo": "No one knows if he ran… or if he was taken.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 27.671,
+     "end": 27.873
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 27.873,
+     "end": 28.177
+    },
+    {
+     "text": "knows",
+     "highlight": false,
+     "start": 28.177,
+     "end": 28.684
+    },
+    {
+     "text": "if",
+     "highlight": false,
+     "start": 28.684,
+     "end": 28.887
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 28.887,
+     "end": 29.09
+    },
+    {
+     "text": "ran…",
+     "highlight": false,
+     "start": 29.09,
+     "end": 29.495
+    },
+    {
+     "text": "or",
+     "highlight": false,
+     "start": 29.495,
+     "end": 29.698
+    },
+    {
+     "text": "if",
+     "highlight": false,
+     "start": 29.698,
+     "end": 29.901
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 29.901,
+     "end": 30.104
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 30.104,
+     "end": 30.408
+    },
+    {
+     "text": "taken.",
+     "highlight": true,
+     "start": 30.408,
+     "end": 31.219
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Tail lights shrinking; the open door",
+   "notes": "Tail lights vanish on \"taken\".",
+   "sync": [
+    "taken"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 31.369,
+   "end": 34.227,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Wide: the same boulevard now empty under curfew, a burnt car, a stray dog, litter",
+   "camera": "Slow lateral",
+   "vo_markup": "For two days, the city had no one.",
+   "vo": "For two days, the city had no one.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "For",
+     "highlight": false,
+     "start": 31.469,
+     "end": 31.759
+    },
+    {
+     "text": "two",
+     "highlight": false,
+     "start": 31.759,
+     "end": 32.048
+    },
+    {
+     "text": "days,",
+     "highlight": false,
+     "start": 32.048,
+     "end": 32.531
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 32.531,
+     "end": 32.821
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 32.821,
+     "end": 33.207
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 33.207,
+     "end": 33.497
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 33.497,
+     "end": 33.69
+    },
+    {
+     "text": "one.",
+     "highlight": false,
+     "start": 33.69,
+     "end": 34.077
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Emptiness; the dog trotting",
+   "notes": "Wind-blown litter (ones), dog (twos).",
+   "sync": []
+  },
+  {
+   "id": 14,
+   "start": 34.227,
+   "end": 36.458,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Three quick hard cuts inside the shot: a dry tap dripping once; an empty bakery shelf; a mother hugging her child in a silent queue",
+   "camera": "Locked",
+   "vo_markup": "No *water.* No *bread.* No *answers.*",
+   "vo": "No water. No bread. No answers.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 34.327,
+     "end": 34.45
+    },
+    {
+     "text": "water.",
+     "highlight": true,
+     "start": 34.45,
+     "end": 34.946
+    },
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 34.946,
+     "end": 35.069
+    },
+    {
+     "text": "bread.",
+     "highlight": true,
+     "start": 35.069,
+     "end": 35.565
+    },
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 35.565,
+     "end": 35.688
+    },
+    {
+     "text": "answers.",
+     "highlight": true,
+     "start": 35.688,
+     "end": 36.308
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Each beat lands on its word",
+   "notes": "Cut 1 on \"water\", cut 2 on \"bread\", cut 3 on \"answers\".",
+   "sync": [
+    "water",
+    "bread",
+    "answers"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 36.458,
+   "end": 40.569,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Wide: a lone silhouette walking out of drifting smoke toward camera, backlit by the low sun",
+   "camera": "Very slow push-in",
+   "vo_markup": "Then, on the fifth day, a man walked out of the *ashes.*",
+   "vo": "Then, on the fifth day, a man walked out of the ashes.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then,",
+     "highlight": false,
+     "start": 36.558,
+     "end": 36.987
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 36.987,
+     "end": 37.158
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 37.158,
+     "end": 37.416
+    },
+    {
+     "text": "fifth",
+     "highlight": false,
+     "start": 37.416,
+     "end": 37.845
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 37.845,
+     "end": 38.188
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 38.188,
+     "end": 38.274
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 38.274,
+     "end": 38.531
+    },
+    {
+     "text": "walked",
+     "highlight": false,
+     "start": 38.531,
+     "end": 39.046
+    },
+    {
+     "text": "out",
+     "highlight": false,
+     "start": 39.046,
+     "end": 39.304
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 39.304,
+     "end": 39.475
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 39.475,
+     "end": 39.733
+    },
+    {
+     "text": "ashes.",
+     "highlight": true,
+     "start": 39.733,
+     "end": 40.419
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "A faceless backlit man in plain clothes emerging from smoke",
+   "notes": "Fully emerges on \"ashes\". He is always backlit or seen from behind: NO face, ever.",
+   "sync": [
+    "ashes"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 40.569,
+   "end": 42.173,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Close: his dusty sandals stepping over rubble; then his empty hands",
+   "camera": "Locked",
+   "vo_markup": "No name. No past.",
+   "vo": "No name. No past.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 40.669,
+     "end": 40.863
+    },
+    {
+     "text": "name.",
+     "highlight": false,
+     "start": 40.863,
+     "end": 41.346
+    },
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 41.346,
+     "end": 41.54
+    },
+    {
+     "text": "past.",
+     "highlight": false,
+     "start": 41.54,
+     "end": 42.023
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Feet and hands only",
+   "notes": "Simple, slow, deliberate steps (twos).",
+   "sync": []
+  },
+  {
+   "id": 17,
+   "start": 42.173,
+   "end": 44.718,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Medium: the man (from behind) handing bread to a child; people start gathering around him",
+   "camera": "Slow push-in",
+   "vo_markup": "He handed out *bread.* He spoke softly.",
+   "vo": "He handed out bread. He spoke softly.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 42.273,
+     "end": 42.412
+    },
+    {
+     "text": "handed",
+     "highlight": false,
+     "start": 42.412,
+     "end": 42.829
+    },
+    {
+     "text": "out",
+     "highlight": false,
+     "start": 42.829,
+     "end": 43.038
+    },
+    {
+     "text": "bread.",
+     "highlight": true,
+     "start": 43.038,
+     "end": 43.594
+    },
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 43.594,
+     "end": 43.733
+    },
+    {
+     "text": "spoke",
+     "highlight": false,
+     "start": 43.733,
+     "end": 44.081
+    },
+    {
+     "text": "softly.",
+     "highlight": false,
+     "start": 44.081,
+     "end": 44.568
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The child taking the bread; gathering crowd",
+   "notes": "Handover on \"bread\".",
+   "sync": [
+    "bread"
+   ]
+  },
+  {
+   "id": 18,
+   "start": 44.718,
+   "end": 46.635,
+   "act": 1,
+   "set": "boulevard",
+   "owner": "S",
+   "framing": "Medium-close: faces of listeners lit by warm light, nodding slowly",
+   "camera": "Slow lateral",
+   "vo_markup": "Everything he said sounded *true.*",
+   "vo": "Everything he said sounded true.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Everything",
+     "highlight": false,
+     "start": 44.818,
+     "end": 45.373
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 45.373,
+     "end": 45.485
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 45.485,
+     "end": 45.707
+    },
+    {
+     "text": "sounded",
+     "highlight": false,
+     "start": 45.707,
+     "end": 46.096
+    },
+    {
+     "text": "true.",
+     "highlight": true,
+     "start": 46.096,
+     "end": 46.485
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Several listeners (simple faces) nodding",
+   "notes": "Nods land on \"true\".",
+   "sync": [
+    "true"
+   ]
+  },
+  {
+   "id": 19,
+   "start": 46.635,
+   "end": 49.493,
+   "act": 1,
+   "set": "stadium",
+   "owner": "C",
+   "framing": "Wide: a stadium at night, completely full, floodlights blazing",
+   "camera": "Slow aerial push-in",
+   "vo_markup": "By the seventh day, the stadium was *full.*",
+   "vo": "By the seventh day, the stadium was full.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 46.735,
+     "end": 46.88
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 46.88,
+     "end": 47.097
+    },
+    {
+     "text": "seventh",
+     "highlight": false,
+     "start": 47.097,
+     "end": 47.604
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 47.604,
+     "end": 47.894
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 47.894,
+     "end": 48.111
+    },
+    {
+     "text": "stadium",
+     "highlight": false,
+     "start": 48.111,
+     "end": 48.618
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 48.618,
+     "end": 48.836
+    },
+    {
+     "text": "full.",
+     "highlight": true,
+     "start": 48.836,
+     "end": 49.343
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The bowl of the stadium packed with people; a small stage in the centre",
+   "notes": "Floodlights snap on bank by bank, last one on \"full\".",
+   "sync": [
+    "full"
+   ]
+  },
+  {
+   "id": 20,
+   "start": 49.493,
+   "end": 52.351,
+   "act": 1,
+   "set": "stadium",
+   "owner": "C",
+   "framing": "Low wide: the man on the stage, a tiny backlit silhouette, arms open; giant screens behind show only his silhouette",
+   "camera": "Slow push-in",
+   "vo_markup": "And he told them God had *sent* him.",
+   "vo": "And he told them God had sent him.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 49.593,
+     "end": 49.863
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 49.863,
+     "end": 50.042
+    },
+    {
+     "text": "told",
+     "highlight": false,
+     "start": 50.042,
+     "end": 50.402
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 50.402,
+     "end": 50.762
+    },
+    {
+     "text": "God",
+     "highlight": false,
+     "start": 50.762,
+     "end": 51.032
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 51.032,
+     "end": 51.301
+    },
+    {
+     "text": "sent",
+     "highlight": true,
+     "start": 51.301,
+     "end": 51.841
+    },
+    {
+     "text": "him.",
+     "highlight": false,
+     "start": 51.841,
+     "end": 52.201
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The silhouette with open arms; the huge screens",
+   "notes": "Arms open on \"sent\". No face on the screens.",
+   "sync": [
+    "sent"
+   ]
+  },
+  {
+   "id": 21,
+   "start": 52.351,
+   "end": 54.895,
+   "act": 1,
+   "set": "stadium",
+   "owner": "C",
+   "framing": "Wide: a wave of people kneeling across the stands; some remain standing, frozen",
+   "camera": "Locked, slight drift",
+   "vo_markup": "Half the city fell to its *knees.*",
+   "vo": "Half the city fell to its knees.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Half",
+     "highlight": false,
+     "start": 52.451,
+     "end": 52.778
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 52.778,
+     "end": 53.024
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 53.024,
+     "end": 53.352
+    },
+    {
+     "text": "fell",
+     "highlight": false,
+     "start": 53.352,
+     "end": 53.68
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 53.68,
+     "end": 53.844
+    },
+    {
+     "text": "its",
+     "highlight": false,
+     "start": 53.844,
+     "end": 54.089
+    },
+    {
+     "text": "knees.",
+     "highlight": true,
+     "start": 54.089,
+     "end": 54.745
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The kneeling wave rolling through the crowd",
+   "notes": "Wave passes the centre on \"knees\".",
+   "sync": [
+    "knees"
+   ]
+  },
+  {
+   "id": 22,
+   "start": 54.895,
+   "end": 61.515,
+   "act": 1,
+   "set": "stadium",
+   "owner": "C",
+   "framing": "Medium: one old man standing still among the kneeling crowd, looking away from the stage",
+   "camera": "Very slow push-in",
+   "vo_markup": "The Prophet warned that before the Hour, around thirty liars would come, each claiming to be a messenger of God.",
+   "vo": "The Prophet warned that before the Hour, around thirty liars would come, each claiming to be a messenger of God.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 54.995,
+     "end": 55.2
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 55.2,
+     "end": 55.68
+    },
+    {
+     "text": "warned",
+     "highlight": false,
+     "start": 55.68,
+     "end": 56.091
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 56.091,
+     "end": 56.365
+    },
+    {
+     "text": "before",
+     "highlight": false,
+     "start": 56.365,
+     "end": 56.776
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 56.776,
+     "end": 56.981
+    },
+    {
+     "text": "Hour,",
+     "highlight": false,
+     "start": 56.981,
+     "end": 57.324
+    },
+    {
+     "text": "around",
+     "highlight": false,
+     "start": 57.324,
+     "end": 57.735
+    },
+    {
+     "text": "thirty",
+     "highlight": false,
+     "start": 57.735,
+     "end": 58.146
+    },
+    {
+     "text": "liars",
+     "highlight": false,
+     "start": 58.146,
+     "end": 58.488
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 58.488,
+     "end": 58.83
+    },
+    {
+     "text": "come,",
+     "highlight": false,
+     "start": 58.83,
+     "end": 59.173
+    },
+    {
+     "text": "each",
+     "highlight": false,
+     "start": 59.173,
+     "end": 59.447
+    },
+    {
+     "text": "claiming",
+     "highlight": false,
+     "start": 59.447,
+     "end": 59.995
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 59.995,
+     "end": 60.132
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 60.132,
+     "end": 60.269
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 60.269,
+     "end": 60.337
+    },
+    {
+     "text": "messenger",
+     "highlight": false,
+     "start": 60.337,
+     "end": 60.954
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 60.954,
+     "end": 61.091
+    },
+    {
+     "text": "God.",
+     "highlight": false,
+     "start": 61.091,
+     "end": 61.365
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The standing old man (peci, plain shirt) among kneeling backs",
+   "notes": "QUOTE overlay on this shot (top ~15–40%): keep the upper area dark and calm.",
+   "sync": []
+  },
+  {
+   "id": 23,
+   "start": 61.515,
+   "end": 64.686,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Wide: a highway at dawn, a long column of followers walking toward another city skyline; at a roadside stall an old radio plays",
+   "camera": "Slow pull-back",
+   "vo_markup": "The next morning, the neighboring city heard his *name.*",
+   "vo": "The next morning, the neighboring city heard his name.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 61.615,
+     "end": 61.797
+    },
+    {
+     "text": "next",
+     "highlight": false,
+     "start": 61.797,
+     "end": 62.041
+    },
+    {
+     "text": "morning,",
+     "highlight": false,
+     "start": 62.041,
+     "end": 62.527
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 62.527,
+     "end": 62.71
+    },
+    {
+     "text": "neighboring",
+     "highlight": false,
+     "start": 62.71,
+     "end": 63.38
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 63.38,
+     "end": 63.623
+    },
+    {
+     "text": "heard",
+     "highlight": false,
+     "start": 63.623,
+     "end": 63.927
+    },
+    {
+     "text": "his",
+     "highlight": false,
+     "start": 63.927,
+     "end": 64.11
+    },
+    {
+     "text": "name.",
+     "highlight": true,
+     "start": 64.11,
+     "end": 64.536
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The column of walkers; the distant skyline",
+   "notes": "The radio crackles on \"name\". No phone.",
+   "sync": [
+    "name"
+   ]
+  },
+  {
+   "id": 24,
+   "start": 64.686,
+   "end": 68.886,
+   "act": 1,
+   "set": "walls",
+   "owner": "P",
+   "framing": "TITLE CARD on black",
+   "camera": "Very slow push-in",
+   "vo_markup": "",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "\"THE MAN FROM NOWHERE\" + \"CHAPTER 3 · THE LAST DAYS\"",
+   "notes": "Same design as EP02 S25 (copy).",
+   "sync": []
+  }
+ ]
+}
