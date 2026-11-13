@@ -93,9 +93,11 @@ export const S03: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           <AlleyWindows u={p} />
-          <Exhaust t={t} births={births} />
-          <Scooter lamp={lamp} shake={shake} kick={kick} />
-          <Father foot={foot} rise={rise} look={look} breath={breath} />
+          <g transform="translate(-64 0)">
+            <Exhaust t={t} births={births} />
+            <Scooter lamp={lamp} shake={shake} kick={kick} />
+            <Father foot={foot} rise={rise} look={look} breath={breath} />
+          </g>
           <Kid push={push} bounce={bounce} tilt={-16} />
         </Fr>
       </Live>

@@ -187,7 +187,7 @@ export const Commuter: React.FC<{ p: Person; t2: number; rim: number; haze?: num
           </g>
         ) : (
           <g>
-            <rect x={-0.045 * k} y={shY - 0.1} width={0.09 * k} height={0.13} fill={skinD} />
+            <rect x={-0.042 * k} y={headY + 0.06} width={0.084 * k} height={shY - headY - 0.03} fill={skinD} />
             <ellipse cx={0} cy={headY} rx={hr * 0.92} ry={hr * 1.15} fill={back ? hair : skin} />
             {!back && <path d={`M${-hr * 0.95 + turned * 0.02} ${headY + 0.01} Q${-hr * 1.02} ${headY - hr * 1.3} ${turned * 0.03} ${headY - hr * 1.24} Q${hr * 1.02} ${headY - hr * 1.3} ${hr * 0.95 + turned * 0.02} ${headY + 0.01} Q${hr * 0.7} ${headY - hr * 0.62} ${hr * 0.1} ${headY - hr * 0.72} Q${-hr * 0.5} ${headY - hr * 0.55} ${-hr * 0.95 + turned * 0.02} ${headY + 0.01} Z`} fill={hair} />}
             {p.look === 'woman' && <path d={`M${-hr * 0.95} ${headY - 0.03} Q${-hr * 1.2} ${headY + 0.12} ${-hr * 0.8} ${shY + 0.05} L${hr * 0.8} ${shY + 0.05} Q${hr * 1.2} ${headY + 0.12} ${hr * 0.95} ${headY - 0.03} Z`} fill={hair} opacity={back ? 1 : 0.9} />}

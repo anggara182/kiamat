@@ -124,12 +124,12 @@ export const S18: React.FC = () => {
 /** shot 19 — night: a lone man (peci, sarong) on a kampung rooftop among water tanks looks up; tilt up from him to the single star. Man on twos. */
 export const S19: React.FC = () => {
   const { p, t, t2, p2 } = useShot();
-  const tilt = ramp(p, 0.12, 0.94, EIO);
+  const tilt = ramp(p, 0.3, 0.96, EIO);
   const cam: Cam = { zoom: 1.08, dx: 0, dy: 1150 * tilt, ty: 0, ox: 540, oy: 960 };
   const tg = wordAt(19, /^God/i, 0.82);
   const star = { x: 760, y: -77, k: 0.75, a: 0.35 + 0.65 * ramp(p, 0.15, 0.6), s: 1 + 0.3 * ramp(t, tg - 0.1, tg + 0.7) };
   const on = (w: Win) => (w.o < 0.7 ? 1 : 0);
-  const up = 0.15 + 0.85 * ramp(p2, 0.02, 0.4);
+  const up = 0.1 + 0.9 * ramp(p2, 0.05, 0.32);
   return (
     <CityScene cam={cam} m="night" on={on} t={t} lamp={0.3} red={1} star={star} pole={false}>
       <Live k={1.35} cam={cam}>

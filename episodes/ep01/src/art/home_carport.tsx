@@ -8,7 +8,7 @@ import { limb, ik, Mitt, Glow, lerp, Puff, DEG } from './home_kit';
 export const CP = {
   G: 1340, // ground line under the scooter
   open: { x1: 120, x2: 900, y1: 330, y2: 1330 },
-  door: { x: 930, y: 860, w: 170, h: 520 },
+  door: { x: 868, y: 850, w: 156, h: 520 },
 };
 
 /** alley windows that wake up during the shot (on ones): x, y, w, h, wake fraction */
@@ -70,8 +70,8 @@ export const CarportBand: React.FC = () => {
       {Array.from({ length: 8 }, (_, i) => <rect key={i} x={124 + i * 13} y={420} width={6} height={912} fill="#1b1c2c" />)}
       <rect x={120} y={420} width={110} height={10} fill="#1b1c2c" /><rect x={120} y={1300} width={110} height={10} fill="#1b1c2c" />
       {/* house wall (right) with its door */}
-      <path d="M900 260 L1188 230 L1188 1520 L900 1336 Z" fill="#3a3550" />
-      <path d="M900 260 L940 256 L940 1362 L900 1336 Z" fill="#4b4562" />
+      <path d="M836 266 L1188 230 L1188 1520 L836 1336 Z" fill="#3a3550" />
+      <path d="M836 266 L860 264 L860 1350 L836 1336 Z" fill="#4b4562" />
       <rect x={door.x} y={door.y} width={door.w} height={door.h} fill="url(#hcDoor)" />
       <path d={`M${door.x} ${door.y} L${door.x + door.w} ${door.y} L${door.x + door.w} ${door.y + door.h} L${door.x} ${door.y + door.h} Z`} fill="none" stroke="#5a4636" strokeWidth={14} />
       {/* inside the door: a doorway curtain pushed aside */}
@@ -80,14 +80,14 @@ export const CarportBand: React.FC = () => {
       {/* light spill from the door on the floor */}
       <path d={`M${door.x} ${door.y + door.h + 18} L${door.x + door.w} ${door.y + door.h + 18} L${door.x + door.w - 120} 1900 L${door.x - 360} 1900 Z`} fill="#ffcf86" opacity={0.12} />
       {/* floor */}
-      <path d="M-108 1460 L120 1336 L900 1336 L1188 1520 L1188 2112 L-108 2112 Z" fill="url(#hcFloor)" />
-      <path d="M120 1336 L-108 1700 M900 1336 L1188 1800" stroke="#24222f" strokeWidth={4} opacity={0.6} />
+      <path d="M-108 1460 L120 1336 L836 1336 L1188 1520 L1188 2112 L-108 2112 Z" fill="url(#hcFloor)" />
+      <path d="M120 1336 L-108 1700 M836 1336 L1188 1800" stroke="#24222f" strokeWidth={4} opacity={0.6} />
       {/* roof: corrugated underside */}
       <path d="M-108 -192 L1188 -192 L1188 230 L900 262 L120 300 L-108 300 Z" fill="#1d1e2e" />
       {Array.from({ length: 9 }, (_, i) => <path key={i} d={`M${-108 + i * 160} -192 L${80 + i * 104} 296`} stroke="#2a2b3e" strokeWidth={10} />)}
       <path d="M-108 300 L120 300 L900 262 L1188 230" stroke="#353650" strokeWidth={12} fill="none" />
       {/* scooter's ground shadow */}
-      <ellipse cx={510} cy={G + 4} rx={360} ry={22} fill="#100e18" opacity={0.6} />
+      <ellipse cx={446} cy={G + 4} rx={360} ry={22} fill="#100e18" opacity={0.6} />
     </g>
   );
 };
@@ -234,7 +234,7 @@ const KD = { shirt: '#c9c6d2', shirtD: '#8f8c9e', shorts: '#8e3236', skin: '#9a6
  * push 0..1: his hand pushes the helmet up off his eyes; bounce: little impatient bounce; wave 0..1 raises the free hand.
  */
 export const Kid: React.FC<{ push: number; bounce: number; tilt: number }> = ({ push, bounce, tilt }) => {
-  const fx = 1010, fy = CP.door.y + CP.door.h - 4; // feet
+  const fx = CP.door.x + 84, fy = CP.door.y + CP.door.h - 4; // feet
   const s = 1;
   const by = -bounce * 10;
   const hip = { x: fx, y: fy - 190 + by };
@@ -284,7 +284,7 @@ export const Exhaust: React.FC<{ t: number; births: number[] }> = ({ t, births }
       const a = t - b;
       if (a < 0 || a > 1.2) return null;
       const k = a / 1.2;
-      return <Puff key={i} id={`hcEx${i}`} x={180 - 60 * k - 30 * i} y={1246 - 70 * k} r={24 + 70 * k} c="#cfc8d8" o={0.75 * (1 - k)} seed={i * 3} />;
+      return <Puff key={i} id={`hcEx${i}`} x={180 - 60 * k - 30 * i} y={1246 - 70 * k} r={34 + 90 * k} c="#d8d0e0" o={0.85 * (1 - k)} seed={i * 3} />;
     })}
   </g>
 );

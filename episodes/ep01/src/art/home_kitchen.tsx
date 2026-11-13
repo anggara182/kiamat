@@ -236,7 +236,7 @@ export const MotherKitchen: React.FC<{ reachL: number; press: number; reachR: nu
   const angL = Math.atan2(aL.hy - aL.ey, aL.hx - aL.ex) * (180 / Math.PI);
   const angR = Math.atan2(aR.hy - aR.ey, aR.hx - aR.ex) * (180 / Math.PI);
   const headRot = -9 * look + 7 * turn;
-  const hx = cx + 4 + turn * 8, hy = 650 - look * 6 - breath * 3;
+  const hx = cx + 4 + turn * 8, hy = 694 - look * 6 - breath * 3;
   const arm = (s: { x: number; y: number }, a: { ex: number; ey: number; hx: number; hy: number }, ang: number, lit: boolean, thumb: 1 | -1) => (
     <g>
       <path d={limb(s.x, s.y, a.ex, a.ey, 58, 46)} fill={lit ? MOM.dress : MOM.dressD} />
