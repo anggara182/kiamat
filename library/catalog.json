@@ -1,0 +1,5584 @@
+{
+ "episodes": [
+  {
+   "key": "ep01",
+   "title": "Kuntilanak",
+   "country": "Indonesia",
+   "accent": null,
+   "sprite": "thumbs/sprites/ep01.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep01/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title hit",
+     "camera": "Static, 2-frame shake",
+     "thumb": "thumbs/ep01/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Title card",
+     "camera": "Push-in, ripple rings",
+     "thumb": "thumbs/ep01/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium",
+     "camera": "Slow dolly back, fade to mist",
+     "thumb": "thumbs/ep01/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Low angle",
+     "camera": "Tilt up the trunk",
+     "thumb": "thumbs/ep01/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium",
+     "camera": "Push-in on grandma",
+     "thumb": "thumbs/ep01/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Graphic insert",
+     "camera": "Diagram builds line by line",
+     "thumb": "thumbs/ep01/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Wide",
+     "camera": "Tracking behind her",
+     "thumb": "thumbs/ep01/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close-up",
+     "camera": "Snap zoom 5%",
+     "thumb": "thumbs/ep01/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Low angle, Dutch",
+     "camera": "Handheld shake, fast track",
+     "thumb": "thumbs/ep01/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Extreme close-up",
+     "camera": "Locked, very slow push",
+     "thumb": "thumbs/ep01/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close-up",
+     "camera": "Slight pull-back, warmer key",
+     "thumb": "thumbs/ep01/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "Wide",
+     "camera": "Static, rack focus front to back",
+     "thumb": "thumbs/ep01/s13.jpg"
+    },
+    {
+     "id": 14,
+     "framing": "Extreme close-up",
+     "camera": "Push to eyes, fade to black",
+     "thumb": "thumbs/ep01/s14.jpg"
+    },
+    {
+     "id": 15,
+     "framing": "Close-up, to camera",
+     "camera": "Face emerges from black",
+     "thumb": "thumbs/ep01/s15.jpg"
+    },
+    {
+     "id": 16,
+     "framing": "Black",
+     "camera": "None",
+     "thumb": "thumbs/ep01/s16.jpg"
+    },
+    {
+     "id": 17,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep01/s17.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep02",
+   "title": "Nyi Roro Kidul",
+   "country": "Indonesia",
+   "accent": null,
+   "sprite": "thumbs/sprites/ep02.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide (style frame)",
+     "camera": "Slow push-in, parallax",
+     "thumb": "thumbs/ep02/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title hit",
+     "camera": "Green fabric whips across frame, hard stop",
+     "thumb": "thumbs/ep02/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Wide, tilt down from sky",
+     "camera": "Tilt down + slow push",
+     "thumb": "thumbs/ep02/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Insert, underwater/surface",
+     "camera": "Slow drift, light caustics",
+     "thumb": "thumbs/ep02/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Telephoto on headland",
+     "camera": "Slow push to the hotel",
+     "thumb": "thumbs/ep02/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, one-point perspective",
+     "camera": "Slow dolly toward door",
+     "thumb": "thumbs/ep02/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Top-down",
+     "camera": "Locked, hands move in",
+     "thumb": "thumbs/ep02/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Insert, top-down",
+     "camera": "Hands pull out a green scarf, set it aside",
+     "thumb": "thumbs/ep02/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Wide, low sun",
+     "camera": "Slow pull-back revealing exposed sand",
+     "thumb": "thumbs/ep02/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Medium, crowd silhouettes",
+     "camera": "Lateral track",
+     "thumb": "thumbs/ep02/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Tracking behind girl",
+     "camera": "Follow from behind",
+     "thumb": "thumbs/ep02/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close-up, feet",
+     "camera": "Low angle, foam slides in",
+     "thumb": "thumbs/ep02/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "Medium from behind",
+     "camera": "Slight handheld",
+     "thumb": "thumbs/ep02/s13.jpg"
+    },
+    {
+     "id": 14,
+     "framing": "Tilt down to hem, extreme close-up",
+     "camera": "Tilt down, then locked as green climbs",
+     "thumb": "thumbs/ep02/s14.jpg"
+    },
+    {
+     "id": 15,
+     "framing": "Wide, she is alone",
+     "camera": "Slow pull-back, crowd gone",
+     "thumb": "thumbs/ep02/s15.jpg"
+    },
+    {
+     "id": 16,
+     "framing": "POV to camera",
+     "camera": "Push into dark water, green glow rises",
+     "thumb": "thumbs/ep02/s16.jpg"
+    },
+    {
+     "id": 17,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep02/s17.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep03",
+   "title": "Wewe Gombel",
+   "country": "Indonesia",
+   "accent": "#ff8a3d",
+   "sprite": "thumbs/sprites/ep03.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, village at maghrib",
+     "camera": "Slow push-in, parallax",
+     "thumb": "thumbs/ep03/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Push-in on the figure",
+     "thumb": "thumbs/ep03/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Medium, inside the bamboo",
+     "camera": "Slow lateral track through stalks (parallax)",
+     "thumb": "thumbs/ep03/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Insert, grandma's hands",
+     "camera": "Locked, slight push",
+     "thumb": "thumbs/ep03/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Typographic insert",
+     "camera": "Text echo, slow zoom",
+     "thumb": "thumbs/ep03/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Wide, blue hour around the house",
+     "camera": "Follow dad laterally",
+     "thumb": "thumbs/ep03/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium, mom at the edge of the bamboo",
+     "camera": "Slow push-in from behind",
+     "thumb": "thumbs/ep03/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, darkness between bamboo",
+     "camera": "Locked, then tiny push",
+     "thumb": "thumbs/ep03/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Wide, mom running into the bamboo",
+     "camera": "Handheld, slight whip",
+     "thumb": "thumbs/ep03/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, misty morning, banana tree",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep03/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Close, empty sandals at the bamboo edge",
+     "camera": "Locked",
+     "thumb": "thumbs/ep03/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "POV into the bamboo at dusk",
+     "camera": "Slow push into darkness",
+     "thumb": "thumbs/ep03/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static, words pop",
+     "thumb": "thumbs/ep03/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep04",
+   "title": "Pocong",
+   "country": "Indonesia",
+   "accent": "#ffcc4d",
+   "sprite": "thumbs/sprites/ep04.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, cemetery gate at night under one street light",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep04/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep04/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore illustration, top-down",
+     "camera": "Slow tilt along the body",
+     "thumb": "thumbs/ep04/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Close on the head knot",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep04/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, ojek waiting by the gate",
+     "camera": "Lateral track",
+     "thumb": "thumbs/ep04/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Tracking side view, riding at night",
+     "camera": "Fast lateral parallax",
+     "thumb": "thumbs/ep04/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium from behind at a red light",
+     "camera": "Locked, slight idle shake",
+     "thumb": "thumbs/ep04/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Extreme close-up on the waist",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep04/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close on the uncle's helmet and ear",
+     "camera": "Locked, creeping push",
+     "thumb": "thumbs/ep04/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Extreme close, the pale cloth face",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep04/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, empty road at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep04/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, cemetery gate at night again",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep04/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep04/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep05",
+   "title": "The Ghost Train",
+   "country": "Indonesia",
+   "accent": "#ff4d4d",
+   "sprite": "thumbs/sprites/ep05.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, empty platform past midnight",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep05/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep05/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Departure board insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep05/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Interior, wide down the carriage",
+     "camera": "Slow dolly forward",
+     "thumb": "thumbs/ep05/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, narrator alone on a bench",
+     "camera": "Locked, slow push",
+     "thumb": "thumbs/ep05/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Wide, the train gliding in",
+     "camera": "Lateral track with the train",
+     "thumb": "thumbs/ep05/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium, doors opening in front of the narrator",
+     "camera": "Locked",
+     "thumb": "thumbs/ep05/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the passengers facing out",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep05/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Medium, guard pulling the narrator back",
+     "camera": "Quick jolt then locked",
+     "thumb": "thumbs/ep05/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Close on the guard, half in shadow",
+     "camera": "Locked",
+     "thumb": "thumbs/ep05/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the train leaving into the dark",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep05/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, empty platform",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep05/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep05/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep06",
+   "title": "Suster Ngesot",
+   "country": "Indonesia",
+   "accent": "#6fe3d6",
+   "sprite": "thumbs/sprites/ep06.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, dark hospital corridor",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep06/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep06/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep06/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Wide, the ward with beds and curtains",
+     "camera": "Lateral track",
+     "thumb": "thumbs/ep06/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, narrator beside grandma's bed",
+     "camera": "Locked, slow push",
+     "thumb": "thumbs/ep06/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium-wide, the lights flicker",
+     "camera": "Locked, flicker",
+     "thumb": "thumbs/ep06/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Low angle, floor under the narrator's chair",
+     "camera": "Locked, creeping push",
+     "thumb": "thumbs/ep06/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, grandma's hand gripping the narrator's",
+     "camera": "Locked",
+     "thumb": "thumbs/ep06/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, grandma's face in shadow on the pillow",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep06/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, the ward at morning",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep06/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Insert, the IV bag",
+     "camera": "Slow tilt down",
+     "thumb": "thumbs/ep06/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Low angle, floor beside the bed",
+     "camera": "Slow push along the floor",
+     "thumb": "thumbs/ep06/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep06/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep07",
+   "title": "Kuchisake-onna",
+   "country": "Japan",
+   "accent": "#ff6b8a",
+   "sprite": "thumbs/sprites/ep07.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, empty street, one streetlight, a tall figure under it",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep07/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep07/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert: the mask",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep07/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, schoolgirl walking home",
+     "camera": "Tracking from behind",
+     "thumb": "thumbs/ep07/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Wide, the woman appears under the light",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep07/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Low angle, the woman leaning down",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep07/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Extreme close, the mask and eyes",
+     "camera": "Locked, tiny push",
+     "thumb": "thumbs/ep07/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the sister's hands gripping her bag strap",
+     "camera": "Locked",
+     "thumb": "thumbs/ep07/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Profile, the sister answering",
+     "camera": "Locked",
+     "thumb": "thumbs/ep07/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, the woman frozen, the girl running",
+     "camera": "Handheld, quick",
+     "thumb": "thumbs/ep07/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the empty street, the light flickering",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep07/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Medium, our front gate at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep07/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep07/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep08",
+   "title": "La Llorona",
+   "country": "Mexico",
+   "accent": "#ff9f5a",
+   "sprite": "thumbs/sprites/ep08.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, riverbank at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep08/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep08/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep08/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, boy sneaking to the river",
+     "camera": "Tracking from behind",
+     "thumb": "thumbs/ep08/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Wide, the woman kneeling by the water",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep08/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, her hands in the river",
+     "camera": "Locked, ripples",
+     "thumb": "thumbs/ep08/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, her veiled face, hair dripping",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep08/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Medium, the boy stepping closer",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep08/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Wide, the boy running away",
+     "camera": "Handheld, quick",
+     "thumb": "thumbs/ep08/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Low angle, wet footprints on the floor",
+     "camera": "Slow tilt up to the window",
+     "thumb": "thumbs/ep08/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Close, the windowsill",
+     "camera": "Locked",
+     "thumb": "thumbs/ep08/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, the river at night again",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep08/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep08/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep09",
+   "title": "The Jangsan Tiger",
+   "country": "Korea",
+   "accent": "#8fd8ff",
+   "sprite": "thumbs/sprites/ep09.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, dark pine trail at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep09/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep09/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep09/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Wide, apartment block at the foot of the mountain",
+     "camera": "Slow tilt down",
+     "thumb": "thumbs/ep09/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, friend at the window looking out",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep09/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, the kitchen behind her",
+     "camera": "Rack from window to kitchen",
+     "thumb": "thumbs/ep09/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, a hand on her shoulder",
+     "camera": "Locked",
+     "thumb": "thumbs/ep09/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, mother's profile in shadow",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep09/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the dark window",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep09/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, the apartment from outside, lights going off",
+     "camera": "Locked",
+     "thumb": "thumbs/ep09/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Low angle, giant tracks in the snow",
+     "camera": "Slow push along the tracks",
+     "thumb": "thumbs/ep09/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, the trail at dusk",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep09/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep09/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep10",
+   "title": "Bloody Mary",
+   "country": "USA",
+   "accent": "#ff3b4e",
+   "sprite": "thumbs/sprites/ep10.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, dark bathroom, one candle before the mirror",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep10/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep10/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep10/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, sleepover bedroom",
+     "camera": "Slow lateral track",
+     "thumb": "thumbs/ep10/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Tracking down the dark hallway",
+     "camera": "Follow from behind",
+     "thumb": "thumbs/ep10/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, three girls before the mirror",
+     "camera": "Locked",
+     "thumb": "thumbs/ep10/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, the mirror",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep10/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, my reflection",
+     "camera": "Locked",
+     "thumb": "thumbs/ep10/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Extreme close, the reflection's eyes",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep10/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Close, a pale shape behind the reflection",
+     "camera": "Locked",
+     "thumb": "thumbs/ep10/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the bathroom door from the hallway",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep10/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, the mirror in daylight",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep10/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep10/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep11",
+   "title": "Tuyul",
+   "country": "Indonesia",
+   "accent": "#7dd8a4",
+   "sprite": "thumbs/sprites/ep11.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, a small kampung shop at night, one bulb",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep11/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep11/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep11/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, uncle counting money at the counter",
+     "camera": "Locked, slow push",
+     "thumb": "thumbs/ep11/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Close, the money tin",
+     "camera": "Locked",
+     "thumb": "thumbs/ep11/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, the bowl with a crab by the door",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep11/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Wide, the dark shop at night",
+     "camera": "Locked",
+     "thumb": "thumbs/ep11/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, ripples in the bowl",
+     "camera": "Locked",
+     "thumb": "thumbs/ep11/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the small hand and the crab",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep11/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, dawn in the shop",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep11/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Low angle, tiny wet footprints",
+     "camera": "Slow push along the prints",
+     "thumb": "thumbs/ep11/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Medium, uncle at the counter at night again",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep11/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep11/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep12",
+   "title": "Mae Nak",
+   "country": "Thailand",
+   "accent": "#ffc857",
+   "sprite": "thumbs/sprites/ep12.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, stilt house over the canal at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep12/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep12/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep12/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, the husband returning by boat",
+     "camera": "Lateral track",
+     "thumb": "thumbs/ep12/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, the couple inside, lamp light",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep12/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, a lime rolling across the floor",
+     "camera": "Track with the lime",
+     "thumb": "thumbs/ep12/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, the lime falling through the gap",
+     "camera": "Locked",
+     "thumb": "thumbs/ep12/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Wide, under the house from outside",
+     "camera": "Slow tilt down",
+     "thumb": "thumbs/ep12/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Low angle, the arm stretching down",
+     "camera": "Slow tilt down along the arm",
+     "thumb": "thumbs/ep12/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Medium, husband frozen in the dark",
+     "camera": "Locked",
+     "thumb": "thumbs/ep12/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the canal at night, a figure running",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep12/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, the lamp in the window",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep12/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep12/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep13",
+   "title": "The Banshee",
+   "country": "Ireland",
+   "accent": "#9ad1ff",
+   "sprite": "thumbs/sprites/ep13.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, wet country lane at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep13/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep13/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep13/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, a girl walking home in the rain",
+     "camera": "Tracking from behind",
+     "thumb": "thumbs/ep13/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Close, the comb on the kitchen table",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep13/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, grandfather by the window",
+     "camera": "Locked",
+     "thumb": "thumbs/ep13/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Wide, the cottage at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep13/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the window, rain on the glass",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep13/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the empty windowsill",
+     "camera": "Locked",
+     "thumb": "thumbs/ep13/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Medium, grandfather by the fire",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep13/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the lane at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep13/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, a silver comb in a puddle again",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep13/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep13/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep14",
+   "title": "The Elevator Game",
+   "country": "Korea",
+   "accent": "#ffb000",
+   "sprite": "thumbs/sprites/ep14.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Medium, inside a lit elevator alone",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep14/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep14/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Rules insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep14/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Wide, empty apartment lobby at night",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep14/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Close, a finger pressing buttons",
+     "camera": "Locked",
+     "thumb": "thumbs/ep14/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Wide, the doors open on an empty hallway",
+     "camera": "Locked",
+     "thumb": "thumbs/ep14/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium, the woman steps in",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep14/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the floor panel",
+     "camera": "Locked",
+     "thumb": "thumbs/ep14/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the reflection in the steel doors",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep14/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Close, a hand hitting the button",
+     "camera": "Handheld",
+     "thumb": "thumbs/ep14/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, stairwell, a figure running down",
+     "camera": "Follow",
+     "thumb": "thumbs/ep14/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, the lobby, the elevator doors closing",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep14/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep14/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep15",
+   "title": "Genderuwo",
+   "country": "Indonesia (Java)",
+   "accent": "#ff7a59",
+   "sprite": "thumbs/sprites/ep15.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, a village house in the rain at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep15/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep15/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep15/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, mother and daughter watching TV",
+     "camera": "Locked",
+     "thumb": "thumbs/ep15/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Medium, the front door opening",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep15/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, he walks past without a word",
+     "camera": "Lateral track",
+     "thumb": "thumbs/ep15/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, mother's face in TV glow",
+     "camera": "Locked",
+     "thumb": "thumbs/ep15/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the phone screen",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep15/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, mother holding the phone to her ear",
+     "camera": "Locked",
+     "thumb": "thumbs/ep15/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, the dark hallway to the bedroom",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep15/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, mother and daughter running out in the rain",
+     "camera": "Handheld",
+     "thumb": "thumbs/ep15/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, the house at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep15/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep15/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep16",
+   "title": "Hanako-san",
+   "country": "Japan",
+   "accent": "#ff4f6d",
+   "sprite": "thumbs/sprites/ep16.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, empty school corridor at dusk",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep16/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep16/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep16/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, two schoolgirls in the corridor",
+     "camera": "Tracking from behind",
+     "thumb": "thumbs/ep16/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Wide, the row of stalls",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep16/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, knuckles on the third door",
+     "camera": "Locked",
+     "thumb": "thumbs/ep16/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium, the two girls before the door",
+     "camera": "Locked",
+     "thumb": "thumbs/ep16/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the gap under the third door",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep16/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Low angle, the door creeping open",
+     "camera": "Locked",
+     "thumb": "thumbs/ep16/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Medium, the girls running down the corridor",
+     "camera": "Handheld",
+     "thumb": "thumbs/ep16/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the school building at night",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep16/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, the bathroom with two stalls",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep16/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep16/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep17",
+   "title": "El Silbón",
+   "country": "Venezuela",
+   "accent": "#f2c14e",
+   "sprite": "thumbs/sprites/ep17.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, the plains under a huge moon",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep17/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep17/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep17/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, ranch porch with a lantern",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep17/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Wide, the dark grass moving",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep17/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, the girl at the window",
+     "camera": "Locked",
+     "thumb": "thumbs/ep17/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, grandfather pulling her down",
+     "camera": "Handheld",
+     "thumb": "thumbs/ep17/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the shutters, a long shadow outside",
+     "camera": "Locked",
+     "thumb": "thumbs/ep17/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the shadow on the wall",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep17/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Medium, grandfather opening the door at dawn",
+     "camera": "Locked",
+     "thumb": "thumbs/ep17/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, footprints leading away at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep17/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, the window at night again",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep17/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep17/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep18",
+   "title": "Aswang",
+   "country": "Philippines",
+   "accent": "#b98cff",
+   "sprite": "thumbs/sprites/ep18.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, nipa huts at night",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep18/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep18/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep18/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, the neighbor visiting the baby",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep18/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Close, garlic and salt by the door",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep18/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Medium, Lola whispering to the girl",
+     "camera": "Locked",
+     "thumb": "thumbs/ep18/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Extreme close, the neighbor's eye",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep18/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Wide, a huge bird on the roof",
+     "camera": "Slow tilt up",
+     "thumb": "thumbs/ep18/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Medium, Lola by the crib",
+     "camera": "Locked",
+     "thumb": "thumbs/ep18/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Close, a gap in the thatch",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep18/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the neighbor's hut at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep18/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, a smiling stranger, lamp light",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep18/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep18/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep19",
+   "title": "Jelangkung",
+   "country": "Indonesia",
+   "accent": "#e6d3a3",
+   "sprite": "thumbs/sprites/ep19.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, four teens in a candle circle",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep19/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep19/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep19/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, hands joining around the doll",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep19/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Close, the pencil starts moving",
+     "camera": "Locked",
+     "thumb": "thumbs/ep19/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, the paper",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep19/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Medium, the teens laughing, candles low",
+     "camera": "Slow lateral track",
+     "thumb": "thumbs/ep19/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Close, the wall clock",
+     "camera": "Locked",
+     "thumb": "thumbs/ep19/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the pencil writing",
+     "camera": "Locked",
+     "thumb": "thumbs/ep19/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Wide, the candles going out",
+     "camera": "Locked",
+     "thumb": "thumbs/ep19/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the room at dawn",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep19/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Close, a homework page at midnight",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep19/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep19/s13.jpg"
+    }
+   ]
+  },
+  {
+   "key": "ep20",
+   "title": "The Kelpie",
+   "country": "Scotland",
+   "accent": "#4fd1c5",
+   "sprite": "thumbs/sprites/ep20.jpg",
+   "shots": [
+    {
+     "id": 1,
+     "framing": "Wide, a misty loch at dusk",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep20/s01.jpg"
+    },
+    {
+     "id": 2,
+     "framing": "Title card",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep20/s02.jpg"
+    },
+    {
+     "id": 3,
+     "framing": "Lore insert",
+     "camera": "Slow push",
+     "thumb": "thumbs/ep20/s03.jpg"
+    },
+    {
+     "id": 4,
+     "framing": "Medium, two kids on the shore path",
+     "camera": "Tracking from behind",
+     "thumb": "thumbs/ep20/s04.jpg"
+    },
+    {
+     "id": 5,
+     "framing": "Wide, the horse in the shallows",
+     "camera": "Very slow push",
+     "thumb": "thumbs/ep20/s05.jpg"
+    },
+    {
+     "id": 6,
+     "framing": "Close, the wet mane and a small hand",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep20/s06.jpg"
+    },
+    {
+     "id": 7,
+     "framing": "Close, the hand on the hide",
+     "camera": "Locked",
+     "thumb": "thumbs/ep20/s07.jpg"
+    },
+    {
+     "id": 8,
+     "framing": "Wide, the horse turning toward the water",
+     "camera": "Locked",
+     "thumb": "thumbs/ep20/s08.jpg"
+    },
+    {
+     "id": 9,
+     "framing": "Close, the girl's hand in her pocket",
+     "camera": "Handheld",
+     "thumb": "thumbs/ep20/s09.jpg"
+    },
+    {
+     "id": 10,
+     "framing": "Close, the iron key on the hide",
+     "camera": "Locked",
+     "thumb": "thumbs/ep20/s10.jpg"
+    },
+    {
+     "id": 11,
+     "framing": "Wide, the horse vanishing into the loch",
+     "camera": "Slow pull-back",
+     "thumb": "thumbs/ep20/s11.jpg"
+    },
+    {
+     "id": 12,
+     "framing": "Wide, a garden at night by the cottage",
+     "camera": "Slow push-in",
+     "thumb": "thumbs/ep20/s12.jpg"
+    },
+    {
+     "id": 13,
+     "framing": "End card",
+     "camera": "Static",
+     "thumb": "thumbs/ep20/s13.jpg"
+    }
+   ]
+  }
+ ],
+ "components": [
+  {
+   "name": "Headland",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Land.tsx",
+   "line": 5,
+   "props": "",
+   "doc": "Headland on the right: cliff with strata, rocks and surf at its foot, palms, and the hotel (room 308 glows green).",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Sea",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Land.tsx",
+   "line": 82,
+   "props": "",
+   "doc": "Sea from horizon to shore: warm horizon band, soft (masked) sun glitter, broken swell strokes.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Shore",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Land.tsx",
+   "line": 120,
+   "props": "",
+   "doc": "Wet sand: mirror-like near the waterline, soft sun reflection, ripples, shells.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Pandan",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Land.tsx",
+   "line": 155,
+   "props": "",
+   "doc": "Foreground pandan leaves, bottom corners (baked with heavy blur).",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Surf",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Live.tsx",
+   "line": 5,
+   "props": "t: number",
+   "doc": "Animated surf: foam fronts that run up and slide back over the wet sand. t = seconds.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    15
+   ]
+  },
+  {
+   "name": "Twinkles",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Live.tsx",
+   "line": 34,
+   "props": "t: number",
+   "doc": "A handful of glints that twinkle on top of the baked glitter.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    15
+   ]
+  },
+  {
+   "name": "Gulls",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Live.tsx",
+   "line": 48,
+   "props": "t: number",
+   "doc": "",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    11
+   ]
+  },
+  {
+   "name": "Girl",
+   "cat": "character",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Live.tsx",
+   "line": 62,
+   "props": "",
+   "doc": "The girl, seen from behind, facing the sunset (backlit). Puppet rig in local units, feet at 0. hairSway/hemSway in -1..1; greenHem 0..1 floods the dress green from the hem up (twist shot).",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Ribbon",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Silk.tsx",
+   "line": 17,
+   "props": "",
+   "doc": "A silk ribbon along a centreline. Each segment has a twist angle; the visible width is width*|cos(twist)| and the shade follows the facing, so the cloth reads as turning in space. Cheap: one quad per segment, flat colour (no filters).",
+   "imports": [],
+   "shots": [
+    2,
+    4,
+    8
+   ]
+  },
+  {
+   "name": "MegaMendung",
+   "cat": "environment",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Sky.tsx",
+   "line": 25,
+   "props": "cx: number; cy: number; w: number; h: number; lobes?: number; seed?: number; tones: string[]; band?: number; opacity?: number",
+   "doc": "",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    2,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15,
+    16,
+    17
+   ]
+  },
+  {
+   "name": "Sky",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/art/Sky.tsx",
+   "line": 41,
+   "props": "",
+   "doc": "",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "Hand",
+   "cat": "hand",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/bedroom.tsx",
+   "line": 206,
+   "props": "x: number; y: number; rot: number; side: 1 | -1; curl?: number; armLen?: number; s?: number",
+   "doc": "Wrist at (0,0), fingers point down (+y). side=1 right hand, -1 left. curl 0..1 bends the fingers (grip). The kebaya sleeve runs from the wrist up to `armLen`.",
+   "imports": [
+    "../art/world",
+    "../comp/Bands"
+   ],
+   "shots": [
+    7,
+    8
+   ]
+  },
+  {
+   "name": "beach set",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/beach.tsx",
+   "line": 1,
+   "props": "bands: beach/far, beach/fg, beach/mid, beach/near, beach/soft",
+   "doc": "shots [1, 3, 5, 9, 10, 11, 13, 15]",
+   "imports": [],
+   "thumb": "thumbs/ep02/s01.jpg",
+   "shots": [
+    1,
+    3,
+    5,
+    9,
+    10,
+    11,
+    13,
+    15
+   ]
+  },
+  {
+   "name": "bedroom set",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/bedroom.tsx",
+   "line": 1,
+   "props": "bands: bedroom/insert, bedroom/room",
+   "doc": "shots [7, 8]",
+   "imports": [],
+   "thumb": "thumbs/ep02/s07.jpg",
+   "shots": [
+    7,
+    8
+   ]
+  },
+  {
+   "name": "corridor set",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/corridor.tsx",
+   "line": 1,
+   "props": "bands: corridor/end, corridor/fg, corridor/main",
+   "doc": "shots [6]",
+   "imports": [],
+   "thumb": "thumbs/ep02/s06.jpg",
+   "shots": [
+    6
+   ]
+  },
+  {
+   "name": "graphic set",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/graphic.tsx",
+   "line": 1,
+   "props": "bands: graphic/deep, graphic/end, graphic/weeds",
+   "doc": "shots [2, 16, 17]",
+   "imports": [],
+   "thumb": "thumbs/ep02/s02.jpg",
+   "shots": [
+    2,
+    16,
+    17
+   ]
+  },
+  {
+   "name": "shore set",
+   "cat": "set",
+   "ep": "ep02",
+   "file": "episodes/ep02/sets/shore.tsx",
+   "line": 1,
+   "props": "bands: shore/bed",
+   "doc": "shots []",
+   "imports": [],
+   "thumb": null,
+   "shots": []
+  },
+  {
+   "name": "WeweCrouch",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/bamboo_wewe.tsx",
+   "line": 31,
+   "props": "x: number; y: number; s?: number; t: number; rim?: number",
+   "doc": "",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Eyes",
+   "cat": "face",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/bamboo_wewe.tsx",
+   "line": 76,
+   "props": "x: number; y: number; s?: number; o: number; id: string; blink?: number",
+   "doc": "Two pale eyes with a radial glow (no filters).",
+   "imports": [],
+   "shots": [
+    8,
+    12
+   ]
+  },
+  {
+   "name": "WeweTall",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/bamboo_wewe.tsx",
+   "line": 90,
+   "props": "x: number; y: number; s?: number; t: number; rim?: number; fill?: string",
+   "doc": "Standing, extremely tall and thin, hair to the knees, arms below the knees. ~1500px tall. `tone` = how much it separates from black.",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "WeweStand",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/bamboo_wewe.tsx",
+   "line": 106,
+   "props": "x: number; y: number; s?: number; t: number; rim?: number; child?: boolean; glow?: number",
+   "doc": "Standing in profile (facing left), extremely tall/thin (~1500px, head ~1/10), hunched at the top, hair down her back, one very long arm reaching down to hold the hand of a small child beside her. Pale fog patch behind.",
+   "imports": [],
+   "shots": [
+    3,
+    12
+   ]
+  },
+  {
+   "name": "WeweFigure",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/graphic_wewe.tsx",
+   "line": 8,
+   "props": "x: number; y: number; s?: number; sway?: number",
+   "doc": "HERO for shot 2: Wewe Gombel. Very tall thin female silhouette, very long hair, arms hanging below the knees, never fully lit. Local coords: head top at (0,0), height ~900, x centred on 0. `sway` (-1..1) moves hair strands and fingers slightly.",
+   "imports": [],
+   "shots": [
+    2
+   ]
+  },
+  {
+   "name": "GrandmaWok",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/home_hero.tsx",
+   "line": 6,
+   "props": "lamp: number; tap: number",
+   "doc": "Shot 4: grandma's wrinkled hands, dented wok (wajan), metal ladle, kebaya sleeve. Local origin = wok centre.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "SleepingBoy",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/home_hero.tsx",
+   "line": 108,
+   "props": "breath: number",
+   "doc": "Shot 10: small boy (~7) in a sarong, curled asleep. Origin = hip. breath 0..1",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "Sandals",
+   "cat": "prop",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/home_hero.tsx",
+   "line": 156,
+   "props": "",
+   "doc": "Shot 11: a woman's pair of sandals (selop), one upright, one tipped over. Origin = between them.",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "Kid",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/village_figs.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s: number; ph: number; dir?: 1 | -1; rim?: string",
+   "doc": "Low-detail running kid silhouette (local origin = feet).",
+   "imports": [],
+   "shots": [
+    1
+   ]
+  },
+  {
+   "name": "Dad",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/village_figs.tsx",
+   "line": 22,
+   "props": "x: number; y: number; s: number; ph: number; strike: number; walk?: number; lowered?: boolean; rim?: string",
+   "doc": "Dad silhouette walking, wok in one hand, ladle in the other (origin = feet).",
+   "imports": [],
+   "shots": [
+    6,
+    9
+   ]
+  },
+  {
+   "name": "MomRun",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/village_figs.tsx",
+   "line": 57,
+   "props": "x: number; y: number; s: number; ph: number; rim?: string",
+   "doc": "Low-detail running mom (origin = feet), facing away, shrinking into depth.",
+   "imports": [],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "MomHero",
+   "cat": "character",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/village_figs.tsx",
+   "line": 77,
+   "props": "x: number; y: number; s: number; t: number; call: number",
+   "doc": "HERO mom from behind, FULL figure, local origin = feet, ~960 units tall at s=1 (head ≈ 1/7).",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "FgFrame",
+   "cat": "prop",
+   "ep": "ep03",
+   "file": "episodes/ep03/art/village_figs.tsx",
+   "line": 151,
+   "props": "w?: number; h?: number; left?: boolean; right?: boolean; c?: string; stalk?: 'l' | 'r'",
+   "doc": "Cheap foreground framing: dark leaf blades from the top corners + an out-of-focus stalk edge. side: which edges.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "bamboo set",
+   "cat": "set",
+   "ep": "ep03",
+   "file": "episodes/ep03/sets/bamboo.tsx",
+   "line": 1,
+   "props": "bands: bamboo/far, bamboo/fog, bamboo/mid, bamboo/near",
+   "doc": "shots [3, 8, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep03/s03.jpg",
+   "shots": [
+    3,
+    8,
+    12
+   ]
+  },
+  {
+   "name": "graphic set",
+   "cat": "set",
+   "ep": "ep03",
+   "file": "episodes/ep03/sets/graphic.tsx",
+   "line": 1,
+   "props": "bands: graphic/far, graphic/near",
+   "doc": "shots [2, 5, 13]",
+   "imports": [],
+   "thumb": "thumbs/ep03/s02.jpg",
+   "shots": [
+    2,
+    5,
+    13
+   ]
+  },
+  {
+   "name": "home set",
+   "cat": "set",
+   "ep": "ep03",
+   "file": "episodes/ep03/sets/home.tsx",
+   "line": 1,
+   "props": "bands: home/bamboo, home/mist, home/porch, home/sky, home/yard",
+   "doc": "shots [4, 10, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep03/s04.jpg",
+   "shots": [
+    4,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "village set",
+   "cat": "set",
+   "ep": "ep03",
+   "file": "episodes/ep03/sets/village.tsx",
+   "line": 1,
+   "props": "bands: village/far, village/mid, village/sky, village/skyblue",
+   "doc": "shots [1, 6, 7, 9]",
+   "imports": [],
+   "thumb": "thumbs/ep03/s01.jpg",
+   "shots": [
+    1,
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "name": "BikeBg",
+   "cat": "set",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 10,
+   "props": "",
+   "doc": "Night street at a red light (baked + blurred).",
+   "imports": [],
+   "shots": [
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "Strap",
+   "cat": "prop",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 45,
+   "props": "ax: number; ay: number; bx: number; by: number; sag: number; w: number; id: string; folds?: number",
+   "doc": "Shroud band wrapped around a waist: a curved strap with folds. a = from point, b = to point, sag = bulge, w = width.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "UncleBack",
+   "cat": "character",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 71,
+   "props": "breath: number",
+   "doc": "Uncle from behind, waist wrapped in cloth (shot 7). Centered on x=648.",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "KnotCU",
+   "cat": "prop",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 105,
+   "props": "cx: number; cy: number; tug: number",
+   "doc": "Extreme close-up: cloth across the jacket front ending in a knot (shot 8). Knot at (cx,cy).",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "EarProfile",
+   "cat": "face",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 168,
+   "props": "ex: number; ey: number",
+   "doc": "Helmet edge + ear in profile facing right (shot 9). Ear at (ex,ey).",
+   "imports": [],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "ClothEdge",
+   "cat": "prop",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 200,
+   "props": "x: number; y: number",
+   "doc": "Cloth edge creeping in behind the head (shot 9): a pale fold with the tied tuft hint.",
+   "imports": [],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "PocongFace",
+   "cat": "face",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/bike_art.tsx",
+   "line": 214,
+   "props": "",
+   "doc": "The pocong face leaning in: hooded shroud with a featureless dark oval opening (shot 10).",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "ShroudKnot",
+   "cat": "prop",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/graphic_knot.tsx",
+   "line": 8,
+   "props": "sw: number",
+   "doc": "Close-up of the shroud's head knot, frame coords (1080x1920). White cloth gathered above the head, cinched with a cloth tie, twisted tuft flaring on top. Key/rim light from the right; sw = sway (-1..1) of the loose cloth ends.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "PocongFigure",
+   "cat": "character",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/graphic_pocong.tsx",
+   "line": 7,
+   "props": "id: string; x: number; y: number; s: number; mode?: 'lit' | 'dark'; tuft?: number; rot?: number",
+   "doc": "Pocong figure, local coords: feet centre at (0,0), top of the knot tuft at y≈-770, height ≈ 770. mode: 'lit' (cold light from above), 'dark' (black bg, single rim from the right).",
+   "imports": [],
+   "shots": [
+    2,
+    3
+   ]
+  },
+  {
+   "name": "KnotBand",
+   "cat": "set",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/graphic_pocong.tsx",
+   "line": 79,
+   "props": "w: number; reveal: number; tight?: number",
+   "doc": "Knotted cloth band motif (horizontal strip with a knot in the middle). Centre (0,0), width ≈ w.",
+   "imports": [],
+   "shots": [
+    13
+   ]
+  },
+  {
+   "name": "Pocong",
+   "cat": "character",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/road_figs.tsx",
+   "line": 7,
+   "props": "x: number; y: number; s?: number; arm?: number; dark?: number; t?: number; rim?: number",
+   "doc": "Standing pocong (human proportions, ~7 heads). Feet at (x,y); ~310 units tall * s. arm 0..1 raises an arm-shape under the cloth. dark 0..1 dims it.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Motorbike",
+   "cat": "prop",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/road_figs.tsx",
+   "line": 51,
+   "props": "x: number; y: number; s?: number; flip?: boolean; rider?: boolean; passenger?: boolean; t?: number; lit?: number; rim?: number; wheelRot?: number; threads?: boolean; dawn?: boolean",
+   "doc": "Small motorbike (bebek) facing right, ground at (x,y). rider / passenger optional. lit: headlight on.",
+   "imports": [],
+   "shots": [
+    5,
+    6,
+    11
+   ]
+  },
+  {
+   "name": "RoadDefs",
+   "cat": "environment",
+   "ep": "ep04",
+   "file": "episodes/ep04/art/road_figs.tsx",
+   "line": 167,
+   "props": "",
+   "doc": "gradient defs used by Motorbike's headlight beam; render once inside each Live svg.",
+   "imports": [],
+   "shots": [
+    6,
+    11
+   ]
+  },
+  {
+   "name": "bike set",
+   "cat": "set",
+   "ep": "ep04",
+   "file": "episodes/ep04/sets/bike.tsx",
+   "line": 1,
+   "props": "bands: bike/bg",
+   "doc": "shots [7, 8, 9, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep04/s07.jpg",
+   "shots": [
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "road set",
+   "cat": "set",
+   "ep": "ep04",
+   "file": "episodes/ep04/sets/road.tsx",
+   "line": 1,
+   "props": "bands: road/dawn, road/fg, road/mid, road/sky",
+   "doc": "shots [1, 5, 6, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep04/s01.jpg",
+   "shots": [
+    1,
+    5,
+    6,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "TrainFront",
+   "cat": "prop",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/graphic_train.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s: number; glow: number",
+   "doc": "HERO: front of the ghost train, centred at (x, y) = middle of the windshield. Frame-space units.",
+   "imports": [],
+   "shots": [
+    2,
+    6
+   ]
+  },
+  {
+   "name": "Bench",
+   "cat": "prop",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/platform_geo.tsx",
+   "line": 10,
+   "props": "x: number; y: number; s: number",
+   "doc": "Platform bench (side-on, slightly foreshortened), low detail.",
+   "imports": [],
+   "shots": [
+    5,
+    12
+   ]
+  },
+  {
+   "name": "Cap",
+   "cat": "prop",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/platform_geo.tsx",
+   "line": 24,
+   "props": "x: number; y: number; s: number; rim?: string; rimO?: number",
+   "doc": "Peaked guard cap, profile facing right. Origin = band bottom centre.",
+   "imports": [],
+   "shots": [
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Passenger",
+   "cat": "character",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/train_art.tsx",
+   "line": 10,
+   "props": "x: number; y: number; s: number; tilt?: number; eye?: number",
+   "doc": "One identical passenger, seated, facing camera. (x,y) = seat point (hips), s = scale (1 = ~260px head-to-seat).",
+   "imports": [],
+   "shots": [
+    7,
+    8
+   ]
+  },
+  {
+   "name": "Narrator",
+   "cat": "character",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/train_art.tsx",
+   "line": 32,
+   "props": "x: number; y: number; s: number; rim?: string; rimO?: number",
+   "doc": "Narrator from behind: young adult with backpack. (x,y)=feet centre, s scale (1 = ~1000px tall).",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "Car",
+   "cat": "prop",
+   "ep": "ep05",
+   "file": "episodes/ep05/art/train_art.tsx",
+   "line": 60,
+   "props": "x: number; y: number; len: number; h?: number; idp: string; faces?: boolean; door?: number",
+   "doc": "Side view of one carriage. x = left end, y = roof top, len length, h height (~460). door: 0..1 opening.",
+   "imports": [],
+   "shots": [
+    6,
+    11
+   ]
+  },
+  {
+   "name": "platform set",
+   "cat": "set",
+   "ep": "ep05",
+   "file": "episodes/ep05/sets/platform.tsx",
+   "line": 1,
+   "props": "bands: platform/bg, platform/mid, platform/near",
+   "doc": "shots [1, 5, 9, 10, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep05/s01.jpg",
+   "shots": [
+    1,
+    5,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "train set",
+   "cat": "set",
+   "ep": "ep05",
+   "file": "episodes/ep05/sets/train.tsx",
+   "line": 1,
+   "props": "bands: train/interior, train/plat, train/station, train/wall",
+   "doc": "shots [4, 6, 7, 8, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep05/s04.jpg",
+   "shots": [
+    4,
+    6,
+    7,
+    8,
+    11
+   ]
+  },
+  {
+   "name": "Tiles",
+   "cat": "environment",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_art.tsx",
+   "line": 4,
+   "props": "vx: number; y0: number; y1: number; stroke: string; op?: number; cols?: number",
+   "doc": "Perspective floor tiles (frame coords). vp = vanishing point, y0 = horizon line, rows/cols lines.",
+   "imports": [],
+   "shots": [
+    7,
+    12
+   ]
+  },
+  {
+   "name": "Fingertips",
+   "cat": "hand",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_art.tsx",
+   "line": 18,
+   "props": "curl?: number",
+   "doc": "Pale fingertips (4) resting on the floor, pointing toward +x, drawn around 0,0.",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "OldHand",
+   "cat": "hand",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_art.tsx",
+   "line": 36,
+   "props": "grip: number",
+   "doc": "Old wrinkled hand seen from above, fingers curling down over (+y). Origin at wrist center, extends toward -x.",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "YoungHand",
+   "cat": "hand",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_art.tsx",
+   "line": 100,
+   "props": "",
+   "doc": "Young hand, palm partly up, coming from the left. Origin at wrist.",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "GrandmaHead",
+   "cat": "face",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_grandma.tsx",
+   "line": 4,
+   "props": "bl: number; t: number",
+   "doc": "Grandma's head lying on the pillow, 3/4 turned toward camera, local origin = face centre. bl = blink 0..1.",
+   "imports": [],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "Handprint",
+   "cat": "hand",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/close_grandma.tsx",
+   "line": 83,
+   "props": "op?: number",
+   "doc": "A faint five-finger palm smudge on the floor, fingers toward -y, with a drag tail toward +y.",
+   "imports": [],
+   "shots": [
+    12
+   ]
+  },
+  {
+   "name": "NurseCap",
+   "cat": "character",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/graphic_props.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s?: number; rot?: number; lit?: number; dirty?: boolean",
+   "doc": "Old-style folded nurse's cap, centred at 0,0, ~420 wide. lit = 0..1 rim strength.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Tube",
+   "cat": "prop",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/graphic_props.tsx",
+   "line": 47,
+   "props": "x: number; y: number; w?: number; on?: number",
+   "doc": "Single fluorescent tube fixture, centred, ~520 wide. on = 0..1",
+   "imports": [],
+   "shots": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    13
+   ]
+  },
+  {
+   "name": "Clipboard",
+   "cat": "prop",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/graphic_props.tsx",
+   "line": 58,
+   "props": "x: number; y: number; s?: number; rot?: number",
+   "doc": "Clipboard lying flat-ish, local origin centre.",
+   "imports": [],
+   "shots": [
+    3
+   ]
+  },
+  {
+   "name": "HairLock",
+   "cat": "character",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/graphic_props.tsx",
+   "line": 75,
+   "props": "d: string; n?: number; spread?: number; rim?: number",
+   "doc": "A loose lock of long dark hair: several thin strands around one path, with one cold rim strand.",
+   "imports": [],
+   "shots": [
+    2,
+    3
+   ]
+  },
+  {
+   "name": "GrandmaBed",
+   "cat": "character",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/ward_people.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s?: number; t?: number; light?: string; dark?: string; rim?: string",
+   "doc": "Grandma's bed (closer, hero for shot 5/10): blanket shape with body lump, head on pillow, hand with IV line.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Narrator",
+   "cat": "character",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/ward_people.tsx",
+   "line": 29,
+   "props": "x: number; y: number; s?: number; t?: number; sleep?: number; rim?: string; fill?: string",
+   "doc": "Narrator on a plastic chair, from behind: hoodie silhouette, head tilted (asleep when sleep=1).",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Monitor",
+   "cat": "prop",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/ward_people.tsx",
+   "line": 54,
+   "props": "x: number; y: number; s?: number; t?: number; glow?: string",
+   "doc": "Monitor on a stand with glowing screen + heartbeat line.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Clock",
+   "cat": "prop",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/ward_people.tsx",
+   "line": 68,
+   "props": "x: number; y: number; r?: number; h?: number; m?: number; face?: string",
+   "doc": "Wall clock showing hh:mm.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Tube",
+   "cat": "prop",
+   "ep": "ep06",
+   "file": "episodes/ep06/art/ward_people.tsx",
+   "line": 83,
+   "props": "x: number; y: number; w?: number; o: number; id: string; c?: string",
+   "doc": "A tube light: fixture + lit tube + radial glow (o drives brightness).",
+   "imports": [],
+   "shots": [
+    1,
+    2,
+    4,
+    5,
+    6,
+    13
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep06",
+   "file": "episodes/ep06/sets/close.tsx",
+   "line": 1,
+   "props": "bands: ",
+   "doc": "shots [7, 8, 9, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep06/s07.jpg",
+   "shots": [
+    7,
+    8,
+    9,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "graphic set",
+   "cat": "set",
+   "ep": "ep06",
+   "file": "episodes/ep06/sets/graphic.tsx",
+   "line": 1,
+   "props": "bands: graphic/wall",
+   "doc": "shots [2, 3, 13]",
+   "imports": [],
+   "thumb": "thumbs/ep06/s02.jpg",
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "ward set",
+   "cat": "set",
+   "ep": "ep06",
+   "file": "episodes/ep06/sets/ward.tsx",
+   "line": 1,
+   "props": "bands: ward/corridor, ward/near, ward/room",
+   "doc": "shots [1, 4, 5, 6, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep06/s01.jpg",
+   "shots": [
+    1,
+    4,
+    5,
+    6,
+    10
+   ]
+  },
+  {
+   "name": "Mask",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_face.tsx",
+   "line": 7,
+   "props": "tug?: number; id: string; loopSide?: 1 | -1",
+   "doc": "Surgical mask: tug 0..1 pulls the lower edge slightly (whisper).",
+   "imports": [],
+   "shots": [
+    6,
+    7
+   ]
+  },
+  {
+   "name": "Eyes",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_face.tsx",
+   "line": 50,
+   "props": "id: string; glint?: number",
+   "doc": "Eyes shadowed under fringe. open 0..1",
+   "imports": [],
+   "shots": [
+    6,
+    7
+   ]
+  },
+  {
+   "name": "FaceSkin",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_face.tsx",
+   "line": 76,
+   "props": "",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    6,
+    7
+   ]
+  },
+  {
+   "name": "Fringe",
+   "cat": "prop",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_face.tsx",
+   "line": 85,
+   "props": "y?: number; sway?: number",
+   "doc": "Black fringe: heavy straight bangs + strand strokes, rim strokes on the right side.",
+   "imports": [],
+   "shots": [
+    6,
+    7
+   ]
+  },
+  {
+   "name": "GripBack",
+   "cat": "prop",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_hands.tsx",
+   "line": 14,
+   "props": "cx: number; cy: number; dir: 1 | -1; rot?: number",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "GripFront",
+   "cat": "prop",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/close_hands.tsx",
+   "line": 28,
+   "props": "cx: number; cy: number; dir: 1 | -1; sq: number; rot?: number; cuff?: string",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "MaskFront",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/graphic_art.tsx",
+   "line": 4,
+   "props": "w?: number; loopDrop?: number; rim?: string; op?: number",
+   "doc": "Surgical mask (front view), centred at 0,0, width ~w. Pleats + ear loops.",
+   "imports": [],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "WomanProfile",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/graphic_art.tsx",
+   "line": 36,
+   "props": "h?: number; light?: number",
+   "doc": "Tall masked woman in profile facing left. Origin = feet centre; height ~ h.",
+   "imports": [],
+   "shots": [
+    2
+   ]
+  },
+  {
+   "name": "PaleHand",
+   "cat": "hand",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/graphic_art.tsx",
+   "line": 94,
+   "props": "",
+   "doc": "Long pale hand reaching in from the right, fingertips pinching at origin.",
+   "imports": [],
+   "shots": [
+    3
+   ]
+  },
+  {
+   "name": "Woman",
+   "cat": "character",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/street_figs.tsx",
+   "line": 13,
+   "props": "x: number; y: number; h: number; hairSway?: number",
+   "doc": "Kuchisake-onna, front, perfectly still. feet at (x,y), total height h. Mouth never shown (mask).",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Girl",
+   "cat": "character",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/street_figs.tsx",
+   "line": 73,
+   "props": "x: number; y: number; h: number; view: 'back' | 'front'; phase?: number; amp?: number",
+   "doc": "Schoolgirl in sailor uniform. view 'back' (walking away) or 'front' (running toward camera, backlit). phase = gait cycle 0..1, amp = 0 standing.",
+   "imports": [],
+   "shots": [
+    4,
+    5,
+    10
+   ]
+  },
+  {
+   "name": "DroppedMask",
+   "cat": "face",
+   "ep": "ep07",
+   "file": "episodes/ep07/art/street_figs.tsx",
+   "line": 149,
+   "props": "x: number; y: number; w: number",
+   "doc": "Dropped surgical mask lying on asphalt (seen at a low angle).",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep07",
+   "file": "episodes/ep07/sets/close.tsx",
+   "line": 1,
+   "props": "bands: ",
+   "doc": "shots [6, 7, 8, 9]",
+   "imports": [],
+   "thumb": "thumbs/ep07/s06.jpg",
+   "shots": [
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "street set",
+   "cat": "set",
+   "ep": "ep07",
+   "file": "episodes/ep07/sets/street.tsx",
+   "line": 1,
+   "props": "bands: street/bg, street/fg, street/gate",
+   "doc": "shots [1, 4, 5, 10, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep07/s01.jpg",
+   "shots": [
+    1,
+    4,
+    5,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "PaleHand",
+   "cat": "hand",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 4,
+   "props": "flip: boolean; spread: number",
+   "doc": "Pale hand seen from above under water, fingers pointing down-ish (origin at wrist).",
+   "imports": [],
+   "shots": [
+    6
+   ]
+  },
+  {
+   "name": "BowedHead",
+   "cat": "face",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 27,
+   "props": "t: number",
+   "doc": "Head bowed, long wet hair hanging over the face, shoulders; origin = crown. Face never visible.",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "Footprint",
+   "cat": "fx",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 70,
+   "props": "wet: number",
+   "doc": "One wet bare footprint (origin centre, toes up).",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "HairStrand",
+   "cat": "character",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 95,
+   "props": "t: number",
+   "doc": "Several long wet black hairs clumped together, lying in soft S-curves on the sill.",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "Puddle",
+   "cat": "fx",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 128,
+   "props": "x: number; y: number; s: number; t: number",
+   "doc": "Small irregular puddle of water on wood, catching light.",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "Drop",
+   "cat": "prop",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/close_art.tsx",
+   "line": 138,
+   "props": "x: number; y: number; r: number; t: number; i: number",
+   "doc": "A single water bead on wood.",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "NightWorld",
+   "cat": "environment",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 11,
+   "props": "",
+   "doc": "Night sky + moon + river, drawn in WORLD space (1296x2304), frame offset (108,192).",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Reeds",
+   "cat": "environment",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 61,
+   "props": "x: number; y: number; h: number; flip?: boolean; fill?: string; sway?: number",
+   "doc": "Reed clump silhouette, base at (x,y), height h.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Llorona",
+   "cat": "character",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 77,
+   "props": "sway: number",
+   "doc": "La Llorona kneeling at the water's edge, facing right. Base point ~ knees at (0,0); height ~ 300.",
+   "imports": [],
+   "shots": [
+    1,
+    2,
+    5,
+    8,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "PaperBoat",
+   "cat": "prop",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 114,
+   "props": "tone?: number",
+   "doc": "Paper boat (folded), centred at (0,0), width ~180.",
+   "imports": [],
+   "shots": [
+    3
+   ]
+  },
+  {
+   "name": "Marigold",
+   "cat": "prop",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 127,
+   "props": "r?: number; rot?: number",
+   "doc": "Marigold (cempasúchil) head, centred at (0,0), radius ~r.",
+   "imports": [],
+   "shots": [
+    2,
+    13
+   ]
+  },
+  {
+   "name": "Ripples",
+   "cat": "fx",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/graphic_art.tsx",
+   "line": 143,
+   "props": "q: number; n?: number; rx: number; ry: number; color?: string; op?: number",
+   "doc": "Expanding ring ripples around (0,0). q = phase 0..1 (looping).",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Llorona",
+   "cat": "character",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/river_figs.tsx",
+   "line": 10,
+   "props": "x: number; y: number; s: number; turn?: number; stand?: number; cold?: boolean; id: string",
+   "doc": "La Llorona seen from behind / three-quarter back, origin = ground under her knees. s=1 → ~110 units tall kneeling, ~185 standing.",
+   "imports": [],
+   "shots": [
+    1,
+    2,
+    5,
+    8,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "Boy",
+   "cat": "character",
+   "ep": "ep08",
+   "file": "episodes/ep08/art/river_figs.tsx",
+   "line": 64,
+   "props": "x: number; y: number; s: number; phase: number; run?: number; aim?: number; rod?: boolean; beamLen?: number; id: string",
+   "doc": "Boy (~10) from behind. origin = ground between feet. s=1 → ~150 units tall. phase = walk/run cycle radians. aim = flashlight direction degrees (0 = up/into depth).",
+   "imports": [],
+   "shots": [
+    4,
+    5,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep08",
+   "file": "episodes/ep08/sets/close.tsx",
+   "line": 1,
+   "props": "bands: ",
+   "doc": "shots [6, 7, 10, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep08/s06.jpg",
+   "shots": [
+    6,
+    7,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "graphic set",
+   "cat": "set",
+   "ep": "ep08",
+   "file": "episodes/ep08/sets/graphic.tsx",
+   "line": 1,
+   "props": "bands: graphic/night",
+   "doc": "shots [2, 3, 13]",
+   "imports": [],
+   "thumb": "thumbs/ep08/s02.jpg",
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "river set",
+   "cat": "set",
+   "ep": "ep08",
+   "file": "episodes/ep08/sets/river.tsx",
+   "line": 1,
+   "props": "bands: river/far, river/fg, river/sky, river/water",
+   "doc": "shots [1, 4, 5, 8, 9, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep08/s01.jpg",
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "Pine",
+   "cat": "environment",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/graphic_art.tsx",
+   "line": 20,
+   "props": "x: number; base: number; h: number; w: number; fill: string; snow?: string; seed?: number; tiers?: number",
+   "doc": "",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "FurTuft",
+   "cat": "prop",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/graphic_art.tsx",
+   "line": 36,
+   "props": "ax: number; ay: number; len: number; sway: number; n?: number; seed?: number; scale?: number",
+   "doc": "Hanging tuft of long white fur. Anchor (ax, ay); strands hang down to ~len. sway in px.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "FurDefs",
+   "cat": "prop",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/graphic_art.tsx",
+   "line": 72,
+   "props": "",
+   "doc": "",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Snow",
+   "cat": "fx",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/graphic_art.tsx",
+   "line": 87,
+   "props": "t: number; w: number; h: number; n?: number; seed?: number; speed?: number; size?: number; op?: number",
+   "doc": "Snowfall: deterministic flakes, positions from time t. Frame space w x h.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    2,
+    3,
+    4,
+    10,
+    11,
+    13
+   ]
+  },
+  {
+   "name": "Outside",
+   "cat": "environment",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/home_art.tsx",
+   "line": 4,
+   "props": "",
+   "doc": "Outside view: winter night, ridge, snowy pine trail. World coords 1296x2304.",
+   "imports": [],
+   "shots": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "Kitchen",
+   "cat": "environment",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/home_art.tsx",
+   "line": 37,
+   "props": "",
+   "doc": "Kitchen doorway with the mother standing still (seen 3/4 from the side, facing left to the window).",
+   "imports": [],
+   "shots": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "PaleShape",
+   "cat": "prop",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/mountain_tiger.tsx",
+   "line": 5,
+   "props": "x: number; y: number; s: number; o?: number; eyes?: number; id: string; trunk?: string",
+   "doc": "The Jangsan Tiger: never fully shown. A huge pale hunched mass, mostly hidden behind pine trunks: coarse ragged fur on a high shoulder hump, low blunt head, long forelegs, two dull eyes. Origin = feet.",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "Snow",
+   "cat": "fx",
+   "ep": "ep09",
+   "file": "episodes/ep09/art/mountain_tiger.tsx",
+   "line": 45,
+   "props": "t: number; n?: number; seed?: number; size?: number; color?: string; speed?: number",
+   "doc": "Snowfall: deterministic live particles in world space.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    4,
+    10,
+    11,
+    13
+   ]
+  },
+  {
+   "name": "Pine",
+   "cat": "environment",
+   "ep": "ep09",
+   "file": "episodes/ep09/sets/mountain.tsx",
+   "line": 8,
+   "props": "x: number; y: number; h: number; fill: string; snow?: string",
+   "doc": "Pine: stacked tiers, flat fill, optional snow on tiers.",
+   "imports": [
+    "../art/world",
+    "../comp/Bands"
+   ],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "home set",
+   "cat": "set",
+   "ep": "ep09",
+   "file": "episodes/ep09/sets/home.tsx",
+   "line": 1,
+   "props": "bands: home/kitchen, home/outside",
+   "doc": "shots [5, 6, 7, 8, 9]",
+   "imports": [],
+   "thumb": "thumbs/ep09/s05.jpg",
+   "shots": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ]
+  },
+  {
+   "name": "mountain set",
+   "cat": "set",
+   "ep": "ep09",
+   "file": "episodes/ep09/sets/mountain.tsx",
+   "line": 1,
+   "props": "bands: mountain/apt, mountain/near, mountain/sky, mountain/trail",
+   "doc": "shots [1, 4, 10, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep09/s01.jpg",
+   "shots": [
+    1,
+    4,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "MirrorBg",
+   "cat": "set",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/graphic_fog.tsx",
+   "line": 10,
+   "props": "id: string; lx?: number; ly?: number; warm?: number",
+   "doc": "Dark bathroom mirror filling the frame, with tile edge and frame rim. `id` keeps gradient ids unique per shot.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "FogPatch",
+   "cat": "fx",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/graphic_fog.tsx",
+   "line": 44,
+   "props": "id: string; cx: number; cy: number; rx: number; ry: number; o?: number",
+   "doc": "Soft fog patch (stacked ellipses, no filter).",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "CandleReflection",
+   "cat": "prop",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/graphic_fog.tsx",
+   "line": 60,
+   "props": "x: number; y: number; s?: number; t: number; id: string; body?: boolean",
+   "doc": "Candle flame reflection (glow + flame + small body), seen in the glass.",
+   "imports": [],
+   "shots": [
+    2,
+    13
+   ]
+  },
+  {
+   "name": "FogText",
+   "cat": "fx",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/graphic_fog.tsx",
+   "line": 91,
+   "props": "",
+   "doc": "Text drawn as if wiped into breath fog: pale faint core, soft halo strokes, revealed left→right by `rev` (0..1).",
+   "imports": [],
+   "shots": [
+    2,
+    13
+   ]
+  },
+  {
+   "name": "WalkGirl",
+   "cat": "character",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/house_figs.tsx",
+   "line": 8,
+   "props": "x: number; y: number; h: number; phase?: number; hair?: 'long' | 'pony' | 'bob'; rim?: number; side?: number",
+   "doc": "A girl (~13) seen from behind walking, silhouette with warm rim light. (x,y)=feet centre, h=height.",
+   "imports": [],
+   "shots": [
+    5
+   ]
+  },
+  {
+   "name": "SitGirl",
+   "cat": "character",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/house_figs.tsx",
+   "line": 44,
+   "props": "x: number; y: number; h: number; pj: string; pjD: string; hair: 'long' | 'pony' | 'bob'; tilt?: number; laugh?: number; skin?: string; arm?: 'up' | 'lap'",
+   "doc": "A girl (~13) sitting cross-legged on a sleeping bag, facing camera, warm lit. Face simple.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Room",
+   "cat": "set",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 9,
+   "props": "day?: boolean",
+   "doc": "Static room. day = pale morning version.",
+   "imports": [],
+   "shots": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "GlassBg",
+   "cat": "set",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 34,
+   "props": "day?: boolean",
+   "doc": "Glass base: reflection of the room, darker than the room.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "GlassSheen",
+   "cat": "prop",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 48,
+   "props": "day?: boolean",
+   "doc": "",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "GlassClip",
+   "cat": "prop",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 54,
+   "props": "id: string",
+   "doc": "",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Glow",
+   "cat": "fx",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 59,
+   "props": "x: number; y: number; r: number; o?: number; id: string; c?: string",
+   "doc": "Candle glow (radial).",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Candle",
+   "cat": "prop",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 67,
+   "props": "x?: number; top?: number; flick?: number; t?: number; dim?: number; lit?: boolean",
+   "doc": "Candle with flame; flick = small sway (0 = steady).",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Girl",
+   "cat": "character",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 84,
+   "props": "x: number; y: number; s?: number; view: 'back' | 'front'; hair?: 'long' | 'pony' | 'bob'; tone?: string; lit?: number; eyes?: number; eyeDark?: number; id: string",
+   "doc": "A ~13 y girl in pyjamas. view back (silhouette) or front (reflection). s = scale (head ry ≈ 80*s).",
+   "imports": [],
+   "shots": [
+    6,
+    8,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Mary",
+   "cat": "character",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 120,
+   "props": "",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Smoke",
+   "cat": "fx",
+   "ep": "ep10",
+   "file": "episodes/ep10/art/mirror_art.tsx",
+   "line": 136,
+   "props": "x: number; y: number; t: number; o?: number",
+   "doc": "Smoke curl rising from (x,y).",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "house set",
+   "cat": "set",
+   "ep": "ep10",
+   "file": "episodes/ep10/sets/house.tsx",
+   "line": 1,
+   "props": "bands: house/bedfg, house/bedroom, house/hall, house/hallfg",
+   "doc": "shots [4, 5, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep10/s04.jpg",
+   "shots": [
+    4,
+    5,
+    11
+   ]
+  },
+  {
+   "name": "mirror set",
+   "cat": "set",
+   "ep": "ep10",
+   "file": "episodes/ep10/sets/mirror.tsx",
+   "line": 1,
+   "props": "bands: mirror/day, mirror/mary, mirror/room",
+   "doc": "shots [1, 6, 7, 8, 9, 10, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep10/s01.jpg",
+   "shots": [
+    1,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Tin",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 4,
+   "props": "cx: number; cy: number",
+   "doc": "Money tin with padlock (hero of shot 5). Centered at (cx, cy) = front-bottom center.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Coin",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 49,
+   "props": "x: number; y: number; r?: number; tilt?: number",
+   "doc": "One coin lying flat (ellipse) or on edge.",
+   "imports": [],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Crab",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 59,
+   "props": "x: number; y: number; s?: number; a?: number; ph?: number; claw?: number",
+   "doc": "Small red crab, top-down-ish. Facing angle a (deg), leg phase ph.",
+   "imports": [],
+   "shots": [
+    6,
+    8,
+    9,
+    11,
+    13
+   ]
+  },
+  {
+   "name": "Bowl",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 84,
+   "props": "",
+   "doc": "Clay bowl of water seen from above at an angle. ripple 0..1 time, amp strength.",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "SmallHand",
+   "cat": "hand",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 126,
+   "props": "ex: number; ey: number; fx: number; fy: number; poke?: number; wet?: number",
+   "doc": "Small grey child-like hand + forearm entering from (ex, ey) toward fingertip (fx, fy). poke 0..1 extends index finger.",
+   "imports": [],
+   "shots": [
+    8,
+    9
+   ]
+  },
+  {
+   "name": "Drop",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 161,
+   "props": "x: number; y: number; r?: number; o?: number",
+   "doc": "Droplet.",
+   "imports": [],
+   "shots": [
+    8,
+    9
+   ]
+  },
+  {
+   "name": "Foot",
+   "cat": "fx",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/close_art.tsx",
+   "line": 169,
+   "props": "x: number; y: number; a: number; side: number; s?: number; sy?: number; o?: number",
+   "doc": "Tiny child footprint (bare foot) at (x,y), rotation a (deg), side ±1, scale s (perspective).",
+   "imports": [],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "Coin",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/graphic_tuyul.tsx",
+   "line": 8,
+   "props": "x: number; y: number; r: number; tilt?: number; rot?: number; id: string",
+   "doc": "A coin seen face-on (rx=ry) or tilted (ry<rx). Simple 3-tone with rim.",
+   "imports": [],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "TuyulSil",
+   "cat": "character",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/graphic_tuyul.tsx",
+   "line": 25,
+   "props": "x: number; y: number; s: number; lean?: number",
+   "doc": "Tiny bald child-like silhouette, standing, both hands holding a coin at the chest. Feet at (x,y), height ~ 5.2*s*100.",
+   "imports": [],
+   "shots": [
+    2
+   ]
+  },
+  {
+   "name": "Marble",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/graphic_tuyul.tsx",
+   "line": 66,
+   "props": "x: number; y: number; r: number; spin: number",
+   "doc": "Glass marble with swirl, highlights.",
+   "imports": [],
+   "shots": [
+    3
+   ]
+  },
+  {
+   "name": "Crab",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/graphic_tuyul.tsx",
+   "line": 87,
+   "props": "x: number; y: number; s: number; claw?: number",
+   "doc": "Simple crab silhouette, top view, claws up.",
+   "imports": [],
+   "shots": [
+    6,
+    8,
+    9,
+    11,
+    13
+   ]
+  },
+  {
+   "name": "Uncle",
+   "cat": "character",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/warung_art.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s?: number; turn?: number; rim?: string",
+   "doc": "Uncle (sarong + singlet), seen from behind/side, standing. Origin = feet centre-ish; drawn ~1 unit = 1 px. bulb rim from the right.",
+   "imports": [],
+   "shots": [
+    4,
+    12
+   ]
+  },
+  {
+   "name": "Tuyul",
+   "cat": "character",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/warung_art.tsx",
+   "line": 35,
+   "props": "x: number; y: number; s?: number; sq?: number; fill?: string; rim?: string",
+   "doc": "Tuyul: small bald child, upright crouch facing left. Origin = ground under feet; ~195 units tall at s=1. sq = vertical squash (ducking).",
+   "imports": [],
+   "shots": [
+    1
+   ]
+  },
+  {
+   "name": "Bowl",
+   "cat": "prop",
+   "ep": "ep11",
+   "file": "episodes/ep11/art/warung_art.tsx",
+   "line": 69,
+   "props": "x: number; y: number; s?: number; crab?: boolean; glint?: number; light?: string",
+   "doc": "Clay bowl of water; optional crab. glint = 0..1",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep11",
+   "file": "episodes/ep11/sets/close.tsx",
+   "line": 1,
+   "props": "bands: close/dawn, close/fg, close/floor, close/table",
+   "doc": "shots [5, 6, 8, 9, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep11/s05.jpg",
+   "shots": [
+    5,
+    6,
+    8,
+    9,
+    11
+   ]
+  },
+  {
+   "name": "warung set",
+   "cat": "set",
+   "ep": "ep11",
+   "file": "episodes/ep11/sets/warung.tsx",
+   "line": 1,
+   "props": "bands: warung/ext, warung/fg, warung/int",
+   "doc": "shots [1, 4, 7, 10, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep11/s01.jpg",
+   "shots": [
+    1,
+    4,
+    7,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Lime",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/close_arm.tsx",
+   "line": 8,
+   "props": "id: string; x: number; y: number; r: number; rot?: number; light?: string; dark?: number",
+   "doc": "Green lime, top-lit by warm lamp. r = radius, rot = roll angle (deg).",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    9,
+    13
+   ]
+  },
+  {
+   "name": "Planks",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/close_arm.tsx",
+   "line": 33,
+   "props": "x0: number; n: number; pw: number; y0: number; h: number; wideAt?: number; wideW?: number; seed?: number",
+   "doc": "Teak planks running vertically (top view). x0..x1, gaps at boundaries; `wideGap` index widened.",
+   "imports": [],
+   "shots": [
+    6
+   ]
+  },
+  {
+   "name": "LongArm",
+   "cat": "hand",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/close_arm.tsx",
+   "line": 62,
+   "props": "x: number; y0: number; y1: number; lean?: number; curl?: number; t?: number",
+   "doc": "The impossibly long arm hanging straight down from (x, y0) to the hand at (x+lean, y1). Sleeve edge at top, pale thin forearm, slender hand with long fingers reaching down.",
+   "imports": [],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "PerspFloor",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/close_floor.tsx",
+   "line": 12,
+   "props": "edges: number[]; top?: number",
+   "doc": "Boards between bottom x positions `edges` (pairs). gapIdx = index of the board boundary that is a wide gap.",
+   "imports": [],
+   "shots": [
+    7
+   ]
+  },
+  {
+   "name": "Glow",
+   "cat": "fx",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/graphic_art.tsx",
+   "line": 4,
+   "props": "id: string; cx: number; cy: number; rx: number; ry?: number; color: string; o?: number",
+   "doc": "Glow helper: radial gradient ellipse (id must be unique per shot).",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "OilLamp",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/graphic_art.tsx",
+   "line": 18,
+   "props": "x: number; y: number; s?: number; flick?: number; id: string",
+   "doc": "Small clay oil lamp (pa-teep) with flame. Origin = base centre.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    5,
+    13
+   ]
+  },
+  {
+   "name": "Garland",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/graphic_art.tsx",
+   "line": 50,
+   "props": "x: number; y: number; s?: number",
+   "doc": "Wilted jasmine garland (phuang malai) lying on a sill. Origin = left end.",
+   "imports": [],
+   "shots": [
+    3
+   ]
+  },
+  {
+   "name": "Lime",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/graphic_art.tsx",
+   "line": 78,
+   "props": "x: number; y: number; s?: number; id: string",
+   "doc": "Lime (manao) half + leaf, used as motif. Origin = centre.",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    9,
+    13
+   ]
+  },
+  {
+   "name": "Woman",
+   "cat": "character",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/graphic_art.tsx",
+   "line": 96,
+   "props": "x: number; y: number; s?: number; sway?: number; rim?: string",
+   "doc": "Woman seen from behind/three-quarter, very long hair, Thai dress. Origin = feet centre. Height ~ 1000*s.",
+   "imports": [],
+   "shots": [
+    2,
+    3
+   ]
+  },
+  {
+   "name": "ExteriorBand",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 50,
+   "props": "",
+   "doc": "Exterior: sky, moon, far bank, the stilt house, water.",
+   "imports": [],
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "ExtFgBand",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 124,
+   "props": "",
+   "doc": "Foreground framing leaves (exterior).",
+   "imports": [],
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "InteriorBand",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 133,
+   "props": "",
+   "doc": "Interior: teak wall, lamp shelf, floor, low table.",
+   "imports": [],
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "LampGlow",
+   "cat": "fx",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 164,
+   "props": "x: number; y: number; r: number; o?: number; id: string",
+   "doc": "Oil lamp glow (live, flicker by opacity).",
+   "imports": [],
+   "shots": [
+    5
+   ]
+  },
+  {
+   "name": "OilLamp",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 171,
+   "props": "x: number; y: number; s?: number; flick?: number",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    5,
+    13
+   ]
+  },
+  {
+   "name": "Man",
+   "cat": "character",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 182,
+   "props": "x: number; y: number; h: number; dir?: number; pose?: string; ph?: number; rim?: string",
+   "doc": "Mak, simple shirt. dir 1 = facing right. pose: 'stand' | 'step' | 'climb' | 'run' | 'sit' | 'look'",
+   "imports": [],
+   "shots": [
+    4,
+    5,
+    8,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "Wife",
+   "cat": "character",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 230,
+   "props": "x: number; y: number; h: number; dir?: number; baby?: boolean; sil?: boolean; kneel?: boolean; sway?: number",
+   "doc": "Mae Nak: long black hair, pha sin skirt; silhouette mode for doorway.",
+   "imports": [],
+   "shots": [
+    4,
+    5,
+    10
+   ]
+  },
+  {
+   "name": "Boat",
+   "cat": "prop",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 270,
+   "props": "x: number; y: number; w: number; rock?: number",
+   "doc": "Small wooden boat (sampan).",
+   "imports": [],
+   "shots": [
+    4,
+    8
+   ]
+  },
+  {
+   "name": "PaleHand",
+   "cat": "hand",
+   "ep": "ep12",
+   "file": "episodes/ep12/art/house_art.tsx",
+   "line": 278,
+   "props": "x: number; y: number; ext: number; s?: number",
+   "doc": "The pale, impossibly long hand reaching down between floorboards. ext 0..1",
+   "imports": [],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/sets/close.tsx",
+   "line": 1,
+   "props": "bands: ",
+   "doc": "shots [6, 7, 9, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep12/s06.jpg",
+   "shots": [
+    6,
+    7,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "house set",
+   "cat": "set",
+   "ep": "ep12",
+   "file": "episodes/ep12/sets/house.tsx",
+   "line": 1,
+   "props": "bands: house/ext, house/fg, house/int",
+   "doc": "shots [1, 4, 5, 8, 10, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep12/s01.jpg",
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "Comb",
+   "cat": "prop",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/cottage_figs.tsx",
+   "line": 5,
+   "props": "x: number; y: number; s?: number; hair?: number",
+   "doc": "Ornate silver comb with a long grey hair strand. Centered at (x,y), lying on a surface at y.",
+   "imports": [
+    "../sets/cottage"
+   ],
+   "shots": [
+    1,
+    3,
+    5,
+    6,
+    8,
+    12,
+    13
+   ]
+  },
+  {
+   "name": "Grandpa",
+   "cat": "character",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/cottage_figs.tsx",
+   "line": 22,
+   "props": "x: number; y: number; rim?: number; nod?: number; face?: 'left' | 'right'; smile?: number; breath?: number",
+   "doc": "Grandfather seated in profile, wool cap & cardigan. Light always comes from the fire (+x world). face=\"left\": faces the window, warm rim on his back. face=\"right\": faces the fire, firelit profile with a smile.",
+   "imports": [
+    "../sets/cottage"
+   ],
+   "shots": []
+  },
+  {
+   "name": "Fire",
+   "cat": "fx",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/cottage_figs.tsx",
+   "line": 70,
+   "props": "t: number; o?: number",
+   "doc": "Fire in the hearth; flicker = opacity / small scale only.",
+   "imports": [
+    "../sets/cottage"
+   ],
+   "shots": []
+  },
+  {
+   "name": "Rain",
+   "cat": "fx",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/cottage_figs.tsx",
+   "line": 85,
+   "props": "t: number",
+   "doc": "Rain streaks on the window glass, clipped to the panes.",
+   "imports": [
+    "../sets/cottage"
+   ],
+   "shots": [
+    2,
+    3,
+    8,
+    9,
+    12,
+    13
+   ]
+  },
+  {
+   "name": "Hand",
+   "cat": "hand",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/cottage_figs.tsx",
+   "line": 98,
+   "props": "rise: number; press?: number",
+   "doc": "Long pale human hand outside the glass, rising from below (rise 0..1); palm pressed flat on the glass at the end.",
+   "imports": [
+    "../sets/cottage"
+   ],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "Comb",
+   "cat": "prop",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/country_comb.tsx",
+   "line": 4,
+   "props": "glint?: number",
+   "doc": "Ornate silver comb (centred at 0,0, ~440 wide) with a long grey hair strand.",
+   "imports": [],
+   "shots": [
+    1,
+    3,
+    5,
+    6,
+    8,
+    12,
+    13
+   ]
+  },
+  {
+   "name": "Comb",
+   "cat": "prop",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/graphic_comb.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s?: number; rot?: number; hair?: number; id: string",
+   "doc": "Ornate silver comb (spine + teeth) with an optional long grey hair strand. Local origin = comb centre, width ~600*s.",
+   "imports": [],
+   "shots": [
+    1,
+    3,
+    5,
+    6,
+    8,
+    12,
+    13
+   ]
+  },
+  {
+   "name": "Banshee",
+   "cat": "character",
+   "ep": "ep13",
+   "file": "episodes/ep13/art/graphic_comb.tsx",
+   "line": 41,
+   "props": "x: number; y: number; h: number; sway?: number; id: string",
+   "doc": "Distant banshee: pale grey figure, very long white hair, grey cloak. Origin = feet, height ~h.",
+   "imports": [],
+   "shots": [
+    2,
+    7,
+    11
+   ]
+  },
+  {
+   "name": "cottage set",
+   "cat": "set",
+   "ep": "ep13",
+   "file": "episodes/ep13/sets/cottage.tsx",
+   "line": 1,
+   "props": "bands: cottage/room, cottage/table",
+   "doc": "shots [5, 6, 8, 9, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep13/s05.jpg",
+   "shots": [
+    5,
+    6,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "country set",
+   "cat": "set",
+   "ep": "ep13",
+   "file": "episodes/ep13/sets/country.tsx",
+   "line": 1,
+   "props": "bands: country/lane, country/sky",
+   "doc": "shots [1, 4, 7, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep13/s01.jpg",
+   "shots": [
+    1,
+    4,
+    7,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "LitBtn",
+   "cat": "prop",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 10,
+   "props": "n: number; a: number",
+   "doc": "Lit button overlay.",
+   "imports": [],
+   "shots": [
+    1
+   ]
+  },
+  {
+   "name": "LiftDefs",
+   "cat": "prop",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 21,
+   "props": "",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    1,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "Readout",
+   "cat": "prop",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 31,
+   "props": "x: number; y: number; text: string; up?: number; size?: number",
+   "doc": "Amber floor readout.",
+   "imports": [],
+   "shots": [
+    3,
+    5,
+    8,
+    10,
+    13
+   ]
+  },
+  {
+   "name": "Hand",
+   "cat": "hand",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 39,
+   "props": "x: number; y: number; press?: number",
+   "doc": "Index finger + hand + hoodie sleeve, fingertip at (x,y), coming from lower right.",
+   "imports": [],
+   "shots": [
+    1
+   ]
+  },
+  {
+   "name": "Woman",
+   "cat": "character",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 50,
+   "props": "x: number; y: number; s?: number; turn?: number",
+   "doc": "The woman: back turned, long black hair, dark coat, head lowered. Feet at (0,0), height ~ 1000*s. turn 0..1 = head turning.",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    9
+   ]
+  },
+  {
+   "name": "Narrator",
+   "cat": "character",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 75,
+   "props": "x: number; y: number; s?: number",
+   "doc": "Narrator from behind: hood + shoulders, centred at (x,y) = top of hood.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "NarratorFull",
+   "cat": "character",
+   "ep": "ep14",
+   "file": "episodes/ep14/art/lift_figs.tsx",
+   "line": 84,
+   "props": "x: number; y: number; s?: number",
+   "doc": "Narrator full body from behind (hoodie). (x,y) = feet; height ~940*s.",
+   "imports": [],
+   "shots": [
+    1
+   ]
+  },
+  {
+   "name": "hall set",
+   "cat": "set",
+   "ep": "ep14",
+   "file": "episodes/ep14/sets/hall.tsx",
+   "line": 1,
+   "props": "bands: hall/corridor, hall/lobby, hall/stairs",
+   "doc": "shots [4, 6, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep14/s04.jpg",
+   "shots": [
+    4,
+    6,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "lift set",
+   "cat": "set",
+   "ep": "ep14",
+   "file": "episodes/ep14/sets/lift.tsx",
+   "line": 1,
+   "props": "bands: lift/car, lift/panel",
+   "doc": "shots [1, 5, 7, 8, 9, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep14/s01.jpg",
+   "shots": [
+    1,
+    5,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "Rain",
+   "cat": "fx",
+   "ep": "ep15",
+   "file": "episodes/ep15/art/village_figs.tsx",
+   "line": 6,
+   "props": "f: number; color?: string; o?: number",
+   "doc": "Rain streaks, slanted, falling with frame f.",
+   "imports": [
+    "../sets/village",
+    "./world"
+   ],
+   "shots": [
+    1,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Porch",
+   "cat": "prop",
+   "ep": "ep15",
+   "file": "episodes/ep15/art/village_figs.tsx",
+   "line": 17,
+   "props": "on?: number; open?: number",
+   "doc": "Porch light glow + lit door / windows. open = 0..1 door gap.",
+   "imports": [
+    "../sets/village",
+    "./world"
+   ],
+   "shots": [
+    1,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "Wet",
+   "cat": "prop",
+   "ep": "ep15",
+   "file": "episodes/ep15/art/village_figs.tsx",
+   "line": 38,
+   "props": "on?: number; f: number",
+   "doc": "Wet path: warm porch reflection on the path + puddle glints, low contrast (sits under captions).",
+   "imports": [
+    "../sets/village",
+    "./world"
+   ],
+   "shots": [
+    1,
+    11
+   ]
+  },
+  {
+   "name": "Man",
+   "cat": "character",
+   "ep": "ep15",
+   "file": "episodes/ep15/art/village_figs.tsx",
+   "line": 55,
+   "props": "x: number; y: number; s?: number; fill?: string; bike?: boolean; face?: boolean; bikeX?: number",
+   "doc": "Tall man silhouette standing at the gate (feet at x,y). face=1 turns his head in profile to the right (toward the door). bike = motorbike parked on his left.",
+   "imports": [
+    "../sets/village",
+    "./world"
+   ],
+   "shots": [
+    1,
+    12
+   ]
+  },
+  {
+   "name": "Runner",
+   "cat": "character",
+   "ep": "ep15",
+   "file": "episodes/ep15/art/village_figs.tsx",
+   "line": 78,
+   "props": "x: number; y: number; s: number; ph: number; mother?: boolean; fill?: string",
+   "doc": "Running figure facing LEFT — stride phase ph (radians). mother = long hair streaming back + skirt; else child with short bob.",
+   "imports": [
+    "../sets/village",
+    "./world"
+   ],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "inside set",
+   "cat": "set",
+   "ep": "ep15",
+   "file": "episodes/ep15/sets/inside.tsx",
+   "line": 1,
+   "props": "bands: inside/room",
+   "doc": "shots [4, 5, 6, 7, 8, 9, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep15/s04.jpg",
+   "shots": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "village set",
+   "cat": "set",
+   "ep": "ep15",
+   "file": "episodes/ep15/sets/village.tsx",
+   "line": 1,
+   "props": "bands: village/bg, village/dawn",
+   "doc": "shots [1, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep15/s01.jpg",
+   "shots": [
+    1,
+    11,
+    12
+   ]
+  },
+  {
+   "name": "WalkGirl",
+   "cat": "character",
+   "ep": "ep16",
+   "file": "episodes/ep16/art/school_girls.tsx",
+   "line": 5,
+   "props": "x: number; y: number; h: number; phase?: number; hair?: 'long' | 'pony' | 'bob'; rim?: number; side?: number; stride?: number; rimCol?: string; collar?: number; bag?: boolean",
+   "doc": "A girl (~13) seen from behind walking, silhouette with warm rim light. (x,y)=feet centre, h=height.",
+   "imports": [],
+   "shots": [
+    4,
+    10
+   ]
+  },
+  {
+   "name": "Defs",
+   "cat": "prop",
+   "ep": "ep16",
+   "file": "episodes/ep16/sets/stall.tsx",
+   "line": 15,
+   "props": "",
+   "doc": "",
+   "imports": [
+    "../art/world",
+    "../comp/Bands"
+   ],
+   "shots": [
+    2,
+    3,
+    9,
+    13
+   ]
+  },
+  {
+   "name": "StallFront",
+   "cat": "prop",
+   "ep": "ep16",
+   "file": "episodes/ep16/sets/stall.tsx",
+   "line": 58,
+   "props": "x: number; open?: number; num?: string; door?: boolean",
+   "doc": "One stall front; `open` 0..1 leaves the door ajar (dark gap).",
+   "imports": [
+    "../art/world",
+    "../comp/Bands"
+   ],
+   "shots": [
+    9
+   ]
+  },
+  {
+   "name": "school set",
+   "cat": "set",
+   "ep": "ep16",
+   "file": "episodes/ep16/sets/school.tsx",
+   "line": 1,
+   "props": "bands: school/corridor, school/fg, school/night, school/nightfg",
+   "doc": "shots [1, 4, 10, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep16/s01.jpg",
+   "shots": [
+    1,
+    4,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "stall set",
+   "cat": "set",
+   "ep": "ep16",
+   "file": "episodes/ep16/sets/stall.tsx",
+   "line": 1,
+   "props": "bands: stall/door, stall/room, stall/room2",
+   "doc": "shots [5, 6, 7, 8, 9, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep16/s05.jpg",
+   "shots": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "Silbon",
+   "cat": "prop",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/graphic_silbon.tsx",
+   "line": 5,
+   "props": "x: number; y: number; s: number; rim?: number; sack?: number; fill?: string; step?: number",
+   "doc": "El Silbón: impossibly tall thin silhouette, wide-brim hat, sack over the right shoulder. Feet at (x, y), total height ≈ 1000*s. `rim` = moon rim-light opacity. `sack` = sack highlight 0..1.",
+   "imports": [],
+   "shots": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "name": "Note",
+   "cat": "prop",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/graphic_silbon.tsx",
+   "line": 51,
+   "props": "x: number; y: number; s?: number; fill?: string; o?: number",
+   "doc": "Simple eighth note glyph centered at (x,y), height ≈ 80*s.",
+   "imports": [],
+   "shots": [
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Silbon",
+   "cat": "prop",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/llanos_figs.tsx",
+   "line": 5,
+   "props": "x: number; y: number; h: number; fill?: string; rim?: string; step?: number",
+   "doc": "El Silbón: impossibly tall thin silhouette, wide-brim hat, sack over shoulder. Feet at (0,0), height h.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "name": "Footprint",
+   "cat": "fx",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/llanos_figs.tsx",
+   "line": 34,
+   "props": "x: number; y: number; s: number; rot?: number; fill?: string; o?: number",
+   "doc": "Long thin barefoot footprint (pointing up = away).",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    11
+   ]
+  },
+  {
+   "name": "SwayGrass",
+   "cat": "environment",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/llanos_figs.tsx",
+   "line": 42,
+   "props": "seed: number; n: number; x0: number; x1: number; y0: number; y1: number; hmin: number; hmax: number; t: number; wind: number; fill: string; fill2?: string",
+   "doc": "Swaying grass blades for live layers.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    1,
+    5,
+    11
+   ]
+  },
+  {
+   "name": "Grandpa",
+   "cat": "character",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/ranch_figs.tsx",
+   "line": 6,
+   "props": "",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    4,
+    7,
+    10
+   ]
+  },
+  {
+   "name": "Girl",
+   "cat": "character",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/ranch_figs.tsx",
+   "line": 38,
+   "props": "",
+   "doc": "Girl ~12, back/side view, long hair.",
+   "imports": [],
+   "shots": [
+    6,
+    7
+   ]
+  },
+  {
+   "name": "Dog",
+   "cat": "prop",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/ranch_figs.tsx",
+   "line": 57,
+   "props": "",
+   "doc": "Cowering dog, side view lying low: ears back, snout forward, tail tucked. Unit: ~100 long, ground at 0.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Lantern",
+   "cat": "prop",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/ranch_figs.tsx",
+   "line": 78,
+   "props": "x: number; y: number; s: number; on?: number",
+   "doc": "Oil lantern with radial glow (glow drawn separately by caller if wanted).",
+   "imports": [],
+   "shots": [
+    4,
+    7
+   ]
+  },
+  {
+   "name": "Glow",
+   "cat": "fx",
+   "ep": "ep17",
+   "file": "episodes/ep17/art/ranch_figs.tsx",
+   "line": 89,
+   "props": "id: string; x: number; y: number; r: number; color?: string; a?: number",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "llanos set",
+   "cat": "set",
+   "ep": "ep17",
+   "file": "episodes/ep17/sets/llanos.tsx",
+   "line": 1,
+   "props": "bands: llanos/dawn, llanos/far, llanos/fg, llanos/sky",
+   "doc": "shots [1, 5, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep17/s01.jpg",
+   "shots": [
+    1,
+    5,
+    11
+   ]
+  },
+  {
+   "name": "ranch set",
+   "cat": "set",
+   "ep": "ep17",
+   "file": "episodes/ep17/sets/ranch.tsx",
+   "line": 1,
+   "props": "bands: ranch/city, ranch/porch, ranch/room",
+   "doc": "shots [4, 6, 7, 8, 9, 10, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep17/s04.jpg",
+   "shots": [
+    4,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "BigEye",
+   "cat": "face",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_eye.tsx",
+   "line": 4,
+   "props": "id: string; refl: number; look?: number; blink?: number; cold?: boolean; bare?: boolean",
+   "doc": "Extreme close eye, centred at (0,0), width ~900. refl 0..1 = upside-down girl reflection visibility. cold = cooler palette.",
+   "imports": [],
+   "shots": [
+    7,
+    12
+   ]
+  },
+  {
+   "name": "ExteriorBand",
+   "cat": "set",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 50,
+   "props": "",
+   "doc": "Exterior: sky, moon, far bank, the stilt house, water.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "ExtFgBand",
+   "cat": "set",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 124,
+   "props": "",
+   "doc": "Foreground framing leaves (exterior).",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "InteriorBand",
+   "cat": "set",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 133,
+   "props": "",
+   "doc": "Interior: teak wall, lamp shelf, floor, low table.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "LampGlow",
+   "cat": "fx",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 164,
+   "props": "x: number; y: number; r: number; o?: number; id: string",
+   "doc": "Oil lamp glow (live, flicker by opacity).",
+   "imports": [],
+   "shots": [
+    5
+   ]
+  },
+  {
+   "name": "OilLamp",
+   "cat": "prop",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 171,
+   "props": "x: number; y: number; s?: number; flick?: number",
+   "doc": "",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Man",
+   "cat": "character",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 182,
+   "props": "x: number; y: number; h: number; dir?: number; pose?: string; ph?: number; rim?: string",
+   "doc": "Mak, simple shirt. dir 1 = facing right. pose: 'stand' | 'step' | 'climb' | 'run' | 'sit' | 'look'",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Wife",
+   "cat": "character",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 230,
+   "props": "x: number; y: number; h: number; dir?: number; baby?: boolean; sil?: boolean; kneel?: boolean; sway?: number; topC?: string; skirtC?: string",
+   "doc": "Mae Nak: long black hair, pha sin skirt; silhouette mode for doorway.",
+   "imports": [],
+   "shots": [
+    4
+   ]
+  },
+  {
+   "name": "Boat",
+   "cat": "prop",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 270,
+   "props": "x: number; y: number; w: number; rock?: number",
+   "doc": "Small wooden boat (sampan).",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "PaleHand",
+   "cat": "hand",
+   "ep": "ep18",
+   "file": "episodes/ep18/art/house_lib.tsx",
+   "line": 278,
+   "props": "x: number; y: number; ext: number; s?: number",
+   "doc": "The pale, impossibly long hand reaching down between floorboards. ext 0..1",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "barrio set",
+   "cat": "set",
+   "ep": "ep18",
+   "file": "episodes/ep18/sets/barrio.tsx",
+   "line": 1,
+   "props": "bands: barrio/dawn, barrio/fg, barrio/hut, barrio/sky",
+   "doc": "shots [1, 8, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep18/s01.jpg",
+   "shots": [
+    1,
+    8,
+    11
+   ]
+  },
+  {
+   "name": "house set",
+   "cat": "set",
+   "ep": "ep18",
+   "file": "episodes/ep18/sets/house.tsx",
+   "line": 1,
+   "props": "bands: house/crib, house/fg, house/room",
+   "doc": "shots [4, 5, 6, 7, 9, 10, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep18/s04.jpg",
+   "shots": [
+    4,
+    5,
+    6,
+    7,
+    9,
+    10,
+    12
+   ]
+  },
+  {
+   "name": "Pencil",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/close_props.tsx",
+   "line": 66,
+   "props": "x: number; y: number; rot: number; s?: number; rim?: string",
+   "doc": "Pencil, tip at (0,0), body going up along -y, rotated by rot deg.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    6,
+    12
+   ]
+  },
+  {
+   "name": "DollStick",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/close_props.tsx",
+   "line": 79,
+   "props": "x: number; y: number; rot: number; t: number; rim?: string",
+   "doc": "The jelangkung stick body (cloth over a stick) from the top, ending in a tied pencil. Tip at (x,y).",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    5,
+    9
+   ]
+  },
+  {
+   "name": "Fingers",
+   "cat": "hand",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/close_props.tsx",
+   "line": 100,
+   "props": "x: number; y: number; dir: 1 | -1; rot?: number; rim?: string",
+   "doc": "Dark mitten hand from the frame edge (fingertips at x,y), dir=1 reaching right.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    5,
+    9
+   ]
+  },
+  {
+   "name": "Clock",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/close_props.tsx",
+   "line": 109,
+   "props": "x: number; y: number; r: number; h: number; m: number; sec: number; light: number",
+   "doc": "Wall clock. h/m in hours/minutes, sec 0..60.",
+   "imports": [
+    "./world"
+   ],
+   "shots": [
+    8
+   ]
+  },
+  {
+   "name": "Doll",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/graphic_doll.tsx",
+   "line": 5,
+   "props": "x: number; y: number; s?: number; sway?: number; id: string; rim?: string; dark?: boolean",
+   "doc": "Jelangkung doll: coconut-shell head, stick cross-body in faded cloth, pencil tied at the bottom. (x,y) = head centre; total height ≈ 760*s. sway in degrees, rotates around the head.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Candle",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/graphic_doll.tsx",
+   "line": 69,
+   "props": "x: number; y: number; h?: number; t: number; id: string; s?: number",
+   "doc": "Candle with radial glow (glow drawn by caller order).",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Glow",
+   "cat": "fx",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/graphic_doll.tsx",
+   "line": 89,
+   "props": "x: number; y: number; r: number; o?: number; id: string; c?: string",
+   "doc": "Radial glow disc.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Teen",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 4,
+   "props": "x: number; y: number; s?: number; back?: boolean; hand: [number, number]; lean?: number; laugh?: number; light?: number; hair?: 'long' | 'short'; tone?: string; dark?: number",
+   "doc": "Seated teen on the floor. (x,y) = hips. back=true: seen from behind (front row, dark silhouette). hand = world target for both hands.",
+   "imports": [],
+   "shots": []
+  },
+  {
+   "name": "Candle",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 64,
+   "props": "x: number; y: number; h?: number; lit?: number; t: number; seed?: number; id: string; glow?: number",
+   "doc": "Candle on the floor. (x,y)=base. h = wax height, lit 0..1, t seconds.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Smoke",
+   "cat": "fx",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 94,
+   "props": "x: number; y: number; a: number; k: number; seed?: number",
+   "doc": "Smoke curl rising from a point; a = 0..1 amount, k = progress for drift.",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "Doll",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 104,
+   "props": "x: number; y: number; s?: number; rot?: number; light?: number",
+   "doc": "Jelangkung doll. (x,y) = pencil tip; s scale; rot degrees.",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Paper",
+   "cat": "prop",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 127,
+   "props": "x: number; y: number; light?: number; marks?: number",
+   "doc": "Paper sheet lying on the floor (perspective quad) with scrawl.",
+   "imports": [],
+   "shots": [
+    5,
+    6,
+    9
+   ]
+  },
+  {
+   "name": "WallShadow",
+   "cat": "fx",
+   "ep": "ep19",
+   "file": "episodes/ep19/art/room_k_people.tsx",
+   "line": 139,
+   "props": "x: number; y: number; s?: number; o?: number; arm?: number",
+   "doc": "The shadow on the wall that matches no one: tall, thin, too-long arms.",
+   "imports": [],
+   "shots": [
+    10
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep19",
+   "file": "episodes/ep19/sets/close.tsx",
+   "line": 1,
+   "props": "bands: close/desk, close/floor, close/wall",
+   "doc": "shots [5, 6, 8, 9, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep19/s05.jpg",
+   "shots": [
+    5,
+    6,
+    8,
+    9,
+    12
+   ]
+  },
+  {
+   "name": "room set",
+   "cat": "set",
+   "ep": "ep19",
+   "file": "episodes/ep19/sets/room.tsx",
+   "line": 1,
+   "props": "bands: room/fg, room/wall",
+   "doc": "shots [1, 4, 7, 10, 11]",
+   "imports": [],
+   "thumb": "thumbs/ep19/s01.jpg",
+   "shots": [
+    1,
+    4,
+    7,
+    10,
+    11
+   ]
+  },
+  {
+   "name": "Hand",
+   "cat": "hand",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/close_parts.tsx",
+   "line": 4,
+   "props": "curl?: number; sleeve?: string; skin?: string; shade?: string; rim?: string; spread?: number; mitt?: boolean",
+   "doc": "Child hand, palm-down/back view, wrist at (0,0), fingers toward -y. curl 0..1 lifts fingertips (shortens).",
+   "imports": [],
+   "shots": [
+    6,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "Key",
+   "cat": "prop",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/close_parts.tsx",
+   "line": 40,
+   "props": "rim?: string; glow?: number",
+   "doc": "Old iron key; bow at (0,0), shaft toward +x, length ~ 330.",
+   "imports": [],
+   "shots": [
+    9,
+    10,
+    13
+   ]
+  },
+  {
+   "name": "Lock",
+   "cat": "prop",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/close_parts.tsx",
+   "line": 59,
+   "props": "len: number; sway: number; w?: number; weed?: boolean; rim?: string",
+   "doc": "one mane lock with weed; root at (0,0) hanging toward +y.",
+   "imports": [],
+   "shots": [
+    6
+   ]
+  },
+  {
+   "name": "KelpieHead",
+   "cat": "face",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/graphic_horse.tsx",
+   "line": 17,
+   "props": "x: number; y: number; s: number; t: number; sheen?: number; id: string; drops?: number",
+   "doc": "",
+   "imports": [],
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "Horse",
+   "cat": "prop",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/loch_figs.tsx",
+   "line": 6,
+   "props": "x: number; y: number; s: number; walk?: number; head?: number; flip?: boolean; rim?: number; drip?: number",
+   "doc": "The kelpie, side profile facing left. (x,y) = hooves on ground, s = scale (withers ~ 300*s). walk = gait phase, head = 0 (up) .. 1 (lowered/turned).",
+   "imports": [],
+   "shots": [
+    12
+   ]
+  },
+  {
+   "name": "Kid",
+   "cat": "character",
+   "ep": "ep20",
+   "file": "episodes/ep20/art/loch_figs.tsx",
+   "line": 64,
+   "props": "x: number; y: number; h: number; phase?: number; jumper: string; hair?: 'long' | 'short'; rim?: number; reach?: number",
+   "doc": "Child from behind in wool jumper + wellies. (x,y) = feet, h = height.",
+   "imports": [],
+   "shots": [
+    4,
+    8,
+    11
+   ]
+  },
+  {
+   "name": "close set",
+   "cat": "set",
+   "ep": "ep20",
+   "file": "episodes/ep20/sets/close.tsx",
+   "line": 1,
+   "props": "bands: close/bg, close/coat, close/hide, close/neck",
+   "doc": "shots [6, 7, 9, 10]",
+   "imports": [],
+   "thumb": "thumbs/ep20/s06.jpg",
+   "shots": [
+    6,
+    7,
+    9,
+    10
+   ]
+  },
+  {
+   "name": "graphic set",
+   "cat": "set",
+   "ep": "ep20",
+   "file": "episodes/ep20/sets/graphic.tsx",
+   "line": 1,
+   "props": "bands: graphic/sky",
+   "doc": "shots [2, 3, 13]",
+   "imports": [],
+   "thumb": "thumbs/ep20/s02.jpg",
+   "shots": [
+    2,
+    3,
+    13
+   ]
+  },
+  {
+   "name": "loch set",
+   "cat": "set",
+   "ep": "ep20",
+   "file": "episodes/ep20/sets/loch.tsx",
+   "line": 1,
+   "props": "bands: loch/garden, loch/shore, loch/sky, loch/water",
+   "doc": "shots [1, 4, 5, 8, 11, 12]",
+   "imports": [],
+   "thumb": "thumbs/ep20/s01.jpg",
+   "shots": [
+    1,
+    4,
+    5,
+    8,
+    11,
+    12
+   ]
+  }
+ ]
+}
