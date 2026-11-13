@@ -31,7 +31,11 @@ def req(method, path, form=None, timeout=120):
 
 
 def busy_count():
-    d = req("GET", "/v3/tasks?page=1&limit=20")
+    try:
+        d = req("GET", "/v3/tasks?page=1&limit=20")
+    except Exception as e:
+        print("queue check failed:", e, flush=True)
+        return 0
     return sum(1 for t in d.get("data", []) if t.get("status") not in ("done", "error"))
 
 
@@ -44,7 +48,7 @@ def submit(text):
             return req("POST", "/v3/text-to-speech", {"text": text, "voice_id": VOICE, "model_id": "eleven_v3", "with_transcript": "true"})
         except urllib.error.HTTPError as e:
             msg = e.read().decode(errors="replace")
-            if e.code == 429 or "queue_limit_exceeded" in msg:
+            if e.code in (429, 502, 503, 504) or "queue_limit_exceeded" in msg:
                 fails += 1
                 if fails >= 5: raise SystemExit(f"ai33 rate limited 5x in a row, stopping: {msg}")
                 d = min(300, 30 * 2 ** (fails - 1)) + random.random() * 10
