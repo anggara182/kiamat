@@ -2,7 +2,7 @@ import React from 'react';
 import { AbsoluteFill, Sequence, Html5Audio, staticFile } from 'remotion';
 import { EP, SPANS } from '../data/ep';
 import { SCENES } from '../shots';
-import { Vignette, Captions } from './Overlays';
+import { Vignette, Captions, QuoteOverlay } from './Overlays';
 
 /**
  * Shot spans come from src/data/ep03.json (start/end/durationSec), never hardcoded.
@@ -18,6 +18,7 @@ export const Episode: React.FC = () => (
         </Sequence>
       );
     })}
+    <QuoteOverlay />
     <Captions />
     <Vignette />
     {EP.audio ? <Html5Audio src={staticFile('audio/mix.wav')} /> : null}

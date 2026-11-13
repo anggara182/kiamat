@@ -162,3 +162,39 @@ export const Captions: React.FC = () => {
 };
 
 export { actOf };
+
+/* ---------------- foundational quote (one per episode, hovering over its scenes) ---------------- */
+import { loadFont as loadQuoteFont } from '@remotion/google-fonts/CormorantGaramond';
+const { fontFamily: QUOTE_FONT } = loadQuoteFont('italic', { weights: ['500'], subsets: ['latin'] });
+const { fontFamily: QUOTE_SRC_FONT } = loadQuoteFont('normal', { weights: ['600'], subsets: ['latin'] });
+type Quote = { text: string; source: string; fromShot: number; toShot: number };
+
+/**
+ * The episode's foundational quote (episode.json "quote"), hovering in the upper part of the frame across shots
+ * fromShot..toShot. Text must be a verbatim, verified translation. Fades in/out; drifts up slowly (on ones).
+ */
+export const QuoteOverlay: React.FC = () => {
+  const q = (EP as unknown as { quote?: Quote }).quote;
+  const f = useCurrentFrame();
+  if (!q) return null;
+  const a = SPANS.find((s) => s.shot.id === q.fromShot), b = SPANS.find((s) => s.shot.id === q.toShot);
+  if (!a || !b) return null;
+  const from = a.from, to = b.from + b.dur;
+  if (f < from || f >= to) return null;
+  const fin = Math.round(0.6 * FPS), fout = Math.round(0.5 * FPS);
+  const op = interpolate(f, [from, from + fin, to - fout, to], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const srcOp = interpolate(f, [from + fin, from + fin + Math.round(0.5 * FPS)], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' }) * op;
+  const drift = interpolate(f, [from, to], [14, -14]);
+  return (
+    <AbsoluteFill style={{ pointerEvents: 'none' }}>
+      <AbsoluteFill style={{ opacity: op, background: 'radial-gradient(ellipse 85% 26% at 50% 25%, rgba(5,3,10,0.88) 0%, rgba(5,3,10,0.6) 45%, rgba(5,3,10,0) 100%)' }} />
+      <div style={{ position: 'absolute', top: FRAME.h * 0.17 + drift, left: 0, right: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', opacity: op }}>
+        <div style={{ fontFamily: QUOTE_FONT, fontStyle: 'italic', fontWeight: 500, fontSize: 58, lineHeight: 1.22, color: '#f1ead8', textAlign: 'center', maxWidth: 860, textShadow: '0 2px 14px rgba(0,0,0,0.85), 0 0 2px rgba(0,0,0,0.7)', textWrap: 'balance' as React.CSSProperties['textWrap'] }}>
+          {'“'}{q.text}{'”'}
+        </div>
+        <div style={{ width: 120, height: 2, background: GREEN, opacity: 0.8, marginTop: 30, marginBottom: 18 }} />
+        <div style={{ fontFamily: QUOTE_SRC_FONT, fontWeight: 600, fontSize: 30, letterSpacing: '0.22em', color: GREEN, opacity: srcOp / Math.max(op, 0.001), textShadow: '0 2px 10px rgba(0,0,0,0.8)' }}>{q.source}</div>
+      </div>
+    </AbsoluteFill>
+  );
+};

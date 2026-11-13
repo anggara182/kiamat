@@ -347,3 +347,18 @@ def heartbeat_run(sec, bpm0=70, bpm1=140, seed=0):
         place(out, heartbeat_kick() * (0.35 + 0.3 * p), t + 0.16 * 70 / bpm)
         t += 60 / bpm
     return out[: int(sec * SR)]
+
+
+def deep_drop(sec=4.2, f_start=110.0, f_end=30.0, glide=1.6, gain=1.0):
+    """Smooth deep bass drop: a sine that glides down from f_start to f_end with a long tail, plus soft upper harmonics
+    (gentle saturation) so it still reads on phone speakers. No noise crack, no brass: weight without harshness."""
+    t = T(sec)
+    f = f_end + (f_start - f_end) * np.exp(-t * (4.6 / glide))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    body = np.sin(ph) + 0.38 * np.sin(2 * ph)            # octave layer: audible on small speakers
+    env = adsr(len(t), 0.012, 0.6, 0.55, sec * 0.7)
+    sig = np.tanh(2.6 * body * env) / np.tanh(2.6)      # soft saturation adds harmonics smoothly
+    sig = lp(sig, 650, 4)
+    mid = bp(np.tanh(7.0 * body * env), 150, 450, 2)     # parallel mid layer so phones hear the drop
+    sig = sig + 1.0 * mid
+    return stereo(sig * gain, width=0.2)

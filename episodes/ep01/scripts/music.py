@@ -152,7 +152,7 @@ mus[cut:] = 0; low[cut:] = 0
 # ---------- 10. title: boom + low chord with a high fifth shimmer (own buses, so no tail leaks across the cut) ----------
 mus2 = np.zeros_like(mus); low2 = np.zeros_like(low)
 dur_t = D - t_title
-place(low2, sub_hit(dur_t + 1.0, 55, 26, 1.1), t_title)
+place(low2, deep_drop(dur_t + 1.0, 100, 28, 1.8, 1.0), t_title)          # smooth deep bass drop (no crack)
 place(mus2, pad([hz("D2"), hz("A2"), hz("D3"), hz("F3")], dur_t, cutoff=1000, a=0.05, r=1.6) * 0.55, t_title)
 st = T(dur_t)
 shimmer = np.sin(2 * np.pi * hz("A5") * st) * (0.5 + 0.5 * np.sin(2 * np.pi * 0.7 * st)) * adsr(len(st), 1.0, 0.1, 1, 1.4) * 0.05

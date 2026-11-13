@@ -213,10 +213,8 @@ hit_file("boom_adrian", t_fo, -10)
 t24, t25 = st(24), st(25)
 hb = heartbeat_run(t25 - t24 - 0.05, 66, 150)
 hit(hb, t24, -15, "heartbeat_run", land=False)
-# title: the biggest drop
-hit_file("boom_adrian", t25, -6)
-hit_file("braam", t25, -10)
-hit(braam(4.2, "D1", 1.2), t25, -9, "braam_synth", land=False)
+# title: a deep, smooth bass drop (adrian 13 Nov: the boom+braam title hit was too harsh)
+hit(deep_drop(4.2, 110, 30, 1.6), t25, -5, "deep_drop", land=False)
 
 # ---------------- ducking + dramatic silence ----------------
 env = np.abs(vo_bus).max(1)
