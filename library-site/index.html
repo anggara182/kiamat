@@ -1,0 +1,105 @@
+<title>The Last Days Library</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Cormorant+Garamond:ital,wght@1,500&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* layout: a vertical archive of chapters, each a 9:16 player beside its dossier (stacks on phones). Single dark look, on purpose: it matches the films. */
+:root {
+  --night: #0b0d17; --panel: #12152a; --line: #262a45; --ink: #ece6d6; --muted: #9a97a8; --gold: #d9a441; --gold-dim: #8a6a2e;
+  --ok: #7fb58a; --prod: #c9a35a;
+  --display: "Cinzel", "Trajan Pro", Georgia, serif; --quote: "Cormorant Garamond", Georgia, serif;
+  --body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--night); color: var(--ink); font: 15px/1.6 var(--body); margin: 0; }
+.wrap { max-width: 1040px; margin: 0 auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: grid; gap: 10px; padding-bottom: 28px; border-bottom: 1px solid var(--line); margin-bottom: 36px; }
+.series { font-family: var(--display); font-weight: 600; font-size: clamp(30px, 6vw, 46px); letter-spacing: .16em; margin: 0; text-wrap: balance; }
+.series span { color: var(--gold); }
+.tag { color: var(--muted); max-width: 62ch; margin: 0; }
+.stats { display: flex; flex-wrap: wrap; gap: 8px 20px; font: 500 12px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stats b { color: var(--ink); font-weight: 500; }
+.list { display: grid; gap: 40px; }
+.ep { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr); gap: 28px; align-items: start; }
+.media { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); }
+.vid { width: 100%; max-width: 100%; aspect-ratio: 9 / 16; display: block; background: #000; border: 1px solid var(--line); border-radius: 6px; }
+.vid-empty { display: grid; place-content: center; text-align: center; gap: 6px; background: repeating-linear-gradient(135deg, #10132a 0 12px, #0d1024 12px 24px); }
+.vid-empty span { font-family: var(--display); letter-spacing: .14em; color: var(--gold); font-size: 18px; }
+.vid-empty small { color: var(--muted); font: 12px var(--mono); letter-spacing: .06em; }
+.meta { min-width: 0; display: grid; gap: 12px; }
+.eyebrow { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font: 500 12px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.num { color: var(--gold); }
+.dur { color: var(--muted); font-variant-numeric: tabular-nums; }
+.pill { padding: 5px 9px; border-radius: 999px; border: 1px solid currentColor; font-size: 11px; }
+.pill-final { color: var(--ok); } .pill-posted { color: var(--gold); } .pill-prod { color: var(--prod); } .pill-draft { color: var(--muted); }
+h2 { font-family: var(--display); font-weight: 600; font-size: clamp(24px, 4.4vw, 34px); letter-spacing: .08em; line-height: 1.15; margin: 0; text-wrap: balance; }
+.phase { margin: 0; color: var(--muted); font-size: 13px; }
+.logline { margin: 0; max-width: 62ch; }
+blockquote { margin: 6px 0; padding: 16px 18px; background: var(--panel); border-left: 2px solid var(--gold-dim); border-radius: 0 6px 6px 0; }
+blockquote p { margin: 0 0 8px; font: italic 500 21px/1.35 var(--quote); color: var(--ink); }
+blockquote cite { font: 500 11px var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+details { border-top: 1px solid var(--line); padding-top: 10px; }
+summary { cursor: pointer; font: 600 13px var(--body); letter-spacing: .04em; color: var(--ink); list-style-position: inside; }
+summary:focus-visible, .copy:focus-visible, video:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.vo p { margin: 8px 0 0; max-width: 64ch; color: #d6d0c2; }
+.cap { white-space: pre-wrap; font: 13px/1.55 var(--mono); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 12px; margin: 10px 0 8px; overflow-x: auto; }
+.copy { font: 600 12px var(--body); color: var(--night); background: var(--gold); border: 0; border-radius: 4px; padding: 8px 12px; cursor: pointer; }
+.src { margin: 10px 0; padding-left: 18px; color: #d6d0c2; }
+.cls { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 14px; margin: 8px 0; font-size: 13px; }
+.cls dt { font: 500 11px/1.9 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--gold); }
+.cls dd { margin: 0; color: #d6d0c2; }
+.credits { font: 12px var(--mono); color: var(--muted); margin: 8px 0 0; }
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: 12px; }
+@media (max-width: 720px) {
+  .ep { grid-template-columns: minmax(0, 1fr); }
+  .media { position: static; max-width: 340px; }
+  .cls { grid-template-columns: minmax(0, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+</style>
+<div class="wrap">
+  <header>
+    <h1 class="series">THE LAST <span>DAYS</span></h1>
+    <p class="tag">A cinematic series on the journey toward the end of the world, grounded in the Qur’an and authentic hadith. Every chapter lists its sources and marks what is canonical, interpretation, or fiction.</p>
+    <div class="stats"><span><b>2</b> chapters</span><span><b>1</b> finished</span><span><b>1</b> in production</span></div>
+  </header>
+  <main class="list">
+<article class="ep" id="chapter-1">
+  <div class="media"><video class="vid" controls playsinline preload="metadata" poster="media/ep01-cover.jpg" src="media/ep01.mp4"></video></div>
+  <div class="meta">
+    <div class="eyebrow"><span class="num">Chapter 1</span><span class="pill pill-final">Final · not yet posted</span><span class="dur">1:16</span></div>
+    <h2>The Beginning of the End</h2>
+    <p class="phase">Phase 01 · The World We Know</p>
+    <p class="logline">One ordinary day in a modern city, dawn to night. The minor signs described fourteen centuries ago sit quietly inside everyday life.</p>
+    <blockquote><p>“They ask you about the Hour: when is its arrival? Say, ‘Its knowledge is only with my Lord.’”</p><cite>Qur’an 7:187 · Sahih International</cite></blockquote>
+    <details><summary>Narration</summary><div class="vo"><p>The world doesn&#x27;t end with a bang. It ends slowly… one ordinary morning at a time.</p><p>This city wakes before the sun. Kitchen lights flicker on. Engines cough awake. The call to prayer rises over a hundred phone alarms.</p><p>By seven, the streets are full. Millions of people. One goal: survive one more day.</p><p>The towers keep rising. From the top, the people below are just dots.</p><p>The news moves faster now. An earthquake here. A war there. Whole peoples wiped out, while the world watches. A life taken over almost nothing. A man trusted with everything… betrays it all.</p><p>Read. Swipe. Forgotten.</p><p>And the days feel shorter. Morning starts… and suddenly, it&#x27;s night again.</p><p>Nothing seems wrong. But all of this, towers racing for the sky, trust placed in the wrong hands, the earth shaking again and again, killing that no longer shocks anyone, time slipping away, was foretold by the Prophet Muhammad, fourteen hundred years ago.</p><p>When the end will come, no one knows. Only God.</p><p>Night falls like any other night. The lights go out, one by one.</p><p>Tomorrow morning, a message will spread through the entire city… about something that never happened.</p></div></details><details><summary>Caption</summary><pre class="cap" id="cap-ep01">The world doesn&#x27;t end with a bang. It ends one ordinary morning at a time.
+
+Chapter 1 of THE LAST DAYS. Follow for Chapter 2.
+
+#endtimes #islam #signsofthehour</pre><button class="copy" type="button" data-target="cap-ep01">Copy caption</button></details><details><summary>Sources &amp; classification</summary><ul class="src"><li>Competing in tall buildings: Sahih Muslim 8; Sahih al-Bukhari 50, 7121</li><li>Trust neglected, authority given to the unqualified: Sahih al-Bukhari 59</li><li>Earthquakes, killing (harj), time passing quickly, two great groups fighting: Sahih al-Bukhari 7121</li><li>Only God knows the Hour: Qur’an 7:187, 31:34</li></ul><dl class="cls"><dt>Canonical</dt><dd>The conditions named in the recap line and the statement that only God knows the time.</dd><dt>Interpretation</dt><dd>“A war there. Whole peoples wiped out” read as part of harj (much killing) and fighting in Bukhari 7121; “genocide” is modern language, not a hadith term. The opening line is the series’ storytelling voice, not a claim about timing.</dd><dt>Fiction</dt><dd>All people, the city, every headline (generic, no real events, places or organisations), the notifications and the false message at the end.</dd></dl><p class="credits">VO ai33 eleven_v3 (Brian), 1 task, 1,515 credits · original synthesised score · SFX reused from horrorluar / storiesafterdark libraries</p></details>
+  </div>
+</article>
+<article class="ep" id="chapter-2">
+  <div class="media"><div class="vid vid-empty"><span>Chapter 2</span><small>video in production</small></div></div>
+  <div class="meta">
+    <div class="eyebrow"><span class="num">Chapter 2</span><span class="pill pill-prod">In production</span></div>
+    <h2>Faster Than the Truth</h2>
+    <p class="phase">Phase 01 → 02 · The Age of Fitnah begins</p>
+    <p class="logline">A rumour that the water is poisoned spreads mouth to mouth and nearly ends with a crowd stoning an innocent newcomer. The water was clean all along.</p>
+    <blockquote><p>“Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.”</p><cite>Qur’an 49:6 · Abdel Haleem</cite></blockquote>
+    <details><summary>Sources &amp; classification</summary><ul class="src"><li>Verify the news before acting: Qur’an 49:6</li><li>Falsehood passed from tongue to tongue: Qur’an 24:15</li><li>Enough of a lie to repeat everything one hears: Sahih Muslim, Introduction no. 5</li><li>Background (not quoted): the liar whose lies reach the horizons, Sahih al-Bukhari 1386, 6096, 7047</li></ul><dl class="cls"><dt>Canonical</dt><dd>Qur’an 49:6 (quoted on screen) and the hadith in Muslim’s Introduction no. 5 (paraphrased in the VO).</dd><dt>Interpretation</dt><dd>Presenting a viral false rumour as a picture of the age of fitnah.</dd><dt>Fiction</dt><dd>The neighbourhood, every character, the water rumour, the crowd and the mosque announcement.</dd></dl></details>
+  </div>
+</article></main>
+  <footer>Videos here are 720p previews. Full 1080p files live in the kiamat repo (episodes/epNN/out).</footer>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function (b) {
+  b.addEventListener('click', function () {
+    var el = document.getElementById(b.dataset.target);
+    var done = function () { b.textContent = 'Copied'; setTimeout(function () { b.textContent = 'Copy caption'; }, 1600); };
+    var fallback = function () { var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); b.textContent = 'Selected: press copy'; };
+    try { navigator.clipboard.writeText(el.textContent).then(done, fallback); } catch (e) { fallback(); }
+  });
+});
+</script>

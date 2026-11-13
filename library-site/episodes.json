@@ -1,0 +1,56 @@
+[
+ {
+  "chapter": 1,
+  "id": "ep01",
+  "title": "The Beginning of the End",
+  "phase": "Phase 01 · The World We Know",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "1:16",
+  "video": "media/ep01.mp4",
+  "cover": "media/ep01-cover.jpg",
+  "logline": "One ordinary day in a modern city, dawn to night. The minor signs described fourteen centuries ago sit quietly inside everyday life.",
+  "quote": {"text": "They ask you about the Hour: when is its arrival? Say, ‘Its knowledge is only with my Lord.’", "source": "Qur’an 7:187 · Sahih International"},
+  "vo": "The world doesn't end with a bang. It ends slowly… one ordinary morning at a time.\nThis city wakes before the sun. Kitchen lights flicker on. Engines cough awake. The call to prayer rises over a hundred phone alarms.\nBy seven, the streets are full. Millions of people. One goal: survive one more day.\nThe towers keep rising. From the top, the people below are just dots.\nThe news moves faster now. An earthquake here. A war there. Whole peoples wiped out, while the world watches. A life taken over almost nothing. A man trusted with everything… betrays it all.\nRead. Swipe. Forgotten.\nAnd the days feel shorter. Morning starts… and suddenly, it's night again.\nNothing seems wrong. But all of this, towers racing for the sky, trust placed in the wrong hands, the earth shaking again and again, killing that no longer shocks anyone, time slipping away, was foretold by the Prophet Muhammad, fourteen hundred years ago.\nWhen the end will come, no one knows. Only God.\nNight falls like any other night. The lights go out, one by one.\nTomorrow morning, a message will spread through the entire city… about something that never happened.",
+  "caption": "The world doesn't end with a bang. It ends one ordinary morning at a time.\n\nChapter 1 of THE LAST DAYS. Follow for Chapter 2.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "Competing in tall buildings: Sahih Muslim 8; Sahih al-Bukhari 50, 7121",
+   "Trust neglected, authority given to the unqualified: Sahih al-Bukhari 59",
+   "Earthquakes, killing (harj), time passing quickly, two great groups fighting: Sahih al-Bukhari 7121",
+   "Only God knows the Hour: Qur’an 7:187, 31:34"
+  ],
+  "classification": {
+   "canonical": "The conditions named in the recap line and the statement that only God knows the time.",
+   "interpretation": "“A war there. Whole peoples wiped out” read as part of harj (much killing) and fighting in Bukhari 7121; “genocide” is modern language, not a hadith term. The opening line is the series’ storytelling voice, not a claim about timing.",
+   "fiction": "All people, the city, every headline (generic, no real events, places or organisations), the notifications and the false message at the end."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), 1 task, 1,515 credits · original synthesised score · SFX reused from horrorluar / storiesafterdark libraries"
+ },
+ {
+  "chapter": 2,
+  "id": "ep02",
+  "title": "Faster Than the Truth",
+  "phase": "Phase 01 → 02 · The Age of Fitnah begins",
+  "status": "production",
+  "status_label": "In production",
+  "duration": "",
+  "video": "",
+  "cover": "",
+  "logline": "A rumour that the water is poisoned spreads mouth to mouth and nearly ends with a crowd stoning an innocent newcomer. The water was clean all along.",
+  "quote": {"text": "Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.", "source": "Qur’an 49:6 · Abdel Haleem"},
+  "vo": "",
+  "caption": "",
+  "sources": [
+   "Verify the news before acting: Qur’an 49:6",
+   "Falsehood passed from tongue to tongue: Qur’an 24:15",
+   "Enough of a lie to repeat everything one hears: Sahih Muslim, Introduction no. 5",
+   "Background (not quoted): the liar whose lies reach the horizons, Sahih al-Bukhari 1386, 6096, 7047"
+  ],
+  "classification": {
+   "canonical": "Qur’an 49:6 (quoted on screen) and the hadith in Muslim’s Introduction no. 5 (paraphrased in the VO).",
+   "interpretation": "Presenting a viral false rumour as a picture of the age of fitnah.",
+   "fiction": "The neighbourhood, every character, the water rumour, the crowd and the mosque announcement."
+  },
+  "credits": ""
+ }
+]
