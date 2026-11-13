@@ -31,7 +31,7 @@ export const DeepBand: React.FC = () => {
   const walls: React.ReactNode[] = [];
   for (const side of [-1, 1]) {
     const X = side < 0 ? X0 : X1;
-    let z = 0.9, i = 0;
+    let z = side < 0 ? 0.9 : 2.6, i = 0;
     while (z < FAR) {
       const len = 3.5 + r() * 4, h = 3 + r() * 2.4, z1 = Math.min(FAR, z + len);
       const base = side < 0 ? [PAL.shade, PAL.shade2, PAL.shade3][i % 3] : [PAL.lit, PAL.lit2, PAL.lit3][i % 3];
@@ -342,3 +342,17 @@ export const Stone: React.FC<{ x: number; y: number; s: number; rot?: number; sh
     <path d="M 4 -4 L 14 10 M -18 4 L -10 14" stroke="#5e564c" strokeWidth={2} />
   </g>
 );
+
+/** a loose flock of birds crossing the sky (environment, ON ONES) */
+export const Birds: React.FC<{ t: number; x0: number; y0: number; vx: number; vy?: number; n?: number; s?: number; col?: string; seed?: number }> = ({ t, x0, y0, vx, vy = 0, n = 5, s = 1, col = '#3a3430', seed = 5 }) => {
+  const r = rng(seed);
+  const b = Array.from({ length: n }, () => ({ dx: (r() - 0.5) * 260, dy: (r() - 0.5) * 120, ph: r() * 6, sp: 9 + r() * 4 }));
+  return (
+    <g fill="none" stroke={col} strokeLinecap="round" strokeLinejoin="round">
+      {b.map((q, i) => {
+        const x = x0 + vx * t + q.dx, y = y0 + vy * t + q.dy + Math.sin(t * 2 + q.ph) * 6, w = Math.sin(t * q.sp + q.ph);
+        return <path key={i} d={`M ${x - 11 * s} ${y - 4 * s * w} Q ${x - 5 * s} ${y - 6 * s * w} ${x} ${y} Q ${x + 5 * s} ${y - 6 * s * w} ${x + 11 * s} ${y - 4 * s * w}`} strokeWidth={2.6 * s} />;
+      })}
+    </g>
+  );
+};

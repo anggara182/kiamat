@@ -230,3 +230,18 @@ export const RingFigure: React.FC<{ x: number; y: number; h: number; col: string
     </g>
   );
 };
+
+/** 2-link IK for the near arm (A): angles that put the hand at world (tx,ty). bend +1 = elbow down/back. */
+export const ikArmA = (x: number, y: number, h: number, dir: number, P: Pose, tx: number, ty: number, bend = 1): { uaA: number; faA: number } => {
+  const s = h / 100, lean = P.lean ?? 0;
+  const hip: [number, number] = [P.hip?.[0] ?? 0, (P.hip?.[1] ?? -49) + (P.bob ?? 0)];
+  const sh = seg(hip[0], hip[1], 180 - lean, 33 + (P.breath ?? 0));
+  const so = [sh[0] + 0.5, sh[1] + 2.2];
+  const lx = (tx - x) / (dir * s) - so[0], ly = (ty - y) / s - so[1];
+  const L1 = 15, L2 = 15.7, d = Math.min(L1 + L2 - 0.01, Math.max(1, Math.hypot(lx, ly)));
+  const base = (Math.atan2(lx, ly) * 180) / Math.PI; // from straight down, + forward
+  const a1 = (Math.acos((L1 * L1 + d * d - L2 * L2) / (2 * L1 * d)) * 180) / Math.PI;
+  const a2 = (Math.acos((L1 * L1 + L2 * L2 - d * d) / (2 * L1 * L2)) * 180) / Math.PI;
+  const ua = base + bend * a1, fa = ua - bend * (180 - a2);
+  return { uaA: ua + lean * 0.5, faA: fa + lean * 0.5 };
+};
