@@ -14,6 +14,10 @@ Repo ini proyek tersendiri milik adrian (13 Nov 2026). **Aturan repo storiesafte
 - Setiap episode ditutup cliffhanger ke episode berikutnya; episode terakhir tiap fase ke fase berikutnya.
 - Visual: manusia adalah inti (hampir setiap shot ada manusia dengan aksi spesifik). Karakter animasi on twos, kamera dan background on ones. 24 fps. Mode terang dan malam.
 - Isa AS dan malaikat tidak digambarkan; wajah Mahdi tidak ditampilkan. Tidak ada peristiwa, negara, tokoh, logo, atau merek nyata.
+- Setiap chapter memakai tokoh baru (seri komprehensif, bukan satu keluarga), walau prosesnya lebih lama.
+- Hook tidak memakai HP. Shot HP seminimal mungkin mulai Chapter 2; cerita disampaikan lewat manusia dan tempat.
+- Pola audio standar: ambience per lokasi, SFX dikunci ke kata sinkron, musik orisinal, drop sinematik (thump di frame 0, boom di titik balik, braam di momen kanonik, detak jantung di cliffhanger, dentuman di kartu judul). VO minimal 6 dB di atas latar di setiap kata (pita ucapan).
+- Kartu judul di akhir: judul chapter + "CHAPTER N · THE LAST DAYS".
 
 ## Aturan sumber
 Setiap episode mencantumkan rujukan dan klasifikasi KANONIK / INTERPRETASI / FIKSI (`cerita/00-FONDASI.md` §7). Jangan mengarang hadis, ayat, ucapan nabi, atau kepastian tentang waktu Kiamat. Rujukan baru diverifikasi dulu; sebelum tayang sebaiknya ditinjau orang yang paham hadis.
