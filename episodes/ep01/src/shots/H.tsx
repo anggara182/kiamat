@@ -119,7 +119,7 @@ export const S04: React.FC = () => {
   // the hand ON TWOS: creeps out, pats the sheet (misses), raises, slaps
   const wrist = track(t2, [
     [0.1, 520, 1204], [Math.min(0.9, tSlap * 0.4), 600, 1250], [tSlap * 0.5, 610, 1262], [tSlap * 0.62, 630, 1258], [tSlap * 0.8, 640, 1262],
-    [tSlap - 0.18, 660, 1236], [tSlap, 708, 1268], [sec, 712, 1270],
+    [tSlap - 0.18, 700, 1232], [tSlap, 770, 1268], [sec, 774, 1270],
   ]);
   const pat = bumpT(t2, tSlap * 0.45, tSlap * 0.14);
   const lift = Math.max(ramp(t2, tSlap - 0.3, tSlap - 0.1, EOUT) * (1 - ramp(t2, tSlap - 0.08, tSlap)), 0.5 * pat);

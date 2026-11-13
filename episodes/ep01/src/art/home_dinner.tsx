@@ -180,15 +180,17 @@ export const MotherChild: React.FC<{ hug: number; look: number; breath: number }
         <path d={`M${cBase.x + 14} ${cBase.y - 170} Q${cBase.x + 56} ${cBase.y - 110} ${cBase.x + 48} ${cBase.y - 52} L${cBase.x + 20} ${cBase.y - 52} Q${cBase.x + 30} ${cBase.y - 120} ${cBase.x + 14} ${cBase.y - 170} Z`} fill={CH.shirtD} opacity={0.6} />
         {/* his arm: holding a spoon at the plate -> grabbing her blouse */}
         <path d={limb(cBase.x - 24, cBase.y - 150, lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), 26, 22)} fill={CH.shirt} />
-        <path d={limb(lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), lerp(cBase.x - 120, cBase.x + 30, hug), lerp(cBase.y - 80, cBase.y - 130, hug), 20, 16)} fill={CH.skin} />
-        <circle cx={lerp(cBase.x - 120, cBase.x + 30, hug)} cy={lerp(cBase.y - 80, cBase.y - 130, hug)} r={11} fill={CH.skin} />
+        <path d={limb(lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), lerp(cBase.x - 120, cBase.x + 56, hug), lerp(cBase.y - 80, cBase.y - 120, hug), 20, 16)} fill={CH.skin} />
+        <circle cx={lerp(cBase.x - 120, cBase.x + 56, hug)} cy={lerp(cBase.y - 80, cBase.y - 120, hug)} r={11} fill={CH.skin} />
         <path d={`M${cBase.x - 48} ${cBase.y - 52} Q${cBase.x - 58} ${cBase.y - 120} ${cBase.x - 30} ${cBase.y - 160}`} stroke={CH.rim} strokeWidth={4} fill="none" opacity={0.8} />
       </g>
+      <g transform={hug > 0.5 ? `translate(${2 * cHead.x} 0) scale(-1 1)` : undefined}>
       <rect x={cHead.x - 10} y={cHead.y + 30} width={20} height={26} fill={CH.skinD} />
       <ellipse cx={cHead.x} cy={cHead.y} rx={46} ry={50} fill={CH.skin} />
       <path d={`M${cHead.x - 44} ${cHead.y + 2} L${cHead.x - 54} ${cHead.y + 16} L${cHead.x - 42} ${cHead.y + 20} Z`} fill={CH.skin} />
       <path d={`M${cHead.x - 46} ${cHead.y - 6} Q${cHead.x - 50} ${cHead.y - 56} ${cHead.x} ${cHead.y - 56} Q${cHead.x + 50} ${cHead.y - 54} ${cHead.x + 48} ${cHead.y + 10} Q${cHead.x + 30} ${cHead.y + 30} ${cHead.x + 14} ${cHead.y + 20} Q${cHead.x + 10} ${cHead.y - 20} ${cHead.x - 28} ${cHead.y - 20} Q${cHead.x - 38} ${cHead.y - 10} ${cHead.x - 46} ${cHead.y - 6} Z`} fill={CH.hair} />
       <path d={`M${cHead.x - 44} ${cHead.y - 20} Q${cHead.x - 40} ${cHead.y - 54} ${cHead.x + 4} ${cHead.y - 56}`} stroke={CH.rim} strokeWidth={4} fill="none" opacity={0.9} />
+      </g>
       {/* mother's near arm round the child */}
       <path d={limb(mSh.x - 6, mSh.y + 30, arm.ex, arm.ey, 46, 38)} fill={MO.blouse} />
       <path d={limb(arm.ex, arm.ey, arm.hx, arm.hy, 38, 30)} fill={MO.blouse} />
@@ -205,7 +207,7 @@ export const FatherBack: React.FC<{ look: number; breath: number; flinch: number
   const hx = 190 + look * 10, hy = 1020 - look * 10 + by;
   const ink = '#0d0b12';
   return (
-    <g transform="translate(-40 300) scale(0.84)">
+    <g transform="translate(110 260) scale(0.8)">
       <path d={`M-80 1720 Q-90 1440 -40 1250 Q0 1150 90 ${1130 + by} Q190 ${1110 + by} 300 ${1140 + by} Q380 1190 410 1320 Q440 1520 420 1720 Z`} fill={ink} />
       <path d={`M${hx - 30} ${hy + 50} L${hx - 34} ${hy + 110} L${hx + 34} ${hy + 110} L${hx + 30} ${hy + 50} Z`} fill={ink} />
       <ellipse cx={hx} cy={hy} rx={64} ry={74} fill={ink} />

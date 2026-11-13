@@ -8,7 +8,7 @@ import { limb, Glow, lerp, DEG } from './home_kit';
 export const BR = {
   win: { x: 330, y: 250, w: 480, h: 590 },
   minaret: { x: 652, lampY: 514 },
-  phone: [[716, 1262], [902, 1236], [930, 1300], [742, 1330]] as [number, number][],
+  phone: [[786, 1262], [972, 1236], [1000, 1300], [812, 1330]] as [number, number][],
 };
 
 /** distant lit windows / screens that appear on "hundred" (inside the window view) */
@@ -94,8 +94,6 @@ export const WindowLife: React.FC<{ lamp: number; dots: number; t: number }> = (
         <Glow id="hbLampG" x={m.x} y={m.lampY + 10} rx={130} c="#ffe3a0" o={0.8 * lamp} mid={0.2} />
         {[-24, -8, 8, 24].map((d) => <rect key={d} x={m.x + d - 3} y={m.lampY + 12} width={6} height={10} fill="#ffe7b0" opacity={lamp} />)}
       </g>
-      {/* the dawn brightens a little on "prayer" */}
-      <rect x={win.x} y={win.y} width={win.w} height={win.h * 0.6} fill="#f4b98a" opacity={0.08 * lamp + 0.01 * Math.sin(t)} />
     </g>
   );
 };
