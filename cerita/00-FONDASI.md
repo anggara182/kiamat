@@ -91,7 +91,7 @@ Detail di story bible. Prinsipnya:
 | VII | 08 Hari-hari terakhir | Aku-4 | 2–3 | Ka'bah, angin yang mencabut nyawa orang beriman. Aku-4 wafat. |
 | VIII | 09 Hari Kiamat | Aku (dibangkitkan) | 3–4 | Tiupan pertama (tanpa saksi beriman), lalu kebangkitan dari sudut pandang "aku". |
 
-Total ±37–48 episode, 60–120 detik per episode.
+Total ±37–48 episode, **60–80 detik per episode** (keputusan adrian, 13 Nov 2026; menggantikan 60–120 detik di brief). Patokan kasar: ±150–180 kata VO dengan tempo narasi tenang.
 
 ## 7. Format setiap episode (dari brief §7)
 ```
