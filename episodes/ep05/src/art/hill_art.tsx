@@ -6,7 +6,7 @@ import { W, H, rng } from './world';
  * The stone figure is GENERIC and abstract: a weathered monolith with a rounded head, eroded hollows, arms worn into the body.
  * No crown, no attributes, no symbols of any real faith. Drawn live with a palette so it can be buried/revealed.
  */
-export const HILL = { cx: 648, crest: 1500 };
+export const HL = { cx: 648, crest: 1500 };
 export type StonePal = { stone: string; stoneD: string; stoneHi: string; rim: string; rimO: number; lichen: string };
 export const STONE_DAY: StonePal = { stone: '#9a8f80', stoneD: '#6e6558', stoneHi: '#c2b8a6', rim: '#fff6e0', rimO: 0.4, lichen: '#7d8a62' };
 export const STONE_DUSK: StonePal = { stone: '#3a2c38', stoneD: '#221a26', stoneHi: '#7a4a4a', rim: '#ffb07a', rimO: 0.75, lichen: '#3e3a32' };
@@ -51,7 +51,7 @@ export const Statue: React.FC<{ x: number; base: number; h: number; p: StonePal 
 
 /* ------------------------------------------------------------------ bands */
 const SKYD = ['#c9d6dd', '#dfe6ea', '#efe9dc'];
-const hillPath = (crest: number) => `M-40 ${crest + 260} Q300 ${crest - 40} ${HILL.cx} ${crest - 10} Q1000 ${crest - 30} ${W + 40} ${crest + 300} V${H + 40} H-40 Z`;
+const hillPath = (crest: number) => `M-40 ${crest + 260} Q300 ${crest - 40} ${HL.cx} ${crest - 10} Q1000 ${crest - 30} ${W + 40} ${crest + 300} V${H + 40} H-40 Z`;
 
 /** day: pale sky, the city far below in haze, the dry hilltop with the pit, tools, spoil heaps */
 export const DayBand: React.FC = () => {
@@ -68,16 +68,16 @@ export const DayBand: React.FC = () => {
       <path d={`M-20 1420 V1330 ${Array.from({ length: 30 }).map((_, i) => { const x = i * 45; const y = 1290 + ((i * 41) % 80); return `H${x} V${y} H${x + 34} V${y + 20}`; }).join(' ')} H${W + 20} V1420 Z`} fill="#b9bfc2" />
       <rect x={-20} y={1400} width={W + 40} height={200} fill="#c9c6b8" />
       {/* hill */}
-      <path d={hillPath(HILL.crest)} fill="url(#hdEarth)" />
+      <path d={hillPath(HL.crest)} fill="url(#hdEarth)" />
       {/* spoil heaps, the pit rim, a wheelbarrow, survey stakes */}
-      <path d={`M120 ${HILL.crest + 180} Q220 ${HILL.crest + 40} 330 ${HILL.crest + 160} Z`} fill="#9a7650" />
-      <path d={`M960 ${HILL.crest + 150} Q1080 ${HILL.crest + 20} 1200 ${HILL.crest + 170} Z`} fill="#9a7650" />
-      <ellipse cx={HILL.cx} cy={HILL.crest + 40} rx={420} ry={90} fill="#6e5236" />
-      <ellipse cx={HILL.cx} cy={HILL.crest + 30} rx={380} ry={70} fill="#7a5c3c" />
-      <g fill="#5a4a3a"><ellipse cx={1050} cy={HILL.crest + 210} rx={40} ry={40} fill="#3a3028" /><path d={`M980 ${HILL.crest + 170} L1140 ${HILL.crest + 150} L1120 ${HILL.crest + 200} L1000 ${HILL.crest + 205} Z`} /><path d={`M1140 ${HILL.crest + 150} L1220 ${HILL.crest + 110}`} stroke="#3a3028" strokeWidth={8} /></g>
+      <path d={`M120 ${HL.crest + 180} Q220 ${HL.crest + 40} 330 ${HL.crest + 160} Z`} fill="#9a7650" />
+      <path d={`M960 ${HL.crest + 150} Q1080 ${HL.crest + 20} 1200 ${HL.crest + 170} Z`} fill="#9a7650" />
+      <ellipse cx={HL.cx} cy={HL.crest + 40} rx={420} ry={90} fill="#6e5236" />
+      <ellipse cx={HL.cx} cy={HL.crest + 30} rx={380} ry={70} fill="#7a5c3c" />
+      <g fill="#5a4a3a"><ellipse cx={1050} cy={HL.crest + 210} rx={40} ry={40} fill="#3a3028" /><path d={`M980 ${HL.crest + 170} L1140 ${HL.crest + 150} L1120 ${HL.crest + 200} L1000 ${HL.crest + 205} Z`} /><path d={`M1140 ${HL.crest + 150} L1220 ${HL.crest + 110}`} stroke="#3a3028" strokeWidth={8} /></g>
       {[[200, 1720], [1100, 1700], [400, 1640], [900, 1650]].map(([x, y], i) => <g key={i}><rect x={x} y={y - 90} width={6} height={90} fill="#6a5238" /><rect x={x + 6} y={y - 90} width={26} height={12} fill="#d8573a" /></g>)}
-      {Array.from({ length: 60 }).map((_, i) => <ellipse key={i} cx={r() * W} cy={HILL.crest + 120 + r() * 700} rx={4 + r() * 10} ry={3 + r() * 5} fill="#7a5c3c" opacity={0.6} />)}
-      {Array.from({ length: 18 }).map((_, i) => { const x = r() * W, y = HILL.crest + 260 + r() * 500; return <path key={`g${i}`} d={`M${x} ${y} l-8 -30 M${x} ${y} l4 -36 M${x} ${y} l12 -26`} stroke="#8a8a5a" strokeWidth={3} />; })}
+      {Array.from({ length: 60 }).map((_, i) => <ellipse key={i} cx={r() * W} cy={HL.crest + 120 + r() * 700} rx={4 + r() * 10} ry={3 + r() * 5} fill="#7a5c3c" opacity={0.6} />)}
+      {Array.from({ length: 18 }).map((_, i) => { const x = r() * W, y = HL.crest + 260 + r() * 500; return <path key={`g${i}`} d={`M${x} ${y} l-8 -30 M${x} ${y} l4 -36 M${x} ${y} l12 -26`} stroke="#8a8a5a" strokeWidth={3} />; })}
     </g>
   );
 };
@@ -98,8 +98,8 @@ export const DuskBand: React.FC = () => {
       <path d={`M-20 1680 V1620 ${Array.from({ length: 34 }).map((_, i) => { const x = i * 40; const y = 1590 + ((i * 29) % 50); return `H${x} V${y} H${x + 30} V${y + 14}`; }).join(' ')} H${W + 20} V1680 Z`} fill="#3a2a40" />
       {Array.from({ length: 90 }).map((_, i) => <circle key={i} cx={r() * W} cy={1620 + r() * 90} r={1.5 + r() * 2} fill="#ffcf86" opacity={0.4 + r() * 0.5} />)}
       {/* the hill, in front, dark */}
-      <path d={`M-40 1980 Q260 1720 ${HILL.cx} 1700 Q1040 1720 ${W + 40} 2000 V${H + 40} H-40 Z`} fill="#1a1420" />
-      <path d={`M-40 1980 Q260 1720 ${HILL.cx} 1700 Q1040 1720 ${W + 40} 2000`} stroke="#f0a86a" strokeOpacity={0.35} strokeWidth={3} fill="none" />
+      <path d={`M-40 1980 Q260 1720 ${HL.cx} 1700 Q1040 1720 ${W + 40} 2000 V${H + 40} H-40 Z`} fill="#1a1420" />
+      <path d={`M-40 1980 Q260 1720 ${HL.cx} 1700 Q1040 1720 ${W + 40} 2000`} stroke="#f0a86a" strokeOpacity={0.35} strokeWidth={3} fill="none" />
     </g>
   );
 };

@@ -167,8 +167,9 @@ export const NightRoom: React.FC = () => (
     <path d="M120 440 L210 440 Q190 640 210 860 L120 860 Z" fill="#6a4a5a" />
     <rect x={-200} y={1200} width={1500} height={20} fill="#2a201a" opacity={0.4} />
     {/* low sofa (father sits on it) */}
-    <rect x={540} y={1200} width={560} height={200} rx={20} fill="#6a5a4a" />
-    <rect x={540} y={1040} width={560} height={180} rx={20} fill="#5a4a3a" />
+    <rect x={560} y={980} width={540} height={240} rx={24} fill="#7a4e40" />
+    <rect x={540} y={1190} width={580} height={210} rx={20} fill="#8a5e4c" />
+    <rect x={540} y={1190} width={580} height={24} rx={10} fill="#a8786a" />
     {/* side table */}
     <rect x={880} y={1180} width={180} height={20} fill="#3a2a1e" /><rect x={900} y={1200} width={16} height={200} fill="#2a1e14" /><rect x={1024} y={1200} width={16} height={200} fill="#2a1e14" />
   </g>

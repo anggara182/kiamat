@@ -151,8 +151,8 @@ export const S07: React.FC = () => {
           <NightRoom />
           <TableLamp on={lampOn} />
           <Side x={FX} y={FY} h={FH} dir={-1} pal={FA} head="short" male sit face={reach > 0.5 ? 'back' : 'side'} lean={2 - 6 * reach} handN={handN} handF={[120, -500]} headTilt={8} bob={2 * Math.sin(t2 * 2)} rimO={0.6} />
-          <Side x={420} y={1560} h={480} pal={GI} head="bob" skirt handN={[160, -840 + 20 * lift]} handF={[150, -860 + 20 * lift]} lean={-4} bob={6 * lift * (1 - reach * 0.5)} rimO={0.6} />
-          <g transform={`translate(${gb[0]} ${gb[1] - 40}) rotate(-6)`}>
+          <Side x={420} y={1560} h={480} pal={GI} head="bob" skirt handN={[200, -740 + 20 * lift]} handF={[290, -750 + 20 * lift]} lean={-4} bob={6 * lift * (1 - reach * 0.5)} rimO={0.6} />
+          <g transform={`translate(${gb[0] + 40} ${gb[1] + 50}) rotate(-6) scale(0.85)`}>
             <path d="M-110 -70 L0 -60 L0 70 L-110 60 Z" fill="#f4efe2" /><path d="M0 -60 L110 -70 L110 60 L0 70 Z" fill="#ebe4d2" />
             {[-40, -15, 10, 35].map((y) => <path key={y} d={`M-95 ${y} L-15 ${y + 4} M15 ${y + 4} L95 ${y}`} stroke="#8a8478" strokeWidth={4} />)}
             <path d="M-110 60 L0 70 L110 60 L110 72 L0 82 L-110 72 Z" fill="#3a5a8a" />
