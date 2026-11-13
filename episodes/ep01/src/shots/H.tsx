@@ -1,10 +1,12 @@
 import React from 'react';
 import { AbsoluteFill } from 'remotion';
 import { useShot, BandImg, Live, Cam, handheld, ramp, clamp01, EIO, EOUT } from '../comp/Camera';
-import { wordAt } from '../data/ep';
+import { wordAt, spanOf, FPS } from '../data/ep';
 import { Fr } from '../art/home_kit';
 import { CarportFg, AlleyWindows, Scooter, Father, Kid, Exhaust } from '../art/home_carport';
 import { lerp } from '../art/home_kit';
+import { HangLamp, SwingLight, Glasses, MotherChild, FatherBack } from '../art/home_dinner';
+import { WindowLife, Phone, Sleeper, BlanketFold, SleepArm } from '../art/home_bedroom';
 import { KitchenDark, Tube, Flame, Steam, PotLid, MotherKitchen } from '../art/home_kitchen';
 
 /** Tube start-up stutter (on ones): u = seconds since the switch, len = time until it holds steady. */
@@ -107,3 +109,79 @@ export const S03: React.FC = () => {
 };
 
 const bumpT = (t: number, a: number, d: number) => { const u = clamp01((t - a) / d); return Math.sin(Math.PI * u); };
+
+/* ============ shot 4: bedroom close at dawn, a hand creeps out of the blanket and slaps the phone alarm; minaret lamp on "prayer" ============ */
+export const S04: React.FC = () => {
+  const { t, t2, p, sec } = useShot();
+  const tPray = wordAt(4, /^prayer/i, 0.2);
+  const tHund = wordAt(4, /^hundred/i, 0.56);
+  const tSlap = Math.min(sec - 0.5, wordAt(4, /^alarm/i, 0.74) - 0.04);
+  // the hand ON TWOS: creeps out, pats the sheet (misses), raises, slaps
+  const wrist = track(t2, [
+    [0.1, 520, 1204], [Math.min(0.9, tSlap * 0.4), 600, 1250], [tSlap * 0.5, 610, 1262], [tSlap * 0.62, 630, 1258], [tSlap * 0.8, 640, 1262],
+    [tSlap - 0.18, 660, 1236], [tSlap, 708, 1268], [sec, 712, 1270],
+  ]);
+  const pat = bumpT(t2, tSlap * 0.45, tSlap * 0.14);
+  const lift = Math.max(ramp(t2, tSlap - 0.3, tSlap - 0.1, EOUT) * (1 - ramp(t2, tSlap - 0.08, tSlap)), 0.5 * pat);
+  const ang = -6 + 10 * pat - 14 * lift;
+  const spread = ramp(t2, tSlap - 0.04, tSlap + 0.06);
+  const stir = ramp(t2, 0, 0.6) * (1 - 0.4 * ramp(t2, tSlap + 0.2, sec));
+  const breath = 0.5 + 0.5 * Math.sin(t2 * 2.4);
+  // phone + window (ON ONES)
+  const off = t > tSlap + 0.06;
+  const ring = off ? Math.max(0, 0.4 - (t - tSlap) * 2) : 1;
+  const buzz = off ? 0 : (Math.floor(t * 24) % 2 ? 2.5 : -2.5) * (Math.floor(t * 3) % 2 ? 1 : 0.2);
+  const lamp = ramp(t, tPray, tPray + 0.25, EOUT);
+  const dots = ramp(t, tHund, tHund + 0.45);
+  const cam: Cam = { zoom: 1.15 + 0.03 * p, dx: 0, dy: 0, ox: 640, oy: 1180 };
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#1d1a33' }}>
+      <BandImg id="home/bedroom" cam={cam} />
+      <Live cam={cam}>
+        <Fr>
+          <WindowLife lamp={lamp} dots={dots} t={t} />
+          <Sleeper breath={breath} stir={stir} />
+          <Phone ring={ring} buzz={buzz} t={t} />
+          <SleepArm wx={wrist.x} wy={wrist.y} ang={ang} lift={lift} spread={spread} rim={0.3 + 0.7 * ring} />
+          <BlanketFold stir={stir} />
+        </Fr>
+      </Live>
+    </AbsoluteFill>
+  );
+};
+
+/* ============ shot 15: night, family dinner on the floor mat; the lamp swings, glasses tremble, jolts on "shaking" / "again" ============ */
+export const S15: React.FC = () => {
+  const { t, t2 } = useShot();
+  const tS = wordAt(15, /^shaking/i, 0.25);
+  const ags = [wordAt(15, /^again/i, 0.45)];
+  const sp = spanOf(15);
+  const again2 = sp.shot.words.filter((w) => /^again/i.test(w.text))[1];
+  ags.push(again2 ? again2.start - sp.from / FPS : ags[0] + 0.5);
+  const jolts = [tS, ...ags];
+  // camera + environment ON ONES
+  const jolt = (k: number) => jolts.reduce((a, j, i) => { const u = t - j; return u < 0 ? a : a + (i === 0 ? 1 : 0.6) * Math.exp(-u * 7) * Math.sin(u * 46 + k); }, 0);
+  const amp = 10 * ramp(t, tS - 0.05, tS + 0.4, EOUT);
+  const ang = amp * Math.sin((t - tS) * 5.6) + 1.2 * Math.sin(t * 2);
+  const tr = 3 * ramp(t, tS - 0.05, tS + 0.1) * (0.6 + 0.4 * Math.abs(jolt(0)));
+  const cam: Cam = { zoom: 1.3, dx: 0, dy: 0, tx: 12 * jolt(0), ty: 9 * jolt(1.3), rot: 0.35 * jolt(2.1), ox: 600, oy: 1160 };
+  // people ON TWOS
+  const hug = ramp(t2, tS - 0.04, tS + 0.34, EOUT);
+  const look = ramp(t2, tS + 0.05, tS + 0.4, EOUT);
+  const breath = 0.5 + 0.5 * Math.sin(t2 * 3.4);
+  const flinch = jolts.reduce((a, j) => Math.max(a, bumpT(t2, j, 0.25)), 0);
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#120e14' }}>
+      <BandImg id="home/dinner" cam={cam} />
+      <Live cam={cam}>
+        <Fr>
+          <SwingLight ang={ang} />
+          <Glasses tr={tr} t={t} />
+          <MotherChild hug={hug} look={look} breath={breath} />
+          <HangLamp ang={ang} />
+        </Fr>
+      </Live>
+      <Live k={1.15} cam={cam}><Fr><FatherBack look={look} breath={breath} flinch={flinch} /></Fr></Live>
+    </AbsoluteFill>
+  );
+};
