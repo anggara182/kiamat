@@ -85,5 +85,33 @@
    "fiction": "The city, the mayor, the riot, the fire, the stadium and the man himself; the mayor’s fate is left unanswered on purpose."
   },
   "credits": "VO ai33 eleven_v3 (Brian), word timing aligned from the audio (STT transcript unavailable) · original synthesised score · SFX reused + synthesised"
+ },
+ {
+  "chapter": 5,
+  "id": "ep05",
+  "title": "Old Gods",
+  "phase": "Stage 2 · Fitnah & false claimants",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "0:53",
+  "video": "media/ep05.mp4",
+  "cover": "media/ep05-cover.jpg",
+  "logline": "The libraries close, the old teachers die with no one to replace them, and on a hill outside the city people begin to walk in circles around an ancient stone figure. Then the money comes.",
+  "quote": {
+   "text": "Religious knowledge will be taken away (by the death of Religious learned men).",
+   "source": "Sahih al-Bukhari 80"
+  },
+  "vo": "The libraries closed on a Monday.\nBy Friday, no one remembered why they had been open.\nThe old teachers grew quiet.\nOne by one, they died.\nAnd no one took their place.\nChildren learned chants instead of letters.\nParents stopped asking questions they couldn't answer.\nAnd on the hill outside the city, something old was uncovered.\nA stone figure, buried for centuries.\nAt first, people only came to look.\nThen they brought flowers.\nThen they began to walk around it… slowly… in circles.\nNo one told them to. It just felt right.\nThe Prophet said that before the Hour, knowledge would be taken away, ignorance would spread, and some would return to the idols of old.\nThat spring, the rain came early.\nThe harvest was the biggest anyone had ever seen.\nAnd with it came more money than anyone knew what to do with.",
+  "caption": "The libraries closed on a Monday. By Friday, no one remembered why they had been open.\n\nChapter 5 of THE LAST DAYS. Follow for Chapter 6.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "Knowledge taken away, ignorance spreading: Sahih al-Bukhari 80, 81 (quoted on screen)",
+   "Return to old idols: Sahih al-Bukhari 7116, Sahih Muslim 2906 (Dhul-Khalasa; paraphrased, not quoted)"
+  ],
+  "classification": {
+   "canonical": "Knowledge being taken away with the death of scholars; a return to idol worship before the Hour.",
+   "interpretation": "Moving the Dhul-Khalasa sign (a specific tribe and idol in Arabia) into a generic modern setting.",
+   "fiction": "The libraries, the teachers, the hill, the stone figure, the circling crowd, the harvest and the money."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), word timing aligned from the audio · original synthesised score · SFX reused + synthesised"
  }
 ]
