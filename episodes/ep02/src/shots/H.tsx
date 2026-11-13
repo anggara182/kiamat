@@ -6,6 +6,7 @@ import { Fr, lerp, bump } from '../art/market_kit';
 import { Side, Front, toFrame, Pal } from '../art/market_people';
 import { SH, FrontShelf, Gallon, Bottle, GrabArm, DawnMood, DayShaft, HabisCard } from '../art/market_shop';
 import { RollDoor, FrontLight, Jerrycan } from '../art/market_front';
+import { HS, GutterFlow, Pour, Bucket, Doll, TR, MosqueGlow } from '../art/homes_art';
 import { ST, StallLife, Shutter, Ladle, StallCounter, STALL_DAWN, STALL_DUSK } from '../art/market_stall';
 
 /** keyframe track [[t, x, y], ...] eased between keys */
@@ -130,7 +131,7 @@ export const S03: React.FC = () => {
   const oX = 690, oY = ST.floor, oH = 860;
   const handN: [number, number] = [-200 - 10 * dip, -660 + 80 * dip];
   const hn = toFrame(oX, oY, oH, -1, handN);
-  const cX = 430, cY = 1800, cH = 930;
+  const cX = 360, cY = 1800, cH = 930;
   const freeze = ramp(t2, tW - 0.1, tW + 0.1);
   const cam: Cam = { zoom: 1.42 + 0.07 * EIO(t / sec), dx: 0, dy: 0, ox: 620, oy: 1060 };
   return (
@@ -157,7 +158,7 @@ export const S08: React.FC = () => {
   const breath = Math.sin(t2 * 2.6);
   const handL: [number, number] = [lerp(-160, 70, c), lerp(-420, -690, c)];
   const handR: [number, number] = [lerp(160, -70, c), lerp(-420, -700, c)];
-  const cam: Cam = { zoom: 1.06, dx: 40 - 80 * EIO(p), dy: 0, ox: 540, oy: 1100 };
+  const cam: Cam = { zoom: 1.22, dx: 40 - 80 * EIO(p), dy: 0, ox: 560, oy: 1000 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#d4c7ae' }}>
       <BandImg id="market/shop" cam={cam} />
@@ -167,7 +168,7 @@ export const S08: React.FC = () => {
           <FrontShelf wob={0}>
             <Front x={520} y={SH.floor} h={954} pal={OWNER} head="scarf" cross handL={handL} handR={handR} bob={3 * breath + 6 * bump(t2, tE - 0.05, 0.25)} tilt={-3 * c} eyes="open" rimO={0.3} />
           </FrontShelf>
-          <HabisCard x={600} y={SH.tiers[1] + 30} sway={2 * Math.sin(t * 2.2) + 6 * Math.exp(-Math.max(0, t - tE) * 3) * (t > tE ? Math.sin((t - tE) * 12) : 0)} />
+          <HabisCard x={790} y={SH.tiers[0] + 30} sway={2 * Math.sin(t * 2.2) + 6 * Math.exp(-Math.max(0, t - tE) * 3) * (t > tE ? Math.sin((t - tE) * 12) : 0)} />
         </Fr>
       </Live>
       <Live k={1.3} cam={cam}><Fr><rect x={-200} y={-300} width={210} height={2600} fill="#3a4048" opacity={0.9} /></Fr></Live>
@@ -204,6 +205,72 @@ export const S23: React.FC = () => {
           <Shutter rail={rail} rattle={rattle} />
           {hands && [437, 643].map((x) => <path key={x} d={`M${x - 26} ${rail - 2} Q${x} ${rail + 18} ${x + 26} ${rail - 2} Z`} fill={OWNER.skin} />)}
           <StallCounter pal={STALL_DUSK} />
+        </Fr>
+      </Live>
+    </AbsoluteFill>
+  );
+};
+
+/* ============ shot 9: noon, a mother tips a bucket into the gutter (pour starts on "poured", splash on "drain"); her daughter clutches a doll ============ */
+export const S09: React.FC = () => {
+  const { t, t2 } = useShot();
+  const tP = wordAt(9, /^poured/i, 0.23);
+  const tD = Math.max(tP + 0.4, wordAt(9, /^drain/i, 0.72));
+  const MOM: Pal = { skin: '#a8714f', skinD: '#74482f', top: '#b85a5a', topD: '#8a3e40', bottom: '#4a4a6a', headC: '#d9c7a0', headD: '#a8966e', rim: '#fffdf2' };
+  const GIRL: Pal = { skin: '#b07a5e', skinD: '#7a4f3e', top: '#f0d070', topD: '#c0a040', bottom: '#f0d070', headC: '#1a1414', headD: '#1a1414', rim: '#fffdf2' };
+  // mother ON TWOS: lifting the bucket at frame 0 -> tips (pour on "poured") -> heaves the last of it (splash on "drain")
+  const tilt = 70 * ramp(t2, 0, tP, EIO) + 55 * ramp(t2, tD - 0.22, tD, Easing.in(Easing.quad)) + 4 * Math.sin(t2 * 6) * ramp(t2, tP, tD);
+  const u = ramp(t2, 0, tP, EIO);
+  const handN: [number, number] = [lerp(150, 250, u) + 20 * ramp(t2, tD - 0.22, tD), lerp(-690, -580, u)];
+  const mX = 640, mH = 720;
+  const hn = toFrame(mX, HS.ground, mH, 1, handN);
+  const a = (tilt * Math.PI) / 180;
+  const lip = { x: hn[0] + Math.cos(a) * 80, y: hn[1] + Math.sin(a) * 80 };
+  const flow = t < tP ? 0 : Math.min(1, (t - tP) * 4) * (t > tD + 0.25 ? Math.max(0, 1 - (t - tD - 0.25) * 3) : 1) * (t > tD - 0.2 ? 1.4 : 0.7);
+  const splash = clamp01((t - tD) / 0.45);
+  const flinch = bump(t2, tD, 0.4);
+  const gx = 255, gH = 440;
+  const doll = toFrame(gx, HS.door.y2, gH, 1, [70, -650 + 20 * flinch]);
+  const h = handheld(t, 0.3);
+  const cam: Cam = { zoom: 1.08 + 0.03 * EIO(t / 2.2), dx: 0, dy: 0, tx: h.hx, ty: h.hy, ox: 560, oy: 1050 };
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#d8cdb8' }}>
+      <BandImg id="homes/house" cam={cam} />
+      <Live cam={cam}>
+        <Fr>
+          <GutterFlow t={t} amt={ramp(t, tP + 0.2, tD + 0.3)} />
+          <ellipse cx={mX + 30} cy={HS.ground + 2} rx={150} ry={12} fill="#2a2018" opacity={0.3} />
+          <ellipse cx={gx + 20} cy={HS.door.y2 + 2} rx={90} ry={9} fill="#2a2018" opacity={0.3} />
+          <Side x={gx} y={HS.door.y2} h={gH} pal={GIRL} head="bob" skirt handN={[90, -640 + 20 * flinch]} handF={[60, -620]} lean={-4 * flinch + 2 * Math.sin(t2 * 2.2)} bob={4 * Math.sin(t2 * 3)} rimO={0.4} />
+          <Doll x={doll[0]} y={doll[1]} rot={-8 + 6 * Math.sin(t2 * 2.2)} />
+          <Side x={mX} y={HS.ground} h={mH} pal={MOM} head="scarf" skirt lean={6 + 12 * u} handN={handN} handF={[handN[0] - 30, handN[1] - 40]} rimO={0.5} />
+          <Bucket x={hn[0]} y={hn[1]} tilt={tilt} />
+          <Pour lx={lip.x} ly={lip.y} flow={flow} splash={splash} t={t} />
+        </Fr>
+      </Live>
+    </AbsoluteFill>
+  );
+};
+
+/* ============ shot 24: night terrace, one whispers to the other (lean lands on "whisper"); both turn to the lit mosque window on "trusted" ============ */
+export const S24: React.FC = () => {
+  const { t, t2, sec } = useShot();
+  const tW = wordAt(24, /^whisper/i, 0.22);
+  const tT = wordAt(24, /^trusted/i, 0.83);
+  const SIL: Pal = { skin: '#07080e', skinD: '#06070c', top: '#08090f', topD: '#06070c', bottom: '#07080e', headC: '#08090f', headD: '#06070c', rim: '#ffcf86' };
+  const lean = 6 + 18 * ramp(t2, tW - 0.35, tW, EOUT) - 10 * ramp(t2, tT - 0.05, tT + 0.15);
+  const turned = t2 >= tT;
+  const breath = Math.sin(t2 * 2.2);
+  const cam: Cam = { zoom: 1.22 + 0.08 * EIO(t / sec), dx: 0, dy: 0, ox: 720, oy: 1000 };
+  const Hh = 720, feet = TR.bench + Hh * 0.47;
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#05070f' }}>
+      <BandImg id="homes/terrace" cam={cam} />
+      <Live cam={cam}>
+        <Fr>
+          <MosqueGlow t={t} />
+          <Side x={620} y={feet} h={Hh} dir={-1} pal={SIL} head="scarf" skirt sit lean={-3 + 2 * breath} face={turned ? 'back' : 'side'} headTilt={turned ? 0 : 6 * ramp(t2, tW - 0.2, tW + 0.2)} handN={[110, -470]} handF={[90, -480]} rimO={0.9} />
+          <Side x={815} y={feet} h={Hh * 1.04} dir={-1} pal={SIL} head="peci" male sit lean={lean} face={turned ? 'back' : 'side'} handN={turned ? [110, -480] : [120, -860]} handF={[90, -480]} bob={2 * breath} rimO={0.9} />
         </Fr>
       </Live>
     </AbsoluteFill>

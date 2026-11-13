@@ -114,7 +114,7 @@ export const Doll: React.FC<{ x: number; y: number; rot: number }> = ({ x, y, ro
 );
 
 /* ---------------- night terrace ---------------- */
-export const TR = { win: { x: 760, y: 560, w: 150, h: 220 }, bench: 1230 };
+export const TR = { win: { x: 700, y: 760, w: 170, h: 250 }, bench: 1230 };
 
 export const TerraceBand: React.FC = () => {
   const { win } = TR;
@@ -134,7 +134,8 @@ export const TerraceBand: React.FC = () => {
       <rect x={300} y={760} width={260} height={340} fill="#0a0d1a" />
       {/* the alley floor + a faint light patch below the window */}
       <rect x={-108} y={1100} width={1296} height={60} fill="#181c2c" />
-      <ellipse cx={835} cy={1130} rx={220} ry={30} fill="#ffcf86" opacity={0.12} />
+      <ellipse cx={785} cy={1130} rx={260} ry={34} fill="#ffcf86" opacity={0.16} />
+      <rect x={560} y={600} width={460} height={500} fill="#1c2036" opacity={0.8} />
       {/* our terrace: pillar, eave, low wall, floor */}
       <rect x={-108} y={-192} width={1296} height={250} fill="#05060c" />
       <rect x={-108} y={40} width={1296} height={24} fill="#0b0d18" />
@@ -142,9 +143,9 @@ export const TerraceBand: React.FC = () => {
       <rect x={-108} y={1160} width={1296} height={80} fill="#0c0e1a" />
       <rect x={-108} y={1236} width={1296} height={900} fill="#090a14" />
       {/* bench */}
-      <rect x={180} y={TR.bench} width={620} height={26} fill="#1a1622" />
-      <rect x={210} y={TR.bench + 26} width={22} height={130} fill="#12101a" /><rect x={750} y={TR.bench + 26} width={22} height={130} fill="#12101a" />
-      <path d={`M180 ${TR.bench} L800 ${TR.bench}`} stroke="#ffcf86" strokeWidth={3} opacity={0.25} />
+      <rect x={380} y={TR.bench} width={640} height={26} fill="#1a1622" />
+      <rect x={410} y={TR.bench + 26} width={22} height={130} fill="#12101a" /><rect x={970} y={TR.bench + 26} width={22} height={130} fill="#12101a" />
+      <path d={`M380 ${TR.bench} L1020 ${TR.bench}`} stroke="#ffcf86" strokeWidth={3} opacity={0.25} />
     </g>
   );
 };
@@ -152,6 +153,6 @@ export const TerraceBand: React.FC = () => {
 /** live: window glow flicker (ones) */
 export const MosqueGlow: React.FC<{ t: number; o?: number }> = ({ t, o = 1 }) => (
   <g>
-    <Glow id="htWin" x={TR.win.x + TR.win.w / 2} y={TR.win.y + TR.win.h / 2} rx={300} ry={300} c="#ffcf86" o={(0.5 + 0.03 * Math.sin(t * 9)) * o} mid={0.25} />
+    <Glow id="htWin" x={TR.win.x + TR.win.w / 2} y={TR.win.y + TR.win.h / 2} rx={420} ry={380} c="#ffcf86" o={(0.55 + 0.03 * Math.sin(t * 9)) * o} mid={0.25} />
   </g>
 );
