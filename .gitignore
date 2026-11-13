@@ -3,3 +3,5 @@ __pycache__/
 *.mp4
 **/out/
 **/public/baked/
+**/public/audio/*.wav
+**/public/audio/vo/*.wav

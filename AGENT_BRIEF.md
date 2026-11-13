@@ -14,6 +14,8 @@ You build the visuals for ONE set of a short 9:16 horror video in a Remotion pro
 Edit ONLY `src/sets/<set>.tsx`, `src/shots/<OWNER>.tsx` and NEW files `src/art/<set>_*.tsx`. Other agents edit other sets of the same project in parallel; never touch anything else. Do NOT git commit, do NOT run `bake.mjs`, `contact.mjs` or a render.
 
 ## Rules
+- Motion clocks: characters and everything they do animate ON TWOS with `p2`/`t2`/`f2` from `useShot()` (or `onTwos`); camera moves and environment/background motion (sky, lights, windows, shadows, trains, clouds) stay ON ONES with `p`/`t`/`f`. Never drive a character with `p`/`t`.
+- People make the content alive: every shot that has a person must show a specific, human action with readable body language (silhouette, posture, hands), not a static mannequin.
 - Timing comes from the real voice-over and may change: animate on relative progress only, sync beats with `wordAt(id, /regex/, fallbackFraction)`. Never hardcode absolute frames.
 - Captions (global) start at 74% of frame height on shots with `caption: true` (adjust if the account moves its subtitles): keep heroes above that zone. Graphic shots with `caption: false` draw their own text inside a 920 px safe width; on-screen words appear on their `words[]` times, capped so all text is fully visible ≥0.5 s before the shot ends.
 - Title fonts via `@remotion/google-fonts` (Cinzel / Marcellus / Cormorant / Oswald…). For Japanese/Korean/Thai glyphs use a Noto font that has them and check they render.

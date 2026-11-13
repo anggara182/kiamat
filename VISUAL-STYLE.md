@@ -54,6 +54,7 @@ Aturan tambahan untuk shot terang:
 - Contoh di template: set `village` punya band `village/bg` (malam), `village/dawn` (subuh), dan `village/day` (siang, palet di `PAL` dalam `src/sets/village.tsx`); shot 14 (`S14`) adalah contoh shot siang. Lihat `contoh-terang.jpg`.
 
 ## 5. Karakter
+- **Manusia adalah inti konten** (adrian, 13 Nov 2026). Hampir setiap shot punya manusia yang sedang melakukan sesuatu yang spesifik dan manusiawi (menyalakan lampu, memanaskan motor, berdesakan di kereta, makan bersama). Shot tanpa manusia hanya untuk establishing yang singkat.
 - Wajah tidak detail. Karakter lebih sering terlihat dari belakang, samping, atau sebagai siluet. Mulut hantu tidak pernah ditunjukkan.
 - Proporsi: kepala dewasa ≈ 1/7 tinggi badan, anak (~7 tahun) ≈ 1/5.
 - Dibangun dari primitif: kepala elips → leher → torso (bahu lebih lebar dari pinggang) → lengan dan kaki tapered dengan tekukan siku/lutut → tangan sederhana dengan 1–2 pemisah jari. Rambut: satu shape besar + 4–8 stroke helai + stroke rim.
@@ -72,7 +73,12 @@ Aturan tambahan untuk shot terang:
 - **Dilarang:** filter per frame, `mix-blend-mode`, glow `box-shadow`. Glow dibuat dengan bentuk radial gradient.
 - **Vignette global** (radial, gelap keunguan `rgba(8,4,16,.7)`), tidak digambar per shot.
 - **Grain** ditambahkan sekali saat encode akhir (`finish.sh`): plate noise 540x960 yang di-upscale, refresh 15 fps, overlay 0.30, x264 `-tune grain`. Grain ini bagian dari look horrorluar. Kalau akun baru tidak mau encode ulang, lewati langkah ini dan terima look yang sedikit lebih bersih.
-- fps horrorluar 30. Untuk akun baru boleh 24 atau 30, karena semua animasi relatif.
+- **fps 24.** (horrorluar memakai 30; kiamat memakai 24 sejak EP01.)
+- **Animasi on twos untuk karakter, on ones untuk kamera dan background** (adrian, 13 Nov 2026). `useShot()` memberi dua jam:
+  - `f`, `p`, `t` (on ones): kamera (`Cam`, `handheld`, zoom, pan, tilt) dan semua gerak lingkungan (langit, cahaya, jendela menyala/padam, bayangan, kereta, awan, asap, debu).
+  - `f2`, `p2`, `t2` (on twos, satu gambar baru tiap 2 frame = 12 gambar/detik): manusia dan semua yang mereka lakukan (tubuh, tangan, rambut, kain, pengendara motor, benda yang mereka pegang).
+  - Untuk jam buatan sendiri pakai `onTwos(t, fps)`.
+  - Hasilnya: karakter terasa seperti animasi tangan, sementara kamera dan dunia tetap mulus.
 
 ## 8. Alur kerja visual
 1. Bagi episode jadi 2–3 set (mis. lokasi lebar, close-up, graphic). Satu set = satu file `src/sets/<set>.tsx` + `src/shots/<OWNER>.tsx`.

@@ -4,13 +4,25 @@ import { W, H, FRAME } from '../art/world';
 import { BANDS } from './Bands';
 export type { BandSpec } from './Bands';
 
-/** Progress helpers relative to the enclosing Sequence (works for any shot duration). */
+/** Characters animate "on twos": one new drawing every TWOS frames (24 fps -> 12 drawings/s). */
+export const TWOS = 2;
+
+/**
+ * Progress helpers relative to the enclosing Sequence (works for any shot duration).
+ * Two clocks:
+ *  - ON ONES  (f, p, t): camera (Cam, handheld, zoom/pan) and background/environment motion (sky, lights, windows, shadows, trains, clouds).
+ *  - ON TWOS (f2, p2, t2): characters and everything they do (people, hands, faces, hair, cloth, motorbike riders, props they handle).
+ */
 export const useShot = () => {
   const f = useCurrentFrame();
   const { durationInFrames: dur, fps } = useVideoConfig();
-  const p = dur > 1 ? Math.min(1, Math.max(0, f / (dur - 1))) : 0;
-  return { f, dur, fps, p, t: f / fps, sec: dur / fps };
+  const prog = (x: number) => (dur > 1 ? Math.min(1, Math.max(0, x / (dur - 1))) : 0);
+  const f2 = Math.floor(f / TWOS) * TWOS;
+  return { f, dur, fps, p: prog(f), t: f / fps, sec: dur / fps, f2, p2: prog(f2), t2: f2 / fps };
 };
+
+/** Snap any time value (s) to the twos grid, for character motion computed from your own clock. */
+export const onTwos = (t: number, fps: number) => (Math.floor((t * fps) / TWOS) * TWOS) / fps;
 
 export const clamp01 = (x: number) => Math.min(1, Math.max(0, x));
 export const ramp = (x: number, a: number, b: number, ease: (n: number) => number = Easing.inOut(Easing.cubic)) =>

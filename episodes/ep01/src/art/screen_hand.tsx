@@ -97,3 +97,101 @@ export const ThumbHand: React.FC<{ rim?: string }> = ({ rim = '#fff1d6' }) => {
     </g>
   );
 };
+
+/**
+ * Extreme close-up thumb: SHORT and WIDE, base (MCP crease) at (0,0), pointing +x, with the thenar mound behind it.
+ * Lt ~ 175 local, width ~ 124 local (thumb reads ~1.4x longer than wide). +y edge is lit.
+ */
+export const ThumbECU: React.FC<{ id: string; Lt?: number; rim?: string }> = ({ id, Lt = 175, rim = '#fff1d6' }) => {
+  const { skin, shade, lit, deep, nail, nailHi } = SKIN;
+  const th = `M-6 -60 C40 -66 ${Lt - 70} -62 ${Lt - 30} -54 Q${Lt + 16} -44 ${Lt + 18} 0 Q${Lt + 16} 48 ${Lt - 34} 58 C${Lt - 80} 66 40 70 -6 66 Z`;
+  return (
+    <g>
+      <defs><clipPath id={`${id}c`}><path d={th} /></clipPath><clipPath id={`${id}h`}><path d="M24 -62 C-40 -84 -200 -96 -460 -70 L-460 360 C-300 350 -160 280 -60 170 C-10 120 20 90 30 66 Z" /></clipPath></defs>
+      {/* thenar mound + palm edge going off-frame */}
+      <path d="M24 -62 C-40 -84 -200 -96 -460 -70 L-460 360 C-300 350 -160 280 -60 170 C-10 120 20 90 30 66 Z" fill={skin} />
+      <g clipPath={`url(#${id}h)`}>
+        <path d="M-460 -70 C-260 -100 -80 -86 24 -62 L24 -26 C-90 -40 -260 -44 -460 -20 Z" fill={shade} opacity={0.7} />
+        <ellipse cx={-150} cy={70} rx={150} ry={90} fill={lit} opacity={0.35} />
+        <path d="M-40 -40 Q-70 30 -40 110" stroke={deep} strokeWidth={4} fill="none" opacity={0.45} />
+        <path d="M-260 150 Q-170 120 -90 150" stroke={shade} strokeWidth={5} fill="none" opacity={0.5} />
+      </g>
+      <path d="M-60 170 C-160 280 -300 350 -460 360" stroke={rim} strokeWidth={4} fill="none" opacity={0.5} />
+      {/* the thumb itself */}
+      <path d={th} fill={skin} />
+      <g clipPath={`url(#${id}c)`}>
+        <path d={`M-20 -80 L${Lt + 30} -80 L${Lt + 30} -26 C${Lt - 60} -30 60 -32 -20 -30 Z`} fill={shade} opacity={0.75} />
+        <path d={`M14 10 C60 6 ${Lt - 90} 8 ${Lt - 60} 12`} stroke={lit} strokeWidth={20} strokeLinecap="round" fill="none" opacity={0.35} />
+        <path d={`M${Lt - 96} -54 Q${Lt - 110} 4 ${Lt - 94} 60 M${Lt - 84} -50 Q${Lt - 96} 4 ${Lt - 82} 54`} stroke={deep} strokeWidth={3.5} fill="none" opacity={0.5} />
+        <rect x={Lt - 62} y={-34} width={72} height={64} rx={30} fill={nail} />
+        <path d={`M${Lt - 56} -22 Q${Lt - 20} -30 ${Lt + 4} -18`} stroke={nailHi} strokeWidth={7} strokeLinecap="round" fill="none" opacity={0.8} />
+        <path d={`M${Lt - 62} -26 Q${Lt - 74} -2 ${Lt - 62} 24`} stroke={shade} strokeWidth={5} fill="none" opacity={0.7} />
+      </g>
+      <path d={`M10 66 C40 70 ${Lt - 80} 66 ${Lt - 34} 58 Q${Lt + 16} 48 ${Lt + 18} 0`} stroke={rim} strokeWidth={4} fill="none" opacity={0.65} strokeLinecap="round" />
+    </g>
+  );
+};
+
+/**
+ * Hand in a suit sleeve gripping an object edge, side/top view. Grip point at (0,0), the arm comes from -x.
+ * Draw `part="under"` (fingers below the object) before the object and `part="over"` (sleeve, back of hand, thumb) after it.
+ * grip 0..1 closes the thumb onto the object.
+ */
+export const SuitHand: React.FC<{ part: 'under' | 'over'; grip?: number; skin?: string; shade?: string; suit?: string; suitD?: string; rim?: string }> = ({ part, grip = 1, skin = SKIN.skin, shade = SKIN.shade, suit = '#1f2633', suitD = '#141923', rim = '#f6efe0' }) => {
+  if (part === 'under') {
+    return (
+      <g>
+        {/* curled fingers under the edge, mitten with one separation */}
+        <path d="M-70 18 C-40 30 20 34 64 40 C92 46 96 82 66 90 C20 98 -40 92 -86 70 Z" fill={skin} />
+        <path d="M-80 66 C-30 88 30 92 70 88" stroke={shade} strokeWidth={8} fill="none" opacity={0.7} />
+        <path d="M60 46 C36 60 34 74 52 88" stroke={SKIN.deep} strokeWidth={3.5} fill="none" opacity={0.6} />
+      </g>
+    );
+  }
+  const ty = -26 + (1 - grip) * -34;
+  return (
+    <g>
+      {/* suit sleeve + shirt cuff */}
+      <path d="M-760 -96 L-196 -78 L-186 84 L-760 110 Z" fill={suit} />
+      <path d="M-760 60 L-186 50 L-186 84 L-760 110 Z" fill={suitD} />
+      <path d="M-760 -96 L-196 -78" stroke={rim} strokeWidth={3} opacity={0.35} />
+      <path d="M-200 -74 L-150 -70 L-142 76 L-196 80 Z" fill="#e9e6df" />
+      <path d="M-196 54 L-142 52 L-142 76 L-196 80 Z" fill="#b9b5ad" />
+      {/* back of the hand */}
+      <path d="M-156 -66 C-90 -84 -20 -70 20 -36 C44 -14 44 18 22 34 C-20 52 -100 56 -150 66 Z" fill={skin} />
+      <path d="M-150 40 C-100 36 -30 34 22 30 C0 50 -80 58 -150 66 Z" fill={shade} opacity={0.7} />
+      <path d="M-140 -60 C-80 -76 -20 -64 16 -36" stroke={rim} strokeWidth={3.5} fill="none" opacity={0.55} />
+      {[-90, -54, -20].map((x) => <ellipse key={x} cx={x} cy={-46 + (x + 90) * 0.12} rx={11} ry={6} fill={shade} opacity={0.35} />)}
+      {/* thumb pressing on the top of the object */}
+      <path d={`M-70 -40 C-30 ${ty - 30} 30 ${ty - 30} 74 ${ty - 18} C94 ${ty - 12} 94 ${ty + 14} 72 ${ty + 18} C30 ${ty + 22} -20 ${ty + 18} -60 4 Z`} fill={skin} />
+      <path d={`M-40 ${ty - 22} C0 ${ty - 30} 40 ${ty - 26} 74 ${ty - 18}`} stroke={rim} strokeWidth={3} fill="none" opacity={0.6} />
+      <rect x={46} y={ty - 16} width={34} height={22} rx={10} fill={SKIN.nail} opacity={0.9} />
+    </g>
+  );
+};
+
+/** Sleeping man under a blanket, lying on his side with his back to the camera (frame coords, very dark). br = breath 0..1 (on twos). */
+export const Sleeper: React.FC<{ br: number; light: number }> = ({ br, light }) => {
+  const lift = br * 7;
+  const rimC = '#9fc3ea';
+  return (
+    <g>
+      {/* blanket over legs, hip and shoulder; the torso part rises with the breath */}
+      <path d={`M-160 500 C40 470 220 ${430 - lift * 0.4} 380 ${400 - lift * 0.8} C470 ${386 - lift} 560 ${396 - lift} 640 ${404 - lift * 0.8} C700 410 740 420 770 440 L800 640 L-160 640 Z`} fill="#121828" />
+      <path d={`M-160 500 C40 470 220 ${430 - lift * 0.4} 380 ${400 - lift * 0.8} C470 ${386 - lift} 560 ${396 - lift} 640 ${404 - lift * 0.8} C700 410 740 420 770 440`} stroke={rimC} strokeWidth={3} fill="none" opacity={0.28 * light} />
+      <path d={`M120 520 C260 ${480 - lift * 0.3} 420 ${470 - lift * 0.5} 560 ${490 - lift * 0.4}`} stroke="#0a0e18" strokeWidth={10} fill="none" opacity={0.8} />
+      <path d={`M300 560 C420 ${530 - lift * 0.3} 520 ${540 - lift * 0.3} 640 560`} stroke="#0a0e18" strokeWidth={8} fill="none" opacity={0.7} />
+      {/* shoulder in a dark t-shirt above the blanket edge */}
+      <path d={`M620 ${430 - lift * 0.6} C660 ${392 - lift * 0.6} 730 ${384 - lift * 0.5} 772 ${404 - lift * 0.4} L790 470 L640 470 Z`} fill="#1a1f2b" />
+      {/* head on the pillow, back of the head toward us (short hair, no face) */}
+      <ellipse cx={812} cy={392 - lift * 0.3} rx={58} ry={50} fill="#07080d" />
+      <path d={`M760 ${384 - lift * 0.3} C770 ${350 - lift * 0.3} 820 ${336 - lift * 0.3} 858 ${360 - lift * 0.3}`} stroke={rimC} strokeWidth={3} fill="none" opacity={0.3 * light} />
+      <path d={`M792 ${438 - lift * 0.3} C800 ${452 - lift * 0.3} 820 ${456 - lift * 0.3} 836 ${444 - lift * 0.3}`} stroke="#1a1f2b" strokeWidth={14} fill="none" />
+      {/* forearm lying on top of the blanket, hand hanging toward the desk */}
+      <path d={`M700 ${440 - lift * 0.6} C640 ${470 - lift * 0.5} 580 ${492 - lift * 0.4} 520 ${506 - lift * 0.3} L516 ${532 - lift * 0.3} C590 ${520 - lift * 0.4} 660 ${500 - lift * 0.5} 716 ${470 - lift * 0.6} Z`} fill="#1a1f2b" />
+      <path d={`M522 ${502 - lift * 0.3} C496 ${504 - lift * 0.3} 470 ${514 - lift * 0.3} 462 ${532 - lift * 0.3} C470 ${546 - lift * 0.3} 500 ${544 - lift * 0.3} 520 ${536 - lift * 0.3} Z`} fill="#3a2c27" />
+      <path d={`M462 ${532 - lift * 0.3} C470 ${546 - lift * 0.3} 500 ${544 - lift * 0.3} 520 ${536 - lift * 0.3}`} stroke={rimC} strokeWidth={2.5} fill="none" opacity={0.35 * light} />
+      <path d={`M700 ${470 - lift * 0.6} C640 ${498 - lift * 0.5} 580 ${520 - lift * 0.4} 516 ${532 - lift * 0.3}`} stroke={rimC} strokeWidth={2.5} fill="none" opacity={0.3 * light} />
+    </g>
+  );
+};

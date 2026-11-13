@@ -95,26 +95,34 @@ const roomBg = () => {
       </defs>
       <rect x={-140} y={-230} width={1370} height={1000} fill="url(#srWall)" />
       {/* window, cropped by the frame top */}
-      <rect x={110} y={-220} width={470} height={720} fill="#04050a" />
-      <rect x={130} y={-200} width={430} height={680} fill="url(#srSky)" />
+      <rect x={110} y={-220} width={470} height={480} fill="#04050a" />
+      <rect x={130} y={-200} width={430} height={440} fill="url(#srSky)" />
       {Array.from({ length: 7 }, (_, i) => {
-        const bx = 130 + i * 64 + r() * 20, bh = 70 + r() * 210;
-        return <rect key={i} x={bx} y={480 - bh} width={44 + r() * 30} height={bh} fill="#070910" />;
+        const bx = 130 + i * 64 + r() * 20, bh = 60 + r() * 170;
+        return <rect key={i} x={bx} y={240 - bh} width={44 + r() * 30} height={bh} fill="#070910" />;
       })}
-      {[[190, 380], [262, 330], [300, 410], [420, 300], [470, 395], [520, 360]].map(([x, y], i) => <rect key={i} x={x} y={y} width={6} height={8} fill="#ffcf86" opacity={0.45} />)}
-      <rect x={339} y={-200} width={12} height={680} fill="#04050a" />
-      <rect x={130} y={150} width={430} height={12} fill="#04050a" />
-      <rect x={100} y={490} width={490} height={18} fill="#0b0e19" />
+      {[[190, 150], [262, 110], [300, 190], [420, 100], [470, 175], [520, 140]].map(([x, y], i) => <rect key={i} x={x} y={y} width={6} height={8} fill="#ffcf86" opacity={0.45} />)}
+      <rect x={339} y={-200} width={12} height={440} fill="#04050a" />
+      <rect x={130} y={20} width={430} height={12} fill="#04050a" />
+      <rect x={100} y={250} width={490} height={18} fill="#0b0e19" />
       {/* curtains */}
-      <path d="M20 -230 L170 -230 Q150 200 186 560 L40 590 Q0 200 20 -230 Z" fill="#080a13" />
-      <path d="M70 -200 Q60 200 90 570 M130 -200 Q118 200 146 560" stroke="#10142280" strokeWidth={8} fill="none" />
-      <path d="M548 -230 L640 -230 Q630 200 650 540 L572 556 Q560 200 548 -230 Z" fill="#080a13" />
+      <path d="M20 -230 L170 -230 Q150 100 186 330 L40 350 Q0 100 20 -230 Z" fill="#080a13" />
+      <path d="M70 -200 Q60 100 90 340 M130 -200 Q118 100 146 330" stroke="#10142280" strokeWidth={8} fill="none" />
+      <path d="M548 -230 L640 -230 Q630 100 650 320 L572 330 Q560 100 548 -230 Z" fill="#080a13" />
       {/* wall shelf with books, right */}
-      <rect x={700} y={360} width={430} height={14} fill="#0d101c" />
-      {[0, 1, 2, 3, 4, 5].map((i) => <rect key={i} x={720 + i * 40 + (i > 3 ? 40 : 0)} y={360 - (95 + ((i * 37) % 50))} width={30} height={95 + ((i * 37) % 50)} fill={i % 2 ? '#0b0e19' : '#0f1220'} />)}
-      <rect x={700} y={372} width={430} height={4} fill="#1d2740" opacity={0.7} />
+      <rect x={680} y={150} width={300} height={14} fill="#0d101c" />
+      {[0, 1, 2, 3, 4].map((i) => <rect key={i} x={700 + i * 40 + (i > 3 ? 40 : 0)} y={150 - (95 + ((i * 37) % 50))} width={30} height={95 + ((i * 37) % 50)} fill={i % 2 ? '#0b0e19' : '#0f1220'} />)}
+      <rect x={680} y={162} width={300} height={4} fill="#1d2740" opacity={0.7} />
+      {/* the bed behind the desk: headboard right, mattress, pillow (the sleeper himself is live) */}
+      <rect x={-140} y={330} width={1370} height={300} fill="#070912" />
+      <path d="M990 180 L1230 170 L1230 630 L990 630 Z" fill="#0a0d17" />
+      <path d="M990 180 L990 630" stroke="#1f2a44" strokeWidth={4} opacity={0.8} />
+      <path d="M-140 440 C200 425 600 420 990 430 L990 630 L-140 630 Z" fill="#0d1120" />
+      <path d="M-140 440 C200 425 600 420 990 430" stroke="#1c2540" strokeWidth={3} opacity={0.7} />
+      <ellipse cx={850} cy={440} rx={130} ry={44} fill="#151b2b" />
+      <path d="M730 452 C790 476 900 478 970 452" stroke="#222c45" strokeWidth={3} fill="none" opacity={0.7} />
       {/* phone light washing the lower wall */}
-      <ellipse cx={540} cy={640} rx={760} ry={360} fill="url(#srWash)" />
+      <ellipse cx={540} cy={560} rx={760} ry={300} fill="url(#srWash)" />
     </FR>
   );
 };
@@ -164,9 +172,42 @@ const roomDesk = () => {
   );
 };
 
+
+/* ---------------- day: under a meeting table (out of focus, the hands are live) ---------------- */
+const meeting = () => (
+  <FR>
+    <defs>
+      <linearGradient id="smFloor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#e9e4d6" /><stop offset="0.5" stopColor="#bdb6a8" /><stop offset="1" stopColor="#6f6a62" /></linearGradient>
+      <linearGradient id="smTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#1c1814" /><stop offset="1" stopColor="#2e2721" /></linearGradient>
+      <radialGradient id="smWin" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#fffdf2" stopOpacity={0.9} /><stop offset="1" stopColor="#fffdf2" stopOpacity={0} /></radialGradient>
+    </defs>
+    {/* bright room beyond: far wall with window light, carpet */}
+    <rect x={-140} y={-230} width={1370} height={2400} fill="url(#smFloor)" />
+    <rect x={-140} y={330} width={1370} height={260} fill="#d9d3c4" />
+    <ellipse cx={560} cy={460} rx={720} ry={260} fill="url(#smWin)" />
+    {/* far side: chair pedestals and two pairs of trousered legs (seated people) */}
+    {[[130, 0], [860, 1]].map(([x, k]) => (
+      <g key={x} fill={k ? '#3b3f47' : '#363a42'}>
+        <path d={`M${x - 70} 420 L${x - 12} 420 L${x - 30} 900 L${x - 92} 900 Z`} />
+        <path d={`M${x + 20} 420 L${x + 78} 420 L${x + 92} 900 L${x + 30} 900 Z`} />
+        <path d={`M${x - 120} 900 Q${x - 60} 880 ${x - 26} 910 L${x - 130} 920 Z M${x + 26} 905 Q${x + 80} 880 ${x + 130} 905 L${x + 124} 920 Z`} fill="#1f2228" />
+      </g>
+    ))}
+    <rect x={480} y={480} width={34} height={420} fill="#4a4e55" />
+    <path d="M400 905 L594 905 L560 925 L434 925 Z" fill="#33363c" />
+    {/* table underside (closest, top of frame) with a cross rail and its lit front edge */}
+    <path d="M-140 -230 L1230 -230 L1230 300 Q540 360 -140 300 Z" fill="url(#smTop)" />
+    <path d="M-140 300 Q540 360 1230 300" stroke="#8a7a66" strokeWidth={10} fill="none" opacity={0.55} />
+    <rect x={-140} y={150} width={1370} height={46} fill="#151210" />
+    {/* near trouser knee, right foreground (dark, cool) */}
+    <path d="M1000 1240 C1060 1180 1240 1170 1240 1170 L1240 2150 L920 2150 Q930 1500 1000 1240 Z" fill="#2a2e36" />
+    <path d="M-140 1300 C-40 1260 60 1270 120 1330 Q150 1700 120 2150 L-140 2150 Z" fill="#262a31" />
+  </FR>
+);
+
 export const SCREEN: Record<string, BandSpec> = {
   'screen/train-out': { blur: 10, w: OUT_W, h: H, node: trainOut },
   'screen/train-in': { blur: 12, node: trainIn },
-  'screen/room-bg': { blur: 5, node: roomBg },
-  'screen/desk': { blur: 0, node: roomDesk },
+  'screen/room': { blur: 0, node: () => <g>{roomBg()}{roomDesk()}</g> },
+  'screen/meeting': { blur: 7, node: meeting },
 };
