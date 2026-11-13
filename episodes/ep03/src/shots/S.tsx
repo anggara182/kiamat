@@ -41,7 +41,7 @@ export const S07: React.FC = () => {
         {top.map(([x, ph, c, hat], i) => <BackWalker key={i} x={x} y={FLY.top + 120} h={300} ph={0} col={c} shirt={c} hat={hat} point={clamp01(0.3 + 0.7 * Math.abs(Math.sin(t2 * 3 + ph * 6)) * (0.5 + 0.5 * up))} />)}
         <rect x={-40} y={FLY.top} width={1376} height={FLY.face - FLY.top} fill="#b3ada2" />
         <rect x={-40} y={FLY.top - 6} width={1376} height={8} fill="#f4f1e8" opacity={0.7} />
-        <Banner x0={190} x1={630} y={FLY.face + 6} h={230} text="STEP DOWN" bg="#f2efe6" fg="#b8322b" t={t} ph={0} size={104} />
+        <Banner x0={190} x1={630} y={FLY.face + 6} h={230} text="STEP DOWN" bg="#f2efe6" fg="#b8322b" t={t} ph={0} size={88} />
         <Banner x0={668} x1={1140} y={FLY.face + 6} h={230} text="HE IS INNOCENT" bg="#1e1c1e" fg="#f2efe6" t={t} ph={2} size={66} />
       </Live>
       <Live k={1.3} cam={cam}>
