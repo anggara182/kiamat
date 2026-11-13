@@ -10,7 +10,7 @@ export const BANNER = '#ece6d6', BANNER_D = '#c9c1ae';
 
 /* ------------------------------------------------------------------ shot 1: the overpass */
 /** road centre line (world) as a quadratic curve from near (u=0) to the city gate (u=1) */
-const P0: [number, number] = [260, 2420], P1: [number, number] = [-80, 1500], P2: [number, number] = [820, 1205];
+const P0: [number, number] = [520, 2420], P1: [number, number] = [120, 1560], P2: [number, number] = [820, 1205];
 export const road = (u: number): { x: number; y: number; s: number; w: number } => {
   const a = (1 - u) * (1 - u), b = 2 * u * (1 - u), c = u * u;
   const x = a * P0[0] + b * P1[0] + c * P2[0], y = a * P0[1] + b * P1[1] + c * P2[1];
@@ -28,7 +28,7 @@ export const MarchBand: React.FC = () => {
         <linearGradient id="mSky" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1240"><stop offset="0" stopColor="#2a2c48" /><stop offset="0.55" stopColor="#7a5a6e" /><stop offset="1" stopColor="#c98a6e" /></linearGradient>
         <radialGradient id="mSun" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#fff0cc" /><stop offset="0.25" stopColor="#e8c48a" stopOpacity={0.7} /><stop offset="1" stopColor="#e8c48a" stopOpacity={0} /></radialGradient>
         <linearGradient id="mGround" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#8a6a66" /><stop offset="0.3" stopColor="#4a3a4a" /><stop offset="1" stopColor="#1e1a2a" /></linearGradient>
-        <linearGradient id="mDeck" gradientUnits="userSpaceOnUse" x1="0" y1="1200" x2="0" y2="2400"><stop offset="0" stopColor="#b48a76" /><stop offset="1" stopColor="#3a3040" /></linearGradient>
+        <linearGradient id="mDeck" gradientUnits="userSpaceOnUse" x1="0" y1="1200" x2="0" y2="2400"><stop offset="0" stopColor="#d2a688" /><stop offset="1" stopColor="#7a6266" /></linearGradient>
       </defs>
       <rect x={0} y={0} width={W} height={H} fill="url(#mSky)" />
       <ellipse cx={980} cy={1180} rx={620} ry={420} fill="url(#mSun)" />
@@ -42,15 +42,14 @@ export const MarchBand: React.FC = () => {
       <rect x={0} y={1240} width={W} height={H - 1240} fill="url(#mGround)" />
       {/* lower roads and fields in the haze */}
       {[1320, 1420, 1560].map((y, i) => <path key={i} d={`M-20 ${y + 80} Q600 ${y - 40} ${W + 20} ${y + 30}`} stroke="#a07a72" strokeOpacity={0.35 - i * 0.08} strokeWidth={6 + i * 4} fill="none" />)}
-      {Array.from({ length: 30 }).map((_, i) => <circle key={`t${i}`} cx={r() * W} cy={1300 + r() * 500} r={10 + r() * 20} fill="#3a2e3e" opacity={0.6} />)}
       {/* overpass pillars below the deck */}
       {Array.from({ length: 9 }).map((_, i) => { const q = road(0.08 + i * 0.1); return <rect key={i} x={q.x - 40 * q.s} y={q.y + 30 * q.s} width={80 * q.s} height={900 * q.s} fill="#1e1a26" />; })}
       {/* deck + side walls */}
       <path d={deck} fill="url(#mDeck)" />
       {Array.from({ length: 40 }).map((_, i) => { const a = road(i / 40), b = road((i + 1) / 40); return <g key={i}><path d={`M${a.x - a.w / 2} ${a.y} L${b.x - b.w / 2} ${b.y} L${b.x - b.w / 2} ${b.y + 60 * b.s} L${a.x - a.w / 2} ${a.y + 60 * a.s} Z`} fill="#2a2232" /><path d={`M${a.x + a.w / 2} ${a.y} L${b.x + b.w / 2} ${b.y} L${b.x + b.w / 2} ${b.y + 60 * b.s} L${a.x + a.w / 2} ${a.y + 60 * a.s} Z`} fill="#2a2232" /></g>; })}
       {/* railings + lamp posts */}
-      <path d={edge(-1)} stroke="#d8b8a0" strokeOpacity={0.6} strokeWidth={4} fill="none" />
-      <path d={edge(1)} stroke="#d8b8a0" strokeOpacity={0.6} strokeWidth={4} fill="none" />
+      <path d={edge(-1)} stroke="#f0d0b0" strokeOpacity={0.8} strokeWidth={6} fill="none" />
+      <path d={edge(1)} stroke="#f0d0b0" strokeOpacity={0.8} strokeWidth={6} fill="none" />
       {Array.from({ length: 8 }).map((_, i) => { const q = road(0.05 + i * 0.12); return [-1, 1].map((sd) => <g key={`${i}${sd}`} fill="#1e1a26"><rect x={q.x + sd * q.w / 2 - 4 * q.s} y={q.y - 380 * q.s} width={8 * q.s} height={380 * q.s} /><rect x={q.x + sd * q.w / 2 - (sd > 0 ? 50 : 0) * q.s} y={q.y - 380 * q.s} width={50 * q.s} height={8 * q.s} /></g>); })}
     </g>
   );
@@ -71,7 +70,7 @@ export const Column: React.FC<{ t2: number; f: number; rim: string }> = ({ t2, f
         const bw = hh * 0.13;
         return (
           <g key={i}>
-            {m.banner && q.s < 0.42 && <g><rect x={x + bw * 0.6} y={y - hh * 1.9} width={hh * 0.025 + 1} height={hh * 1.4} fill="#2a2228" /><path d={`M${x + bw * 0.6} ${y - hh * 1.9} q${hh * 0.4} ${-hh * 0.06 + Math.sin(t2 * 5 + m.ph) * hh * 0.03} ${hh * 0.8} 0 l0 ${hh * 0.45} q${-hh * 0.4} ${hh * 0.05} ${-hh * 0.8} 0 Z`} fill={BANNER} /></g>}
+            {m.banner && q.s < 0.3 && <g><rect x={x + bw * 0.6} y={y - hh * 1.9} width={hh * 0.025 + 1} height={hh * 1.4} fill="#2a2228" /><path d={`M${x + bw * 0.6} ${y - hh * 1.9} q${hh * 0.25} ${-hh * 0.05 + Math.sin(t2 * 5 + m.ph) * hh * 0.03} ${hh * 0.5} 0 l0 ${hh * 0.3} q${-hh * 0.25} ${hh * 0.04} ${-hh * 0.5} 0 Z`} fill={BANNER} /></g>}
             <path d={`M${x - bw} ${y} L${x - bw * 1.1} ${y - hh * 0.78 - bob} Q${x} ${y - hh * 0.84 - bob} ${x + bw * 1.1} ${y - hh * 0.78 - bob} L${x + bw} ${y} Z`} fill={m.col} />
             <ellipse cx={x} cy={y - hh * 0.89 - bob} rx={bw * (m.hijab ? 0.75 : 0.6)} ry={bw * (m.hijab ? 0.85 : 0.7)} fill={m.hijab ? '#4a3a4e' : '#2a2026'} />
             {q.s > 0.3 && <path d={`M${x - bw * 0.6} ${y - hh * 0.95 - bob} Q${x} ${y - hh * 1.02 - bob} ${x + bw * 0.6} ${y - hh * 0.95 - bob}`} stroke={rim} strokeOpacity={0.6} strokeWidth={Math.max(1, bw * 0.12)} fill="none" />}

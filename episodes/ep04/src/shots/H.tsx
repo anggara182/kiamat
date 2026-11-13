@@ -35,6 +35,13 @@ export const S05: React.FC = () => {
   const dx = 720 - 120 * t2 - 70 * push;
   const ph = t2 * 6.5;
   const fN: [number, number] = [50 * Math.sin(ph), 0], fF: [number, number] = [-50 * Math.sin(ph), 0];
+  // the follower's hand rests on the doctor's UPPER ARM (below the shoulder joint), computed from the doctor's lean
+  const dLean = ((6 + 14 * stumble) * Math.PI) / 180;
+  const arm = { lx: 4, ly: -700 }; // doctor local (facing left), upper arm
+  const ax = arm.lx * Math.cos(dLean) - (arm.ly + 500) * Math.sin(dLean), ay = -500 + arm.lx * Math.sin(dLean) + (arm.ly + 500) * Math.cos(dLean);
+  const gx = dx - ax * 0.82, gy = HF.landing + ay * 0.82;
+  const fX = dx + 230 - 20 * push;
+  const grip: [number, number] = [(fX - gx) / 0.86 - 40 * push * 0, (gy - HF.landing) / 0.86];
   const cam: Cam = { zoom: 1.12, dx: 50 - 100 * EIO(p), dy: 0, ox: 540, oy: 1000 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#e6e8ea' }}>
@@ -43,7 +50,7 @@ export const S05: React.FC = () => {
         <Fr>
           <Side x={960} y={HF.landing} h={820} dir={-1} pal={FOLLOWER} head="short" male handN={[60, -480]} lean={3} bob={3 * Math.sin(t2 * 2)} rimO={0.3} />
           <Side x={dx} y={HF.landing} h={820} dir={-1} pal={DOCTOR} head="short" male face={stumble > 0.3 ? 'side' : 'back'} lean={6 + 14 * stumble} footN={fN} footF={fF} handN={[60, -470]} handF={[-30, -470]} bob={6 * Math.abs(Math.sin(ph))} rimO={0.4} />
-          <Side x={dx + 230 - 20 * push} y={HF.landing} h={860} dir={-1} pal={FOLLOWER} head="short" male lean={4 + 12 * push} footN={[-50 * Math.sin(ph), 0]} footF={[50 * Math.sin(ph), 0]} handN={[280 + 60 * push, -760 + 10 * push]} handF={[40, -480]} bob={6 * Math.abs(Math.cos(ph))} rimO={0.3} />
+          <Side x={fX} y={HF.landing} h={860} dir={-1} pal={FOLLOWER} head="short" male lean={4 + 6 * push} footN={[-50 * Math.sin(ph), 0]} footF={[50 * Math.sin(ph), 0]} handN={grip} handF={[40, -480]} bob={6 * Math.abs(Math.cos(ph))} rimO={0.3} />
         </Fr>
       </Live>
     </AbsoluteFill>
@@ -57,7 +64,7 @@ export const S06: React.FC = () => {
   const up = ramp(t2, tP - 0.18, tP, EOUT);
   const pump = 0.5 + 0.5 * Math.sin(t2 * 8);
   const mH = 900;
-  const handR: [number, number] = [lerp(70, 90, up), lerp(-860, -1040, up)];
+  const handR: [number, number] = [lerp(150, 110, up), lerp(-900, -1060, up)];
   const hr = toFrame(560, HF.landing, mH, 1, handR);
   const h = handheld(t, 0.35);
   const cam: Cam = { zoom: 1.12 + 0.08 * EIO(t / sec), dx: 0, dy: 0, tx: h.hx, ty: h.hy, ox: 560, oy: 650 };
@@ -67,8 +74,8 @@ export const S06: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           <Legs x={560} y={HF.landing} h={mH} c={LOUD.bottom} spread={20} />
-          <Front x={560} y={HF.landing} h={mH} pal={LOUD} head="short" handL={[-190, -1060 - 90 * pump]} handR={handR} tilt={-6 - 4 * up} eyes="open" bob={4 * pump} rimO={0.4} />
-          <Megaphone x={hr[0]} y={hr[1] - 10} ang={lerp(-150, -120, up)} s={1.1} />
+          <Front x={560} y={HF.landing} h={mH} pal={LOUD} head="short" handL={[-190, -1060 - 90 * pump]} handR={handR} tilt={-6 - 4 * up} eyes="open" mouth={0.6 + 0.4 * pump} bob={4 * pump} rimO={0.4} />
+          <Megaphone x={hr[0]} y={hr[1] - 10} ang={lerp(-25, -70, up)} s={1.0} />
         </Fr>
       </Live>
       <Live k={1.15} cam={cam}><Fr><CheerCrowd t2={t2} hype={ramp(t2, tP, tP + 0.2)} /></Fr></Live>
@@ -94,7 +101,7 @@ export const S07: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           <Legs x={540} y={mY} h={mH} c={LOUD.bottom} />
-          <Front x={540} y={mY} h={mH} pal={LOUDCOAT} head="short" handL={handL} handR={handR} tilt={8 * grab} eyes="open" bob={3 * Math.sin(t2 * 2.4)} rimO={0.2} />
+          <Front x={540} y={mY} h={mH} pal={LOUDCOAT} head="short" handL={handL} handR={handR} tilt={8 * grab} eyes="open" mouth={0.3 + 0.5 * grab * (0.5 + 0.5 * Math.sin(t2 * 9))} bob={3 * Math.sin(t2 * 2.4)} rimO={0.2} />
           {/* the coat is far too big: long hem past the knees, sleeves flapping */}
           <path d={`M${540 - 128} ${mY - 330} L${540 + 128} ${mY - 330} L${540 + 160} ${mY - 110} L${540 - 160} ${mY - 110} Z`} fill="#f2f4f2" />
           <path d={`M540 ${mY - 330} L540 ${mY - 110}`} stroke="#cfd4d0" strokeWidth={6} />

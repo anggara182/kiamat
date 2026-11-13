@@ -1,0 +1,869 @@
+{
+ "words": [
+  {
+   "text": "The",
+   "start": 0.214,
+   "end": 0.379,
+   "type": "word"
+  },
+  {
+   "text": "libraries",
+   "start": 0.399,
+   "end": 0.935,
+   "type": "word"
+  },
+  {
+   "text": "closed",
+   "start": 0.955,
+   "end": 1.305,
+   "type": "word"
+  },
+  {
+   "text": "on",
+   "start": 1.325,
+   "end": 1.471,
+   "type": "word"
+  },
+  {
+   "text": "a",
+   "start": 1.491,
+   "end": 1.618,
+   "type": "word"
+  },
+  {
+   "text": "Monday.",
+   "start": 1.638,
+   "end": 2.007,
+   "type": "word"
+  },
+  {
+   "text": "By",
+   "start": 2.484,
+   "end": 2.616,
+   "type": "word"
+  },
+  {
+   "text": "Friday,",
+   "start": 2.636,
+   "end": 2.972,
+   "type": "word"
+  },
+  {
+   "text": "no",
+   "start": 2.992,
+   "end": 3.124,
+   "type": "word"
+  },
+  {
+   "text": "one",
+   "start": 3.144,
+   "end": 3.41,
+   "type": "word"
+  },
+  {
+   "text": "remembered",
+   "start": 3.43,
+   "end": 4.053,
+   "type": "word"
+  },
+  {
+   "text": "why",
+   "start": 4.073,
+   "end": 4.223,
+   "type": "word"
+  },
+  {
+   "text": "they",
+   "start": 4.243,
+   "end": 4.41,
+   "type": "word"
+  },
+  {
+   "text": "had",
+   "start": 4.43,
+   "end": 4.579,
+   "type": "word"
+  },
+  {
+   "text": "been",
+   "start": 4.599,
+   "end": 4.766,
+   "type": "word"
+  },
+  {
+   "text": "open.",
+   "start": 4.786,
+   "end": 5.088,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 5.648,
+   "end": 5.849,
+   "type": "word"
+  },
+  {
+   "text": "old",
+   "start": 5.869,
+   "end": 6.07,
+   "type": "word"
+  },
+  {
+   "text": "teachers",
+   "start": 6.09,
+   "end": 6.559,
+   "type": "word"
+  },
+  {
+   "text": "grew",
+   "start": 6.579,
+   "end": 6.803,
+   "type": "word"
+  },
+  {
+   "text": "quiet.",
+   "start": 6.823,
+   "end": 7.093,
+   "type": "word"
+  },
+  {
+   "text": "One",
+   "start": 7.535,
+   "end": 7.856,
+   "type": "word"
+  },
+  {
+   "text": "by",
+   "start": 7.876,
+   "end": 8.037,
+   "type": "word"
+  },
+  {
+   "text": "one,",
+   "start": 8.057,
+   "end": 8.399,
+   "type": "word"
+  },
+  {
+   "text": "they",
+   "start": 8.419,
+   "end": 8.621,
+   "type": "word"
+  },
+  {
+   "text": "died.",
+   "start": 8.641,
+   "end": 8.865,
+   "type": "word"
+  },
+  {
+   "text": "And",
+   "start": 9.306,
+   "end": 9.458,
+   "type": "word"
+  },
+  {
+   "text": "no",
+   "start": 9.478,
+   "end": 9.613,
+   "type": "word"
+  },
+  {
+   "text": "one",
+   "start": 9.633,
+   "end": 9.905,
+   "type": "word"
+  },
+  {
+   "text": "took",
+   "start": 9.925,
+   "end": 10.095,
+   "type": "word"
+  },
+  {
+   "text": "their",
+   "start": 10.115,
+   "end": 10.304,
+   "type": "word"
+  },
+  {
+   "text": "place.",
+   "start": 10.324,
+   "end": 10.649,
+   "type": "word"
+  },
+  {
+   "text": "Children",
+   "start": 11.13,
+   "end": 11.541,
+   "type": "word"
+  },
+  {
+   "text": "learned",
+   "start": 11.561,
+   "end": 11.952,
+   "type": "word"
+  },
+  {
+   "text": "chants",
+   "start": 11.972,
+   "end": 12.208,
+   "type": "word"
+  },
+  {
+   "text": "instead",
+   "start": 12.228,
+   "end": 12.619,
+   "type": "word"
+  },
+  {
+   "text": "of",
+   "start": 12.639,
+   "end": 12.794,
+   "type": "word"
+  },
+  {
+   "text": "letters.",
+   "start": 12.814,
+   "end": 13.225,
+   "type": "word"
+  },
+  {
+   "text": "Parents",
+   "start": 13.665,
+   "end": 14.045,
+   "type": "word"
+  },
+  {
+   "text": "stopped",
+   "start": 14.065,
+   "end": 14.444,
+   "type": "word"
+  },
+  {
+   "text": "asking",
+   "start": 14.464,
+   "end": 14.823,
+   "type": "word"
+  },
+  {
+   "text": "questions",
+   "start": 14.843,
+   "end": 15.262,
+   "type": "word"
+  },
+  {
+   "text": "they",
+   "start": 15.282,
+   "end": 15.471,
+   "type": "word"
+  },
+  {
+   "text": "couldn't",
+   "start": 15.491,
+   "end": 15.759,
+   "type": "word"
+  },
+  {
+   "text": "answer.",
+   "start": 15.779,
+   "end": 16.158,
+   "type": "word"
+  },
+  {
+   "text": "And",
+   "start": 16.671,
+   "end": 16.825,
+   "type": "word"
+  },
+  {
+   "text": "on",
+   "start": 16.845,
+   "end": 16.982,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 17.002,
+   "end": 17.156,
+   "type": "word"
+  },
+  {
+   "text": "hill",
+   "start": 17.176,
+   "end": 17.348,
+   "type": "word"
+  },
+  {
+   "text": "outside",
+   "start": 17.368,
+   "end": 17.835,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 17.855,
+   "end": 18.01,
+   "type": "word"
+  },
+  {
+   "text": "city,",
+   "start": 18.03,
+   "end": 18.34,
+   "type": "word"
+  },
+  {
+   "text": "something",
+   "start": 18.36,
+   "end": 18.863,
+   "type": "word"
+  },
+  {
+   "text": "old",
+   "start": 18.883,
+   "end": 19.037,
+   "type": "word"
+  },
+  {
+   "text": "was",
+   "start": 19.057,
+   "end": 19.212,
+   "type": "word"
+  },
+  {
+   "text": "uncovered.",
+   "start": 19.232,
+   "end": 19.873,
+   "type": "word"
+  },
+  {
+   "text": "A",
+   "start": 20.313,
+   "end": 20.455,
+   "type": "word"
+  },
+  {
+   "text": "stone",
+   "start": 20.475,
+   "end": 20.843,
+   "type": "word"
+  },
+  {
+   "text": "figure,",
+   "start": 20.863,
+   "end": 21.414,
+   "type": "word"
+  },
+  {
+   "text": "buried",
+   "start": 21.8,
+   "end": 22.227,
+   "type": "word"
+  },
+  {
+   "text": "for",
+   "start": 22.247,
+   "end": 22.451,
+   "type": "word"
+  },
+  {
+   "text": "centuries.",
+   "start": 22.471,
+   "end": 23.144,
+   "type": "word"
+  },
+  {
+   "text": "At",
+   "start": 23.548,
+   "end": 23.766,
+   "type": "word"
+  },
+  {
+   "text": "first,",
+   "start": 23.786,
+   "end": 24.112,
+   "type": "word"
+  },
+  {
+   "text": "people",
+   "start": 24.574,
+   "end": 24.902,
+   "type": "word"
+  },
+  {
+   "text": "only",
+   "start": 24.922,
+   "end": 25.214,
+   "type": "word"
+  },
+  {
+   "text": "came",
+   "start": 25.234,
+   "end": 25.526,
+   "type": "word"
+  },
+  {
+   "text": "to",
+   "start": 25.546,
+   "end": 25.682,
+   "type": "word"
+  },
+  {
+   "text": "look.",
+   "start": 25.702,
+   "end": 25.893,
+   "type": "word"
+  },
+  {
+   "text": "Then",
+   "start": 26.355,
+   "end": 26.568,
+   "type": "word"
+  },
+  {
+   "text": "they",
+   "start": 26.588,
+   "end": 26.801,
+   "type": "word"
+  },
+  {
+   "text": "brought",
+   "start": 26.821,
+   "end": 27.099,
+   "type": "word"
+  },
+  {
+   "text": "flowers.",
+   "start": 27.119,
+   "end": 27.564,
+   "type": "word"
+  },
+  {
+   "text": "Then",
+   "start": 27.951,
+   "end": 28.13,
+   "type": "word"
+  },
+  {
+   "text": "they",
+   "start": 28.15,
+   "end": 28.329,
+   "type": "word"
+  },
+  {
+   "text": "began",
+   "start": 28.349,
+   "end": 28.672,
+   "type": "word"
+  },
+  {
+   "text": "to",
+   "start": 28.692,
+   "end": 28.834,
+   "type": "word"
+  },
+  {
+   "text": "walk",
+   "start": 28.854,
+   "end": 29.033,
+   "type": "word"
+  },
+  {
+   "text": "around",
+   "start": 29.053,
+   "end": 29.395,
+   "type": "word"
+  },
+  {
+   "text": "it\u2026",
+   "start": 29.415,
+   "end": 29.576,
+   "type": "word"
+  },
+  {
+   "text": "slowly\u2026",
+   "start": 29.941,
+   "end": 30.504,
+   "type": "word"
+  },
+  {
+   "text": "in",
+   "start": 30.988,
+   "end": 31.187,
+   "type": "word"
+  },
+  {
+   "text": "circles.",
+   "start": 31.207,
+   "end": 31.728,
+   "type": "word"
+  },
+  {
+   "text": "No",
+   "start": 32.114,
+   "end": 32.262,
+   "type": "word"
+  },
+  {
+   "text": "one",
+   "start": 32.282,
+   "end": 32.578,
+   "type": "word"
+  },
+  {
+   "text": "told",
+   "start": 32.598,
+   "end": 32.785,
+   "type": "word"
+  },
+  {
+   "text": "them",
+   "start": 32.805,
+   "end": 32.992,
+   "type": "word"
+  },
+  {
+   "text": "to.",
+   "start": 33.012,
+   "end": 33.179,
+   "type": "word"
+  },
+  {
+   "text": "It",
+   "start": 33.54,
+   "end": 33.72,
+   "type": "word"
+  },
+  {
+   "text": "just",
+   "start": 33.74,
+   "end": 33.966,
+   "type": "word"
+  },
+  {
+   "text": "felt",
+   "start": 33.986,
+   "end": 34.212,
+   "type": "word"
+  },
+  {
+   "text": "right.",
+   "start": 34.232,
+   "end": 34.504,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 35.033,
+   "end": 35.191,
+   "type": "word"
+  },
+  {
+   "text": "Prophet",
+   "start": 35.211,
+   "end": 35.566,
+   "type": "word"
+  },
+  {
+   "text": "said",
+   "start": 35.586,
+   "end": 35.763,
+   "type": "word"
+  },
+  {
+   "text": "that",
+   "start": 35.783,
+   "end": 35.96,
+   "type": "word"
+  },
+  {
+   "text": "before",
+   "start": 35.98,
+   "end": 36.439,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 36.459,
+   "end": 36.617,
+   "type": "word"
+  },
+  {
+   "text": "Hour,",
+   "start": 36.637,
+   "end": 36.832,
+   "type": "word"
+  },
+  {
+   "text": "knowledge",
+   "start": 37.238,
+   "end": 37.718,
+   "type": "word"
+  },
+  {
+   "text": "would",
+   "start": 37.738,
+   "end": 37.92,
+   "type": "word"
+  },
+  {
+   "text": "be",
+   "start": 37.94,
+   "end": 38.069,
+   "type": "word"
+  },
+  {
+   "text": "taken",
+   "start": 38.089,
+   "end": 38.386,
+   "type": "word"
+  },
+  {
+   "text": "away,",
+   "start": 38.406,
+   "end": 38.702,
+   "type": "word"
+  },
+  {
+   "text": "ignorance",
+   "start": 39.104,
+   "end": 39.747,
+   "type": "word"
+  },
+  {
+   "text": "would",
+   "start": 39.767,
+   "end": 39.964,
+   "type": "word"
+  },
+  {
+   "text": "spread,",
+   "start": 39.984,
+   "end": 40.218,
+   "type": "word"
+  },
+  {
+   "text": "and",
+   "start": 40.62,
+   "end": 40.786,
+   "type": "word"
+  },
+  {
+   "text": "some",
+   "start": 40.806,
+   "end": 41.118,
+   "type": "word"
+  },
+  {
+   "text": "would",
+   "start": 41.138,
+   "end": 41.341,
+   "type": "word"
+  },
+  {
+   "text": "return",
+   "start": 41.361,
+   "end": 41.711,
+   "type": "word"
+  },
+  {
+   "text": "to",
+   "start": 41.731,
+   "end": 41.877,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 41.897,
+   "end": 42.063,
+   "type": "word"
+  },
+  {
+   "text": "idols",
+   "start": 42.083,
+   "end": 42.414,
+   "type": "word"
+  },
+  {
+   "text": "of",
+   "start": 42.434,
+   "end": 42.58,
+   "type": "word"
+  },
+  {
+   "text": "old.",
+   "start": 42.6,
+   "end": 42.784,
+   "type": "word"
+  },
+  {
+   "text": "That",
+   "start": 43.215,
+   "end": 43.543,
+   "type": "word"
+  },
+  {
+   "text": "spring,",
+   "start": 43.563,
+   "end": 43.988,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 44.421,
+   "end": 44.609,
+   "type": "word"
+  },
+  {
+   "text": "rain",
+   "start": 44.629,
+   "end": 44.838,
+   "type": "word"
+  },
+  {
+   "text": "came",
+   "start": 44.858,
+   "end": 45.211,
+   "type": "word"
+  },
+  {
+   "text": "early.",
+   "start": 45.231,
+   "end": 45.627,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 46.127,
+   "end": 46.302,
+   "type": "word"
+  },
+  {
+   "text": "harvest",
+   "start": 46.322,
+   "end": 46.711,
+   "type": "word"
+  },
+  {
+   "text": "was",
+   "start": 46.731,
+   "end": 46.906,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 46.926,
+   "end": 47.1,
+   "type": "word"
+  },
+  {
+   "text": "biggest",
+   "start": 47.12,
+   "end": 47.51,
+   "type": "word"
+  },
+  {
+   "text": "anyone",
+   "start": 47.53,
+   "end": 48.033,
+   "type": "word"
+  },
+  {
+   "text": "had",
+   "start": 48.053,
+   "end": 48.228,
+   "type": "word"
+  },
+  {
+   "text": "ever",
+   "start": 48.248,
+   "end": 48.577,
+   "type": "word"
+  },
+  {
+   "text": "seen.",
+   "start": 48.597,
+   "end": 48.812,
+   "type": "word"
+  },
+  {
+   "text": "And",
+   "start": 49.268,
+   "end": 49.424,
+   "type": "word"
+  },
+  {
+   "text": "with",
+   "start": 49.444,
+   "end": 49.617,
+   "type": "word"
+  },
+  {
+   "text": "it",
+   "start": 49.637,
+   "end": 49.774,
+   "type": "word"
+  },
+  {
+   "text": "came",
+   "start": 49.794,
+   "end": 50.476,
+   "type": "word"
+  },
+  {
+   "text": "more",
+   "start": 50.496,
+   "end": 50.791,
+   "type": "word"
+  },
+  {
+   "text": "money",
+   "start": 50.811,
+   "end": 51.124,
+   "type": "word"
+  },
+  {
+   "text": "than",
+   "start": 51.144,
+   "end": 51.317,
+   "type": "word"
+  },
+  {
+   "text": "anyone",
+   "start": 51.337,
+   "end": 51.789,
+   "type": "word"
+  },
+  {
+   "text": "knew",
+   "start": 51.809,
+   "end": 51.983,
+   "type": "word"
+  },
+  {
+   "text": "what",
+   "start": 52.003,
+   "end": 52.176,
+   "type": "word"
+  },
+  {
+   "text": "to",
+   "start": 52.196,
+   "end": 52.334,
+   "type": "word"
+  },
+  {
+   "text": "do",
+   "start": 52.354,
+   "end": 52.491,
+   "type": "word"
+  },
+  {
+   "text": "with.",
+   "start": 52.511,
+   "end": 52.703,
+   "type": "word"
+  }
+ ],
+ "source": "silence-aligned (no STT transcript available)"
+}

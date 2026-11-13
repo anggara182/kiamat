@@ -21,7 +21,7 @@ export type Look = {
   far?: string; // far limbs (darker)
   skin?: string; // head/hands (defaults to body)
   rim?: string; rimO?: number; // optional rim along the back/top
-  hat?: 'peci' | 'hardhat' | 'hijab' | 'cap' | 'helmet' | null;
+  hat?: 'peci' | 'hardhat' | 'hijab' | 'cap' | 'helmet' | 'caping' | null;
   hatCol?: string;
   skirt?: boolean; // long skirt (replaces the leg silhouette, legs show below the hem)
   phone?: boolean; // phone in the near hand, screen glow
@@ -99,6 +99,7 @@ export const Figure: React.FC<{ x: number; y: number; h: number; dir?: number; p
     switch (look.hat) {
       case 'peci': return <path d={`M ${hd[0] - 5.6} ${hd[1] - 3.2} L ${hd[0] - 5.2} ${hd[1] - 7.6} Q ${hd[0]} ${hd[1] - 8.6} ${hd[0] + 5.2} ${hd[1] - 7.6} L ${hd[0] + 5.6} ${hd[1] - 3.2} Z`} fill={c} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />;
       case 'hardhat': return <g transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`}><path d={`M ${hd[0] - 6.4} ${hd[1] - 3} Q ${hd[0] - 6} ${hd[1] - 11.5} ${hd[0] + 0.5} ${hd[1] - 11.2} Q ${hd[0] + 6.6} ${hd[1] - 10.6} ${hd[0] + 6.4} ${hd[1] - 3} Z`} fill={c} /><rect x={hd[0] - 7.6} y={hd[1] - 3.6} width={16.4} height={1.8} rx={0.8} fill={c} /></g>;
+      case 'caping': return <g transform={`rotate(${headRot * 0.6} ${hd[0]} ${hd[1]})`}><path d={`M ${hd[0] - 17} ${hd[1] - 3} L ${hd[0] + 0.5} ${hd[1] - 15} L ${hd[0] + 18} ${hd[1] - 3} Q ${hd[0]} ${hd[1] - 1} ${hd[0] - 17} ${hd[1] - 3} Z`} fill={c} /><path d={`M ${hd[0] - 17} ${hd[1] - 3} Q ${hd[0]} ${hd[1] - 1} ${hd[0] + 18} ${hd[1] - 3}`} stroke="#6a5a3a" strokeWidth={0.8} fill="none" /></g>;
       case 'cap': return <g transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`}><path d={`M ${hd[0] - 5.6} ${hd[1] - 3} Q ${hd[0] - 5} ${hd[1] - 9.4} ${hd[0] + 1} ${hd[1] - 8.8} Q ${hd[0] + 5.6} ${hd[1] - 8} ${hd[0] + 5.4} ${hd[1] - 3} Z`} fill={c} /><path d={`M ${hd[0] + 3} ${hd[1] - 3.6} L ${hd[0] + 10} ${hd[1] - 2.6}`} stroke={c} strokeWidth={1.6} strokeLinecap="round" /></g>;
       case 'hijab': return <path d={`M ${hd[0] - 6.4} ${hd[1] + 1} Q ${hd[0] - 7} ${hd[1] - 9.5} ${hd[0] + 0.5} ${hd[1] - 9.4} Q ${hd[0] + 7} ${hd[1] - 9} ${hd[0] + 6.6} ${hd[1] + 0.5} Q ${hd[0] + 6} ${hd[1] + 6} ${sh[0] + px * 8} ${sh[1] + py * 8 + 4} L ${sh[0] - px * 8} ${sh[1] - py * 8 + 5} Q ${hd[0] - 7.4} ${hd[1] + 6} ${hd[0] - 6.4} ${hd[1] + 1} Z`} fill={c} />;
       default: return null;

@@ -71,7 +71,7 @@ const HeadSide: React.FC<{ kind: HeadKind; pal: Pal; rim: string; rimO: number }
 };
 
 /** frontal head, centre (0,0). eyes: none | down | open (tiny marks only) */
-export const HeadFront: React.FC<{ kind: HeadKind; pal: Pal; rim: string; rimO: number; eyes?: 'none' | 'down' | 'open' }> = ({ kind, pal, rim, rimO, eyes = 'none' }) => {
+export const HeadFront: React.FC<{ kind: HeadKind; pal: Pal; rim: string; rimO: number; eyes?: 'none' | 'down' | 'open'; mouth?: number }> = ({ kind, pal, rim, rimO, eyes = 'none', mouth = 0 }) => {
   const { skin, skinD, headC, headD, dots } = pal;
   return (
     <g>
@@ -86,6 +86,7 @@ export const HeadFront: React.FC<{ kind: HeadKind; pal: Pal; rim: string; rimO: 
       {kind === 'bob' && <path d="M-66 50 Q-78 -78 0 -80 Q78 -78 66 50 L50 50 Q52 -20 30 -34 Q0 -20 -30 -34 Q-52 -20 -50 50 Z" fill={headC} />}
       {eyes === 'down' && <g stroke={skinD} strokeWidth={5} strokeLinecap="round" fill="none"><path d="M-30 12 Q-20 18 -10 12" /><path d="M10 12 Q20 18 30 12" /></g>}
       {eyes === 'open' && <g fill="#1a1414"><circle cx={-20} cy={4} r={5} /><circle cx={20} cy={4} r={5} /></g>}
+      {mouth > 0.05 && <ellipse cx={0} cy={36} rx={10 + 8 * mouth} ry={4 + 14 * mouth} fill="#2a1214" />}
     </g>
   );
 };
@@ -170,10 +171,10 @@ export const toFrame = (x: number, y: number, h: number, dir: 1 | -1, p: P2): P2
 /* ---------------- frontal upper body (behind a counter / shelf) ---------------- */
 export type FrontProps = {
   x: number; y: number; h: number; pal: Pal; head: HeadKind; handL: P2; handR: P2; tilt?: number; headDy?: number;
-  eyes?: 'none' | 'down' | 'open'; bob?: number; rimO?: number; cross?: boolean;
+  eyes?: 'none' | 'down' | 'open'; bob?: number; rimO?: number; cross?: boolean; mouth?: number;
 };
 /** frontal figure (origin feet), legs omitted (always behind furniture). L = screen-left. */
-export const Front: React.FC<FrontProps> = ({ x, y, h, pal, head, handL, handR, tilt = 0, headDy = 0, eyes = 'none', bob = 0, rimO = 0.7, cross = false }) => {
+export const Front: React.FC<FrontProps> = ({ x, y, h, pal, head, handL, handR, tilt = 0, headDy = 0, eyes = 'none', bob = 0, rimO = 0.7, cross = false, mouth = 0 }) => {
   const s = h / 1000, rim = pal.rim ?? '#ffe0b8';
   const shL: P2 = [-104, -806], shR: P2 = [104, -806];
   const aL = ik2(shL[0], shL[1], handL[0], handL[1], 185, 165, 'out');
@@ -198,7 +199,7 @@ export const Front: React.FC<FrontProps> = ({ x, y, h, pal, head, handL, handR, 
       <path d="M-112 -812 L-96 -580 L-118 -300" stroke={rim} strokeWidth={4} fill="none" opacity={rimO * 0.6} />
       <rect x={-20} y={-850} width={40} height={50} fill={pal.skinD} />
       <g transform={`translate(0 ${-930 + headDy}) rotate(${tilt})`}>
-        <HeadFront kind={head} pal={pal} rim={rim} rimO={rimO} eyes={eyes} />
+        <HeadFront kind={head} pal={pal} rim={rim} rimO={rimO} eyes={eyes} mouth={mouth} />
       </g>
       {cross && (
         <g>

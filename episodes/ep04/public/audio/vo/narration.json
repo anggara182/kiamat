@@ -1,0 +1,923 @@
+{
+ "words": [
+  {
+   "text": "In",
+   "start": 0.214,
+   "end": 0.374,
+   "type": "word"
+  },
+  {
+   "text": "thirty",
+   "start": 0.394,
+   "end": 0.777,
+   "type": "word"
+  },
+  {
+   "text": "days,",
+   "start": 0.797,
+   "end": 1.02,
+   "type": "word"
+  },
+  {
+   "text": "his",
+   "start": 1.04,
+   "end": 1.221,
+   "type": "word"
+  },
+  {
+   "text": "followers",
+   "start": 1.241,
+   "end": 1.824,
+   "type": "word"
+  },
+  {
+   "text": "took",
+   "start": 1.844,
+   "end": 2.046,
+   "type": "word"
+  },
+  {
+   "text": "eleven",
+   "start": 2.066,
+   "end": 2.587,
+   "type": "word"
+  },
+  {
+   "text": "cities.",
+   "start": 2.607,
+   "end": 3.011,
+   "type": "word"
+  },
+  {
+   "text": "They",
+   "start": 3.399,
+   "end": 3.603,
+   "type": "word"
+  },
+  {
+   "text": "didn't",
+   "start": 3.623,
+   "end": 3.868,
+   "type": "word"
+  },
+  {
+   "text": "need",
+   "start": 3.888,
+   "end": 4.091,
+   "type": "word"
+  },
+  {
+   "text": "weapons.",
+   "start": 4.111,
+   "end": 4.537,
+   "type": "word"
+  },
+  {
+   "text": "They",
+   "start": 4.923,
+   "end": 5.134,
+   "type": "word"
+  },
+  {
+   "text": "only",
+   "start": 5.154,
+   "end": 5.51,
+   "type": "word"
+  },
+  {
+   "text": "needed",
+   "start": 5.53,
+   "end": 5.93,
+   "type": "word"
+  },
+  {
+   "text": "crowds.",
+   "start": 5.95,
+   "end": 6.227,
+   "type": "word"
+  },
+  {
+   "text": "In",
+   "start": 6.625,
+   "end": 6.763,
+   "type": "word"
+  },
+  {
+   "text": "every",
+   "start": 6.783,
+   "end": 7.218,
+   "type": "word"
+  },
+  {
+   "text": "city,",
+   "start": 7.238,
+   "end": 7.551,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 7.571,
+   "end": 7.727,
+   "type": "word"
+  },
+  {
+   "text": "same",
+   "start": 7.747,
+   "end": 8.042,
+   "type": "word"
+  },
+  {
+   "text": "thing",
+   "start": 8.062,
+   "end": 8.255,
+   "type": "word"
+  },
+  {
+   "text": "happened.",
+   "start": 8.275,
+   "end": 8.782,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 9.265,
+   "end": 9.403,
+   "type": "word"
+  },
+  {
+   "text": "people",
+   "start": 9.423,
+   "end": 9.721,
+   "type": "word"
+  },
+  {
+   "text": "who",
+   "start": 9.741,
+   "end": 9.88,
+   "type": "word"
+  },
+  {
+   "text": "knew",
+   "start": 9.9,
+   "end": 10.055,
+   "type": "word"
+  },
+  {
+   "text": "how",
+   "start": 10.075,
+   "end": 10.213,
+   "type": "word"
+  },
+  {
+   "text": "things",
+   "start": 10.233,
+   "end": 10.421,
+   "type": "word"
+  },
+  {
+   "text": "worked",
+   "start": 10.441,
+   "end": 10.739,
+   "type": "word"
+  },
+  {
+   "text": "were",
+   "start": 10.759,
+   "end": 11.023,
+   "type": "word"
+  },
+  {
+   "text": "pushed",
+   "start": 11.043,
+   "end": 11.341,
+   "type": "word"
+  },
+  {
+   "text": "aside\u2026",
+   "start": 11.361,
+   "end": 11.768,
+   "type": "word"
+  },
+  {
+   "text": "and",
+   "start": 12.175,
+   "end": 12.34,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 12.36,
+   "end": 12.526,
+   "type": "word"
+  },
+  {
+   "text": "loudest",
+   "start": 12.546,
+   "end": 12.916,
+   "type": "word"
+  },
+  {
+   "text": "voices",
+   "start": 12.936,
+   "end": 13.286,
+   "type": "word"
+  },
+  {
+   "text": "took",
+   "start": 13.306,
+   "end": 13.491,
+   "type": "word"
+  },
+  {
+   "text": "their",
+   "start": 13.511,
+   "end": 13.715,
+   "type": "word"
+  },
+  {
+   "text": "place.",
+   "start": 13.735,
+   "end": 14.085,
+   "type": "word"
+  },
+  {
+   "text": "A",
+   "start": 14.645,
+   "end": 14.773,
+   "type": "word"
+  },
+  {
+   "text": "man",
+   "start": 14.793,
+   "end": 14.959,
+   "type": "word"
+  },
+  {
+   "text": "with",
+   "start": 14.979,
+   "end": 15.164,
+   "type": "word"
+  },
+  {
+   "text": "no",
+   "start": 15.184,
+   "end": 15.331,
+   "type": "word"
+  },
+  {
+   "text": "training",
+   "start": 15.351,
+   "end": 15.742,
+   "type": "word"
+  },
+  {
+   "text": "ran",
+   "start": 15.762,
+   "end": 15.928,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 15.948,
+   "end": 16.114,
+   "type": "word"
+  },
+  {
+   "text": "hospital.",
+   "start": 16.134,
+   "end": 16.673,
+   "type": "word"
+  },
+  {
+   "text": "A",
+   "start": 17.296,
+   "end": 17.432,
+   "type": "word"
+  },
+  {
+   "text": "man",
+   "start": 17.452,
+   "end": 17.63,
+   "type": "word"
+  },
+  {
+   "text": "who",
+   "start": 17.65,
+   "end": 17.828,
+   "type": "word"
+  },
+  {
+   "text": "could",
+   "start": 17.848,
+   "end": 18.066,
+   "type": "word"
+  },
+  {
+   "text": "barely",
+   "start": 18.086,
+   "end": 18.598,
+   "type": "word"
+  },
+  {
+   "text": "read",
+   "start": 18.618,
+   "end": 18.989,
+   "type": "word"
+  },
+  {
+   "text": "rewrote",
+   "start": 19.009,
+   "end": 19.541,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 19.561,
+   "end": 19.739,
+   "type": "word"
+  },
+  {
+   "text": "schools.",
+   "start": 19.759,
+   "end": 20.039,
+   "type": "word"
+  },
+  {
+   "text": "A",
+   "start": 20.57,
+   "end": 20.696,
+   "type": "word"
+  },
+  {
+   "text": "new",
+   "start": 20.716,
+   "end": 20.881,
+   "type": "word"
+  },
+  {
+   "text": "bridge",
+   "start": 20.901,
+   "end": 21.25,
+   "type": "word"
+  },
+  {
+   "text": "was",
+   "start": 21.27,
+   "end": 21.435,
+   "type": "word"
+  },
+  {
+   "text": "built",
+   "start": 21.455,
+   "end": 21.658,
+   "type": "word"
+  },
+  {
+   "text": "by",
+   "start": 21.678,
+   "end": 21.824,
+   "type": "word"
+  },
+  {
+   "text": "people",
+   "start": 21.844,
+   "end": 22.193,
+   "type": "word"
+  },
+  {
+   "text": "who",
+   "start": 22.213,
+   "end": 22.378,
+   "type": "word"
+  },
+  {
+   "text": "had",
+   "start": 22.398,
+   "end": 22.563,
+   "type": "word"
+  },
+  {
+   "text": "never",
+   "start": 22.583,
+   "end": 22.913,
+   "type": "word"
+  },
+  {
+   "text": "built",
+   "start": 22.933,
+   "end": 23.136,
+   "type": "word"
+  },
+  {
+   "text": "anything.",
+   "start": 23.156,
+   "end": 23.69,
+   "type": "word"
+  },
+  {
+   "text": "On",
+   "start": 24.327,
+   "end": 24.479,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 24.499,
+   "end": 24.671,
+   "type": "word"
+  },
+  {
+   "text": "day",
+   "start": 24.691,
+   "end": 24.863,
+   "type": "word"
+  },
+  {
+   "text": "it",
+   "start": 24.883,
+   "end": 25.036,
+   "type": "word"
+  },
+  {
+   "text": "opened,",
+   "start": 25.056,
+   "end": 25.573,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 25.593,
+   "end": 25.765,
+   "type": "word"
+  },
+  {
+   "text": "crowds",
+   "start": 25.785,
+   "end": 26.017,
+   "type": "word"
+  },
+  {
+   "text": "cheered.",
+   "start": 26.037,
+   "end": 26.441,
+   "type": "word"
+  },
+  {
+   "text": "On",
+   "start": 26.9,
+   "end": 27.109,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 27.129,
+   "end": 27.365,
+   "type": "word"
+  },
+  {
+   "text": "third",
+   "start": 27.385,
+   "end": 27.674,
+   "type": "word"
+  },
+  {
+   "text": "night,",
+   "start": 27.694,
+   "end": 28.01,
+   "type": "word"
+  },
+  {
+   "text": "it",
+   "start": 28.03,
+   "end": 28.239,
+   "type": "word"
+  },
+  {
+   "text": "fell.",
+   "start": 28.259,
+   "end": 28.548,
+   "type": "word"
+  },
+  {
+   "text": "No",
+   "start": 28.954,
+   "end": 29.084,
+   "type": "word"
+  },
+  {
+   "text": "one",
+   "start": 29.104,
+   "end": 29.365,
+   "type": "word"
+  },
+  {
+   "text": "was",
+   "start": 29.385,
+   "end": 29.532,
+   "type": "word"
+  },
+  {
+   "text": "on",
+   "start": 29.552,
+   "end": 29.681,
+   "type": "word"
+  },
+  {
+   "text": "it.",
+   "start": 29.701,
+   "end": 29.848,
+   "type": "word"
+  },
+  {
+   "text": "Not",
+   "start": 30.148,
+   "end": 30.387,
+   "type": "word"
+  },
+  {
+   "text": "yet.",
+   "start": 30.407,
+   "end": 30.673,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 31.021,
+   "end": 31.164,
+   "type": "word"
+  },
+  {
+   "text": "engineers",
+   "start": 31.184,
+   "end": 31.655,
+   "type": "word"
+  },
+  {
+   "text": "who",
+   "start": 31.675,
+   "end": 31.818,
+   "type": "word"
+  },
+  {
+   "text": "warned",
+   "start": 31.838,
+   "end": 32.145,
+   "type": "word"
+  },
+  {
+   "text": "them",
+   "start": 32.165,
+   "end": 32.325,
+   "type": "word"
+  },
+  {
+   "text": "had",
+   "start": 32.345,
+   "end": 32.489,
+   "type": "word"
+  },
+  {
+   "text": "already",
+   "start": 32.509,
+   "end": 32.945,
+   "type": "word"
+  },
+  {
+   "text": "been",
+   "start": 32.965,
+   "end": 33.126,
+   "type": "word"
+  },
+  {
+   "text": "silenced.",
+   "start": 33.146,
+   "end": 33.616,
+   "type": "word"
+  },
+  {
+   "text": "A",
+   "start": 34.247,
+   "end": 34.411,
+   "type": "word"
+  },
+  {
+   "text": "man",
+   "start": 34.431,
+   "end": 34.644,
+   "type": "word"
+  },
+  {
+   "text": "once",
+   "start": 34.664,
+   "end": 35.06,
+   "type": "word"
+  },
+  {
+   "text": "asked",
+   "start": 35.08,
+   "end": 35.501,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 35.521,
+   "end": 35.733,
+   "type": "word"
+  },
+  {
+   "text": "Prophet",
+   "start": 35.753,
+   "end": 36.222,
+   "type": "word"
+  },
+  {
+   "text": "when",
+   "start": 36.242,
+   "end": 36.478,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 36.498,
+   "end": 36.711,
+   "type": "word"
+  },
+  {
+   "text": "Hour",
+   "start": 36.731,
+   "end": 36.967,
+   "type": "word"
+  },
+  {
+   "text": "would",
+   "start": 36.987,
+   "end": 37.68,
+   "type": "word"
+  },
+  {
+   "text": "come.",
+   "start": 37.7,
+   "end": 38.121,
+   "type": "word"
+  },
+  {
+   "text": "He",
+   "start": 38.559,
+   "end": 38.71,
+   "type": "word"
+  },
+  {
+   "text": "said:",
+   "start": 38.73,
+   "end": 38.941,
+   "type": "word"
+  },
+  {
+   "text": "when",
+   "start": 38.961,
+   "end": 39.152,
+   "type": "word"
+  },
+  {
+   "text": "trust",
+   "start": 39.172,
+   "end": 39.383,
+   "type": "word"
+  },
+  {
+   "text": "is",
+   "start": 39.403,
+   "end": 39.554,
+   "type": "word"
+  },
+  {
+   "text": "lost.",
+   "start": 39.574,
+   "end": 39.785,
+   "type": "word"
+  },
+  {
+   "text": "And",
+   "start": 40.268,
+   "end": 40.428,
+   "type": "word"
+  },
+  {
+   "text": "when",
+   "start": 40.448,
+   "end": 40.627,
+   "type": "word"
+  },
+  {
+   "text": "authority",
+   "start": 40.647,
+   "end": 41.292,
+   "type": "word"
+  },
+  {
+   "text": "is",
+   "start": 41.312,
+   "end": 41.454,
+   "type": "word"
+  },
+  {
+   "text": "handed",
+   "start": 41.474,
+   "end": 41.814,
+   "type": "word"
+  },
+  {
+   "text": "to",
+   "start": 41.834,
+   "end": 41.975,
+   "type": "word"
+  },
+  {
+   "text": "those",
+   "start": 41.995,
+   "end": 42.317,
+   "type": "word"
+  },
+  {
+   "text": "unfit",
+   "start": 42.337,
+   "end": 42.659,
+   "type": "word"
+  },
+  {
+   "text": "for",
+   "start": 42.679,
+   "end": 42.839,
+   "type": "word"
+  },
+  {
+   "text": "it.",
+   "start": 42.859,
+   "end": 43.019,
+   "type": "word"
+  },
+  {
+   "text": "Across",
+   "start": 43.601,
+   "end": 43.979,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 43.999,
+   "end": 44.178,
+   "type": "word"
+  },
+  {
+   "text": "country,",
+   "start": 44.198,
+   "end": 44.618,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 44.947,
+   "end": 45.146,
+   "type": "word"
+  },
+  {
+   "text": "experts",
+   "start": 45.166,
+   "end": 45.609,
+   "type": "word"
+  },
+  {
+   "text": "packed",
+   "start": 45.629,
+   "end": 46.048,
+   "type": "word"
+  },
+  {
+   "text": "their",
+   "start": 46.068,
+   "end": 46.313,
+   "type": "word"
+  },
+  {
+   "text": "bags.",
+   "start": 46.333,
+   "end": 46.579,
+   "type": "word"
+  },
+  {
+   "text": "The",
+   "start": 47.046,
+   "end": 47.244,
+   "type": "word"
+  },
+  {
+   "text": "loud",
+   "start": 47.264,
+   "end": 47.486,
+   "type": "word"
+  },
+  {
+   "text": "ones",
+   "start": 47.506,
+   "end": 47.878,
+   "type": "word"
+  },
+  {
+   "text": "stayed.",
+   "start": 47.898,
+   "end": 48.188,
+   "type": "word"
+  },
+  {
+   "text": "And",
+   "start": 48.633,
+   "end": 48.77,
+   "type": "word"
+  },
+  {
+   "text": "in",
+   "start": 48.79,
+   "end": 48.912,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 48.932,
+   "end": 49.069,
+   "type": "word"
+  },
+  {
+   "text": "capital,",
+   "start": 49.089,
+   "end": 49.526,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 49.895,
+   "end": 50.073,
+   "type": "word"
+  },
+  {
+   "text": "man",
+   "start": 50.093,
+   "end": 50.27,
+   "type": "word"
+  },
+  {
+   "text": "from",
+   "start": 50.29,
+   "end": 50.488,
+   "type": "word"
+  },
+  {
+   "text": "nowhere",
+   "start": 50.508,
+   "end": 51.039,
+   "type": "word"
+  },
+  {
+   "text": "gave",
+   "start": 51.059,
+   "end": 51.73,
+   "type": "word"
+  },
+  {
+   "text": "his",
+   "start": 51.75,
+   "end": 51.928,
+   "type": "word"
+  },
+  {
+   "text": "next",
+   "start": 51.948,
+   "end": 52.145,
+   "type": "word"
+  },
+  {
+   "text": "order:",
+   "start": 52.165,
+   "end": 52.54,
+   "type": "word"
+  },
+  {
+   "text": "close",
+   "start": 53.001,
+   "end": 53.382,
+   "type": "word"
+  },
+  {
+   "text": "the",
+   "start": 53.402,
+   "end": 53.593,
+   "type": "word"
+  },
+  {
+   "text": "libraries.",
+   "start": 53.613,
+   "end": 54.248,
+   "type": "word"
+  }
+ ],
+ "source": "silence-aligned (no STT transcript available)"
+}

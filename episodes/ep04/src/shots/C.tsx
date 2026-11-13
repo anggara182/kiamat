@@ -16,13 +16,13 @@ const Dust: React.FC<{ t: number; n: number; col: string }> = ({ t, n, col }) =>
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tc = wordAt(1, /^cities/i, 0.76);
-  const cam: Cam = { zoom: 1.2 + 0.1 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: 120, ox: 640, oy: 980 };
+  const cam: Cam = { zoom: 1.2 + 0.1 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -150, ox: 640, oy: 980 };
   const f = 0.72 + 0.28 * (t2 / tc);
   return (
     <AbsoluteFill style={{ backgroundColor: '#2a2c48' }}>
       <BandImg id="nation/march" k={0.92} cam={cam} />
       <Live k={0.92} cam={cam}>
-        <ellipse cx={GATE.x} cy={GATE.y - 40} rx={90} ry={70} fill="#e8c48a" opacity={0.25 + 0.25 * ramp(t, tc - 0.2, tc + 0.2)} />
+        <rect x={GATE.x - 24} y={GATE.y - 94} width={48} height={94} fill="#fff0cc" opacity={0.5 * ramp(t, tc - 0.15, tc + 0.25)} />
         <Column t2={t2} f={f} rim="#f2c890" />
         <Dust t={t} n={70} col="#e8c48a" />
       </Live>

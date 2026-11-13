@@ -12,20 +12,19 @@
  "fps": 24,
  "width": 1080,
  "height": 1920,
- "durationSec": 58.112,
+ "durationSec": 54.416,
  "accent": "#d9a441",
  "audio": true,
  "shots": [
   {
    "id": 1,
    "start": 0.0,
-   "end": 2.858,
+   "end": 2.99,
    "act": 1,
    "set": "nation",
    "owner": "C",
    "framing": "HOOK. Wide: an endless column of followers pouring across a highway overpass into a city at dawn",
    "camera": "Slow push-in",
-   "vo_markup": "In thirty days, his followers took eleven *cities.*",
    "vo": "In thirty days, his followers took eleven cities.",
    "voKind": "narration",
    "speaker": "narr",
@@ -33,50 +32,50 @@
     {
      "text": "In",
      "highlight": false,
-     "start": 0.1,
-     "end": 0.219
+     "start": 0.195,
+     "end": 0.34
     },
     {
      "text": "thirty",
      "highlight": false,
-     "start": 0.219,
-     "end": 0.574
+     "start": 0.358,
+     "end": 0.706
     },
     {
      "text": "days,",
      "highlight": false,
-     "start": 0.574,
-     "end": 0.87
+     "start": 0.725,
+     "end": 0.927
     },
     {
      "text": "his",
      "highlight": false,
-     "start": 0.87,
-     "end": 1.048
+     "start": 0.945,
+     "end": 1.11
     },
     {
      "text": "followers",
      "highlight": false,
-     "start": 1.048,
-     "end": 1.582
+     "start": 1.128,
+     "end": 1.658
     },
     {
      "text": "took",
      "highlight": false,
-     "start": 1.582,
-     "end": 1.819
+     "start": 1.676,
+     "end": 1.86
     },
     {
      "text": "eleven",
      "highlight": false,
-     "start": 1.819,
-     "end": 2.174
+     "start": 1.878,
+     "end": 2.352
     },
     {
      "text": "cities.",
      "highlight": true,
-     "start": 2.174,
-     "end": 2.708
+     "start": 2.37,
+     "end": 2.737
     }
    ],
    "trans": "cut",
@@ -90,14 +89,13 @@
   },
   {
    "id": 2,
-   "start": 2.858,
-   "end": 4.462,
+   "start": 2.99,
+   "end": 4.375,
    "act": 1,
    "set": "nation",
    "owner": "C",
    "framing": "Close: open empty hands raised in a crowd, some holding bread and flowers",
    "camera": "Slight handheld",
-   "vo_markup": "They didn't need *weapons.*",
    "vo": "They didn't need weapons.",
    "voKind": "narration",
    "speaker": "narr",
@@ -105,26 +103,26 @@
     {
      "text": "They",
      "highlight": false,
-     "start": 2.958,
-     "end": 3.183
+     "start": 3.09,
+     "end": 3.275
     },
     {
      "text": "didn't",
      "highlight": false,
-     "start": 3.183,
-     "end": 3.522
+     "start": 3.294,
+     "end": 3.516
     },
     {
      "text": "need",
      "highlight": false,
-     "start": 3.522,
-     "end": 3.748
+     "start": 3.535,
+     "end": 3.719
     },
     {
      "text": "weapons.",
      "highlight": true,
-     "start": 3.748,
-     "end": 4.312
+     "start": 3.737,
+     "end": 4.125
     }
    ],
    "trans": "cut",
@@ -138,14 +136,13 @@
   },
   {
    "id": 3,
-   "start": 4.462,
-   "end": 6.066,
+   "start": 4.375,
+   "end": 5.923,
    "act": 1,
    "set": "nation",
    "owner": "C",
    "framing": "High wide: a city square flooding with people from every street",
    "camera": "Slow crane-up",
-   "vo_markup": "They only needed *crowds.*",
    "vo": "They only needed crowds.",
    "voKind": "narration",
    "speaker": "narr",
@@ -153,26 +150,26 @@
     {
      "text": "They",
      "highlight": false,
-     "start": 4.562,
-     "end": 4.797
+     "start": 4.475,
+     "end": 4.667
     },
     {
      "text": "only",
      "highlight": false,
-     "start": 4.797,
-     "end": 5.033
+     "start": 4.685,
+     "end": 5.009
     },
     {
      "text": "needed",
      "highlight": false,
-     "start": 5.033,
-     "end": 5.386
+     "start": 5.027,
+     "end": 5.391
     },
     {
      "text": "crowds.",
      "highlight": true,
-     "start": 5.386,
-     "end": 5.916
+     "start": 5.409,
+     "end": 5.661
     }
    ],
    "trans": "cut",
@@ -186,14 +183,13 @@
   },
   {
    "id": 4,
-   "start": 6.066,
-   "end": 8.61,
+   "start": 5.923,
+   "end": 8.323,
    "act": 1,
    "set": "nation",
    "owner": "C",
    "framing": "Three hard cuts inside the shot: three different invented city skylines, the same plain banner rising on a tower in each",
    "camera": "Locked",
-   "vo_markup": "In every city, the same thing happened.",
    "vo": "In every city, the same thing happened.",
    "voKind": "narration",
    "speaker": "narr",
@@ -201,44 +197,44 @@
     {
      "text": "In",
      "highlight": false,
-     "start": 6.166,
-     "end": 6.305
+     "start": 6.023,
+     "end": 6.148
     },
     {
      "text": "every",
      "highlight": false,
-     "start": 6.305,
-     "end": 6.652
+     "start": 6.166,
+     "end": 6.562
     },
     {
      "text": "city,",
      "highlight": false,
-     "start": 6.652,
-     "end": 7.0
+     "start": 6.58,
+     "end": 6.865
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 7.0,
-     "end": 7.209
+     "start": 6.883,
+     "end": 7.025
     },
     {
      "text": "same",
      "highlight": false,
-     "start": 7.209,
-     "end": 7.487
+     "start": 7.043,
+     "end": 7.311
     },
     {
      "text": "thing",
      "highlight": false,
-     "start": 7.487,
-     "end": 7.834
+     "start": 7.329,
+     "end": 7.505
     },
     {
      "text": "happened.",
      "highlight": false,
-     "start": 7.834,
-     "end": 8.46
+     "start": 7.523,
+     "end": 7.984
     }
    ],
    "trans": "cut",
@@ -250,14 +246,13 @@
   },
   {
    "id": 5,
-   "start": 8.61,
-   "end": 12.095,
+   "start": 8.323,
+   "end": 10.968,
    "act": 1,
    "set": "institutions",
    "owner": "H",
    "framing": "Medium: a doctor in a white coat escorted out of hospital doors by followers",
    "camera": "Slow lateral",
-   "vo_markup": "The people who knew how things worked were pushed *aside…*",
    "vo": "The people who knew how things worked were pushed aside…",
    "voKind": "narration",
    "speaker": "narr",
@@ -265,62 +260,62 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 8.71,
-     "end": 8.908
+     "start": 8.423,
+     "end": 8.548
     },
     {
      "text": "people",
      "highlight": false,
-     "start": 8.908,
-     "end": 9.304
+     "start": 8.566,
+     "end": 8.837
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 9.304,
-     "end": 9.502
+     "start": 8.855,
+     "end": 8.982
     },
     {
      "text": "knew",
      "highlight": false,
-     "start": 9.502,
-     "end": 9.766
+     "start": 9.0,
+     "end": 9.141
     },
     {
      "text": "how",
      "highlight": false,
-     "start": 9.766,
-     "end": 9.964
+     "start": 9.159,
+     "end": 9.285
     },
     {
      "text": "things",
      "highlight": false,
-     "start": 9.964,
-     "end": 10.36
+     "start": 9.303,
+     "end": 9.474
     },
     {
      "text": "worked",
      "highlight": false,
-     "start": 10.36,
-     "end": 10.757
+     "start": 9.492,
+     "end": 9.763
     },
     {
      "text": "were",
      "highlight": false,
-     "start": 10.757,
-     "end": 11.021
+     "start": 9.781,
+     "end": 10.021
     },
     {
      "text": "pushed",
      "highlight": false,
-     "start": 11.021,
-     "end": 11.417
+     "start": 10.039,
+     "end": 10.31
     },
     {
      "text": "aside…",
      "highlight": true,
-     "start": 11.417,
-     "end": 11.945
+     "start": 10.328,
+     "end": 10.698
     }
    ],
    "trans": "cut",
@@ -334,14 +329,13 @@
   },
   {
    "id": 6,
-   "start": 12.095,
-   "end": 14.639,
+   "start": 10.968,
+   "end": 13.214,
    "act": 1,
    "set": "institutions",
    "owner": "H",
    "framing": "Low angle: a man shouting through a megaphone on the hospital steps; crowd cheering below",
    "camera": "Slow push-in",
-   "vo_markup": "and the loudest voices took their *place.*",
    "vo": "and the loudest voices took their place.",
    "voKind": "narration",
    "speaker": "narr",
@@ -349,44 +343,44 @@
     {
      "text": "and",
      "highlight": false,
-     "start": 12.195,
-     "end": 12.386
+     "start": 11.068,
+     "end": 11.218
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 12.386,
-     "end": 12.577
+     "start": 11.236,
+     "end": 11.387
     },
     {
      "text": "loudest",
      "highlight": false,
-     "start": 12.577,
-     "end": 13.023
+     "start": 11.405,
+     "end": 11.742
     },
     {
      "text": "voices",
      "highlight": false,
-     "start": 13.023,
-     "end": 13.406
+     "start": 11.76,
+     "end": 12.078
     },
     {
      "text": "took",
      "highlight": false,
-     "start": 13.406,
-     "end": 13.661
+     "start": 12.096,
+     "end": 12.265
     },
     {
      "text": "their",
      "highlight": false,
-     "start": 13.661,
-     "end": 13.979
+     "start": 12.283,
+     "end": 12.468
     },
     {
      "text": "place.",
      "highlight": true,
-     "start": 13.979,
-     "end": 14.489
+     "start": 12.486,
+     "end": 12.805
     }
    ],
    "trans": "cut",
@@ -400,14 +394,13 @@
   },
   {
    "id": 7,
-   "start": 14.639,
-   "end": 17.497,
+   "start": 13.214,
+   "end": 15.624,
    "act": 1,
    "set": "institutions",
    "owner": "H",
    "framing": "Medium: a hospital corridor, the loud man in a too-big white coat, nurses staring at each other",
    "camera": "Slow push-in",
-   "vo_markup": "A man with no training ran the *hospital.*",
    "vo": "A man with no training ran the hospital.",
    "voKind": "narration",
    "speaker": "narr",
@@ -415,50 +408,50 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 14.739,
-     "end": 14.814
+     "start": 13.314,
+     "end": 13.43
     },
     {
      "text": "man",
      "highlight": false,
-     "start": 14.814,
-     "end": 15.037
+     "start": 13.448,
+     "end": 13.599
     },
     {
      "text": "with",
      "highlight": false,
-     "start": 15.037,
-     "end": 15.335
+     "start": 13.617,
+     "end": 13.785
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 15.335,
-     "end": 15.484
+     "start": 13.804,
+     "end": 13.937
     },
     {
      "text": "training",
      "highlight": false,
-     "start": 15.484,
-     "end": 16.08
+     "start": 13.955,
+     "end": 14.311
     },
     {
      "text": "ran",
      "highlight": false,
-     "start": 16.08,
-     "end": 16.304
+     "start": 14.329,
+     "end": 14.48
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 16.304,
-     "end": 16.527
+     "start": 14.498,
+     "end": 14.649
     },
     {
      "text": "hospital.",
      "highlight": true,
-     "start": 16.527,
-     "end": 17.347
+     "start": 14.667,
+     "end": 15.157
     }
    ],
    "trans": "cut",
@@ -472,14 +465,13 @@
   },
   {
    "id": 8,
-   "start": 17.497,
-   "end": 20.668,
+   "start": 15.624,
+   "end": 18.6,
    "act": 1,
    "set": "institutions",
    "owner": "H",
    "framing": "Medium: a classroom; a man erases a chalkboard full of maths and writes \"HE KNOWS\" in crooked letters; children watch",
    "camera": "Locked",
-   "vo_markup": "A man who could barely read rewrote the *schools.*",
    "vo": "A man who could barely read rewrote the schools.",
    "voKind": "narration",
    "speaker": "narr",
@@ -487,56 +479,56 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 17.597,
-     "end": 17.667
+     "start": 15.724,
+     "end": 15.847
     },
     {
      "text": "man",
      "highlight": false,
-     "start": 17.667,
-     "end": 17.875
+     "start": 15.865,
+     "end": 16.027
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 17.875,
-     "end": 18.084
+     "start": 16.045,
+     "end": 16.207
     },
     {
      "text": "could",
      "highlight": false,
-     "start": 18.084,
-     "end": 18.432
+     "start": 16.225,
+     "end": 16.424
     },
     {
      "text": "barely",
      "highlight": false,
-     "start": 18.432,
-     "end": 18.849
+     "start": 16.442,
+     "end": 16.907
     },
     {
      "text": "read",
      "highlight": false,
-     "start": 18.849,
-     "end": 19.127
+     "start": 16.925,
+     "end": 17.263
     },
     {
      "text": "rewrote",
      "highlight": false,
-     "start": 19.127,
-     "end": 19.614
+     "start": 17.281,
+     "end": 17.765
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 19.614,
-     "end": 19.823
+     "start": 17.783,
+     "end": 17.945
     },
     {
      "text": "schools.",
      "highlight": true,
-     "start": 19.823,
-     "end": 20.518
+     "start": 17.963,
+     "end": 18.217
     }
    ],
    "trans": "cut",
@@ -550,14 +542,13 @@
   },
   {
    "id": 9,
-   "start": 20.668,
-   "end": 24.78,
+   "start": 18.6,
+   "end": 22.015,
    "act": 1,
    "set": "bridge",
    "owner": "S",
    "framing": "Wide: followers clumsily building a bridge over a river, crooked beams, ropes, cheering",
    "camera": "Lateral track",
-   "vo_markup": "A new bridge was built by people who had never built *anything.*",
    "vo": "A new bridge was built by people who had never built anything.",
    "voKind": "narration",
    "speaker": "narr",
@@ -565,74 +556,74 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 20.768,
-     "end": 20.841
+     "start": 18.7,
+     "end": 18.815
     },
     {
      "text": "new",
      "highlight": false,
-     "start": 20.841,
-     "end": 21.06
+     "start": 18.833,
+     "end": 18.983
     },
     {
      "text": "bridge",
      "highlight": false,
-     "start": 21.06,
-     "end": 21.497
+     "start": 19.001,
+     "end": 19.318
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 21.497,
-     "end": 21.716
+     "start": 19.336,
+     "end": 19.486
     },
     {
      "text": "built",
      "highlight": false,
-     "start": 21.716,
-     "end": 22.08
+     "start": 19.505,
+     "end": 19.689
     },
     {
      "text": "by",
      "highlight": false,
-     "start": 22.08,
-     "end": 22.226
+     "start": 19.707,
+     "end": 19.84
     },
     {
      "text": "people",
      "highlight": false,
-     "start": 22.226,
-     "end": 22.663
+     "start": 19.858,
+     "end": 20.175
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 22.663,
-     "end": 22.881
+     "start": 20.194,
+     "end": 20.344
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 22.881,
-     "end": 23.1
+     "start": 20.362,
+     "end": 20.512
     },
     {
      "text": "never",
      "highlight": false,
-     "start": 23.1,
-     "end": 23.464
+     "start": 20.53,
+     "end": 20.83
     },
     {
      "text": "built",
      "highlight": false,
-     "start": 23.464,
-     "end": 23.829
+     "start": 20.848,
+     "end": 21.033
     },
     {
      "text": "anything.",
      "highlight": true,
-     "start": 23.829,
-     "end": 24.63
+     "start": 21.051,
+     "end": 21.536
     }
    ],
    "trans": "cut",
@@ -646,14 +637,13 @@
   },
   {
    "id": 10,
-   "start": 24.78,
-   "end": 27.638,
+   "start": 22.015,
+   "end": 24.355,
    "act": 1,
    "set": "bridge",
    "owner": "S",
    "framing": "Wide: ribbon cutting on the new bridge, confetti, crowds packed on it",
    "camera": "Slow push-in",
-   "vo_markup": "On the day it opened, the crowds *cheered.*",
    "vo": "On the day it opened, the crowds cheered.",
    "voKind": "narration",
    "speaker": "narr",
@@ -661,50 +651,50 @@
     {
      "text": "On",
      "highlight": false,
-     "start": 24.88,
-     "end": 25.025
+     "start": 22.115,
+     "end": 22.254
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 25.025,
-     "end": 25.242
+     "start": 22.272,
+     "end": 22.428
     },
     {
      "text": "day",
      "highlight": false,
-     "start": 25.242,
-     "end": 25.46
+     "start": 22.446,
+     "end": 22.603
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 25.46,
-     "end": 25.604
+     "start": 22.621,
+     "end": 22.76
     },
     {
      "text": "opened,",
      "highlight": false,
-     "start": 25.604,
-     "end": 26.112
+     "start": 22.778,
+     "end": 23.248
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 26.112,
-     "end": 26.329
+     "start": 23.266,
+     "end": 23.423
     },
     {
      "text": "crowds",
      "highlight": false,
-     "start": 26.329,
-     "end": 26.764
+     "start": 23.441,
+     "end": 23.652
     },
     {
      "text": "cheered.",
      "highlight": true,
-     "start": 26.764,
-     "end": 27.488
+     "start": 23.67,
+     "end": 24.037
     }
    ],
    "trans": "cut",
@@ -718,14 +708,13 @@
   },
   {
    "id": 11,
-   "start": 27.638,
-   "end": 29.869,
+   "start": 24.355,
+   "end": 26.222,
    "act": 1,
    "set": "bridge",
    "owner": "S",
    "framing": "Wide night: the empty bridge buckling and collapsing into the dark river, spray and dust",
    "camera": "Locked, jolt",
-   "vo_markup": "On the third night, it *fell.*",
    "vo": "On the third night, it fell.",
    "voKind": "narration",
    "speaker": "narr",
@@ -733,38 +722,38 @@
     {
      "text": "On",
      "highlight": false,
-     "start": 27.738,
-     "end": 27.896
+     "start": 24.455,
+     "end": 24.645
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 27.896,
-     "end": 28.134
+     "start": 24.663,
+     "end": 24.877
     },
     {
      "text": "third",
      "highlight": false,
-     "start": 28.134,
-     "end": 28.53
+     "start": 24.895,
+     "end": 25.158
     },
     {
      "text": "night,",
      "highlight": false,
-     "start": 28.53,
-     "end": 29.006
+     "start": 25.176,
+     "end": 25.464
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 29.006,
-     "end": 29.164
+     "start": 25.482,
+     "end": 25.672
     },
     {
      "text": "fell.",
      "highlight": true,
-     "start": 29.164,
-     "end": 29.719
+     "start": 25.69,
+     "end": 25.953
     }
    ],
    "trans": "cut",
@@ -778,14 +767,13 @@
   },
   {
    "id": 12,
-   "start": 29.869,
-   "end": 32.413,
+   "start": 26.222,
+   "end": 28.101,
    "act": 1,
    "set": "bridge",
    "owner": "S",
    "framing": "Medium: the broken end of the bridge over black water, a single streetlight flickering at the edge",
    "camera": "Slow push-in",
-   "vo_markup": "No one was on it. Not yet.",
    "vo": "No one was on it. Not yet.",
    "voKind": "narration",
    "speaker": "narr",
@@ -793,44 +781,44 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 29.969,
-     "end": 30.198
+     "start": 26.322,
+     "end": 26.44
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 30.198,
-     "end": 30.542
+     "start": 26.458,
+     "end": 26.695
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 30.542,
-     "end": 30.887
+     "start": 26.714,
+     "end": 26.847
     },
     {
      "text": "on",
      "highlight": false,
-     "start": 30.887,
-     "end": 31.116
+     "start": 26.865,
+     "end": 26.983
     },
     {
      "text": "it.",
      "highlight": false,
-     "start": 31.116,
-     "end": 31.46
+     "start": 27.001,
+     "end": 27.135
     },
     {
      "text": "Not",
      "highlight": false,
-     "start": 31.46,
-     "end": 31.804
+     "start": 27.407,
+     "end": 27.625
     },
     {
      "text": "yet.",
      "highlight": false,
-     "start": 31.804,
-     "end": 32.263
+     "start": 27.643,
+     "end": 27.885
     }
    ],
    "trans": "cut",
@@ -842,14 +830,13 @@
   },
   {
    "id": 13,
-   "start": 32.413,
-   "end": 35.584,
+   "start": 28.101,
+   "end": 31.034,
    "act": 1,
    "set": "bridge",
    "owner": "S",
    "framing": "Medium: an engineer with rolled blueprints, a follower's hand on his shoulder steering him into a van; the blueprints fall into a puddle",
    "camera": "Locked",
-   "vo_markup": "The engineers who warned them had already been *silenced.*",
    "vo": "The engineers who warned them had already been silenced.",
    "voKind": "narration",
    "speaker": "narr",
@@ -857,56 +844,56 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 32.513,
-     "end": 32.688
+     "start": 28.201,
+     "end": 28.331
     },
     {
      "text": "engineers",
      "highlight": false,
-     "start": 32.688,
-     "end": 33.214
+     "start": 28.349,
+     "end": 28.777
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 33.214,
-     "end": 33.39
+     "start": 28.795,
+     "end": 28.925
     },
     {
      "text": "warned",
      "highlight": false,
-     "start": 33.39,
-     "end": 33.74
+     "start": 28.944,
+     "end": 29.223
     },
     {
      "text": "them",
      "highlight": false,
-     "start": 33.74,
-     "end": 33.974
+     "start": 29.241,
+     "end": 29.386
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 33.974,
-     "end": 34.149
+     "start": 29.405,
+     "end": 29.535
     },
     {
      "text": "already",
      "highlight": false,
-     "start": 34.149,
-     "end": 34.558
+     "start": 29.554,
+     "end": 29.95
     },
     {
      "text": "been",
      "highlight": false,
-     "start": 34.558,
-     "end": 34.792
+     "start": 29.968,
+     "end": 30.115
     },
     {
      "text": "silenced.",
      "highlight": true,
-     "start": 34.792,
-     "end": 35.434
+     "start": 30.133,
+     "end": 30.56
     }
    ],
    "trans": "cut",
@@ -920,14 +907,13 @@
   },
   {
    "id": 14,
-   "start": 35.584,
-   "end": 44.398,
+   "start": 31.034,
+   "end": 39.537,
    "act": 1,
    "set": "exodus",
    "owner": "P",
    "framing": "Wide: an abandoned council office, dust in a light beam, an empty chair behind a long desk",
    "camera": "Very slow push-in",
-   "vo_markup": "A man once asked the Prophet when the Hour would come. He said: when trust is lost. And when authority is handed to those unfit for it.",
    "vo": "A man once asked the Prophet when the Hour would come. He said: when trust is lost. And when authority is handed to those unfit for it.",
    "voKind": "narration",
    "speaker": "narr",
@@ -935,164 +921,164 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 35.684,
-     "end": 35.763
+     "start": 31.134,
+     "end": 31.283
     },
     {
      "text": "man",
      "highlight": false,
-     "start": 35.763,
-     "end": 35.999
+     "start": 31.301,
+     "end": 31.495
     },
     {
      "text": "once",
      "highlight": false,
-     "start": 35.999,
-     "end": 36.313
+     "start": 31.513,
+     "end": 31.873
     },
     {
      "text": "asked",
      "highlight": false,
-     "start": 36.313,
-     "end": 36.706
+     "start": 31.891,
+     "end": 32.274
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 36.706,
-     "end": 36.942
+     "start": 32.292,
+     "end": 32.485
     },
     {
      "text": "Prophet",
      "highlight": false,
-     "start": 36.942,
-     "end": 37.492
+     "start": 32.503,
+     "end": 32.929
     },
     {
      "text": "when",
      "highlight": false,
-     "start": 37.492,
-     "end": 37.806
+     "start": 32.947,
+     "end": 33.162
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 37.806,
-     "end": 38.042
+     "start": 33.18,
+     "end": 33.374
     },
     {
      "text": "Hour",
      "highlight": false,
-     "start": 38.042,
-     "end": 38.356
+     "start": 33.392,
+     "end": 33.606
     },
     {
      "text": "would",
      "highlight": false,
-     "start": 38.356,
-     "end": 38.749
+     "start": 33.625,
+     "end": 34.255
     },
     {
      "text": "come.",
      "highlight": false,
-     "start": 38.749,
-     "end": 39.141
+     "start": 34.273,
+     "end": 34.655
     },
     {
      "text": "He",
      "highlight": false,
-     "start": 39.141,
-     "end": 39.299
+     "start": 35.054,
+     "end": 35.191
     },
     {
      "text": "said:",
      "highlight": false,
-     "start": 39.299,
-     "end": 39.691
+     "start": 35.209,
+     "end": 35.401
     },
     {
      "text": "when",
      "highlight": false,
-     "start": 39.691,
-     "end": 40.006
+     "start": 35.419,
+     "end": 35.593
     },
     {
      "text": "trust",
      "highlight": false,
-     "start": 40.006,
-     "end": 40.399
+     "start": 35.611,
+     "end": 35.803
     },
     {
      "text": "is",
      "highlight": false,
-     "start": 40.399,
-     "end": 40.556
+     "start": 35.821,
+     "end": 35.958
     },
     {
      "text": "lost.",
      "highlight": false,
-     "start": 40.556,
-     "end": 40.949
+     "start": 35.976,
+     "end": 36.168
     },
     {
      "text": "And",
      "highlight": false,
-     "start": 40.949,
-     "end": 41.184
+     "start": 36.607,
+     "end": 36.753
     },
     {
      "text": "when",
      "highlight": false,
-     "start": 41.184,
-     "end": 41.499
+     "start": 36.771,
+     "end": 36.934
     },
     {
      "text": "authority",
      "highlight": false,
-     "start": 41.499,
-     "end": 42.206
+     "start": 36.952,
+     "end": 37.538
     },
     {
      "text": "is",
      "highlight": false,
-     "start": 42.206,
-     "end": 42.363
+     "start": 37.556,
+     "end": 37.685
     },
     {
      "text": "handed",
      "highlight": false,
-     "start": 42.363,
-     "end": 42.834
+     "start": 37.704,
+     "end": 38.013
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 42.834,
-     "end": 42.991
+     "start": 38.031,
+     "end": 38.159
     },
     {
      "text": "those",
      "highlight": false,
-     "start": 42.991,
-     "end": 43.384
+     "start": 38.177,
+     "end": 38.47
     },
     {
      "text": "unfit",
      "highlight": false,
-     "start": 43.384,
-     "end": 43.777
+     "start": 38.488,
+     "end": 38.781
     },
     {
      "text": "for",
      "highlight": false,
-     "start": 43.777,
-     "end": 44.013
+     "start": 38.799,
+     "end": 38.945
     },
     {
      "text": "it.",
      "highlight": false,
-     "start": 44.013,
-     "end": 44.248
+     "start": 38.963,
+     "end": 39.108
     }
    ],
    "trans": "cut",
@@ -1104,14 +1090,13 @@
   },
   {
    "id": 15,
-   "start": 44.398,
-   "end": 47.256,
+   "start": 39.537,
+   "end": 42.669,
    "act": 1,
    "set": "exodus",
    "owner": "P",
    "framing": "Medium: a bus terminal; doctors, teachers, engineers with suitcases boarding a bus; a child waving",
    "camera": "Slow lateral",
-   "vo_markup": "Across the country, the experts packed their *bags.*",
    "vo": "Across the country, the experts packed their bags.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1119,50 +1104,50 @@
     {
      "text": "Across",
      "highlight": false,
-     "start": 44.498,
-     "end": 44.846
+     "start": 39.637,
+     "end": 39.981
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 44.846,
-     "end": 45.02
+     "start": 39.999,
+     "end": 40.162
     },
     {
      "text": "country,",
      "highlight": false,
-     "start": 45.02,
-     "end": 45.484
+     "start": 40.18,
+     "end": 40.562
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 45.484,
-     "end": 45.657
+     "start": 40.861,
+     "end": 41.042
     },
     {
      "text": "experts",
      "highlight": false,
-     "start": 45.657,
-     "end": 46.063
+     "start": 41.06,
+     "end": 41.463
     },
     {
      "text": "packed",
      "highlight": false,
-     "start": 46.063,
-     "end": 46.411
+     "start": 41.481,
+     "end": 41.862
     },
     {
      "text": "their",
      "highlight": false,
-     "start": 46.411,
-     "end": 46.701
+     "start": 41.88,
+     "end": 42.103
     },
     {
      "text": "bags.",
      "highlight": true,
-     "start": 46.701,
-     "end": 47.106
+     "start": 42.121,
+     "end": 42.345
     }
    ],
    "trans": "cut",
@@ -1176,14 +1161,13 @@
   },
   {
    "id": 16,
-   "start": 47.256,
-   "end": 48.86,
+   "start": 42.669,
+   "end": 44.112,
    "act": 1,
    "set": "exodus",
    "owner": "P",
    "framing": "Low angle: the megaphone man on a car roof waving, crowds around him",
    "camera": "Slight handheld",
-   "vo_markup": "The loud ones *stayed.*",
    "vo": "The loud ones stayed.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1191,26 +1175,26 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 47.356,
-     "end": 47.559
+     "start": 42.769,
+     "end": 42.949
     },
     {
      "text": "loud",
      "highlight": false,
-     "start": 47.559,
-     "end": 47.83
+     "start": 42.967,
+     "end": 43.169
     },
     {
      "text": "ones",
      "highlight": false,
-     "start": 47.83,
-     "end": 48.101
+     "start": 43.187,
+     "end": 43.525
     },
     {
      "text": "stayed.",
      "highlight": true,
-     "start": 48.101,
-     "end": 48.71
+     "start": 43.544,
+     "end": 43.807
     }
    ],
    "trans": "cut",
@@ -1224,14 +1208,13 @@
   },
   {
    "id": 17,
-   "start": 48.86,
-   "end": 53.912,
+   "start": 44.112,
+   "end": 50.216,
    "act": 1,
    "set": "exodus",
    "owner": "P",
    "framing": "Close: a heavy chain wrapped around library gates; a padlock snaps shut; follower silhouettes behind",
    "camera": "Slow push-in",
-   "vo_markup": "And in the capital, the man from nowhere gave his next order: close the *libraries.*",
    "vo": "And in the capital, the man from nowhere gave his next order: close the libraries.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1239,92 +1222,92 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 48.96,
-     "end": 49.166
+     "start": 44.212,
+     "end": 44.336
     },
     {
      "text": "in",
      "highlight": false,
-     "start": 49.166,
-     "end": 49.303
+     "start": 44.355,
+     "end": 44.465
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 49.303,
-     "end": 49.509
+     "start": 44.484,
+     "end": 44.608
     },
     {
      "text": "capital,",
      "highlight": false,
-     "start": 49.509,
-     "end": 50.058
+     "start": 44.626,
+     "end": 45.024
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 50.058,
-     "end": 50.264
+     "start": 45.359,
+     "end": 45.521
     },
     {
      "text": "man",
      "highlight": false,
-     "start": 50.264,
-     "end": 50.469
+     "start": 45.539,
+     "end": 45.7
     },
     {
      "text": "from",
      "highlight": false,
-     "start": 50.469,
-     "end": 50.744
+     "start": 45.718,
+     "end": 45.898
     },
     {
      "text": "nowhere",
      "highlight": false,
-     "start": 50.744,
-     "end": 51.224
+     "start": 45.916,
+     "end": 46.399
     },
     {
      "text": "gave",
      "highlight": false,
-     "start": 51.224,
-     "end": 51.498
+     "start": 46.417,
+     "end": 47.027
     },
     {
      "text": "his",
      "highlight": false,
-     "start": 51.498,
-     "end": 51.704
+     "start": 47.045,
+     "end": 47.207
     },
     {
      "text": "next",
      "highlight": false,
-     "start": 51.704,
-     "end": 51.979
+     "start": 47.225,
+     "end": 47.405
     },
     {
      "text": "order:",
      "highlight": false,
-     "start": 51.979,
-     "end": 52.39
+     "start": 47.423,
+     "end": 47.764
     },
     {
      "text": "close",
      "highlight": false,
-     "start": 52.39,
-     "end": 52.733
+     "start": 48.183,
+     "end": 48.529
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 52.733,
-     "end": 52.939
+     "start": 48.547,
+     "end": 48.721
     },
     {
      "text": "libraries.",
      "highlight": true,
-     "start": 52.939,
-     "end": 53.762
+     "start": 48.739,
+     "end": 49.316
     }
    ],
    "trans": "cut",
@@ -1338,14 +1321,13 @@
   },
   {
    "id": 18,
-   "start": 53.912,
-   "end": 58.112,
+   "start": 50.216,
+   "end": 54.416,
    "act": 1,
    "set": "exodus",
    "owner": "P",
    "framing": "TITLE CARD on black",
    "camera": "Very slow push-in",
-   "vo_markup": "",
    "vo": "",
    "voKind": "none",
    "speaker": "narr",
@@ -1358,5 +1340,5 @@
    "sync": []
   }
  ],
- "timingSource": "ESTIMATE (VO pending)"
+ "timingSource": "ai33 eleven_v3 audio (STT transcript stuck), word timing silence-aligned, gaps>0.9s cut to 0.5s (0), atempo x1.1"
 }

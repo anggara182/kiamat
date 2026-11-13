@@ -12,20 +12,19 @@
  "fps": 24,
  "width": 1080,
  "height": 1920,
- "durationSec": 55.291,
+ "durationSec": 53.012,
  "accent": "#d9a441",
  "audio": true,
  "shots": [
   {
    "id": 1,
    "start": 0.0,
-   "end": 2.231,
+   "end": 2.158,
    "act": 1,
    "set": "library",
    "owner": "P",
    "framing": "HOOK. Medium: a librarian (woman, 50s, headscarf) pulling a chain through the library door handles; dust in the air",
    "camera": "Slow push-in",
-   "vo_markup": "The libraries closed on a *Monday.*",
    "vo": "The libraries closed on a Monday.",
    "voKind": "narration",
    "speaker": "narr",
@@ -33,38 +32,38 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 0.1,
-     "end": 0.298
+     "start": 0.195,
+     "end": 0.345
     },
     {
      "text": "libraries",
      "highlight": false,
-     "start": 0.298,
-     "end": 0.892
+     "start": 0.363,
+     "end": 0.85
     },
     {
      "text": "closed",
      "highlight": false,
-     "start": 0.892,
-     "end": 1.289
+     "start": 0.868,
+     "end": 1.186
     },
     {
      "text": "on",
      "highlight": false,
-     "start": 1.289,
-     "end": 1.421
+     "start": 1.205,
+     "end": 1.337
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 1.421,
-     "end": 1.487
+     "start": 1.355,
+     "end": 1.471
     },
     {
      "text": "Monday.",
      "highlight": true,
-     "start": 1.487,
-     "end": 2.081
+     "start": 1.489,
+     "end": 1.825
     }
    ],
    "trans": "cut",
@@ -78,14 +77,13 @@
   },
   {
    "id": 2,
-   "start": 2.231,
-   "end": 5.716,
+   "start": 2.158,
+   "end": 5.035,
    "act": 1,
    "set": "library",
    "owner": "P",
    "framing": "Wide: the library steps; children play ball, ignoring the chained door; posters fading",
    "camera": "Slow pull-back",
-   "vo_markup": "By Friday, no one remembered why they had been *open.*",
    "vo": "By Friday, no one remembered why they had been open.",
    "voKind": "narration",
    "speaker": "narr",
@@ -93,62 +91,62 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 2.331,
-     "end": 2.475
+     "start": 2.258,
+     "end": 2.378
     },
     {
      "text": "Friday,",
      "highlight": false,
-     "start": 2.475,
-     "end": 2.978
+     "start": 2.396,
+     "end": 2.702
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 2.978,
-     "end": 3.122
+     "start": 2.72,
+     "end": 2.84
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 3.122,
-     "end": 3.337
+     "start": 2.858,
+     "end": 3.1
     },
     {
      "text": "remembered",
      "highlight": false,
-     "start": 3.337,
-     "end": 4.056
+     "start": 3.118,
+     "end": 3.685
     },
     {
      "text": "why",
      "highlight": false,
-     "start": 4.056,
-     "end": 4.272
+     "start": 3.703,
+     "end": 3.839
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 4.272,
-     "end": 4.559
+     "start": 3.857,
+     "end": 4.009
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 4.559,
-     "end": 4.775
+     "start": 4.027,
+     "end": 4.163
     },
     {
      "text": "been",
      "highlight": false,
-     "start": 4.775,
-     "end": 5.062
+     "start": 4.181,
+     "end": 4.333
     },
     {
      "text": "open.",
      "highlight": true,
-     "start": 5.062,
-     "end": 5.566
+     "start": 4.351,
+     "end": 4.625
     }
    ],
    "trans": "cut",
@@ -162,14 +160,13 @@
   },
   {
    "id": 3,
-   "start": 5.716,
-   "end": 7.633,
+   "start": 5.035,
+   "end": 6.75,
    "act": 1,
    "set": "village",
    "owner": "H",
    "framing": "Medium: an old teacher (glasses, peci) at a window closing his book, looking out",
    "camera": "Slow push-in",
-   "vo_markup": "The old teachers grew *quiet.*",
    "vo": "The old teachers grew quiet.",
    "voKind": "narration",
    "speaker": "narr",
@@ -177,32 +174,32 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 5.816,
-     "end": 6.008
+     "start": 5.135,
+     "end": 5.317
     },
     {
      "text": "old",
      "highlight": false,
-     "start": 6.008,
-     "end": 6.2
+     "start": 5.335,
+     "end": 5.518
     },
     {
      "text": "teachers",
      "highlight": false,
-     "start": 6.2,
-     "end": 6.714
+     "start": 5.536,
+     "end": 5.963
     },
     {
      "text": "grew",
      "highlight": false,
-     "start": 6.714,
-     "end": 6.97
+     "start": 5.981,
+     "end": 6.185
     },
     {
      "text": "quiet.",
      "highlight": true,
-     "start": 6.97,
-     "end": 7.483
+     "start": 6.203,
+     "end": 6.448
     }
    ],
    "trans": "cut",
@@ -216,14 +213,13 @@
   },
   {
    "id": 4,
-   "start": 7.633,
-   "end": 9.55,
+   "start": 6.75,
+   "end": 8.36,
    "act": 1,
    "set": "village",
    "owner": "H",
    "framing": "Wide: a small, sparse funeral in a cemetery; a stack of books beside the fresh grave",
    "camera": "Locked",
-   "vo_markup": "One by one, they *died.*",
    "vo": "One by one, they died.",
    "voKind": "narration",
    "speaker": "narr",
@@ -231,32 +227,32 @@
     {
      "text": "One",
      "highlight": false,
-     "start": 7.733,
-     "end": 7.983
+     "start": 6.85,
+     "end": 7.142
     },
     {
      "text": "by",
      "highlight": false,
-     "start": 7.983,
-     "end": 8.15
+     "start": 7.16,
+     "end": 7.306
     },
     {
      "text": "one,",
      "highlight": false,
-     "start": 8.15,
-     "end": 8.483
+     "start": 7.325,
+     "end": 7.635
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 8.483,
-     "end": 8.817
+     "start": 7.654,
+     "end": 7.837
     },
     {
      "text": "died.",
      "highlight": true,
-     "start": 8.817,
-     "end": 9.4
+     "start": 7.855,
+     "end": 8.059
     }
    ],
    "trans": "cut",
@@ -270,14 +266,13 @@
   },
   {
    "id": 5,
-   "start": 9.55,
-   "end": 11.781,
+   "start": 8.36,
+   "end": 10.018,
    "act": 1,
    "set": "village",
    "owner": "H",
    "framing": "Medium: an empty classroom, one empty teacher's chair, dust beams; a piece of chalk rolls off the ledge",
    "camera": "Slow push-in",
-   "vo_markup": "And no one took their *place.*",
    "vo": "And no one took their place.",
    "voKind": "narration",
    "speaker": "narr",
@@ -285,38 +280,38 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 9.65,
-     "end": 9.888
+     "start": 8.46,
+     "end": 8.598
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 9.888,
-     "end": 10.047
+     "start": 8.616,
+     "end": 8.739
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 10.047,
-     "end": 10.284
+     "start": 8.757,
+     "end": 9.005
     },
     {
      "text": "took",
      "highlight": false,
-     "start": 10.284,
-     "end": 10.601
+     "start": 9.023,
+     "end": 9.177
     },
     {
      "text": "their",
      "highlight": false,
-     "start": 10.601,
-     "end": 10.997
+     "start": 9.195,
+     "end": 9.367
     },
     {
      "text": "place.",
      "highlight": true,
-     "start": 10.997,
-     "end": 11.631
+     "start": 9.385,
+     "end": 9.681
     }
    ],
    "trans": "cut",
@@ -330,14 +325,13 @@
   },
   {
    "id": 6,
-   "start": 11.781,
-   "end": 14.012,
+   "start": 10.018,
+   "end": 12.323,
    "act": 1,
    "set": "village",
    "owner": "H",
    "framing": "Medium: children clapping and chanting in a circle around a young leader with a drum; an unopened book lies in the dust",
    "camera": "Locked, slight handheld",
-   "vo_markup": "Children learned chants instead of *letters.*",
    "vo": "Children learned chants instead of letters.",
    "voKind": "narration",
    "speaker": "narr",
@@ -345,38 +339,38 @@
     {
      "text": "Children",
      "highlight": false,
-     "start": 11.881,
-     "end": 12.278
+     "start": 10.118,
+     "end": 10.492
     },
     {
      "text": "learned",
      "highlight": false,
-     "start": 12.278,
-     "end": 12.624
+     "start": 10.51,
+     "end": 10.865
     },
     {
      "text": "chants",
      "highlight": false,
-     "start": 12.624,
-     "end": 12.921
+     "start": 10.884,
+     "end": 11.098
     },
     {
      "text": "instead",
      "highlight": false,
-     "start": 12.921,
-     "end": 13.268
+     "start": 11.116,
+     "end": 11.472
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 13.268,
-     "end": 13.367
+     "start": 11.49,
+     "end": 11.631
     },
     {
      "text": "letters.",
      "highlight": true,
-     "start": 13.367,
-     "end": 13.862
+     "start": 11.649,
+     "end": 12.023
     }
    ],
    "trans": "cut",
@@ -390,14 +384,13 @@
   },
   {
    "id": 7,
-   "start": 14.012,
-   "end": 16.557,
+   "start": 12.323,
+   "end": 15.055,
    "act": 1,
    "set": "village",
    "owner": "H",
    "framing": "Medium: at home, a small girl holds up a book to her father; he gently turns off the lamp",
    "camera": "Locked",
-   "vo_markup": "Parents stopped asking questions they couldn't *answer.*",
    "vo": "Parents stopped asking questions they couldn't answer.",
    "voKind": "narration",
    "speaker": "narr",
@@ -405,44 +398,44 @@
     {
      "text": "Parents",
      "highlight": false,
-     "start": 14.112,
-     "end": 14.433
+     "start": 12.423,
+     "end": 12.768
     },
     {
      "text": "stopped",
      "highlight": false,
-     "start": 14.433,
-     "end": 14.755
+     "start": 12.786,
+     "end": 13.131
     },
     {
      "text": "asking",
      "highlight": false,
-     "start": 14.755,
-     "end": 15.03
+     "start": 13.149,
+     "end": 13.475
     },
     {
      "text": "questions",
      "highlight": false,
-     "start": 15.03,
-     "end": 15.443
+     "start": 13.494,
+     "end": 13.875
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 15.443,
-     "end": 15.627
+     "start": 13.893,
+     "end": 14.065
     },
     {
      "text": "couldn't",
      "highlight": false,
-     "start": 15.627,
-     "end": 15.994
+     "start": 14.083,
+     "end": 14.326
     },
     {
      "text": "answer.",
      "highlight": true,
-     "start": 15.994,
-     "end": 16.407
+     "start": 14.345,
+     "end": 14.689
     }
    ],
    "trans": "cut",
@@ -456,14 +449,13 @@
   },
   {
    "id": 8,
-   "start": 16.557,
-   "end": 20.355,
+   "start": 15.055,
+   "end": 18.366,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Wide: an excavation on a hill; workers with shovels uncover a stone head",
    "camera": "Slow push-in",
-   "vo_markup": "And on the hill outside the city, something old was *uncovered.*",
    "vo": "And on the hill outside the city, something old was uncovered.",
    "voKind": "narration",
    "speaker": "narr",
@@ -471,68 +463,68 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 16.657,
-     "end": 16.854
+     "start": 15.155,
+     "end": 15.295
     },
     {
      "text": "on",
      "highlight": false,
-     "start": 16.854,
-     "end": 16.985
+     "start": 15.314,
+     "end": 15.438
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 16.985,
-     "end": 17.182
+     "start": 15.456,
+     "end": 15.596
     },
     {
      "text": "hill",
      "highlight": false,
-     "start": 17.182,
-     "end": 17.445
+     "start": 15.615,
+     "end": 15.771
     },
     {
      "text": "outside",
      "highlight": false,
-     "start": 17.445,
-     "end": 17.905
+     "start": 15.789,
+     "end": 16.214
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 17.905,
-     "end": 18.102
+     "start": 16.232,
+     "end": 16.373
     },
     {
      "text": "city,",
      "highlight": false,
-     "start": 18.102,
-     "end": 18.431
+     "start": 16.391,
+     "end": 16.673
     },
     {
      "text": "something",
      "highlight": false,
-     "start": 18.431,
-     "end": 19.022
+     "start": 16.691,
+     "end": 17.148
     },
     {
      "text": "old",
      "highlight": false,
-     "start": 19.022,
-     "end": 19.219
+     "start": 17.166,
+     "end": 17.306
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 19.219,
-     "end": 19.416
+     "start": 17.325,
+     "end": 17.465
     },
     {
      "text": "uncovered.",
      "highlight": true,
-     "start": 19.416,
-     "end": 20.205
+     "start": 17.484,
+     "end": 18.066
     }
    ],
    "trans": "cut",
@@ -546,14 +538,13 @@
   },
   {
    "id": 9,
-   "start": 20.355,
-   "end": 22.586,
+   "start": 18.366,
+   "end": 21.307,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Medium-wide: the whole stone figure revealed (generic, weathered, abstract; NOT resembling any real deity or religion), a rope around it",
    "camera": "Slow tilt up",
-   "vo_markup": "A stone figure, buried for centuries.",
    "vo": "A stone figure, buried for centuries.",
    "voKind": "narration",
    "speaker": "narr",
@@ -561,38 +552,38 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 20.455,
-     "end": 20.517
+     "start": 18.466,
+     "end": 18.595
     },
     {
      "text": "stone",
      "highlight": false,
-     "start": 20.517,
-     "end": 20.826
+     "start": 18.614,
+     "end": 18.948
     },
     {
      "text": "figure,",
      "highlight": false,
-     "start": 20.826,
-     "end": 21.26
+     "start": 18.966,
+     "end": 19.467
     },
     {
      "text": "buried",
      "highlight": false,
-     "start": 21.26,
-     "end": 21.631
+     "start": 19.818,
+     "end": 20.206
     },
     {
      "text": "for",
      "highlight": false,
-     "start": 21.631,
-     "end": 21.817
+     "start": 20.225,
+     "end": 20.41
     },
     {
      "text": "centuries.",
      "highlight": false,
-     "start": 21.817,
-     "end": 22.436
+     "start": 20.428,
+     "end": 21.04
     }
    ],
    "trans": "cut",
@@ -604,14 +595,13 @@
   },
   {
    "id": 10,
-   "start": 22.586,
-   "end": 25.13,
+   "start": 21.307,
+   "end": 23.859,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Wide: visitors with umbrellas behind the rope, pointing and looking",
    "camera": "Lateral track",
-   "vo_markup": "At first, people only came to *look.*",
    "vo": "At first, people only came to look.",
    "voKind": "narration",
    "speaker": "narr",
@@ -619,44 +609,44 @@
     {
      "text": "At",
      "highlight": false,
-     "start": 22.686,
-     "end": 22.834
+     "start": 21.407,
+     "end": 21.605
     },
     {
      "text": "first,",
      "highlight": false,
-     "start": 22.834,
-     "end": 23.278
+     "start": 21.624,
+     "end": 21.92
     },
     {
      "text": "people",
      "highlight": false,
-     "start": 23.278,
-     "end": 23.722
+     "start": 22.34,
+     "end": 22.638
     },
     {
      "text": "only",
      "highlight": false,
-     "start": 23.722,
-     "end": 24.018
+     "start": 22.656,
+     "end": 22.922
     },
     {
      "text": "came",
      "highlight": false,
-     "start": 24.018,
-     "end": 24.314
+     "start": 22.94,
+     "end": 23.205
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 24.314,
-     "end": 24.462
+     "start": 23.224,
+     "end": 23.347
     },
     {
      "text": "look.",
      "highlight": true,
-     "start": 24.462,
-     "end": 24.98
+     "start": 23.365,
+     "end": 23.539
     }
    ],
    "trans": "cut",
@@ -670,14 +660,13 @@
   },
   {
    "id": 11,
-   "start": 25.13,
-   "end": 26.734,
+   "start": 23.859,
+   "end": 25.31,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Close: hands laying flowers at the base of the statue at dusk",
    "camera": "Locked",
-   "vo_markup": "Then they brought *flowers.*",
    "vo": "Then they brought flowers.",
    "voKind": "narration",
    "speaker": "narr",
@@ -685,26 +674,26 @@
     {
      "text": "Then",
      "highlight": false,
-     "start": 25.23,
-     "end": 25.447
+     "start": 23.959,
+     "end": 24.153
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 25.447,
-     "end": 25.663
+     "start": 24.171,
+     "end": 24.365
     },
     {
      "text": "brought",
      "highlight": false,
-     "start": 25.663,
-     "end": 26.042
+     "start": 24.383,
+     "end": 24.635
     },
     {
      "text": "flowers.",
      "highlight": true,
-     "start": 26.042,
-     "end": 26.584
+     "start": 24.654,
+     "end": 25.058
     }
    ],
    "trans": "cut",
@@ -718,14 +707,13 @@
   },
   {
    "id": 12,
-   "start": 26.734,
-   "end": 30.219,
+   "start": 25.31,
+   "end": 29.095,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Top-down at dusk: a ring of people slowly circling the statue",
    "camera": "Very slow rotation",
-   "vo_markup": "Then they began to walk around it… slowly… in *circles.*",
    "vo": "Then they began to walk around it… slowly… in circles.",
    "voKind": "narration",
    "speaker": "narr",
@@ -733,62 +721,62 @@
     {
      "text": "Then",
      "highlight": false,
-     "start": 26.834,
-     "end": 27.109
+     "start": 25.41,
+     "end": 25.573
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 27.109,
-     "end": 27.385
+     "start": 25.591,
+     "end": 25.754
     },
     {
      "text": "began",
      "highlight": false,
-     "start": 27.385,
-     "end": 27.729
+     "start": 25.772,
+     "end": 26.065
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 27.729,
-     "end": 27.866
+     "start": 26.084,
+     "end": 26.213
     },
     {
      "text": "walk",
      "highlight": false,
-     "start": 27.866,
-     "end": 28.142
+     "start": 26.231,
+     "end": 26.394
     },
     {
      "text": "around",
      "highlight": false,
-     "start": 28.142,
-     "end": 28.555
+     "start": 26.412,
+     "end": 26.723
     },
     {
      "text": "it…",
      "highlight": false,
-     "start": 28.555,
-     "end": 28.761
+     "start": 26.741,
+     "end": 26.887
     },
     {
      "text": "slowly…",
      "highlight": false,
-     "start": 28.761,
-     "end": 29.243
+     "start": 27.219,
+     "end": 27.731
     },
     {
      "text": "in",
      "highlight": false,
-     "start": 29.243,
-     "end": 29.381
+     "start": 28.171,
+     "end": 28.352
     },
     {
      "text": "circles.",
      "highlight": true,
-     "start": 29.381,
-     "end": 30.069
+     "start": 28.37,
+     "end": 28.844
     }
    ],
    "trans": "cut",
@@ -802,14 +790,13 @@
   },
   {
    "id": 13,
-   "start": 30.219,
-   "end": 33.39,
+   "start": 29.095,
+   "end": 31.748,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Close: a woman (simple face) joining the circle, calm, eyes half closed",
    "camera": "Slow push-in",
-   "vo_markup": "No one told them to. It just felt *right.*",
    "vo": "No one told them to. It just felt right.",
    "voKind": "narration",
    "speaker": "narr",
@@ -817,56 +804,56 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 30.319,
-     "end": 30.491
+     "start": 29.195,
+     "end": 29.329
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 30.491,
-     "end": 30.748
+     "start": 29.347,
+     "end": 29.616
     },
     {
      "text": "told",
      "highlight": false,
-     "start": 30.748,
-     "end": 31.092
+     "start": 29.635,
+     "end": 29.805
     },
     {
      "text": "them",
      "highlight": false,
-     "start": 31.092,
-     "end": 31.436
+     "start": 29.823,
+     "end": 29.993
     },
     {
      "text": "to.",
      "highlight": false,
-     "start": 31.436,
-     "end": 31.694
+     "start": 30.011,
+     "end": 30.163
     },
     {
      "text": "It",
      "highlight": false,
-     "start": 31.694,
-     "end": 31.865
+     "start": 30.491,
+     "end": 30.655
     },
     {
      "text": "just",
      "highlight": false,
-     "start": 31.865,
-     "end": 32.209
+     "start": 30.673,
+     "end": 30.878
     },
     {
      "text": "felt",
      "highlight": false,
-     "start": 32.209,
-     "end": 32.553
+     "start": 30.896,
+     "end": 31.102
     },
     {
      "text": "right.",
      "highlight": true,
-     "start": 32.553,
-     "end": 33.24
+     "start": 31.12,
+     "end": 31.367
     }
    ],
    "trans": "cut",
@@ -880,14 +867,13 @@
   },
   {
    "id": 14,
-   "start": 33.39,
-   "end": 41.264,
+   "start": 31.748,
+   "end": 39.186,
    "act": 1,
    "set": "hill",
    "owner": "C",
    "framing": "Wide: the statue silhouetted against the dusk sky on the hill, the city small below",
    "camera": "Very slow push-in",
-   "vo_markup": "The Prophet said that before the Hour, knowledge would be taken away, ignorance would spread, and some would return to the idols of old.",
    "vo": "The Prophet said that before the Hour, knowledge would be taken away, ignorance would spread, and some would return to the idols of old.",
    "voKind": "narration",
    "speaker": "narr",
@@ -895,146 +881,146 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 33.49,
-     "end": 33.693
+     "start": 31.848,
+     "end": 31.992
     },
     {
      "text": "Prophet",
      "highlight": false,
-     "start": 33.693,
-     "end": 34.165
+     "start": 32.01,
+     "end": 32.333
     },
     {
      "text": "said",
      "highlight": false,
-     "start": 34.165,
-     "end": 34.435
+     "start": 32.351,
+     "end": 32.512
     },
     {
      "text": "that",
      "highlight": false,
-     "start": 34.435,
-     "end": 34.704
+     "start": 32.53,
+     "end": 32.691
     },
     {
      "text": "before",
      "highlight": false,
-     "start": 34.704,
-     "end": 35.109
+     "start": 32.709,
+     "end": 33.126
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 35.109,
-     "end": 35.312
+     "start": 33.145,
+     "end": 33.288
     },
     {
      "text": "Hour,",
      "highlight": false,
-     "start": 35.312,
-     "end": 35.649
+     "start": 33.306,
+     "end": 33.484
     },
     {
      "text": "knowledge",
      "highlight": false,
-     "start": 35.649,
-     "end": 36.256
+     "start": 33.853,
+     "end": 34.289
     },
     {
      "text": "would",
      "highlight": false,
-     "start": 36.256,
-     "end": 36.594
+     "start": 34.307,
+     "end": 34.473
     },
     {
      "text": "be",
      "highlight": false,
-     "start": 36.594,
-     "end": 36.728
+     "start": 34.491,
+     "end": 34.608
     },
     {
      "text": "taken",
      "highlight": false,
-     "start": 36.728,
-     "end": 37.066
+     "start": 34.626,
+     "end": 34.896
     },
     {
      "text": "away,",
      "highlight": false,
-     "start": 37.066,
-     "end": 37.403
+     "start": 34.915,
+     "end": 35.184
     },
     {
      "text": "ignorance",
      "highlight": false,
-     "start": 37.403,
-     "end": 38.01
+     "start": 35.549,
+     "end": 36.134
     },
     {
      "text": "would",
      "highlight": false,
-     "start": 38.01,
-     "end": 38.348
+     "start": 36.152,
+     "end": 36.331
     },
     {
      "text": "spread,",
      "highlight": false,
-     "start": 38.348,
-     "end": 38.82
+     "start": 36.349,
+     "end": 36.562
     },
     {
      "text": "and",
      "highlight": false,
-     "start": 38.82,
-     "end": 39.022
+     "start": 36.927,
+     "end": 37.078
     },
     {
      "text": "some",
      "highlight": false,
-     "start": 39.022,
-     "end": 39.292
+     "start": 37.096,
+     "end": 37.38
     },
     {
      "text": "would",
      "highlight": false,
-     "start": 39.292,
-     "end": 39.629
+     "start": 37.398,
+     "end": 37.583
     },
     {
      "text": "return",
      "highlight": false,
-     "start": 39.629,
-     "end": 40.034
+     "start": 37.601,
+     "end": 37.919
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 40.034,
-     "end": 40.169
+     "start": 37.937,
+     "end": 38.07
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 40.169,
-     "end": 40.372
+     "start": 38.088,
+     "end": 38.239
     },
     {
      "text": "idols",
      "highlight": false,
-     "start": 40.372,
-     "end": 40.709
+     "start": 38.257,
+     "end": 38.558
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 40.709,
-     "end": 40.844
+     "start": 38.576,
+     "end": 38.709
     },
     {
      "text": "old.",
      "highlight": false,
-     "start": 40.844,
-     "end": 41.114
+     "start": 38.727,
+     "end": 38.895
     }
    ],
    "trans": "cut",
@@ -1046,14 +1032,13 @@
   },
   {
    "id": 15,
-   "start": 41.264,
-   "end": 43.495,
+   "start": 39.186,
+   "end": 41.834,
    "act": 1,
    "set": "harvest",
    "owner": "S",
    "framing": "Wide: rain sweeping over green fields; farmers looking up, laughing",
    "camera": "Slow push-in",
-   "vo_markup": "That spring, the rain came *early.*",
    "vo": "That spring, the rain came early.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1061,38 +1046,38 @@
     {
      "text": "That",
      "highlight": false,
-     "start": 41.364,
-     "end": 41.628
+     "start": 39.286,
+     "end": 39.585
     },
     {
      "text": "spring,",
      "highlight": false,
-     "start": 41.628,
-     "end": 42.09
+     "start": 39.603,
+     "end": 39.989
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 42.09,
-     "end": 42.288
+     "start": 40.383,
+     "end": 40.554
     },
     {
      "text": "rain",
      "highlight": false,
-     "start": 42.288,
-     "end": 42.552
+     "start": 40.572,
+     "end": 40.762
     },
     {
      "text": "came",
      "highlight": false,
-     "start": 42.552,
-     "end": 42.816
+     "start": 40.78,
+     "end": 41.101
     },
     {
      "text": "early.",
      "highlight": true,
-     "start": 42.816,
-     "end": 43.345
+     "start": 41.119,
+     "end": 41.479
     }
    ],
    "trans": "cut",
@@ -1106,14 +1091,13 @@
   },
   {
    "id": 16,
-   "start": 43.495,
-   "end": 46.666,
+   "start": 41.834,
+   "end": 44.689,
    "act": 1,
    "set": "harvest",
    "owner": "S",
    "framing": "Wide: golden rice fields, harvesters, overflowing carts",
    "camera": "Lateral track",
-   "vo_markup": "The harvest was the biggest anyone had ever *seen.*",
    "vo": "The harvest was the biggest anyone had ever seen.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1121,56 +1105,56 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 43.595,
-     "end": 43.798
+     "start": 41.934,
+     "end": 42.093
     },
     {
      "text": "harvest",
      "highlight": false,
-     "start": 43.798,
-     "end": 44.274
+     "start": 42.111,
+     "end": 42.465
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 44.274,
-     "end": 44.478
+     "start": 42.483,
+     "end": 42.642
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 44.478,
-     "end": 44.682
+     "start": 42.66,
+     "end": 42.818
     },
     {
      "text": "biggest",
      "highlight": false,
-     "start": 44.682,
-     "end": 45.157
+     "start": 42.836,
+     "end": 43.191
     },
     {
      "text": "anyone",
      "highlight": false,
-     "start": 45.157,
-     "end": 45.565
+     "start": 43.209,
+     "end": 43.666
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 45.565,
-     "end": 45.769
+     "start": 43.685,
+     "end": 43.844
     },
     {
      "text": "ever",
      "highlight": false,
-     "start": 45.769,
-     "end": 46.04
+     "start": 43.862,
+     "end": 44.161
     },
     {
      "text": "seen.",
      "highlight": true,
-     "start": 46.04,
-     "end": 46.516
+     "start": 44.179,
+     "end": 44.375
     }
    ],
    "trans": "cut",
@@ -1184,14 +1168,13 @@
   },
   {
    "id": 17,
-   "start": 46.666,
-   "end": 51.091,
+   "start": 44.689,
+   "end": 48.812,
    "act": 1,
    "set": "harvest",
    "owner": "S",
    "framing": "Medium: a warehouse where sacks of money pile up; a merchant laughing; banknotes fluttering in the air",
    "camera": "Slow push-in",
-   "vo_markup": "And with it came more money than anyone knew what to do *with.*",
    "vo": "And with it came more money than anyone knew what to do with.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1199,80 +1182,80 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 46.766,
-     "end": 47.011
+     "start": 44.789,
+     "end": 44.931
     },
     {
      "text": "with",
      "highlight": false,
-     "start": 47.011,
-     "end": 47.339
+     "start": 44.949,
+     "end": 45.106
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 47.339,
-     "end": 47.503
+     "start": 45.125,
+     "end": 45.249
     },
     {
      "text": "came",
      "highlight": false,
-     "start": 47.503,
-     "end": 47.83
+     "start": 45.267,
+     "end": 45.887
     },
     {
      "text": "more",
      "highlight": false,
-     "start": 47.83,
-     "end": 48.158
+     "start": 45.905,
+     "end": 46.174
     },
     {
      "text": "money",
      "highlight": false,
-     "start": 48.158,
-     "end": 48.567
+     "start": 46.192,
+     "end": 46.476
     },
     {
      "text": "than",
      "highlight": false,
-     "start": 48.567,
-     "end": 48.894
+     "start": 46.495,
+     "end": 46.652
     },
     {
      "text": "anyone",
      "highlight": false,
-     "start": 48.894,
-     "end": 49.386
+     "start": 46.67,
+     "end": 47.081
     },
     {
      "text": "knew",
      "highlight": false,
-     "start": 49.386,
-     "end": 49.713
+     "start": 47.099,
+     "end": 47.257
     },
     {
      "text": "what",
      "highlight": false,
-     "start": 49.713,
-     "end": 50.041
+     "start": 47.275,
+     "end": 47.433
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 50.041,
-     "end": 50.204
+     "start": 47.451,
+     "end": 47.576
     },
     {
      "text": "do",
      "highlight": false,
-     "start": 50.204,
-     "end": 50.368
+     "start": 47.595,
+     "end": 47.719
     },
     {
      "text": "with.",
      "highlight": true,
-     "start": 50.368,
-     "end": 50.941
+     "start": 47.737,
+     "end": 47.912
     }
    ],
    "trans": "cut",
@@ -1286,14 +1269,13 @@
   },
   {
    "id": 18,
-   "start": 51.091,
-   "end": 55.291,
+   "start": 48.812,
+   "end": 53.012,
    "act": 1,
    "set": "library",
    "owner": "P",
    "framing": "TITLE CARD on black",
    "camera": "Very slow push-in",
-   "vo_markup": "",
    "vo": "",
    "voKind": "none",
    "speaker": "narr",
@@ -1306,5 +1288,5 @@
    "sync": []
   }
  ],
- "timingSource": "ESTIMATE (VO pending)"
+ "timingSource": "ai33 eleven_v3 audio (STT transcript stuck), word timing silence-aligned, gaps>0.9s cut to 0.5s (0), atempo x1.1"
 }

@@ -65,6 +65,7 @@ for i in range(P + 1):
                 c = math.log(max(act, 0.05) / max(exp, 0.05)) ** 2 + 0.02 * (kp + ks - 2)
                 # merging phrases across a sentence end (".", "?", "!") is unlikely: the narrator pauses there
                 c += 0.35 * sum(1 for q in phr[i:i + kp - 1] if re.search(r"[.?!]$", q[-1]))
+                c += 0.15 * (ks - 1)   # a phrase spanning an internal pause is less likely than a 1:1 match
                 if dp[i][j] + c < dp[i + kp][j + ks]:
                     dp[i + kp][j + ks] = dp[i][j] + c
                     bk[i + kp][j + ks] = (kp, ks)
