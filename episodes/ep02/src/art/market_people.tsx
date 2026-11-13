@@ -156,7 +156,7 @@ export const Side: React.FC<SideProps> = ({
       <g transform={`translate(${hc[0]} ${hc[1]}) rotate(${lean * 0.5 + headTilt})`}>
         {face === 'side' && <HeadSide kind={head} pal={pal} rim={rim} rimO={rimO} />}
         {face === 'back' && <g transform="scale(-1 1)"><HeadSide kind={head} pal={pal} rim={rim} rimO={rimO} /></g>}
-        {face === 'front' && <HeadFront kind={head} pal={pal} rim={rim} rimO={rimO} />}
+        {face === 'front' && <HeadFront kind={head} pal={pal} rim={rim} rimO={rimO} eyes="open" />}
       </g>
       {arm(shN, aN, true)}
       {holdN}

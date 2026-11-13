@@ -80,7 +80,8 @@ export const RollDoor: React.FC<{ open: number; rattle: number }> = ({ open, rat
 export const FrontLight: React.FC<{ open: number; t: number }> = ({ open, t }) => (
   <g>
     <Glow id="mfLamp" x={150} y={420} rx={160} c="#ffd08a" o={0.6 + 0.04 * Math.sin(t * 30)} />
-    <path d={`M${FR.door.x1} ${FR.ground} L${FR.door.x2} ${FR.ground} L1000 1700 L100 1700 Z`} fill="#ffd08a" opacity={0.22 * open} />
+    <defs><linearGradient id="mfSpill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#ffd08a" stopOpacity={0.3} /><stop offset="1" stopColor="#ffd08a" stopOpacity={0} /></linearGradient></defs>
+    <path d={`M${FR.door.x1} ${FR.ground} L${FR.door.x2} ${FR.ground} L1000 1700 L100 1700 Z`} fill="url(#mfSpill)" opacity={open} />
   </g>
 );
 

@@ -193,10 +193,10 @@ export const BackWalker: React.FC<{ x: number; y: number; h: number; ph: number;
       {/* arms swing (foreshortened); the right arm can point forward/up (point 0..1) */}
       <path d={`M -11.5 ${-78 + bob} Q ${-14 - c * 1.5} ${-66 + bob} ${-13 - c * 2} ${-52 + bob}`} stroke={top} strokeWidth={4.6} strokeLinecap="round" fill="none" />
       {point > 0
-        ? <path d={`M 11.5 ${-78 + bob} L ${13 + 8 * point} ${-78 - 14 * point + bob} L ${15 + 16 * point} ${-82 - 22 * point + bob}`} stroke={top} strokeWidth={4.6} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+        ? <path d={`M 11.5 ${-78 + bob} L ${14 + 10 * point} ${-80 - 12 * point + bob} L ${18 + 22 * point} ${-84 - 26 * point + bob}`} stroke={top} strokeWidth={5.2} strokeLinecap="round" strokeLinejoin="round" fill="none" />
         : <path d={`M 11.5 ${-78 + bob} Q ${14 + c * 1.5} ${-66 + bob} ${13 + c * 2} ${-52 + bob}`} stroke={top} strokeWidth={4.6} strokeLinecap="round" fill="none" />}
       <ellipse cx={-13 - c * 2} cy={-50 + bob} rx={2.6} ry={2.8} fill="#4a3428" />
-      {point > 0 ? <ellipse cx={15 + 16 * point} cy={-84 - 22 * point + bob} rx={2.6} ry={2.8} fill="#4a3428" /> : <ellipse cx={13 + c * 2} cy={-50 + bob} rx={2.6} ry={2.8} fill="#4a3428" />}
+      {point > 0 ? <g><ellipse cx={18 + 22 * point} cy={-86 - 26 * point + bob} rx={2.8} ry={3} fill="#4a3428" /><path d={`M ${18 + 22 * point} ${-88 - 26 * point + bob} l ${4 * point} ${-6 * point}`} stroke="#4a3428" strokeWidth={2} strokeLinecap="round" /></g> : <ellipse cx={13 + c * 2} cy={-50 + bob} rx={2.6} ry={2.8} fill="#4a3428" />}
       <rect x={-2.2} y={-87 + bob} width={4.4} height={6} fill="#4a3428" />
       <ellipse cx={0} cy={-92 + bob} rx={5.8} ry={6.8} fill="#2a1e18" />
       {hat === 'peci' && <path d={`M -5.8 ${-94 + bob} L -5.4 ${-99.5 + bob} Q 0 ${-100.5 + bob} 5.4 ${-99.5 + bob} L 5.8 ${-94 + bob} Z`} fill="#0e0c10" />}
@@ -212,7 +212,7 @@ export const RingFigure: React.FC<{ x: number; y: number; h: number; col: string
   const s = h / 100;
   const hx = sway;
   return (
-    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${tilt}) scale(${s.toFixed(4)})`}>
+    <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${tilt}) scale(${(s * 0.72).toFixed(4)} ${s.toFixed(4)})`}>
       {/* legs (foreshortened from below, large) */}
       <path d={`M -22 0 L -16 -46 L -2 -46 L -5 0 Z M 22 0 L 16 -46 L 2 -46 L 5 0 Z`} fill={col} />
       {/* torso tapering up: hips -> shoulders */}

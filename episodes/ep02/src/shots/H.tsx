@@ -6,7 +6,7 @@ import { Fr, lerp, bump } from '../art/market_kit';
 import { Side, Front, toFrame, Pal } from '../art/market_people';
 import { SH, FrontShelf, Gallon, Bottle, GrabArm, DawnMood, DayShaft, HabisCard } from '../art/market_shop';
 import { RollDoor, FrontLight, Jerrycan } from '../art/market_front';
-import { ST, StallLife, Shutter, Ladle } from '../art/market_stall';
+import { ST, StallLife, Shutter, Ladle, StallCounter, STALL_DAWN, STALL_DUSK } from '../art/market_stall';
 
 /** keyframe track [[t, x, y], ...] eased between keys */
 const track = (t: number, keys: [number, number, number][]) => {
@@ -47,7 +47,7 @@ export const S01: React.FC = () => {
   const wob = 0.22 * Math.sin(t * 17) + 1.4 * decay(t, tK, 8, 38);
   const h = handheld(t, 0.7);
   const j = decay(t, tK, 9, 46);
-  const cam: Cam = { zoom: 1.74 + 0.14 * EIO(t / sec), dx: 0, dy: 0, tx: h.hx + 6 * j, ty: h.hy + 14 * j, rot: h.hr, ox: 540, oy: 1080 };
+  const cam: Cam = { zoom: 1.74 + 0.14 * EIO(t / sec), dx: 0, dy: 0, tx: h.hx + 6 * j, ty: h.hy + 14 * j, rot: h.hr, ox: 540, oy: 1330 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#24162a' }}>
       <BandImg id="market/shop" cam={cam} />
@@ -123,25 +123,26 @@ export const S02: React.FC = () => {
 export const S03: React.FC = () => {
   const { t, t2, sec } = useShot();
   const tW = wordAt(3, /^whisper/i, 0.39);
-  const lean = 6 + 26 * ramp(t2, tW - 0.4, tW, EOUT) + 2 * Math.sin(t2 * 2);
+  const lean = 5 + 19 * ramp(t2, tW - 0.4, tW, EOUT) + 2 * Math.sin(t2 * 2);
   const ladling = 1 - ramp(t2, tW - 0.15, tW, EOUT);
   const dip = ladling * (0.5 + 0.5 * Math.sin(t2 * 7));
   // owner (faces left), near hand = ladle over the pot
-  const oX = 790, oY = ST.floor, oH = 860;
-  const handN: [number, number] = [150 + 20 * dip, -620 + 90 * dip];
+  const oX = 690, oY = ST.floor, oH = 860;
+  const handN: [number, number] = [-200 - 10 * dip, -660 + 80 * dip];
   const hn = toFrame(oX, oY, oH, -1, handN);
   const cX = 430, cY = 1800, cH = 930;
   const freeze = ramp(t2, tW - 0.1, tW + 0.1);
-  const cam: Cam = { zoom: 1.0 + 0.07 * EIO(t / sec), dx: 0, dy: 0, ox: 600, oy: 1000 };
+  const cam: Cam = { zoom: 1.42 + 0.07 * EIO(t / sec), dx: 0, dy: 0, ox: 620, oy: 1060 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#1c2244' }}>
       <BandImg id="market/stall-dawn" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <Side x={oX} y={oY} h={oH} dir={-1} pal={OWNER} head="scarf" skirt handN={handN} handF={[120, -560]} lean={4 - 3 * freeze} headTilt={-6 * freeze} bob={3 * Math.sin(t2 * 3) * (1 - freeze)} />
-          <Ladle hx={hn[0]} hy={hn[1]} ang={70 - 20 * dip} t={t} drip={freeze} />
+          <Side x={oX} y={oY} h={oH} dir={-1} pal={OWNER} head="scarf" skirt handN={handN} handF={[100, -600]} lean={4 - 3 * freeze} headTilt={-6 * freeze} bob={3 * Math.sin(t2 * 3) * (1 - freeze)} />
+          <Ladle hx={hn[0]} hy={hn[1]} ang={80 - 15 * dip} t={t} drip={freeze} />
+          <StallCounter pal={STALL_DAWN} />
           <StallLife t={t} steam={1} />
-          <Side x={cX} y={cY} h={cH} dir={1} pal={WHISPERER} head="scarf" skirt lean={lean} handN={[120 + 30 * freeze, -880]} handF={[120, -560]} bob={2 * Math.sin(t2 * 3)} />
+          <Side x={cX} y={cY} h={cH} dir={1} pal={WHISPERER} head="scarf" skirt lean={lean} handN={[110 + 20 * freeze, -870]} handF={[30, -470]} bob={2 * Math.sin(t2 * 3)} />
         </Fr>
       </Live>
     </AbsoluteFill>
@@ -166,7 +167,7 @@ export const S08: React.FC = () => {
           <FrontShelf wob={0}>
             <Front x={520} y={SH.floor} h={954} pal={OWNER} head="scarf" cross handL={handL} handR={handR} bob={3 * breath + 6 * bump(t2, tE - 0.05, 0.25)} tilt={-3 * c} eyes="open" rimO={0.3} />
           </FrontShelf>
-          <HabisCard x={560} y={SH.tiers[0] + 30} sway={2 * Math.sin(t * 2.2) + 6 * Math.exp(-Math.max(0, t - tE) * 3) * (t > tE ? Math.sin((t - tE) * 12) : 0)} />
+          <HabisCard x={600} y={SH.tiers[1] + 30} sway={2 * Math.sin(t * 2.2) + 6 * Math.exp(-Math.max(0, t - tE) * 3) * (t > tE ? Math.sin((t - tE) * 12) : 0)} />
         </Fr>
       </Live>
       <Live k={1.3} cam={cam}><Fr><rect x={-200} y={-300} width={210} height={2600} fill="#3a4048" opacity={0.9} /></Fr></Live>
@@ -201,7 +202,8 @@ export const S23: React.FC = () => {
           <StallLife t={t} steam={0.35} lamp={0.7} />
           <Front x={540} y={ST.floor} h={860} pal={OWNER} head="scarf" handL={handL} handR={handR} headDy={34 * down} tilt={-4 * down} eyes={down > 0.5 ? 'down' : 'open'} bob={2 * Math.sin(t2 * 2.4)} rimO={0.5} />
           <Shutter rail={rail} rattle={rattle} />
-          {hands && [420, 660].map((x) => <path key={x} d={`M${x - 26} ${rail - 2} Q${x} ${rail + 18} ${x + 26} ${rail - 2} Z`} fill={OWNER.skin} />)}
+          {hands && [437, 643].map((x) => <path key={x} d={`M${x - 26} ${rail - 2} Q${x} ${rail + 18} ${x + 26} ${rail - 2} Z`} fill={OWNER.skin} />)}
+          <StallCounter pal={STALL_DUSK} />
         </Fr>
       </Live>
     </AbsoluteFill>

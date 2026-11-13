@@ -8,7 +8,7 @@ import { Glow, Puff } from './market_kit';
 export type StallPal = { sky: [string, string, string]; roofs: string; tarp: string; wood: string; woodD: string; back: string; ground: string; tint: string; tintO: number };
 export const STALL_DAWN: StallPal = { sky: ['#1c2244', '#5b4a78', '#e59a7a'], roofs: '#2e2848', tarp: '#2f4a64', wood: '#9a7a58', woodD: '#6e5038', back: '#4a3428', ground: '#4e4250', tint: '#5b4a78', tintO: 0.18 };
 export const STALL_DUSK: StallPal = { sky: ['#1f1830', '#3b2c52', '#c96b5c'], roofs: '#1c1528', tarp: '#2a2036', wood: '#a47658', woodD: '#6a4434', back: '#3e2a24', ground: '#3a2c3a', tint: '#c96b5c', tintO: 0.14 };
-export const ST = { counter: 1200, floor: 1720, pot: { x: 760, top: 990 }, box: 780, ox1: 180, ox2: 900 };
+export const ST = { counter: 1200, floor: 1720, pot: { x: 850, top: 990 }, box: 780, ox1: 180, ox2: 900 };
 
 export const StallBand: React.FC<{ pal: StallPal }> = ({ pal }) => (
   <g>
@@ -32,6 +32,15 @@ export const StallBand: React.FC<{ pal: StallPal }> = ({ pal }) => (
     <path d="M100 660 L980 660 L1000 744 L80 744 Z" fill={pal.tarp} />
     {Array.from({ length: 12 }, (_, i) => <path key={i} d={`M${80 + i * 77} 744 q38 26 77 0`} fill={pal.tarp} />)}
     <rect x={170} y={744} width={740} height={40} fill="#3a3a44" />
+    {/* ground */}
+    <rect x={-108} y={ST.floor} width={1296} height={500} fill={pal.ground} />
+    <rect x={-108} y={-192} width={1296} height={2400} fill={pal.tint} opacity={pal.tintO} />
+  </g>
+);
+
+/** counter, glass case, stove and pot: drawn live IN FRONT of the owner */
+export const StallCounter: React.FC<{ pal: StallPal }> = ({ pal }) => (
+  <g>
     {/* counter with a glass case (left) and the stove (right) */}
     <rect x={130} y={ST.counter} width={820} height={30} fill={pal.wood} />
     <rect x={150} y={ST.counter + 30} width={780} height={ST.floor - ST.counter - 30} fill={pal.woodD} />
@@ -39,16 +48,14 @@ export const StallBand: React.FC<{ pal: StallPal }> = ({ pal }) => (
     <rect x={230} y={1060} width={330} height={140} fill="#cfe0e6" opacity={0.28} />
     <rect x={230} y={1060} width={330} height={140} fill="none" stroke="#8a8a90" strokeWidth={6} />
     {[[280, 1150], [360, 1160], [450, 1150], [510, 1165]].map(([x, y], i) => <ellipse key={i} cx={x} cy={y} rx={34} ry={16} fill={i % 2 ? '#c98a3a' : '#a8622a'} />)}
-    <rect x={630} y={1172} width={260} height={28} rx={6} fill="#2a2a30" />
+    <rect x={720} y={1172} width={250} height={28} rx={6} fill="#2a2a30" />
     {/* the big pot (soup surface open, ladling) */}
-    <path d={`M664 ${ST.pot.top} L856 ${ST.pot.top} L846 1168 Q760 1182 674 1168 Z`} fill="#b9bec4" />
-    <path d={`M800 ${ST.pot.top} L856 ${ST.pot.top} L846 1168 Q820 1174 800 1176 Z`} fill="#80868c" />
-    <ellipse cx={760} cy={ST.pot.top} rx={96} ry={18} fill="#cfd4d8" />
-    <ellipse cx={760} cy={ST.pot.top + 4} rx={86} ry={13} fill="#b8743a" />
-    <path d="M680 1010 L680 1150" stroke="#eef1f3" strokeWidth={8} opacity={0.5} strokeLinecap="round" />
-    {/* ground */}
-    <rect x={-108} y={ST.floor} width={1296} height={500} fill={pal.ground} />
-    <rect x={-108} y={-192} width={1296} height={2400} fill={pal.tint} opacity={pal.tintO} />
+    <path d={`M754 ${ST.pot.top} L946 ${ST.pot.top} L936 1168 Q850 1182 764 1168 Z`} fill="#b9bec4" />
+    <path d={`M890 ${ST.pot.top} L946 ${ST.pot.top} L936 1168 Q910 1174 890 1176 Z`} fill="#80868c" />
+    <ellipse cx={850} cy={ST.pot.top} rx={96} ry={18} fill="#cfd4d8" />
+    <ellipse cx={850} cy={ST.pot.top + 4} rx={86} ry={13} fill="#b8743a" />
+    <path d="M770 1010 L770 1150" stroke="#eef1f3" strokeWidth={8} opacity={0.5} strokeLinecap="round" />
+    <rect x={130} y={ST.counter} width={820} height={ST.floor - ST.counter} fill={pal.tint} opacity={pal.tintO} />
   </g>
 );
 
@@ -60,7 +67,7 @@ export const StallLife: React.FC<{ t: number; steam: number; lamp?: number }> = 
     <circle cx={540} cy={836} r={14} fill="#fff0c8" opacity={0.4 + 0.6 * lamp} />
     {Array.from({ length: 7 }, (_, i) => {
       const life = (t * 0.7 + i / 7) % 1;
-      const x = 700 + ((i * 41) % 120) + Math.sin(t * 1.8 + i) * 22 * life;
+      const x = 790 + ((i * 41) % 120) + Math.sin(t * 1.8 + i) * 22 * life;
       return <Puff key={i} id={`mtSt${i}`} x={x} y={ST.pot.top - 20 - life * 300} r={22 + life * 46} c="#f4f1ec" o={steam * 0.5 * Math.sin(Math.PI * life)} seed={i} />;
     })}
   </g>
