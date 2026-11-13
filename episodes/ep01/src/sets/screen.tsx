@@ -188,8 +188,8 @@ const meeting = () => (
     {/* far side: chair pedestals and two pairs of trousered legs (seated people) */}
     {[[130, 0], [860, 1]].map(([x, k]) => (
       <g key={x} fill={k ? '#3b3f47' : '#363a42'}>
-        <path d={`M${x - 70} 420 L${x - 12} 420 L${x - 30} 900 L${x - 92} 900 Z`} />
-        <path d={`M${x + 20} 420 L${x + 78} 420 L${x + 92} 900 L${x + 30} 900 Z`} />
+        <path d={`M${x - 110} 420 L${x - 8} 420 L${x - 22} 900 L${x - 110} 900 Z`} />
+        <path d={`M${x + 16} 420 L${x + 118} 420 L${x + 120} 900 L${x + 30} 900 Z`} />
         <path d={`M${x - 120} 900 Q${x - 60} 880 ${x - 26} 910 L${x - 130} 920 Z M${x + 26} 905 Q${x + 80} 880 ${x + 130} 905 L${x + 124} 920 Z`} fill="#1f2228" />
       </g>
     ))}

@@ -5,7 +5,7 @@ import { useShot, BandImg, Live, Cam, handheld, ramp, EIO, EOUT, clamp01 } from 
 import { wordAt, spanOf, FPS } from '../data/ep';
 import { GREEN } from '../comp/Overlays';
 import { Phone, Feed, UI_DAY, UI_NIGHT, CardSpec, SW, SH, CH, NOTIF_H, Notif } from '../art/screen_phone';
-import { HoldBack, HoldFront, Thumb, ThumbHand } from '../art/screen_hand';
+import { HoldBack, HoldFront, ThumbECU, SuitHand, Sleeper } from '../art/screen_hand';
 import { DESK } from '../sets/screen';
 
 const { fontFamily: TITLE_FONT } = loadCinzel('normal', { weights: ['700'], subsets: ['latin'] });
@@ -25,10 +25,10 @@ const FEED4: CardSpec[] = [
   { photo: 'crowd', b1: 0.9, b2: 0.62, meta: 0.34 },
 ];
 
-/* ============ shot 4: over-the-shoulder, a hand holding a phone, the feed jumps on each headline ============ */
-export const S04: React.FC = () => {
-  const { p, t, sec } = useShot();
-  const beats = [wordAt(4, /earthquake/i, 0.21), wordAt(4, /^life/i, 0.35), wordAt(4, /^trusted/i, 0.65)];
+/* ============ shot 9 (was 4): over-the-shoulder, a hand holding a phone, the feed jumps on each headline ============ */
+export const S09: React.FC = () => {
+  const { p, t, t2, sec } = useShot();
+  const beats = [wordAt(9, /earthquake/i, 0.21), wordAt(9, /^life/i, 0.35), wordAt(9, /^trusted/i, 0.65)];
   const LEAD = 0.14, DUR = 0.42;
   const sAt = (x: number) => {
     let s = 0.2 * ramp(x, 0.2, beats[0] - LEAD, Easing.inOut(Easing.quad));
@@ -38,8 +38,9 @@ export const S04: React.FC = () => {
   const s = sAt(t);
   const v = (sAt(t + 1 / 120) - sAt(t - 1 / 120)) * 60; // cards per second
   const L = Math.min(90, (Math.abs(v) * CH) / 60); // 180-degree shutter smear
-  const flick = Math.max(...beats.map((b) => bump(t, b - LEAD - 0.1, 0.55)));
-  const h = handheld(t, 0.45), hh = handheld(t * 1.3 + 4, 0.3);
+  // the hand (and the phone it holds) moves ON TWOS; the feed scroll, camera and the window stay on ones
+  const flick = Math.max(...beats.map((b) => bump(t2, b - LEAD - 0.1, 0.55)));
+  const h = handheld(t, 0.45), hh = handheld(t2 * 1.3 + 4, 0.3);
   const cam: Cam = { zoom: 1 + 0.03 * EIO(p), dx: 0, dy: 0, tx: h.hx, ty: h.hy, rot: h.hr * 0.5, ox: 585, oy: 840 };
   const pan = 380 - 760 * p; // the train moves: the city slides left behind the glass
   return (
@@ -77,7 +78,7 @@ export const S04: React.FC = () => {
   );
 };
 
-/* ============ shot 5: extreme close-up, the thumb swipes cards away until the feed is a blur ============ */
+/* ============ shot 10 (was 5): extreme close-up, the thumb swipes cards away until the feed is a blur ============ */
 const FEED5: CardSpec[] = [
   { photo: 'road', tag: 'BREAKING', b1: 0.93, b2: 0.64, meta: 0.3 },
   { photo: 'sea', b1: 0.88, b2: 0.56, meta: 0.34 },
@@ -90,17 +91,17 @@ const FEED5: CardSpec[] = [
 ];
 const SC5 = 1.9; // phone scale in the extreme close-up
 
-export const S05: React.FC = () => {
-  const { t, p } = useShot();
-  const beats = [wordAt(5, /^Read/i, 0.55), wordAt(5, /^Swipe/i, 0.63), wordAt(5, /^Forgotten/i, 0.73)];
+export const S10: React.FC = () => {
+  const { t, p, t2 } = useShot();
+  const beats = [wordAt(10, /^Read/i, 0.55), wordAt(10, /^Swipe/i, 0.63), wordAt(10, /^Forgotten/i, 0.73)];
   const FL = 0.24; // a fling lasts 0.24 s
-  const t0 = beats[2] + 0.3; // the feed starts to stream
+  const t0 = beats[2] + 0.18; // the feed starts to stream
   const fu = (i: number, x: number) => clamp01((x - (beats[i] - 0.06)) / FL);
   const flingX = (i: number, x: number) => (i >= 0 && i < 3 ? -SW * 1.3 * Easing.in(Easing.quad)(fu(i, x)) : 0);
   const sAt = (x: number) => {
     let s = -0.42 + 0.42 * ramp(x, 0, beats[0] - 0.12, EOUT);
     beats.forEach((b) => { s += ramp(x, b - 0.06 + FL * 0.55, b - 0.06 + FL * 0.55 + 0.2, EOUT); });
-    if (x > t0) s += 12.5 * Math.pow(x - t0, 2.2);
+    if (x > t0) s += 30 * Math.pow(x - t0, 2.2);
     return s;
   };
   const s = sAt(t);
@@ -111,20 +112,20 @@ export const S05: React.FC = () => {
     const vx = (flingX(i, t + 1 / 120) - flingX(i, t - 1 / 120)) * 60;
     return { dx, rot: (dx / SW) * 9, Lx: Math.min(120, Math.abs(vx) / 60) };
   };
-  // thumb: tip path (frame px); the base follows a third of the motion
-  const T0 = { x: 610, y: 1150 }, B0 = { x: 975, y: 1610 };
-  let tx = 0, ty = 70 - 150 * ramp(t, 0.1, 1.5, EIO);
+  // thumb ON TWOS: tip path (frame px); the whole hand follows most of the motion so the thumb keeps its short length
+  const T0 = { x: 600, y: 1130 }, B0 = { x: 870, y: 1500 };
+  let tx = 0, ty = 70 - 150 * ramp(t2, 0.1, 1.5, EIO);
   beats.forEach((b) => {
-    const w = clamp01((t - (b - 0.09)) / 0.34);
+    const w = clamp01((t2 - (b - 0.09)) / 0.34);
     const o = w < 0.55 ? EIO(w / 0.55) : 1 - EIO((w - 0.55) / 0.45);
     tx -= 400 * o; ty -= 30 * o;
   });
-  ty -= 300 * bump(t, t0 - 0.14, 0.5);
-  tx += 60 * bump(t, t0 - 0.14, 0.5);
-  const T = { x: T0.x + tx, y: T0.y + ty }, B = { x: B0.x + tx * 0.3, y: B0.y + ty * 0.25 };
+  ty -= 260 * bump(t2, t0 - 0.14, 0.5);
+  tx += 60 * bump(t2, t0 - 0.14, 0.5);
+  const T = { x: T0.x + tx, y: T0.y + ty }, B = { x: B0.x + tx * 0.78, y: B0.y + ty * 0.7 };
   const ang = Math.atan2(T.y - B.y, T.x - B.x) * DEG;
   const len = Math.hypot(T.x - B.x, T.y - B.y);
-  const TS = 2.62; // thumb scale
+  const TS = 2.45; // thumb scale
   const h = handheld(t, 0.18);
   const cam: Cam = { zoom: 1, dx: 0, dy: 0, tx: h.hx, ty: h.hy, ox: 540, oy: 960 };
   const camBg: Cam = { zoom: 1.7, dx: 0, dy: 0, tx: h.hx * 0.5, ty: h.hy * 0.5, ox: 160, oy: 700 };
@@ -141,12 +142,11 @@ export const S05: React.FC = () => {
             </Phone>
           </g>
           {/* soft shadow of the thumb on the glass */}
-          <g transform={`translate(${B.x + 26} ${B.y + 30}) rotate(${ang}) scale(${TS})`} opacity={0.16}>
-            <path d={`M-40 -52 L${len / TS - 40} -40 Q${len / TS + 10} 0 ${len / TS - 40} 44 L-40 60 Z`} fill="#3a3028" />
+          <g transform={`translate(${B.x + 30} ${B.y + 34}) rotate(${ang}) scale(${TS})`} opacity={0.16}>
+            <path d={`M-30 -60 L${len / TS - 30} -54 Q${len / TS + 18} 0 ${len / TS - 34} 58 L-30 66 Z`} fill="#3a3028" />
           </g>
           <g transform={`translate(${B.x} ${B.y}) rotate(${ang}) scale(${TS})`}>
-            <ThumbHand />
-            <Thumb id="t5" Lt={len / TS} rimOp={0.7} />
+            <ThumbECU id="t10" Lt={Math.min(200, Math.max(150, len / TS))} />
           </g>
         </Fr>
       </Live>
@@ -154,7 +154,59 @@ export const S05: React.FC = () => {
   );
 };
 
-/* ============ shot 10: dark bedroom, the phone on the desk wakes with "Forwarded many times"; then EPISODE 01 ============ */
+/* ============ shot 14: under the meeting table, a thick envelope passes between two suit sleeves ============ */
+const Envelope: React.FC = () => (
+  <g>
+    {/* thickness (front face) then the top face, bulging with what is inside */}
+    <path d="M-180 26 L180 26 L176 96 Q0 110 -176 96 Z" fill="#6f4d26" />
+    <path d="M-176 90 Q0 104 176 90" stroke="#4e3519" strokeWidth={5} fill="none" opacity={0.7} />
+    <path d="M-180 -86 Q0 -102 180 -86 L180 26 Q0 42 -180 26 Z" fill="#a8793f" />
+    <path d="M-180 -86 Q0 -102 180 -86" stroke="#d4a868" strokeWidth={4} fill="none" opacity={0.8} />
+    <path d="M-180 -86 L-20 -18 Q0 -12 20 -18 L180 -86" stroke="#80592c" strokeWidth={4} fill="none" opacity={0.7} />
+    <path d="M-140 14 Q0 26 140 14" stroke="#8a6232" strokeWidth={6} fill="none" opacity={0.5} />
+    <rect x={-12} y={-22} width={24} height={14} rx={4} fill="#5e4122" />
+  </g>
+);
+
+export const S14: React.FC = () => {
+  const { t, t2, sec } = useShot();
+  const tw = wordAt(14, /^wrong/i, 0.58), th = wordAt(14, /^hands/i, 0.75);
+  // all hand/envelope motion ON TWOS: the giver slides it over, the taker grips on "wrong", the giver lets go on "hands"
+  const slide = ramp(t2, 0, tw, EIO);
+  const reach = ramp(t2, 0.1, tw - 0.05, EOUT);
+  const grip = ramp(t2, tw - 0.12, tw + 0.1, EOUT);
+  const away = ramp(t2, th, Math.min(sec, th + 0.5), EIO);
+  const ex = 470 + 70 * slide + 80 * away, ey = 960 + 8 * Math.sin(t2 * 2.2);
+  const gx = -170 - 90 * away, gy = 4 + 24 * away; // giver (left) grip point, envelope-local
+  const rx = 170 + (1 - reach) * 360, ry = 2;      // taker (right) grip point, envelope-local
+  const h = handheld(t, 0.25);
+  const cam: Cam = { zoom: 1.02, dx: 0, dy: 0, tx: h.hx, ty: h.hy, ox: 540, oy: 960 };
+  const giverSkin = { skin: '#9c6b52', shade: '#68412f' };
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#bdb6a8' }}>
+      <BandImg id="screen/meeting" k={0.7} cam={cam} />
+      <Live k={1} cam={cam}>
+        <Fr>
+          <defs>
+            <radialGradient id="p14sh" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#000" stopOpacity={0.35} /><stop offset="1" stopColor="#000" stopOpacity={0} /></radialGradient>
+          </defs>
+          {/* shadow under the hands, on the dim space below the table */}
+          <ellipse cx={ex} cy={ey + 300} rx={620} ry={90} fill="url(#p14sh)" />
+          <g transform={`translate(${ex} ${ey}) scale(1.45)`}>
+            {/* fingers under the envelope edges first, then the envelope, then sleeves, backs of hands and thumbs */}
+            <g transform={`translate(${rx} ${ry}) scale(-1 1) rotate(-20)`}><SuitHand part="under" suit="#2c2e33" suitD="#1b1c20" /></g>
+            <g transform={`translate(${gx} ${gy}) rotate(${-18 + 8 * away})`}><SuitHand part="under" {...giverSkin} /></g>
+            <g transform={`rotate(${-3 + 3 * slide})`}><Envelope /></g>
+            <g transform={`translate(${gx} ${gy}) rotate(${-18 + 8 * away})`}><SuitHand part="over" grip={1 - away} {...giverSkin} /></g>
+            <g transform={`translate(${rx} ${ry}) scale(-1 1) rotate(-20)`}><SuitHand part="over" grip={grip} suit="#2c2e33" suitD="#1b1c20" /></g>
+          </g>
+        </Fr>
+      </Live>
+    </AbsoluteFill>
+  );
+};
+
+/* ============ shot 21 (was 10): dark bedroom, a man asleep behind the desk; the phone wakes with "Forwarded many times"; then EPISODE 01 ============ */
 const TitleCard: React.FC<{ t: number }> = ({ t }) => {
   const a = ramp(t, 0.04, 0.38, EOUT);
   return (
@@ -170,14 +222,15 @@ const TitleCard: React.FC<{ t: number }> = ({ t }) => {
 
 const PH_S = 0.8, PH_SQ = 0.84, PH_ROT = -8; // phone lying on the desk: scale, foreshortening, in-plane turn
 
-export const S10: React.FC = () => {
-  const { t, sec } = useShot();
-  const sp = spanOf(10);
+export const S21: React.FC = () => {
+  const { t, t2, sec } = useShot();
+  const sp = spanOf(21);
   const ws = sp.shot.words;
   const lastEnd = ws.length ? ws[ws.length - 1].end - sp.from / FPS : sec * 0.8;
   const cut = Math.min(Math.max(lastEnd + 0.1, sec - 1.5), sec - 1.0); // title fully visible >= 0.6 s before the end
   if (t >= cut) return <TitleCard t={t - cut} />;
-  const arr = [wordAt(10, /^message/i, 0.17), wordAt(10, /^spread/i, 0.27), wordAt(10, /^city/i, 0.47)];
+  const arr = [wordAt(21, /^message/i, 0.17), wordAt(21, /^spread/i, 0.27), wordAt(21, /^city/i, 0.47)];
+  const br = 0.5 + 0.5 * Math.sin((t2 / 3.6) * Math.PI * 2 - 1.2); // slow breathing, on twos
   const on = ramp(t, arr[0] - 0.06, arr[0] + 0.08, EOUT);
   const push = ramp(t, 0, cut, Easing.inOut(Easing.sin));
   const { x: px, y: py } = DESK.phone;
@@ -186,13 +239,18 @@ export const S10: React.FC = () => {
   const glow = on * (0.8 + 0.07 * ar[1] + 0.07 * ar[2] + 0.04 * Math.sin(t * 3));
   return (
     <AbsoluteFill style={{ backgroundColor: '#030409' }}>
-      <BandImg id="screen/room-bg" k={0.6} cam={cam} />
-      <BandImg id="screen/desk" k={1} cam={cam} />
+      <BandImg id="screen/room" k={1} cam={cam} />
       <Live k={1} cam={cam}>
         <Fr>
           <defs>
             <radialGradient id="p10g" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#bfe3ff" stopOpacity={0.3} /><stop offset="1" stopColor="#bfe3ff" stopOpacity={0} /></radialGradient>
+            <clipPath id="p21bed"><rect x={-300} y={-300} width={1700} height={DESK.y + 300} /></clipPath>
           </defs>
+          {/* the sleeper in the bed behind the desk, hidden below the desk edge */}
+          <g clipPath="url(#p21bed)">
+            <ellipse cx={600} cy={470} rx={620} ry={170} fill="url(#p10g)" opacity={0.7 * on} />
+            <Sleeper br={br} light={on} />
+          </g>
           {/* the room before the screen wakes: almost black */}
           <rect x={-400} y={-400} width={1880} height={2720} fill="#010205" opacity={0.88 * (1 - on)} />
           {/* screen light bloom on the desk */}

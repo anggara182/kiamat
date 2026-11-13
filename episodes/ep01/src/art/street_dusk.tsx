@@ -1,6 +1,7 @@
 import React from 'react';
 import { W, H, rng } from './world';
 import { mix } from './street_day';
+import { DepthWalker } from './street_people';
 
 /* ------------------------------------------------------------------------------------------
  * Shot 6: time-lapse from a pedestrian overpass (camera 4.5 m up, level) down a boulevard.
@@ -9,7 +10,8 @@ import { mix } from './street_day';
  * Band "street/dusk" = ground, buildings, towers, lamp posts (sky left transparent: the sky
  * and the sun are live behind it, the shadow and the light live in front).
  * ---------------------------------------------------------------------------------------- */
-export const K = { f: 1000, hc: 4.5, YH: 900, VX: 648 };
+export const K = { f: 1000, hc: 4.5, YH: 900, VX: 470 };
+const OX = K.VX - 648; // screen shift vs the v1 layout (lamp + sunset gap on the left third)
 export const kp = (X: number, Y: number, Z: number): [number, number] => [K.VX + (K.f * X) / Z, K.YH + (K.f * (K.hc - Y)) / Z];
 const P = (X: number, Y: number, Z: number) => kp(X, Y, Z).map((v) => v.toFixed(1)).join(',');
 export const LAMP = { X: -0.4, Z: 14, h: 7.0, armH: 7.6, arm: 1.9, r0: 0.15, r1: 0.08 };
@@ -62,23 +64,24 @@ export const DuskBand: React.FC = () => {
     far.push(<rect key={`f${x}`} x={x} y={SKYLINE_Y + 20 - h} width={w} height={h + 60} fill={PAL.far} />);
     x += w - 4;
   }
-  far.push(<rect key="fgap" x={540} y={SKYLINE_Y} width={220} height={80} fill={PAL.far} />);
+  far.push(<rect key="fgap" x={540 + OX} y={SKYLINE_Y} width={220} height={80} fill={PAL.far} />);
   // towers: two flank the sunset gap (x ~395..605), others around
-  const tower = (x0: number, w: number, top: number, col: string, lit: string, key: string, crown = 0) => (
+  const tower = (x00: number, w: number, top: number, col: string, lit: string, key: string, crown = 0) => { const x0 = x00 + OX; return (
     <g key={key}>
       <rect x={x0} y={top} width={w} height={SKYLINE_Y + 40 - top} fill={col} />
       <rect x={x0 + w * 0.72} y={top} width={w * 0.28} height={SKYLINE_Y + 40 - top} fill={lit} />
       {crown > 0 && <rect x={x0 + w * 0.3} y={top - crown} width={w * 0.4} height={crown} fill={col} />}
       {crown > 0 && <rect x={x0 + w * 0.48} y={top - crown - 50} width={3} height={50} fill={col} />}
     </g>
-  );
+  ); };
   const towers = [
-    tower(120, 96, 620, PAL.far2, '#5e4562', 't1'),
-    tower(236, 84, 670, PAL.far2, '#5e4562', 't4'),
+    tower(150, 70, 660, PAL.far2, '#5e4562', 't1'),
     tower(320, 140, 450, PAL.tower2, '#4c3858', 't2', 26),
     tower(752, 112, 520, PAL.tower2, '#4c3858', 't3'),
     tower(900, 150, 400, PAL.tower, '#3e2f52', 't5', 18),
-    tower(1110, 120, 580, PAL.tower2, '#4c3858', 't6'),
+    tower(1080, 96, 600, PAL.far2, '#5e4562', 't4'),
+    tower(1200, 120, 470, PAL.tower2, '#4c3858', 't6', 20),
+    tower(1350, 110, 560, PAL.tower, '#3e2f52', 't7'),
   ];
   // flanking buildings: shophouse rows in perspective
   const rows: React.ReactNode[] = [];
@@ -87,7 +90,7 @@ export const DuskBand: React.FC = () => {
     let z = 9;
     let i = 0;
     while (z < 260) {
-      const len = 8 + rr() * 10, hgt = 9 + rr() * 8, x0 = side < 0 ? -10 : 8, xb = side < 0 ? -22 : 20;
+      const len = 8 + rr() * 10, hgt = 9 + rr() * 8, x0 = side < 0 ? -10 : 10.5, xb = side < 0 ? -22 : 22;
       const z1 = z + len;
       const face = side < 0 ? PAL.facadeL : PAL.facadeR;
       rows.push(
@@ -100,7 +103,7 @@ export const DuskBand: React.FC = () => {
         </g>,
       );
       if (i % 2 === 0) {
-        const tx = side < 0 ? -8.4 : 6.6, [cx, cy] = kp(tx, 0, z + 2), s = K.f / (z + 2);
+        const tx = side < 0 ? -8.4 : 10, [cx, cy] = kp(tx, 0, z + 2), s = K.f / (z + 2);
         rows.push(
           <g key={`tr${side}${i}`} fill={mix(PAL.tree, PAL.far, Math.min(1, z / 260))}>
             <rect x={cx - 0.13 * s} y={cy - 3.2 * s} width={0.26 * s} height={3.2 * s} />
@@ -179,7 +182,7 @@ export const DuskSky: React.FC<{ u: number; night: number }> = ({ u, night }) =>
         <circle cx={s.sx} cy={s.sy} r={40} fill="#fff7e2" opacity={1 - set * 0.2} />
       </g>
       {/* afterglow on the horizon once the sun is gone */}
-      <ellipse cx={680} cy={SKYLINE_Y + 10} rx={520} ry={120} fill="#ffb070" opacity={0.35 * (1 - night) * Math.min(1, u * 1.2)} />
+      <ellipse cx={680 + OX} cy={SKYLINE_Y + 10} rx={520} ry={120} fill="#ffb070" opacity={0.35 * (1 - night) * Math.min(1, u * 1.2)} />
     </g>
   );
 };
@@ -220,7 +223,7 @@ export const LampShadows: React.FC<{ u: number; o: number }> = ({ u, o }) => {
 /** warm low-sun sheen on the asphalt under the sun, darkening of the ground as dusk falls */
 export const DuskGround: React.FC<{ u: number; dark: number }> = ({ u, dark }) => {
   const s = sunAt(Math.min(1, u));
-  const sheen = Math.max(0, 1 - Math.abs(s.sx - 680) / 700) * Math.min(1, u * 1.6) * (1 - dark);
+  const sheen = Math.max(0, 1 - Math.abs(s.sx - 680 - OX) / 700) * Math.min(1, u * 1.6) * (1 - dark);
   return (
     <g>
       <defs>
@@ -288,3 +291,31 @@ export const Railing: React.FC = () => (
     <rect x={0} y={1866} width={W} height={3} fill="#ffc28a" opacity={0.18} />
   </g>
 );
+
+/* time-lapse pedestrians on the right sidewalk: walking in depth (back/front views), fast, with
+ * ghost trails. Positions run on the ON-TWOS clock (t2). */
+const rw = rng(71);
+const WALK = Array.from({ length: 26 }, () => ({ X: 7.0 + rw() * 2.8, z0: rw(), v: (rw() < 0.5 ? -1 : 1) * (5 + rw() * 3), col: rw(), hat: rw() < 0.3 ? 'hijab' as const : rw() < 0.3 ? 'cap' as const : null, bag: rw() < 0.3, ph: rw() * 6 }));
+export const Pedestrians: React.FC<{ t2: number; light: number }> = ({ t2, light }) => {
+  const Z0 = 11, Z1 = 70;
+  const items = WALK.map((w, i) => {
+    const span = Z1 - Z0;
+    const z = Z0 + ((((w.z0 * span + w.v * t2) % span) + span) % span);
+    return { w, z, i };
+  }).sort((a, b) => b.z - a.z);
+  const col = (k: number, z: number) => mix(mix(k < 0.5 ? '#1a1530' : '#2b2344', '#120d22', light), PAL.far, Math.min(0.6, z / 110));
+  return (
+    <g>
+      {items.map(({ w, z, i }) => {
+        const out: React.ReactNode[] = [];
+        for (let g = 3; g >= 0; g--) {
+          const zg = z - Math.sign(w.v) * g * 1.1; // trail behind the walking direction
+          if (zg < Z0 - 0.5) continue;
+          const [x, y] = kp(w.X, 0, zg), h = (K.f / zg) * 1.65;
+          out.push(<DepthWalker key={`${i}-${g}`} x={x} y={y} h={h} ph={w.ph + t2 * 14} col={col(w.col, zg)} hat={w.hat} bag={w.bag} opacity={g === 0 ? 0.92 : 0.32 / g} />);
+        }
+        return <g key={i}>{out}</g>;
+      })}
+    </g>
+  );
+};

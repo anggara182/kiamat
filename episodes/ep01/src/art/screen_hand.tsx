@@ -176,17 +176,17 @@ export const Sleeper: React.FC<{ br: number; light: number }> = ({ br, light }) 
   const rimC = '#9fc3ea';
   return (
     <g>
-      {/* blanket over legs, hip and shoulder; the torso part rises with the breath */}
-      <path d={`M-160 500 C40 470 220 ${430 - lift * 0.4} 380 ${400 - lift * 0.8} C470 ${386 - lift} 560 ${396 - lift} 640 ${404 - lift * 0.8} C700 410 740 420 770 440 L800 640 L-160 640 Z`} fill="#121828" />
-      <path d={`M-160 500 C40 470 220 ${430 - lift * 0.4} 380 ${400 - lift * 0.8} C470 ${386 - lift} 560 ${396 - lift} 640 ${404 - lift * 0.8} C700 410 740 420 770 440`} stroke={rimC} strokeWidth={3} fill="none" opacity={0.28 * light} />
-      <path d={`M120 520 C260 ${480 - lift * 0.3} 420 ${470 - lift * 0.5} 560 ${490 - lift * 0.4}`} stroke="#0a0e18" strokeWidth={10} fill="none" opacity={0.8} />
-      <path d={`M300 560 C420 ${530 - lift * 0.3} 520 ${540 - lift * 0.3} 640 560`} stroke="#0a0e18" strokeWidth={8} fill="none" opacity={0.7} />
+      {/* blanket over legs, hip and shoulder; the chest part rises with the breath */}
+      <path d={`M-160 520 C-20 500 120 440 260 384 C340 360 420 ${388 - lift * 0.5} 500 ${400 - lift} C580 ${398 - lift} 640 ${374 - lift} 700 ${380 - lift * 0.8} C740 388 770 410 780 440 L800 640 L-160 640 Z`} fill="#1a2234" />
+      <path d={`M-160 520 C-20 500 120 440 260 384 C340 360 420 ${388 - lift * 0.5} 500 ${400 - lift} C580 ${398 - lift} 640 ${374 - lift} 700 ${380 - lift * 0.8}`} stroke={rimC} strokeWidth={4} fill="none" opacity={0.6 * light} />
+      <path d={`M150 470 C240 ${430 - lift * 0.2} 380 ${430 - lift * 0.4} 520 ${470 - lift * 0.5}`} stroke="#0a0e18" strokeWidth={10} fill="none" opacity={0.8} />
+      <path d={`M280 540 C400 ${510 - lift * 0.3} 520 ${520 - lift * 0.3} 660 540`} stroke="#0a0e18" strokeWidth={8} fill="none" opacity={0.7} />
       {/* shoulder in a dark t-shirt above the blanket edge */}
-      <path d={`M620 ${430 - lift * 0.6} C660 ${392 - lift * 0.6} 730 ${384 - lift * 0.5} 772 ${404 - lift * 0.4} L790 470 L640 470 Z`} fill="#1a1f2b" />
+      <path d={`M660 ${396 - lift * 0.7} C690 ${366 - lift * 0.6} 740 ${364 - lift * 0.5} 780 ${384 - lift * 0.4} L796 460 L670 460 Z`} fill="#232a3a" />
       {/* head on the pillow, back of the head toward us (short hair, no face) */}
-      <ellipse cx={812} cy={392 - lift * 0.3} rx={58} ry={50} fill="#07080d" />
-      <path d={`M760 ${384 - lift * 0.3} C770 ${350 - lift * 0.3} 820 ${336 - lift * 0.3} 858 ${360 - lift * 0.3}`} stroke={rimC} strokeWidth={3} fill="none" opacity={0.3 * light} />
-      <path d={`M792 ${438 - lift * 0.3} C800 ${452 - lift * 0.3} 820 ${456 - lift * 0.3} 836 ${444 - lift * 0.3}`} stroke="#1a1f2b" strokeWidth={14} fill="none" />
+      <path d={`M770 ${414 - lift * 0.3} C762 ${366 - lift * 0.3} 804 ${346 - lift * 0.3} 846 ${352 - lift * 0.3} C888 ${362 - lift * 0.3} 892 ${420 - lift * 0.3} 866 ${446 - lift * 0.3} C838 ${462 - lift * 0.3} 786 ${456 - lift * 0.3} 770 ${414 - lift * 0.3} Z`} fill="#0b0c12" />
+      <path d={`M772 ${398 - lift * 0.3} C780 ${362 - lift * 0.3} 824 ${346 - lift * 0.3} 866 ${370 - lift * 0.3}`} stroke={rimC} strokeWidth={4} fill="none" opacity={0.6 * light} />
+      {[0, 1, 2, 3].map((i) => <path key={i} d={`M${790 + i * 18} ${368 - lift * 0.3 + i * 2} q10 ${-6} 22 ${-2}`} stroke="#2a3348" strokeWidth={3} fill="none" opacity={0.8 * light} />)}
       {/* forearm lying on top of the blanket, hand hanging toward the desk */}
       <path d={`M700 ${440 - lift * 0.6} C640 ${470 - lift * 0.5} 580 ${492 - lift * 0.4} 520 ${506 - lift * 0.3} L516 ${532 - lift * 0.3} C590 ${520 - lift * 0.4} 660 ${500 - lift * 0.5} 716 ${470 - lift * 0.6} Z`} fill="#1a1f2b" />
       <path d={`M522 ${502 - lift * 0.3} C496 ${504 - lift * 0.3} 470 ${514 - lift * 0.3} 462 ${532 - lift * 0.3} C470 ${546 - lift * 0.3} 500 ${544 - lift * 0.3} 520 ${536 - lift * 0.3} Z`} fill="#3a2c27" />
