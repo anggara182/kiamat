@@ -6,9 +6,9 @@
  "fps": 24,
  "width": 1080,
  "height": 1920,
- "durationSec": 68.886,
+ "durationSec": 64.41,
  "accent": "#d9a441",
- "timingSource": "ESTIMATE (VO pending)",
+ "timingSource": "ai33 eleven_v3 audio (task f74bb9bb), word timing silence-aligned (STT transcript stuck), gaps>0.9s cut to 0.5s (0), atempo x1.1",
  "audio": true,
  "quote": {
   "text": "…till about thirty Dajjals (liars) appear, and each one of them will claim that he is Allah’s Messenger.",
@@ -20,13 +20,12 @@
   {
    "id": 1,
    "start": 0.0,
-   "end": 1.917,
+   "end": 1.88,
    "act": 1,
    "set": "cityhall",
    "owner": "C",
    "framing": "HOOK. Wide: the city hall burning at night, a crowd of silhouettes in front",
    "camera": "Slow push-in, slight handheld",
-   "vo_markup": "The *fire* started at midnight.",
    "vo": "The fire started at midnight.",
    "voKind": "narration",
    "speaker": "narr",
@@ -34,32 +33,32 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 0.1,
-     "end": 0.285
+     "start": 0.191,
+     "end": 0.343
     },
     {
      "text": "fire",
      "highlight": true,
-     "start": 0.285,
-     "end": 0.656
+     "start": 0.361,
+     "end": 0.649
     },
     {
      "text": "started",
      "highlight": false,
-     "start": 0.656,
-     "end": 1.088
+     "start": 0.667,
+     "end": 1.008
     },
     {
      "text": "at",
      "highlight": false,
-     "start": 1.088,
-     "end": 1.212
+     "start": 1.026,
+     "end": 1.161
     },
     {
      "text": "midnight.",
      "highlight": false,
-     "start": 1.212,
-     "end": 1.767
+     "start": 1.179,
+     "end": 1.555
     }
    ],
    "trans": "cut",
@@ -73,14 +72,13 @@
   },
   {
    "id": 2,
-   "start": 1.917,
-   "end": 4.148,
+   "start": 1.88,
+   "end": 4.288,
    "act": 1,
    "set": "cityhall",
    "owner": "C",
    "framing": "Wide: the smoking ruins of city hall at sunrise, grey ash everywhere",
    "camera": "Slow pull-back",
-   "vo_markup": "By sunrise, city hall was *gone.*",
    "vo": "By sunrise, city hall was gone.",
    "voKind": "narration",
    "speaker": "narr",
@@ -88,38 +86,38 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 2.017,
-     "end": 2.159
+     "start": 1.98,
+     "end": 2.144
     },
     {
      "text": "sunrise,",
      "highlight": false,
-     "start": 2.159,
-     "end": 2.725
+     "start": 2.162,
+     "end": 2.735
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 2.725,
-     "end": 3.008
+     "start": 2.753,
+     "end": 3.1
     },
     {
      "text": "hall",
      "highlight": false,
-     "start": 3.008,
-     "end": 3.291
+     "start": 3.118,
+     "end": 3.325
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 3.291,
-     "end": 3.503
+     "start": 3.343,
+     "end": 3.528
     },
     {
      "text": "gone.",
      "highlight": true,
-     "start": 3.503,
-     "end": 3.998
+     "start": 3.546,
+     "end": 3.915
     }
    ],
    "trans": "cut",
@@ -133,14 +131,13 @@
   },
   {
    "id": 3,
-   "start": 4.148,
-   "end": 7.006,
+   "start": 4.288,
+   "end": 6.786,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "Close: two men at a night coffee stall leaning in to whisper, looking up at the lit city hall on the hill",
    "camera": "Locked, slight drift",
-   "vo_markup": "Three days earlier, it was only a *whisper.*",
    "vo": "Three days earlier, it was only a whisper.",
    "voKind": "narration",
    "speaker": "narr",
@@ -148,50 +145,50 @@
     {
      "text": "Three",
      "highlight": false,
-     "start": 4.248,
-     "end": 4.601
+     "start": 4.388,
+     "end": 4.598
     },
     {
      "text": "days",
      "highlight": false,
-     "start": 4.601,
-     "end": 4.883
+     "start": 4.616,
+     "end": 4.806
     },
     {
      "text": "earlier,",
      "highlight": false,
-     "start": 4.883,
-     "end": 5.446
+     "start": 4.825,
+     "end": 5.224
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 5.446,
-     "end": 5.587
+     "start": 5.508,
+     "end": 5.619
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 5.587,
-     "end": 5.799
+     "start": 5.637,
+     "end": 5.763
     },
     {
      "text": "only",
      "highlight": false,
-     "start": 5.799,
-     "end": 6.081
+     "start": 5.781,
+     "end": 6.02
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 6.081,
-     "end": 6.151
+     "start": 6.038,
+     "end": 6.135
     },
     {
      "text": "whisper.",
      "highlight": true,
-     "start": 6.151,
-     "end": 6.856
+     "start": 6.153,
+     "end": 6.452
     }
    ],
    "trans": "cut",
@@ -205,14 +202,13 @@
   },
   {
    "id": 4,
-   "start": 7.006,
-   "end": 9.55,
+   "start": 6.786,
+   "end": 8.759,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "Close: a hand spray-painting big letters on a wall: \"HE SOLD OUR WATER\"",
    "camera": "Locked",
-   "vo_markup": "The mayor had sold the city's *water.*",
    "vo": "The mayor had sold the city's water.",
    "voKind": "narration",
    "speaker": "narr",
@@ -220,44 +216,44 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 7.106,
-     "end": 7.321
+     "start": 6.886,
+     "end": 7.036
     },
     {
      "text": "mayor",
      "highlight": false,
-     "start": 7.321,
-     "end": 7.68
+     "start": 7.055,
+     "end": 7.24
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 7.68,
-     "end": 7.895
+     "start": 7.258,
+     "end": 7.408
     },
     {
      "text": "sold",
      "highlight": false,
-     "start": 7.895,
-     "end": 8.182
+     "start": 7.426,
+     "end": 7.595
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 8.182,
-     "end": 8.397
+     "start": 7.613,
+     "end": 7.763
     },
     {
      "text": "city's",
      "highlight": false,
-     "start": 8.397,
-     "end": 8.827
+     "start": 7.781,
+     "end": 8.1
     },
     {
      "text": "water.",
      "highlight": true,
-     "start": 8.827,
-     "end": 9.4
+     "start": 8.118,
+     "end": 8.436
     }
    ],
    "trans": "cut",
@@ -271,14 +267,13 @@
   },
   {
    "id": 5,
-   "start": 9.55,
-   "end": 12.722,
+   "start": 8.759,
+   "end": 11.263,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "Medium: a wall where copies of the same poster multiply (a mayor silhouette, no face, crossed out in red)",
    "camera": "Slow push-in",
-   "vo_markup": "There was no *proof.* There didn't need to be.",
    "vo": "There was no proof. There didn't need to be.",
    "voKind": "narration",
    "speaker": "narr",
@@ -286,56 +281,56 @@
     {
      "text": "There",
      "highlight": false,
-     "start": 9.65,
-     "end": 10.035
+     "start": 8.859,
+     "end": 9.129
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 10.035,
-     "end": 10.265
+     "start": 9.147,
+     "end": 9.281
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 10.265,
-     "end": 10.419
+     "start": 9.299,
+     "end": 9.417
     },
     {
      "text": "proof.",
      "highlight": true,
-     "start": 10.419,
-     "end": 11.034
+     "start": 9.435,
+     "end": 9.617
     },
     {
      "text": "There",
      "highlight": false,
-     "start": 11.034,
-     "end": 11.419
+     "start": 10.001,
+     "end": 10.259
     },
     {
      "text": "didn't",
      "highlight": false,
-     "start": 11.419,
-     "end": 11.88
+     "start": 10.277,
+     "end": 10.45
     },
     {
      "text": "need",
      "highlight": false,
-     "start": 11.88,
-     "end": 12.187
+     "start": 10.468,
+     "end": 10.611
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 12.187,
-     "end": 12.341
+     "start": 10.629,
+     "end": 10.742
     },
     {
      "text": "be.",
      "highlight": false,
-     "start": 12.341,
-     "end": 12.572
+     "start": 10.76,
+     "end": 10.887
     }
    ],
    "trans": "cut",
@@ -349,14 +344,13 @@
   },
   {
    "id": 6,
-   "start": 12.722,
-   "end": 16.207,
+   "start": 11.263,
+   "end": 14.418,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "High wide: a huge boulevard completely filled with people",
    "camera": "Slow crane-down",
-   "vo_markup": "By the second day, a *million* people filled the streets.",
    "vo": "By the second day, a million people filled the streets.",
    "voKind": "narration",
    "speaker": "narr",
@@ -364,62 +358,62 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 12.822,
-     "end": 12.957
+     "start": 11.363,
+     "end": 11.501
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 12.957,
-     "end": 13.159
+     "start": 11.519,
+     "end": 11.675
     },
     {
      "text": "second",
      "highlight": false,
-     "start": 13.159,
-     "end": 13.563
+     "start": 11.693,
+     "end": 12.022
     },
     {
      "text": "day,",
      "highlight": false,
-     "start": 13.563,
-     "end": 13.833
+     "start": 12.04,
+     "end": 12.214
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 13.833,
-     "end": 13.9
+     "start": 12.544,
+     "end": 12.662
     },
     {
      "text": "million",
      "highlight": true,
-     "start": 13.9,
-     "end": 14.507
+     "start": 12.68,
+     "end": 13.024
     },
     {
      "text": "people",
      "highlight": false,
-     "start": 14.507,
-     "end": 14.911
+     "start": 13.042,
+     "end": 13.368
     },
     {
      "text": "filled",
      "highlight": false,
-     "start": 14.911,
-     "end": 15.315
+     "start": 13.386,
+     "end": 13.712
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 15.315,
-     "end": 15.517
+     "start": 13.73,
+     "end": 13.884
     },
     {
      "text": "streets.",
      "highlight": false,
-     "start": 15.517,
-     "end": 16.057
+     "start": 13.902,
+     "end": 14.145
     }
    ],
    "trans": "cut",
@@ -433,14 +427,13 @@
   },
   {
    "id": 7,
-   "start": 16.207,
-   "end": 18.124,
+   "start": 14.418,
+   "end": 16.415,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Low angle: a flyover with long cloth banners hanging, people on top",
    "camera": "Lateral track",
-   "vo_markup": "Banners hung from every *bridge.*",
    "vo": "Banners hung from every bridge.",
    "voKind": "narration",
    "speaker": "narr",
@@ -448,32 +441,32 @@
     {
      "text": "Banners",
      "highlight": false,
-     "start": 16.307,
-     "end": 16.709
+     "start": 14.518,
+     "end": 14.864
     },
     {
      "text": "hung",
      "highlight": false,
-     "start": 16.709,
-     "end": 16.939
+     "start": 14.882,
+     "end": 15.055
     },
     {
      "text": "from",
      "highlight": false,
-     "start": 16.939,
-     "end": 17.169
+     "start": 15.073,
+     "end": 15.245
     },
     {
      "text": "every",
      "highlight": false,
-     "start": 17.169,
-     "end": 17.457
+     "start": 15.264,
+     "end": 15.693
     },
     {
      "text": "bridge.",
      "highlight": true,
-     "start": 17.457,
-     "end": 17.974
+     "start": 15.711,
+     "end": 16.057
     }
    ],
    "trans": "cut",
@@ -487,14 +480,13 @@
   },
   {
    "id": 8,
-   "start": 18.124,
-   "end": 20.355,
+   "start": 16.415,
+   "end": 18.309,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Medium: a family at a dinner table; the father stands and points at a TV in the background",
    "camera": "Locked, small jolt",
-   "vo_markup": "Half the city wanted him *gone.*",
    "vo": "Half the city wanted him gone.",
    "voKind": "narration",
    "speaker": "narr",
@@ -502,38 +494,38 @@
     {
      "text": "Half",
      "highlight": false,
-     "start": 18.224,
-     "end": 18.517
+     "start": 16.515,
+     "end": 16.676
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 18.517,
-     "end": 18.738
+     "start": 16.695,
+     "end": 16.839
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 18.738,
-     "end": 19.031
+     "start": 16.857,
+     "end": 17.132
     },
     {
      "text": "wanted",
      "highlight": false,
-     "start": 19.031,
-     "end": 19.471
+     "start": 17.15,
+     "end": 17.458
     },
     {
      "text": "him",
      "highlight": false,
-     "start": 19.471,
-     "end": 19.691
+     "start": 17.476,
+     "end": 17.621
     },
     {
      "text": "gone.",
      "highlight": true,
-     "start": 19.691,
-     "end": 20.205
+     "start": 17.639,
+     "end": 17.93
     }
    ],
    "trans": "cut",
@@ -547,14 +539,13 @@
   },
   {
    "id": 9,
-   "start": 20.355,
-   "end": 22.899,
+   "start": 18.309,
+   "end": 20.346,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Reverse: the grown son stands up across the table; the mother between them",
    "camera": "Locked",
-   "vo_markup": "The other half swore he was *innocent.*",
    "vo": "The other half swore he was innocent.",
    "voKind": "narration",
    "speaker": "narr",
@@ -562,44 +553,44 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 20.455,
-     "end": 20.663
+     "start": 18.409,
+     "end": 18.539
     },
     {
      "text": "other",
      "highlight": false,
-     "start": 20.663,
-     "end": 21.011
+     "start": 18.557,
+     "end": 18.82
     },
     {
      "text": "half",
      "highlight": false,
-     "start": 21.011,
-     "end": 21.289
+     "start": 18.838,
+     "end": 18.984
     },
     {
      "text": "swore",
      "highlight": false,
-     "start": 21.289,
-     "end": 21.637
+     "start": 19.002,
+     "end": 19.265
     },
     {
      "text": "he",
      "highlight": false,
-     "start": 21.637,
-     "end": 21.776
+     "start": 19.284,
+     "end": 19.398
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 21.776,
-     "end": 21.984
+     "start": 19.416,
+     "end": 19.546
     },
     {
      "text": "innocent.",
      "highlight": true,
-     "start": 21.984,
-     "end": 22.749
+     "start": 19.565,
+     "end": 19.991
     }
    ],
    "trans": "cut",
@@ -613,14 +604,13 @@
   },
   {
    "id": 10,
-   "start": 22.899,
-   "end": 26.071,
+   "start": 20.346,
+   "end": 23.161,
    "act": 1,
    "set": "cityhall",
    "owner": "C",
    "framing": "Close: a hand throwing a lit bottle in an arc toward the dark city hall",
    "camera": "Slow-motion feel (camera drift)",
-   "vo_markup": "On the third night, someone threw the first *flame.*",
    "vo": "On the third night, someone threw the first flame.",
    "voKind": "narration",
    "speaker": "narr",
@@ -628,56 +618,56 @@
     {
      "text": "On",
      "highlight": false,
-     "start": 22.999,
-     "end": 23.132
+     "start": 20.446,
+     "end": 20.588
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 23.132,
-     "end": 23.331
+     "start": 20.606,
+     "end": 20.765
     },
     {
      "text": "third",
      "highlight": false,
-     "start": 23.331,
-     "end": 23.663
+     "start": 20.784,
+     "end": 20.98
     },
     {
      "text": "night,",
      "highlight": false,
-     "start": 23.663,
-     "end": 24.062
+     "start": 20.998,
+     "end": 21.213
     },
     {
      "text": "someone",
      "highlight": false,
-     "start": 24.062,
-     "end": 24.526
+     "start": 21.515,
+     "end": 21.958
     },
     {
      "text": "threw",
      "highlight": false,
-     "start": 24.526,
-     "end": 24.858
+     "start": 21.976,
+     "end": 22.158
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 24.858,
-     "end": 25.057
+     "start": 22.176,
+     "end": 22.324
     },
     {
      "text": "first",
      "highlight": false,
-     "start": 25.057,
-     "end": 25.389
+     "start": 22.342,
+     "end": 22.523
     },
     {
      "text": "flame.",
      "highlight": true,
-     "start": 25.389,
-     "end": 25.921
+     "start": 22.541,
+     "end": 22.854
     }
    ],
    "trans": "cut",
@@ -691,14 +681,13 @@
   },
   {
    "id": 11,
-   "start": 26.071,
-   "end": 27.571,
+   "start": 23.161,
+   "end": 24.447,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "Medium: an empty mayor's office, the chair turned away, papers blowing from an open window",
    "camera": "Slow push-in",
-   "vo_markup": "The mayor *vanished.*",
    "vo": "The mayor vanished.",
    "voKind": "narration",
    "speaker": "narr",
@@ -706,20 +695,20 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 26.171,
-     "end": 26.368
+     "start": 23.261,
+     "end": 23.415
     },
     {
      "text": "mayor",
      "highlight": false,
-     "start": 26.368,
-     "end": 26.697
+     "start": 23.434,
+     "end": 23.623
     },
     {
      "text": "vanished.",
      "highlight": true,
-     "start": 26.697,
-     "end": 27.421
+     "start": 23.641,
+     "end": 24.14
     }
    ],
    "trans": "cut",
@@ -733,14 +722,13 @@
   },
   {
    "id": 12,
-   "start": 27.571,
-   "end": 31.369,
+   "start": 24.447,
+   "end": 27.307,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "Wide: an empty road at night, the red tail lights of one car disappearing; a car door left open in the foreground",
    "camera": "Locked",
-   "vo_markup": "No one knows if he ran… or if he was *taken.*",
    "vo": "No one knows if he ran… or if he was taken.",
    "voKind": "narration",
    "speaker": "narr",
@@ -748,68 +736,68 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 27.671,
-     "end": 27.873
+     "start": 24.547,
+     "end": 24.694
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 27.873,
-     "end": 28.177
+     "start": 24.712,
+     "end": 25.004
     },
     {
      "text": "knows",
      "highlight": false,
-     "start": 28.177,
-     "end": 28.684
+     "start": 25.022,
+     "end": 25.225
     },
     {
      "text": "if",
      "highlight": false,
-     "start": 28.684,
-     "end": 28.887
+     "start": 25.243,
+     "end": 25.389
     },
     {
      "text": "he",
      "highlight": false,
-     "start": 28.887,
-     "end": 29.09
+     "start": 25.407,
+     "end": 25.553
     },
     {
      "text": "ran…",
      "highlight": false,
-     "start": 29.09,
-     "end": 29.495
+     "start": 25.571,
+     "end": 25.755
     },
     {
      "text": "or",
      "highlight": false,
-     "start": 29.495,
-     "end": 29.698
+     "start": 26.092,
+     "end": 26.209
     },
     {
      "text": "if",
      "highlight": false,
-     "start": 29.698,
-     "end": 29.901
+     "start": 26.227,
+     "end": 26.344
     },
     {
      "text": "he",
      "highlight": false,
-     "start": 29.901,
-     "end": 30.104
+     "start": 26.362,
+     "end": 26.478
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 30.104,
-     "end": 30.408
+     "start": 26.496,
+     "end": 26.628
     },
     {
      "text": "taken.",
      "highlight": true,
-     "start": 30.408,
-     "end": 31.219
+     "start": 26.646,
+     "end": 26.929
     }
    ],
    "trans": "cut",
@@ -823,14 +811,13 @@
   },
   {
    "id": 13,
-   "start": 31.369,
-   "end": 34.227,
+   "start": 27.307,
+   "end": 29.799,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Wide: the same boulevard now empty under curfew, a burnt car, a stray dog, litter",
    "camera": "Slow lateral",
-   "vo_markup": "For two days, the city had no one.",
    "vo": "For two days, the city had no one.",
    "voKind": "narration",
    "speaker": "narr",
@@ -838,50 +825,50 @@
     {
      "text": "For",
      "highlight": false,
-     "start": 31.469,
-     "end": 31.759
+     "start": 27.407,
+     "end": 27.633
     },
     {
      "text": "two",
      "highlight": false,
-     "start": 31.759,
-     "end": 32.048
+     "start": 27.651,
+     "end": 27.877
     },
     {
      "text": "days,",
      "highlight": false,
-     "start": 32.048,
-     "end": 32.531
+     "start": 27.895,
+     "end": 28.172
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 32.531,
-     "end": 32.821
+     "start": 28.461,
+     "end": 28.6
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 32.821,
-     "end": 33.207
+     "start": 28.618,
+     "end": 28.881
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 33.207,
-     "end": 33.497
+     "start": 28.899,
+     "end": 29.038
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 33.497,
-     "end": 33.69
+     "start": 29.056,
+     "end": 29.179
     },
     {
      "text": "one.",
      "highlight": false,
-     "start": 33.69,
-     "end": 34.077
+     "start": 29.197,
+     "end": 29.46
     }
    ],
    "trans": "cut",
@@ -893,14 +880,13 @@
   },
   {
    "id": 14,
-   "start": 34.227,
-   "end": 36.458,
+   "start": 29.799,
+   "end": 32.956,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Three quick hard cuts inside the shot: a dry tap dripping once; an empty bakery shelf; a mother hugging her child in a silent queue",
    "camera": "Locked",
-   "vo_markup": "No *water.* No *bread.* No *answers.*",
    "vo": "No water. No bread. No answers.",
    "voKind": "narration",
    "speaker": "narr",
@@ -908,38 +894,38 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 34.327,
-     "end": 34.45
+     "start": 29.899,
+     "end": 30.066
     },
     {
      "text": "water.",
      "highlight": true,
-     "start": 34.45,
-     "end": 34.946
+     "start": 30.085,
+     "end": 30.481
     },
     {
      "text": "No",
      "highlight": false,
-     "start": 34.946,
-     "end": 35.069
+     "start": 30.906,
+     "end": 31.135
     },
     {
      "text": "bread.",
      "highlight": true,
-     "start": 35.069,
-     "end": 35.565
+     "start": 31.153,
+     "end": 31.495
     },
     {
      "text": "No",
      "highlight": false,
-     "start": 35.565,
-     "end": 35.688
+     "start": 31.911,
+     "end": 32.102
     },
     {
      "text": "answers.",
      "highlight": true,
-     "start": 35.688,
-     "end": 36.308
+     "start": 32.12,
+     "end": 32.616
     }
    ],
    "trans": "cut",
@@ -955,14 +941,13 @@
   },
   {
    "id": 15,
-   "start": 36.458,
-   "end": 40.569,
+   "start": 32.956,
+   "end": 36.612,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Wide: a lone silhouette walking out of drifting smoke toward camera, backlit by the low sun",
    "camera": "Very slow push-in",
-   "vo_markup": "Then, on the fifth day, a man walked out of the *ashes.*",
    "vo": "Then, on the fifth day, a man walked out of the ashes.",
    "voKind": "narration",
    "speaker": "narr",
@@ -970,74 +955,74 @@
     {
      "text": "Then,",
      "highlight": false,
-     "start": 36.558,
-     "end": 36.987
+     "start": 33.056,
+     "end": 33.423
     },
     {
      "text": "on",
      "highlight": false,
-     "start": 36.987,
-     "end": 37.158
+     "start": 33.669,
+     "end": 33.825
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 37.158,
-     "end": 37.416
+     "start": 33.843,
+     "end": 34.017
     },
     {
      "text": "fifth",
      "highlight": false,
-     "start": 37.416,
-     "end": 37.845
+     "start": 34.035,
+     "end": 34.251
     },
     {
      "text": "day,",
      "highlight": false,
-     "start": 37.845,
-     "end": 38.188
+     "start": 34.269,
+     "end": 34.465
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 38.188,
-     "end": 38.274
+     "start": 34.868,
+     "end": 34.982
     },
     {
      "text": "man",
      "highlight": false,
-     "start": 38.274,
-     "end": 38.531
+     "start": 35.0,
+     "end": 35.147
     },
     {
      "text": "walked",
      "highlight": false,
-     "start": 38.531,
-     "end": 39.046
+     "start": 35.165,
+     "end": 35.477
     },
     {
      "text": "out",
      "highlight": false,
-     "start": 39.046,
-     "end": 39.304
+     "start": 35.495,
+     "end": 35.643
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 39.304,
-     "end": 39.475
+     "start": 35.661,
+     "end": 35.791
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 39.475,
-     "end": 39.733
+     "start": 35.809,
+     "end": 35.956
     },
     {
      "text": "ashes.",
      "highlight": true,
-     "start": 39.733,
-     "end": 40.419
+     "start": 35.975,
+     "end": 36.287
     }
    ],
    "trans": "cut",
@@ -1051,14 +1036,13 @@
   },
   {
    "id": 16,
-   "start": 40.569,
-   "end": 42.173,
+   "start": 36.612,
+   "end": 38.616,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Close: his dusty sandals stepping over rubble; then his empty hands",
    "camera": "Locked",
-   "vo_markup": "No name. No past.",
    "vo": "No name. No past.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1066,26 +1050,26 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 40.669,
-     "end": 40.863
+     "start": 36.712,
+     "end": 36.905
     },
     {
      "text": "name.",
      "highlight": false,
-     "start": 40.863,
-     "end": 41.346
+     "start": 36.923,
+     "end": 37.351
     },
     {
      "text": "No",
      "highlight": false,
-     "start": 41.346,
-     "end": 41.54
+     "start": 37.666,
+     "end": 37.951
     },
     {
      "text": "past.",
      "highlight": false,
-     "start": 41.54,
-     "end": 42.023
+     "start": 37.969,
+     "end": 38.359
     }
    ],
    "trans": "cut",
@@ -1097,14 +1081,13 @@
   },
   {
    "id": 17,
-   "start": 42.173,
-   "end": 44.718,
+   "start": 38.616,
+   "end": 41.595,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Medium: the man (from behind) handing bread to a child; people start gathering around him",
    "camera": "Slow push-in",
-   "vo_markup": "He handed out *bread.* He spoke softly.",
    "vo": "He handed out bread. He spoke softly.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1112,44 +1095,44 @@
     {
      "text": "He",
      "highlight": false,
-     "start": 42.273,
-     "end": 42.412
+     "start": 38.716,
+     "end": 38.876
     },
     {
      "text": "handed",
      "highlight": false,
-     "start": 42.412,
-     "end": 42.829
+     "start": 38.895,
+     "end": 39.274
     },
     {
      "text": "out",
      "highlight": false,
-     "start": 42.829,
-     "end": 43.038
+     "start": 39.292,
+     "end": 39.472
     },
     {
      "text": "bread.",
      "highlight": true,
-     "start": 43.038,
-     "end": 43.594
+     "start": 39.49,
+     "end": 39.732
     },
     {
      "text": "He",
      "highlight": false,
-     "start": 43.594,
-     "end": 43.733
+     "start": 40.375,
+     "end": 40.525
     },
     {
      "text": "spoke",
      "highlight": false,
-     "start": 43.733,
-     "end": 44.081
+     "start": 40.543,
+     "end": 40.878
     },
     {
      "text": "softly.",
      "highlight": false,
-     "start": 44.081,
-     "end": 44.568
+     "start": 40.896,
+     "end": 41.271
     }
    ],
    "trans": "cut",
@@ -1163,14 +1146,13 @@
   },
   {
    "id": 18,
-   "start": 44.718,
-   "end": 46.635,
+   "start": 41.595,
+   "end": 43.545,
    "act": 1,
    "set": "boulevard",
    "owner": "S",
    "framing": "Medium-close: faces of listeners lit by warm light, nodding slowly",
    "camera": "Slow lateral",
-   "vo_markup": "Everything he said sounded *true.*",
    "vo": "Everything he said sounded true.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1178,32 +1160,32 @@
     {
      "text": "Everything",
      "highlight": false,
-     "start": 44.818,
-     "end": 45.373
+     "start": 41.695,
+     "end": 42.356
     },
     {
      "text": "he",
      "highlight": false,
-     "start": 45.373,
-     "end": 45.485
+     "start": 42.375,
+     "end": 42.517
     },
     {
      "text": "said",
      "highlight": false,
-     "start": 45.485,
-     "end": 45.707
+     "start": 42.535,
+     "end": 42.715
     },
     {
      "text": "sounded",
      "highlight": false,
-     "start": 45.707,
-     "end": 46.096
+     "start": 42.734,
+     "end": 43.093
     },
     {
      "text": "true.",
      "highlight": true,
-     "start": 46.096,
-     "end": 46.485
+     "start": 43.111,
+     "end": 43.31
     }
    ],
    "trans": "cut",
@@ -1217,14 +1199,13 @@
   },
   {
    "id": 19,
-   "start": 46.635,
-   "end": 49.493,
+   "start": 43.545,
+   "end": 46.39,
    "act": 1,
    "set": "stadium",
    "owner": "C",
    "framing": "Wide: a stadium at night, completely full, floodlights blazing",
    "camera": "Slow aerial push-in",
-   "vo_markup": "By the seventh day, the stadium was *full.*",
    "vo": "By the seventh day, the stadium was full.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1232,50 +1213,50 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 46.735,
-     "end": 46.88
+     "start": 43.645,
+     "end": 43.799
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 46.88,
-     "end": 47.097
+     "start": 43.817,
+     "end": 43.992
     },
     {
      "text": "seventh",
      "highlight": false,
-     "start": 47.097,
-     "end": 47.604
+     "start": 44.01,
+     "end": 44.396
     },
     {
      "text": "day,",
      "highlight": false,
-     "start": 47.604,
-     "end": 47.894
+     "start": 44.415,
+     "end": 44.609
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 47.894,
-     "end": 48.111
+     "start": 44.936,
+     "end": 45.122
     },
     {
      "text": "stadium",
      "highlight": false,
-     "start": 48.111,
-     "end": 48.618
+     "start": 45.14,
+     "end": 45.552
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 48.618,
-     "end": 48.836
+     "start": 45.57,
+     "end": 45.755
     },
     {
      "text": "full.",
      "highlight": true,
-     "start": 48.836,
-     "end": 49.343
+     "start": 45.774,
+     "end": 46.002
     }
    ],
    "trans": "cut",
@@ -1289,14 +1270,13 @@
   },
   {
    "id": 20,
-   "start": 49.493,
-   "end": 52.351,
+   "start": 46.39,
+   "end": 48.35,
    "act": 1,
    "set": "stadium",
    "owner": "C",
    "framing": "Low wide: the man on the stage, a tiny backlit silhouette, arms open; giant screens behind show only his silhouette",
    "camera": "Slow push-in",
-   "vo_markup": "And he told them God had *sent* him.",
    "vo": "And he told them God had sent him.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1304,50 +1284,50 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 49.593,
-     "end": 49.863
+     "start": 46.49,
+     "end": 46.65
     },
     {
      "text": "he",
      "highlight": false,
-     "start": 49.863,
-     "end": 50.042
+     "start": 46.668,
+     "end": 46.81
     },
     {
      "text": "told",
      "highlight": false,
-     "start": 50.042,
-     "end": 50.402
+     "start": 46.828,
+     "end": 47.006
     },
     {
      "text": "them",
      "highlight": false,
-     "start": 50.402,
-     "end": 50.762
+     "start": 47.025,
+     "end": 47.204
     },
     {
      "text": "God",
      "highlight": false,
-     "start": 50.762,
-     "end": 51.032
+     "start": 47.222,
+     "end": 47.382
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 51.032,
-     "end": 51.301
+     "start": 47.4,
+     "end": 47.56
     },
     {
      "text": "sent",
      "highlight": true,
-     "start": 51.301,
-     "end": 51.841
+     "start": 47.578,
+     "end": 47.756
     },
     {
      "text": "him.",
      "highlight": false,
-     "start": 51.841,
-     "end": 52.201
+     "start": 47.775,
+     "end": 47.954
     }
    ],
    "trans": "cut",
@@ -1361,14 +1341,13 @@
   },
   {
    "id": 21,
-   "start": 52.351,
-   "end": 54.895,
+   "start": 48.35,
+   "end": 50.456,
    "act": 1,
    "set": "stadium",
    "owner": "C",
    "framing": "Wide: a wave of people kneeling across the stands; some remain standing, frozen",
    "camera": "Locked, slight drift",
-   "vo_markup": "Half the city fell to its *knees.*",
    "vo": "Half the city fell to its knees.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1376,44 +1355,44 @@
     {
      "text": "Half",
      "highlight": false,
-     "start": 52.451,
-     "end": 52.778
+     "start": 48.45,
+     "end": 48.646
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 52.778,
-     "end": 53.024
+     "start": 48.665,
+     "end": 48.84
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 53.024,
-     "end": 53.352
+     "start": 48.858,
+     "end": 49.189
     },
     {
      "text": "fell",
      "highlight": false,
-     "start": 53.352,
-     "end": 53.68
+     "start": 49.207,
+     "end": 49.403
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 53.68,
-     "end": 53.844
+     "start": 49.421,
+     "end": 49.577
     },
     {
      "text": "its",
      "highlight": false,
-     "start": 53.844,
-     "end": 54.089
+     "start": 49.595,
+     "end": 49.772
     },
     {
      "text": "knees.",
      "highlight": true,
-     "start": 54.089,
-     "end": 54.745
+     "start": 49.79,
+     "end": 50.026
     }
    ],
    "trans": "cut",
@@ -1427,14 +1406,13 @@
   },
   {
    "id": 22,
-   "start": 54.895,
-   "end": 61.515,
+   "start": 50.456,
+   "end": 56.674,
    "act": 1,
    "set": "stadium",
    "owner": "C",
    "framing": "Medium: one old man standing still among the kneeling crowd, looking away from the stage",
    "camera": "Very slow push-in",
-   "vo_markup": "The Prophet warned that before the Hour, around thirty liars would come, each claiming to be a messenger of God.",
    "vo": "The Prophet warned that before the Hour, around thirty liars would come, each claiming to be a messenger of God.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1442,122 +1420,122 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 54.995,
-     "end": 55.2
+     "start": 50.556,
+     "end": 50.701
     },
     {
      "text": "Prophet",
      "highlight": false,
-     "start": 55.2,
-     "end": 55.68
+     "start": 50.719,
+     "end": 51.045
     },
     {
      "text": "warned",
      "highlight": false,
-     "start": 55.68,
-     "end": 56.091
+     "start": 51.063,
+     "end": 51.37
     },
     {
      "text": "that",
      "highlight": false,
-     "start": 56.091,
-     "end": 56.365
+     "start": 51.388,
+     "end": 51.55
     },
     {
      "text": "before",
      "highlight": false,
-     "start": 56.365,
-     "end": 56.776
+     "start": 51.568,
+     "end": 51.989
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 56.776,
-     "end": 56.981
+     "start": 52.007,
+     "end": 52.152
     },
     {
      "text": "Hour,",
      "highlight": false,
-     "start": 56.981,
-     "end": 57.324
+     "start": 52.17,
+     "end": 52.349
     },
     {
      "text": "around",
      "highlight": false,
-     "start": 57.324,
-     "end": 57.735
+     "start": 52.703,
+     "end": 53.052
     },
     {
      "text": "thirty",
      "highlight": false,
-     "start": 57.735,
-     "end": 58.146
+     "start": 53.07,
+     "end": 53.419
     },
     {
      "text": "liars",
      "highlight": false,
-     "start": 58.146,
-     "end": 58.488
+     "start": 53.437,
+     "end": 53.64
     },
     {
      "text": "would",
      "highlight": false,
-     "start": 58.488,
-     "end": 58.83
+     "start": 53.658,
+     "end": 53.862
     },
     {
      "text": "come,",
      "highlight": false,
-     "start": 58.83,
-     "end": 59.173
+     "start": 53.88,
+     "end": 54.21
     },
     {
      "text": "each",
      "highlight": false,
-     "start": 59.173,
-     "end": 59.447
+     "start": 54.592,
+     "end": 54.76
     },
     {
      "text": "claiming",
      "highlight": false,
-     "start": 59.447,
-     "end": 59.995
+     "start": 54.778,
+     "end": 55.134
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 59.995,
-     "end": 60.132
+     "start": 55.152,
+     "end": 55.285
     },
     {
      "text": "be",
      "highlight": false,
-     "start": 60.132,
-     "end": 60.269
+     "start": 55.303,
+     "end": 55.436
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 60.269,
-     "end": 60.337
+     "start": 55.455,
+     "end": 55.571
     },
     {
      "text": "messenger",
      "highlight": false,
-     "start": 60.337,
-     "end": 60.954
+     "start": 55.589,
+     "end": 56.078
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 60.954,
-     "end": 61.091
+     "start": 56.096,
+     "end": 56.23
     },
     {
      "text": "God.",
      "highlight": false,
-     "start": 61.091,
-     "end": 61.365
+     "start": 56.248,
+     "end": 56.416
     }
    ],
    "trans": "cut",
@@ -1569,14 +1547,13 @@
   },
   {
    "id": 23,
-   "start": 61.515,
-   "end": 64.686,
+   "start": 56.674,
+   "end": 60.21,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Wide: a highway at dawn, a long column of followers walking toward another city skyline; at a roadside stall an old radio plays",
    "camera": "Slow pull-back",
-   "vo_markup": "The next morning, the neighboring city heard his *name.*",
    "vo": "The next morning, the neighboring city heard his name.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1584,56 +1561,56 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 61.615,
-     "end": 61.797
+     "start": 56.774,
+     "end": 56.92
     },
     {
      "text": "next",
      "highlight": false,
-     "start": 61.797,
-     "end": 62.041
+     "start": 56.938,
+     "end": 57.101
     },
     {
      "text": "morning,",
      "highlight": false,
-     "start": 62.041,
-     "end": 62.527
+     "start": 57.119,
+     "end": 57.464
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 62.527,
-     "end": 62.71
+     "start": 57.799,
+     "end": 57.933
     },
     {
      "text": "neighboring",
      "highlight": false,
-     "start": 62.71,
-     "end": 63.38
+     "start": 57.951,
+     "end": 58.418
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 63.38,
-     "end": 63.623
+     "start": 58.436,
+     "end": 58.689
     },
     {
      "text": "heard",
      "highlight": false,
-     "start": 63.623,
-     "end": 63.927
+     "start": 58.707,
+     "end": 58.872
     },
     {
      "text": "his",
      "highlight": false,
-     "start": 63.927,
-     "end": 64.11
+     "start": 58.89,
+     "end": 59.023
     },
     {
      "text": "name.",
      "highlight": true,
-     "start": 64.11,
-     "end": 64.536
+     "start": 59.041,
+     "end": 59.31
     }
    ],
    "trans": "cut",
@@ -1647,14 +1624,13 @@
   },
   {
    "id": 24,
-   "start": 64.686,
-   "end": 68.886,
+   "start": 60.21,
+   "end": 64.41,
    "act": 1,
    "set": "walls",
    "owner": "P",
    "framing": "TITLE CARD on black",
    "camera": "Very slow push-in",
-   "vo_markup": "",
    "vo": "",
    "voKind": "none",
    "speaker": "narr",

@@ -42,8 +42,8 @@ export const S02: React.FC = () => {
       <Live k={0.9} cam={cam}>
         <Smoke t={t} srcs={[[CH.cx - 120, 1300], [CH.cx + 60, 1260], [420, 1360]]} col="#5a5258" lit="#ffd8a8" litO={0.25} scale={0.55} rise={90} drift={40} />
         <g opacity={1 - ramp(t, tg - 0.7, tg, (n) => n)}>
-          <ellipse cx={lc + 40 + t * 30} cy={1180} rx={170} ry={260} fill="#6a6068" opacity={0.9} />
-          <ellipse cx={lc - 20 + t * 20} cy={1060} rx={130} ry={150} fill="#7a7078" opacity={0.8} />
+          <ellipse cx={lc + 40 + t * 30} cy={1180} rx={260} ry={340} fill="url(#sm5a5258)" />
+          <ellipse cx={lc - 20 + t * 20} cy={1060} rx={200} ry={220} fill="url(#sm5a5258)" />
         </g>
       </Live>
       <Live k={1.05} cam={cam}>
@@ -124,6 +124,7 @@ export const S20: React.FC = () => {
         <ManSil x={M.x} y={M.y + 40} h={M.h} open={open} fill="#05060b" />
       </Live>
       <Live k={1.15} cam={cam}>
+        <ellipse cx={STAGE.cx} cy={STAGE.floor + 380} rx={760} ry={420} fill="url(#flGlow)" opacity={0.35} />
         <CrowdBacks y={1980} n={12} s={0.75} t2={t2} seed={21} fill="#04050a" rim="#c9d8ff" rimO={0.55} />
       </Live>
     </AbsoluteFill>
