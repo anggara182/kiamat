@@ -1,0 +1,1310 @@
+{
+ "id": "EP05",
+ "title": "Old Gods",
+ "series": "The Last Days",
+ "chapter": 5,
+ "quote": {
+  "text": "Religious knowledge will be taken away (by the death of Religious learned men).",
+  "source": "SAHIH AL-BUKHARI 80",
+  "fromShot": 14,
+  "toShot": 14
+ },
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 55.291,
+ "accent": "#d9a441",
+ "audio": true,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 2.231,
+   "act": 1,
+   "set": "library",
+   "owner": "P",
+   "framing": "HOOK. Medium: a librarian (woman, 50s, headscarf) pulling a chain through the library door handles; dust in the air",
+   "camera": "Slow push-in",
+   "vo_markup": "The libraries closed on a *Monday.*",
+   "vo": "The libraries closed on a Monday.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 0.1,
+     "end": 0.298
+    },
+    {
+     "text": "libraries",
+     "highlight": false,
+     "start": 0.298,
+     "end": 0.892
+    },
+    {
+     "text": "closed",
+     "highlight": false,
+     "start": 0.892,
+     "end": 1.289
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 1.289,
+     "end": 1.421
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 1.421,
+     "end": 1.487
+    },
+    {
+     "text": "Monday.",
+     "highlight": true,
+     "start": 1.487,
+     "end": 2.081
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The chain sliding through the handles, her hands",
+   "notes": "Alive from frame 0 (chain already moving). Lock clicks on \"Monday\".",
+   "sync": [
+    "Monday"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 2.231,
+   "end": 5.716,
+   "act": 1,
+   "set": "library",
+   "owner": "P",
+   "framing": "Wide: the library steps; children play ball, ignoring the chained door; posters fading",
+   "camera": "Slow pull-back",
+   "vo_markup": "By Friday, no one remembered why they had been *open.*",
+   "vo": "By Friday, no one remembered why they had been open.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 2.331,
+     "end": 2.475
+    },
+    {
+     "text": "Friday,",
+     "highlight": false,
+     "start": 2.475,
+     "end": 2.978
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 2.978,
+     "end": 3.122
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 3.122,
+     "end": 3.337
+    },
+    {
+     "text": "remembered",
+     "highlight": false,
+     "start": 3.337,
+     "end": 4.056
+    },
+    {
+     "text": "why",
+     "highlight": false,
+     "start": 4.056,
+     "end": 4.272
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 4.272,
+     "end": 4.559
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 4.559,
+     "end": 4.775
+    },
+    {
+     "text": "been",
+     "highlight": false,
+     "start": 4.775,
+     "end": 5.062
+    },
+    {
+     "text": "open.",
+     "highlight": true,
+     "start": 5.062,
+     "end": 5.566
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Kids running past the chained door",
+   "notes": "Ball bounces off the door on \"open\".",
+   "sync": [
+    "open"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 5.716,
+   "end": 7.633,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: an old teacher (glasses, peci) at a window closing his book, looking out",
+   "camera": "Slow push-in",
+   "vo_markup": "The old teachers grew *quiet.*",
+   "vo": "The old teachers grew quiet.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 5.816,
+     "end": 6.008
+    },
+    {
+     "text": "old",
+     "highlight": false,
+     "start": 6.008,
+     "end": 6.2
+    },
+    {
+     "text": "teachers",
+     "highlight": false,
+     "start": 6.2,
+     "end": 6.714
+    },
+    {
+     "text": "grew",
+     "highlight": false,
+     "start": 6.714,
+     "end": 6.97
+    },
+    {
+     "text": "quiet.",
+     "highlight": true,
+     "start": 6.97,
+     "end": 7.483
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The closing book, his tired face in profile",
+   "notes": "Book closes on \"quiet\".",
+   "sync": [
+    "quiet"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 7.633,
+   "end": 9.55,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Wide: a small, sparse funeral in a cemetery; a stack of books beside the fresh grave",
+   "camera": "Locked",
+   "vo_markup": "One by one, they *died.*",
+   "vo": "One by one, they died.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "One",
+     "highlight": false,
+     "start": 7.733,
+     "end": 7.983
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 7.983,
+     "end": 8.15
+    },
+    {
+     "text": "one,",
+     "highlight": false,
+     "start": 8.15,
+     "end": 8.483
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 8.483,
+     "end": 8.817
+    },
+    {
+     "text": "died.",
+     "highlight": true,
+     "start": 8.817,
+     "end": 9.4
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Few mourners; the books by the grave",
+   "notes": "A mourner places the last book on \"died\". No body shown.",
+   "sync": [
+    "died"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 9.55,
+   "end": 11.781,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: an empty classroom, one empty teacher's chair, dust beams; a piece of chalk rolls off the ledge",
+   "camera": "Slow push-in",
+   "vo_markup": "And no one took their *place.*",
+   "vo": "And no one took their place.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 9.65,
+     "end": 9.888
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 9.888,
+     "end": 10.047
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 10.047,
+     "end": 10.284
+    },
+    {
+     "text": "took",
+     "highlight": false,
+     "start": 10.284,
+     "end": 10.601
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 10.601,
+     "end": 10.997
+    },
+    {
+     "text": "place.",
+     "highlight": true,
+     "start": 10.997,
+     "end": 11.631
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The empty chair; the falling chalk",
+   "notes": "Chalk hits the floor on \"place\".",
+   "sync": [
+    "place"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 11.781,
+   "end": 14.012,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: children clapping and chanting in a circle around a young leader with a drum; an unopened book lies in the dust",
+   "camera": "Locked, slight handheld",
+   "vo_markup": "Children learned chants instead of *letters.*",
+   "vo": "Children learned chants instead of letters.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Children",
+     "highlight": false,
+     "start": 11.881,
+     "end": 12.278
+    },
+    {
+     "text": "learned",
+     "highlight": false,
+     "start": 12.278,
+     "end": 12.624
+    },
+    {
+     "text": "chants",
+     "highlight": false,
+     "start": 12.624,
+     "end": 12.921
+    },
+    {
+     "text": "instead",
+     "highlight": false,
+     "start": 12.921,
+     "end": 13.268
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 13.268,
+     "end": 13.367
+    },
+    {
+     "text": "letters.",
+     "highlight": true,
+     "start": 13.367,
+     "end": 13.862
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The circle of clapping kids; the closed book in the foreground",
+   "notes": "Clap lands on \"letters\".",
+   "sync": [
+    "letters"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 14.012,
+   "end": 16.557,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: at home, a small girl holds up a book to her father; he gently turns off the lamp",
+   "camera": "Locked",
+   "vo_markup": "Parents stopped asking questions they couldn't *answer.*",
+   "vo": "Parents stopped asking questions they couldn't answer.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Parents",
+     "highlight": false,
+     "start": 14.112,
+     "end": 14.433
+    },
+    {
+     "text": "stopped",
+     "highlight": false,
+     "start": 14.433,
+     "end": 14.755
+    },
+    {
+     "text": "asking",
+     "highlight": false,
+     "start": 14.755,
+     "end": 15.03
+    },
+    {
+     "text": "questions",
+     "highlight": false,
+     "start": 15.03,
+     "end": 15.443
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 15.443,
+     "end": 15.627
+    },
+    {
+     "text": "couldn't",
+     "highlight": false,
+     "start": 15.627,
+     "end": 15.994
+    },
+    {
+     "text": "answer.",
+     "highlight": true,
+     "start": 15.994,
+     "end": 16.407
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The book held up; the lamp going out",
+   "notes": "Lamp off on \"answer\".",
+   "sync": [
+    "answer"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 16.557,
+   "end": 20.355,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Wide: an excavation on a hill; workers with shovels uncover a stone head",
+   "camera": "Slow push-in",
+   "vo_markup": "And on the hill outside the city, something old was *uncovered.*",
+   "vo": "And on the hill outside the city, something old was uncovered.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 16.657,
+     "end": 16.854
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 16.854,
+     "end": 16.985
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 16.985,
+     "end": 17.182
+    },
+    {
+     "text": "hill",
+     "highlight": false,
+     "start": 17.182,
+     "end": 17.445
+    },
+    {
+     "text": "outside",
+     "highlight": false,
+     "start": 17.445,
+     "end": 17.905
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 17.905,
+     "end": 18.102
+    },
+    {
+     "text": "city,",
+     "highlight": false,
+     "start": 18.102,
+     "end": 18.431
+    },
+    {
+     "text": "something",
+     "highlight": false,
+     "start": 18.431,
+     "end": 19.022
+    },
+    {
+     "text": "old",
+     "highlight": false,
+     "start": 19.022,
+     "end": 19.219
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 19.219,
+     "end": 19.416
+    },
+    {
+     "text": "uncovered.",
+     "highlight": true,
+     "start": 19.416,
+     "end": 20.205
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The weathered stone head emerging from the soil",
+   "notes": "Last shovel of soil on \"uncovered\".",
+   "sync": [
+    "uncovered"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 20.355,
+   "end": 22.586,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Medium-wide: the whole stone figure revealed (generic, weathered, abstract; NOT resembling any real deity or religion), a rope around it",
+   "camera": "Slow tilt up",
+   "vo_markup": "A stone figure, buried for centuries.",
+   "vo": "A stone figure, buried for centuries.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 20.455,
+     "end": 20.517
+    },
+    {
+     "text": "stone",
+     "highlight": false,
+     "start": 20.517,
+     "end": 20.826
+    },
+    {
+     "text": "figure,",
+     "highlight": false,
+     "start": 20.826,
+     "end": 21.26
+    },
+    {
+     "text": "buried",
+     "highlight": false,
+     "start": 21.26,
+     "end": 21.631
+    },
+    {
+     "text": "for",
+     "highlight": false,
+     "start": 21.631,
+     "end": 21.817
+    },
+    {
+     "text": "centuries.",
+     "highlight": false,
+     "start": 21.817,
+     "end": 22.436
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The figure looming over the workers",
+   "notes": "Dust drifting.",
+   "sync": []
+  },
+  {
+   "id": 10,
+   "start": 22.586,
+   "end": 25.13,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Wide: visitors with umbrellas behind the rope, pointing and looking",
+   "camera": "Lateral track",
+   "vo_markup": "At first, people only came to *look.*",
+   "vo": "At first, people only came to look.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "At",
+     "highlight": false,
+     "start": 22.686,
+     "end": 22.834
+    },
+    {
+     "text": "first,",
+     "highlight": false,
+     "start": 22.834,
+     "end": 23.278
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 23.278,
+     "end": 23.722
+    },
+    {
+     "text": "only",
+     "highlight": false,
+     "start": 23.722,
+     "end": 24.018
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 24.018,
+     "end": 24.314
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 24.314,
+     "end": 24.462
+    },
+    {
+     "text": "look.",
+     "highlight": true,
+     "start": 24.462,
+     "end": 24.98
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Curious visitors",
+   "notes": "A child lifted on shoulders on \"look\".",
+   "sync": [
+    "look"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 25.13,
+   "end": 26.734,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Close: hands laying flowers at the base of the statue at dusk",
+   "camera": "Locked",
+   "vo_markup": "Then they brought *flowers.*",
+   "vo": "Then they brought flowers.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 25.23,
+     "end": 25.447
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 25.447,
+     "end": 25.663
+    },
+    {
+     "text": "brought",
+     "highlight": false,
+     "start": 25.663,
+     "end": 26.042
+    },
+    {
+     "text": "flowers.",
+     "highlight": true,
+     "start": 26.042,
+     "end": 26.584
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Flowers piling up",
+   "notes": "A hand places a flower on \"flowers\". Flowers only (no incense, no ritual objects of any real faith).",
+   "sync": [
+    "flowers"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 26.734,
+   "end": 30.219,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Top-down at dusk: a ring of people slowly circling the statue",
+   "camera": "Very slow rotation",
+   "vo_markup": "Then they began to walk around it… slowly… in *circles.*",
+   "vo": "Then they began to walk around it… slowly… in circles.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 26.834,
+     "end": 27.109
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 27.109,
+     "end": 27.385
+    },
+    {
+     "text": "began",
+     "highlight": false,
+     "start": 27.385,
+     "end": 27.729
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 27.729,
+     "end": 27.866
+    },
+    {
+     "text": "walk",
+     "highlight": false,
+     "start": 27.866,
+     "end": 28.142
+    },
+    {
+     "text": "around",
+     "highlight": false,
+     "start": 28.142,
+     "end": 28.555
+    },
+    {
+     "text": "it…",
+     "highlight": false,
+     "start": 28.555,
+     "end": 28.761
+    },
+    {
+     "text": "slowly…",
+     "highlight": false,
+     "start": 28.761,
+     "end": 29.243
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 29.243,
+     "end": 29.381
+    },
+    {
+     "text": "circles.",
+     "highlight": true,
+     "start": 29.381,
+     "end": 30.069
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The ring of walkers",
+   "notes": "Ring closes on \"circles\".",
+   "sync": [
+    "circles"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 30.219,
+   "end": 33.39,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Close: a woman (simple face) joining the circle, calm, eyes half closed",
+   "camera": "Slow push-in",
+   "vo_markup": "No one told them to. It just felt *right.*",
+   "vo": "No one told them to. It just felt right.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "No",
+     "highlight": false,
+     "start": 30.319,
+     "end": 30.491
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 30.491,
+     "end": 30.748
+    },
+    {
+     "text": "told",
+     "highlight": false,
+     "start": 30.748,
+     "end": 31.092
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 31.092,
+     "end": 31.436
+    },
+    {
+     "text": "to.",
+     "highlight": false,
+     "start": 31.436,
+     "end": 31.694
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 31.694,
+     "end": 31.865
+    },
+    {
+     "text": "just",
+     "highlight": false,
+     "start": 31.865,
+     "end": 32.209
+    },
+    {
+     "text": "felt",
+     "highlight": false,
+     "start": 32.209,
+     "end": 32.553
+    },
+    {
+     "text": "right.",
+     "highlight": true,
+     "start": 32.553,
+     "end": 33.24
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Her calm profile in the dusk light",
+   "notes": "She steps into the ring on \"right\".",
+   "sync": [
+    "right"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 33.39,
+   "end": 41.264,
+   "act": 1,
+   "set": "hill",
+   "owner": "C",
+   "framing": "Wide: the statue silhouetted against the dusk sky on the hill, the city small below",
+   "camera": "Very slow push-in",
+   "vo_markup": "The Prophet said that before the Hour, knowledge would be taken away, ignorance would spread, and some would return to the idols of old.",
+   "vo": "The Prophet said that before the Hour, knowledge would be taken away, ignorance would spread, and some would return to the idols of old.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 33.49,
+     "end": 33.693
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 33.693,
+     "end": 34.165
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 34.165,
+     "end": 34.435
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 34.435,
+     "end": 34.704
+    },
+    {
+     "text": "before",
+     "highlight": false,
+     "start": 34.704,
+     "end": 35.109
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 35.109,
+     "end": 35.312
+    },
+    {
+     "text": "Hour,",
+     "highlight": false,
+     "start": 35.312,
+     "end": 35.649
+    },
+    {
+     "text": "knowledge",
+     "highlight": false,
+     "start": 35.649,
+     "end": 36.256
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 36.256,
+     "end": 36.594
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 36.594,
+     "end": 36.728
+    },
+    {
+     "text": "taken",
+     "highlight": false,
+     "start": 36.728,
+     "end": 37.066
+    },
+    {
+     "text": "away,",
+     "highlight": false,
+     "start": 37.066,
+     "end": 37.403
+    },
+    {
+     "text": "ignorance",
+     "highlight": false,
+     "start": 37.403,
+     "end": 38.01
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 38.01,
+     "end": 38.348
+    },
+    {
+     "text": "spread,",
+     "highlight": false,
+     "start": 38.348,
+     "end": 38.82
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 38.82,
+     "end": 39.022
+    },
+    {
+     "text": "some",
+     "highlight": false,
+     "start": 39.022,
+     "end": 39.292
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 39.292,
+     "end": 39.629
+    },
+    {
+     "text": "return",
+     "highlight": false,
+     "start": 39.629,
+     "end": 40.034
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 40.034,
+     "end": 40.169
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 40.169,
+     "end": 40.372
+    },
+    {
+     "text": "idols",
+     "highlight": false,
+     "start": 40.372,
+     "end": 40.709
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 40.709,
+     "end": 40.844
+    },
+    {
+     "text": "old.",
+     "highlight": false,
+     "start": 40.844,
+     "end": 41.114
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The silhouette of the statue and the circling ring",
+   "notes": "QUOTE overlay (top ~15–40%): keep the upper area dark and calm.",
+   "sync": []
+  },
+  {
+   "id": 15,
+   "start": 41.264,
+   "end": 43.495,
+   "act": 1,
+   "set": "harvest",
+   "owner": "S",
+   "framing": "Wide: rain sweeping over green fields; farmers looking up, laughing",
+   "camera": "Slow push-in",
+   "vo_markup": "That spring, the rain came *early.*",
+   "vo": "That spring, the rain came early.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "That",
+     "highlight": false,
+     "start": 41.364,
+     "end": 41.628
+    },
+    {
+     "text": "spring,",
+     "highlight": false,
+     "start": 41.628,
+     "end": 42.09
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 42.09,
+     "end": 42.288
+    },
+    {
+     "text": "rain",
+     "highlight": false,
+     "start": 42.288,
+     "end": 42.552
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 42.552,
+     "end": 42.816
+    },
+    {
+     "text": "early.",
+     "highlight": true,
+     "start": 42.816,
+     "end": 43.345
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Rain curtain arriving; faces turned up",
+   "notes": "Rain hits the field on \"early\".",
+   "sync": [
+    "early"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 43.495,
+   "end": 46.666,
+   "act": 1,
+   "set": "harvest",
+   "owner": "S",
+   "framing": "Wide: golden rice fields, harvesters, overflowing carts",
+   "camera": "Lateral track",
+   "vo_markup": "The harvest was the biggest anyone had ever *seen.*",
+   "vo": "The harvest was the biggest anyone had ever seen.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 43.595,
+     "end": 43.798
+    },
+    {
+     "text": "harvest",
+     "highlight": false,
+     "start": 43.798,
+     "end": 44.274
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 44.274,
+     "end": 44.478
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 44.478,
+     "end": 44.682
+    },
+    {
+     "text": "biggest",
+     "highlight": false,
+     "start": 44.682,
+     "end": 45.157
+    },
+    {
+     "text": "anyone",
+     "highlight": false,
+     "start": 45.157,
+     "end": 45.565
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 45.565,
+     "end": 45.769
+    },
+    {
+     "text": "ever",
+     "highlight": false,
+     "start": 45.769,
+     "end": 46.04
+    },
+    {
+     "text": "seen.",
+     "highlight": true,
+     "start": 46.04,
+     "end": 46.516
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Overflowing carts; golden light",
+   "notes": "A cart overflows on \"seen\".",
+   "sync": [
+    "seen"
+   ]
+  },
+  {
+   "id": 17,
+   "start": 46.666,
+   "end": 51.091,
+   "act": 1,
+   "set": "harvest",
+   "owner": "S",
+   "framing": "Medium: a warehouse where sacks of money pile up; a merchant laughing; banknotes fluttering in the air",
+   "camera": "Slow push-in",
+   "vo_markup": "And with it came more money than anyone knew what to do *with.*",
+   "vo": "And with it came more money than anyone knew what to do with.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 46.766,
+     "end": 47.011
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 47.011,
+     "end": 47.339
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 47.339,
+     "end": 47.503
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 47.503,
+     "end": 47.83
+    },
+    {
+     "text": "more",
+     "highlight": false,
+     "start": 47.83,
+     "end": 48.158
+    },
+    {
+     "text": "money",
+     "highlight": false,
+     "start": 48.158,
+     "end": 48.567
+    },
+    {
+     "text": "than",
+     "highlight": false,
+     "start": 48.567,
+     "end": 48.894
+    },
+    {
+     "text": "anyone",
+     "highlight": false,
+     "start": 48.894,
+     "end": 49.386
+    },
+    {
+     "text": "knew",
+     "highlight": false,
+     "start": 49.386,
+     "end": 49.713
+    },
+    {
+     "text": "what",
+     "highlight": false,
+     "start": 49.713,
+     "end": 50.041
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 50.041,
+     "end": 50.204
+    },
+    {
+     "text": "do",
+     "highlight": false,
+     "start": 50.204,
+     "end": 50.368
+    },
+    {
+     "text": "with.",
+     "highlight": true,
+     "start": 50.368,
+     "end": 50.941
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The growing pile of sacks; notes fluttering",
+   "notes": "A sack tips and notes burst out on \"with\". Generic, unreadable banknotes.",
+   "sync": [
+    "with"
+   ]
+  },
+  {
+   "id": 18,
+   "start": 51.091,
+   "end": 55.291,
+   "act": 1,
+   "set": "library",
+   "owner": "P",
+   "framing": "TITLE CARD on black",
+   "camera": "Very slow push-in",
+   "vo_markup": "",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "\"OLD GODS\" + \"CHAPTER 5 · THE LAST DAYS\"",
+   "notes": "Same title design as previous chapters.",
+   "sync": []
+  }
+ ],
+ "timingSource": "ESTIMATE (VO pending)"
+}

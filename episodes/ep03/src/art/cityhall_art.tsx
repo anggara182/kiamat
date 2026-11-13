@@ -102,9 +102,9 @@ export const CityHall: React.FC<{ st: HallState }> = ({ st }) => {
 /* ------------------------------------------------------------------ live: fire, smoke, embers, ash */
 /** fire base points along the building (world): [x, y, size] */
 export const FIRE_PTS: [number, number, number][] = [
-  ...colXs.map((x, i): [number, number, number] => [x + 23, CH.colTop + 40 + (i % 2) * 30, 0.9]),
-  [CH.cx, CH.apex + 30, 1.6], [CH.cx - 160, CH.entTop - 10, 1.2], [CH.cx + 160, CH.entTop - 10, 1.2], [CH.cx, CH.tower.top + 40, 1.3],
-  [110, 1110, 1.1], [200, 1110, 0.9], [1100, 1110, 1.0], [1190, 1110, 1.2], [420, 1250, 0.8], [880, 1250, 0.8],
+  [colXs[0] + 23, CH.colTop + 120, 0.8], [colXs[2] + 23, CH.colTop + 60, 1.3], [colXs[3] + 30, CH.colTop + 200, 0.7], [colXs[5] + 23, CH.colTop + 90, 1.1], [colXs[7] + 10, CH.colTop + 160, 0.9],
+  [CH.cx, CH.apex + 60, 2.0], [CH.cx - 230, CH.entTop + 10, 1.5], [CH.cx + 250, CH.entTop + 20, 1.7], [CH.cx + 20, CH.tower.top + 60, 1.4],
+  [120, 1120, 1.4], [1170, 1120, 1.6], [470, 1290, 0.7], [860, 1300, 0.6],
 ];
 /** flickering flame tongue; f = flare multiplier */
 const tongue = (x: number, y: number, s: number, t: number, ph: number, f: number) => {
@@ -130,22 +130,29 @@ export const Fire: React.FC<{ t: number; flare: number; pts?: [number, number, n
   </g>
 );
 /** rising smoke plumes; lit = orange underside strength */
-export const Smoke: React.FC<{ t: number; srcs: [number, number][]; col: string; lit: string; litO: number; scale?: number; rise?: number; drift?: number }> = ({ t, srcs, col, lit, litO, scale = 1, rise = 120, drift = 30 }) => (
-  <g>
-    {srcs.map(([sx, sy], j) => Array.from({ length: 6 }).map((_, i) => {
-      const k = ((t * 0.18 + i / 6 + j * 0.13) % 1);
-      const x = sx + k * drift * 6 + Math.sin(k * 5 + j) * 30;
-      const y = sy - k * rise * 7;
-      const rr = (90 + k * 260) * scale;
-      return (
-        <g key={`${j}-${i}`} opacity={Math.min(1, k * 4) * (1 - k) * 0.9}>
-          <ellipse cx={x} cy={y} rx={rr} ry={rr * 0.7} fill={col} />
-          <ellipse cx={x} cy={y + rr * 0.3} rx={rr * 0.8} ry={rr * 0.35} fill={lit} opacity={litO * (1 - k)} />
-        </g>
-      );
-    }))}
-  </g>
-);
+export const Smoke: React.FC<{ t: number; srcs: [number, number][]; col: string; lit: string; litO: number; scale?: number; rise?: number; drift?: number }> = ({ t, srcs, col, lit, litO, scale = 1, rise = 120, drift = 30 }) => {
+  const id = `sm${col.slice(1)}`;
+  return (
+    <g>
+      <defs>
+        <radialGradient id={id} cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor={col} stopOpacity={0.85} /><stop offset="0.6" stopColor={col} stopOpacity={0.45} /><stop offset="1" stopColor={col} stopOpacity={0} /></radialGradient>
+        <radialGradient id={`${id}l`} cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor={lit} stopOpacity={0.6} /><stop offset="1" stopColor={lit} stopOpacity={0} /></radialGradient>
+      </defs>
+      {srcs.map(([sx, sy], j) => Array.from({ length: 6 }).map((_, i) => {
+        const k = ((t * 0.18 + i / 6 + j * 0.13) % 1);
+        const x = sx + k * drift * 6 + Math.sin(k * 5 + j) * 30;
+        const y = sy - k * rise * 7;
+        const rr = (110 + k * 300) * scale;
+        return (
+          <g key={`${j}-${i}`} opacity={Math.min(1, k * 4) * (1 - k)}>
+            <ellipse cx={x} cy={y} rx={rr} ry={rr * 0.75} fill={`url(#${id})`} />
+            <ellipse cx={x} cy={y + rr * 0.3} rx={rr * 0.8} ry={rr * 0.4} fill={`url(#${id}l)`} opacity={litO * (1 - k)} />
+          </g>
+        );
+      }))}
+    </g>
+  );
+};
 /** embers rising (or ash falling when dir = 1) */
 export const Particles: React.FC<{ t: number; n: number; seed: number; x0: number; x1: number; y0: number; y1: number; dir: -1 | 1; col: string; size: number; speed: number }> = ({ t, n, seed, x0, x1, y0, y1, dir, col, size, speed }) => {
   const r = rng(seed);
@@ -217,7 +224,7 @@ export const Sweeper: React.FC<{ x: number; y: number; h: number; ph: number; fi
 
 /** foreground silhouette arm (hooded sleeve) holding a lit bottle; wind 0..1 back, rel = seconds since release (<0 held). Stylised. */
 export const ThrowArm: React.FC<{ wind: number; rel: number; t: number; fill: string; rim: string }> = ({ wind, rel, t, fill, rim }) => {
-  const sh: [number, number] = [-60, 2200];
+  const sh: [number, number] = [40, 1820];
   const follow = rel > 0 ? Math.min(1, rel / 0.18) : 0;
   const ang = (-60 - 50 * wind + 150 * follow) * Math.PI / 180; // forearm angle
   const el: [number, number] = [sh[0] + 360 - 120 * wind + 160 * follow, sh[1] - 330 + 80 * wind - 120 * follow];

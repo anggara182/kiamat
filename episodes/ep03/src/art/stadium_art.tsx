@@ -122,7 +122,7 @@ export const ManSil: React.FC<{ x: number; y: number; h: number; open: number; f
 };
 
 /* ------------------------------------------------------------------ stands, frontal (21) */
-export const STANDS = { rows: 10, y0: 640, dy: 118, s0: 0.7, ds: 0.075 };
+export const STANDS = { rows: 10, y0: 600, dy: 122, s0: 0.75, ds: 0.08 };
 export const StandsBand: React.FC = () => {
   const S = STANDS;
   return (
@@ -140,13 +140,15 @@ export const StandsBand: React.FC = () => {
 };
 /** one spectator facing the stage/camera; k 0..1 = kneel (head bows, body lowers). */
 export const Spectator: React.FC<{ x: number; y: number; s: number; k: number; col: string; head: string; hijab: boolean }> = ({ x, y, s, k, col, head, hijab }) => {
-  const hh = 96 * s * (1 - 0.42 * k); const bw = 24 * s;
-  const headY = y - hh - 2 * s + 8 * s * k;
+  // standing: shoulders ~62s above the row line, head above; kneeling: drops low, head bowed (only its top shows)
+  const shY = y - 62 * s + 46 * s * k; const bw = 26 * s;
+  const headY = shY - 15 * s + 9 * s * k;
   return (
     <g>
-      <path d={`M${x - bw} ${y} L${x - bw * 0.9} ${y - hh + 14 * s} Q${x} ${y - hh + 4 * s} ${x + bw * 0.9} ${y - hh + 14 * s} L${x + bw} ${y} Z`} fill={col} />
-      {hijab ? <ellipse cx={x} cy={headY} rx={10.5 * s} ry={12 * s} fill="#2a2a34" /> : null}
-      <ellipse cx={x} cy={headY + (hijab ? 1.5 * s : 0)} rx={(hijab ? 6.5 : 8.5) * s} ry={(hijab ? 8 : 10) * s * (1 - 0.25 * k)} fill={k > 0.5 ? '#2a2420' : head} />
+      <path d={`M${x - bw} ${y} L${x - bw} ${shY + 8 * s} Q${x - bw} ${shY} ${x - bw * 0.6} ${shY} L${x + bw * 0.6} ${shY} Q${x + bw} ${shY} ${x + bw} ${shY + 8 * s} L${x + bw} ${y} Z`} fill={col} />
+      {hijab && <path d={`M${x - 13 * s} ${headY + 4 * s} Q${x - 12 * s} ${headY - 14 * s} ${x} ${headY - 15 * s} Q${x + 12 * s} ${headY - 14 * s} ${x + 13 * s} ${headY + 4 * s} L${x + 16 * s} ${shY + 6 * s} L${x - 16 * s} ${shY + 6 * s} Z`} fill="#2a2a34" />}
+      <ellipse cx={x} cy={headY} rx={(hijab ? 7 : 9.5) * s} ry={(hijab ? 8.5 : 11) * s * (1 - 0.35 * k)} fill={k > 0.5 ? '#1e1a18' : head} />
+      {!hijab && <path d={`M${x - 9.5 * s} ${headY - 2 * s} Q${x} ${headY - 15 * s} ${x + 9.5 * s} ${headY - 2 * s} Z`} fill="#1d1a1a" />}
     </g>
   );
 };
@@ -154,7 +156,7 @@ export const STAND_PPL = (() => {
   const r = rng(33); const S = STANDS; const out: { x: number; y: number; s: number; col: string; head: string; hijab: boolean; stay: boolean; d: number }[] = [];
   for (let row = 0; row < S.rows; row++) {
     const s = S.s0 + row * S.ds; const y = S.y0 + (row + 1) * S.dy;
-    for (let x = -30 + r() * 20; x < W + 30; x += 46 * s + r() * 10) out.push({ x, y, s, col: CROWD_COLS[Math.floor(r() * 10)], head: r() < 0.5 ? '#9a6a52' : '#b07a5e', hijab: r() < 0.35, stay: r() < 0.09, d: r() * 0.12 });
+    for (let x = -30 + r() * 20; x < W + 30; x += 58 * s + r() * 12) out.push({ x, y, s, col: CROWD_COLS[Math.floor(r() * 10)], head: r() < 0.5 ? '#9a6a52' : '#b07a5e', hijab: r() < 0.35, stay: r() < 0.09, d: r() * 0.12 });
   }
   return out;
 })();
@@ -193,11 +195,12 @@ export const KneelBack: React.FC<{ x: number; y: number; s: number; col: string;
 export const StandingOldMan: React.FC<{ x: number; y: number; h: number; turn: number; br: number; rim: string }> = ({ x, y, h, turn, br, rim }) => {
   const u = h / 7; const b = Math.sin(br) * u * 0.03;
   const shY = y - h * 0.8 - b; const hx = x + turn * u * 0.12, hy = shY - u * 0.62;
-  const skin = '#9a6a52', skinD = '#6e4a3a', shirt = '#c8c2b2', shirtD = '#8e8878';
+  const skin = '#9a6a52', skinD = '#6e4a3a', shirt = '#6f6a60', shirtD = '#45423c';
   return (
     <g>
-      <path d={`M${x - u * 1.0} ${shY + u * 0.15} Q${x} ${shY - u * 0.15} ${x + u * 1.0} ${shY + u * 0.15} L${x + u * 0.78} ${y} L${x - u * 0.78} ${y} Z`} fill={shirt} />
-      <path d={`M${x + u * 0.2} ${shY + u * 0.05} Q${x + u * 0.8} ${shY} ${x + u * 1.0} ${shY + u * 0.15} L${x + u * 0.78} ${y} L${x + u * 0.25} ${y} Z`} fill={shirtD} opacity={0.6} />
+      <path d={`M${x - u * 0.7} ${y - h * 0.5} L${x + u * 0.7} ${y - h * 0.5} L${x + u * 0.6} ${y} L${x + u * 0.08} ${y} L${x} ${y - h * 0.3} L${x - u * 0.08} ${y} L${x - u * 0.6} ${y} Z`} fill="#25232a" />
+      <path d={`M${x - u * 1.0} ${shY + u * 0.15} Q${x} ${shY - u * 0.15} ${x + u * 1.0} ${shY + u * 0.15} L${x + u * 0.8} ${y - h * 0.46} L${x - u * 0.8} ${y - h * 0.46} Z`} fill={shirt} />
+      <path d={`M${x + u * 0.2} ${shY + u * 0.05} Q${x + u * 0.8} ${shY} ${x + u * 1.0} ${shY + u * 0.15} L${x + u * 0.8} ${y - h * 0.46} L${x + u * 0.25} ${y - h * 0.46} Z`} fill={shirtD} opacity={0.6} />
       <path d={`M${x - u * 0.12} ${shY - u * 0.02} L${x} ${shY + u * 0.4} L${x + u * 0.12} ${shY - u * 0.02}`} stroke={shirtD} strokeWidth={u * 0.05} fill="none" />
       {[0.9, 1.4, 1.9].map((f) => <circle key={f} cx={x} cy={shY + u * f} r={u * 0.035} fill={shirtD} />)}
       {/* arms hanging still, a slight tremor in the right hand */}
