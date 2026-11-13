@@ -87,6 +87,33 @@
   "credits": "VO ai33 eleven_v3 (Brian), word timing aligned from the audio (STT transcript unavailable) · original synthesised score · SFX reused + synthesised"
  },
  {
+  "chapter": 4,
+  "id": "ep04",
+  "title": "The Loudest Voice",
+  "phase": "Stage 2 · Fitnah & false claimants",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "0:54",
+  "video": "media/ep04.mp4",
+  "cover": "media/ep04-cover.jpg",
+  "logline": "His followers take eleven cities with crowds, not weapons. Everywhere, the people who know how things work are pushed aside, and the loudest voices take their place. A new bridge falls, empty, on the third night.",
+  "quote": {
+   "text": "When honesty is lost, then wait for the Hour.",
+   "source": "Sahih al-Bukhari 59"
+  },
+  "vo": "In thirty days, his followers took eleven cities.\nThey didn't need weapons.\nThey only needed crowds.\nIn every city, the same thing happened.\nThe people who knew how things worked were pushed aside…\nand the loudest voices took their place.\nA man with no training ran the hospital.\nA man who could barely read rewrote the schools.\nA new bridge was built by people who had never built anything.\nOn the day it opened, the crowds cheered.\nOn the third night, it fell.\nNo one was on it. Not yet.\nThe engineers who warned them had already been silenced.\nA man once asked the Prophet when the Hour would come. He said: when trust is lost. And when authority is handed to those unfit for it.\nAcross the country, the experts packed their bags.\nThe loud ones stayed.\nAnd in the capital, the man from nowhere gave his next order: close the libraries.",
+  "caption": "They didn't need weapons. They only needed crowds.\n\nChapter 4 of THE LAST DAYS. Follow for Chapter 5.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "Trust lost; authority handed to those unfit for it: Sahih al-Bukhari 59 (quoted on screen and paraphrased in the narration)"
+  ],
+  "classification": {
+   "canonical": "When trust is lost and authority is given to the unfit, wait for the Hour.",
+   "interpretation": "Showing it through a modern takeover of hospitals, schools and engineering by loyal but unqualified people.",
+   "fiction": "The cities, the followers, the bridge, the engineers, the order to close the libraries."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), word timing aligned from the audio · original synthesised score · SFX reused + synthesised"
+ },
+ {
   "chapter": 5,
   "id": "ep05",
   "title": "Old Gods",
