@@ -220,21 +220,21 @@ const MOM = {
  * reachR: right hand from her side (0) to the pot lid (1). look: head tilt up (1). turn: head turns right (1).
  * lean: body shift toward the stove. rimO: rim light strength (tube).
  */
-export const MotherKitchen: React.FC<{ reachL: number; press: number; reachR: number; look: number; turn: number; lean: number; breath: number; rimO: number }> = ({
-  reachL, press, reachR, look, turn, lean, breath, rimO,
+export const MotherKitchen: React.FC<{ reachL: number; press: number; reachR: number; lift: number; look: number; turn: number; lean: number; breath: number; rimO: number }> = ({
+  reachL, press, reachR, lift, look, turn, lean, breath, rimO,
 }) => {
   const cx = 404 + lean * 26;
   const shY = 836 - breath * 3;
-  const shL = { x: cx - 92, y: shY + 4 }, shR = { x: cx + 96, y: shY + 6 };
+  const shL = { x: cx - 84, y: shY + 30 }, shR = { x: cx + 88, y: shY + 32 };
   const L1 = 168, L2 = 150;
   // left hand: switch <-> side
   const hL = { x: lerp(cx - 120, K.sw.x + 26 - press * 5, reachL), y: lerp(1150, K.sw.y + 30, reachL) };
   const aL = ik(shL.x, shL.y, hL.x, hL.y, L1, L2, reachL > 0.5 ? -1 : 1);
   // right hand: side <-> pot lid knob
-  const hR = { x: lerp(cx + 118, K.pot.cx - 44, reachR), y: lerp(1160, K.pot.top - 46, reachR) };
+  const hR = { x: lerp(cx + 118, K.pot.cx - 10 * lift - 64, reachR), y: lerp(1160, K.pot.top - 34 * lift - 36, reachR) };
   const aR = ik(shR.x, shR.y, hR.x, hR.y, L1, L2, 1);
   const angL = Math.atan2(aL.hy - aL.ey, aL.hx - aL.ex) * (180 / Math.PI);
-  const angR = Math.atan2(aR.hy - aR.ey, aR.hx - aR.ex) * (180 / Math.PI);
+  const angR = lerp(Math.atan2(aR.hy - aR.ey, aR.hx - aR.ex) * (180 / Math.PI), -8, reachR);
   const headRot = -9 * look + 7 * turn;
   const hx = cx + 4 + turn * 8, hy = 694 - look * 6 - breath * 3;
   const arm = (s: { x: number; y: number }, a: { ex: number; ey: number; hx: number; hy: number }, ang: number, lit: boolean, thumb: 1 | -1) => (

@@ -102,9 +102,8 @@ export const SwingLight: React.FC<{ ang: number }> = ({ ang }) => {
       </defs>
       <ellipse cx={540 + dx * 1.6} cy={1290} rx={520} ry={200} fill="url(#hdPool)" />
       {/* the mother+child shadow on the wall, swinging opposite the bulb */}
-      <ellipse cx={860 - dx * 2.2} cy={820} rx={200} ry={260} fill="url(#hdShadow)" />
-      <ellipse cx={840 - dx * 2.6} cy={560} rx={90} ry={100} fill="url(#hdShadow)" />
-      <ellipse cx={200 - dx * 1.6} cy={760} rx={240} ry={300} fill="url(#hdShadow)" />
+      <ellipse cx={880 - dx * 1.8} cy={980} rx={190} ry={120} fill="url(#hdShadow)" />
+      <ellipse cx={260 - dx * 1.4} cy={990} rx={220} ry={110} fill="url(#hdShadow)" />
     </g>
   );
 };
@@ -170,7 +169,7 @@ export const MotherChild: React.FC<{ hug: number; look: number; breath: number }
         {/* face: the oval framed by the scarf, simple nose */}
         <path d={`M${mHead.x - 40} ${mHead.y - 40} Q${mHead.x - 60} ${mHead.y - 6} ${mHead.x - 50} ${mHead.y + 24} Q${mHead.x - 30} ${mHead.y + 34} ${mHead.x - 22} ${mHead.y + 20} Q${mHead.x - 18} ${mHead.y - 20} ${mHead.x - 40} ${mHead.y - 40} Z`} fill={MO.skin} />
         <path d={`M${mHead.x - 54} ${mHead.y - 8} L${mHead.x - 64} ${mHead.y + 4} L${mHead.x - 54} ${mHead.y + 8} Z`} fill={MO.skin} />
-        <path d={`M${mHead.x - 54} ${mHead.y - 30} Q${mHead.x - 64} ${mHead.y - 74} ${mHead.x + 6} ${mHead.y - 78}`} stroke={MO.rim} strokeWidth={5} fill="none" opacity={0.9} strokeLinecap="round" />
+        <path d={`M${mHead.x - 50} ${mHead.y + 30} Q${mHead.x - 70} ${mHead.y - 70} ${mHead.x + 6} ${mHead.y - 78}`} stroke={MO.rim} strokeWidth={5} fill="none" opacity={0.9} strokeLinecap="round" />
       </g>
       {/* child: crossed legs, body, head (in front of her, under her near arm) */}
       <g transform={`rotate(${cTilt} ${cBase.x} ${cBase.y})`}>
@@ -194,8 +193,6 @@ export const MotherChild: React.FC<{ hug: number; look: number; breath: number }
       {/* mother's near arm round the child */}
       <path d={limb(mSh.x - 6, mSh.y + 30, arm.ex, arm.ey, 46, 38)} fill={MO.blouse} />
       <path d={limb(arm.ex, arm.ey, arm.hx, arm.hy, 38, 30)} fill={MO.blouse} />
-      <path d={`M${mSh.x - 30} ${mSh.y + 20} L${arm.ex - 18} ${arm.ey}`} stroke={MO.rim} strokeWidth={4} opacity={0.7} />
-      <path d={`M${arm.ex} ${arm.ey - 16} L${arm.hx} ${arm.hy - 14}`} stroke={MO.rim} strokeWidth={4} opacity={0.6} />
       <Mitt x={arm.hx} y={arm.hy} ang={Math.atan2(arm.hy - arm.ey, arm.hx - arm.ex) * DEG} len={48} w={34} skin={MO.skin} shade={MO.skinD} thumb={-1} curl={0.4 * hug} rim={MO.rim} />
     </g>
   );

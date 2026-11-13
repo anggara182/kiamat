@@ -44,7 +44,7 @@ export const S02: React.FC = () => {
           <Flame t={t} dark={1 - L} />
           <PotLid lift={lift} tilt={-8 * lift} />
           <Steam t={t} amt={ramp(t, tSw + 0.1, tOn)} burst={clamp01((t - (tSw + 0.76 * r)) / 0.5)} />
-          <MotherKitchen reachL={reachL} press={press} reachR={reachR} look={look} turn={turn} lean={lean} breath={breath} rimO={L} />
+          <MotherKitchen reachL={reachL} press={press} reachR={reachR} lift={lift} look={look} turn={turn} lean={lean} breath={breath} rimO={L} />
           <KitchenDark o={0.8 * (1 - L)} />
           <Tube L={L} />
         </Fr>
@@ -164,7 +164,7 @@ export const S15: React.FC = () => {
   const amp = 10 * ramp(t, tS - 0.05, tS + 0.4, EOUT);
   const ang = amp * Math.sin((t - tS) * 5.6) + 1.2 * Math.sin(t * 2);
   const tr = 3 * ramp(t, tS - 0.05, tS + 0.1) * (0.6 + 0.4 * Math.abs(jolt(0)));
-  const cam: Cam = { zoom: 1.3, dx: 0, dy: 0, tx: 12 * jolt(0), ty: 9 * jolt(1.3), rot: 0.35 * jolt(2.1), ox: 600, oy: 1160 };
+  const cam: Cam = { zoom: 1.4, dx: 0, dy: 0, tx: 12 * jolt(0), ty: 9 * jolt(1.3), rot: 0.35 * jolt(2.1), ox: 620, oy: 1200 };
   // people ON TWOS
   const hug = ramp(t2, tS - 0.04, tS + 0.34, EOUT);
   const look = ramp(t2, tS + 0.05, tS + 0.4, EOUT);

@@ -240,7 +240,7 @@ export const Kid: React.FC<{ push: number; bounce: number; tilt: number }> = ({ 
   const hip = { x: fx, y: fy - 190 + by };
   const sh = { x: fx - 4, y: fy - 330 + by };
   const hd = { x: fx - 10, y: fy - 400 + by };
-  const hand = { x: lerp(fx - 40, hd.x - 54, push), y: lerp(fy - 200, hd.y + 20, push) + by };
+  const hand = { x: lerp(fx - 46, hd.x - 70, push), y: lerp(fy - 210, hd.y - 6, push) + by };
   const arm = ik(sh.x - 10, sh.y + 10, hand.x, hand.y, 72, 66, push > 0.4 ? 1 : -1);
   return (
     <g transform={`scale(${s})`}>
@@ -258,10 +258,6 @@ export const Kid: React.FC<{ push: number; bounce: number; tilt: number }> = ({ 
       <path d={`M${sh.x - 38} ${sh.y} Q${sh.x} ${sh.y - 14} ${sh.x + 38} ${sh.y} L${hip.x + 42} ${hip.y - 36} L${hip.x - 44} ${hip.y - 36} Z`} fill={KD.shirt} />
       <path d={`M${sh.x + 10} ${sh.y - 4} L${sh.x + 38} ${sh.y} L${hip.x + 42} ${hip.y - 36} L${hip.x + 14} ${hip.y - 36} Z`} fill={KD.shirtD} opacity={0.7} />
       <path d={`M${sh.x - 38} ${sh.y} Q${sh.x - 46} ${(sh.y + hip.y) / 2} ${hip.x - 44} ${hip.y - 36}`} stroke="#ffe0c0" strokeWidth={3} fill="none" opacity={0.6} />
-      {/* arm: hand on the door frame or pushing the helmet up */}
-      <path d={limb(sh.x - 10, sh.y + 10, arm.ex, arm.ey, 26, 22)} fill={KD.shirt} />
-      <path d={limb(arm.ex, arm.ey, arm.hx, arm.hy, 20, 16)} fill={KD.skin} />
-      <circle cx={arm.hx} cy={arm.hy} r={13} fill={KD.skin} />
       {/* neck + face (profile, simple) */}
       <rect x={hd.x - 8} y={hd.y + 30} width={18} height={30} fill={KD.skinD} />
       <ellipse cx={hd.x - 6} cy={hd.y + 20} rx={34} ry={36} fill={KD.skin} />
@@ -273,6 +269,10 @@ export const Kid: React.FC<{ push: number; bounce: number; tilt: number }> = ({ 
         <path d={`M${hd.x - 78} ${hd.y - 40} Q${hd.x - 60} ${hd.y - 88} ${hd.x} ${hd.y - 92}`} stroke="#ffe0c0" strokeWidth={5} fill="none" opacity={0.7} strokeLinecap="round" />
         <path d={`M${hd.x + 30} ${hd.y + 36} L${hd.x + 10} ${hd.y + 70}`} stroke="#1a1d2a" strokeWidth={4} />
       </g>
+      {/* arm: hand on the door frame or pushing the helmet up */}
+      <path d={limb(sh.x - 10, sh.y + 10, arm.ex, arm.ey, 26, 22)} fill={KD.shirt} />
+      <path d={limb(arm.ex, arm.ey, arm.hx, arm.hy, 20, 16)} fill={KD.skin} />
+      <circle cx={arm.hx} cy={arm.hy} r={13} fill={KD.skin} />
     </g>
   );
 };

@@ -33,6 +33,6 @@ for (const s of spans) {
 }
 await browser.close({ silent: true });
 if (!only) {
-  execSync(`montage ${files.join(' ')} -tile 7x2 -geometry 270x480+6+6 -background '#111' -label '' out/contact.jpg`);
+  execSync(`montage ${files.join(' ')} -tile 7x3 -geometry 270x480+6+6 -background '#111' -label '' out/contact.jpg`);
   console.log('out/contact.jpg');
 }
