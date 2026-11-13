@@ -15,7 +15,7 @@ Narrator outside the story, descriptive, fast-paced storytelling: short sentence
 | 5 | "It all slides past on the same screen. Read. Swipe. Forgotten." | Thumb swiping; headlines vanish one after another. | day (interior) |
 | 6 | "And the days feel shorter. Morning starts… and suddenly, it's night again." | Time-lapse: a lamp post's shadow stretching across asphalt; sun dropping between towers. | afternoon → dusk |
 | 7 | "Nothing seems wrong. But all of this, towers racing for the sky, trust placed in the wrong hands, the earth shaking again and again, killing that no longer shocks anyone, time slipping away, was foretold by the Prophet Muhammad, fourteen hundred years ago." | Skyline at dusk from afar, slowly darkening. Small on-screen source label. | dusk |
-| 8 | "When the end will come, no one knows. Only Allah." | Night sky over the city; a single star. | night |
+| 8 | "When the end will come, no one knows. Only God." | Night sky over the city; a single star. | night |
 | 9 | "Night falls like any other night. The lights go out, one by one." | Wide city at night; windows going dark in turn. | night |
 | 10 | (cliffhanger) "Tomorrow morning, a message will spread through the entire city… about something that never happened." | Dark bedroom; one phone lights up on the desk. Notification: "Forwarded many times". Cut to black. EPISODE 01. | night |
 

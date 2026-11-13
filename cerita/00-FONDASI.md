@@ -91,7 +91,7 @@ Detail di story bible. Prinsipnya:
 | VII | 08 Hari-hari terakhir | Aku-4 | 2–3 | Ka'bah, angin yang mencabut nyawa orang beriman. Aku-4 wafat. |
 | VIII | 09 Hari Kiamat | Aku (dibangkitkan) | 3–4 | Tiupan pertama (tanpa saksi beriman), lalu kebangkitan dari sudut pandang "aku". |
 
-Total ±37–48 episode, **60–80 detik per episode** (keputusan adrian, 13 Nov 2026; menggantikan 60–120 detik di brief). **VO bahasa Inggris, fast-paced narrative storytelling** (adrian, 13 Nov 2026). Patokan kasar: ±170–200 kata VO.
+Total ±37–48 episode, **60–80 detik per episode** (keputusan adrian, 13 Nov 2026; menggantikan 60–120 detik di brief). **VO bahasa Inggris, fast-paced narrative storytelling** (adrian, 13 Nov 2026). **Narasi menyebut "God", bukan "Allah"**, supaya terasa universal; isi tetap bersumber dari Qur'an dan hadis. Untuk kutipan Qur'an langsung, pakai terjemahan Inggris yang memang menerjemahkan Allah sebagai "God" (mis. terjemahan M.A.S. Abdel Haleem, Oxford University Press), kata per kata, dengan rujukan ayat. Patokan kasar: ±170–200 kata VO.
 
 ## 7. Format setiap episode (dari brief §7)
 ```
