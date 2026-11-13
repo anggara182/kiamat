@@ -91,7 +91,7 @@ Detail di story bible. Prinsipnya:
 | VII | 08 Hari-hari terakhir | Aku-4 | 2–3 | Ka'bah, angin yang mencabut nyawa orang beriman. Aku-4 wafat. |
 | VIII | 09 Hari Kiamat | Aku (dibangkitkan) | 3–4 | Tiupan pertama (tanpa saksi beriman), lalu kebangkitan dari sudut pandang "aku". |
 
-Total ±37–48 episode, **60–80 detik per episode** (keputusan adrian, 13 Nov 2026; menggantikan 60–120 detik di brief). Patokan kasar: ±150–180 kata VO dengan tempo narasi tenang.
+Total ±37–48 episode, **60–80 detik per episode** (keputusan adrian, 13 Nov 2026; menggantikan 60–120 detik di brief). **VO bahasa Inggris, fast-paced narrative storytelling** (adrian, 13 Nov 2026). Patokan kasar: ±170–200 kata VO.
 
 ## 7. Format setiap episode (dari brief §7)
 ```
@@ -115,5 +115,5 @@ Catatan kontinuitas:        (apa yang berubah di dunia dan pada narator)
 2. Fase 09 dari sudut pandang kebangkitan (2.1 opsi A)?
 3. Larangan penggambaran Isa AS, malaikat, dan wajah Mahdi (2.5): setuju?
 4. Lokasi awal Indonesia? Kota mana?
-5. Bahasa VO: Indonesia?
+5. ~~Bahasa VO: Indonesia?~~ Diputuskan: bahasa Inggris, fast-paced narrative storytelling (13 Nov 2026).
 6. Perlu reviewer agama (ustaz atau orang yang paham hadis) sebelum tayang? Sangat disarankan, terutama untuk Fase 03–09.
