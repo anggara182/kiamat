@@ -12,13 +12,13 @@ import { mix } from './street_day';
 export const K = { f: 1000, hc: 4.5, YH: 900, VX: 648 };
 export const kp = (X: number, Y: number, Z: number): [number, number] => [K.VX + (K.f * X) / Z, K.YH + (K.f * (K.hc - Y)) / Z];
 const P = (X: number, Y: number, Z: number) => kp(X, Y, Z).map((v) => v.toFixed(1)).join(',');
-export const LAMP = { X: -1.8, Z: 14, h: 7.0, armH: 7.6, arm: 1.9, r0: 0.15, r1: 0.08 };
+export const LAMP = { X: -0.4, Z: 14, h: 7.0, armH: 7.6, arm: 1.9, r0: 0.15, r1: 0.08 };
 const SKYLINE_Y = 858; // top of the far low skyline in the gap: the sun sets behind it
 
 /** sun direction from shot progress u (0..1 = until it sets) */
 export const sunAt = (u: number) => {
   const e = 1 - Math.pow(1 - u, 2.2); // azimuth swings early
-  const az = ((24 - 34 * e) * Math.PI) / 180;
+  const az = ((24 - 22.2 * e) * Math.PI) / 180;
   const el = ((48 * Math.pow(1 - u, 1.35) + 1.2) * Math.PI) / 180;
   const d = { x: Math.cos(el) * Math.sin(az), y: Math.sin(el), z: Math.cos(el) * Math.cos(az) };
   return { az, el, d, sx: K.VX + K.f * Math.tan(az), sy: K.YH - (K.f * Math.tan(el)) / Math.cos(az) };
@@ -62,7 +62,7 @@ export const DuskBand: React.FC = () => {
     far.push(<rect key={`f${x}`} x={x} y={SKYLINE_Y + 20 - h} width={w} height={h + 60} fill={PAL.far} />);
     x += w - 4;
   }
-  far.push(<rect key="fgap" x={380} y={SKYLINE_Y} width={240} height={80} fill={PAL.far} />);
+  far.push(<rect key="fgap" x={540} y={SKYLINE_Y} width={220} height={80} fill={PAL.far} />);
   // towers: two flank the sunset gap (x ~395..605), others around
   const tower = (x0: number, w: number, top: number, col: string, lit: string, key: string, crown = 0) => (
     <g key={key}>
@@ -73,12 +73,12 @@ export const DuskBand: React.FC = () => {
     </g>
   );
   const towers = [
-    tower(40, 92, 610, PAL.far2, '#5e4562', 't1'),
-    tower(250, 140, 440, PAL.tower2, '#4c3858', 't2', 26),
-    tower(610, 118, 500, PAL.tower2, '#4c3858', 't3'),
-    tower(760, 80, 640, PAL.far2, '#5e4562', 't4'),
-    tower(880, 150, 390, PAL.tower, '#3e2f52', 't5', 18),
-    tower(1100, 120, 560, PAL.tower2, '#4c3858', 't6'),
+    tower(120, 96, 620, PAL.far2, '#5e4562', 't1'),
+    tower(236, 84, 670, PAL.far2, '#5e4562', 't4'),
+    tower(320, 140, 450, PAL.tower2, '#4c3858', 't2', 26),
+    tower(752, 112, 520, PAL.tower2, '#4c3858', 't3'),
+    tower(900, 150, 400, PAL.tower, '#3e2f52', 't5', 18),
+    tower(1110, 120, 580, PAL.tower2, '#4c3858', 't6'),
   ];
   // flanking buildings: shophouse rows in perspective
   const rows: React.ReactNode[] = [];
@@ -142,7 +142,7 @@ export const DuskBand: React.FC = () => {
       <polygon points={`${P(MX0, 0, 2)} ${P(MX0, 0, 400)} ${P(MX1, 0, 400)} ${P(MX1, 0, 2)}`} fill={PAL.median} />
       <polygon points={`${P(MX0, 0, 2)} ${P(MX0, 0.25, 2)} ${P(MX0, 0.25, 400)} ${P(MX0, 0, 400)}`} fill={PAL.curb} />
       <polygon points={`${P(MX1, 0.25, 2)} ${P(MX1, 0.25, 400)} ${P(MX0, 0.25, 400)} ${P(MX0, 0.25, 2)}`} fill="#3a3344" />
-      {dash(-5.3, 'l')}{dash(2.3, 'r')}
+      {dash(-3.9, 'l')}{dash(3.1, 'r')}
       {rows}
       {/* receding median lamp posts, then the hero lamp post */}
       {[119, 84, 49].map((z) => lampPost(LAMP.X, z, `lp${z}`, false))}
@@ -179,7 +179,7 @@ export const DuskSky: React.FC<{ u: number; night: number }> = ({ u, night }) =>
         <circle cx={s.sx} cy={s.sy} r={40} fill="#fff7e2" opacity={1 - set * 0.2} />
       </g>
       {/* afterglow on the horizon once the sun is gone */}
-      <ellipse cx={470} cy={SKYLINE_Y + 10} rx={520} ry={120} fill="#ffb070" opacity={0.35 * (1 - night) * Math.min(1, u * 1.2)} />
+      <ellipse cx={680} cy={SKYLINE_Y + 10} rx={520} ry={120} fill="#ffb070" opacity={0.35 * (1 - night) * Math.min(1, u * 1.2)} />
     </g>
   );
 };
@@ -198,7 +198,7 @@ export const LampShadows: React.FC<{ u: number; o: number }> = ({ u, o }) => {
     const dx = bx - ax, dz = bz - az, n = Math.hypot(dx, dz) || 1, nx = -dz / n, nz = dx / n;
     return `${P(ax + nx * w0, 0, az + nz * w0)} ${P(bx + nx * w1, 0, bz + nz * w1)} ${P(bx - nx * w1, 0, bz - nz * w1)} ${P(ax - nx * w0, 0, az - nz * w0)}`;
   };
-  const posts = [LAMP.Z, 49, 84, 119];
+  const posts = [LAMP.Z];
   const L = LAMP;
   return (
     <g fill="#140f26" opacity={o}>
@@ -220,13 +220,13 @@ export const LampShadows: React.FC<{ u: number; o: number }> = ({ u, o }) => {
 /** warm low-sun sheen on the asphalt under the sun, darkening of the ground as dusk falls */
 export const DuskGround: React.FC<{ u: number; dark: number }> = ({ u, dark }) => {
   const s = sunAt(Math.min(1, u));
-  const sheen = Math.max(0, 1 - Math.abs(s.sx - 520) / 700) * Math.min(1, u * 1.6) * (1 - dark);
+  const sheen = Math.max(0, 1 - Math.abs(s.sx - 680) / 700) * Math.min(1, u * 1.6) * (1 - dark);
   return (
     <g>
       <defs>
-        <radialGradient id="stkSheen" cx="0.5" cy="0" r="1"><stop offset="0" stopColor="#ffc28a" stopOpacity={0.7} /><stop offset="0.5" stopColor="#ffa070" stopOpacity={0.2} /><stop offset="1" stopColor="#ff9a6a" stopOpacity={0} /></radialGradient>
+        <radialGradient id="stkSheen" cx="0.5" cy="0" r="0.5"><stop offset="0" stopColor="#ffc28a" stopOpacity={0.7} /><stop offset="0.5" stopColor="#ffa070" stopOpacity={0.2} /><stop offset="1" stopColor="#ff9a6a" stopOpacity={0} /></radialGradient>
       </defs>
-      <ellipse cx={s.sx} cy={K.YH + 10} rx={210} ry={760} fill="url(#stkSheen)" opacity={0.55 * sheen} />
+      <rect x={s.sx - 230} y={K.YH - 4} width={460} height={900} fill="url(#stkSheen)" opacity={0.55 * sheen} />
       <rect x={0} y={K.YH - 46} width={W} height={H - K.YH + 46} fill="#120d24" opacity={0.55 * dark} />
     </g>
   );
@@ -248,7 +248,7 @@ export const LampLight: React.FC<{ on: number }> = ({ on }) => {
         const [gx, gy] = kp(X, 0, Z);
         return (
           <g key={`${Z}${i}`}>
-            <polygon points={`${hx - 0.3 * s},${hy} ${hx + 0.3 * s},${hy} ${gx + 3.4 * s},${gy} ${gx - 3.4 * s},${gy}`} fill="url(#stkCone)" />
+            <polygon points={`${hx - 0.3 * s},${hy} ${hx + 0.3 * s},${hy} ${gx + 2.6 * s},${gy} ${gx - 2.6 * s},${gy}`} fill="url(#stkCone)" opacity={0.6} />
             <ellipse cx={gx} cy={gy} rx={4.6 * s} ry={1.5 * s * (K.hc / Z) * 6} fill="url(#stkPool)" />
             <ellipse cx={hx} cy={hy} rx={1.5 * s} ry={1.5 * s} fill="url(#stkBulb)" />
             <ellipse cx={hx} cy={hy + 0.02 * s} rx={0.3 * s} ry={0.07 * s} fill="#fff3c8" />
@@ -262,7 +262,7 @@ export const LampLight: React.FC<{ on: number }> = ({ on }) => {
 /** time-lapse traffic trails once the light goes (red tail-lights away on the left, white heads toward on the right) */
 export const Trails: React.FC<{ o: number; t: number }> = ({ o, t }) => {
   if (o <= 0.001) return null;
-  const lanes = [{ X: -6.6, c: '#ff4a3a' }, { X: -4.0, c: '#ff6a4a' }, { X: 0.4, c: '#fff1d0' }, { X: 3.6, c: '#ffe2b0' }];
+  const lanes = [{ X: -5.4, c: '#ff4a3a' }, { X: -2.4, c: '#ff6a4a' }, { X: 1.6, c: '#fff1d0' }, { X: 4.6, c: '#ffe2b0' }];
   const strip = (X: number, z0: number, z1: number, w: number) => `${P(X - w, 0.7, z0)} ${P(X + w, 0.7, z0)} ${P(X + w, 0.7, z1)} ${P(X - w, 0.7, z1)}`;
   return (
     <g opacity={o}>

@@ -56,10 +56,10 @@ export const DaySky: React.FC = () => {
     <g>
       <defs>
         <linearGradient id="stdSky" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#9fb8c9" /><stop offset="0.28" stopColor="#c3d1d8" /><stop offset="0.42" stopColor="#e2e4dd" /><stop offset="1" stopColor="#f1ead8" />
+          <stop offset="0" stopColor="#9fb8c9" /><stop offset="0.26" stopColor="#b8cad3" /><stop offset="0.4" stopColor="#d6dddb" /><stop offset="1" stopColor="#efe8d6" />
         </linearGradient>
         <radialGradient id="stdSun" cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#fffdf2" /><stop offset="0.18" stopColor="#fff8e2" stopOpacity={0.95} /><stop offset="0.5" stopColor="#fbf1d8" stopOpacity={0.45} /><stop offset="1" stopColor="#f6ecd4" stopOpacity={0} />
+          <stop offset="0" stopColor="#fffdf2" /><stop offset="0.12" stopColor="#fff8e2" stopOpacity={0.8} /><stop offset="0.5" stopColor="#fbf1d8" stopOpacity={0.32} /><stop offset="1" stopColor="#f6ecd4" stopOpacity={0} />
         </radialGradient>
       </defs>
       <rect x={0} y={0} width={W} height={H} fill="url(#stdSky)" />
@@ -73,7 +73,8 @@ export const DaySky: React.FC = () => {
         <path d="M 1030 212 L 1030 262" strokeWidth={2} />
       </g>
       <circle cx={SUN.x} cy={SUN.y} r={330} fill="url(#stdSun)" opacity={0.55} />
-      <circle cx={SUN.x} cy={SUN.y} r={46} fill="#fffdf4" />
+      <circle cx={SUN.x} cy={SUN.y} r={74} fill="#fff9e8" opacity={0.7} />
+      <circle cx={SUN.x} cy={SUN.y} r={44} fill="#ffffff" />
       {/* horizon haze band */}
       <rect x={0} y={760} width={W} height={200} fill={HAZE} opacity={0.55} />
     </g>
@@ -355,8 +356,7 @@ export const Bikes: React.FC<{ t: number }> = ({ t }) => {
 /* -------------------------------------- live: foreground wires -------------------------------------- */
 export const DayWires: React.FC = () => (
   <g stroke="#3a4048" fill="none" strokeLinecap="round">
-    <path d="M -60 170 Q 520 330 1360 236" strokeWidth={5} />
-    <path d="M -60 214 Q 560 372 1360 262" strokeWidth={4} />
-    <path d="M -60 120 Q 380 236 900 180 Q 1150 150 1360 160" strokeWidth={3} />
+    <path d="M -60 96 Q 560 250 1360 330" strokeWidth={5} />
+    <path d="M -60 128 Q 600 292 1360 372" strokeWidth={3.5} />
   </g>
 );

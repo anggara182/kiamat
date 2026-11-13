@@ -25,7 +25,7 @@ const L = [C.x - Math.cos(Math.PI / 2 - C.a) * C.s, C.z + Math.sin(Math.PI / 2 -
 void vx; void vz;
 export const T = { done: 128, top: 160, floor: 3.6 };
 /** crane mast base sits inside the slab near the near corner */
-export const CR = { x: C.x + 6, z: C.z + 14, top: 196, jib: 62, cjib: 20, ang: (205 * Math.PI) / 180 };
+export const CR = { x: C.x + 6, z: C.z + 14, top: 204, jib: 64, cjib: 21, ang: (203 * Math.PI) / 180, w: 3.2 };
 
 const SKY = ['#8fb0c6', '#a9c3d2', '#d2dcdc', '#eee9d9'];
 
@@ -45,34 +45,67 @@ export const TowerBand: React.FC = () => {
     faces.push(<polygon key={`ml${k}`} points={`${P(a[0] - 0.15, 0, a[1])} ${P(a[0] - 0.15, T.done, a[1])} ${P(a[0] + 0.15, T.done, a[1])} ${P(a[0] + 0.15, 0, a[1])}`} fill="#7c7870" />);
     faces.push(<polygon key={`mr${k}`} points={`${P(b[0] - 0.15, 0, b[1])} ${P(b[0] - 0.15, T.done, b[1])} ${P(b[0] + 0.15, T.done, b[1])} ${P(b[0] + 0.15, 0, b[1])}`} fill="#56534f" />);
   }
-  // unfinished top: bare slabs + columns, sky showing through
+  // unfinished top: open floors (dark interiors seen from below), raw concrete slab edges and columns,
+  // the top two floors see-through to the sky, rebar sticking up from the last slab, green safety net.
   const skel: React.ReactNode[] = [];
-  const nCol = 5;
-  for (let y = T.done; y <= T.top + 0.01; y += T.floor) {
-    // slab edge on both faces
-    skel.push(<polygon key={`sl${y}`} points={lf(L, N, y, y + 0.55)} fill="#6e6a63" />);
-    skel.push(<polygon key={`sr${y}`} points={lf(N, R, y, y + 0.55)} fill="#55524e" />);
+  const back: React.ReactNode[] = [];
+  const nCol = 6;
+  const nF = Math.round((T.top - T.done) / T.floor); // open floors
+  const at = (a: number[], b: number[], k: number) => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k];
+  for (let f = 0; f < nF; f++) {
+    const y0 = T.done + f * T.floor, y1 = y0 + T.floor;
+    const see = f >= nF - 2; // sky shows through the top floors
+    if (!see) {
+      back.push(<polygon key={`il${f}`} points={lf(L, N, y0, y1)} fill="#4a4843" />);
+      back.push(<polygon key={`ir${f}`} points={lf(N, R, y0, y1)} fill="#393835" />);
+      // underside of the slab above, a slightly lighter band at the top of each opening
+      back.push(<polygon key={`ul${f}`} points={lf(L, N, y1 - 0.7, y1)} fill="#5b5852" />);
+    } else {
+      // far columns and the slab edge on the far side (seen through), pale and thin
+      const B = [L[0] + (R[0] - N[0]), L[1] + (R[1] - N[1])];
+      back.push(<polygon key={`fl${f}`} points={lf(L, B, y0, y0 + 0.5)} fill="#8a877f" opacity={0.7} />);
+      back.push(<polygon key={`fr${f}`} points={lf(B, R, y0, y0 + 0.5)} fill="#8a877f" opacity={0.7} />);
+      for (let k = 1; k < 4; k++) {
+        const q = at(L, B, k / 4), q2 = at(B, R, k / 4);
+        back.push(<polygon key={`fc${f}${k}`} points={`${P(q[0] - 0.3, y0, q[1])} ${P(q[0] - 0.3, y1, q[1])} ${P(q[0] + 0.3, y1, q[1])} ${P(q[0] + 0.3, y0, q[1])}`} fill="#8a877f" opacity={0.6} />);
+        back.push(<polygon key={`fd${f}${k}`} points={`${P(q2[0] - 0.3, y0, q2[1])} ${P(q2[0] - 0.3, y1, q2[1])} ${P(q2[0] + 0.3, y1, q2[1])} ${P(q2[0] + 0.3, y0, q2[1])}`} fill="#8a877f" opacity={0.6} />);
+      }
+    }
   }
+  // near columns on both faces (the last floor only partly built: columns stop short on the right)
   for (let k = 0; k <= nCol; k++) {
-    const a = [L[0] + (N[0] - L[0]) * (k / nCol), L[1] + (N[1] - L[1]) * (k / nCol)], b = [N[0] + (R[0] - N[0]) * (k / nCol), N[1] + (R[1] - N[1]) * (k / nCol)];
-    const yTop = T.top - (k < 2 ? 0 : 0) - (k === nCol ? 7.2 : 0);
-    skel.push(<polygon key={`cl${k}`} points={`${P(a[0] - 0.45, T.done, a[1])} ${P(a[0] - 0.45, yTop, a[1])} ${P(a[0] + 0.45, yTop, a[1])} ${P(a[0] + 0.45, T.done, a[1])}`} fill="#6a665f" />);
-    skel.push(<polygon key={`cr${k}`} points={`${P(b[0] - 0.45, T.done, b[1])} ${P(b[0] - 0.45, T.top - (k > 3 ? 10.8 : 0), b[1])} ${P(b[0] + 0.45, T.top - (k > 3 ? 10.8 : 0), b[1])} ${P(b[0] + 0.45, T.done, b[1])}`} fill="#4f4c48" />);
+    const a = at(L, N, k / nCol), b = at(N, R, k / nCol);
+    const topR = T.top - (k >= nCol - 1 ? T.floor : 0);
+    skel.push(<polygon key={`cl${k}`} points={`${P(a[0] - 0.5, T.done, a[1])} ${P(a[0] - 0.5, T.top, a[1])} ${P(a[0] + 0.5, T.top, a[1])} ${P(a[0] + 0.5, T.done, a[1])}`} fill="#938e85" />);
+    skel.push(<polygon key={`cr${k}`} points={`${P(b[0] - 0.5, T.done, b[1])} ${P(b[0] - 0.5, topR, b[1])} ${P(b[0] + 0.5, topR, b[1])} ${P(b[0] + 0.5, T.done, b[1])}`} fill="#5e5b56" />);
   }
-  // the dark inner core seen through the open floors (stair/lift shaft), partly wrapped in green safety net
-  const core = [C.x + 5, C.z + 10];
-  skel.unshift(<polygon key="core" points={`${P(core[0], T.done, core[1])} ${P(core[0], T.top + 4, core[1])} ${P(core[0] + 12, T.top + 4, core[1] + 8)} ${P(core[0] + 12, T.done, core[1] + 8)}`} fill="#5a5751" />);
-  skel.push(<polygon key="net" points={lf(N, R, T.done, T.done + 2 * T.floor)} fill="#55634f" opacity={0.85} />);
+  // slab edges (thick raw concrete bands); the top slab only covers the left part
+  for (let f = 0; f <= nF; f++) {
+    const y = T.done + f * T.floor;
+    if (f === nF) {
+      skel.push(<polygon key="slt" points={lf(L, at(L, N, 0.85), y - 0.8, y)} fill="#a39e94" />);
+      continue;
+    }
+    skel.push(<polygon key={`sl${f}`} points={lf(L, N, y - 0.8, y)} fill="#a39e94" />);
+    skel.push(<polygon key={`sr${f}`} points={lf(N, R, y - 0.8, y)} fill="#696660" />);
+  }
+  // rebar starter bars sticking up from the unfinished columns
+  for (let k = nCol - 1; k <= nCol; k++) {
+    const b = at(N, R, k / nCol), [x0, y0] = tp(b[0], T.top - T.floor, b[1]), [, y1] = tp(b[0], T.top - T.floor + 2.2, b[1]);
+    skel.push(<path key={`rb${k}`} d={`M ${x0 - 4} ${y0} L ${x0 - 5} ${y1} M ${x0} ${y0} L ${x0} ${y1 - 3} M ${x0 + 4} ${y0} L ${x0 + 5} ${y1}`} stroke="#4a4844" strokeWidth={1.6} />);
+  }
+  // green safety net hanging over two floors of the right face (half way across)
+  skel.push(<polygon key="net" points={`${P(at(N, R, 0.35)[0], T.done + 0.2, at(N, R, 0.35)[1])} ${P(at(N, R, 0.35)[0], T.done + 2 * T.floor, at(N, R, 0.35)[1])} ${P(R[0], T.done + 2 * T.floor, R[1])} ${P(R[0], T.done + 0.2, R[1])}`} fill="#4f5e4b" opacity={0.9} />);
 
   // crane: lattice mast from the core up past the roof, jib + counter-jib, cab, A-frame, hook
-  const m0 = tp(CR.x, T.done - 10, CR.z), m1 = tp(CR.x, CR.top, CR.z), m0b = tp(CR.x + 2.2, T.done - 10, CR.z), m1b = tp(CR.x + 2.2, CR.top, CR.z);
+  const m0 = tp(CR.x, T.done, CR.z), m1 = tp(CR.x, CR.top, CR.z), m0b = tp(CR.x + CR.w, T.done, CR.z), m1b = tp(CR.x + CR.w, CR.top, CR.z);
   const jx = Math.cos(CR.ang), jz = Math.sin(CR.ang);
-  const jibEnd = tp(CR.x + jx * CR.jib, CR.top + 1.2, CR.z + jz * CR.jib);
+  const jibEnd = tp(CR.x + jx * CR.jib, CR.top + 0.9, CR.z + jz * CR.jib);
   const jibEndLo = tp(CR.x + jx * CR.jib, CR.top - 0.6, CR.z + jz * CR.jib);
   const cEnd = tp(CR.x - jx * CR.cjib, CR.top + 0.6, CR.z - jz * CR.cjib);
   const cEndLo = tp(CR.x - jx * CR.cjib, CR.top - 1.4, CR.z - jz * CR.cjib);
-  const apex = tp(CR.x + 1.1, CR.top + 9, CR.z);
-  const jTop = tp(CR.x + 1.1, CR.top + 1.2, CR.z), jLo = tp(CR.x + 1.1, CR.top - 0.6, CR.z);
+  const apex = tp(CR.x + CR.w / 2, CR.top + 10, CR.z);
+  const jTop = tp(CR.x + CR.w / 2, CR.top + 1.4, CR.z), jLo = tp(CR.x + CR.w / 2, CR.top - 0.8, CR.z);
   const lattice: React.ReactNode[] = [];
   const segs = 14;
   for (let i = 0; i < segs; i++) {
@@ -111,17 +144,21 @@ export const TowerBand: React.FC = () => {
       <polygon points={`${P(70, 0, 260)} ${P(70, 150, 260)} ${P(98, 150, 250)} ${P(98, 0, 250)}`} fill="#c5d1d5" />
       <polygon points={`${P(98, 0, 250)} ${P(98, 150, 250)} ${P(118, 150, 275)} ${P(118, 0, 275)}`} fill="#b3c1c8" />
       {faces}
+      {back}
+      <g stroke={CRANE} strokeWidth={3.2} fill="none" strokeLinecap="round">
+        <path d={`M ${m0[0]} ${m0[1]} L ${m1[0]} ${m1[1]} M ${m0b[0]} ${m0b[1]} L ${m1b[0]} ${m1b[1]}`} strokeWidth={6.5} />
+        {lattice.slice(0, 14)}
+      </g>
       {skel}
       {/* parapet line at the last finished floor, sun rim on the right edge */}
       <polygon points={lf(L, N, T.done - 0.6, T.done)} fill="#a29d93" />
       <polygon points={`${P(R[0] - 0.25, 0, R[1])} ${P(R[0] - 0.25, T.top, R[1])} ${P(R[0], T.top, R[1])} ${P(R[0], 0, R[1])}`} fill="#fff4d8" opacity={0.75} />
       <polygon points={`${P(N[0] - 0.2, 0, N[1])} ${P(N[0] - 0.2, T.done, N[1])} ${P(N[0] + 0.2, T.done, N[1])} ${P(N[0] + 0.2, 0, N[1])}`} fill="#a59f94" />
       {/* crane */}
-      <g stroke={CRANE} strokeWidth={2.4} fill="none" strokeLinecap="round">
-        <path d={`M ${m0[0]} ${m0[1]} L ${m1[0]} ${m1[1]} M ${m0b[0]} ${m0b[1]} L ${m1b[0]} ${m1b[1]}`} strokeWidth={4.5} />
-        {lattice}
-        <path d={`M ${jTop[0]} ${jTop[1]} L ${jibEnd[0]} ${jibEnd[1]} M ${jLo[0]} ${jLo[1]} L ${jibEndLo[0]} ${jibEndLo[1]}`} strokeWidth={3.6} />
-        <path d={`M ${jTop[0]} ${jTop[1]} L ${cEnd[0]} ${cEnd[1]} M ${jLo[0]} ${jLo[1]} L ${cEndLo[0]} ${cEndLo[1]}`} strokeWidth={4} />
+      <g stroke={CRANE} strokeWidth={3.2} fill="none" strokeLinecap="round">
+        {lattice.slice(14)}
+        <path d={`M ${jTop[0]} ${jTop[1]} L ${jibEnd[0]} ${jibEnd[1]} M ${jLo[0]} ${jLo[1]} L ${jibEndLo[0]} ${jibEndLo[1]}`} strokeWidth={5.5} />
+        <path d={`M ${jTop[0]} ${jTop[1]} L ${cEnd[0]} ${cEnd[1]} M ${jLo[0]} ${jLo[1]} L ${cEndLo[0]} ${cEndLo[1]}`} strokeWidth={6} />
         {/* A-frame + tie bars */}
         <path d={`M ${jTop[0] - 6} ${jTop[1]} L ${apex[0]} ${apex[1]} L ${jTop[0] + 8} ${jTop[1]}`} strokeWidth={4} />
         <path d={`M ${apex[0]} ${apex[1]} L ${jTop[0] + (jibEnd[0] - jTop[0]) * 0.55} ${jTop[1] + (jibEnd[1] - jTop[1]) * 0.55} M ${apex[0]} ${apex[1]} L ${cEnd[0]} ${cEnd[1]}`} strokeWidth={1.8} />
@@ -129,9 +166,13 @@ export const TowerBand: React.FC = () => {
         <path d={`M ${tr[0]} ${tr[1]} L ${tr[0] - 2} ${tr[1] + 300}`} strokeWidth={1.4} />
       </g>
       {/* counterweight blocks, cab, trolley, hook block */}
-      <polygon points={`${cEndLo[0] - 4} ${cEndLo[1] - 2} ${cEndLo[0] + 52} ${cEndLo[1] - 8} ${cEndLo[0] + 52} ${cEndLo[1] + 34} ${cEndLo[0] - 4} ${cEndLo[1] + 40}`} fill={CRANE} />
-      <rect x={jLo[0] - 2} y={jLo[1] + 2} width={30} height={26} rx={3} fill={CRANE} />
-      <rect x={jLo[0] + 4} y={jLo[1] + 6} width={14} height={11} fill="#9fb2bd" />
+      {(() => {
+        const q = (k: number, y: number) => tp(CR.x - jx * CR.cjib * k, y, CR.z - jz * CR.cjib * k).join(',');
+        return <polygon points={`${q(0.62, CR.top - 0.8)} ${q(0.97, CR.top - 0.8)} ${q(0.97, CR.top - 5)} ${q(0.62, CR.top - 5)}`} fill={CRANE} />;
+      })()}
+      <rect x={jLo[0] - 30} y={jLo[1] - 4} width={60} height={8} fill={CRANE} />
+      <rect x={jLo[0] - 34} y={jLo[1] + 2} width={34} height={30} rx={3} fill={CRANE} />
+      <rect x={jLo[0] - 30} y={jLo[1] + 6} width={22} height={13} fill="#b3c4cc" />
       <rect x={tr[0] - 8} y={tr[1] - 1} width={16} height={7} fill={CRANE} />
       <rect x={tr[0] - 9} y={tr[1] + 296} width={14} height={18} rx={2} fill={CRANE} />
       <path d={`M ${tr[0] - 2} ${tr[1] + 314} q -6 8 0 12 q 6 2 6 -5`} stroke={CRANE} strokeWidth={2.4} fill="none" />
@@ -151,6 +192,9 @@ export const TowerFg: React.FC = () => {
         const y = 300 + i * 190, x1 = 230 + 70 * (1 - y / TW.h);
         return <polygon key={i} points={`${-80},${y} ${x1 + 26},${y - 6} ${x1 + 26},${y + 14} ${-80},${y + 20}`} fill="#2f343b" />;
       })}
+      <polygon points={`${W + 40},${TW.h} 1120,${TW.h} 1090,1230 1150,1196 ${W + 40},1180`} fill="#3a4048" />
+      <polygon points={`1120,${TW.h} 1090,1230 1104,1226 1134,${TW.h}`} fill="#4a525c" />
+      <rect x={1084} y={1196} width={260} height={18} fill="#2f343b" transform="rotate(-2 1084 1196)" />
       <path d={`M 230 ${TW.h - 260} Q 700 ${TW.h - 120} ${W + 80} ${TW.h - 330}`} stroke="#2f343b" strokeWidth={6} fill="none" />
       <path d={`M 230 ${TW.h - 210} Q 760 ${TW.h - 40} ${W + 80} ${TW.h - 250}`} stroke="#2f343b" strokeWidth={4} fill="none" />
     </g>

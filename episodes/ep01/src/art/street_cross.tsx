@@ -14,25 +14,47 @@ const ZH = 2.4 * M; // half crossing depth
 export const CROSS = { rot: -17, cx: W / 2, cy: H / 2 - 40 };
 const SH = { dx: 0.32 * M, dy: 0.22 * M }; // hard shadow offset (sun high, upper left)
 
-type Ped = { x0: number; y0: number; vx: number; vy: number; shirt: string; r: number; range: number; lo: number };
-const SHIRTS = ['#d9d5c9', '#cfc6b3', '#2f3640', '#7a5040', '#4a6070', '#e6e2d8', '#8c8f7c', '#3b3a3f', '#b98e5c', '#a7b2b8'];
+/** a pedestrian follows a polyline (sidewalk -> zebra -> sidewalk, or just along a sidewalk) at speed v */
+type Ped = { pts: [number, number][]; s0: number; v: number; shirt: string; r: number };
+const SHIRTS = ['#d9d5c9', '#cfc6b3', '#2f3640', '#7a5040', '#4a6070', '#e6e2d8', '#8c8f7c', '#3b3a3f', '#b98e5c', '#a7b2b8', '#e9e6de', '#5a4a6a'];
 const rp = rng(41);
+const D = 1100;
 export const PEDS: Ped[] = [];
-// crossing streams: right-movers in the upper half, left-movers in the lower half (loosely)
-for (let i = 0; i < 64; i++) {
+const shirt = () => SHIRTS[Math.floor(rp() * SHIRTS.length)];
+// crossing streams: right-movers in the upper half of the zebra, left-movers in the lower half (loosely)
+for (let i = 0; i < 118; i++) {
   const right = i % 2 === 0;
-  const lane = right ? -ZH * 0.85 + rp() * ZH * 0.95 : -ZH * 0.1 + rp() * ZH * 0.95;
-  PEDS.push({ x0: -RW - SW + rp() * (2 * RW + 2 * SW), y0: lane, vx: (right ? 1 : -1) * (1.15 + rp() * 0.35) * M, vy: (rp() - 0.5) * 0.08 * M, shirt: SHIRTS[Math.floor(rp() * SHIRTS.length)], r: 0.9 + rp() * 0.25, range: 2 * RW + 2 * SW + 260, lo: -RW - SW - 130 });
+  const yl = right ? -ZH * 0.82 + rp() * ZH * 0.92 : -ZH * 0.1 + rp() * ZH * 0.92;
+  const xL = -RW - SW * (0.25 + rp() * 0.5), xR = RW + SW * (0.25 + rp() * 0.5);
+  const [xs, xe] = right ? [xL, xR] : [xR, xL];
+  const a = rp() < 0.5 ? -1 : 1, b = rp() < 0.5 ? -1 : 1;
+  const pts: [number, number][] = [[xs, yl + a * D], [xs, yl], [xe, yl], [xe, yl + b * D]];
+  // most of them are on the zebra right now (dense streams), some still arriving / already leaving
+  const u = rp();
+  const s0 = u < 0.72 ? D - 120 + rp() * (Math.abs(xe - xs) + 60) : u < 0.86 ? D - 600 + rp() * 480 : D + Math.abs(xe - xs) + rp() * 300;
+  PEDS.push({ pts, s0, v: (1.2 + rp() * 0.35) * M, shirt: shirt(), r: 0.9 + rp() * 0.25 });
 }
 // sidewalk walkers (along the road)
-for (let i = 0; i < 44; i++) {
+for (let i = 0; i < 46; i++) {
   const side = i % 2 === 0 ? -1 : 1, up = rp() < 0.5;
   const x = side * (RW + 0.35 * M + rp() * (SW - 0.7 * M));
-  PEDS.push({ x0: x, y0: -1500 + rp() * 3000, vx: 0, vy: (up ? -1 : 1) * (1.1 + rp() * 0.4) * M, shirt: SHIRTS[Math.floor(rp() * SHIRTS.length)], r: 0.9 + rp() * 0.25, range: 3200, lo: -1600 });
+  const y0 = -1500 + rp() * 3000;
+  PEDS.push({ pts: up ? [[x, y0 + 400], [x, y0 - 2000]] : [[x, y0 - 400], [x, y0 + 2000]], s0: 0, v: (1.1 + rp() * 0.4) * M, shirt: shirt(), r: 0.9 + rp() * 0.25 });
 }
+const along = (pts: [number, number][], s: number) => {
+  for (let i = 0; i < pts.length - 1; i++) {
+    const [x0, y0] = pts[i], [x1, y1] = pts[i + 1], L = Math.hypot(x1 - x0, y1 - y0);
+    if (s <= L || i === pts.length - 2) {
+      const k = Math.min(1, Math.max(0, s / L));
+      return { x: x0 + (x1 - x0) * k, y: y0 + (y1 - y0) * k, dir: (Math.atan2(y1 - y0, x1 - x0) * 180) / Math.PI + 90 };
+    }
+    s -= L;
+  }
+  return { x: pts[0][0], y: pts[0][1], dir: 0 };
+};
 
 const Person: React.FC<{ x: number; y: number; shirt: string; r: number; dir: number; k: string }> = ({ x, y, shirt, r, dir }) => (
-  <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${dir}) scale(${r})`}>
+  <g transform={`translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${dir.toFixed(1)}) scale(${r})`}>
     <ellipse cx={0} cy={0} rx={0.27 * M} ry={0.15 * M} fill={shirt} />
     <circle cx={0.02 * M} cy={0} r={0.115 * M} fill="#201b18" />
   </g>
@@ -48,8 +70,8 @@ const Car: React.FC<{ x: number; y: number; col: string; flip?: boolean }> = ({ 
     <rect x={-0.66 * M} y={-0.5 * M} width={1.32 * M} height={1.5 * M} rx={0.12 * M} fill="#ffffff" opacity={0.12} />
   </g>
 );
-const Moto: React.FC<{ x: number; y: number; flip?: boolean; helm: string }> = ({ x, y, flip, helm }) => (
-  <g transform={`translate(${x} ${y}) rotate(${flip ? 180 : 0})`}>
+const Moto: React.FC<{ x: number; y: number; flip?: boolean; helm: string; rot?: number }> = ({ x, y, flip, helm, rot = 0 }) => (
+  <g transform={`translate(${x} ${y}) rotate(${(flip ? 180 : 0) + rot})`}>
     <ellipse cx={SH.dx} cy={SH.dy} rx={0.36 * M} ry={0.95 * M} fill="#1c1a18" opacity={0.3} />
     <rect x={-0.2 * M} y={-0.95 * M} width={0.4 * M} height={1.9 * M} rx={0.2 * M} fill="#2c2f35" />
     <path d={`M ${-0.42 * M} ${-0.62 * M} L ${0.42 * M} ${-0.62 * M}`} stroke="#2c2f35" strokeWidth={0.08 * M} />
@@ -67,7 +89,7 @@ export const CrossGround: React.FC = () => {
     let i = 0;
     while (y < 1500) {
       const h = 7 * M + r() * 7 * M, x0 = side > 0 ? RW + SW + 0.3 * M : -(RW + SW + 0.3 * M) - 14 * M;
-      const tone = ['#a39c90', '#958e83', '#b0a99c', '#8c867d'][i % 4];
+      const tone = ['#a39c90', '#9a5f48', '#b0a99c', '#8c867d', '#a8694f'][i % 5];
       roofs.push(
         <g key={`${side}-${i}`}>
           <rect x={x0} y={y} width={14 * M} height={h - 0.3 * M} fill={tone} />
@@ -120,28 +142,22 @@ export const CrossTraffic: React.FC = () => {
   const items: React.ReactNode[] = [];
   // southbound (moving down, right half) waits above the crossing, northbound below on the left half
   const cars = ['#d8d6d0', '#3b3e44', '#8e2f2a', '#c9c7c0', '#5d6670', '#e4e2dc'];
-  for (let i = 0; i < 4; i++) items.push(<Car key={`cs${i}`} x={RW * 0.25 + (i % 2) * RW * 0.5} y={-ZH - 6.5 * M - Math.floor(i / 2) * 5.4 * M} col={cars[i]} flip />);
-  for (let i = 0; i < 4; i++) items.push(<Car key={`cn${i}`} x={-RW * 0.25 - (i % 2) * RW * 0.5} y={ZH + 6.5 * M + Math.floor(i / 2) * 5.4 * M} col={cars[i + 2]} />);
-  for (let i = 0; i < 16; i++) {
-    const x = 0.6 * M + r() * (RW - 1.2 * M), y = -ZH - 2.6 * M - (i % 3) * 1.1 * M - r() * 0.4 * M;
-    items.push(<Moto key={`ms${i}`} x={x} y={y} flip helm={['#2a2a2e', '#d8d4cc', '#7a2f2a', '#3d4a5a'][i % 4]} />);
+  for (let i = 0; i < 4; i++) items.push(<Car key={`cs${i}`} x={RW * 0.25 + (i % 2) * RW * 0.5} y={-ZH - 9.2 * M - Math.floor(i / 2) * 5.4 * M} col={cars[i]} flip />);
+  for (let i = 0; i < 4; i++) items.push(<Car key={`cn${i}`} x={-RW * 0.25 - (i % 2) * RW * 0.5} y={ZH + 9.2 * M + Math.floor(i / 2) * 5.4 * M} col={cars[i + 2]} />);
+  for (let i = 0; i < 11; i++) {
+    const x = 0.8 * M + ((i * 0.618) % 1) * (RW - 1.6 * M), y = -ZH - 2.8 * M - (i % 3) * 1.5 * M - r() * 0.9 * M;
+    items.push(<Moto key={`ms${i}`} x={x} y={y} rot={(r() - 0.5) * 16} flip helm={['#2a2a2e', '#d8d4cc', '#7a2f2a', '#3d4a5a'][i % 4]} />);
   }
-  for (let i = 0; i < 16; i++) {
-    const x = -0.6 * M - r() * (RW - 1.2 * M), y = ZH + 2.6 * M + (i % 3) * 1.1 * M + r() * 0.4 * M;
-    items.push(<Moto key={`mn${i}`} x={x} y={y} helm={['#d8d4cc', '#2a2a2e', '#3d4a5a', '#7a2f2a'][i % 4]} />);
+  for (let i = 0; i < 11; i++) {
+    const x = -0.8 * M - ((i * 0.618 + 0.3) % 1) * (RW - 1.6 * M), y = ZH + 2.8 * M + (i % 3) * 1.5 * M + r() * 0.9 * M;
+    items.push(<Moto key={`mn${i}`} x={x} y={y} rot={(r() - 0.5) * 16} helm={['#d8d4cc', '#2a2a2e', '#3d4a5a', '#7a2f2a'][i % 4]} />);
   }
   return <g>{items}</g>;
 };
 
 /** people at time t (s): shadows first, then bodies */
 export const CrossPeople: React.FC<{ t: number }> = ({ t }) => {
-  const pos = PEDS.map((p) => {
-    const along = p.vx !== 0;
-    const x = along ? p.lo + ((((p.x0 - p.lo + p.vx * t) % p.range) + p.range) % p.range) : p.x0;
-    const y = along ? p.y0 + p.vy * t : p.lo + ((((p.y0 - p.lo + p.vy * t) % p.range) + p.range) % p.range);
-    const dir = along ? (p.vx > 0 ? 90 : -90) : p.vy > 0 ? 180 : 0;
-    return { p, x, y, dir };
-  });
+  const pos = PEDS.map((p) => ({ p, ...along(p.pts, p.s0 + p.v * t) }));
   return (
     <g>
       <g fill="#1c1a18" opacity={0.32}>{pos.map(({ p, x, y }, i) => <ellipse key={i} cx={x + SH.dx * p.r} cy={y + SH.dy * p.r} rx={0.42 * M * p.r} ry={0.2 * M * p.r} transform={`rotate(32 ${x + SH.dx} ${y + SH.dy})`} />)}</g>
@@ -155,8 +171,8 @@ export const CrossFg: React.FC = () => {
   const canopy = (x: number, y: number, s: number, key: string) => (
     <g key={key} transform={`translate(${x} ${y}) scale(${s})`}>
       <circle cx={30} cy={24} r={150} fill="#1c211e" opacity={0.35} />
-      <path d="M -150 10 Q -160 -90 -70 -130 Q -10 -175 60 -140 Q 150 -120 150 -30 Q 175 60 100 110 Q 30 160 -50 130 Q -140 110 -150 10 Z" fill="#2f3a35" />
-      <path d="M -110 -20 Q -100 -90 -40 -110 Q 20 -130 60 -100 Q 0 -90 -40 -60 Q -80 -40 -110 -20 Z" fill="#3f4c44" />
+      <path d="M -150 10 Q -160 -90 -70 -130 Q -10 -175 60 -140 Q 150 -120 150 -30 Q 175 60 100 110 Q 30 160 -50 130 Q -140 110 -150 10 Z" fill="#34423a" />
+      <path d="M -110 -20 Q -100 -90 -40 -110 Q 20 -130 60 -100 Q 0 -90 -40 -60 Q -80 -40 -110 -20 Z" fill="#4a5a4e" />
       <circle cx={-60} cy={40} r={42} fill="#29332e" /><circle cx={50} cy={-20} r={50} fill="#344039" /><circle cx={60} cy={70} r={36} fill="#27302b" />
     </g>
   );
