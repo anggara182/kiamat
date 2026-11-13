@@ -128,10 +128,11 @@ export const S13: React.FC = () => {
   const ePose: Pose = { ...walkPose(t2 * 6, false, 0.6), head: t2 >= tS ? 18 : 4, uaA: 18, faA: 72 };
   const [hx, hy] = handA(ex, G, h, 1, ePose);
   // the follower right behind him, hand resting on his shoulder
-  const fx = ex - 170;
+  const fx = ex - 150;
   const fBase: Pose = { ...walkPose(t2 * 6 + 1.2, false, 0.6), lean: 6 };
-  const shoulder: [number, number] = [ex - 6, G - h * 0.79];
-  const fArm = ikArmA(fx, G, h * 1.02, 1, fBase, shoulder[0], shoulder[1]);
+  // hand rests on his upper back, just below the shoulder line (never the head or neck); elbow bent DOWN
+  const shoulder: [number, number] = [ex - h * 0.06, G - h * 0.7];
+  const fArm = ikArmA(fx, G, h * 1.02, 1, fBase, shoulder[0], shoulder[1], -1);
   const fPose: Pose = { ...fBase, ...fArm };
   // blueprints: under his arm, then slipping and falling into the puddle (ONES once released)
   const fallT = Math.max(0, t - tS), g = 9.8 * 400, yLand = G + 140;
