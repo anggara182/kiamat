@@ -7,6 +7,11 @@ Dokumen terkait:
 - `02-KRONOLOGI.md`: urutan yang disepakati dan yang diperdebatkan.
 - `03-STORY-BIBLE.md`: pelacak kontinuitas.
 
+> **Perubahan arah (adrian, 13 Nov 2026):** narasi tidak memakai "aku". Sudut pandangnya narator pengamat di luar cerita, dengan pola kontras "sementara di sisi lain" (contoh: `episode/ep01-draf-3.md`). Ini menggantikan permintaan orang pertama di brief §2–3. Dampaknya ke dokumen ini:
+> - §2.1 dan §2.2 (narator tidak bisa hidup sampai Tiupan Sangkakala; satu umur tidak cukup) **tidak lagi jadi masalah**. Narator pengamat bisa melintasi waktu dan generasi, dan Fase 09 bisa dinarasikan langsung dari ayat-ayat Qur'an. Lompatan waktu tetap tanpa tahun.
+> - §4 (profil narator) dan tabel narator di story bible tidak berlaku. Yang dilacak sekarang tokoh-tokoh yang diamati.
+> - Aturan baru: narator boleh tahu apa yang terjadi di banyak tempat sekaligus, tetapi **tidak tahu yang ghaib** (kapan Kiamat, siapa Mahdi, atau masa depan yang tidak bersumber). Narasinya tidak berubah jadi ceramah.
+
 Kerangka: seri ini mengikuti kerangka eskatologi **Sunni** (Qur'an, Bukhari, Muslim, lalu kitab hadis lain dengan cek derajat). Konsep Mahdi dalam tradisi Syiah berbeda dan tidak dipakai; ini perlu disebut di deskripsi seri.
 
 ---
