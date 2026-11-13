@@ -1,0 +1,1347 @@
+{
+ "id": "EP01",
+ "title": "The World We Know",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 74.772,
+ "accent": "#d9a441",
+ "timingSource": "ESTIMATE (2.9 words/s + pauses); replace with real VO timing",
+ "audio": false,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 8.531,
+   "act": 1,
+   "set": "city",
+   "owner": "C",
+   "framing": "Wide, the city waking at dawn",
+   "camera": "Slow push-in",
+   "vo": "This city wakes before the sun. Kitchen lights flicker on. Engines cough awake. The call to prayer rises over a hundred phone alarms.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "This",
+     "highlight": false,
+     "start": 0.15,
+     "end": 0.435
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 0.435,
+     "end": 0.72
+    },
+    {
+     "text": "wakes",
+     "highlight": false,
+     "start": 0.72,
+     "end": 1.076
+    },
+    {
+     "text": "before",
+     "highlight": false,
+     "start": 1.076,
+     "end": 1.504
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 1.504,
+     "end": 1.717
+    },
+    {
+     "text": "sun.",
+     "highlight": false,
+     "start": 1.717,
+     "end": 2.002
+    },
+    {
+     "text": "Kitchen",
+     "highlight": false,
+     "start": 2.002,
+     "end": 2.501
+    },
+    {
+     "text": "lights",
+     "highlight": false,
+     "start": 2.501,
+     "end": 2.929
+    },
+    {
+     "text": "flicker",
+     "highlight": false,
+     "start": 2.929,
+     "end": 3.427
+    },
+    {
+     "text": "on.",
+     "highlight": false,
+     "start": 3.427,
+     "end": 3.641
+    },
+    {
+     "text": "Engines",
+     "highlight": false,
+     "start": 3.641,
+     "end": 4.14
+    },
+    {
+     "text": "cough",
+     "highlight": false,
+     "start": 4.14,
+     "end": 4.496
+    },
+    {
+     "text": "awake.",
+     "highlight": false,
+     "start": 4.496,
+     "end": 4.924
+    },
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 4.924,
+     "end": 5.137
+    },
+    {
+     "text": "call",
+     "highlight": false,
+     "start": 5.137,
+     "end": 5.422
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 5.422,
+     "end": 5.565
+    },
+    {
+     "text": "prayer",
+     "highlight": true,
+     "start": 5.565,
+     "end": 6.135
+    },
+    {
+     "text": "rises",
+     "highlight": false,
+     "start": 6.135,
+     "end": 6.491
+    },
+    {
+     "text": "over",
+     "highlight": false,
+     "start": 6.491,
+     "end": 6.776
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 6.776,
+     "end": 6.847
+    },
+    {
+     "text": "hundred",
+     "highlight": false,
+     "start": 6.847,
+     "end": 7.346
+    },
+    {
+     "text": "phone",
+     "highlight": false,
+     "start": 7.346,
+     "end": 7.702
+    },
+    {
+     "text": "alarms.",
+     "highlight": false,
+     "start": 7.702,
+     "end": 8.201
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "A mosque minaret silhouette against the first dawn glow; house windows lighting up one by one",
+   "notes": "Dense low-rise rooftops, water tanks, antennas, a few towers far behind. Windows switch on progressively (wordAt \"lights\")."
+  },
+  {
+   "id": 2,
+   "start": 8.531,
+   "end": 14.203,
+   "act": 1,
+   "set": "street",
+   "owner": "S",
+   "framing": "Wide, morning traffic under a commuter train bridge",
+   "camera": "Lateral track",
+   "vo": "By seven, the streets are full. Millions of people. One goal: survive one more day.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 8.681,
+     "end": 8.829
+    },
+    {
+     "text": "seven,",
+     "highlight": false,
+     "start": 8.829,
+     "end": 9.273
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 9.273,
+     "end": 9.495
+    },
+    {
+     "text": "streets",
+     "highlight": false,
+     "start": 9.495,
+     "end": 10.012
+    },
+    {
+     "text": "are",
+     "highlight": false,
+     "start": 10.012,
+     "end": 10.234
+    },
+    {
+     "text": "full.",
+     "highlight": false,
+     "start": 10.234,
+     "end": 10.604
+    },
+    {
+     "text": "Millions",
+     "highlight": false,
+     "start": 10.604,
+     "end": 11.196
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 11.196,
+     "end": 11.344
+    },
+    {
+     "text": "people.",
+     "highlight": false,
+     "start": 11.344,
+     "end": 11.862
+    },
+    {
+     "text": "One",
+     "highlight": false,
+     "start": 11.862,
+     "end": 12.084
+    },
+    {
+     "text": "goal:",
+     "highlight": false,
+     "start": 12.084,
+     "end": 12.454
+    },
+    {
+     "text": "survive",
+     "highlight": true,
+     "start": 12.454,
+     "end": 13.119
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 13.119,
+     "end": 13.341
+    },
+    {
+     "text": "more",
+     "highlight": false,
+     "start": 13.341,
+     "end": 13.637
+    },
+    {
+     "text": "day.",
+     "highlight": false,
+     "start": 13.637,
+     "end": 13.933
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A commuter train crossing a concrete bridge above a river of motorbikes",
+   "notes": "Bright hazy morning. Motorbikes as simple silhouettes with helmets, flowing. Train slides across at frame top."
+  },
+  {
+   "id": 3,
+   "start": 14.203,
+   "end": 23.079,
+   "act": 1,
+   "set": "street",
+   "owner": "S",
+   "framing": "Low angle up an unfinished tower, then top-down to the street",
+   "camera": "Tilt up the tower; hard cut to a top-down hold on \"From the top\"",
+   "vo": "The towers keep rising. Every year, a new one claims the sky. From the top, the people below are just dots. Moving. Never stopping.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 14.353,
+     "end": 14.582
+    },
+    {
+     "text": "towers",
+     "highlight": true,
+     "start": 14.582,
+     "end": 15.193
+    },
+    {
+     "text": "keep",
+     "highlight": false,
+     "start": 15.193,
+     "end": 15.498
+    },
+    {
+     "text": "rising.",
+     "highlight": false,
+     "start": 15.498,
+     "end": 16.032
+    },
+    {
+     "text": "Every",
+     "highlight": false,
+     "start": 16.032,
+     "end": 16.414
+    },
+    {
+     "text": "year,",
+     "highlight": false,
+     "start": 16.414,
+     "end": 16.795
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 16.795,
+     "end": 16.872
+    },
+    {
+     "text": "new",
+     "highlight": false,
+     "start": 16.872,
+     "end": 17.101
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 17.101,
+     "end": 17.33
+    },
+    {
+     "text": "claims",
+     "highlight": false,
+     "start": 17.33,
+     "end": 17.788
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 17.788,
+     "end": 18.017
+    },
+    {
+     "text": "sky.",
+     "highlight": false,
+     "start": 18.017,
+     "end": 18.322
+    },
+    {
+     "text": "From",
+     "highlight": false,
+     "start": 18.322,
+     "end": 18.627
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 18.627,
+     "end": 18.856
+    },
+    {
+     "text": "top,",
+     "highlight": false,
+     "start": 18.856,
+     "end": 19.162
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 19.162,
+     "end": 19.391
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 19.391,
+     "end": 19.849
+    },
+    {
+     "text": "below",
+     "highlight": false,
+     "start": 19.849,
+     "end": 20.23
+    },
+    {
+     "text": "are",
+     "highlight": false,
+     "start": 20.23,
+     "end": 20.459
+    },
+    {
+     "text": "just",
+     "highlight": false,
+     "start": 20.459,
+     "end": 20.764
+    },
+    {
+     "text": "dots.",
+     "highlight": false,
+     "start": 20.764,
+     "end": 21.146
+    },
+    {
+     "text": "Moving.",
+     "highlight": false,
+     "start": 21.146,
+     "end": 21.68
+    },
+    {
+     "text": "Never",
+     "highlight": false,
+     "start": 21.68,
+     "end": 22.062
+    },
+    {
+     "text": "stopping.",
+     "highlight": false,
+     "start": 22.062,
+     "end": 22.749
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A crane on top of an unfinished tower against a harsh white sky; then tiny dots of people moving below",
+   "notes": "Two compositions in one shot: cut on wordAt(3, /top/). Top-down: zebra crossing, dots moving in streams."
+  },
+  {
+   "id": 4,
+   "start": 23.079,
+   "end": 31.91,
+   "act": 1,
+   "set": "screen",
+   "owner": "P",
+   "framing": "Over-the-shoulder close-up, a phone in hand, news feed scrolling",
+   "camera": "Locked, slight handheld",
+   "vo": "The news moves faster now. An earthquake here. A life taken over almost nothing, there. A man trusted with everything… betrays it all.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 23.229,
+     "end": 23.44
+    },
+    {
+     "text": "news",
+     "highlight": false,
+     "start": 23.44,
+     "end": 23.722
+    },
+    {
+     "text": "moves",
+     "highlight": false,
+     "start": 23.722,
+     "end": 24.074
+    },
+    {
+     "text": "faster",
+     "highlight": false,
+     "start": 24.074,
+     "end": 24.497
+    },
+    {
+     "text": "now.",
+     "highlight": false,
+     "start": 24.497,
+     "end": 24.779
+    },
+    {
+     "text": "An",
+     "highlight": false,
+     "start": 24.779,
+     "end": 24.92
+    },
+    {
+     "text": "earthquake",
+     "highlight": true,
+     "start": 24.92,
+     "end": 25.765
+    },
+    {
+     "text": "here.",
+     "highlight": false,
+     "start": 25.765,
+     "end": 26.117
+    },
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 26.117,
+     "end": 26.187
+    },
+    {
+     "text": "life",
+     "highlight": false,
+     "start": 26.187,
+     "end": 26.469
+    },
+    {
+     "text": "taken",
+     "highlight": false,
+     "start": 26.469,
+     "end": 26.821
+    },
+    {
+     "text": "over",
+     "highlight": false,
+     "start": 26.821,
+     "end": 27.103
+    },
+    {
+     "text": "almost",
+     "highlight": false,
+     "start": 27.103,
+     "end": 27.526
+    },
+    {
+     "text": "nothing,",
+     "highlight": false,
+     "start": 27.526,
+     "end": 28.089
+    },
+    {
+     "text": "there.",
+     "highlight": false,
+     "start": 28.089,
+     "end": 28.512
+    },
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 28.512,
+     "end": 28.582
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 28.582,
+     "end": 28.794
+    },
+    {
+     "text": "trusted",
+     "highlight": false,
+     "start": 28.794,
+     "end": 29.287
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 29.287,
+     "end": 29.569
+    },
+    {
+     "text": "everything…",
+     "highlight": false,
+     "start": 29.569,
+     "end": 30.343
+    },
+    {
+     "text": "betrays",
+     "highlight": true,
+     "start": 30.343,
+     "end": 30.977
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 30.977,
+     "end": 31.118
+    },
+    {
+     "text": "all.",
+     "highlight": false,
+     "start": 31.118,
+     "end": 31.4
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A phone screen with a news feed: generic cards with blurred photos and grey headline bars, no logos, no readable real names",
+   "notes": "Hand holding the phone (mitten hand, 1-2 finger separations). Daylight office or train window behind, very soft. Each card change syncs to \"earthquake\", \"life\", \"trusted\"."
+  },
+  {
+   "id": 5,
+   "start": 31.91,
+   "end": 36.303,
+   "act": 1,
+   "set": "screen",
+   "owner": "P",
+   "framing": "Extreme close-up, a thumb swiping the screen",
+   "camera": "Locked",
+   "vo": "It all slides past on the same screen. Read. Swipe. Forgotten.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 32.06,
+     "end": 32.205
+    },
+    {
+     "text": "all",
+     "highlight": false,
+     "start": 32.205,
+     "end": 32.422
+    },
+    {
+     "text": "slides",
+     "highlight": false,
+     "start": 32.422,
+     "end": 32.857
+    },
+    {
+     "text": "past",
+     "highlight": false,
+     "start": 32.857,
+     "end": 33.147
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 33.147,
+     "end": 33.292
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 33.292,
+     "end": 33.509
+    },
+    {
+     "text": "same",
+     "highlight": false,
+     "start": 33.509,
+     "end": 33.799
+    },
+    {
+     "text": "screen.",
+     "highlight": false,
+     "start": 33.799,
+     "end": 34.306
+    },
+    {
+     "text": "Read.",
+     "highlight": false,
+     "start": 34.306,
+     "end": 34.669
+    },
+    {
+     "text": "Swipe.",
+     "highlight": false,
+     "start": 34.669,
+     "end": 35.103
+    },
+    {
+     "text": "Forgotten.",
+     "highlight": true,
+     "start": 35.103,
+     "end": 35.973
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "A thumb swiping; headline cards slide away one after another until the feed is just a blur",
+   "notes": "Swipe beats on \"Read\", \"Swipe\", \"Forgotten\"."
+  },
+  {
+   "id": 6,
+   "start": 36.303,
+   "end": 41.341,
+   "act": 1,
+   "set": "street",
+   "owner": "S",
+   "framing": "Time-lapse: a lamp post shadow sweeping across asphalt at sunset",
+   "camera": "Locked",
+   "vo": "And the days feel shorter. Morning starts… and suddenly, it's night again.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 36.453,
+     "end": 36.655
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 36.655,
+     "end": 36.857
+    },
+    {
+     "text": "days",
+     "highlight": false,
+     "start": 36.857,
+     "end": 37.127
+    },
+    {
+     "text": "feel",
+     "highlight": false,
+     "start": 37.127,
+     "end": 37.396
+    },
+    {
+     "text": "shorter.",
+     "highlight": true,
+     "start": 37.396,
+     "end": 38.069
+    },
+    {
+     "text": "Morning",
+     "highlight": false,
+     "start": 38.069,
+     "end": 38.541
+    },
+    {
+     "text": "starts…",
+     "highlight": false,
+     "start": 38.541,
+     "end": 39.012
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 39.012,
+     "end": 39.215
+    },
+    {
+     "text": "suddenly,",
+     "highlight": false,
+     "start": 39.215,
+     "end": 39.821
+    },
+    {
+     "text": "it's",
+     "highlight": false,
+     "start": 39.821,
+     "end": 40.09
+    },
+    {
+     "text": "night",
+     "highlight": false,
+     "start": 40.09,
+     "end": 40.427
+    },
+    {
+     "text": "again.",
+     "highlight": false,
+     "start": 40.427,
+     "end": 40.831
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The long shadow of a lamp post swinging across the asphalt while the sun drops between towers; the lamp switches on at \"night\"",
+   "notes": "Dusk palette. Shadow rotation driven by progress p."
+  },
+  {
+   "id": 7,
+   "start": 41.341,
+   "end": 57.569,
+   "act": 1,
+   "set": "city",
+   "owner": "C",
+   "framing": "Wide skyline at dusk from far away, slowly darkening",
+   "camera": "Very slow pull-back",
+   "vo": "Nothing seems wrong. But all of this, towers racing for the sky, trust placed in the wrong hands, the earth shaking again and again, killing that no longer shocks anyone, time slipping away, was foretold by the Prophet Muhammad, fourteen hundred years ago.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Nothing",
+     "highlight": false,
+     "start": 41.491,
+     "end": 41.986
+    },
+    {
+     "text": "seems",
+     "highlight": false,
+     "start": 41.986,
+     "end": 42.339
+    },
+    {
+     "text": "wrong.",
+     "highlight": false,
+     "start": 42.339,
+     "end": 42.763
+    },
+    {
+     "text": "But",
+     "highlight": false,
+     "start": 42.763,
+     "end": 42.975
+    },
+    {
+     "text": "all",
+     "highlight": false,
+     "start": 42.975,
+     "end": 43.187
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 43.187,
+     "end": 43.329
+    },
+    {
+     "text": "this,",
+     "highlight": false,
+     "start": 43.329,
+     "end": 43.682
+    },
+    {
+     "text": "towers",
+     "highlight": false,
+     "start": 43.682,
+     "end": 44.106
+    },
+    {
+     "text": "racing",
+     "highlight": false,
+     "start": 44.106,
+     "end": 44.53
+    },
+    {
+     "text": "for",
+     "highlight": false,
+     "start": 44.53,
+     "end": 44.743
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 44.743,
+     "end": 44.955
+    },
+    {
+     "text": "sky,",
+     "highlight": false,
+     "start": 44.955,
+     "end": 45.237
+    },
+    {
+     "text": "trust",
+     "highlight": false,
+     "start": 45.237,
+     "end": 45.591
+    },
+    {
+     "text": "placed",
+     "highlight": false,
+     "start": 45.591,
+     "end": 46.015
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 46.015,
+     "end": 46.156
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 46.156,
+     "end": 46.368
+    },
+    {
+     "text": "wrong",
+     "highlight": false,
+     "start": 46.368,
+     "end": 46.722
+    },
+    {
+     "text": "hands,",
+     "highlight": false,
+     "start": 46.722,
+     "end": 47.146
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 47.146,
+     "end": 47.358
+    },
+    {
+     "text": "earth",
+     "highlight": false,
+     "start": 47.358,
+     "end": 47.711
+    },
+    {
+     "text": "shaking",
+     "highlight": false,
+     "start": 47.711,
+     "end": 48.206
+    },
+    {
+     "text": "again",
+     "highlight": false,
+     "start": 48.206,
+     "end": 48.56
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 48.56,
+     "end": 48.772
+    },
+    {
+     "text": "again,",
+     "highlight": false,
+     "start": 48.772,
+     "end": 49.196
+    },
+    {
+     "text": "killing",
+     "highlight": false,
+     "start": 49.196,
+     "end": 49.69
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 49.69,
+     "end": 49.973
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 49.973,
+     "end": 50.115
+    },
+    {
+     "text": "longer",
+     "highlight": false,
+     "start": 50.115,
+     "end": 50.539
+    },
+    {
+     "text": "shocks",
+     "highlight": false,
+     "start": 50.539,
+     "end": 50.963
+    },
+    {
+     "text": "anyone,",
+     "highlight": false,
+     "start": 50.963,
+     "end": 51.458
+    },
+    {
+     "text": "time",
+     "highlight": false,
+     "start": 51.458,
+     "end": 51.74
+    },
+    {
+     "text": "slipping",
+     "highlight": false,
+     "start": 51.74,
+     "end": 52.306
+    },
+    {
+     "text": "away,",
+     "highlight": false,
+     "start": 52.306,
+     "end": 52.659
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 52.659,
+     "end": 52.871
+    },
+    {
+     "text": "foretold",
+     "highlight": true,
+     "start": 52.871,
+     "end": 53.578
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 53.578,
+     "end": 53.72
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 53.72,
+     "end": 53.932
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 53.932,
+     "end": 54.426
+    },
+    {
+     "text": "Muhammad,",
+     "highlight": false,
+     "start": 54.426,
+     "end": 55.063
+    },
+    {
+     "text": "fourteen",
+     "highlight": false,
+     "start": 55.063,
+     "end": 55.628
+    },
+    {
+     "text": "hundred",
+     "highlight": false,
+     "start": 55.628,
+     "end": 56.123
+    },
+    {
+     "text": "years",
+     "highlight": false,
+     "start": 56.123,
+     "end": 56.476
+    },
+    {
+     "text": "ago.",
+     "highlight": false,
+     "start": 56.476,
+     "end": 56.759
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The whole skyline in silhouette against a fading dusk sky; a small source label near the top",
+   "notes": "Source label (small, mono, off-white, top safe area, appears on \"foretold\"): \"SAHIH MUSLIM 8 · SAHIH AL-BUKHARI 59, 7121\". Sky darkens over the shot."
+  },
+  {
+   "id": 8,
+   "start": 57.569,
+   "end": 62.217,
+   "act": 1,
+   "set": "city",
+   "owner": "C",
+   "framing": "Night sky over the city, a single star",
+   "camera": "Slow tilt up from the skyline to the sky",
+   "vo": "When the end will come, no one knows. Only God.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "When",
+     "highlight": false,
+     "start": 57.719,
+     "end": 58.1
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 58.1,
+     "end": 58.385
+    },
+    {
+     "text": "end",
+     "highlight": false,
+     "start": 58.385,
+     "end": 58.671
+    },
+    {
+     "text": "will",
+     "highlight": false,
+     "start": 58.671,
+     "end": 59.052
+    },
+    {
+     "text": "come,",
+     "highlight": false,
+     "start": 59.052,
+     "end": 59.528
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 59.528,
+     "end": 59.718
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 59.718,
+     "end": 60.004
+    },
+    {
+     "text": "knows.",
+     "highlight": false,
+     "start": 60.004,
+     "end": 60.575
+    },
+    {
+     "text": "Only",
+     "highlight": false,
+     "start": 60.575,
+     "end": 60.956
+    },
+    {
+     "text": "God.",
+     "highlight": true,
+     "start": 60.956,
+     "end": 61.527
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "A single bright star above the dark skyline",
+   "notes": "Mostly sky. Keep it quiet and simple."
+  },
+  {
+   "id": 9,
+   "start": 62.217,
+   "end": 67.3,
+   "act": 1,
+   "set": "city",
+   "owner": "C",
+   "framing": "Wide city at night, windows going dark one by one",
+   "camera": "Locked",
+   "vo": "Night falls like any other night. The lights go out, one by one.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Night",
+     "highlight": false,
+     "start": 62.367,
+     "end": 62.81
+    },
+    {
+     "text": "falls",
+     "highlight": false,
+     "start": 62.81,
+     "end": 63.252
+    },
+    {
+     "text": "like",
+     "highlight": false,
+     "start": 63.252,
+     "end": 63.606
+    },
+    {
+     "text": "any",
+     "highlight": false,
+     "start": 63.606,
+     "end": 63.872
+    },
+    {
+     "text": "other",
+     "highlight": false,
+     "start": 63.872,
+     "end": 64.314
+    },
+    {
+     "text": "night.",
+     "highlight": false,
+     "start": 64.314,
+     "end": 64.846
+    },
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 64.846,
+     "end": 65.111
+    },
+    {
+     "text": "lights",
+     "highlight": false,
+     "start": 65.111,
+     "end": 65.642
+    },
+    {
+     "text": "go",
+     "highlight": false,
+     "start": 65.642,
+     "end": 65.819
+    },
+    {
+     "text": "out,",
+     "highlight": false,
+     "start": 65.819,
+     "end": 66.173
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 66.173,
+     "end": 66.439
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 66.439,
+     "end": 66.616
+    },
+    {
+     "text": "one.",
+     "highlight": false,
+     "start": 66.616,
+     "end": 66.97
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Windows across the city switching off in turn",
+   "notes": "Reuse the skyline band (night version) with live window lights that turn off progressively."
+  },
+  {
+   "id": 10,
+   "start": 67.3,
+   "end": 74.772,
+   "act": 1,
+   "set": "screen",
+   "owner": "P",
+   "framing": "A dark bedroom, a phone on the desk lights up",
+   "camera": "Slow push-in to the phone",
+   "vo": "Tomorrow morning, a message will spread through the entire city… about something that never happened.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Tomorrow",
+     "highlight": false,
+     "start": 67.45,
+     "end": 67.987
+    },
+    {
+     "text": "morning,",
+     "highlight": false,
+     "start": 67.987,
+     "end": 68.524
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 68.524,
+     "end": 68.591
+    },
+    {
+     "text": "message",
+     "highlight": false,
+     "start": 68.591,
+     "end": 69.06
+    },
+    {
+     "text": "will",
+     "highlight": false,
+     "start": 69.06,
+     "end": 69.329
+    },
+    {
+     "text": "spread",
+     "highlight": false,
+     "start": 69.329,
+     "end": 69.731
+    },
+    {
+     "text": "through",
+     "highlight": false,
+     "start": 69.731,
+     "end": 70.201
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 70.201,
+     "end": 70.402
+    },
+    {
+     "text": "entire",
+     "highlight": false,
+     "start": 70.402,
+     "end": 70.805
+    },
+    {
+     "text": "city…",
+     "highlight": false,
+     "start": 70.805,
+     "end": 71.141
+    },
+    {
+     "text": "about",
+     "highlight": false,
+     "start": 71.141,
+     "end": 71.476
+    },
+    {
+     "text": "something",
+     "highlight": false,
+     "start": 71.476,
+     "end": 72.08
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 72.08,
+     "end": 72.348
+    },
+    {
+     "text": "never",
+     "highlight": true,
+     "start": 72.348,
+     "end": 72.751
+    },
+    {
+     "text": "happened.",
+     "highlight": false,
+     "start": 72.751,
+     "end": 73.422
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "A phone on a desk in a dark bedroom; the screen lights up with a notification card \"Forwarded many times\"",
+   "notes": "Notification appears on \"message\". After the VO: cut to black and draw \"EPISODE 01\" (title font, accent colour) for the last ~1.5 s, captions off by then."
+  }
+ ]
+}
