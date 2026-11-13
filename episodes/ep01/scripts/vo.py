@@ -6,7 +6,7 @@ Shared-key safety (same rules as the other studio projects on this ai33 key):
 - on HTTP 429 / queue_limit_exceeded: exponential backoff with jitter (30 -> 60 -> 120 -> 240 s, max 300 s), stop after 5 failures;
 - poll the task no faster than every 3 s.
 Output: public/audio/vo/narration.mp3 + narration.json (word timestamps) + task.json (task id, voice, text).
-usage: python3 scripts/vo.py [voice_id]
+usage: [EPISODE=path/to/episode.json] python3 scripts/vo.py [voice_id]
 """
 import json, os, random, sys, time, urllib.request, urllib.error, uuid
 
@@ -73,8 +73,8 @@ def download(url, path):
 
 if __name__ == "__main__":
     os.makedirs(OUT, exist_ok=True)
-    ep = json.load(open(os.path.join(ROOT, "src", "data", "episode.json")))
-    text = TAG + " " + " ".join(s["vo"] for s in ep["shots"])
+    ep = json.load(open(os.environ.get("EPISODE") or os.path.join(ROOT, "src", "data", "episode.json")))
+    text = TAG + " " + " ".join(s["vo"] for s in ep["shots"] if s["vo"])
     r = submit(text)
     tid = r.get("task_id") or r.get("id")
     json.dump({"task_id": tid, "voice": VOICE, "model": "eleven_v3", "text": text, "submitted": time.strftime("%Y-%m-%d %H:%M:%S")}, open(os.path.join(OUT, "task.json"), "w"), indent=1)

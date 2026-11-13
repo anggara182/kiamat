@@ -18,15 +18,35 @@ A modern Indonesian-style megacity in 2026, one ordinary day from dawn to night.
 - Hands (shots 4, 5): adult hand, mitten construction with 1–2 finger separations, warm skin `#b07a5e` / shade `#7a4f3e`, sleeve of a work shirt `#3c4a5c`. Two hands visible only if it reads naturally; one hand holding the phone is fine.
 - No identifiable real people, no real landmarks, no real brands. Mosque: generic minaret and dome, respectful, no text.
 
-## Sets and ownership (v2: 21 shots, 24 fps, people-first)
-Shot list v2 (13 Nov): the VO is unchanged, but it is cut into 21 shots so almost every line gets a human moment. Shot ids changed; `episode.json` has a `was` field mapping old components (S01..S10) to new ids. Components are named by the NEW id (`S01`..`S21`) and exported from the owner file; `src/shots/index.ts` picks them up automatically (missing ones render a grey placeholder).
+## Sets and ownership (v3: 25 shots, real VO timing, 76 s)
+v3 (13 Nov): new hook, clear news headlines, title card, sound-synced actions. Shot ids changed AGAIN; `episode.json` field `was_v2` maps each new shot to its v2 shot id (null = new). Components are named by the NEW id (`S01`..`S25`) and exported from the owner file. **Rename every export to the new id and remove stale ones**: `src/shots/index.ts` picks components by name, so a stale export with a reused id would show the WRONG scene.
 
-| Set | Owner file | Shots | What it is |
+Every shot has a `sync` list in `episode.json`: the listed VO words are where its key actions MUST land (use `wordAt(id, /word/i, fallback)`, start of the word). Sound effects are placed on exactly those words, so do not move an action off its sync word.
+
+| Set | Owner file | Shots (new ids) | Changes in v3 |
 |---|---|---|---|
-| `city` (+ `train`) | `src/shots/C.tsx`, `src/shots/T.tsx` | 1, 12, 18, 19, 20 (city) · 6 (train) | Skyline (as v1). New: shot 12 is a DIFFERENT vantage (e.g. from a kampung rooftop with laundry lines), so it never looks like shot 1; shot 19 adds a lone man on a rooftop looking up at the star; shot 20 adds a near window where a mother turns off a lamp beside a sleeping child. Shot 6: inside a packed commuter train. |
-| `home` | `src/shots/H.tsx` | 2, 3, 4, 15 | A small kampung house: kitchen at dawn (mother switches on the fluorescent light, pot steams), carport (father kick-starts a scooter, kid in a big helmet waits), bedroom (hand slaps a phone alarm, minaret in the window), floor-mat dinner at night (lamp swings, family holds on). |
-| `street` | `src/shots/S.tsx` | 5, 7, 8, 11, 13, 16, 17 | As v1 plus: construction worker on a high beam (7, and dusk version 13), pedestrians streaming in the sunset time-lapse with the lamp post moved to a third (11), people walking past a police line without looking (16), an old man in a peci on a bus-stop bench while the crowd blurs past (17). |
-| `screen` | `src/shots/P.tsx` | 9, 10, 14, 21 | As v1 plus: two suit-sleeved hands passing an envelope under a meeting table (14); a sleeping figure in the bed behind the phone (21). Fix the thumb in 10 (too long, reads as an index finger). |
+| `home` | `H.tsx` | 1, 2, 4, 5, 18 | NEW hook shot 1 (phone on the blanket flooding with BREAKING notifications; you may import the phone/notification components from `src/art/screen_phone.tsx` read-only, or draw your own). Shot 2 = old slap shot (slap on "slowly"). 4, 5, 18 = old kitchen, carport, dinner. |
+| `city` + `train` | `C.tsx`, `T.tsx` | 3, 6, 15, 21, 22, 23 · 8 | NEW shot 6 (minaret with loudspeakers, tilt down to an old man in sarong + peci walking to the mosque with a prayer mat, birds lift on "rises", phone glows in windows on "hundred"). Shot 22: separate the man's head from the minaret. |
+| `street` | `S.tsx` | 7, 9, 10, 14, 16, 19, 20 | Shot 9: worker bigger (≥20% of frame height), crane hook clank on "rising". Shot 14: bigger pedestrians. Shot 19: fix the two overlapping walkers. Shot 20: bus passes on "slipping". |
+| `screen` | `P.tsx` | 11, 12, 13, 17, 24, 25 | News rebuilt with the REAL headlines below (11 and NEW 12). 13 swipes real headline cards. 24 ends with a hard cut to black (no EPISODE card). NEW 25 = title card. |
+
+## Headlines (exact text; generic and fictional: no real places, people, organisations, outlets or logos)
+Card style: white (day) card, a small red tag ("BREAKING" / "LIVE" / "WAR" / "UPDATE"), the headline in bold dark sans (Inter or Roboto via @remotion/google-fonts, ≥ 34 px at frame scale when full-screen, ≥ 26 px inside the OTS phone), a grey "2m ago"-style timestamp, and a simple illustrated thumbnail (silhouettes, no gore: rubble and dust, smoke over a skyline, rows of tents, a burning car, a crowd running, a man in a suit in front of microphones).
+- Hook notifications (shot 1, stacked lock-screen style, newest on top): "BREAKING · 7.4 earthquake strikes coastal region" · "Death toll passes 12,000" · "Airstrikes hit refugee camp overnight" · "Rights group warns of genocide" · "Floods sweep away entire villages".
+- Shot 11: on "earthquake": **BREAKING** "7.4 quake flattens coastal towns, thousands missing" · on "war": **WAR** "Airstrikes hit refugee camp overnight".
+- Shot 12: on "Whole": **BREAKING** "Rights group warns of genocide as entire families are wiped out" · on "life": "Man stabbed to death over a $12 debt" · on "trusted": **UPDATE** "Official arrested for stealing disaster relief funds" · flurry after "betrays": "Wildfires force 80,000 to flee" / "Famine declared in three provinces" / "Ceasefire collapses after 48 hours".
+- Shot 13 and 24 may reuse these. Shot 24 notification: "Forwarded many times" (keep).
+
+## Title card (shot 25, ~4.2 s, black, no caption)
+- Main title "THE BEGINNING OF THE END": Cinzel (600–700), off-white `#f1ead8`, letter-spaced, two lines if needed, inside the 920 px safe width, centred slightly above the middle; a soft gold radial glow behind (radial gradient, no filters).
+- Under it, after a thin gold rule: "CHAPTER 1 · THE LAST DAYS" small, wide letter-spacing, `#d9a441`.
+- Timing: main title fades/rises in from 0.25 s (stagger by word is fine), subtitle from ~1.1 s; everything fully visible ≥ 1.5 s before the end. Very slow push-in; a few drifting dust motes (on ones). A deep boom lands on the first frame (sound).
+
+## Make it ALIVE (applies to every shot)
+- The camera is never dead still: slow push/drift/parallax on ones, handheld breathing for intimate shots, a small jolt on impacts.
+- Secondary motion everywhere: people breathe and shift weight (twos), cloth/hair/laundry/curtains move, steam, dust motes in light beams, birds, distant traffic and pedestrians, flickering signs, blinking aircraft lights.
+- Actions land on their sync words; give them anticipation and follow-through (a hand pulls back before the slap; the screen jumps when the phone is hit).
+- Short shots (1.5–2 s) must read in the first 0.3 s: the hero is already in frame and moving at frame 0.
 
 ## People (the heart of the episode)
 - Every human shot shows a specific action with readable body language. Posture and hands tell the story; faces stay simple (no detailed features), seen from the side, back, or as silhouettes.

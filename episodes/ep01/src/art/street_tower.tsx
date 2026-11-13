@@ -42,7 +42,7 @@ const TP = {
 export const HOOK_Y = 800;
 const TROLLEY = 0.75;
 
-export const TowerBand: React.FC<{ mood?: TMood }> = ({ mood = 'day' }) => {
+export const TowerBand: React.FC<{ mood?: TMood; hook?: boolean; glow?: [number, number, number]; blink?: number }> = ({ mood = 'day', hook = false, glow, blink = 0 }) => {
   const C0 = TP[mood], SKY = C0.sky;
   const faces: React.ReactNode[] = [];
   const lf = (a: number[], b: number[], y0: number, y1: number) => `${P(a[0], y0, a[1])} ${P(a[0], y1, a[1])} ${P(b[0], y1, b[1])} ${P(b[0], y0, b[1])}`;
@@ -145,6 +145,8 @@ export const TowerBand: React.FC<{ mood?: TMood }> = ({ mood = 'day' }) => {
         <linearGradient id={`sttSky${mood}`} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0" stopColor={SKY[0]} /><stop offset="0.35" stopColor={SKY[1]} /><stop offset="0.7" stopColor={SKY[2]} /><stop offset="1" stopColor={SKY[3]} />
         </linearGradient>
+        <radialGradient id={`sttGlow${mood}`} cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#f6b98a" stopOpacity={0.85} /><stop offset="0.45" stopColor="#d9785f" stopOpacity={0.35} /><stop offset="1" stopColor="#d9785f" stopOpacity={0} /></radialGradient>
+        <radialGradient id={`sttBlink${mood}`} cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ff5a48" stopOpacity={0.6} /><stop offset="1" stopColor="#ff5a48" stopOpacity={0} /></radialGradient>
         <radialGradient id={`sttSun${mood}`} cx="0.5" cy="0.5" r="0.5">
           <stop offset="0" stopColor={C0.sun[0]} /><stop offset="0.2" stopColor={C0.sun[1]} stopOpacity={0.95} /><stop offset="0.55" stopColor={C0.sun[2]} stopOpacity={0.4} /><stop offset="1" stopColor={C0.sun[3]} stopOpacity={0} />
         </radialGradient>
@@ -152,6 +154,7 @@ export const TowerBand: React.FC<{ mood?: TMood }> = ({ mood = 'day' }) => {
       <rect x={0} y={0} width={TW.w} height={TW.h} fill={`url(#sttSky${mood})`} />
       {/* harsh sun peeking past the right edge of the tower top */}
       <circle cx={C0.sunAt[0]} cy={C0.sunAt[1]} r={C0.sunAt[2]} fill={`url(#sttSun${mood})`} />
+      {glow && <circle cx={glow[0]} cy={glow[1]} r={glow[2]} fill={`url(#sttGlow${mood})`} />}
       {/* far hazy towers (background layer), pale and low contrast */}
       <polygon points={`${P(-120, 0, 330)} ${P(-120, 210, 330)} ${P(-86, 210, 360)} ${P(-86, 0, 360)}`} fill={C0.far[0]} />
       <polygon points={`${P(-86, 0, 360)} ${P(-86, 210, 360)} ${P(-60, 210, 380)} ${P(-60, 0, 380)}`} fill={C0.far[1]} />
@@ -177,7 +180,7 @@ export const TowerBand: React.FC<{ mood?: TMood }> = ({ mood = 'day' }) => {
         <path d={`M ${jTop[0] - 6} ${jTop[1]} L ${apex[0]} ${apex[1]} L ${jTop[0] + 8} ${jTop[1]}`} strokeWidth={4} />
         <path d={`M ${apex[0]} ${apex[1]} L ${jTop[0] + (jibEnd[0] - jTop[0]) * 0.55} ${jTop[1] + (jibEnd[1] - jTop[1]) * 0.55} M ${apex[0]} ${apex[1]} L ${cEnd[0]} ${cEnd[1]}`} strokeWidth={1.8} />
         {/* hoist cable */}
-        <path d={`M ${tr[0]} ${tr[1]} L ${tr[0] - 2} ${HOOK_Y - 18}`} strokeWidth={1.6} />
+        {hook && <path d={`M ${tr[0]} ${tr[1]} L ${tr[0] - 2} ${HOOK_Y - 18}`} strokeWidth={1.6} />}
       </g>
       {/* counterweight blocks, cab, trolley, hook block */}
       {(() => {
@@ -188,8 +191,9 @@ export const TowerBand: React.FC<{ mood?: TMood }> = ({ mood = 'day' }) => {
       <rect x={jLo[0] - 34} y={jLo[1] + 2} width={34} height={30} rx={3} fill={CRANE} />
       <rect x={jLo[0] - 30} y={jLo[1] + 6} width={22} height={13} fill={C0.cab} />
       <rect x={tr[0] - 8} y={tr[1] - 1} width={16} height={7} fill={CRANE} />
-      <rect x={tr[0] - 10} y={HOOK_Y - 20} width={16} height={20} rx={2} fill={CRANE} />
-      <path d={`M ${tr[0] - 2} ${HOOK_Y} q -7 9 0 14 q 7 2 7 -6`} stroke={CRANE} strokeWidth={3} fill="none" />
+      {hook && <rect x={tr[0] - 10} y={HOOK_Y - 20} width={16} height={20} rx={2} fill={CRANE} />}
+      {hook && <path d={`M ${tr[0] - 2} ${HOOK_Y} q -7 9 0 14 q 7 2 7 -6`} stroke={CRANE} strokeWidth={3} fill="none" />}
+      {blink > 0 && <g><circle cx={apex[0]} cy={apex[1] - 4} r={30} fill={`url(#sttBlink${mood})`} opacity={blink} /><circle cx={apex[0]} cy={apex[1] - 4} r={4.5} fill="#ff5a48" opacity={0.4 + 0.6 * blink} /></g>}
     </g>
   );
 };
@@ -236,3 +240,15 @@ export const TowerFg: React.FC<{ mood?: TMood; children?: React.ReactNode }> = (
     </g>
   );
 };
+
+/** crane hook on its cable, live in the foreground layer so the worker can catch it (S09).
+ *  x,y = hook eye; swing = cable lean (deg). Environment: animate on ONES. */
+export const LiveHook: React.FC<{ x: number; y: number; swing?: number; col?: string }> = ({ x, y, swing = 0, col = '#3c4249' }) => (
+  <g transform={`rotate(${swing} ${x} ${y - 1600})`}>
+    <path d={`M ${x - 2} ${y - 1600} L ${x - 2} ${y - 26}`} stroke={col} strokeWidth={2.4} />
+    <path d={`M ${x + 3} ${y - 1600} L ${x + 3} ${y - 26}`} stroke={col} strokeWidth={2.4} />
+    <rect x={x - 14} y={y - 30} width={28} height={30} rx={4} fill={col} />
+    <rect x={x - 10} y={y - 26} width={20} height={6} fill="#c9a23a" opacity={0.8} />
+    <path d={`M ${x} ${y} L ${x} ${y + 8} q -12 14 0 22 q 12 4 12 -10`} stroke={col} strokeWidth={5} fill="none" strokeLinecap="round" />
+  </g>
+);

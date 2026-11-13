@@ -360,3 +360,17 @@ export const DayWires: React.FC = () => (
     <path d="M -60 128 Q 600 292 1360 372" strokeWidth={3.5} />
   </g>
 );
+
+/** a loose flock of small birds crossing the sky (environment: ON ONES). x0,y0 start, vx px/s, n birds, s scale. */
+export const Birds: React.FC<{ t: number; x0: number; y0: number; vx: number; vy?: number; n?: number; s?: number; col?: string; seed?: number }> = ({ t, x0, y0, vx, vy = 0, n = 6, s = 1, col = '#3a4048', seed = 5 }) => {
+  const r = rng(seed);
+  const b = Array.from({ length: n }, () => ({ dx: (r() - 0.5) * 260, dy: (r() - 0.5) * 120, ph: r() * 6, sp: 9 + r() * 4 }));
+  return (
+    <g fill="none" stroke={col} strokeLinecap="round" strokeLinejoin="round">
+      {b.map((q, i) => {
+        const x = x0 + vx * t + q.dx, y = y0 + vy * t + q.dy + Math.sin(t * 2 + q.ph) * 6, w = Math.sin(t * q.sp + q.ph);
+        return <path key={i} d={`M ${x - 11 * s} ${y - 4 * s * w} Q ${x - 5 * s} ${y - 6 * s * w} ${x} ${y} Q ${x + 5 * s} ${y - 6 * s * w} ${x + 11 * s} ${y - 4 * s * w}`} strokeWidth={2.6 * s} />;
+      })}
+    </g>
+  );
+};

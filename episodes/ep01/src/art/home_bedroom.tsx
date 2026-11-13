@@ -8,7 +8,7 @@ import { limb, Glow, lerp, DEG } from './home_kit';
 export const BR = {
   win: { x: 330, y: 250, w: 480, h: 590 },
   minaret: { x: 652, lampY: 514 },
-  phone: [[786, 1262], [972, 1236], [1000, 1300], [812, 1330]] as [number, number][],
+  phone: [[756, 1262], [942, 1236], [970, 1300], [782, 1330]] as [number, number][],
 };
 
 /** distant lit windows / screens that appear on "hundred" (inside the window view) */
@@ -79,7 +79,7 @@ export const BedroomBand: React.FC = () => {
 };
 
 /** live: minaret lamp + window glow (ON ONES). lamp 0..1, dots 0..1 (far screens waking) */
-export const WindowLife: React.FC<{ lamp: number; dots: number; t: number }> = ({ lamp, dots, t }) => {
+export const WindowLife: React.FC<{ lamp: number; dots: number; t: number; dawn?: number }> = ({ lamp, dots, t, dawn = 0 }) => {
   const { minaret: m, win } = BR;
   return (
     <g>
@@ -93,7 +93,17 @@ export const WindowLife: React.FC<{ lamp: number; dots: number; t: number }> = (
         })}
         <Glow id="hbLampG" x={m.x} y={m.lampY + 10} rx={130} c="#ffe3a0" o={0.8 * lamp} mid={0.2} />
         {[-24, -8, 8, 24].map((d) => <rect key={d} x={m.x + d - 3} y={m.lampY + 12} width={6} height={10} fill="#ffe7b0" opacity={lamp} />)}
+        {/* the dawn grows at the horizon */}
+        <Glow id="hbDawnG" x={win.x + win.w * 0.55} y={win.y + win.h} rx={420} ry={260} c="#ffc49a" o={0.55 * dawn} mid={0.3} />
       </g>
+      {/* dawn light falling through the window onto the wall + bed, with drifting dust (ones) */}
+      <path d={`M${win.x + 20} ${win.y + win.h} L${win.x + win.w - 20} ${win.y + win.h} L${win.x + win.w + 160} 1300 L${win.x - 120} 1300 Z`} fill="#ffb59a" opacity={0.05 + 0.1 * dawn} />
+      {Array.from({ length: 14 }, (_, i) => {
+        const u = ((t * (0.05 + (i % 4) * 0.015) + i * 0.137) % 1);
+        const x = win.x + ((i * 97) % win.w) + Math.sin(t * 0.8 + i) * 18;
+        const y = win.y + win.h + 20 + u * 400;
+        return <circle key={i} cx={x} cy={y} r={i % 3 ? 2.2 : 3.2} fill="#ffd9c0" opacity={(0.25 + 0.45 * dawn) * Math.sin(Math.PI * u)} />;
+      })}
     </g>
   );
 };
@@ -137,13 +147,17 @@ const SL = { blanket: '#5a3f6e', blanketD: '#3e2a50', motif: '#a7795a', skin: '#
 /** sleeper's body under the batik blanket (ON TWOS breathing). stir 0..1 = shifts as the arm comes out */
 export const Sleeper: React.FC<{ breath: number; stir: number }> = ({ breath, stir }) => {
   const b = breath * 8, s = stir * 10;
-  const top = `M150 1060 Q210 ${990 - b} 320 ${972 - b - s} Q440 ${948 - b - s} 520 ${990 - b} Q640 ${1050 - b} 760 ${1036 - b} Q900 ${984 - b} 1010 ${1000 - b} Q1120 1020 1200 1040 L1200 1250 Q700 1236 420 1230 Q240 1226 120 1200 Z`;
+  const top = `M150 1090 Q230 ${1040 - b} 330 ${982 - b - s} Q440 ${948 - b - s} 520 ${990 - b} Q640 ${1050 - b} 760 ${1036 - b} Q900 ${984 - b} 1010 ${1000 - b} Q1120 1020 1200 1040 L1200 1250 Q700 1236 420 1230 Q240 1226 120 1200 Z`;
   return (
     <g>
-      {/* messy hair peeking out between pillow and blanket */}
-      <path d="M120 1100 Q150 1060 200 1068 Q236 1080 230 1120 Q190 1140 140 1132 Z" fill={SL.hair} />
-      {[0, 1, 2, 3, 4].map((i) => <path key={i} d={`M${136 + i * 18} ${1074 + (i % 2) * 6} q${-10 + i * 3} -24 ${-4 + i * 6} -40`} stroke={SL.hair} strokeWidth={5} fill="none" strokeLinecap="round" />)}
-      <path d="M130 1080 Q170 1060 210 1070" stroke="#8d8bb2" strokeWidth={3} fill="none" opacity={0.5} />
+      {/* his head pressed into the pillow (back of the head, messy hair), blanket pulled up to the ear */}
+      <g transform={`translate(${stir * 4} ${-breath * 2})`}>
+        <ellipse cx={196} cy={1040} rx={118} ry={100} fill={SL.hair} />
+        <path d="M90 1060 Q100 1120 170 1132 L230 1128 Q200 1090 180 1070 Z" fill={SL.skinD} />
+        <ellipse cx={168} cy={1094} rx={22} ry={16} fill={SL.skin} opacity={0.75} />
+        {[0, 1, 2, 3, 4, 5].map((i) => <path key={i} d={`M${110 + i * 30} ${960 - (i % 2) * 8} q${-14 + i * 5 + Math.sin(breath * 3 + i) * 3} -26 ${-6 + i * 7} -46`} stroke={SL.hair} strokeWidth={8} fill="none" strokeLinecap="round" />)}
+        <path d="M84 1010 Q110 940 200 936 Q280 940 310 1000" stroke="#c7768a" strokeWidth={4} fill="none" opacity={0.55} />
+      </g>
       {/* blanket mound */}
       <path d={top} fill={SL.blanket} />
       <path d={`M120 1200 Q240 1226 420 1230 Q700 1236 1200 1250 L1200 1170 Q700 1160 420 1160 Q260 1160 150 1140 Z`} fill={SL.blanketD} opacity={0.75} />
@@ -151,7 +165,7 @@ export const Sleeper: React.FC<{ breath: number; stir: number }> = ({ breath, st
       {[0, 1, 2].map((r) => (
         <path key={r} d={Array.from({ length: 10 }, (_, i) => `M${230 + i * 96} ${1050 + r * 56 - (i === 2 || i === 3 ? 30 : 0)} q24 -22 48 0`).join(' ')} stroke={SL.motif} strokeWidth={6} fill="none" opacity={0.55} strokeLinecap="round" />
       ))}
-      <path d={`M150 1060 Q210 ${990 - b} 320 ${972 - b - s} Q440 ${948 - b - s} 520 ${990 - b}`} stroke="#c7768a" strokeWidth={4} fill="none" opacity={0.6} />
+      <path d={`M150 1090 Q230 ${1040 - b} 330 ${982 - b - s} Q440 ${948 - b - s} 520 ${990 - b}`} stroke="#c7768a" strokeWidth={4} fill="none" opacity={0.6} />
     </g>
   );
 };
@@ -159,9 +173,9 @@ export const Sleeper: React.FC<{ breath: number; stir: number }> = ({ breath, st
 /** blanket front fold drawn OVER the arm root */
 export const BlanketFold: React.FC<{ stir: number }> = ({ stir }) => (
   <g>
-    <path d={`M330 1140 Q440 ${1150 - stir * 6} 560 1170 Q600 1214 560 1246 Q440 1250 320 1236 Q300 1190 330 1140 Z`} fill={SL.blanket} />
-    <path d="M330 1200 Q440 1214 566 1222 Q560 1246 520 1248 Q420 1250 320 1236 Z" fill={SL.blanketD} />
-    <path d={`M330 1140 Q440 ${1150 - stir * 6} 560 1170`} stroke={SL.motif} strokeWidth={6} fill="none" opacity={0.5} />
+    <path d={`M410 1146 Q520 ${1156 - stir * 6} 640 1176 Q684 1218 644 1250 Q520 1256 400 1240 Q380 1196 410 1146 Z`} fill={SL.blanket} />
+    <path d="M410 1204 Q520 1218 650 1226 Q644 1250 604 1252 Q500 1256 400 1240 Z" fill={SL.blanketD} />
+    <path d={`M410 1146 Q520 ${1156 - stir * 6} 640 1176`} stroke={SL.motif} strokeWidth={6} fill="none" opacity={0.5} />
   </g>
 );
 
@@ -170,7 +184,7 @@ export const BlanketFold: React.FC<{ stir: number }> = ({ stir }) => (
  * foreshortened), spread 0..1 (fingers spread flat on the phone).
  */
 export const SleepArm: React.FC<{ wx: number; wy: number; ang: number; lift: number; spread: number; rim: number }> = ({ wx, wy, ang, lift, spread, rim }) => {
-  const rx = 500, ry = 1196;
+  const rx = 586, ry = 1204;
   const len = 150 * (1 - 0.35 * lift);
   const w = 96;
   const d = `M0 ${-w * 0.42} C${len * 0.3} ${-w * 0.56} ${len * 0.62} ${-w * 0.6} ${len * 0.8} ${-w * 0.52} L${len * 1.02} ${-w * 0.42} Q${len * 1.1} ${-w * 0.3} ${len * 1.02} ${-w * 0.18} L${len * 1.06} ${-w * 0.1} Q${len * 1.14} ${w * 0.02} ${len * 1.06} ${w * 0.14} L${len * 1.0} ${w * 0.2} Q${len * 1.06} ${w * 0.34} ${len * 0.96} ${w * 0.42} C${len * 0.7} ${w * 0.5} ${len * 0.4} ${w * 0.52} 0 ${w * 0.42} Z`;
@@ -198,3 +212,16 @@ export const SleepArm: React.FC<{ wx: number; wy: number; ang: number; lift: num
 };
 
 export { DEG };
+
+/** left curtain, live (ON ONES): the hem sways in a draught */
+export const CurtainL: React.FC<{ t: number }> = ({ t }) => {
+  const { win } = BR;
+  const sw = Math.sin(t * 1.6) * 14 + Math.sin(t * 3.1) * 5;
+  return (
+    <g>
+      <path d={`M${win.x - 70} ${win.y - 40} L${win.x + 72} ${win.y - 40} Q${win.x + 40 + sw * 0.5} ${win.y + 300} ${win.x + 62 + sw} ${win.y + win.h + 62} L${win.x - 70 + sw * 0.3} ${win.y + win.h + 62} Z`} fill="#3b2f52" />
+      {[0, 30, 64].map((d) => <path key={d} d={`M${win.x - 40 + d} ${win.y - 30} Q${win.x - 50 + d + sw * 0.4} ${win.y + 300} ${win.x - 36 + d + sw * 0.8} ${win.y + win.h + 50}`} stroke="#2a2140" strokeWidth={8} fill="none" />)}
+      <path d={`M${win.x + 72} ${win.y - 40} Q${win.x + 40 + sw * 0.5} ${win.y + 300} ${win.x + 62 + sw} ${win.y + win.h + 62}`} stroke="#c7768a" strokeWidth={3} fill="none" opacity={0.5} />
+    </g>
+  );
+};

@@ -135,7 +135,7 @@ const CH = { shirt: '#c9a24a', shirtD: '#8e6e2c', shorts: '#3a4a6a', skin: '#a87
  * Mother (sitting on her heels, side view facing left) + child (cross-legged, in front of her).
  * hug 0..1: she reaches round and pulls the child in; look 0..1: both glance up at the lamp. breath on twos.
  */
-export const MotherChild: React.FC<{ hug: number; look: number; breath: number }> = ({ hug, look, breath }) => {
+export const MotherChild: React.FC<{ hug: number; look: number; breath: number; eat: number }> = ({ hug, look, breath, eat }) => {
   const by = breath * 3;
   // --- mother ---
   const mHip = { x: 840, y: 1300 };
@@ -148,7 +148,7 @@ export const MotherChild: React.FC<{ hug: number; look: number; breath: number }
   const cSh = { x: cBase.x + 6 + cTilt * 2.2, y: 1150 };
   const cHead = { x: cBase.x + 2 + cTilt * 3.6, y: 1082 - look * 4 };
   // mother's near arm wraps round the child's back to his far shoulder
-  const handT = { x: lerp(mSh.x - 40, cSh.x - 34, hug), y: lerp(1220, cSh.y + 8, hug) };
+  const handT = { x: lerp(lerp(756, 716, eat), cSh.x - 34, hug), y: lerp(1262 - 10 * eat, cSh.y + 8, hug) };
   const arm = ik(mSh.x - 6, mSh.y + 30, handT.x, handT.y, 128, 118, -1);
   return (
     <g>
@@ -179,8 +179,8 @@ export const MotherChild: React.FC<{ hug: number; look: number; breath: number }
         <path d={`M${cBase.x + 14} ${cBase.y - 170} Q${cBase.x + 56} ${cBase.y - 110} ${cBase.x + 48} ${cBase.y - 52} L${cBase.x + 20} ${cBase.y - 52} Q${cBase.x + 30} ${cBase.y - 120} ${cBase.x + 14} ${cBase.y - 170} Z`} fill={CH.shirtD} opacity={0.6} />
         {/* his arm: holding a spoon at the plate -> grabbing her blouse */}
         <path d={limb(cBase.x - 24, cBase.y - 150, lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), 26, 22)} fill={CH.shirt} />
-        <path d={limb(lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), lerp(cBase.x - 120, cBase.x + 56, hug), lerp(cBase.y - 80, cBase.y - 120, hug), 20, 16)} fill={CH.skin} />
-        <circle cx={lerp(cBase.x - 120, cBase.x + 56, hug)} cy={lerp(cBase.y - 80, cBase.y - 120, hug)} r={11} fill={CH.skin} />
+        <path d={limb(lerp(cBase.x - 70, cBase.x - 30, hug), lerp(cBase.y - 96, cBase.y - 100, hug), lerp(cBase.x - 120 + 50 * eat, cBase.x + 56, hug), lerp(cBase.y - 80 - 70 * eat, cBase.y - 120, hug), 20, 16)} fill={CH.skin} />
+        <circle cx={lerp(cBase.x - 120 + 50 * eat, cBase.x + 56, hug)} cy={lerp(cBase.y - 80 - 70 * eat, cBase.y - 120, hug)} r={11} fill={CH.skin} />
         <path d={`M${cBase.x - 48} ${cBase.y - 52} Q${cBase.x - 58} ${cBase.y - 120} ${cBase.x - 30} ${cBase.y - 160}`} stroke={CH.rim} strokeWidth={4} fill="none" opacity={0.8} />
       </g>
       <g transform={hug > 0.5 ? `translate(${2 * cHead.x} 0) scale(-1 1)` : undefined}>

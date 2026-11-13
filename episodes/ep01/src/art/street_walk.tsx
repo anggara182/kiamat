@@ -79,7 +79,7 @@ export const WalkBand: React.FC = () => {
 };
 
 /** sodium lamp light + police tape (tape flutters on ONES: it's environment) */
-export const AlleyLight: React.FC = () => (
+export const AlleyLight: React.FC<{ t?: number }> = ({ t = 0 }) => (
   <g>
     <defs>
       <radialGradient id="swPool" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffd27a" stopOpacity={0.5} /><stop offset="0.6" stopColor="#ffb347" stopOpacity={0.14} /><stop offset="1" stopColor="#ffb347" stopOpacity={0} /></radialGradient>
@@ -90,6 +90,10 @@ export const AlleyLight: React.FC = () => (
     <ellipse cx={WK.lampX} cy={WK.base + 90} rx={420} ry={120} fill="url(#swPool)" />
     <ellipse cx={WK.lampX} cy={WK.lampY + 2} rx={130} ry={110} fill="url(#swBulb)" />
     <rect x={WK.lampX - 20} y={WK.lampY - 3} width={40} height={6} rx={2} fill="#fff3c8" />
+    {/* moths circling the lamp */}
+    {[0, 1, 2, 3, 4].map((i) => <circle key={i} cx={WK.lampX + Math.sin(t * (5 + i) + i * 2) * (30 + i * 12)} cy={WK.lampY + 30 + Math.cos(t * (4 + i * 0.7) + i) * (18 + i * 8)} r={2.6} fill="#fff1c8" opacity={0.8} />)}
+    {/* the cool shop tube on the right stutters */}
+    <rect x={1014} y={830} width={W - 1000} height={WK.base - 830} fill="#0d0a18" opacity={Math.sin(t * 31) > 0.82 || Math.sin(t * 7.3) > 0.97 ? 0.35 : 0} />
   </g>
 );
 
@@ -122,11 +126,13 @@ export const PoliceTape: React.FC<{ t: number }> = ({ t }) => {
 };
 
 /** walkers on the sidewalk (S16), all heads down at their phones; t2 = on-twos clock */
+// front row = right-movers, back row = left-movers: they only ever cross at different depths,
+// and the crossings fall away from the alley mouth and the preview beats
 const WALKERS: { x0: number; y: number; h: number; dir: number; v: number; ph: number; look: Look }[] = [
-  { x0: 980, y: WK.base + 60, h: 286, dir: -1, v: 210, ph: 0.4, look: { body: '#2a2236', far: '#1a1426', skin: '#3a2c34', hat: 'hijab', hatCol: '#5a4a6a', skirt: true, phone: true, rim: '#ffd27a', rimO: 0.5 } },
-  { x0: 120, y: WK.base + 105, h: 304, dir: 1, v: 240, ph: 2.1, look: { body: '#1f1b2c', far: '#14111e', skin: '#3a2c34', phone: true, bag: 'shoulder', bagCol: '#2c2438', rim: '#ffd27a', rimO: 0.55 } },
-  { x0: 1290, y: WK.base + 118, h: 296, dir: -1, v: 250, ph: 4.0, look: { body: '#262034', far: '#17131f', skin: '#3a2c34', hat: 'cap', hatCol: '#1a1530', phone: true, bag: 'back', bagCol: '#3a2f52', rim: '#dfe9f2', rimO: 0.4 } },
-  { x0: -260, y: WK.base + 70, h: 280, dir: 1, v: 200, ph: 5.2, look: { body: '#2c2438', far: '#1a1426', skin: '#3a2c34', phone: true, rim: '#ffd27a', rimO: 0.5 } },
+  { x0: 1250, y: WK.base + 52, h: 280, dir: -1, v: 205, ph: 0.4, look: { body: '#2a2236', far: '#1a1426', skin: '#3a2c34', hat: 'hijab', hatCol: '#5a4a6a', skirt: true, phone: true, rim: '#ffd27a', rimO: 0.5 } },
+  { x0: 640, y: WK.base + 118, h: 306, dir: 1, v: 235, ph: 2.1, look: { body: '#1f1b2c', far: '#14111e', skin: '#3a2c34', phone: true, bag: 'shoulder', bagCol: '#2c2438', rim: '#ffd27a', rimO: 0.55 } },
+  { x0: 380, y: WK.base + 60, h: 284, dir: -1, v: 205, ph: 4.0, look: { body: '#262034', far: '#17131f', skin: '#3a2c34', hat: 'cap', hatCol: '#1a1530', phone: true, bag: 'back', bagCol: '#3a2f52', rim: '#dfe9f2', rimO: 0.4 } },
+  { x0: 160, y: WK.base + 108, h: 300, dir: 1, v: 215, ph: 5.2, look: { body: '#2c2438', far: '#1a1426', skin: '#3a2c34', phone: true, rim: '#ffd27a', rimO: 0.5 } },
 ];
 export const Walkers: React.FC<{ t2: number }> = ({ t2 }) => (
   <g>
@@ -171,26 +177,27 @@ export const BusBg: React.FC = () => {
 };
 
 /** time-lapse bus and traffic smear on the road behind the shelter (environment: ON ONES) */
-export const BusBlur: React.FC<{ t: number }> = ({ t }) => {
-  const L = 1500, ph = (t * 2600) % 3400 - 1700;
-  const bus = (x: number, o: number, key: string) => (
+export const BusBlur: React.FC<{ t: number; tS: number }> = ({ t, tS }) => {
+  const L = 1500, v = 3400;
+  const x = W / 2 - L / 2 + v * (t - tS); // the bus is centred behind him exactly on the sync word
+  const bus = (bx: number, o: number, key: string) => (
     <g key={key} opacity={o}>
-      <rect x={x} y={760} width={L} height={560} rx={40} fill="#3f4a5c" />
-      <rect x={x + 30} y={820} width={L - 60} height={200} rx={10} fill="#ffe2b0" />
-      <rect x={x} y={1080} width={L} height={20} fill="#8a5a4a" />
-      <rect x={x} y={1290} width={L} height={30} fill="#141018" />
+      <rect x={bx} y={760} width={L} height={560} rx={40} fill="#3f4a5c" />
+      <rect x={bx + 30} y={820} width={L - 60} height={200} rx={10} fill="#ffe2b0" />
+      <rect x={bx} y={1080} width={L} height={20} fill="#8a5a4a" />
+      <rect x={bx} y={1290} width={L} height={30} fill="#141018" />
     </g>
   );
   return (
     <g>
-      {[0, 1, 2, 3, 4].map((k) => bus(ph - k * 160, k === 0 ? 0.5 : 0.22, `b${k}`))}
-      {/* head/tail light streaks of the traffic */}
+      {[4, 3, 2, 1, 0].map((k) => bus(x - k * 170, k === 0 ? 0.62 : 0.2, `b${k}`))}
+      {/* constant head/tail-light streaks of the rest of the traffic */}
       {[1350, 1380, 1440].map((y, i) => <rect key={y} x={-100} y={y} width={W + 200} height={i === 1 ? 6 : 4} fill={i === 0 ? '#ff5a4a' : '#fff1d0'} opacity={0.35 + 0.15 * Math.sin(t * 9 + i)} />)}
     </g>
   );
 };
 
-export const Shelter: React.FC<{ back?: boolean }> = ({ back }) => back ? (
+export const Shelter: React.FC<{ back?: boolean; flick?: number }> = ({ back, flick = 1 }) => back ? (
   <g fill={BC.shelter}>
     <rect x={260} y={560} width={16} height={1000} />
     <rect x={1120} y={560} width={16} height={1000} />
@@ -204,8 +211,8 @@ export const Shelter: React.FC<{ back?: boolean }> = ({ back }) => back ? (
     </defs>
     {/* roof slab with a fluorescent tube */}
     <polygon points="200,520 1260,520 1240,580 220,580" fill={BC.shelter} />
-    <rect x={560} y={580} width={300} height={10} rx={4} fill="#eef5ff" />
-    <polygon points="560,590 860,590 1120,1500 300,1500" fill="url(#sbTube)" />
+    <rect x={560} y={580} width={300} height={10} rx={4} fill="#eef5ff" opacity={0.5 + 0.5 * flick} />
+    <polygon points="560,590 860,590 1120,1500 300,1500" fill="url(#sbTube)" opacity={flick} />
     {/* bench: seat + two legs */}
     <rect x={420} y={BUS.seat} width={640} height={26} rx={6} fill={BC.shelter} />
     <rect x={420} y={BUS.seat} width={640} height={4} fill="#e8f1ff" opacity={0.4} />
@@ -243,9 +250,14 @@ export const OldMan: React.FC<{ t2: number }> = ({ t2 }) => {
       {/* plastic bag beside him on the bench */}
       <path d={`M 600 ${BUS.seat} l 6 -58 l 62 0 l 6 58 Z`} fill="#4a3a44" />
       <path d={`M 618 ${BUS.seat - 58} q 19 -30 38 0`} stroke="#4a3a44" strokeWidth={5} fill="none" />
-      {/* cane: from the floor to under his hands */}
-      <path d={`M ${x + 40 * s} ${y} L ${x + 34 * s} ${y - 40 * s} q 0 -6 -5 -6`} stroke="#1a1426" strokeWidth={3 * s} fill="none" strokeLinecap="round" />
       <Figure x={x} y={y} h={BUS.man} dir={1} pose={pose} look={{ body: '#2e2632', far: '#1c1722', skin: '#4a3a3e', hat: 'peci', hatCol: '#0b0a10', rim: '#e8f1ff', rimO: 0.4 }} />
+      {/* wooden walking cane in front of his knees, crook under both hands */}
+      <path d={`M ${x + 35 * s} ${y + 1} L ${x + 31.5 * s} ${y - 41 * s}`} stroke="#6e5240" strokeWidth={2.4 * s} strokeLinecap="round" />
+      <path d={`M ${x + 35 * s} ${y + 1} L ${x + 31.5 * s} ${y - 41 * s}`} stroke="#e8f1ff" strokeWidth={0.5 * s} opacity={0.45} transform={`translate(${-0.9 * s} 0)`} />
+      <path d={`M ${x + 31.5 * s} ${y - 41 * s} q 0 ${-5 * s} ${-4.5 * s} ${-5 * s} q ${-3.6 * s} 0 ${-3.4 * s} ${3.4 * s}`} stroke="#6e5240" strokeWidth={2.4 * s} fill="none" strokeLinecap="round" />
+      <rect x={x + 33.6 * s} y={y - 1.5 * s} width={2.6 * s} height={1.5 * s} fill="#1a1426" />
+      <ellipse cx={x + 30.2 * s} cy={y - 43.4 * s} rx={3 * s} ry={2.5 * s} fill="#4a3a3e" />
+      <circle cx={x + 31.6 * s} cy={y - 45 * s} r={1.2 * s} fill="#4a3a3e" />
     </g>
   );
 };

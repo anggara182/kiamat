@@ -234,6 +234,30 @@ export const CROWD: Person[] = [
   { x: -0.68, z: 2.35, look: 'man', shirt: '#5d6a5a', face: 'right', arm: 'up', armSide: -1, ph: 1.2, bag: true },
   { x: 0.62, z: 2.2, look: 'hijab', shirt: '#3e4656', scarf: '#9a6a74', face: 'left', arm: 'up', ph: 2.5 },
 ];
+/** extra commuters that fill the lower half around the hero (between him and the 2.2 m row, and just in front at the sides) */
+export const FILL_MID: Person[] = [
+  { x: -0.44, z: 1.75, look: 'woman', shirt: '#6f4f5f', face: 'right', arm: 'phone', ph: 0.7 },
+  { x: 0.46, z: 1.8, look: 'man', shirt: '#55606a', face: 'left', arm: 'down', ph: 1.9, bag: true },
+];
+export const FILL_NEAR: Person[] = [
+  { x: -0.5, z: 1.12, look: 'man', shirt: '#3e4652', face: 'back', arm: 'down', ph: 2.1, bag: true },
+  { x: 0.53, z: 1.14, look: 'hijab', shirt: '#4d3f52', scarf: '#2b3142', face: 'back', arm: 'down', ph: 0.4 },
+];
+/** bags on the floor / held low: [x, z, kind] */
+export const BAGS: [number, number, 'pack' | 'plastic' | 'tote'][] = [[-0.2, 1.62, 'pack'], [0.24, 1.58, 'plastic'], [-0.7, 2.15, 'tote'], [0.75, 2.05, 'pack'], [0.1, 2.6, 'plastic'], [-0.35, 3.0, 'pack']];
+export const Bag: React.FC<{ x: number; z: number; kind: 'pack' | 'plastic' | 'tote'; haze?: number }> = ({ x, z, kind, haze = 0 }) => {
+  const [X, Y] = pt(x, 0, z); const s = S(z);
+  const c = (col: string) => (haze > 0 ? mix(col, '#c7c9c2', haze) : col);
+  return (
+    <g transform={`translate(${X} ${Y}) scale(${s})`}>
+      <ellipse cx={0} cy={0} rx={0.2} ry={0.035} fill="#2a2826" opacity={0.45} />
+      {kind === 'pack' && <g><rect x={-0.15} y={-0.4} width={0.3} height={0.4} rx={0.07} fill={c('#2c3440')} /><rect x={-0.11} y={-0.2} width={0.22} height={0.13} rx={0.03} fill={c('#3a4452')} /><path d="M-0.06 -0.4 Q0 -0.5 0.06 -0.4" stroke={c('#1d232b')} strokeWidth={0.02} fill="none" /></g>}
+      {kind === 'plastic' && <g><path d="M-0.14 0 L0.14 0 L0.11 -0.3 L-0.11 -0.3 Z" fill={c('#e6e3da')} /><path d="M-0.08 -0.3 Q-0.05 -0.42 -0.01 -0.3 M0.01 -0.3 Q0.05 -0.42 0.08 -0.3" stroke={c('#d2cfc5')} strokeWidth={0.018} fill="none" /><path d="M-0.06 -0.18 L0.07 -0.2" stroke={c('#bdbab0')} strokeWidth={0.01} /></g>}
+      {kind === 'tote' && <g><path d="M-0.16 0 L0.16 0 L0.14 -0.34 L-0.14 -0.34 Z" fill={c('#8a6a4a')} /><path d="M-0.08 -0.34 Q0 -0.5 0.08 -0.34" stroke={c('#5a4430')} strokeWidth={0.02} fill="none" /></g>}
+    </g>
+  );
+};
+
 /** the hero: tired office worker, centre */
 export const HERO: Person = { x: 0.0, z: 1.45, look: 'man', shirt: '#9db5cf', face: 'front', arm: 'up', armSide: 1, ph: 0, bag: true, h: 1.68 };
 /** framing commuters at the frame edges (closest, darker) */

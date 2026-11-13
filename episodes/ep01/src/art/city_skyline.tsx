@@ -337,7 +337,7 @@ const towerLit = (t: Tower, p: Pal, m: Mood, i: number) => {
 };
 
 /** minaret = hero of shot 1: 2-3 tones + rim from the glow behind */
-const Minaret: React.FC<{ p: Pal }> = ({ p }) => {
+export const Minaret: React.FC<{ p: Pal }> = ({ p }) => {
   const c = MIN.x;
   const shaft = (yb: number, yt: number, wb: number, wt: number) => `${c - wb / 2},${yb} ${c - wt / 2},${yt} ${c + wt / 2},${yt} ${c + wb / 2},${yb}`;
   const gallery = (y: number, ws: number, wg: number) => (

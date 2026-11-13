@@ -90,7 +90,7 @@ export const DuskBand: React.FC = () => {
     let z = 9;
     let i = 0;
     while (z < 260) {
-      const len = 8 + rr() * 10, hgt = 9 + rr() * 8, x0 = side < 0 ? -10 : 10.5, xb = side < 0 ? -22 : 22;
+      const len = 8 + rr() * 10, hgt = 9 + rr() * 8, x0 = side < 0 ? -10 : 9.2, xb = side < 0 ? -22 : 22;
       const z1 = z + len;
       const face = side < 0 ? PAL.facadeL : PAL.facadeR;
       rows.push(
@@ -103,7 +103,7 @@ export const DuskBand: React.FC = () => {
         </g>,
       );
       if (i % 2 === 0) {
-        const tx = side < 0 ? -8.4 : 10, [cx, cy] = kp(tx, 0, z + 2), s = K.f / (z + 2);
+        const tx = side < 0 ? -8.4 : 8.6, [cx, cy] = kp(tx, 0, z + 2), s = K.f / (z + 2);
         rows.push(
           <g key={`tr${side}${i}`} fill={mix(PAL.tree, PAL.far, Math.min(1, z / 260))}>
             <rect x={cx - 0.13 * s} y={cy - 3.2 * s} width={0.26 * s} height={3.2 * s} />
@@ -138,14 +138,14 @@ export const DuskBand: React.FC = () => {
       <rect x={0} y={K.YH - 2} width={W} height={H - K.YH + 2} fill="url(#stkRoad)" />
       {/* sidewalks */}
       <polygon points={`${P(-8.6, 0, 2)} ${P(-8.6, 0, 400)} ${P(-40, 0, 400)} ${P(-40, 0, 2)}`} fill={PAL.walk} />
-      <polygon points={`${P(6.4, 0, 2)} ${P(6.4, 0, 400)} ${P(40, 0, 400)} ${P(40, 0, 2)}`} fill={mix(PAL.walk, PAL.near, 0.35)} />
+      <polygon points={`${P(4.4, 0, 2)} ${P(4.4, 0, 400)} ${P(40, 0, 400)} ${P(40, 0, 2)}`} fill={mix(PAL.walk, PAL.near, 0.35)} />
       <polygon points={`${P(-8.6, 0, 2)} ${P(-8.6, 0, 400)} ${P(-8.4, 0, 400)} ${P(-8.4, 0, 2)}`} fill={PAL.curb} />
-      <polygon points={`${P(6.4, 0, 2)} ${P(6.4, 0, 400)} ${P(6.2, 0, 400)} ${P(6.2, 0, 2)}`} fill={PAL.curb} />
+      <polygon points={`${P(4.4, 0, 2)} ${P(4.4, 0, 400)} ${P(4.2, 0, 400)} ${P(4.2, 0, 2)}`} fill={PAL.curb} />
       {/* median strip with curb */}
       <polygon points={`${P(MX0, 0, 2)} ${P(MX0, 0, 400)} ${P(MX1, 0, 400)} ${P(MX1, 0, 2)}`} fill={PAL.median} />
       <polygon points={`${P(MX0, 0, 2)} ${P(MX0, 0.25, 2)} ${P(MX0, 0.25, 400)} ${P(MX0, 0, 400)}`} fill={PAL.curb} />
       <polygon points={`${P(MX1, 0.25, 2)} ${P(MX1, 0.25, 400)} ${P(MX0, 0.25, 400)} ${P(MX0, 0.25, 2)}`} fill="#3a3344" />
-      {dash(-3.9, 'l')}{dash(3.1, 'r')}
+      {dash(-3.9, 'l')}{dash(2.2, 'r')}
       {rows}
       {/* receding median lamp posts, then the hero lamp post */}
       {[119, 84, 49].map((z) => lampPost(LAMP.X, z, `lp${z}`, false))}
@@ -265,7 +265,7 @@ export const LampLight: React.FC<{ on: number }> = ({ on }) => {
 /** time-lapse traffic trails once the light goes (red tail-lights away on the left, white heads toward on the right) */
 export const Trails: React.FC<{ o: number; t: number }> = ({ o, t }) => {
   if (o <= 0.001) return null;
-  const lanes = [{ X: -5.4, c: '#ff4a3a' }, { X: -2.4, c: '#ff6a4a' }, { X: 1.6, c: '#fff1d0' }, { X: 4.6, c: '#ffe2b0' }];
+  const lanes = [{ X: -5.4, c: '#ff4a3a' }, { X: -2.4, c: '#ff6a4a' }, { X: 1.1, c: '#fff1d0' }, { X: 3.2, c: '#ffe2b0' }];
   const strip = (X: number, z0: number, z1: number, w: number) => `${P(X - w, 0.7, z0)} ${P(X + w, 0.7, z0)} ${P(X + w, 0.7, z1)} ${P(X - w, 0.7, z1)}`;
   return (
     <g opacity={o}>
@@ -295,9 +295,9 @@ export const Railing: React.FC = () => (
 /* time-lapse pedestrians on the right sidewalk: walking in depth (back/front views), fast, with
  * ghost trails. Positions run on the ON-TWOS clock (t2). */
 const rw = rng(71);
-const WALK = Array.from({ length: 26 }, () => ({ X: 7.0 + rw() * 2.8, z0: rw(), v: (rw() < 0.5 ? -1 : 1) * (5 + rw() * 3), col: rw(), hat: rw() < 0.3 ? 'hijab' as const : rw() < 0.3 ? 'cap' as const : null, bag: rw() < 0.3, ph: rw() * 6 }));
+const WALK = Array.from({ length: 22 }, () => ({ X: 5.0 + rw() * 1.7, z0: rw(), v: (rw() < 0.5 ? -1 : 1) * (4 + rw() * 2.5), col: rw(), hat: rw() < 0.3 ? 'hijab' as const : rw() < 0.3 ? 'cap' as const : null, bag: rw() < 0.3, ph: rw() * 6 }));
 export const Pedestrians: React.FC<{ t2: number; light: number }> = ({ t2, light }) => {
-  const Z0 = 11, Z1 = 70;
+  const Z0 = 8.6, Z1 = 52;
   const items = WALK.map((w, i) => {
     const span = Z1 - Z0;
     const z = Z0 + ((((w.z0 * span + w.v * t2) % span) + span) % span);

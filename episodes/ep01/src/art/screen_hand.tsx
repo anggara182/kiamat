@@ -58,9 +58,11 @@ export const HoldBack: React.FC<{ rim?: string }> = ({ rim = '#fff1d6' }) => {
 };
 
 /** Parts IN FRONT of the phone: three fingertips wrapping the left edge (mitten, 2 separations), thenar + thumb on the right. */
-export const HoldFront: React.FC<{ id: string; flick?: number; rim?: string }> = ({ id, flick = 0, rim = '#fff1d6' }) => {
+export const HoldFront: React.FC<{ id: string; flick?: number; rim?: string; fidget?: number }> = ({ id, flick = 0, rim = '#fff1d6', fidget = 0 }) => {
   const { skin, shade, lit, deep } = SKIN;
-  const fingers = 'M-322 74 C-310 60 -282 58 -266 76 C-234 92 -234 176 -264 192 C-236 206 -236 290 -264 304 C-238 318 -240 392 -270 408 C-288 428 -312 428 -326 414 C-338 300 -338 180 -322 74 Z';
+  // fingertips are not identical and never frozen: each lobe has its own size and a small independent shift (pass a twos clock)
+  const a = 4 * Math.sin(fidget * 2.3), b = 5 * Math.sin(fidget * 1.7 + 2), c = 4 * Math.sin(fidget * 2.9 + 4);
+  const fingers = `M-322 74 C-310 60 -282 56 -266 74 C${-228 + a} 88 ${-228 + a} 178 -264 194 C${-238 + b} 210 ${-238 + b} 288 -266 302 C${-244 + c} 318 ${-246 + c} 386 -272 404 C-290 426 -314 426 -328 410 C-340 300 -338 180 -322 74 Z`;
   const thenar = 'M332 664 C354 544 352 404 320 300 C302 252 262 238 228 256 C214 300 222 420 236 520 C246 600 272 652 332 664 Z';
   return (
     <g>
@@ -133,39 +135,50 @@ export const ThumbECU: React.FC<{ id: string; Lt?: number; rim?: string }> = ({ 
 };
 
 /**
- * Hand in a suit sleeve gripping an object edge, side/top view. Grip point at (0,0), the arm comes from -x.
- * Draw `part="under"` (fingers below the object) before the object and `part="over"` (sleeve, back of hand, thumb) after it.
- * grip 0..1 closes the thumb onto the object.
+ * Hand in a suit sleeve gripping an object edge, seen from the side/slightly below. Grip point at (0,0), the arm comes from -x.
+ * Draw `part="under"` (curled fingers below the object) before the object and `part="over"` (sleeve, back of hand, thumb) after it.
+ * grip 0..1 closes the thumb onto the object; open 0..1 spreads the fingers away from it (reaching, letting go).
  */
-export const SuitHand: React.FC<{ part: 'under' | 'over'; grip?: number; skin?: string; shade?: string; suit?: string; suitD?: string; rim?: string }> = ({ part, grip = 1, skin = SKIN.skin, shade = SKIN.shade, suit = '#1f2633', suitD = '#141923', rim = '#f6efe0' }) => {
+export const SuitHand: React.FC<{ part: 'under' | 'over'; grip?: number; open?: number; skin?: string; shade?: string; suit?: string; suitD?: string; rim?: string }> = ({ part, grip = 1, open = 0, skin = SKIN.skin, shade = SKIN.shade, suit = '#1f2633', suitD = '#141923', rim = '#f6efe0' }) => {
+  const deep = SKIN.deep;
   if (part === 'under') {
+    // three curled fingertips under the edge (index, middle, ring), two separations; they drop away when open
+    const tips = [
+      { x: 70, y: 52, r: 22 }, { x: 44, y: 70, r: 22 }, { x: 12, y: 80, r: 20 },
+    ];
     return (
-      <g>
-        {/* curled fingers under the edge, mitten with one separation */}
-        <path d="M-70 18 C-40 30 20 34 64 40 C92 46 96 82 66 90 C20 98 -40 92 -86 70 Z" fill={skin} />
-        <path d="M-80 66 C-30 88 30 92 70 88" stroke={shade} strokeWidth={8} fill="none" opacity={0.7} />
-        <path d="M60 46 C36 60 34 74 52 88" stroke={SKIN.deep} strokeWidth={3.5} fill="none" opacity={0.6} />
+      <g transform={`rotate(${open * 18} -90 30)`}>
+        <path d="M-96 26 C-60 20 0 22 40 26 C78 30 98 46 92 66 C86 90 50 102 0 100 C-40 98 -80 88 -104 70 Z" fill={skin} />
+        {tips.map((f, i) => <circle key={i} cx={f.x} cy={f.y} r={f.r} fill={skin} />)}
+        <path d="M-100 74 C-50 96 10 104 60 92" stroke={shade} strokeWidth={9} fill="none" opacity={0.65} />
+        <path d="M58 40 C46 52 40 64 46 84 M26 50 C16 64 14 80 24 98" stroke={deep} strokeWidth={3.5} fill="none" opacity={0.65} strokeLinecap="round" />
+        {tips.map((f, i) => <path key={i} d={`M${f.x + f.r * 0.2} ${f.y - f.r * 0.9} q${f.r * 0.7} ${f.r * 0.2} ${f.r * 0.8} ${f.r * 0.8}`} stroke={SKIN.lit} strokeWidth={4} fill="none" opacity={0.6} />)}
       </g>
     );
   }
-  const ty = -26 + (1 - grip) * -34;
+  const ty = -24 - (1 - grip) * 30;
   return (
     <g>
-      {/* suit sleeve + shirt cuff */}
-      <path d="M-760 -96 L-196 -78 L-186 84 L-760 110 Z" fill={suit} />
+      {/* suit sleeve with a fold, shirt cuff */}
+      <path d="M-760 -96 L-196 -80 L-186 84 L-760 110 Z" fill={suit} />
       <path d="M-760 60 L-186 50 L-186 84 L-760 110 Z" fill={suitD} />
-      <path d="M-760 -96 L-196 -78" stroke={rim} strokeWidth={3} opacity={0.35} />
-      <path d="M-200 -74 L-150 -70 L-142 76 L-196 80 Z" fill="#e9e6df" />
+      <path d="M-520 -88 Q-470 -10 -500 100 M-330 -84 Q-300 0 -320 94" stroke={suitD} strokeWidth={8} fill="none" opacity={0.7} />
+      <path d="M-760 -96 L-196 -80" stroke={rim} strokeWidth={3} opacity={0.35} />
+      <path d="M-200 -76 L-150 -72 L-142 76 L-196 80 Z" fill="#e9e6df" />
       <path d="M-196 54 L-142 52 L-142 76 L-196 80 Z" fill="#b9b5ad" />
-      {/* back of the hand */}
-      <path d="M-156 -66 C-90 -84 -20 -70 20 -36 C44 -14 44 18 22 34 C-20 52 -100 56 -150 66 Z" fill={skin} />
-      <path d="M-150 40 C-100 36 -30 34 22 30 C0 50 -80 58 -150 66 Z" fill={shade} opacity={0.7} />
-      <path d="M-140 -60 C-80 -76 -20 -64 16 -36" stroke={rim} strokeWidth={3.5} fill="none" opacity={0.55} />
-      {[-90, -54, -20].map((x) => <ellipse key={x} cx={x} cy={-46 + (x + 90) * 0.12} rx={11} ry={6} fill={shade} opacity={0.35} />)}
-      {/* thumb pressing on the top of the object */}
-      <path d={`M-70 -40 C-30 ${ty - 30} 30 ${ty - 30} 74 ${ty - 18} C94 ${ty - 12} 94 ${ty + 14} 72 ${ty + 18} C30 ${ty + 22} -20 ${ty + 18} -60 4 Z`} fill={skin} />
-      <path d={`M-40 ${ty - 22} C0 ${ty - 30} 40 ${ty - 26} 74 ${ty - 18}`} stroke={rim} strokeWidth={3} fill="none" opacity={0.6} />
-      <rect x={46} y={ty - 16} width={34} height={22} rx={10} fill={SKIN.nail} opacity={0.9} />
+      {/* wrist + back of the hand, knuckle bumps along the front, index finger curling down toward the edge */}
+      <path d="M-150 -64 C-118 -78 -70 -82 -40 -76 C-28 -86 -10 -86 0 -74 C10 -82 26 -78 32 -64 C44 -56 52 -40 48 -22 C58 -6 56 16 44 30 C30 46 0 50 -30 48 C-80 50 -120 58 -150 64 Z" fill={skin} />
+      <path d="M-150 40 C-100 34 -40 34 20 36 C0 50 -80 56 -150 64 Z" fill={shade} opacity={0.65} />
+      <path d="M-150 -64 C-118 -78 -70 -82 -40 -76 C-28 -86 -10 -86 0 -74 C10 -82 26 -78 32 -64" stroke={rim} strokeWidth={3.5} fill="none" opacity={0.55} />
+      <path d="M-40 -74 C-46 -50 -44 -30 -36 -14 M0 -72 C-4 -50 -2 -32 6 -18" stroke={shade} strokeWidth={3} fill="none" opacity={0.55} />
+      <path d="M48 -22 C64 -4 66 18 54 36" stroke={deep} strokeWidth={3} fill="none" opacity={0.5} />
+      <path d="M-146 -40 C-138 -10 -138 20 -146 44" stroke={shade} strokeWidth={4} fill="none" opacity={0.5} />
+      {/* thumb pressing on top of the object: two segments, a joint crease, a nail */}
+      <path d={`M-74 -36 C-40 ${ty - 30} 20 ${ty - 34} 56 ${ty - 24} C80 ${ty - 18} 94 ${ty - 6} 92 ${ty + 8} C90 ${ty + 20} 74 ${ty + 24} 56 ${ty + 22} C20 ${ty + 22} -26 ${ty + 20} -64 4 Z`} fill={skin} />
+      <path d={`M-48 ${ty - 22} C-10 ${ty - 32} 30 ${ty - 30} 56 ${ty - 24}`} stroke={rim} strokeWidth={3} fill="none" opacity={0.6} />
+      <path d={`M24 ${ty - 26} Q18 ${ty - 2} 24 ${ty + 22}`} stroke={deep} strokeWidth={3} fill="none" opacity={0.5} />
+      <path d={`M52 ${ty - 18} Q76 ${ty - 18} 84 ${ty - 4} Q84 ${ty + 8} 70 ${ty + 8} Q52 ${ty + 8} 50 ${ty - 4} Z`} fill={SKIN.nail} />
+      <path d={`M56 ${ty - 14} Q72 ${ty - 16} 80 ${ty - 6}`} stroke={SKIN.nailHi} strokeWidth={3} fill="none" opacity={0.8} />
     </g>
   );
 };

@@ -1,18 +1,166 @@
 {
  "id": "EP01",
- "title": "The World We Know",
+ "title": "The Beginning of the End",
+ "series": "The Last Days",
+ "chapter": 1,
  "fps": 24,
  "width": 1080,
  "height": 1920,
- "durationSec": 71.855,
+ "durationSec": 76.045,
  "accent": "#d9a441",
- "timingSource": "ai33 eleven_v3 transcript (task e97a2cb1), atempo x1.10",
+ "timingSource": "ai33 eleven_v3 transcript (task f56c309e), gap>0.9s cut to 0.5s, atempo x1.10",
  "audio": true,
  "shots": [
   {
    "id": 1,
    "start": 0.0,
-   "end": 1.971,
+   "end": 2.045,
+   "act": 1,
+   "set": "home",
+   "owner": "H",
+   "framing": "HOOK. Extreme close-up: a phone lying on a batik blanket beside a pillow in a dark pre-dawn bedroom",
+   "camera": "Slow push-in, slight handheld",
+   "vo": "The world doesn't end with a bang.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 0.418,
+     "end": 0.473
+    },
+    {
+     "text": "world",
+     "highlight": false,
+     "start": 0.527,
+     "end": 0.709
+    },
+    {
+     "text": "doesn't",
+     "highlight": false,
+     "start": 0.764,
+     "end": 1.0
+    },
+    {
+     "text": "end",
+     "highlight": false,
+     "start": 1.055,
+     "end": 1.164
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 1.2,
+     "end": 1.291
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 1.327,
+     "end": 1.382
+    },
+    {
+     "text": "bang.",
+     "highlight": true,
+     "start": 1.436,
+     "end": 1.764
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The phone screen flooding with BREAKING notifications (clear, readable headlines), buzzing against the blanket; a sleeping head of hair at frame edge",
+   "notes": "Frame 0 must already be alive: screen lit, first notification sliding in. Headlines (exact text in STYLE.md \"Headlines\"). Buzz shake on ones; sleeper stirs on twos.",
+   "sync": [
+    "world",
+    "end",
+    "bang"
+   ],
+   "was_v2": null
+  },
+  {
+   "id": 2,
+   "start": 2.045,
+   "end": 5.173,
+   "act": 1,
+   "set": "home",
+   "owner": "H",
+   "framing": "HOOK. Close: a hand slaps the phone silent; dawn minaret in the barred window",
+   "camera": "Locked, small jolt on the slap",
+   "vo": "It ends slowly… one ordinary morning at a time.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 2.145,
+     "end": 2.218
+    },
+    {
+     "text": "ends",
+     "highlight": false,
+     "start": 2.273,
+     "end": 2.473
+    },
+    {
+     "text": "slowly…",
+     "highlight": false,
+     "start": 2.564,
+     "end": 2.927
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 3.4,
+     "end": 3.527
+    },
+    {
+     "text": "ordinary",
+     "highlight": false,
+     "start": 3.6,
+     "end": 3.964
+    },
+    {
+     "text": "morning",
+     "highlight": true,
+     "start": 4.018,
+     "end": 4.255
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 4.273,
+     "end": 4.327
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 4.382,
+     "end": 4.418
+    },
+    {
+     "text": "time.",
+     "highlight": false,
+     "start": 4.473,
+     "end": 4.782
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The young man's hand shooting out from the blanket and slapping the buzzing phone; the screen goes dark; the window behind shows the minaret against violet dawn",
+   "notes": "Old S04 adapted. The slap must be decisive and land exactly on \"slowly\". After the slap: stillness, dawn light grows.",
+   "sync": [
+    "slowly"
+   ],
+   "was_v2": 4
+  },
+  {
+   "id": 3,
+   "start": 5.173,
+   "end": 7.064,
    "act": 1,
    "set": "city",
    "owner": "C",
@@ -25,51 +173,52 @@
     {
      "text": "This",
      "highlight": false,
-     "start": 0.236,
-     "end": 0.382
+     "start": 5.273,
+     "end": 5.418
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 0.418,
-     "end": 0.6
+     "start": 5.473,
+     "end": 5.691
     },
     {
      "text": "wakes",
      "highlight": false,
-     "start": 0.691,
-     "end": 0.927
+     "start": 5.745,
+     "end": 5.964
     },
     {
      "text": "before",
      "highlight": false,
-     "start": 0.945,
-     "end": 1.2
+     "start": 6.0,
+     "end": 6.255
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 1.218,
-     "end": 1.327
+     "start": 6.291,
+     "end": 6.382
     },
     {
      "text": "sun.",
      "highlight": true,
-     "start": 1.382,
-     "end": 1.655
+     "start": 6.455,
+     "end": 6.764
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "The mosque minaret against the dawn glow",
-   "notes": "Establishing. Short. (was S01)",
-   "was": "S01"
+   "hero": "The minaret against the dawn glow",
+   "notes": "Old S01. Add birds crossing the sky and a few windows lighting.",
+   "sync": [],
+   "was_v2": 1
   },
   {
-   "id": 2,
-   "start": 1.971,
-   "end": 3.516,
+   "id": 4,
+   "start": 7.064,
+   "end": 8.664,
    "act": 1,
    "set": "home",
    "owner": "H",
@@ -82,43 +231,46 @@
     {
      "text": "Kitchen",
      "highlight": false,
-     "start": 2.091,
-     "end": 2.327
+     "start": 7.164,
+     "end": 7.436
     },
     {
      "text": "lights",
      "highlight": false,
-     "start": 2.382,
-     "end": 2.564
+     "start": 7.491,
+     "end": 7.727
     },
     {
      "text": "flicker",
      "highlight": false,
-     "start": 2.655,
-     "end": 2.891
+     "start": 7.764,
+     "end": 8.036
     },
     {
      "text": "on.",
      "highlight": false,
-     "start": 2.982,
-     "end": 3.182
+     "start": 8.127,
+     "end": 8.364
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "A mother in a headscarf, side/back view, her hand on the switch; the fluorescent tube flickers on, a pot starts to steam",
-   "notes": "Tiny kampung house kitchen: tiled wall, gas stove, rice cooker. Light flicker on ones; her motion on twos.",
-   "was": null
+   "hero": "The mother at the switch; fluorescent tube flickers on; pot steams",
+   "notes": "Old S02. Switch click exactly on \"lights\", flicker right after.",
+   "sync": [
+    "lights"
+   ],
+   "was_v2": 2
   },
   {
-   "id": 3,
-   "start": 3.516,
-   "end": 5.044,
+   "id": 5,
+   "start": 8.664,
+   "end": 10.191,
    "act": 1,
    "set": "home",
    "owner": "H",
-   "framing": "Wide, a narrow carport at dawn: a father warms up a motorbike",
+   "framing": "Wide, carport at dawn: a father kick-starts a scooter, kid in a big helmet waits",
    "camera": "Slow lateral",
    "vo": "Engines cough awake.",
    "voKind": "narration",
@@ -127,38 +279,42 @@
     {
      "text": "Engines",
      "highlight": false,
-     "start": 3.636,
-     "end": 3.964
+     "start": 8.764,
+     "end": 9.127
     },
     {
      "text": "cough",
      "highlight": false,
-     "start": 4.055,
-     "end": 4.273
+     "start": 9.182,
+     "end": 9.4
     },
     {
      "text": "awake.",
      "highlight": false,
-     "start": 4.345,
-     "end": 4.673
+     "start": 9.455,
+     "end": 9.8
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "A father in a work jacket kick-starting a scooter; a small kid with a too-big helmet waits at the door",
-   "notes": "Exhaust puff, alley behind with other houses waking. Max 2 figures.",
-   "was": null
+   "hero": "Father stomping the kick-starter; kid at the door",
+   "notes": "Old S03. Stomp on \"cough\", engine catches on \"awake\".",
+   "sync": [
+    "cough",
+    "awake"
+   ],
+   "was_v2": 3
   },
   {
-   "id": 4,
-   "start": 5.044,
-   "end": 7.971,
+   "id": 6,
+   "start": 10.191,
+   "end": 13.209,
    "act": 1,
-   "set": "home",
-   "owner": "H",
-   "framing": "Close, a bedroom: a hand slaps a phone alarm, a minaret in the window",
-   "camera": "Locked",
+   "set": "city",
+   "owner": "C",
+   "framing": "NEW. Medium-wide: the minaret with loudspeakers above a kampung alley at dawn; an old man in a sarong walks toward the mosque",
+   "camera": "Slow tilt down from the minaret to the alley",
    "vo": "The call to prayer rises over a hundred phone alarms.",
    "voKind": "narration",
    "speaker": "narr",
@@ -166,75 +322,80 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 5.164,
-     "end": 5.218
+     "start": 10.291,
+     "end": 10.345
     },
     {
      "text": "call",
      "highlight": false,
-     "start": 5.273,
-     "end": 5.455
+     "start": 10.4,
+     "end": 10.582
     },
     {
      "text": "to",
      "highlight": false,
-     "start": 5.491,
-     "end": 5.582
+     "start": 10.618,
+     "end": 10.709
     },
     {
      "text": "prayer",
      "highlight": true,
-     "start": 5.636,
-     "end": 5.855
+     "start": 10.764,
+     "end": 11.055
     },
     {
      "text": "rises",
      "highlight": false,
-     "start": 5.945,
-     "end": 6.327
+     "start": 11.109,
+     "end": 11.473
     },
     {
      "text": "over",
      "highlight": false,
-     "start": 6.382,
-     "end": 6.545
+     "start": 11.545,
+     "end": 11.691
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 6.6,
-     "end": 6.636
+     "start": 11.745,
+     "end": 11.782
     },
     {
      "text": "hundred",
      "highlight": false,
-     "start": 6.691,
-     "end": 6.927
+     "start": 11.818,
+     "end": 12.073
     },
     {
      "text": "phone",
      "highlight": false,
-     "start": 7.0,
-     "end": 7.182
+     "start": 12.145,
+     "end": 12.309
     },
     {
      "text": "alarms.",
      "highlight": false,
-     "start": 7.218,
-     "end": 7.673
+     "start": 12.364,
+     "end": 12.8
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "A sleepy young man's hand reaching from a blanket to silence a glowing phone; through the window, the minaret silhouette against the dawn",
-   "notes": "Phone glow cool, window warm-violet dawn. Face hidden in pillow/blanket.",
-   "was": null
+   "hero": "The minaret with loudspeakers in the dawn sky; below, an old man in sarong and peci walking with a prayer mat over his shoulder; windows around glow with phone screens",
+   "notes": "Birds lift off the minaret on \"rises\"; minaret lamp on \"prayer\"; small cool phone glows pop in windows on \"hundred\". The man walks on twos.",
+   "sync": [
+    "prayer",
+    "rises",
+    "hundred"
+   ],
+   "was_v2": null
   },
   {
-   "id": 5,
-   "start": 7.971,
-   "end": 11.225,
+   "id": 7,
+   "start": 13.209,
+   "end": 16.609,
    "act": 1,
    "set": "street",
    "owner": "S",
@@ -247,69 +408,72 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 8.091,
-     "end": 8.255
+     "start": 13.309,
+     "end": 13.455
     },
     {
      "text": "seven,",
      "highlight": false,
-     "start": 8.309,
-     "end": 8.618
+     "start": 13.527,
+     "end": 13.818
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 8.873,
-     "end": 8.945
+     "start": 14.073,
+     "end": 14.164
     },
     {
      "text": "streets",
      "highlight": false,
-     "start": 9.0,
-     "end": 9.236
+     "start": 14.218,
+     "end": 14.455
     },
     {
      "text": "are",
      "highlight": false,
-     "start": 9.255,
-     "end": 9.364
+     "start": 14.491,
+     "end": 14.582
     },
     {
      "text": "full.",
      "highlight": false,
-     "start": 9.418,
-     "end": 9.655
+     "start": 14.655,
+     "end": 14.909
     },
     {
      "text": "Millions",
      "highlight": false,
-     "start": 10.109,
-     "end": 10.436
+     "start": 15.382,
+     "end": 15.709
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 10.473,
-     "end": 10.509
+     "start": 15.745,
+     "end": 15.818
     },
     {
      "text": "people.",
      "highlight": false,
-     "start": 10.6,
-     "end": 10.891
+     "start": 15.873,
+     "end": 16.164
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "The commuter train over a river of motorbike riders",
-   "notes": "(was S02) Riders now animate on twos.",
-   "was": "S02"
+   "hero": "The train over a river of motorbike riders",
+   "notes": "Old S05. Train passes during \"Millions\".",
+   "sync": [
+    "Millions"
+   ],
+   "was_v2": 5
   },
   {
-   "id": 6,
-   "start": 11.225,
-   "end": 13.589,
+   "id": 8,
+   "start": 16.609,
+   "end": 19.082,
    "act": 1,
    "set": "train",
    "owner": "T",
@@ -322,483 +486,472 @@
     {
      "text": "One",
      "highlight": false,
-     "start": 11.345,
-     "end": 11.473
+     "start": 16.709,
+     "end": 16.818
     },
     {
      "text": "goal:",
      "highlight": false,
-     "start": 11.564,
-     "end": 11.818
+     "start": 16.909,
+     "end": 17.182
     },
     {
      "text": "survive",
      "highlight": true,
-     "start": 12.236,
-     "end": 12.655
+     "start": 17.582,
+     "end": 18.018
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 12.691,
-     "end": 12.8
+     "start": 18.091,
+     "end": 18.2
     },
     {
      "text": "more",
      "highlight": false,
-     "start": 12.873,
-     "end": 13.036
+     "start": 18.255,
+     "end": 18.418
     },
     {
      "text": "day.",
      "highlight": false,
-     "start": 13.073,
-     "end": 13.309
+     "start": 18.473,
+     "end": 18.727
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "Commuters standing shoulder to shoulder holding straps; one tired office worker in the centre, eyes half closed",
-   "notes": "Faces simple (no detail); swaying on twos; window light strobing on ones.",
-   "was": null
+   "hero": "Commuters holding straps; the tired office worker jolts awake",
+   "notes": "Old S06. Jolt on \"survive\".",
+   "sync": [
+    "survive"
+   ],
+   "was_v2": 6
   },
   {
-   "id": 7,
-   "start": 13.589,
-   "end": 17.553,
+   "id": 9,
+   "start": 19.082,
+   "end": 20.682,
    "act": 1,
    "set": "street",
    "owner": "S",
    "framing": "Low angle up the unfinished tower; a worker on a high beam",
    "camera": "Tilt up",
-   "vo": "The towers keep rising. Every year, a new one claims the sky.",
+   "vo": "The towers keep rising.",
    "voKind": "narration",
    "speaker": "narr",
    "words": [
     {
      "text": "The",
      "highlight": false,
-     "start": 13.709,
-     "end": 13.782
+     "start": 19.182,
+     "end": 19.236
     },
     {
      "text": "towers",
      "highlight": true,
-     "start": 13.836,
-     "end": 14.2
+     "start": 19.309,
+     "end": 19.673
     },
     {
      "text": "keep",
      "highlight": false,
-     "start": 14.236,
-     "end": 14.4
+     "start": 19.727,
+     "end": 19.873
     },
     {
      "text": "rising.",
      "highlight": false,
-     "start": 14.455,
-     "end": 14.818
-    },
-    {
-     "text": "Every",
-     "highlight": false,
-     "start": 15.291,
-     "end": 15.473
-    },
-    {
-     "text": "year,",
-     "highlight": false,
-     "start": 15.564,
-     "end": 15.727
-    },
-    {
-     "text": "a",
-     "highlight": false,
-     "start": 15.855,
-     "end": 15.891
-    },
-    {
-     "text": "new",
-     "highlight": false,
-     "start": 15.945,
-     "end": 16.091
-    },
-    {
-     "text": "one",
-     "highlight": false,
-     "start": 16.145,
-     "end": 16.236
-    },
-    {
-     "text": "claims",
-     "highlight": false,
-     "start": 16.327,
-     "end": 16.6
-    },
-    {
-     "text": "the",
-     "highlight": false,
-     "start": 16.636,
-     "end": 16.727
-    },
-    {
-     "text": "sky.",
-     "highlight": false,
-     "start": 16.782,
-     "end": 17.091
+     "start": 19.945,
+     "end": 20.364
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "A construction worker in a hard hat silhouetted on a steel beam near the crane",
-   "notes": "(was S03 part 1) Add the worker as hero.",
-   "was": "S03a"
+   "hero": "The construction worker on the beam, BIGGER in frame than v2 (hero ≥ 20% of frame height)",
+   "notes": "Old S07. Crane hook clank on \"rising\".",
+   "sync": [
+    "rising"
+   ],
+   "was_v2": 7
   },
   {
-   "id": 8,
-   "start": 17.553,
-   "end": 22.298,
+   "id": 10,
+   "start": 20.682,
+   "end": 23.118,
    "act": 1,
    "set": "street",
    "owner": "S",
    "framing": "Top-down over a crossing, people as dots",
    "camera": "Locked top-down, very slow rotation",
-   "vo": "From the top, the people below are just dots. Moving. Never stopping.",
+   "vo": "From the top, the people below are just dots.",
    "voKind": "narration",
    "speaker": "narr",
    "words": [
     {
      "text": "From",
      "highlight": false,
-     "start": 17.673,
-     "end": 17.8
+     "start": 20.782,
+     "end": 20.891
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 17.836,
-     "end": 17.909
+     "start": 20.927,
+     "end": 20.982
     },
     {
      "text": "top,",
      "highlight": false,
-     "start": 17.964,
-     "end": 18.291
+     "start": 21.055,
+     "end": 21.255
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 18.636,
-     "end": 18.709
+     "start": 21.309,
+     "end": 21.382
     },
     {
      "text": "people",
      "highlight": false,
-     "start": 18.764,
-     "end": 19.0
+     "start": 21.418,
+     "end": 21.636
     },
     {
      "text": "below",
      "highlight": false,
-     "start": 19.036,
-     "end": 19.436
+     "start": 21.673,
+     "end": 21.945
     },
     {
      "text": "are",
      "highlight": false,
-     "start": 19.491,
-     "end": 19.582
+     "start": 21.982,
+     "end": 22.091
     },
     {
      "text": "just",
      "highlight": false,
-     "start": 19.636,
-     "end": 19.8
+     "start": 22.145,
+     "end": 22.309
     },
     {
      "text": "dots.",
      "highlight": false,
-     "start": 19.855,
-     "end": 20.255
-    },
-    {
-     "text": "Moving.",
-     "highlight": false,
-     "start": 20.709,
-     "end": 21.018
-    },
-    {
-     "text": "Never",
-     "highlight": false,
-     "start": 21.436,
-     "end": 21.6
-    },
-    {
-     "text": "stopping.",
-     "highlight": false,
-     "start": 21.691,
-     "end": 22.055
+     "start": 22.382,
+     "end": 22.745
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
    "hero": "Tiny people streaming across the zebra crossing",
-   "notes": "(was S03 part 2) Dots move on twos.",
-   "was": "S03b"
+   "notes": "Old S08.",
+   "sync": [],
+   "was_v2": 8
   },
   {
-   "id": 9,
-   "start": 22.298,
-   "end": 31.116,
+   "id": 11,
+   "start": 23.118,
+   "end": 27.209,
    "act": 1,
    "set": "screen",
    "owner": "P",
-   "framing": "Over-the-shoulder, a hand holding a phone in the train",
-   "camera": "Locked, slight handheld",
-   "vo": "The news moves faster now. An earthquake here. A life taken over almost nothing, there. A man trusted with everything… betrays it all.",
+   "framing": "Over-the-shoulder: a hand holding a phone in the train; the feed jumps to big headline cards",
+   "camera": "Locked, slight handheld, punch-in on each new card",
+   "vo": "The news moves faster now. An earthquake here. A war there.",
    "voKind": "narration",
    "speaker": "narr",
    "words": [
     {
      "text": "The",
      "highlight": false,
-     "start": 22.418,
-     "end": 22.491
+     "start": 23.218,
+     "end": 23.309
     },
     {
      "text": "news",
      "highlight": false,
-     "start": 22.545,
-     "end": 22.782
+     "start": 23.364,
+     "end": 23.636
     },
     {
      "text": "moves",
      "highlight": false,
-     "start": 22.836,
-     "end": 23.055
+     "start": 23.691,
+     "end": 23.891
     },
     {
      "text": "faster",
      "highlight": false,
-     "start": 23.127,
-     "end": 23.436
+     "start": 23.945,
+     "end": 24.255
     },
     {
      "text": "now.",
      "highlight": false,
-     "start": 23.509,
-     "end": 23.709
+     "start": 24.309,
+     "end": 24.509
     },
     {
      "text": "An",
      "highlight": false,
-     "start": 24.182,
-     "end": 24.255
+     "start": 24.891,
+     "end": 25.0
     },
     {
      "text": "earthquake",
      "highlight": true,
-     "start": 24.291,
-     "end": 24.709
+     "start": 25.055,
+     "end": 25.455
     },
     {
      "text": "here.",
      "highlight": false,
-     "start": 24.745,
-     "end": 24.945
+     "start": 25.491,
+     "end": 25.691
     },
     {
      "text": "A",
      "highlight": false,
-     "start": 25.382,
-     "end": 25.418
+     "start": 26.127,
+     "end": 26.182
     },
     {
-     "text": "life",
-     "highlight": false,
-     "start": 25.473,
-     "end": 25.691
-    },
-    {
-     "text": "taken",
-     "highlight": false,
-     "start": 25.745,
-     "end": 25.964
-    },
-    {
-     "text": "over",
-     "highlight": false,
-     "start": 26.036,
-     "end": 26.218
-    },
-    {
-     "text": "almost",
-     "highlight": false,
-     "start": 26.273,
-     "end": 26.545
-    },
-    {
-     "text": "nothing,",
-     "highlight": false,
-     "start": 26.6,
-     "end": 26.927
+     "text": "war",
+     "highlight": true,
+     "start": 26.236,
+     "end": 26.473
     },
     {
      "text": "there.",
      "highlight": false,
-     "start": 27.418,
-     "end": 27.691
-    },
-    {
-     "text": "A",
-     "highlight": false,
-     "start": 28.127,
-     "end": 28.182
-    },
-    {
-     "text": "man",
-     "highlight": false,
-     "start": 28.236,
-     "end": 28.491
-    },
-    {
-     "text": "trusted",
-     "highlight": false,
-     "start": 28.545,
-     "end": 28.873
-    },
-    {
-     "text": "with",
-     "highlight": false,
-     "start": 28.909,
-     "end": 29.055
-    },
-    {
-     "text": "everything…",
-     "highlight": false,
-     "start": 29.127,
-     "end": 29.564
-    },
-    {
-     "text": "betrays",
-     "highlight": true,
-     "start": 30.0,
-     "end": 30.345
-    },
-    {
-     "text": "it",
-     "highlight": false,
-     "start": 30.382,
-     "end": 30.455
-    },
-    {
-     "text": "all.",
-     "highlight": false,
-     "start": 30.545,
-     "end": 30.709
+     "start": 26.545,
+     "end": 26.8
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "The phone feed with generic cards",
-   "notes": "(was S04) Hand/thumb on twos; feed scroll on ones.",
-   "was": "S04"
+   "hero": "Large, clearly readable headline cards (see STYLE.md \"Headlines\")",
+   "notes": "Old S09 reworked. Card change on \"earthquake\" and \"war\". Headlines must be readable at phone size.",
+   "sync": [
+    "earthquake",
+    "war"
+   ],
+   "was_v2": 9
   },
   {
-   "id": 10,
-   "start": 31.116,
-   "end": 35.789,
+   "id": 12,
+   "start": 27.209,
+   "end": 35.409,
+   "act": 1,
+   "set": "screen",
+   "owner": "P",
+   "framing": "NEW. Full-screen headline cards slamming in one after another (the phone screen fills the frame)",
+   "camera": "Small punch-in on each card",
+   "vo": "Whole peoples wiped out, while the world watches. A life taken over almost nothing. A man trusted with everything… betrays it all.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Whole",
+     "highlight": false,
+     "start": 27.309,
+     "end": 27.509
+    },
+    {
+     "text": "peoples",
+     "highlight": false,
+     "start": 27.564,
+     "end": 27.909
+    },
+    {
+     "text": "wiped",
+     "highlight": false,
+     "start": 27.964,
+     "end": 28.182
+    },
+    {
+     "text": "out,",
+     "highlight": false,
+     "start": 28.291,
+     "end": 28.455
+    },
+    {
+     "text": "while",
+     "highlight": false,
+     "start": 28.817,
+     "end": 28.945
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 28.981,
+     "end": 29.055
+    },
+    {
+     "text": "world",
+     "highlight": false,
+     "start": 29.108,
+     "end": 29.364
+    },
+    {
+     "text": "watches.",
+     "highlight": false,
+     "start": 29.418,
+     "end": 29.855
+    },
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 30.309,
+     "end": 30.364
+    },
+    {
+     "text": "life",
+     "highlight": false,
+     "start": 30.418,
+     "end": 30.655
+    },
+    {
+     "text": "taken",
+     "highlight": false,
+     "start": 30.709,
+     "end": 30.945
+    },
+    {
+     "text": "over",
+     "highlight": false,
+     "start": 31.018,
+     "end": 31.218
+    },
+    {
+     "text": "almost",
+     "highlight": false,
+     "start": 31.291,
+     "end": 31.582
+    },
+    {
+     "text": "nothing.",
+     "highlight": false,
+     "start": 31.636,
+     "end": 31.964
+    },
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 32.418,
+     "end": 32.455
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 32.509,
+     "end": 32.745
+    },
+    {
+     "text": "trusted",
+     "highlight": false,
+     "start": 32.818,
+     "end": 33.145
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 33.182,
+     "end": 33.309
+    },
+    {
+     "text": "everything…",
+     "highlight": false,
+     "start": 33.382,
+     "end": 33.927
+    },
+    {
+     "text": "betrays",
+     "highlight": true,
+     "start": 34.255,
+     "end": 34.6
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 34.655,
+     "end": 34.727
+    },
+    {
+     "text": "all.",
+     "highlight": false,
+     "start": 34.818,
+     "end": 35.036
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "One headline card at a time, big and clear, with a simple illustrated thumbnail",
+   "notes": "Cards on \"Whole\", \"life\", \"trusted\"; a last quick flurry of 2–3 cards right after \"betrays\".",
+   "sync": [
+    "Whole",
+    "life",
+    "trusted",
+    "betrays"
+   ],
+   "was_v2": null
+  },
+  {
+   "id": 13,
+   "start": 35.409,
+   "end": 37.7,
    "act": 1,
    "set": "screen",
    "owner": "P",
    "framing": "Extreme close-up, a thumb swiping",
    "camera": "Locked",
-   "vo": "It all slides past on the same screen. Read. Swipe. Forgotten.",
+   "vo": "Read. Swipe. Forgotten.",
    "voKind": "narration",
    "speaker": "narr",
    "words": [
     {
-     "text": "It",
-     "highlight": false,
-     "start": 31.236,
-     "end": 31.291
-    },
-    {
-     "text": "all",
-     "highlight": false,
-     "start": 31.364,
-     "end": 31.491
-    },
-    {
-     "text": "slides",
-     "highlight": false,
-     "start": 31.545,
-     "end": 31.873
-    },
-    {
-     "text": "past",
-     "highlight": false,
-     "start": 31.945,
-     "end": 32.218
-    },
-    {
-     "text": "on",
-     "highlight": false,
-     "start": 32.255,
-     "end": 32.309
-    },
-    {
-     "text": "the",
-     "highlight": false,
-     "start": 32.345,
-     "end": 32.418
-    },
-    {
-     "text": "same",
-     "highlight": false,
-     "start": 32.473,
-     "end": 32.655
-    },
-    {
-     "text": "screen.",
-     "highlight": false,
-     "start": 32.764,
-     "end": 33.109
-    },
-    {
      "text": "Read.",
      "highlight": false,
-     "start": 33.6,
-     "end": 33.855
+     "start": 35.509,
+     "end": 35.8
     },
     {
      "text": "Swipe.",
      "highlight": false,
-     "start": 34.291,
-     "end": 34.618
+     "start": 36.273,
+     "end": 36.582
     },
     {
      "text": "Forgotten.",
      "highlight": true,
-     "start": 35.055,
-     "end": 35.491
+     "start": 36.818,
+     "end": 37.418
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "The thumb swiping cards away",
-   "notes": "(was S05) Fix: thumb too long (reads as index finger).",
-   "was": "S05"
+   "hero": "The thumb swiping headline cards away",
+   "notes": "Old S10. Swipes on \"Read\", \"Swipe\", \"Forgotten\". Cards now show real headlines (blurred by motion is fine).",
+   "sync": [
+    "Read",
+    "Swipe",
+    "Forgotten"
+   ],
+   "was_v2": 10
   },
   {
-   "id": 11,
-   "start": 35.789,
-   "end": 40.825,
+   "id": 14,
+   "start": 37.7,
+   "end": 42.827,
    "act": 1,
    "set": "street",
    "owner": "S",
@@ -811,91 +964,94 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 35.909,
-     "end": 35.982
+     "start": 37.8,
+     "end": 37.855
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 36.018,
-     "end": 36.091
+     "start": 37.891,
+     "end": 37.964
     },
     {
      "text": "days",
      "highlight": false,
-     "start": 36.127,
-     "end": 36.382
+     "start": 38.018,
+     "end": 38.255
     },
     {
      "text": "feel",
      "highlight": false,
-     "start": 36.436,
-     "end": 36.545
+     "start": 38.309,
+     "end": 38.473
     },
     {
      "text": "shorter.",
      "highlight": true,
-     "start": 36.655,
-     "end": 36.964
+     "start": 38.527,
+     "end": 38.855
     },
     {
      "text": "Morning",
      "highlight": false,
-     "start": 37.618,
-     "end": 37.873
+     "start": 39.436,
+     "end": 39.691
     },
     {
      "text": "starts…",
      "highlight": false,
-     "start": 38.0,
-     "end": 38.364
+     "start": 39.818,
+     "end": 40.2
     },
     {
      "text": "and",
      "highlight": false,
-     "start": 38.836,
-     "end": 38.964
+     "start": 40.673,
+     "end": 40.8
     },
     {
      "text": "suddenly,",
      "highlight": false,
-     "start": 39.036,
-     "end": 39.4
+     "start": 40.891,
+     "end": 41.545
     },
     {
      "text": "it's",
      "highlight": false,
-     "start": 39.764,
-     "end": 39.909
+     "start": 41.618,
+     "end": 41.782
     },
     {
      "text": "night",
      "highlight": false,
-     "start": 39.945,
-     "end": 40.091
+     "start": 41.836,
+     "end": 41.982
     },
     {
      "text": "again.",
      "highlight": false,
-     "start": 40.145,
-     "end": 40.455
+     "start": 42.036,
+     "end": 42.382
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "Pedestrians blurring past in time-lapse while the lamp post shadow sweeps; the lamp switches on at \"night\"",
-   "notes": "(was S06) Add a stream of pedestrians on the sidewalk (on twos, fast). Fix: move the lamp post off centre (a third).",
-   "was": "S06"
+   "hero": "Pedestrians in time-lapse, sweeping shadow; lamp switches on at \"night\"",
+   "notes": "Old S11. Make the pedestrians bigger/closer.",
+   "sync": [
+    "night"
+   ],
+   "was_v2": 11
   },
   {
-   "id": 12,
-   "start": 40.825,
-   "end": 43.189,
+   "id": 15,
+   "start": 42.827,
+   "end": 45.173,
    "act": 1,
    "set": "city",
    "owner": "C",
-   "framing": "Wide skyline at dusk, a different angle from shot 1",
+   "framing": "Skyline at dusk from a kampung rooftop with laundry lines",
    "camera": "Very slow pull-back",
    "vo": "Nothing seems wrong. But all of this,",
    "voKind": "narration",
@@ -904,57 +1060,58 @@
     {
      "text": "Nothing",
      "highlight": false,
-     "start": 40.945,
-     "end": 41.164
+     "start": 42.927,
+     "end": 43.2
     },
     {
      "text": "seems",
      "highlight": false,
-     "start": 41.255,
-     "end": 41.491
+     "start": 43.273,
+     "end": 43.509
     },
     {
      "text": "wrong.",
      "highlight": false,
-     "start": 41.509,
-     "end": 41.818
+     "start": 43.527,
+     "end": 43.891
     },
     {
      "text": "But",
      "highlight": false,
-     "start": 42.2,
-     "end": 42.309
+     "start": 44.145,
+     "end": 44.236
     },
     {
      "text": "all",
      "highlight": false,
-     "start": 42.364,
-     "end": 42.455
+     "start": 44.291,
+     "end": 44.382
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 42.509,
-     "end": 42.582
+     "start": 44.418,
+     "end": 44.491
     },
     {
      "text": "this,",
      "highlight": false,
-     "start": 42.636,
-     "end": 42.873
+     "start": 44.545,
+     "end": 44.764
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "The skyline at dusk from a different vantage than shot 1 (e.g. from a kampung rooftop with laundry lines in the foreground)",
-   "notes": "Must NOT look like shot 1: different angle, minaret not on the left third.",
-   "was": null
+   "hero": "Laundry swaying in front of the dusk skyline",
+   "notes": "Old S12.",
+   "sync": [],
+   "was_v2": 12
   },
   {
-   "id": 13,
-   "start": 43.189,
-   "end": 44.935,
+   "id": 16,
+   "start": 45.173,
+   "end": 47.009,
    "act": 1,
    "set": "street",
    "owner": "S",
@@ -967,45 +1124,46 @@
     {
      "text": "towers",
      "highlight": false,
-     "start": 43.309,
-     "end": 43.655
+     "start": 45.273,
+     "end": 45.673
     },
     {
      "text": "racing",
      "highlight": false,
-     "start": 43.691,
-     "end": 43.982
+     "start": 45.727,
+     "end": 46.018
     },
     {
      "text": "for",
      "highlight": false,
-     "start": 44.0,
-     "end": 44.073
+     "start": 46.055,
+     "end": 46.145
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 44.109,
-     "end": 44.182
+     "start": 46.182,
+     "end": 46.236
     },
     {
      "text": "sky,",
      "highlight": false,
-     "start": 44.255,
-     "end": 44.6
+     "start": 46.327,
+     "end": 46.691
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "The same construction worker silhouetted against the dusk sky, looking down",
-   "notes": "Reuse shot 7 tower in a dusk palette.",
-   "was": null
+   "hero": "The worker silhouetted against the dusk sky",
+   "notes": "Old S13. Keep the tower readable against the glow.",
+   "sync": [],
+   "was_v2": 13
   },
   {
-   "id": 14,
-   "start": 44.935,
-   "end": 46.88,
+   "id": 17,
+   "start": 47.009,
+   "end": 48.9,
    "act": 1,
    "set": "screen",
    "owner": "P",
@@ -1018,56 +1176,59 @@
     {
      "text": "trust",
      "highlight": false,
-     "start": 45.055,
-     "end": 45.291
+     "start": 47.109,
+     "end": 47.418
     },
     {
      "text": "placed",
      "highlight": false,
-     "start": 45.382,
-     "end": 45.636
+     "start": 47.473,
+     "end": 47.709
     },
     {
      "text": "in",
      "highlight": false,
-     "start": 45.673,
-     "end": 45.727
+     "start": 47.764,
+     "end": 47.818
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 45.764,
-     "end": 45.818
+     "start": 47.836,
+     "end": 47.909
     },
     {
      "text": "wrong",
      "highlight": false,
-     "start": 45.855,
-     "end": 46.091
+     "start": 47.927,
+     "end": 48.182
     },
     {
      "text": "hands,",
      "highlight": false,
-     "start": 46.145,
-     "end": 46.545
+     "start": 48.236,
+     "end": 48.636
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "day",
-   "hero": "Two adult hands (suit sleeves) passing a thick brown envelope under a meeting table",
-   "notes": "Hands on twos. No faces, no logos.",
-   "was": null
+   "hero": "Two suit-sleeved hands passing a thick envelope",
+   "notes": "Old S14. Grab on \"wrong\".",
+   "sync": [
+    "wrong"
+   ],
+   "was_v2": 14
   },
   {
-   "id": 15,
-   "start": 46.88,
-   "end": 48.971,
+   "id": 18,
+   "start": 48.9,
+   "end": 50.882,
    "act": 1,
    "set": "home",
    "owner": "H",
    "framing": "Medium, a family at dinner as the lamp sways",
-   "camera": "Locked, then a small jolt on \"shaking\"",
+   "camera": "Locked, jolts",
    "vo": "the earth shaking again and again,",
    "voKind": "narration",
    "speaker": "narr",
@@ -1075,51 +1236,55 @@
     {
      "text": "the",
      "highlight": false,
-     "start": 47.0,
-     "end": 47.091
+     "start": 49.0,
+     "end": 49.091
     },
     {
      "text": "earth",
      "highlight": false,
-     "start": 47.164,
-     "end": 47.345
+     "start": 49.145,
+     "end": 49.364
     },
     {
      "text": "shaking",
      "highlight": false,
-     "start": 47.4,
-     "end": 47.727
+     "start": 49.436,
+     "end": 49.727
     },
     {
      "text": "again",
      "highlight": false,
-     "start": 47.782,
-     "end": 48.145
+     "start": 49.8,
+     "end": 50.055
     },
     {
      "text": "and",
      "highlight": false,
-     "start": 48.2,
-     "end": 48.273
+     "start": 50.073,
+     "end": 50.145
     },
     {
      "text": "again,",
      "highlight": false,
-     "start": 48.327,
-     "end": 48.673
+     "start": 50.2,
+     "end": 50.564
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "night",
-   "hero": "A family on the floor mat eating dinner; the hanging lamp swings, glasses tremble, the mother pulls the child close",
-   "notes": "Lamp sway/camera jolt on ones; people on twos. Max 3 figures but simple silhouettes; mother + child as the focal pair.",
-   "was": null
+   "hero": "Family on the floor mat; lamp swings; mother pulls the child close",
+   "notes": "Old S15. Jolts on \"shaking\", \"again\", \"again\".",
+   "sync": [
+    "shaking",
+    "again"
+   ],
+   "was_v2": 15
   },
   {
-   "id": 16,
-   "start": 48.971,
-   "end": 51.098,
+   "id": 19,
+   "start": 50.882,
+   "end": 52.955,
    "act": 1,
    "set": "street",
    "owner": "S",
@@ -1132,51 +1297,52 @@
     {
      "text": "killing",
      "highlight": false,
-     "start": 49.091,
-     "end": 49.345
+     "start": 50.982,
+     "end": 51.218
     },
     {
      "text": "that",
      "highlight": false,
-     "start": 49.4,
-     "end": 49.545
+     "start": 51.273,
+     "end": 51.4
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 49.6,
-     "end": 49.709
+     "start": 51.436,
+     "end": 51.545
     },
     {
      "text": "longer",
      "highlight": false,
-     "start": 49.745,
-     "end": 49.982
+     "start": 51.582,
+     "end": 51.855
     },
     {
      "text": "shocks",
      "highlight": false,
-     "start": 50.073,
-     "end": 50.364
+     "start": 51.891,
+     "end": 52.164
     },
     {
      "text": "anyone,",
      "highlight": false,
-     "start": 50.418,
-     "end": 50.764
+     "start": 52.218,
+     "end": 52.582
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "Pedestrians on their phones walking past yellow police tape at an alley mouth; nobody turns their head",
-   "notes": "No victim visible. Tape flutters on ones; walkers on twos.",
-   "was": null
+   "hero": "Pedestrians on phones passing yellow police tape",
+   "notes": "Old S16. Fix overlap of two walkers.",
+   "sync": [],
+   "was_v2": 16
   },
   {
-   "id": 17,
-   "start": 51.098,
-   "end": 52.462,
+   "id": 20,
+   "start": 52.955,
+   "end": 54.464,
    "act": 1,
    "set": "street",
    "owner": "S",
@@ -1189,33 +1355,36 @@
     {
      "text": "time",
      "highlight": false,
-     "start": 51.218,
-     "end": 51.455
+     "start": 53.055,
+     "end": 53.4
     },
     {
      "text": "slipping",
      "highlight": false,
-     "start": 51.564,
-     "end": 51.818
+     "start": 53.473,
+     "end": 53.727
     },
     {
      "text": "away,",
      "highlight": false,
-     "start": 51.873,
-     "end": 52.182
+     "start": 53.782,
+     "end": 54.109
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "An old man in a peci sitting still while the crowd and buses blur past him in time-lapse",
-   "notes": "He stays still (only slight breathing on twos); crowd fast.",
-   "was": null
+   "hero": "The still old man while crowd and bus blur past",
+   "notes": "Old S17. Bus whoosh passes on \"slipping\".",
+   "sync": [
+    "slipping"
+   ],
+   "was_v2": 17
   },
   {
-   "id": 18,
-   "start": 52.462,
-   "end": 56.244,
+   "id": 21,
+   "start": 54.464,
+   "end": 58.318,
    "act": 1,
    "set": "city",
    "owner": "C",
@@ -1228,75 +1397,78 @@
     {
      "text": "was",
      "highlight": false,
-     "start": 52.582,
-     "end": 52.709
+     "start": 54.564,
+     "end": 54.691
     },
     {
      "text": "foretold",
      "highlight": true,
-     "start": 52.764,
-     "end": 53.182
+     "start": 54.727,
+     "end": 55.164
     },
     {
      "text": "by",
      "highlight": false,
-     "start": 53.218,
-     "end": 53.327
+     "start": 55.2,
+     "end": 55.291
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 53.364,
-     "end": 53.436
+     "start": 55.327,
+     "end": 55.4
     },
     {
      "text": "Prophet",
      "highlight": false,
-     "start": 53.473,
-     "end": 53.745
+     "start": 55.436,
+     "end": 55.709
     },
     {
      "text": "Muhammad,",
      "highlight": false,
-     "start": 53.8,
-     "end": 54.218
+     "start": 55.764,
+     "end": 56.218
     },
     {
      "text": "fourteen",
      "highlight": false,
-     "start": 54.636,
-     "end": 55.0
+     "start": 56.655,
+     "end": 57.018
     },
     {
      "text": "hundred",
      "highlight": false,
-     "start": 55.073,
-     "end": 55.309
+     "start": 57.055,
+     "end": 57.309
     },
     {
      "text": "years",
      "highlight": false,
-     "start": 55.364,
-     "end": 55.545
+     "start": 57.364,
+     "end": 57.582
     },
     {
      "text": "ago.",
      "highlight": false,
-     "start": 55.582,
-     "end": 55.836
+     "start": 57.618,
+     "end": 57.909
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "dawn",
-   "hero": "The skyline in silhouette as dusk fades; the small source label appears on \"foretold\"",
-   "notes": "(was S07) Keep the label.",
-   "was": "S07"
+   "hero": "Skyline in silhouette; source label on \"foretold\"",
+   "notes": "Old S18.",
+   "sync": [
+    "foretold"
+   ],
+   "was_v2": 18
   },
   {
-   "id": 19,
-   "start": 56.244,
-   "end": 60.207,
+   "id": 22,
+   "start": 58.318,
+   "end": 61.845,
    "act": 1,
    "set": "city",
    "owner": "C",
@@ -1309,80 +1481,83 @@
     {
      "text": "When",
      "highlight": false,
-     "start": 56.364,
-     "end": 56.455
+     "start": 58.418,
+     "end": 58.527
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 56.491,
-     "end": 56.618
+     "start": 58.563,
+     "end": 58.673
     },
     {
      "text": "end",
      "highlight": false,
-     "start": 56.691,
-     "end": 56.873
+     "start": 58.745,
+     "end": 58.909
     },
     {
      "text": "will",
      "highlight": false,
-     "start": 56.909,
-     "end": 57.036
+     "start": 58.945,
+     "end": 59.073
     },
     {
      "text": "come,",
      "highlight": false,
-     "start": 57.109,
-     "end": 57.418
+     "start": 59.145,
+     "end": 59.418
     },
     {
      "text": "no",
      "highlight": false,
-     "start": 57.745,
-     "end": 57.855
+     "start": 59.636,
+     "end": 59.764
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 57.909,
-     "end": 58.0
+     "start": 59.818,
+     "end": 59.945
     },
     {
      "text": "knows.",
      "highlight": false,
-     "start": 58.073,
-     "end": 58.472
+     "start": 59.982,
+     "end": 60.382
     },
     {
      "text": "Only",
      "highlight": false,
-     "start": 59.073,
-     "end": 59.308
+     "start": 60.782,
+     "end": 61.018
     },
     {
      "text": "God.",
      "highlight": true,
-     "start": 59.364,
-     "end": 59.709
+     "start": 61.073,
+     "end": 61.436
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "night",
-   "hero": "A lone man seen from behind on a rooftop among water tanks, looking up; one star above",
-   "notes": "(was S08) Add the man as foreground hero; star on ones.",
-   "was": "S08"
+   "hero": "Lone man from behind; one star",
+   "notes": "Old S19. Separate his head from the minaret behind him.",
+   "sync": [
+    "God"
+   ],
+   "was_v2": 19
   },
   {
-   "id": 20,
-   "start": 60.207,
-   "end": 64.753,
+   "id": 23,
+   "start": 61.845,
+   "end": 65.882,
    "act": 1,
    "set": "city",
    "owner": "C",
    "framing": "Wide city at night, windows going dark one by one",
-   "camera": "Locked",
+   "camera": "Locked, very slow drift",
    "vo": "Night falls like any other night. The lights go out, one by one.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1390,93 +1565,96 @@
     {
      "text": "Night",
      "highlight": false,
-     "start": 60.327,
-     "end": 60.545
+     "start": 61.945,
+     "end": 62.145
     },
     {
      "text": "falls",
      "highlight": false,
-     "start": 60.655,
-     "end": 61.0
+     "start": 62.2,
+     "end": 62.491
     },
     {
      "text": "like",
      "highlight": false,
-     "start": 61.055,
-     "end": 61.255
+     "start": 62.527,
+     "end": 62.673
     },
     {
      "text": "any",
      "highlight": false,
-     "start": 61.309,
-     "end": 61.436
+     "start": 62.727,
+     "end": 62.855
     },
     {
      "text": "other",
      "highlight": false,
-     "start": 61.509,
-     "end": 61.655
+     "start": 62.927,
+     "end": 63.073
     },
     {
      "text": "night.",
      "highlight": false,
-     "start": 61.709,
-     "end": 61.982
+     "start": 63.109,
+     "end": 63.382
     },
     {
      "text": "The",
      "highlight": false,
-     "start": 62.473,
-     "end": 62.545
+     "start": 63.745,
+     "end": 63.818
     },
     {
      "text": "lights",
      "highlight": false,
-     "start": 62.582,
-     "end": 62.818
+     "start": 63.873,
+     "end": 64.109
     },
     {
      "text": "go",
      "highlight": false,
-     "start": 62.873,
-     "end": 62.982
+     "start": 64.164,
+     "end": 64.273
     },
     {
      "text": "out,",
      "highlight": false,
-     "start": 63.091,
-     "end": 63.273
+     "start": 64.364,
+     "end": 64.545
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 63.673,
-     "end": 63.873
+     "start": 64.855,
+     "end": 64.982
     },
     {
      "text": "by",
      "highlight": false,
-     "start": 63.927,
-     "end": 64.091
+     "start": 65.036,
+     "end": 65.2
     },
     {
      "text": "one.",
      "highlight": false,
-     "start": 64.2,
-     "end": 64.436
+     "start": 65.309,
+     "end": 65.527
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "night",
-   "hero": "Windows switching off; in one near window, a mother silhouette turns off a lamp beside a sleeping child",
-   "notes": "(was S09) Add the window silhouette (on twos).",
-   "was": "S09"
+   "hero": "Windows switching off; mother turns off the lamp beside the sleeping child",
+   "notes": "Old S20. Lamp off on the last \"one\".",
+   "sync": [
+    "one"
+   ],
+   "was_v2": 20
   },
   {
-   "id": 21,
-   "start": 64.753,
-   "end": 71.855,
+   "id": 24,
+   "start": 65.882,
+   "end": 71.845,
    "act": 1,
    "set": "screen",
    "owner": "P",
@@ -1489,100 +1667,126 @@
     {
      "text": "Tomorrow",
      "highlight": false,
-     "start": 64.873,
-     "end": 65.218
+     "start": 65.982,
+     "end": 66.309
     },
     {
      "text": "morning,",
      "highlight": false,
-     "start": 65.273,
-     "end": 65.564
+     "start": 66.364,
+     "end": 66.655
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 65.709,
-     "end": 65.764
+     "start": 67.036,
+     "end": 67.091
     },
     {
      "text": "message",
      "highlight": false,
-     "start": 65.818,
-     "end": 66.109
+     "start": 67.145,
+     "end": 67.455
     },
     {
      "text": "will",
      "highlight": false,
-     "start": 66.145,
-     "end": 66.273
+     "start": 67.473,
+     "end": 67.6
     },
     {
      "text": "spread",
      "highlight": false,
-     "start": 66.382,
-     "end": 66.655
+     "start": 67.709,
+     "end": 67.964
     },
     {
      "text": "through",
      "highlight": false,
-     "start": 66.691,
-     "end": 66.8
+     "start": 67.982,
+     "end": 68.127
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 66.836,
-     "end": 66.909
+     "start": 68.164,
+     "end": 68.236
     },
     {
      "text": "entire",
      "highlight": false,
-     "start": 66.945,
-     "end": 67.418
+     "start": 68.273,
+     "end": 68.709
     },
     {
      "text": "city…",
      "highlight": false,
-     "start": 67.473,
-     "end": 67.745
+     "start": 68.764,
+     "end": 69.036
     },
     {
      "text": "about",
      "highlight": false,
-     "start": 68.236,
-     "end": 68.473
+     "start": 69.436,
+     "end": 69.655
     },
     {
      "text": "something",
      "highlight": false,
-     "start": 68.527,
-     "end": 68.873
+     "start": 69.727,
+     "end": 70.055
     },
     {
      "text": "that",
      "highlight": false,
-     "start": 68.927,
-     "end": 69.091
+     "start": 70.109,
+     "end": 70.236
     },
     {
      "text": "never",
      "highlight": true,
-     "start": 69.164,
-     "end": 69.4
+     "start": 70.291,
+     "end": 70.509
     },
     {
      "text": "happened.",
      "highlight": false,
-     "start": 69.455,
-     "end": 69.855
+     "start": 70.564,
+     "end": 70.945
     }
    ],
    "trans": "cut",
    "caption": true,
    "light": "night",
-   "hero": "The phone lighting up with \"Forwarded many times\"; a sleeping figure in the bed behind, lit only by the screen",
-   "notes": "(was S10) Add the sleeper (very dark, breathing on twos). Keep EPISODE 01 end card.",
-   "was": "S10"
+   "hero": "The phone lighting up with \"Forwarded many times\"; sleeper behind",
+   "notes": "Old S21 WITHOUT the EPISODE card (the title is now shot 25). Phone lights on \"message\"; more forwards stack on \"spread\" and \"city\"; hard cut to black right at the shot end.",
+   "sync": [
+    "message",
+    "spread",
+    "city"
+   ],
+   "was_v2": 21
+  },
+  {
+   "id": 25,
+   "start": 71.845,
+   "end": 76.045,
+   "act": 1,
+   "set": "screen",
+   "owner": "P",
+   "framing": "TITLE CARD on black",
+   "camera": "Very slow push-in",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "\"THE BEGINNING OF THE END\" + \"CHAPTER 1 · THE LAST DAYS\"",
+   "notes": "No VO, no caption. See STYLE.md \"Title card\".",
+   "sync": [],
+   "was_v2": null
   }
  ]
 }

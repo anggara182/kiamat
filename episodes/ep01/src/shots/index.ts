@@ -10,10 +10,9 @@ import * as P from './P';
 const Todo: React.FC = () => React.createElement(AbsoluteFill, { style: { backgroundColor: '#1a1a1f' } });
 const pick = (m: Record<string, unknown>, name: string) => ((m[name] as React.FC) ?? Todo);
 
-/** shot id -> owner module (see episode.json "owner"). Components are named S01..S21. */
+/** shot id -> owner module (see episode.json "owner"). Components are named S01..S25. */
 const OWNER: Record<number, Record<string, unknown>> = {
-  1: C, 2: H, 3: H, 4: H, 5: S, 6: T, 7: S, 8: S, 9: P, 10: P, 11: S,
-  12: C, 13: S, 14: P, 15: H, 16: S, 17: S, 18: C, 19: C, 20: C, 21: P,
+  1: H, 2: H, 3: C, 4: H, 5: H, 6: C, 7: S, 8: T, 9: S, 10: S, 11: P, 12: P, 13: P, 14: S, 15: C, 16: S, 17: P, 18: H, 19: S, 20: S, 21: C, 22: C, 23: C, 24: P, 25: P,
 };
 
 /** shot id -> scene (owned by the coordinator). */

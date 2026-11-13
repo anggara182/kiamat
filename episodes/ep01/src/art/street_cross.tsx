@@ -181,3 +181,21 @@ export const CrossFg: React.FC = () => {
 };
 
 export const CROSS_M = M;
+
+/** traffic already released on the free lanes, driving away from the crossing: cars on ONES (t), motorbike riders on TWOS (t2) */
+const MOV = [
+  { lane: -RW * 0.25, y0: 0, v: 7.5, car: true, col: '#c9c7c0' }, { lane: -RW * 0.75, y0: 0.45, v: 6.5, car: true, col: '#5d6670' },
+  { lane: -RW * 0.55, y0: 0.2, v: 8.5, car: false, col: '#7a2f2a' }, { lane: -RW * 0.4, y0: 0.7, v: 8, car: false, col: '#d8d4cc' },
+  { lane: RW * 0.25, y0: 0.3, v: 7, car: true, col: '#3b3e44' }, { lane: RW * 0.75, y0: 0.8, v: 6, car: true, col: '#e4e2dc' },
+  { lane: RW * 0.5, y0: 0.55, v: 9, car: false, col: '#2a2a2e' }, { lane: RW * 0.62, y0: 0.05, v: 8, car: false, col: '#3d4a5a' },
+];
+export const CrossMoving: React.FC<{ t: number; t2: number }> = ({ t, t2 }) => (
+  <g>
+    {MOV.map((m, i) => {
+      const north = m.lane < 0, span = 1900, start = ZH + 3 * M;
+      const d = ((m.y0 * span + m.v * M * (m.car ? t : t2)) % span);
+      const y = north ? -(start + d) : start + d;
+      return m.car ? <Car key={i} x={m.lane} y={y} col={m.col} flip={!north} /> : <Moto key={i} x={m.lane} y={y} flip={!north} helm={m.col} />;
+    })}
+  </g>
+);

@@ -155,3 +155,14 @@ export const DepthWalker: React.FC<{ x: number; y: number; h: number; ph: number
     </g>
   );
 };
+
+/** world position of the near (A) hand for a Figure drawn with these props (same geometry as Figure) */
+export const handA = (x: number, y: number, h: number, dir: number, P: Pose): [number, number] => {
+  const s = h / 100, lean = P.lean ?? 0;
+  const hip: [number, number] = [P.hip?.[0] ?? 0, (P.hip?.[1] ?? -49) + (P.bob ?? 0)];
+  const sh = seg(hip[0], hip[1], 180 - lean, 33 + (P.breath ?? 0));
+  const so: [number, number] = [sh[0] + 0.5, sh[1] + 2.2];
+  const e = seg(so[0], so[1], P.uaA - lean * 0.5, 15);
+  const w = seg(e[0], e[1], P.faA - lean * 0.5, 15.7);
+  return [x + dir * s * w[0], y + s * w[1]];
+};

@@ -6,7 +6,8 @@ import { Fr } from '../art/home_kit';
 import { CarportFg, AlleyWindows, Scooter, Father, Kid, Exhaust } from '../art/home_carport';
 import { lerp } from '../art/home_kit';
 import { HangLamp, SwingLight, Glasses, MotherChild, FatherBack } from '../art/home_dinner';
-import { WindowLife, Phone, Sleeper, BlanketFold, SleepArm } from '../art/home_bedroom';
+import { WindowLife, Phone, Sleeper, BlanketFold, SleepArm, CurtainL } from '../art/home_bedroom';
+import { HookBed, HookHair, HookPhone, HookGlow, HOOK_LINES, HookNote } from '../art/home_hook';
 import { KitchenDark, Tube, Flame, Steam, PotLid, MotherKitchen } from '../art/home_kitchen';
 
 /** Tube start-up stutter (on ones): u = seconds since the switch, len = time until it holds steady. */
@@ -18,24 +19,25 @@ const tubeLevel = (u: number, len: number) => {
   return Math.min(1, 0.75 + (x - 0.74) * 2);
 };
 
-/* ============ shot 2: dawn kitchen, the mother switches on the tube light, the pot starts to steam ============ */
-export const S02: React.FC = () => {
+/* ============ shot 4 (v2 S02): dawn kitchen, the click lands on "lights", the tube flickers right after, the pot steams ============ */
+export const S04: React.FC = () => {
   const { t, t2, sec } = useShot();
-  const tSw = wordAt(2, /^lights/i, 0.3) - 0.12;
+  const tSw = wordAt(4, /^lights/i, 0.26); // the click
   const r = Math.max(0.6, sec - tSw); // time left after the switch
   const tOn = tSw + 0.5 * r; // tube holds steady
-  const L = tubeLevel(t - tSw, tOn - tSw);
-  // mother ON TWOS: press -> looks up at the stuttering tube -> drops the arm, turns to the stove, lifts the lid
-  const press = ramp(t2, tSw - 0.16, tSw, EOUT) * (1 - ramp(t2, tSw + 0.05, tSw + 0.2));
+  const L = tubeLevel(t - tSw - 1 / 24, tOn - tSw);
+  // mother ON TWOS: hand arrives at the switch (moving at frame 0) -> click on "lights" -> looks up at the stuttering tube -> drops the arm, turns, lifts the lid
+  const arrive = ramp(t2, 0, Math.max(0.12, tSw - 0.14), EOUT);
+  const press = ramp(t2, tSw - 0.12, tSw, EOUT) * (1 - ramp(t2, tSw + 0.06, tSw + 0.22));
   const look = ramp(t2, tSw + 0.05, tSw + 0.3, EOUT) * (1 - ramp(t2, tSw + 0.4 * r, tSw + 0.6 * r));
-  const reachL = 1 - ramp(t2, tSw + 0.3 * r, tSw + 0.6 * r, EIO);
+  const reachL = (0.55 + 0.45 * arrive) * (1 - ramp(t2, tSw + 0.3 * r, tSw + 0.6 * r, EIO));
   const reachR = ramp(t2, tSw + 0.32 * r, tSw + 0.72 * r, EIO);
   const turn = ramp(t2, tSw + 0.3 * r, tSw + 0.6 * r, EIO);
   const lean = ramp(t2, tSw + 0.3 * r, tSw + 0.7 * r, EIO);
   const lift = ramp(t2, tSw + 0.72 * r, tSw + 0.9 * r, EOUT);
   const breath = 0.5 + 0.5 * Math.sin(t2 * 3.2);
   const h = handheld(t, 0.35);
-  const cam: Cam = { zoom: 1.02, dx: 0, dy: 0, tx: h.hx, ty: h.hy, rot: h.hr * 0.4, ox: 540, oy: 900 };
+  const cam: Cam = { zoom: 1.02 + 0.03 * EIO(t / sec), dx: 0, dy: 0, tx: h.hx, ty: h.hy, rot: h.hr * 0.4, ox: 520, oy: 900 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#0c1029' }}>
       <BandImg id="home/kitchen" cam={cam} />
@@ -65,19 +67,19 @@ const track = (t: number, keys: [number, number, number][]) => {
   return { x: k[1], y: k[2] };
 };
 
-/* ============ shot 3: dawn carport, the father kick-starts the scooter, the kid in a big helmet waits at the door ============ */
-export const S03: React.FC = () => {
+/* ============ shot 5 (v2 S03): dawn carport, the father kick-starts the scooter, the kid in a big helmet waits at the door ============ */
+export const S05: React.FC = () => {
   const { t, t2, p, sec } = useShot();
-  const tC = wordAt(3, /^cough/i, 0.38);
-  const tA = Math.max(tC + 0.4, wordAt(3, /^awake/i, 0.62));
+  const tC = wordAt(5, /^cough/i, 0.34); // stomp 1 lands
+  const tA = Math.max(tC + 0.24, wordAt(5, /^awake/i, 0.52)); // stomp 2 lands, the engine catches
   // near foot (ON TWOS): on the pedal -> knee up -> stomp -> up -> stomp -> onto the floorboard
   const R = [362, 1237], U = [384, 1150], D = [393, 1314], F = [600, 1206];
   const foot = track(t2, [
-    [0, R[0], R[1] - 20], [tC - 0.24, U[0], U[1]], [tC - 0.04, D[0], D[1]], [tC + 0.06, D[0], D[1]],
-    [tA - 0.24, U[0], U[1]], [tA - 0.04, D[0], D[1]], [tA + 0.1, D[0], D[1]], [Math.min(sec, tA + 0.45), F[0], F[1]],
+    [0, R[0] + 8, R[1] - 50], [Math.max(0.08, tC - 0.18), U[0], U[1]], [tC, D[0], D[1]], [tC + 0.04, D[0], D[1]],
+    [tC + (tA - tC) * 0.55, U[0], U[1] + 20], [tA, D[0], D[1]], [tA + 0.1, D[0], D[1]], [Math.min(sec, tA + 0.45), F[0], F[1]],
   ]);
   const kick = foot.x < 470 ? clamp01((foot.y - R[1]) / (D[1] - R[1])) : 0;
-  const rise = Math.max(bumpT(t2, tC - 0.2, 0.3), bumpT(t2, tA - 0.2, 0.3));
+  const rise = Math.max(bumpT(t2, tC - 0.16, 0.3), bumpT(t2, tA - 0.14, 0.26));
   const look = ramp(t2, tA + 0.15, tA + 0.5, EIO);
   const breath = 0.5 + 0.5 * Math.sin(t2 * 3);
   // engine (environment, ON ONES)
@@ -110,38 +112,37 @@ export const S03: React.FC = () => {
 
 const bumpT = (t: number, a: number, d: number) => { const u = clamp01((t - a) / d); return Math.sin(Math.PI * u); };
 
-/* ============ shot 4: bedroom close at dawn, a hand creeps out of the blanket and slaps the phone alarm; minaret lamp on "prayer" ============ */
-export const S04: React.FC = () => {
+/* ============ shot 2 (v2 S04): bedroom close at dawn, the hand pulls back and slaps the buzzing phone EXACTLY on "slowly"; stillness, the dawn grows ============ */
+export const S02: React.FC = () => {
   const { t, t2, p, sec } = useShot();
-  const tPray = wordAt(4, /^prayer/i, 0.2);
-  const tHund = wordAt(4, /^hundred/i, 0.56);
-  const tSlap = Math.min(sec - 0.5, wordAt(4, /^alarm/i, 0.74) - 0.04);
-  // the hand ON TWOS: creeps out, pats the sheet (misses), raises, slaps
+  const tSlap = wordAt(2, /^slowly/i, 0.17);
+  // the hand ON TWOS: already out, groping toward the phone at frame 0 -> pulls back and up (anticipation) -> slap -> bounce -> settles
   const wrist = track(t2, [
-    [0.1, 520, 1204], [Math.min(0.9, tSlap * 0.4), 600, 1250], [tSlap * 0.5, 610, 1262], [tSlap * 0.62, 630, 1258], [tSlap * 0.8, 640, 1262],
-    [tSlap - 0.18, 700, 1232], [tSlap, 770, 1268], [sec, 774, 1270],
+    [0, 646, 1250], [tSlap * 0.35, 668, 1258], [tSlap - 0.12, 640, 1222], [tSlap, 716, 1268], [tSlap + 0.1, 712, 1262], [tSlap + 0.25, 716, 1270], [sec, 718, 1272],
   ]);
-  const pat = bumpT(t2, tSlap * 0.45, tSlap * 0.14);
-  const lift = Math.max(ramp(t2, tSlap - 0.3, tSlap - 0.1, EOUT) * (1 - ramp(t2, tSlap - 0.08, tSlap)), 0.5 * pat);
-  const ang = -6 + 10 * pat - 14 * lift;
-  const spread = ramp(t2, tSlap - 0.04, tSlap + 0.06);
-  const stir = ramp(t2, 0, 0.6) * (1 - 0.4 * ramp(t2, tSlap + 0.2, sec));
-  const breath = 0.5 + 0.5 * Math.sin(t2 * 2.4);
-  // phone + window (ON ONES)
-  const off = t > tSlap + 0.06;
-  const ring = off ? Math.max(0, 0.4 - (t - tSlap) * 2) : 1;
-  const buzz = off ? 0 : (Math.floor(t * 24) % 2 ? 2.5 : -2.5) * (Math.floor(t * 3) % 2 ? 1 : 0.2);
-  const lamp = ramp(t, tPray, tPray + 0.25, EOUT);
-  const dots = ramp(t, tHund, tHund + 0.45);
-  const cam: Cam = { zoom: 1.15 + 0.03 * p, dx: 0, dy: 0, ox: 640, oy: 1180 };
+  const lift = ramp(t2, tSlap * 0.35, tSlap - 0.12, EOUT) * (1 - ramp(t2, tSlap - 0.06, tSlap)) + 0.25 * bumpT(t2, tSlap + 0.02, 0.18);
+  const ang = -6 - 18 * lift + 4 * bumpT(t2, 0, 0.3);
+  const spread = ramp(t2, tSlap - 0.04, tSlap + 0.04) * (1 - 0.4 * ramp(t2, tSlap + 0.5, tSlap + 1.2));
+  const stir = 0.6 + 0.4 * bumpT(t2, tSlap - 0.2, 0.6) - 0.3 * ramp(t2, tSlap + 0.6, sec);
+  const breath = 0.5 + 0.5 * Math.sin(t2 * 2.2);
+  // phone + window + camera ON ONES
+  const off = t >= tSlap + 1 / 24;
+  const ring = off ? Math.max(0, 0.5 - (t - tSlap) * 4) : 1;
+  const hop = t >= tSlap ? 10 * Math.exp(-(t - tSlap) * 14) * Math.abs(Math.cos((t - tSlap) * 40)) : 0;
+  const buzz = off ? 0 : (Math.floor(t * 24) % 2 ? 3 : -3);
+  const dawn = ramp(t, tSlap + 0.3, sec, EIO);
+  const j = t >= tSlap ? Math.exp(-(t - tSlap) * 9) * Math.sin((t - tSlap) * 50) : 0;
+  const h = handheld(t, 0.15);
+  const cam: Cam = { zoom: 1.15 + 0.035 * p, dx: 0, dy: 0, tx: h.hx + 6 * j, ty: h.hy + 10 * j, ox: 640, oy: 1180 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#1d1a33' }}>
       <BandImg id="home/bedroom" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <WindowLife lamp={lamp} dots={dots} t={t} />
+          <WindowLife lamp={0.25 + 0.75 * dawn} dots={0.6 + 0.4 * dawn} t={t} dawn={dawn} />
+          <CurtainL t={t} />
           <Sleeper breath={breath} stir={stir} />
-          <Phone ring={ring} buzz={buzz} t={t} />
+          <g transform={`translate(0 ${-hop})`}><Phone ring={ring} buzz={buzz} t={t} /></g>
           <SleepArm wx={wrist.x} wy={wrist.y} ang={ang} lift={lift} spread={spread} rim={0.3 + 0.7 * ring} />
           <BlanketFold stir={stir} />
         </Fr>
@@ -150,21 +151,50 @@ export const S04: React.FC = () => {
   );
 };
 
-/* ============ shot 15: night, family dinner on the floor mat; the lamp swings, glasses tremble, jolts on "shaking" / "again" ============ */
-export const S15: React.FC = () => {
-  const { t, t2 } = useShot();
-  const tS = wordAt(15, /^shaking/i, 0.25);
-  const ags = [wordAt(15, /^again/i, 0.45)];
-  const sp = spanOf(15);
+/* ============ shot 1 (NEW hook): the phone on the blanket floods with news; one new notification + buzz on "world", "end", "bang" ============ */
+export const S01: React.FC = () => {
+  const { t, t2, sec } = useShot();
+  const beats = [wordAt(1, /^world/i, 0.26), wordAt(1, /^end/i, 0.51), wordAt(1, /^bang/i, 0.7)];
+  const arr = [-10, -0.12, ...beats];
+  const notes: HookNote[] = HOOK_LINES.map((n, i) => ({ ...n, arr: arr[i] }));
+  // buzz (ONES): decaying shake after every arrival (the one sliding in at frame 0 is already buzzing)
+  const bz = (k: number) => arr.slice(1).reduce((a, b) => { const u = t - b; return u < 0 || u > 0.4 ? a : a + Math.exp(-u * 9) * Math.sin(u * 90 + k); }, 0);
+  const lit = arr.slice(1).reduce((a, b) => Math.max(a, t >= b ? Math.exp(-(t - b) * 4) : 0), 0);
+  // sleeper ON TWOS: the hair stirs, more at "bang"
+  const stir = 0.3 * Math.sin(t2 * 1.7) + bumpT(t2, beats[2] - 0.05, 0.5);
+  const breath = 0.5 + 0.5 * Math.sin(t2 * 2.4);
+  const h = handheld(t, 0.3);
+  const z = 1.02 + 0.08 * EIO(t / sec);
+  const cam: Cam = { zoom: z, dx: 0, dy: 0, tx: h.hx, ty: h.hy, rot: h.hr * 0.5, ox: 584, oy: 720 };
+  return (
+    <AbsoluteFill style={{ backgroundColor: '#120e1c' }}>
+      <Live cam={cam}>
+        <Fr>
+          <HookBed breath={breath} glow={0.6 + 0.4 * lit} />
+          <HookGlow lit={lit} />
+          <HookPhone notes={notes} t={t} bx={6 * bz(0)} br={1.2 * bz(1.7)} lit={lit} />
+        </Fr>
+      </Live>
+      <Live k={1.2} cam={cam}><Fr><HookHair t2={t2} stir={stir} /></Fr></Live>
+    </AbsoluteFill>
+  );
+};
+
+/* ============ shot 18 (v2 S15): night, family dinner on the floor mat; the lamp swings, glasses tremble, jolts on "shaking" / "again" ============ */
+export const S18: React.FC = () => {
+  const { t, t2, sec } = useShot();
+  const tS = wordAt(18, /^shaking/i, 0.26);
+  const ags = [wordAt(18, /^again/i, 0.44)];
+  const sp = spanOf(18);
   const again2 = sp.shot.words.filter((w) => /^again/i.test(w.text))[1];
   ags.push(again2 ? again2.start - sp.from / FPS : ags[0] + 0.5);
   const jolts = [tS, ...ags];
   // camera + environment ON ONES
   const jolt = (k: number) => jolts.reduce((a, j, i) => { const u = t - j; return u < 0 ? a : a + (i === 0 ? 1 : 0.6) * Math.exp(-u * 7) * Math.sin(u * 46 + k); }, 0);
   const amp = 10 * ramp(t, tS - 0.05, tS + 0.4, EOUT);
-  const ang = amp * Math.sin((t - tS) * 5.6) + 1.2 * Math.sin(t * 2);
+  const ang = amp * Math.sin((t - tS) * 5.6) + 2 * Math.sin(t * 2.4);
   const tr = 3 * ramp(t, tS - 0.05, tS + 0.1) * (0.6 + 0.4 * Math.abs(jolt(0)));
-  const cam: Cam = { zoom: 1.4, dx: 0, dy: 0, tx: 12 * jolt(0), ty: 9 * jolt(1.3), rot: 0.35 * jolt(2.1), ox: 620, oy: 1200 };
+  const cam: Cam = { zoom: 1.38 + 0.05 * EIO(t / sec), dx: 0, dy: 0, tx: 12 * jolt(0), ty: 9 * jolt(1.3), rot: 0.35 * jolt(2.1), ox: 620, oy: 1200 };
   // people ON TWOS
   const hug = ramp(t2, tS - 0.04, tS + 0.34, EOUT);
   const look = ramp(t2, tS + 0.05, tS + 0.4, EOUT);
@@ -177,7 +207,7 @@ export const S15: React.FC = () => {
         <Fr>
           <SwingLight ang={ang} />
           <Glasses tr={tr} t={t} />
-          <MotherChild hug={hug} look={look} breath={breath} />
+          <MotherChild hug={hug} look={look} breath={breath} eat={0.5 - 0.5 * Math.cos(t2 * 5)} />
           <HangLamp ang={ang} />
         </Fr>
       </Live>

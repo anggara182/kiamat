@@ -41,139 +41,196 @@ export const SRect: React.FC<{ id: string; x: number; y: number; w: number; h: n
   );
 };
 
-/* ---------------- news cards: blurred photo blocks + grey headline bars, generic words only ---------------- */
-export type Photo = 'city' | 'quake' | 'night' | 'podium' | 'field' | 'sea' | 'crowd' | 'road';
-export type CardSpec = { photo: Photo; tag?: string; tagC?: string; b1: number; b2: number; meta: number };
+/* ---------------- news cards: real (fictional, generic) headlines + illustrated thumbnails, no gore ---------------- */
+export type Thumb = 'rubble' | 'smoke' | 'tents' | 'night' | 'mics' | 'fire' | 'drought' | 'flood' | 'crowd';
+export type Tag = 'BREAKING' | 'WAR' | 'LIVE' | 'UPDATE';
+export type NewsSpec = { tag?: Tag; head: string; time: string; thumb: Thumb };
+export const TAG_C: Record<Tag, string> = { BREAKING: '#c8322a', WAR: '#8e1f1f', LIVE: '#d2452f', UPDATE: '#59606c' };
 
-const PHOTO: Record<Photo, { top: string; bot: string; avg: string }> = {
-  city: { top: '#a7b9c8', bot: '#d9d3c5', avg: '#c2c6c6' },
-  quake: { top: '#cfae86', bot: '#7a624c', avg: '#a68867' },
-  night: { top: '#1e2536', bot: '#0d1019', avg: '#181d2a' },
-  podium: { top: '#9a948d', bot: '#5e5955', avg: '#7c7671' },
-  field: { top: '#b4cddc', bot: '#6c8656', avg: '#8fa98f' },
-  sea: { top: '#a8cadb', bot: '#3c6c84', avg: '#6f9bb0' },
-  crowd: { top: '#c2bcb2', bot: '#6a6662', avg: '#97928b' },
-  road: { top: '#c9cdcc', bot: '#5f5d5a', avg: '#959593' },
+/** Every headline used on screen (STYLE.md "Headlines", exact text). */
+export const NEWS = {
+  quake: { tag: 'BREAKING', head: '7.4 quake flattens coastal towns, thousands missing', time: '2m ago', thumb: 'rubble' },
+  camp: { tag: 'WAR', head: 'Airstrikes hit refugee camp overnight', time: '5m ago', thumb: 'smoke' },
+  genocide: { tag: 'BREAKING', head: 'Rights group warns of genocide as entire families are wiped out', time: '1m ago', thumb: 'tents' },
+  debt: { head: 'Man stabbed to death over a $12 debt', time: '9m ago', thumb: 'night' },
+  funds: { tag: 'UPDATE', head: 'Official arrested for stealing disaster relief funds', time: '3m ago', thumb: 'mics' },
+  wildfire: { head: 'Wildfires force 80,000 to flee', time: 'just now', thumb: 'fire' },
+  famine: { head: 'Famine declared in three provinces', time: 'just now', thumb: 'drought' },
+  ceasefire: { tag: 'WAR', head: 'Ceasefire collapses after 48 hours', time: 'just now', thumb: 'crowd' },
+  toll: { tag: 'LIVE', head: 'Death toll passes 12,000', time: '4m ago', thumb: 'rubble' },
+  floods: { tag: 'BREAKING', head: 'Floods sweep away entire villages', time: '12m ago', thumb: 'flood' },
+} satisfies Record<string, NewsSpec>;
+
+const THUMB_AVG: Record<Thumb, string> = { rubble: '#a88a68', smoke: '#8c8a8a', tents: '#c9c2b2', night: '#1d2333', mics: '#7d7873', fire: '#7a3e2a', drought: '#c9a877', flood: '#7c6f58', crowd: '#8f8780' };
+
+/** rough Inter-800 advance widths (em) for line wrapping */
+const adv = (ch: string) => (/[ .,'!:;|]/.test(ch) ? 0.3 : /[ilIjtfr1]/.test(ch) ? 0.38 : /[mwMW]/.test(ch) ? 0.9 : /[A-Z0-9$]/.test(ch) ? 0.68 : 0.58);
+export const wrap = (text: string, fs: number, maxW: number) => {
+  const lines: string[] = [];
+  let cur = '';
+  for (const w of text.split(' ')) {
+    const next = cur ? `${cur} ${w}` : w;
+    const width = [...next].reduce((a, c) => a + adv(c) * fs, 0);
+    if (cur && width > maxW) { lines.push(cur); cur = w; } else cur = next;
+  }
+  if (cur) lines.push(cur);
+  return lines;
 };
 
-/** Soft photo content: gradients and a few low-contrast shapes (reads as an out-of-focus picture). */
-const PhotoArt: React.FC<{ kind: Photo; w: number; h: number; id: string }> = ({ kind, w, h, id }) => {
-  const soft = (cx: number, cy: number, rx: number, ry: number, c: string, o: number, k: string) => (
-    <g key={k}>
-      <defs><radialGradient id={`${id}${k}`}><stop offset="0" stopColor={c} stopOpacity={o} /><stop offset="1" stopColor={c} stopOpacity={0} /></radialGradient></defs>
-      <ellipse cx={cx} cy={cy} rx={rx} ry={ry} fill={`url(#${id}${k})`} />
-    </g>
+/** Flat illustrated thumbnail (silhouettes only, no people hurt, no gore). */
+const ThumbArt: React.FC<{ kind: Thumb; w: number; h: number; id: string }> = ({ kind, w, h, id }) => {
+  const g = (c1: string, c2: string, k = 'g') => (
+    <>
+      <defs><linearGradient id={`${id}${k}`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={c1} /><stop offset="1" stopColor={c2} /></linearGradient></defs>
+      <rect x={0} y={0} width={w} height={h} fill={`url(#${id}${k})`} />
+    </>
   );
+  const puff = (cx: number, cy: number, r: number, c: string, o = 1) => <circle cx={cx} cy={cy} r={r} fill={c} opacity={o} />;
   switch (kind) {
-    case 'quake':
+    case 'rubble':
       return (
         <g>
-          {soft(w * 0.3, h * 0.25, w * 0.6, h * 0.5, '#f3dfbf', 0.7, 'd')}
-          <g transform={`rotate(9 ${w * 0.55} ${h})`} opacity={0.75}>
-            <rect x={w * 0.42} y={h * 0.22} width={w * 0.24} height={h * 0.8} fill="#5b4737" />
-            {[0, 1, 2, 3].map((r) => <rect key={r} x={w * 0.45} y={h * (0.3 + r * 0.14)} width={w * 0.18} height={h * 0.05} fill="#8a6f57" opacity={0.6} />)}
-          </g>
-          <rect x={w * 0.08} y={h * 0.45} width={w * 0.2} height={h * 0.6} fill="#6a5442" opacity={0.6} />
-          <path d={`M0 ${h} Q${w * 0.25} ${h * 0.7} ${w * 0.5} ${h * 0.82} Q${w * 0.75} ${h * 0.66} ${w} ${h * 0.86} L${w} ${h} Z`} fill="#4a3a2e" opacity={0.8} />
-          {soft(w * 0.6, h * 0.75, w * 0.45, h * 0.3, '#d9c09c', 0.45, 'e')}
+          {g('#e2c7a0', '#a9855c')}
+          {puff(w * 0.3, h * 0.35, h * 0.3, '#f0dcbc', 0.7)}{puff(w * 0.5, h * 0.3, h * 0.24, '#ead3ae', 0.7)}
+          <rect x={w * 0.08} y={h * 0.32} width={w * 0.16} height={h * 0.7} fill="#7a6048" />
+          <g transform={`rotate(14 ${w * 0.5} ${h})`}><rect x={w * 0.4} y={h * 0.2} width={w * 0.2} height={h * 0.9} fill="#5f4a38" />
+            {[0, 1, 2].map((r) => <rect key={r} x={w * 0.43} y={h * (0.3 + r * 0.17)} width={w * 0.14} height={h * 0.07} fill="#3f3127" />)}</g>
+          <path d={`M${w * 0.68} ${h} L${w * 0.7} ${h * 0.45} L${w * 0.84} ${h * 0.58} L${w * 0.86} ${h} Z`} fill="#6c543f" />
+          <path d={`M0 ${h} L0 ${h * 0.8} L${w * 0.15} ${h * 0.7} L${w * 0.3} ${h * 0.82} L${w * 0.48} ${h * 0.68} L${w * 0.62} ${h * 0.8} L${w * 0.8} ${h * 0.7} L${w} ${h * 0.82} L${w} ${h} Z`} fill="#4a3a2d" />
+          {[0.2, 0.42, 0.58, 0.9].map((x, i) => <rect key={i} x={w * x} y={h * (0.76 + (i % 2) * 0.05)} width={w * 0.05} height={h * 0.03} fill="#2f251e" transform={`rotate(${i * 23 - 20} ${w * x} ${h * 0.78})`} />)}
+        </g>
+      );
+    case 'smoke':
+      return (
+        <g>
+          {g('#6d6f78', '#e0b98a')}
+          {[[0.62, 0.62, 0.16], [0.58, 0.44, 0.2], [0.66, 0.28, 0.22], [0.55, 0.12, 0.24], [0.74, 0.06, 0.2]].map(([x, y, r], i) => puff(w * x, h * y, h * r, i % 2 ? '#3d3c40' : '#4a484c', 0.95))}
+          {puff(w * 0.6, h * 0.82, h * 0.16, '#ff9a3c', 0.55)}
+          <path d={`M0 ${h} L0 ${h * 0.7} L${w * 0.1} ${h * 0.7} L${w * 0.1} ${h * 0.56} L${w * 0.2} ${h * 0.56} L${w * 0.2} ${h * 0.74} L${w * 0.34} ${h * 0.74} L${w * 0.34} ${h * 0.5} L${w * 0.42} ${h * 0.5} L${w * 0.42} ${h * 0.78} L${w * 0.56} ${h * 0.78} L${w * 0.56} ${h * 0.66} L${w * 0.74} ${h * 0.66} L${w * 0.74} ${h * 0.58} L${w * 0.86} ${h * 0.58} L${w * 0.86} ${h * 0.72} L${w} ${h * 0.72} L${w} ${h} Z`} fill="#25262b" />
+        </g>
+      );
+    case 'tents':
+      return (
+        <g>
+          {g('#c9d4dc', '#d8ccb0')}
+          <rect x={0} y={h * 0.5} width={w} height={h * 0.5} fill="#c4b08a" />
+          {[0, 1, 2].map((row) => Array.from({ length: 6 - row }, (_, i) => {
+            const s = 0.55 + row * 0.35, tw = w * 0.13 * s, x = w * (0.04 + i * (0.17 + row * 0.05)) + row * 14, y = h * (0.56 + row * 0.16);
+            return <g key={`${row}${i}`}><path d={`M${x} ${y + tw * 0.55} L${x + tw / 2} ${y} L${x + tw} ${y + tw * 0.55} Z`} fill={i % 2 ? '#eeeae0' : '#dcd6c8'} /><path d={`M${x + tw / 2} ${y} L${x + tw * 0.62} ${y + tw * 0.55} L${x + tw * 0.38} ${y + tw * 0.55} Z`} fill="#8c8270" /></g>;
+          }))}
+          {puff(w * 0.85, h * 0.2, h * 0.12, '#ffffff', 0.6)}
         </g>
       );
     case 'night':
       return (
         <g>
-          <rect x={0} y={h * 0.68} width={w} height={h * 0.32} fill="#232938" />
-          {soft(w * 0.25, h * 0.45, w * 0.32, h * 0.42, '#e0473c', 0.75, 'r')}
-          {soft(w * 0.72, h * 0.42, w * 0.34, h * 0.44, '#3d7bff', 0.7, 'b')}
-          <rect x={w * 0.38} y={h * 0.5} width={w * 0.26} height={h * 0.2} rx={10} fill="#0b0d14" opacity={0.8} />
-          <path d={`M0 ${h * 0.82} L${w} ${h * 0.62}`} stroke="#d9b545" strokeWidth={7} opacity={0.55} />
+          {g('#1c2233', '#0f121b')}
+          {puff(w * 0.22, h * 0.4, h * 0.34, '#e0473c', 0.35)}{puff(w * 0.78, h * 0.38, h * 0.36, '#3d7bff', 0.35)}
+          <rect x={w * 0.15} y={h * 0.15} width={w * 0.2} height={h * 0.6} fill="#151925" />
+          <rect x={w * 0.62} y={h * 0.08} width={w * 0.26} height={h * 0.68} fill="#121622" />
+          <rect x={0} y={h * 0.74} width={w} height={h * 0.26} fill="#262b38" />
+          <path d={`M0 ${h * 0.66} L${w} ${h * 0.52}`} stroke="#e8c33a" strokeWidth={h * 0.05} />
+          <path d={`M0 ${h * 0.84} L${w} ${h * 0.74}`} stroke="#e8c33a" strokeWidth={h * 0.04} />
+          <circle cx={w * 0.5} cy={h * 0.3} r={h * 0.05} fill="#fff1c9" opacity={0.8} />
         </g>
       );
-    case 'podium':
+    case 'mics':
       return (
         <g>
-          <rect x={w * 0.12} y={0} width={w * 0.76} height={h * 0.72} fill="#aaa49c" opacity={0.6} />
-          <ellipse cx={w * 0.5} cy={h * 0.3} rx={w * 0.065} ry={h * 0.11} fill="#2e2c2d" />
-          <path d={`M${w * 0.32} ${h} Q${w * 0.33} ${h * 0.5} ${w * 0.5} ${h * 0.45} Q${w * 0.67} ${h * 0.5} ${w * 0.68} ${h} Z`} fill="#26252a" />
-          <path d={`M${w * 0.47} ${h * 0.46} L${w * 0.5} ${h * 0.62} L${w * 0.53} ${h * 0.46} Z`} fill="#d8d4ce" opacity={0.7} />
-          <rect x={w * 0.34} y={h * 0.7} width={w * 0.32} height={h * 0.3} fill="#3c3631" />
-          <path d={`M${w * 0.45} ${h * 0.7} L${w * 0.47} ${h * 0.55} M${w * 0.55} ${h * 0.7} L${w * 0.53} ${h * 0.55}`} stroke="#1c1b1e" strokeWidth={5} />
-          {soft(w * 0.85, h * 0.2, w * 0.3, h * 0.3, '#ffffff', 0.35, 'f')}
+          {g('#b6b0a8', '#8a847d')}
+          <rect x={w * 0.1} y={h * 0.06} width={w * 0.8} height={h * 0.6} fill="#c9c3ba" opacity={0.6} />
+          <ellipse cx={w * 0.5} cy={h * 0.36} rx={h * 0.13} ry={h * 0.16} fill="#2e2c2d" />
+          <path d={`M${w * 0.26} ${h} Q${w * 0.28} ${h * 0.56} ${w * 0.5} ${h * 0.52} Q${w * 0.72} ${h * 0.56} ${w * 0.74} ${h} Z`} fill="#25262c" />
+          <path d={`M${w * 0.46} ${h * 0.53} L${w * 0.5} ${h * 0.74} L${w * 0.54} ${h * 0.53} Z`} fill="#eeeae4" />
+          <path d={`M${w * 0.49} ${h * 0.58} L${w * 0.5} ${h * 0.72} L${w * 0.51} ${h * 0.58} Z`} fill="#8e2a2a" />
+          {[0.36, 0.45, 0.55, 0.64].map((x, i) => (
+            <g key={i}><path d={`M${w * x} ${h} L${w * (0.5 + (x - 0.5) * 0.4)} ${h * 0.72}`} stroke="#151517" strokeWidth={h * 0.025} /><ellipse cx={w * (0.5 + (x - 0.5) * 0.4)} cy={h * 0.7} rx={h * 0.035} ry={h * 0.05} fill={['#1a1a1d', '#c8322a', '#1a1a1d', '#3a5fa0'][i]} /></g>
+          ))}
         </g>
       );
-    case 'field':
+    case 'fire':
       return (
         <g>
-          <rect x={0} y={h * 0.55} width={w} height={h * 0.45} fill="#5f7b4c" opacity={0.7} />
-          {soft(w * 0.5, h * 0.2, w * 0.5, h * 0.3, '#ffffff', 0.4, 's')}
-          {[0.2, 0.42, 0.66, 0.8].map((x, i) => <ellipse key={i} cx={w * x} cy={h * 0.62} rx={9} ry={20} fill="#2f3a2c" opacity={0.55} />)}
+          {g('#3b2230', '#e07a3a')}
+          {[[0.3, 0.3, 0.2], [0.5, 0.2, 0.24], [0.7, 0.28, 0.2]].map(([x, y, r], i) => puff(w * x, h * y, h * r, '#4a3036', 0.9))}
+          <path d={`M0 ${h * 0.7} Q${w * 0.25} ${h * 0.5} ${w * 0.5} ${h * 0.62} Q${w * 0.75} ${h * 0.48} ${w} ${h * 0.64} L${w} ${h} L0 ${h} Z`} fill="#1e1416" />
+          {Array.from({ length: 9 }, (_, i) => { const x = w * (0.04 + i * 0.115), y = h * (0.6 - Math.sin(i * 0.9) * 0.06); return <path key={i} d={`M${x - w * 0.04} ${y + h * 0.06} Q${x} ${y - h * 0.18} ${x + w * 0.04} ${y + h * 0.06} Z`} fill={i % 2 ? '#ffb347' : '#ff7a2f'} />; })}
+          {[0.1, 0.3, 0.58, 0.86].map((x, i) => <path key={i} d={`M${w * x} ${h} L${w * x} ${h * 0.72} M${w * x - 10} ${h * 0.78} L${w * x} ${h * 0.74} L${w * x + 12} ${h * 0.8}`} stroke="#120c0d" strokeWidth={5} />)}
         </g>
       );
-    case 'sea':
+    case 'drought':
       return (
         <g>
-          <rect x={0} y={h * 0.5} width={w} height={h * 0.5} fill="#335e74" opacity={0.6} />
-          {soft(w * 0.7, h * 0.3, w * 0.4, h * 0.3, '#fff6dc', 0.55, 's')}
-          <path d={`M0 ${h * 0.5} L${w} ${h * 0.48}`} stroke="#d8e6ea" strokeWidth={4} opacity={0.5} />
+          {g('#efe0bd', '#d9b77a')}
+          {puff(w * 0.75, h * 0.25, h * 0.14, '#fff6dc', 0.9)}
+          <rect x={0} y={h * 0.55} width={w} height={h * 0.45} fill="#c79a5c" />
+          <path d={`M${w * 0.1} ${h * 0.7} L${w * 0.3} ${h * 0.8} L${w * 0.25} ${h} M${w * 0.3} ${h * 0.8} L${w * 0.55} ${h * 0.72} L${w * 0.7} ${h * 0.9} M${w * 0.55} ${h * 0.72} L${w * 0.62} ${h * 0.6} M${w * 0.7} ${h * 0.9} L${w * 0.95} ${h * 0.78}`} stroke="#8a6436" strokeWidth={3} fill="none" />
+          <path d={`M${w * 0.24} ${h * 0.6} L${w * 0.25} ${h * 0.3} M${w * 0.25} ${h * 0.4} L${w * 0.16} ${h * 0.28} M${w * 0.25} ${h * 0.36} L${w * 0.33} ${h * 0.22} M${w * 0.18} ${h * 0.31} L${w * 0.14} ${h * 0.33}`} stroke="#4a3626" strokeWidth={5} strokeLinecap="round" fill="none" />
         </g>
       );
-    case 'crowd':
+    case 'flood':
       return (
         <g>
-          {Array.from({ length: 22 }, (_, i) => {
-            const x = ((i * 53) % 100) / 100 * w, y = h * (0.5 + ((i * 37) % 50) / 100);
-            return <ellipse key={i} cx={x} cy={y} rx={12} ry={15} fill="#3a3734" opacity={0.55} />;
+          {g('#a7b3bb', '#8a7a5c')}
+          {[0.12, 0.38, 0.66].map((x, i) => (
+            <g key={i}><rect x={w * x} y={h * (0.36 + i * 0.04)} width={w * 0.2} height={h * 0.3} fill="#e4ddcd" /><path d={`M${w * (x - 0.03)} ${h * (0.38 + i * 0.04)} L${w * (x + 0.1)} ${h * (0.2 + i * 0.04)} L${w * (x + 0.23)} ${h * (0.38 + i * 0.04)} Z`} fill="#8a4a36" /></g>
+          ))}
+          <rect x={0} y={h * 0.55} width={w} height={h * 0.45} fill="#7a6648" />
+          {[0.62, 0.72, 0.84].map((y, i) => <path key={i} d={`M0 ${h * y} Q${w * 0.25} ${h * (y - 0.04)} ${w * 0.5} ${h * y} T${w} ${h * y}`} stroke="#a89470" strokeWidth={4} fill="none" />)}
+        </g>
+      );
+    default: // crowd running from smoke
+      return (
+        <g>
+          {g('#9a9592', '#d2c6b4')}
+          {[[0.2, 0.25, 0.22], [0.42, 0.18, 0.26], [0.7, 0.24, 0.22]].map(([x, y, r], i) => puff(w * x, h * y, h * r, '#5a5658', 0.85))}
+          <rect x={0} y={h * 0.78} width={w} height={h * 0.22} fill="#6e6862" />
+          {Array.from({ length: 7 }, (_, i) => {
+            const x = w * (0.1 + i * 0.13), y = h * (0.82 + (i % 2) * 0.04), s = h * (0.32 + (i % 3) * 0.04);
+            return <g key={i} fill="#2a2829"><ellipse cx={x} cy={y - s} rx={s * 0.09} ry={s * 0.11} /><path d={`M${x - s * 0.14} ${y - s * 0.86} L${x + s * 0.12} ${y - s * 0.86} L${x + s * 0.08} ${y - s * 0.4} L${x + s * 0.22} ${y} L${x + s * 0.1} ${y} L${x} ${y - s * 0.32} L${x - s * 0.16} ${y} L${x - s * 0.26} ${y} L${x - s * 0.1} ${y - s * 0.42} Z`} /></g>;
           })}
-          {soft(w * 0.3, h * 0.2, w * 0.4, h * 0.25, '#ffffff', 0.35, 'g')}
-        </g>
-      );
-    case 'road':
-      return (
-        <g>
-          <path d={`M${w * 0.35} 0 L${w * 0.65} 0 L${w} ${h} L0 ${h} Z`} fill="#4d4b49" opacity={0.6} />
-          {[0.3, 0.5, 0.7].map((y, i) => <ellipse key={i} cx={w * (0.4 + i * 0.1)} cy={h * y} rx={10 + i * 4} ry={7 + i * 3} fill="#222" opacity={0.5} />)}
-        </g>
-      );
-    default: // city
-      return (
-        <g>
-          {[0.05, 0.22, 0.4, 0.62, 0.8].map((x, i) => <rect key={i} x={w * x} y={h * (0.25 + (i % 2) * 0.15)} width={w * 0.14} height={h} fill="#7f8f9c" opacity={0.5} />)}
-          <rect x={0} y={h * 0.78} width={w} height={h * 0.22} fill="#8d8a84" opacity={0.6} />
-          {soft(w * 0.2, h * 0.1, w * 0.4, h * 0.25, '#ffffff', 0.4, 'h')}
         </g>
       );
   }
 };
 
-/** One feed card at local (0,0), CARD_W x CARD_H. Lx/Ly = motion smear in px (the larger axis wins). */
-export const Card: React.FC<{ id: string; c: CardSpec; ui: UI; Lx?: number; Ly?: number }> = ({ id, c, ui, Lx = 0, Ly = 0 }) => {
+/** card geometry (screen units) */
+export const NC = { pad: 14, thumbH: 184, tagY: 212, tagH: 32, fs: 28, lh: 33, headY: 284, timeY: 396 };
+
+/**
+ * One news card at local (0,0), CARD_W x CARD_H: thumbnail, tag, headline (bold, wrapped), timestamp.
+ * Lx/Ly = motion smear in px; the text fades into smeared bars as speed rises.
+ */
+export const NewsCard: React.FC<{ id: string; c: NewsSpec; ui: UI; Lx?: number; Ly?: number }> = ({ id, c, ui, Lx = 0, Ly = 0 }) => {
   const axis = Lx > Ly ? 'x' : 'y', L = Math.max(Lx, Ly);
-  const k = clamp01(L / 70), kt = clamp01(L / 26);
-  const P = PHOTO[c.photo];
-  const pw = CARD_W - 28, ph = 236;
-  const tagW = c.tag ? 30 + c.tag.length * 12.5 : 0;
+  const k = clamp01(L / 70), kt = clamp01((L - 6) / 30);
+  const { pad, thumbH, tagY, tagH, fs, lh, headY, timeY } = NC;
+  const tw = CARD_W - 2 * pad;
+  const lines = wrap(c.head, fs, tw - 4).slice(0, 3);
+  const tagW = c.tag ? 28 + c.tag.length * 12.4 : 0;
+  const hy = c.tag ? headY : headY - 26;
   return (
     <g>
-      <SRect id={`${id}bg`} x={0} y={0} w={CARD_W} h={CARD_H} rx={26} fill={ui.card} L={L} axis={axis} />
-      {/* photo: sharp block fades into its smeared average as speed rises */}
-      <SRect id={`${id}pa`} x={14} y={14} w={pw} h={ph} rx={16} fill={P.avg} L={L} axis={axis} op={k} />
+      <SRect id={`${id}bg`} x={0} y={0} w={CARD_W} h={CARD_H} rx={24} fill={ui.card} L={L} axis={axis} />
+      <SRect id={`${id}pa`} x={pad} y={pad} w={tw} h={thumbH} rx={14} fill={THUMB_AVG[c.thumb]} L={L} axis={axis} op={k} />
       <g opacity={1 - k}>
-        <defs>
-          <linearGradient id={`${id}pg`} x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor={P.top} /><stop offset="1" stopColor={P.bot} /></linearGradient>
-          <clipPath id={`${id}pc`}><rect x={14} y={14} width={pw} height={ph} rx={16} /></clipPath>
-        </defs>
-        <rect x={14} y={14} width={pw} height={ph} rx={16} fill={`url(#${id}pg)`} />
-        <g clipPath={`url(#${id}pc)`}><g transform="translate(14 14)"><PhotoArt kind={c.photo} w={pw} h={ph} id={`${id}pp`} /></g></g>
+        <defs><clipPath id={`${id}pc`}><rect x={pad} y={pad} width={tw} height={thumbH} rx={14} /></clipPath></defs>
+        <g clipPath={`url(#${id}pc)`}><g transform={`translate(${pad} ${pad})`}><ThumbArt kind={c.thumb} w={tw} h={thumbH} id={`${id}t`} /></g></g>
       </g>
       {c.tag && (
         <g>
-          <SRect id={`${id}tg`} x={14} y={266} w={tagW} h={34} rx={8} fill={c.tagC ?? '#c4382e'} L={L} axis={axis} />
-          <text x={14 + tagW / 2} y={289} textAnchor="middle" fontFamily={UI_FONT} fontWeight={800} fontSize={17} letterSpacing="0.08em" fill="#fff" opacity={1 - kt}>{c.tag}</text>
+          <SRect id={`${id}tg`} x={pad} y={tagY} w={tagW} h={tagH} rx={7} fill={TAG_C[c.tag]} L={L} axis={axis} />
+          <text x={pad + tagW / 2} y={tagY + 22} textAnchor="middle" fontFamily={UI_FONT} fontWeight={800} fontSize={17} letterSpacing="0.06em" fill="#fff" opacity={1 - kt}>{c.tag}</text>
         </g>
       )}
-      <SRect id={`${id}b1`} x={14} y={c.tag ? 314 : 272} w={pw * c.b1} h={22} rx={11} fill={ui.bar} op={ui.barOp} L={L} axis={axis} />
-      <SRect id={`${id}b2`} x={14} y={c.tag ? 346 : 304} w={pw * c.b2} h={22} rx={11} fill={ui.bar} op={ui.barOp} L={L} axis={axis} />
-      {!c.tag && <SRect id={`${id}b3`} x={14} y={336} w={pw * 0.5} h={22} rx={11} fill={ui.bar} op={ui.barOp} L={L} axis={axis} />}
-      <SRect id={`${id}m`} x={14} y={386} w={pw * c.meta} h={13} rx={6} fill={ui.meta} L={L} axis={axis} />
+      <g opacity={1 - kt}>
+        {lines.map((l, i) => <text key={i} x={pad} y={hy + i * lh} fontFamily={UI_FONT} fontWeight={800} fontSize={fs} fill="#1d1f24">{l}</text>)}
+        <text x={pad} y={timeY} fontFamily={UI_FONT} fontWeight={600} fontSize={18} fill="#8a8e96">{c.time}</text>
+      </g>
+      {kt > 0 && lines.map((l, i) => {
+        const lw = Math.min(tw, [...l].reduce((a, ch) => a + adv(ch) * fs, 0));
+        return <SRect key={i} id={`${id}l${i}`} x={pad} y={hy + i * lh - fs * 0.72} w={lw} h={fs * 0.8} rx={6} fill="#2b2d33" op={0.55 * kt} L={L} axis={axis} />;
+      })}
     </g>
   );
 };
@@ -197,7 +254,7 @@ export const Chrome: React.FC<{ ui: UI }> = ({ ui }) => (
  * Scrolling feed (screen coords). s = scroll position in cards (card i is at the top when s = i).
  * L = vertical smear in px. fling(i) moves single cards sideways (swipe-away) with their own smear.
  */
-export const Feed: React.FC<{ id: string; ui: UI; cards: CardSpec[]; s: number; L: number; fling?: (i: number) => { dx: number; rot: number; Lx: number }; chrome?: boolean }> = ({ id, ui, cards, s, L, fling, chrome = true }) => {
+export const Feed: React.FC<{ id: string; ui: UI; cards: NewsSpec[]; s: number; L: number; fling?: (i: number) => { dx: number; rot: number; Lx: number }; chrome?: boolean }> = ({ id, ui, cards, s, L, fling, chrome = true }) => {
   const n = cards.length, pad = 1 + Math.ceil(L / 2 / CH), i0 = Math.floor(s) - pad, i1 = Math.floor(s) + Math.ceil(SH / CH) + pad;
   const out: React.ReactNode[] = [];
   for (let i = i0; i <= i1; i++) {
@@ -207,7 +264,7 @@ export const Feed: React.FC<{ id: string; ui: UI; cards: CardSpec[]; s: number; 
     if (Math.abs(f.dx) > SW * 1.4) continue;
     out.push(
       <g key={i} transform={`translate(${16 + f.dx} ${y}) rotate(${f.rot} ${CARD_W / 2} ${CARD_H / 2})`}>
-        <Card id={`${id}c${i}`} c={cards[((i % n) + n) % n]} ui={ui} Ly={L} Lx={f.Lx} />
+        <NewsCard id={`${id}c${i}`} c={cards[((i % n) + n) % n]} ui={ui} Ly={L} Lx={f.Lx} />
       </g>,
     );
   }
