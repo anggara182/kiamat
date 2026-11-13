@@ -314,3 +314,36 @@ def body_hit(seed=0):
     th = np.sin(2 * np.pi * (110 + 80 * np.exp(-t * 50)) * t) * np.exp(-t * 22)
     sm = bp(noise(0.35, seed), 600, 3500) * np.exp(-t * 45) * 0.6
     return stereo((th + sm) * 0.9)
+
+
+# ---------- cinematic drops ----------
+def braam(sec=3.5, root="D1", gain=1.0):
+    """Big brassy 'braam': stacked detuned saws (root, octave, fifth) with a fast-opening, slowly-closing low-pass."""
+    f0 = note_hz(root)
+    t = T(sec)
+    raw = np.zeros((len(t), 2), np.float32)
+    for mult, amp in [(1, 1.0), (2, 0.8), (3, 0.55), (4, 0.4)]:
+        for c, dt in enumerate((-0.006, 0.006)):
+            raw[:, c] += amp * saw(f0 * mult * (1 + dt), t, harm=30)
+    out = np.zeros_like(raw)
+    hop = 2400
+    for i in range(0, len(raw), hop):
+        tt = i / SR
+        fc = 180 + 2600 * np.exp(-tt * 1.4) * (1 - np.exp(-tt * 40))
+        seg = raw[max(0, i - 512): i + hop]
+        out[i:i + hop] = lp(seg, fc, 2)[-len(out[i:i + hop]):]
+    env = adsr(len(t), 0.02, 0.4, 0.55, sec * 0.6)
+    return out * env[:, None] * 0.25 * gain
+
+
+def heartbeat_run(sec, bpm0=70, bpm1=140, seed=0):
+    """Heartbeat that accelerates from bpm0 to bpm1 over `sec` seconds (lub-dub pairs)."""
+    out = np.zeros((int(sec * SR) + SR, 2), np.float32)
+    t = 0.0
+    while t < sec:
+        p = t / sec
+        bpm = bpm0 + (bpm1 - bpm0) * p ** 1.5
+        place(out, heartbeat_kick() * (0.6 + 0.4 * p), t)
+        place(out, heartbeat_kick() * (0.35 + 0.3 * p), t + 0.16 * 70 / bpm)
+        t += 60 / bpm
+    return out[: int(sec * SR)]

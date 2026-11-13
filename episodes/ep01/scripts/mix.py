@@ -187,6 +187,37 @@ for k, wd in enumerate([r"^message", r"^spread", r"^city"]):
     hit(phone_buzz(0.4, 50 + k), t, -22 - k, "phone_buzz")
     hit(notif_ping(10 + k), t + 0.02, -24 - k, "notif_ping")
 
+# ---------------- cinematic drops (impacts, braams, swells) ----------------
+# frame 0: a dark thump so the hook hits immediately
+hit_file("thump_adrian", 0.02, -13)
+# the slap is the drop into the story: reverse swell into it, then adrian's cinematic boom
+hit(swell(1.4, 300, 6000, seed=21), t_slap - 1.4, -19, "rev_swell", land=False)
+hit_file("boom_adrian", t_slap, -9)
+# into the news: whoosh + thump
+hit_file("whoosh2", st(11) - 0.35, -17)
+hit_file("thump_adrian", st(11), -14)
+# the genocide card lands with a braam; the next two cards with thumps
+hit(lp(sfx("braam"), 700, 4), W(12, r"^whole"), -13, "braam_lp")          # low-passed: weight without masking the words
+hit_file("thump_adrian", W(12, r"^life"), -16, length=1.4)
+hit_file("thump_adrian", W(12, r"^trusted"), -16, length=1.4)
+# "Forgotten": one short thump, then the silence does the work
+hit_file("thump_adrian", W(13, r"^forgotten"), -14, length=0.8)
+# into the recap
+hit_file("whoosh2", st(15) - 0.3, -19)
+# "foretold": swell into a braam + boom
+t_fo = W(21, r"^foretold")
+hit(swell(1.6, 300, 7000, seed=22), t_fo - 1.6, -20, "rev_swell", land=False)
+hit(braam(4.0, "D1"), t_fo, -10, "braam_synth", land=False)
+hit_file("boom_adrian", t_fo, -10)
+# cliffhanger: heartbeat accelerating under the last line, stops dead at the cut
+t24, t25 = st(24), st(25)
+hb = heartbeat_run(t25 - t24 - 0.05, 66, 150)
+hit(hb, t24, -15, "heartbeat_run", land=False)
+# title: the biggest drop
+hit_file("boom_adrian", t25, -6)
+hit_file("braam", t25, -10)
+hit(braam(4.2, "D1", 1.2), t25, -9, "braam_synth", land=False)
+
 # ---------------- ducking + dramatic silence ----------------
 env = np.abs(vo_bus).max(1)
 win = int(0.05 * SR)
