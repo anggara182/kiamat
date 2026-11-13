@@ -1,5 +1,5 @@
 node_modules/
 __pycache__/
 *.mp4
-out/
-public/baked/
+**/out/
+**/public/baked/
