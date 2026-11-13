@@ -33,15 +33,15 @@ export const Person: React.FC<{
   return (
     <g>
       <defs>
-        <clipPath id={`${id}t`}><path d="M-64 128 L54 128 L74 248 C166 268 226 320 246 470 L-266 470 C-246 320 -176 268 -84 248 Z" /></clipPath>
+        <clipPath id={`${id}t`}><path d="M-64 128 L54 128 L74 248 C166 268 226 320 250 900 L-270 900 C-246 320 -176 268 -84 248 Z" /></clipPath>
         <clipPath id={`${id}f`}><path d={FACE} /></clipPath>
       </defs>
       {/* torso + neck */}
-      <path d="M-64 128 L54 128 L74 248 C166 268 226 320 246 470 L-266 470 C-246 320 -176 268 -84 248 Z" fill={p.shirt} />
+      <path d="M-64 128 L54 128 L74 248 C166 268 226 320 250 900 L-270 900 C-246 320 -176 268 -84 248 Z" fill={p.shirt} />
       <g clipPath={`url(#${id}t)`}>
         {p.shirtPat && Array.from({ length: 24 }, (_, i) => <circle key={i} cx={-240 + (i % 6) * 90 + (Math.floor(i / 6) % 2) * 45} cy={280 + Math.floor(i / 6) * 50} r={10} fill="none" stroke={p.shirtPat} strokeWidth={4} opacity={0.7} />)}
-        <path d="M-266 470 C-246 330 -180 280 -90 262 L-70 470 Z" fill={p.shirtD} opacity={0.6} />
-        {p.cape && <path d="M-300 300 C-100 250 120 250 300 300 L300 480 L-300 480 Z" fill="#e8e6de" />}
+        <path d="M-270 900 C-246 330 -180 280 -90 262 L-70 900 Z" fill={p.shirtD} opacity={0.6} />
+        {p.cape && <path d="M-300 300 C-100 250 120 250 300 300 L300 920 L-300 920 Z" fill="#e8e6de" />}
       </g>
       <path d="M-46 120 L40 120 L52 250 C20 262 -40 262 -70 250 Z" fill={p.skin} />
       <path d="M-46 120 L-10 120 L-20 252 C-40 256 -58 254 -70 250 Z" fill={p.shade} opacity={0.6} />
@@ -78,8 +78,8 @@ export const Person: React.FC<{
         )}
         {p.hair === 'scarf' && (
           <g>
-            <defs><clipPath id={`${id}s`}><path d="M84 -126 C44 -196 -130 -196 -168 -60 C-190 40 -180 170 -128 262 L-250 470 L250 470 L160 300 C116 252 86 212 74 170 C58 128 46 80 48 20 C50 -40 62 -92 84 -126 Z" /></clipPath></defs>
-            <path d="M84 -126 C44 -196 -130 -196 -168 -60 C-190 40 -180 170 -128 262 L-250 470 L250 470 L160 300 C116 252 86 212 74 170 C58 128 46 80 48 20 C50 -40 62 -92 84 -126 Z" fill={p.hairC} />
+            <defs><clipPath id={`${id}s`}><path d="M84 -126 C44 -196 -130 -196 -168 -60 C-190 40 -180 170 -128 262 L-250 900 L250 900 L160 300 C116 252 86 212 74 170 C58 128 46 80 48 20 C50 -40 62 -92 84 -126 Z" /></clipPath></defs>
+            <path d="M84 -126 C44 -196 -130 -196 -168 -60 C-190 40 -180 170 -128 262 L-250 900 L250 900 L160 300 C116 252 86 212 74 170 C58 128 46 80 48 20 C50 -40 62 -92 84 -126 Z" fill={p.hairC} />
             <g clipPath={`url(#${id}s)`}>
               {p.pattern && Array.from({ length: 70 }, (_, i) => <circle key={i} cx={-200 + (i % 10) * 44 + (Math.floor(i / 10) % 2) * 22} cy={-180 + Math.floor(i / 10) * 70} r={7} fill={p.pattern} opacity={0.75} />)}
               <path d="M-200 -200 L-60 -200 C-110 -60 -100 120 -40 300 L-200 480 Z" fill="#000" opacity={0.18} />
@@ -93,7 +93,7 @@ export const Person: React.FC<{
         {/* cupping hand at the mouth (mitten, two finger separations) */}
         {cup > 0 && (
           <g transform={`translate(0 ${(1 - cup) * 160})`} opacity={Math.min(1, cup * 3)}>
-            <path d="M118 140 C116 200 100 300 84 420 L-10 420 C20 300 60 200 92 132 Z" fill={p.shirt} />
+            <path d="M118 140 C116 200 100 300 70 900 L-40 900 C20 300 60 200 92 132 Z" fill={p.shirt} />
             <path d="M136 4 C176 -8 204 20 206 60 C208 100 186 128 152 134 L120 146 C112 120 126 110 150 106 C172 100 182 82 182 60 C182 32 164 20 144 26 Z" fill={p.skin} />
             <path d="M150 106 C172 100 182 82 182 60 M206 60 C204 80 196 96 184 108" stroke={p.shade} strokeWidth={4} fill="none" opacity={0.7} />
             <path d="M190 22 C176 30 172 40 174 50 M200 44 C186 50 182 58 182 68" stroke="#4a2c24" strokeWidth={3} fill="none" opacity={0.6} />

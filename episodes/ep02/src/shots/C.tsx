@@ -23,6 +23,7 @@ export const S05: React.FC = () => {
       <BandImg id="kampung/rumour" k={1} cam={cam} />
       <Live k={1} cam={cam}>
         <ellipse cx={T.cx} cy={T.gy + 10} rx={330} ry={46} fill={RUMOUR.pale} opacity={0.06 + 0.04 * Math.sin(t * 3)} />
+        <polygon points={`${T.cx - 60},${T.gy - 650} ${T.cx + 60},${T.gy - 650} ${T.cx + 300},${T.gy} ${T.cx - 300},${T.gy}`} fill={RUMOUR.pale} opacity={0.22} />
         <g opacity={a} transform={`translate(${T.cx} ${T.gy}) scale(1 ${grow}) translate(${-T.cx} ${-T.gy})`}>
           <RumourFigure x={T.cx} y={T.gy} h={560} fill={RUMOUR.sil} />
         </g>
@@ -46,6 +47,7 @@ export const S12: React.FC = () => {
       <BandImg id="kampung/rumour" k={1} cam={cam} />
       <Live k={1} cam={cam}>
         <ellipse cx={T.cx} cy={T.gy + 10} rx={330} ry={46} fill={RUMOUR.pale} opacity={pump} />
+        <polygon points={`${T.cx - 60},${T.gy - 650} ${T.cx + 60},${T.gy - 650} ${T.cx + 420},${T.gy} ${T.cx - 420},${T.gy}`} fill={RUMOUR.pale} opacity={0.22} />
         {xs.map((x) => (
           <g key={x} transform={`translate(${x} ${T.gy}) scale(1 ${grow}) translate(${-x} ${-T.gy})`}>
             <RumourFigure x={x} y={T.gy} h={560} fill={RUMOUR.sil} />
@@ -69,19 +71,19 @@ const OLD_B: ManLook = { skin: '#a8765c', skinD: '#7a5040', shirt: '#b8c2a8', sh
 export const S10: React.FC = () => {
   const { p, t, t2 } = useShot();
   const ta = wordAt(10, /^argued/i, 0.22);
-  const cam: Cam = { zoom: 1.04 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 560, oy: 1100 };
-  const u = 560 / 7;
+  const cam: Cam = { zoom: 1.14 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: 40, ox: 600, oy: 1250 };
+  const u = 620 / 7;
   // B (right, facing left): pulls the hand back (anticipation) then jabs on "argued", then small repeated jabs
   const back = ramp(t2, ta - 0.35, ta - 0.08);
   const jab = ramp(t2, ta - 0.08, ta + 0.02);
   const rep = t2 > ta + 0.3 ? Math.max(0, Math.sin((t2 - ta - 0.3) * 9)) * 0.35 : 0;
   const reach = clamp01(jab - rep) * (1 - 0) + (1 - jab) * (0.25 - 0.2 * back);
-  const bx = 790, gy = GATE.gy - 5;
+  const bx = 845, gy = GATE.gy - 5;
   const bShX = bx - 0.12 * u;
-  const bHand: [number, number] = [bShX - u * (0.5 + 1.7 * reach) + back * u * 0.35, gy - 560 * 0.8 + u * (0.9 - 0.7 * reach)];
-  const ax = 515;
+  const bHand: [number, number] = [bShX - u * (0.5 + 1.7 * reach) + back * u * 0.35, gy - 620 * 0.8 + u * (0.9 - 0.7 * reach)];
+  const ax = 455;
   const aLean = -0.25 * jab + 0.05 * Math.sin(t2 * 2);
-  const aHand: [number, number] = [ax + u * (0.9 + 0.4 * Math.sin(t2 * 6)), gy - 560 * 0.8 + u * (0.6 + 0.2 * Math.sin(t2 * 6))];
+  const aHand: [number, number] = [ax + u * (0.9 + 0.4 * Math.sin(t2 * 6)), gy - 620 * 0.8 + u * (0.6 + 0.2 * Math.sin(t2 * 6))];
   return (
     <AbsoluteFill style={{ backgroundColor: '#e9eef0' }}>
       <BandImg id="kampung/gate" k={0.9} cam={cam} />
@@ -90,8 +92,8 @@ export const S10: React.FC = () => {
         <Onlooker x={235} y={gy - 10} h={470} body="#5a4a5e" head="#9a6a52" scarf="#8a5a62" sh={t2 * 1.7} armsCrossed turn={1} />
         <Onlooker x={1075} y={gy - 12} h={500} body="#3e5266" head="#a8765c" sh={t2 * 1.4 + 1} turn={-1} />
         <Onlooker x={960} y={gy - 70} h={380} body="#7a6a4e" head="#8a5e48" peci sh={t2 * 1.2 + 2} turn={-1} />
-        <SideMan x={ax} y={gy} h={560} dir={1} look={OLD_A} stoop={0.9} stick lean={aLean} hand={aHand} mouth={Math.abs(Math.sin(t2 * 7)) * (t2 > ta + 0.4 ? 1 : 0.3)} headTilt={6 * jab} br={t2 * 2.2} />
-        <SideMan x={bx} y={gy} h={560} dir={-1} look={OLD_B} stoop={0.5} lean={0.18 * jab} hand={bHand} finger mouth={Math.abs(Math.sin(t2 * 8)) * (t2 > ta - 0.1 ? 1 : 0.2)} br={t2 * 2.4} />
+        <SideMan x={ax} y={gy} h={620} dir={1} look={OLD_A} stoop={0.9} stick lean={aLean} hand={aHand} mouth={Math.abs(Math.sin(t2 * 7)) * (t2 > ta + 0.4 ? 1 : 0.3)} headTilt={6 * jab} br={t2 * 2.2} />
+        <SideMan x={bx} y={gy} h={620} dir={-1} look={OLD_B} stoop={0.5} lean={0.18 * jab} hand={bHand} finger mouth={Math.abs(Math.sin(t2 * 8)) * (t2 > ta - 0.1 ? 1 : 0.2)} br={t2 * 2.4} />
       </Live>
     </AbsoluteFill>
   );
@@ -136,7 +138,7 @@ const MARBOT: ManLook = { skin: '#9e6e56', skinD: '#714c3c', shirt: '#e9e6dc', s
 export const S19: React.FC = () => {
   const { p, t2 } = useShot();
   const tt = wordAt(19, /^tested/i, 0.3), tc = wordAt(19, /^clean/i, 0.52);
-  const cam: Cam = { zoom: 1.02 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 560, oy: 1000 };
+  const cam: Cam = { zoom: 1.14 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: 60, ox: 600, oy: 1200 };
   const lift = 0.15 + 0.85 * ramp(t2, tt - 0.25, tt + 0.1) - 0.3 * ramp(t2, tt + 1.4, tt + 2.0);
   const up = ramp(t2, tc - 0.05, tc + 0.3);
   const D = INSIDE.door;

@@ -80,7 +80,7 @@ export const S04: React.FC = () => {
       <BandImg id="whisper/shop-warung" k={0.6} cam={cellCam(cam, 0)} />
       <Live k={1} cam={cam}>
         <Fr>
-          <Pair id="p4" ex={560} ey={850} s={3.6} wh={CAST.whisperer} li={CAST.stallOwner} talk={talk} lean={6 + 2 * Math.sin(t2 * 2)} wide={wide * (1 - blink)}
+          <Pair id="p4" ex={500} ey={860} s={4.3} wh={CAST.whisperer} li={CAST.stallOwner} talk={talk} lean={6 + 2 * Math.sin(t2 * 2)} wide={wide * (1 - blink)}
             cup={0} liLean={-2 * wide} bob={2 * Math.sin(t2 * 2.4)} rim="#ffd08a" rimOp={0.7} />
         </Fr>
       </Live>

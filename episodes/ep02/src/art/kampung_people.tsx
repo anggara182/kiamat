@@ -83,7 +83,7 @@ export const SideMan: React.FC<{
         <path d={`M${head[0] + d * u * 0.37} ${head[1] - u * 0.08} L${head[0] + d * u * 0.5} ${head[1] + u * 0.1} L${head[0] + d * u * 0.37} ${head[1] + u * 0.13} Z`} fill={look.skin} />
         <path d={`M${head[0] + d * u * 0.16} ${head[1] - u * 0.07} L${head[0] + d * u * 0.33} ${head[1] - u * 0.09}`} stroke={look.skinD} strokeWidth={u * 0.05} strokeLinecap="round" />
         {look.glasses && <g fill="none" stroke="#2a2420" strokeWidth={u * 0.035}><ellipse cx={head[0] + d * u * 0.27} cy={head[1] - u * 0.01} rx={u * 0.1} ry={u * 0.08} /><path d={`M${head[0] + d * u * 0.17} ${head[1] - u * 0.02} L${head[0] - d * u * 0.06} ${head[1] - u * 0.03}`} /></g>}
-        {look.beard && <path d={`M${head[0] + d * u * 0.38} ${head[1] + u * 0.2} Q${head[0] + d * u * 0.3} ${head[1] + u * 0.62} ${head[0] + d * u * 0.02} ${head[1] + u * 0.42} L${head[0] - d * u * 0.12} ${head[1] + u * 0.22} Q${head[0] + d * u * 0.15} ${head[1] + u * 0.32} ${head[0] + d * u * 0.38} ${head[1] + u * 0.2} Z`} fill={look.beard} />}
+        {look.beard && <path d={`M${head[0] + d * u * 0.36} ${head[1] + u * 0.3} Q${head[0] + d * u * 0.32} ${head[1] + u * 0.52} ${head[0] + d * u * 0.14} ${head[1] + u * 0.46} L${head[0] + d * u * 0.12} ${head[1] + u * 0.3} Z`} fill={look.beard} opacity={0.85} />}
         <path d={`M${head[0] + d * u * 0.4} ${head[1] + u * 0.24} l${-d * u * (0.1 + 0.06 * mouth)} ${u * 0.02 * mouth}`} stroke="#3a2420" strokeWidth={u * (0.03 + 0.05 * mouth)} strokeLinecap="round" />
         {/* peci */}
         <path d={`M${head[0] - u * 0.4} ${head[1] - u * 0.18} L${head[0] - u * 0.37} ${head[1] - u * 0.56} L${head[0] + u * 0.37} ${head[1] - u * 0.56} L${head[0] + u * 0.4} ${head[1] - u * 0.18} Z`} fill={look.peci} />
