@@ -58,5 +58,32 @@
    "fiction": "The neighbourhood, every character, the water rumour, the crowd and the mosque announcement."
   },
   "credits": "VO ai33 eleven_v3 (Brian); word timing aligned from the audio (STT transcript unavailable) · original synthesised score · SFX reused from horrorluar / storiesafterdark libraries"
+ },
+ {
+  "chapter": 3,
+  "id": "ep03",
+  "title": "The Man From Nowhere",
+  "phase": "Stage 2 · Fitnah & false claimants",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "1:04",
+  "video": "media/ep03.mp4",
+  "cover": "media/ep03-cover.jpg",
+  "logline": "A rumour sets a whole city on fire. The mayor vanishes. On the fifth day a man with no past walks out of the ashes, and on the seventh he tells a full stadium that God sent him.",
+  "quote": {
+   "text": "…till about thirty Dajjals (liars) appear, and each one of them will claim that he is Allah’s Messenger.",
+   "source": "Sahih al-Bukhari 7121"
+  },
+  "vo": "The fire started at midnight.\nBy sunrise, city hall was gone.\nThree days earlier, it was only a whisper.\nThe mayor had sold the city's water.\nThere was no proof. There didn't need to be.\nBy the second day, a million people filled the streets.\nBanners hung from every bridge.\nHalf the city wanted him gone.\nThe other half swore he was innocent.\nOn the third night, someone threw the first flame.\nThe mayor vanished.\nNo one knows if he ran… or if he was taken.\nFor two days, the city had no one.\nNo water. No bread. No answers.\nThen, on the fifth day, a man walked out of the ashes.\nNo name. No past.\nHe handed out bread. He spoke softly.\nEverything he said sounded true.\nBy the seventh day, the stadium was full.\nAnd he told them God had sent him.\nHalf the city fell to its knees.\nThe Prophet warned that before the Hour, around thirty liars would come, each claiming to be a messenger of God.\nThe next morning, the neighboring city heard his name.",
+  "caption": "The fire started at midnight. By the seventh day, half the city was on its knees.\n\nChapter 3 of THE LAST DAYS. Follow for Chapter 4.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "About thirty liars, each claiming to be a messenger: Sahih al-Bukhari 7121 (quoted on screen as a fragment; check against the full sunnah.com text before posting)"
+  ],
+  "classification": {
+   "canonical": "The warning that about thirty liars will claim to be messengers before the Hour.",
+   "interpretation": "Presenting a modern false claimant who rises from civil chaos as an example of that warning.",
+   "fiction": "The city, the mayor, the riot, the fire, the stadium and the man himself; the mayor’s fate is left unanswered on purpose."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), word timing aligned from the audio (STT transcript unavailable) · original synthesised score · SFX reused + synthesised"
  }
 ]
