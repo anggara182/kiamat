@@ -3,7 +3,7 @@ import { AbsoluteFill } from 'remotion';
 import { useShot, BandImg, Live, Cam, ramp, EIO, clamp01 } from '../comp/Camera';
 import { wordAt } from '../data/ep';
 import { rng } from '../art/world';
-import { HL, Statue, STONE_DAY, STONE_DUSK, STONE_SIL, TOP } from '../art/hill_art';
+import { HL, Statue, STONE_DAY, STONE_SIL, TOP } from '../art/hill_art';
 import { Worker, Visitor, FatherChild, FlowerHand, LaidFlower, TopWalker, WomanProfile } from '../art/hill_people';
 
 /** drifting dust motes (environment, on ones) */
@@ -101,22 +101,22 @@ export const S10: React.FC = () => {
 export const S11: React.FC = () => {
   const { p, t2 } = useShot();
   const tf = wordAt(11, /^flowers/i, 0.55);
-  const cam: Cam = { zoom: 1.05 + 0.03 * p, dx: -10 * p, dy: 0, ox: 540, oy: 1200 };
+  const cam: Cam = { zoom: 1.12 + 0.03 * p, dx: -10 * p, dy: 0, ox: 540, oy: 1000 };
   const r = rng(13);
-  const pile = Array.from({ length: 22 }).map(() => ({ x: 120 + r() * 700, y: 1580 + r() * 140, s: 1.6 + r() * 0.8, rot: r() * 360, c: FLOWER_COLS[Math.floor(r() * 5)] }));
+  const pile = Array.from({ length: 22 }).map(() => ({ x: 120 + r() * 700, y: 1260 + r() * 150, s: 1.6 + r() * 0.8, rot: r() * 360, c: FLOWER_COLS[Math.floor(r() * 5)] }));
   const k1 = ramp(t2, 0, Math.max(0.3, tf - 0.45));
   const k2 = ramp(t2, tf - 0.4, tf);
   return (
     <AbsoluteFill style={{ backgroundColor: '#8a4e5a' }}>
       <BandImg id="hill/base" k={0.8} cam={cam} />
       <Live k={1} cam={cam}>
-        <rect x={-100} y={1500} width={1500} height={1000} fill="#3a2830" />
+        <rect x={-100} y={1180} width={1500} height={1300} fill="#3a2830" /><rect x={-100} y={1180} width={1500} height={6} fill="#ffb07a" opacity={0.35} />
         {pile.map((f, i) => <LaidFlower key={i} x={f.x} y={f.y} s={f.s} rot={f.rot} col={f.c} />)}
-        {k1 >= 1 && <LaidFlower x={360} y={1560} s={2} rot={-20} col="#f0f0ea" />}
-        {k1 < 1 && <FlowerHand from={[-200, 1100]} to={[300, 1520]} k={k1} skin="#a8765c" sleeve="#4a5a6a" flower="#f0f0ea" />}
-        {k2 >= 1 && <LaidFlower x={620} y={1600} s={2.2} rot={200} col="#e88a6a" />}
-        {k2 < 1 && <FlowerHand from={[1400, 1050]} to={[760, 1560]} k={k2} skin="#9a6a52" sleeve="#7a4a5a" flower="#e88a6a" />}
-        {k2 >= 1 && <FlowerHand from={[1400, 1050]} to={[760, 1560]} k={1 - ramp(t2, tf + 0.05, tf + 0.5)} skin="#9a6a52" sleeve="#7a4a5a" flower="#00000000" />}
+        {k1 >= 1 && <LaidFlower x={360} y={1240} s={2} rot={-20} col="#f0f0ea" />}
+        {k1 < 1 && <FlowerHand from={[-200, 760]} to={[300, 1200]} k={k1} skin="#a8765c" sleeve="#4a5a6a" flower="#f0f0ea" />}
+        {k2 >= 1 && <LaidFlower x={620} y={1280} s={2.2} rot={200} col="#e88a6a" />}
+        {k2 < 1 && <FlowerHand from={[1400, 700]} to={[760, 1240]} k={k2} skin="#9a6a52" sleeve="#7a4a5a" flower="#e88a6a" />}
+        {k2 >= 1 && <FlowerHand from={[1400, 700]} to={[760, 1240]} k={1 - ramp(t2, tf + 0.05, tf + 0.5)} skin="#9a6a52" sleeve="#7a4a5a" flower="#00000000" />}
       </Live>
     </AbsoluteFill>
   );
@@ -129,7 +129,7 @@ export const S12: React.FC = () => {
   const cam: Cam = { zoom: 1.1 + 0.05 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, rot: -8 * ramp(p, 0, 1, (n) => n), ox: TOP.cx - 108, oy: TOP.cy - 192 };
   const N = 30, fill = 0.55 + 0.45 * ramp(t2, 0.2, tc, (n) => n);
   const R = TOP.ring;
-  const cols = ['#d8d0c0', '#5a4a6a', '#8a5a5a', '#3e4a5a', '#c9a37a', '#6a7a6a'];
+  const cols = ['#6a5060', '#4a3a5a', '#7a4a4a', '#3a3e50', '#8a6a52', '#4e5a4e'];
   return (
     <AbsoluteFill style={{ backgroundColor: '#5a4048' }}>
       <BandImg id="hill/top" k={1} cam={cam} />
@@ -137,7 +137,7 @@ export const S12: React.FC = () => {
         {Array.from({ length: N }).map((_, i) => {
           const a = -0.4 * t2 + (i / N) * Math.PI * 2 * fill + 1.2;
           const rr = R + ((i * 13) % 5 - 2) * 6;
-          return <TopWalker key={i} x={TOP.cx + Math.cos(a) * rr} y={TOP.cy + Math.sin(a) * rr} a={a - Math.PI} s={1} body={cols[i % 6]} head={i % 3 === 0 ? '#4a3a4e' : '#1d1a1a'} ph={t2 * 7 + i} />;
+          return <TopWalker key={i} x={TOP.cx + Math.cos(a) * rr} y={TOP.cy + Math.sin(a) * rr} a={a - Math.PI} s={1} body={cols[i % 6]} head={i % 3 === 0 ? '#2e2232' : '#1a1416'} ph={t2 * 7 + i} />;
         })}
         {/* newcomers walking in toward the gap */}
         {[0, 1, 2].map((i) => { const k = clamp01((t2 - i * 0.5) / (tc - i * 0.5)); const a = 1.2 + Math.PI * 2 * fill - 0.4 * t2 + 0.15; const x0 = TOP.cx + Math.cos(a) * (R + 600 - i * 80), y0 = TOP.cy + Math.sin(a) * (R + 600 - i * 80); const x = x0 + (TOP.cx + Math.cos(a) * R - x0) * k, y = y0 + (TOP.cy + Math.sin(a) * R - y0) * k; return k < 1 ? <TopWalker key={`n${i}`} x={x} y={y} a={a + Math.PI / 2} s={1} body={cols[(i + 2) % 6]} head="#1d1a1a" ph={t2 * 8 + i} /> : null; })}
@@ -159,7 +159,7 @@ export const S13: React.FC = () => {
         {[0, 1, 2, 3].map((i) => { const x = 1500 - ((t2 * 160 + i * 420) % 1900); return <g key={i} opacity={0.55}><ellipse cx={x} cy={1080} rx={70} ry={86} fill="#2a1e28" /><path d={`M${x - 150} 2400 L${x - 130} 1220 Q${x} 1160 ${x + 130} 1220 L${x + 150} 2400 Z`} fill="#2a1e28" /></g>; })}
       </Live>
       <Live k={1} cam={cam}>
-        <WomanProfile x={880 - 260 * step} y={1100 + 20 * Math.sin(step * Math.PI)} s={1.25} eyes={0.35} br={t2 * 1.8} />
+        <WomanProfile x={900 - 280 * step} y={980 + 20 * Math.sin(step * Math.PI)} s={1.5} eyes={0.35} br={t2 * 1.8} />
       </Live>
     </AbsoluteFill>
   );

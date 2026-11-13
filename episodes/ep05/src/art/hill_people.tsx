@@ -118,33 +118,29 @@ export const TopWalker: React.FC<{ x: number; y: number; a: number; s: number; b
     <g transform={`translate(${x} ${y}) rotate(${(a * 180) / Math.PI})`}>
       <ellipse cx={sw * 0.3} cy={-14 * s} rx={9 * s} ry={6 * s} fill="#2a2024" opacity={0.7} />
       <ellipse cx={-sw * 0.3} cy={14 * s} rx={9 * s} ry={6 * s} fill="#2a2024" opacity={0.7} />
-      <ellipse cx={0} cy={0} rx={18 * s} ry={34 * s} fill={body} />
-      <circle cx={2 * s} cy={0} r={14 * s} fill={head} />
+      <rect x={-14 * s} y={-32 * s} width={28 * s} height={64 * s} rx={13 * s} fill={body} />
+      <circle cx={3 * s} cy={0} r={15 * s} fill={head} />
+      <path d={`M${-12 * s} ${-30 * s} Q${-16 * s} 0 ${-12 * s} ${30 * s}`} stroke="#ffb07a" strokeOpacity={0.5} strokeWidth={3 * s} fill="none" />
     </g>
   );
 };
 
-/** calm woman in profile (facing left), headscarf, eyes half closed; dusk rim from the right */
+/** calm woman in profile (facing left), headscarf framing the face, eyes half closed; dusk rim from behind-right */
 export const WomanProfile: React.FC<{ x: number; y: number; s: number; eyes: number; br: number }> = ({ x, y, s, eyes, br }) => {
-  const b = Math.sin(br) * 4 * s;
+  const b = Math.sin(br) * 4;
   return (
-    <g transform={`translate(${x} ${y + b}) scale(${s})`}>
-      {/* shoulders + scarf drape */}
-      <path d="M-260 520 Q-240 260 -60 210 L120 200 Q300 240 330 520 Z" fill="#5a3e52" />
-      <path d="M-150 -120 Q-180 120 -120 230 L180 240 Q240 120 190 -60 Q160 -260 0 -270 Q-140 -260 -150 -120 Z" fill="#7a4a5a" />
-      {/* face (profile left) */}
-      <path d="M-120 -150 Q-150 -100 -142 -60 L-176 -20 L-140 0 Q-150 30 -132 50 Q-136 80 -110 100 Q-60 140 0 130 L40 -150 Z" fill="#b07a5e" />
-      <path d="M-30 -160 Q60 -170 90 -100 L60 120 L0 130 Z" fill="#8a5a44" opacity={0.6} />
-      {/* scarf front edge over the forehead and cheek */}
-      <path d="M-150 -120 Q-130 -200 -60 -200 Q-110 -150 -112 -120 Q-100 -40 -30 120 L-60 160 Q-140 60 -150 -120 Z" fill="#6a3e4e" />
-      {/* half-closed eye + brow */}
-      <path d={`M-118 ${-62} Q-100 ${-62 + 10 * eyes} -82 ${-60}`} stroke="#2a1d18" strokeWidth={5} fill="none" strokeLinecap="round" />
-      <path d="M-122 -66 Q-100 -76 -78 -66" fill="#8a5a44" opacity={0.6} />
-      <path d="M-128 -92 Q-104 -100 -80 -92" stroke="#3a2420" strokeWidth={5} fill="none" />
-      <path d="M-140 58 Q-128 62 -118 58" stroke="#7a4a3a" strokeWidth={4} fill="none" />
-      {/* warm dusk rim */}
-      <path d="M190 -60 Q160 -260 0 -270 Q-140 -260 -150 -120" stroke="#ffb07a" strokeOpacity={0.75} strokeWidth={8} fill="none" />
-      <path d="M-176 -20 L-140 0 Q-150 30 -132 50" stroke="#ffd0a0" strokeOpacity={0.5} strokeWidth={4} fill="none" />
+    <g transform={`translate(${x} ${y + b * s}) scale(${s})`}>
+      <path d="M-240 430 C-220 300 -120 230 -40 210 L120 205 C230 230 320 300 340 430 Z" fill="#4a3446" />
+      <path d="M-80 -175 C-60 -275 160 -285 205 -120 C228 -10 205 95 235 185 C262 255 300 300 310 430 L-200 430 C-180 330 -130 250 -88 160 C-70 125 -55 105 -38 100 Q-28 30 -48 -60 Q-58 -130 -80 -175 Z" fill="#7a4a5a" />
+      <path d="M40 -250 C150 -230 200 -140 205 -40" stroke="#5e3646" strokeWidth={10} fill="none" opacity={0.6} />
+      <path d="M-80 -165 Q-100 -150 -106 -100 L-112 -72 L-150 -32 Q-152 -22 -140 -18 L-118 -14 Q-124 0 -120 8 Q-112 14 -116 24 Q-108 30 -110 42 Q-108 70 -86 90 Q-50 100 -32 94 Q-38 0 -52 -60 Q-62 -120 -80 -165 Z" fill="#b07a5e" />
+      <path d="M-62 -140 Q-44 -40 -34 92 Q-50 98 -66 94 Q-70 0 -78 -90 Z" fill="#8a5a44" opacity={0.45} />
+      <path d={`M-100 -84 Q-90 ${-84 + 8 * eyes} -78 -82`} stroke="#2a1d18" strokeWidth={4} fill="none" strokeLinecap="round" />
+      <path d="M-101 -88 Q-90 -94 -77 -87" stroke="#8a5a44" strokeWidth={5} fill="none" opacity={0.7} />
+      <path d="M-104 -104 Q-90 -110 -74 -103" stroke="#3a2420" strokeWidth={4} fill="none" />
+      <path d="M-118 22 Q-112 25 -106 22" stroke="#7a4a3a" strokeWidth={3} fill="none" />
+      <path d="M205 -120 C160 -285 -60 -275 -80 -175" stroke="#ffb07a" strokeOpacity={0.8} strokeWidth={7} fill="none" />
+      <path d="M235 185 C262 255 300 300 310 430" stroke="#ffb07a" strokeOpacity={0.5} strokeWidth={6} fill="none" />
     </g>
   );
 };
