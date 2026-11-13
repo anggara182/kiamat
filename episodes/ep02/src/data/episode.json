@@ -6,9 +6,9 @@
  "fps": 24,
  "width": 1080,
  "height": 1920,
- "durationSec": 68.086,
+ "durationSec": 61.757,
  "accent": "#d9a441",
- "timingSource": "ESTIMATE (VO pending: ai33 task 9c9147ad)",
+ "timingSource": "ai33 eleven_v3 audio (task d52db54c), word timing silence-aligned (scripts/align.py; STT transcript unavailable), atempo x1.10",
  "audio": true,
  "quote": {
   "text": "Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.",
@@ -20,13 +20,12 @@
   {
    "id": 1,
    "start": 0.0,
-   "end": 2.231,
+   "end": 2.171,
    "act": 1,
    "set": "market",
    "owner": "H",
    "framing": "HOOK. Close-medium: hands grabbing the last water gallons off a small shop shelf at dawn",
    "camera": "Handheld, push-in",
-   "vo_markup": "By sunrise, the whole city *knew.*",
    "vo": "By sunrise, the whole city knew.",
    "voKind": "narration",
    "speaker": "narr",
@@ -34,38 +33,38 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 0.1,
-     "end": 0.237
+     "start": 0.192,
+     "end": 0.323
     },
     {
      "text": "sunrise,",
      "highlight": false,
-     "start": 0.237,
-     "end": 0.783
+     "start": 0.341,
+     "end": 0.801
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 0.783,
-     "end": 0.988
+     "start": 0.819,
+     "end": 0.966
     },
     {
      "text": "whole",
      "highlight": false,
-     "start": 0.988,
-     "end": 1.33
+     "start": 0.985,
+     "end": 1.28
     },
     {
      "text": "city",
      "highlight": false,
-     "start": 1.33,
-     "end": 1.603
+     "start": 1.298,
+     "end": 1.576
     },
     {
      "text": "knew.",
      "highlight": true,
-     "start": 1.603,
-     "end": 2.081
+     "start": 1.595,
+     "end": 1.776
     }
    ],
    "trans": "cut",
@@ -79,14 +78,13 @@
   },
   {
    "id": 2,
-   "start": 2.231,
-   "end": 5.089,
+   "start": 2.171,
+   "end": 4.61,
    "act": 1,
    "set": "market",
    "owner": "H",
    "framing": "Wide: a shop rolling door rising at dawn, a queue already outside",
    "camera": "Slow push-in",
-   "vo_markup": "The only problem… none of it was *true.*",
    "vo": "The only problem… none of it was true.",
    "voKind": "narration",
    "speaker": "narr",
@@ -94,50 +92,50 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 2.331,
-     "end": 2.568
+     "start": 2.271,
+     "end": 2.412
     },
     {
      "text": "only",
      "highlight": false,
-     "start": 2.568,
-     "end": 2.884
+     "start": 2.43,
+     "end": 2.698
     },
     {
      "text": "problem…",
      "highlight": false,
-     "start": 2.884,
-     "end": 3.516
+     "start": 2.716,
+     "end": 3.051
     },
     {
      "text": "none",
      "highlight": false,
-     "start": 3.516,
-     "end": 3.832
+     "start": 3.383,
+     "end": 3.647
     },
     {
      "text": "of",
      "highlight": false,
-     "start": 3.832,
-     "end": 3.99
+     "start": 3.665,
+     "end": 3.788
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 3.99,
-     "end": 4.148
+     "start": 3.806,
+     "end": 3.929
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 4.148,
-     "end": 4.386
+     "start": 3.947,
+     "end": 4.086
     },
     {
      "text": "true.",
      "highlight": true,
-     "start": 4.386,
-     "end": 4.939
+     "start": 4.105,
+     "end": 4.276
     }
    ],
    "trans": "cut",
@@ -152,14 +150,13 @@
   },
   {
    "id": 3,
-   "start": 5.089,
-   "end": 8.26,
+   "start": 4.61,
+   "end": 6.922,
    "act": 1,
    "set": "market",
    "owner": "H",
    "framing": "Medium two-shot at a small breakfast stall: a woman leans in and whispers into the stall owner's ear",
    "camera": "Slow push-in",
-   "vo_markup": "It started as one *whisper* at a food stall.",
    "vo": "It started as one whisper at a food stall.",
    "voKind": "narration",
    "speaker": "narr",
@@ -167,56 +164,56 @@
     {
      "text": "It",
      "highlight": false,
-     "start": 5.189,
-     "end": 5.351
+     "start": 4.71,
+     "end": 4.834
     },
     {
      "text": "started",
      "highlight": false,
-     "start": 5.351,
-     "end": 5.919
+     "start": 4.852,
+     "end": 5.169
     },
     {
      "text": "as",
      "highlight": false,
-     "start": 5.919,
-     "end": 6.081
+     "start": 5.187,
+     "end": 5.312
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 6.081,
-     "end": 6.325
+     "start": 5.33,
+     "end": 5.581
     },
     {
      "text": "whisper",
      "highlight": true,
-     "start": 6.325,
-     "end": 7.055
+     "start": 5.599,
+     "end": 5.915
     },
     {
      "text": "at",
      "highlight": false,
-     "start": 7.055,
-     "end": 7.217
+     "start": 5.934,
+     "end": 6.058
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 7.217,
-     "end": 7.299
+     "start": 6.076,
+     "end": 6.185
     },
     {
      "text": "food",
      "highlight": false,
-     "start": 7.299,
-     "end": 7.623
+     "start": 6.203,
+     "end": 6.36
     },
     {
      "text": "stall.",
      "highlight": false,
-     "start": 7.623,
-     "end": 8.11
+     "start": 6.378,
+     "end": 6.569
     }
    ],
    "trans": "cut",
@@ -230,14 +227,13 @@
   },
   {
    "id": 4,
-   "start": 8.26,
-   "end": 9.864,
+   "start": 6.922,
+   "end": 8.26,
    "act": 1,
    "set": "whisper",
    "owner": "P",
    "framing": "Extreme close-up: lips near an ear (profile), headscarf edge",
    "camera": "Locked, tiny drift",
-   "vo_markup": "The water is *poisoned.*",
    "vo": "The water is poisoned.",
    "voKind": "narration",
    "speaker": "narr",
@@ -245,26 +241,26 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 8.36,
-     "end": 8.553
+     "start": 7.022,
+     "end": 7.144
     },
     {
      "text": "water",
      "highlight": false,
-     "start": 8.553,
-     "end": 8.876
+     "start": 7.162,
+     "end": 7.409
     },
     {
      "text": "is",
      "highlight": false,
-     "start": 8.876,
-     "end": 9.005
+     "start": 7.427,
+     "end": 7.535
     },
     {
      "text": "poisoned.",
      "highlight": true,
-     "start": 9.005,
-     "end": 9.714
+     "start": 7.553,
+     "end": 7.955
     }
    ],
    "trans": "cut",
@@ -278,14 +274,13 @@
   },
   {
    "id": 5,
-   "start": 9.864,
-   "end": 13.349,
+   "start": 8.26,
+   "end": 11.004,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "IMAGINED (rumour image): the neighbourhood water tower at night, a faceless silhouette standing at its foot",
    "camera": "Slow push-in",
-   "vo_markup": "Someone saw a *stranger* by the water tower last night.",
    "vo": "Someone saw a stranger by the water tower last night.",
    "voKind": "narration",
    "speaker": "narr",
@@ -293,62 +288,62 @@
     {
      "text": "Someone",
      "highlight": false,
-     "start": 9.964,
-     "end": 10.456
+     "start": 8.36,
+     "end": 8.775
     },
     {
      "text": "saw",
      "highlight": false,
-     "start": 10.456,
-     "end": 10.667
+     "start": 8.793,
+     "end": 8.929
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 10.667,
-     "end": 10.737
+     "start": 8.947,
+     "end": 9.052
     },
     {
      "text": "stranger",
      "highlight": true,
-     "start": 10.737,
-     "end": 11.441
+     "start": 9.07,
+     "end": 9.393
     },
     {
      "text": "by",
      "highlight": false,
-     "start": 11.441,
-     "end": 11.581
+     "start": 9.411,
+     "end": 9.532
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 11.581,
-     "end": 11.792
+     "start": 9.55,
+     "end": 9.686
     },
     {
      "text": "water",
      "highlight": false,
-     "start": 11.792,
-     "end": 12.144
+     "start": 9.705,
+     "end": 9.98
     },
     {
      "text": "tower",
      "highlight": false,
-     "start": 12.144,
-     "end": 12.496
+     "start": 9.998,
+     "end": 10.274
     },
     {
      "text": "last",
      "highlight": false,
-     "start": 12.496,
-     "end": 12.777
+     "start": 10.292,
+     "end": 10.444
     },
     {
      "text": "night.",
      "highlight": false,
-     "start": 12.777,
-     "end": 13.199
+     "start": 10.462,
+     "end": 10.646
     }
    ],
    "trans": "cut",
@@ -362,14 +357,13 @@
   },
   {
    "id": 6,
-   "start": 13.349,
-   "end": 15.266,
+   "start": 11.004,
+   "end": 12.637,
    "act": 1,
    "set": "whisper",
    "owner": "P",
    "framing": "Close: two passengers in an angkot, one leaning to the other's ear",
    "camera": "Slight vehicle sway",
-   "vo_markup": "Nobody asked who saw him.",
    "vo": "Nobody asked who saw him.",
    "voKind": "narration",
    "speaker": "narr",
@@ -377,32 +371,32 @@
     {
      "text": "Nobody",
      "highlight": false,
-     "start": 13.449,
-     "end": 13.925
+     "start": 11.104,
+     "end": 11.507
     },
     {
      "text": "asked",
      "highlight": false,
-     "start": 13.925,
-     "end": 14.322
+     "start": 11.525,
+     "end": 11.805
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 14.322,
-     "end": 14.56
+     "start": 11.823,
+     "end": 11.961
     },
     {
      "text": "saw",
      "highlight": false,
-     "start": 14.56,
-     "end": 14.799
+     "start": 11.979,
+     "end": 12.118
     },
     {
      "text": "him.",
      "highlight": false,
-     "start": 14.799,
-     "end": 15.116
+     "start": 12.136,
+     "end": 12.291
     }
    ],
    "trans": "cut",
@@ -414,14 +408,13 @@
   },
   {
    "id": 7,
-   "start": 15.266,
-   "end": 17.184,
+   "start": 12.637,
+   "end": 14.367,
    "act": 1,
    "set": "whisper",
    "owner": "P",
    "framing": "Close: men at a pos ronda (guard post) huddled, one whispering",
    "camera": "Locked, slight drift",
-   "vo_markup": "Nobody asked how they knew.",
    "vo": "Nobody asked how they knew.",
    "voKind": "narration",
    "speaker": "narr",
@@ -429,32 +422,32 @@
     {
      "text": "Nobody",
      "highlight": false,
-     "start": 15.366,
-     "end": 15.801
+     "start": 12.737,
+     "end": 13.145
     },
     {
      "text": "asked",
      "highlight": false,
-     "start": 15.801,
-     "end": 16.164
+     "start": 13.164,
+     "end": 13.447
     },
     {
      "text": "how",
      "highlight": false,
-     "start": 16.164,
-     "end": 16.381
+     "start": 13.465,
+     "end": 13.605
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 16.381,
-     "end": 16.671
+     "start": 13.624,
+     "end": 13.781
     },
     {
      "text": "knew.",
      "highlight": false,
-     "start": 16.671,
-     "end": 17.034
+     "start": 13.799,
+     "end": 13.973
     }
    ],
    "trans": "cut",
@@ -466,14 +459,13 @@
   },
   {
    "id": 8,
-   "start": 17.184,
-   "end": 19.414,
+   "start": 14.367,
+   "end": 16.613,
    "act": 1,
    "set": "market",
    "owner": "H",
    "framing": "Medium: the same shop shelves, now completely empty, a handwritten \"HABIS\" (sold out) card",
    "camera": "Slow lateral",
-   "vo_markup": "By seven, the shelves were *empty.*",
    "vo": "By seven, the shelves were empty.",
    "voKind": "narration",
    "speaker": "narr",
@@ -481,38 +473,38 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 17.284,
-     "end": 17.416
+     "start": 14.467,
+     "end": 14.635
     },
     {
      "text": "seven,",
      "highlight": false,
-     "start": 17.416,
-     "end": 17.812
+     "start": 14.654,
+     "end": 15.051
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 17.812,
-     "end": 18.01
+     "start": 15.344,
+     "end": 15.463
     },
     {
      "text": "shelves",
      "highlight": false,
-     "start": 18.01,
-     "end": 18.472
+     "start": 15.481,
+     "end": 15.751
     },
     {
      "text": "were",
      "highlight": false,
-     "start": 18.472,
-     "end": 18.736
+     "start": 15.769,
+     "end": 15.996
     },
     {
      "text": "empty.",
      "highlight": true,
-     "start": 18.736,
-     "end": 19.264
+     "start": 16.015,
+     "end": 16.271
     }
    ],
    "trans": "cut",
@@ -526,14 +518,13 @@
   },
   {
    "id": 9,
-   "start": 19.414,
-   "end": 21.645,
+   "start": 16.613,
+   "end": 18.901,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Medium: in front of a small house, a mother pours a bucket of water into the gutter; her small daughter with a doll watches from the doorstep",
    "camera": "Locked, slight handheld",
-   "vo_markup": "Mothers poured water down the *drain.*",
    "vo": "Mothers poured water down the drain.",
    "voKind": "narration",
    "speaker": "narr",
@@ -541,38 +532,38 @@
     {
      "text": "Mothers",
      "highlight": false,
-     "start": 19.514,
-     "end": 19.935
+     "start": 16.713,
+     "end": 17.057
     },
     {
      "text": "poured",
      "highlight": false,
-     "start": 19.935,
-     "end": 20.295
+     "start": 17.075,
+     "end": 17.403
     },
     {
      "text": "water",
      "highlight": false,
-     "start": 20.295,
-     "end": 20.595
+     "start": 17.421,
+     "end": 17.729
     },
     {
      "text": "down",
      "highlight": false,
-     "start": 20.595,
-     "end": 20.835
+     "start": 17.747,
+     "end": 17.92
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 20.835,
-     "end": 21.015
+     "start": 17.938,
+     "end": 18.093
     },
     {
      "text": "drain.",
      "highlight": true,
-     "start": 21.015,
-     "end": 21.495
+     "start": 18.111,
+     "end": 18.318
     }
    ],
    "trans": "cut",
@@ -587,14 +578,13 @@
   },
   {
    "id": 10,
-   "start": 21.645,
-   "end": 24.19,
+   "start": 18.901,
+   "end": 20.825,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "Medium-wide: two old men (peci, sarong) arguing at the mosque gate; one jabs a finger",
    "camera": "Slow push-in",
-   "vo_markup": "Old men *argued* at the mosque gate.",
    "vo": "Old men argued at the mosque gate.",
    "voKind": "narration",
    "speaker": "narr",
@@ -602,44 +592,44 @@
     {
      "text": "Old",
      "highlight": false,
-     "start": 21.745,
-     "end": 21.975
+     "start": 19.001,
+     "end": 19.14
     },
     {
      "text": "men",
      "highlight": false,
-     "start": 21.975,
-     "end": 22.204
+     "start": 19.158,
+     "end": 19.298
     },
     {
      "text": "argued",
      "highlight": true,
-     "start": 22.204,
-     "end": 22.816
+     "start": 19.316,
+     "end": 19.613
     },
     {
      "text": "at",
      "highlight": false,
-     "start": 22.816,
-     "end": 22.969
+     "start": 19.631,
+     "end": 19.754
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 22.969,
-     "end": 23.198
+     "start": 19.772,
+     "end": 19.911
     },
     {
      "text": "mosque",
      "highlight": false,
-     "start": 23.198,
-     "end": 23.657
+     "start": 19.929,
+     "end": 20.225
     },
     {
      "text": "gate.",
      "highlight": false,
-     "start": 23.657,
-     "end": 24.04
+     "start": 20.244,
+     "end": 20.525
     }
    ],
    "trans": "cut",
@@ -653,14 +643,13 @@
   },
   {
    "id": 11,
-   "start": 24.19,
-   "end": 27.674,
+   "start": 20.825,
+   "end": 23.425,
    "act": 1,
    "set": "whisper",
    "owner": "P",
    "framing": "Fast montage inside one shot: mouth-to-ear passes in different places (school gate mothers, market sellers, a barber chair), each 0.5–0.7 s",
    "camera": "Quick hard cuts inside the shot (allowed: hard cuts only)",
-   "vo_markup": "And the story grew with every mouth it passed through.",
    "vo": "And the story grew with every mouth it passed through.",
    "voKind": "narration",
    "speaker": "narr",
@@ -668,62 +657,62 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 24.29,
-     "end": 24.505
+     "start": 20.925,
+     "end": 21.059
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 24.505,
-     "end": 24.721
+     "start": 21.077,
+     "end": 21.211
     },
     {
      "text": "story",
      "highlight": false,
-     "start": 24.721,
-     "end": 25.08
+     "start": 21.229,
+     "end": 21.499
     },
     {
      "text": "grew",
      "highlight": false,
-     "start": 25.08,
-     "end": 25.368
+     "start": 21.517,
+     "end": 21.667
     },
     {
      "text": "with",
      "highlight": false,
-     "start": 25.368,
-     "end": 25.655
+     "start": 21.685,
+     "end": 21.835
     },
     {
      "text": "every",
      "highlight": false,
-     "start": 25.655,
-     "end": 26.015
+     "start": 21.853,
+     "end": 22.227
     },
     {
      "text": "mouth",
      "highlight": false,
-     "start": 26.015,
-     "end": 26.374
+     "start": 22.245,
+     "end": 22.411
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 26.374,
-     "end": 26.518
+     "start": 22.429,
+     "end": 22.547
     },
     {
      "text": "passed",
      "highlight": false,
-     "start": 26.518,
-     "end": 26.949
+     "start": 22.565,
+     "end": 22.851
     },
     {
      "text": "through.",
      "highlight": false,
-     "start": 26.949,
-     "end": 27.524
+     "start": 22.869,
+     "end": 23.082
     }
    ],
    "trans": "cut",
@@ -735,14 +724,13 @@
   },
   {
    "id": 12,
-   "start": 27.674,
-   "end": 30.532,
+   "start": 23.425,
+   "end": 26.871,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "IMAGINED: the rumour image of the water tower again; the silhouette multiplies into three; then red lines/arrows of a \"plan\" appear around the tower like a crude conspiracy drawing",
    "camera": "Slow push-in",
-   "vo_markup": "One stranger became *three.* Poison became a *plan.*",
    "vo": "One stranger became three. Poison became a plan.",
    "voKind": "narration",
    "speaker": "narr",
@@ -750,50 +738,50 @@
     {
      "text": "One",
      "highlight": false,
-     "start": 27.774,
-     "end": 27.948
+     "start": 23.525,
+     "end": 23.807
     },
     {
      "text": "stranger",
      "highlight": false,
-     "start": 27.948,
-     "end": 28.412
+     "start": 23.825,
+     "end": 24.201
     },
     {
      "text": "became",
      "highlight": false,
-     "start": 28.412,
-     "end": 28.76
+     "start": 24.219,
+     "end": 24.681
     },
     {
      "text": "three.",
      "highlight": true,
-     "start": 28.76,
-     "end": 29.223
+     "start": 24.699,
+     "end": 24.915
     },
     {
      "text": "Poison",
      "highlight": false,
-     "start": 29.223,
-     "end": 29.571
+     "start": 25.403,
+     "end": 25.735
     },
     {
      "text": "became",
      "highlight": false,
-     "start": 29.571,
-     "end": 29.919
+     "start": 25.754,
+     "end": 26.206
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 29.919,
-     "end": 29.977
+     "start": 26.225,
+     "end": 26.345
     },
     {
      "text": "plan.",
      "highlight": true,
-     "start": 29.977,
-     "end": 30.382
+     "start": 26.364,
+     "end": 26.557
     }
    ],
    "trans": "cut",
@@ -808,14 +796,13 @@
   },
   {
    "id": 13,
-   "start": 30.532,
-   "end": 32.45,
+   "start": 26.871,
+   "end": 28.322,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Wide: a crowd turning into a narrow kampung alley, a man at the front pointing",
    "camera": "Slow push forward behind the crowd",
-   "vo_markup": "By noon, they *found* him.",
    "vo": "By noon, they found him.",
    "voKind": "narration",
    "speaker": "narr",
@@ -823,32 +810,32 @@
     {
      "text": "By",
      "highlight": false,
-     "start": 30.632,
-     "end": 30.784
+     "start": 26.971,
+     "end": 27.135
     },
     {
      "text": "noon,",
      "highlight": false,
-     "start": 30.784,
-     "end": 31.163
+     "start": 27.153,
+     "end": 27.379
     },
     {
      "text": "they",
      "highlight": false,
-     "start": 31.163,
-     "end": 31.466
+     "start": 27.397,
+     "end": 27.603
     },
     {
      "text": "found",
      "highlight": true,
-     "start": 31.466,
-     "end": 31.997
+     "start": 27.621,
+     "end": 27.847
     },
     {
      "text": "him.",
      "highlight": false,
-     "start": 31.997,
-     "end": 32.3
+     "start": 27.865,
+     "end": 28.072
     }
    ],
    "trans": "cut",
@@ -862,14 +849,13 @@
   },
   {
    "id": 14,
-   "start": 32.45,
-   "end": 34.994,
+   "start": 28.322,
+   "end": 30.183,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Medium: a young man (20s, work T-shirt, tool bag) kneeling by a leaking pipe at the alley wall; he looks up",
    "camera": "Locked, slight push",
-   "vo_markup": "A young man, new in the neighborhood.",
    "vo": "A young man, new in the neighborhood.",
    "voKind": "narration",
    "speaker": "narr",
@@ -877,44 +863,44 @@
     {
      "text": "A",
      "highlight": false,
-     "start": 32.55,
-     "end": 32.624
+     "start": 28.422,
+     "end": 28.535
     },
     {
      "text": "young",
      "highlight": false,
-     "start": 32.624,
-     "end": 32.994
+     "start": 28.553,
+     "end": 28.735
     },
     {
      "text": "man,",
      "highlight": false,
-     "start": 32.994,
-     "end": 33.29
+     "start": 28.753,
+     "end": 28.917
     },
     {
      "text": "new",
      "highlight": false,
-     "start": 33.29,
-     "end": 33.512
+     "start": 28.935,
+     "end": 29.083
     },
     {
      "text": "in",
      "highlight": false,
-     "start": 33.512,
-     "end": 33.66
+     "start": 29.101,
+     "end": 29.231
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 33.66,
-     "end": 33.882
+     "start": 29.249,
+     "end": 29.396
     },
     {
      "text": "neighborhood.",
      "highlight": false,
-     "start": 33.882,
-     "end": 34.844
+     "start": 29.415,
+     "end": 29.961
     }
    ],
    "trans": "cut",
@@ -928,14 +914,13 @@
   },
   {
    "id": 15,
-   "start": 34.994,
-   "end": 38.165,
+   "start": 30.183,
+   "end": 32.855,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Close: his hands tightening a pipe joint; the drip slows and stops",
    "camera": "Locked",
-   "vo_markup": "He had been fixing a leaking pipe… for *free.*",
    "vo": "He had been fixing a leaking pipe… for free.",
    "voKind": "narration",
    "speaker": "narr",
@@ -943,56 +928,56 @@
     {
      "text": "He",
      "highlight": false,
-     "start": 35.094,
-     "end": 35.248
+     "start": 30.283,
+     "end": 30.393
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 35.248,
-     "end": 35.478
+     "start": 30.411,
+     "end": 30.536
     },
     {
      "text": "been",
      "highlight": false,
-     "start": 35.478,
-     "end": 35.786
+     "start": 30.555,
+     "end": 30.694
     },
     {
      "text": "fixing",
      "highlight": false,
-     "start": 35.786,
-     "end": 36.247
+     "start": 30.712,
+     "end": 30.98
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 36.247,
-     "end": 36.324
+     "start": 30.998,
+     "end": 31.094
     },
     {
      "text": "leaking",
      "highlight": false,
-     "start": 36.324,
-     "end": 36.862
+     "start": 31.112,
+     "end": 31.395
     },
     {
      "text": "pipe…",
      "highlight": false,
-     "start": 36.862,
-     "end": 37.247
+     "start": 31.413,
+     "end": 31.666
     },
     {
      "text": "for",
      "highlight": false,
-     "start": 37.247,
-     "end": 37.477
+     "start": 32.002,
+     "end": 32.197
     },
     {
      "text": "free.",
      "highlight": true,
-     "start": 37.477,
-     "end": 38.015
+     "start": 32.215,
+     "end": 32.456
     }
    ],
    "trans": "cut",
@@ -1006,14 +991,13 @@
   },
   {
    "id": 16,
-   "start": 38.165,
-   "end": 39.769,
+   "start": 32.855,
+   "end": 34.236,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Low angle from the young man's eye level: the crowd closing in around him, faces in shadow against the bright sky",
    "camera": "Slow push-in",
-   "vo_markup": "The crowd closed *in.*",
    "vo": "The crowd closed in.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1021,26 +1005,26 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 38.265,
-     "end": 38.479
+     "start": 32.955,
+     "end": 33.128
     },
     {
      "text": "crowd",
      "highlight": false,
-     "start": 38.479,
-     "end": 38.835
+     "start": 33.146,
+     "end": 33.36
     },
     {
      "text": "closed",
      "highlight": false,
-     "start": 38.835,
-     "end": 39.263
+     "start": 33.378,
+     "end": 33.743
     },
     {
      "text": "in.",
      "highlight": true,
-     "start": 39.263,
-     "end": 39.619
+     "start": 33.761,
+     "end": 33.935
     }
    ],
    "trans": "cut",
@@ -1054,14 +1038,13 @@
   },
   {
    "id": 17,
-   "start": 39.769,
-   "end": 41.687,
+   "start": 34.236,
+   "end": 35.718,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Extreme close-up: a hand picking up a stone from the dirt",
    "camera": "Locked",
-   "vo_markup": "Someone picked up a *stone.*",
    "vo": "Someone picked up a stone.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1069,32 +1052,32 @@
     {
      "text": "Someone",
      "highlight": false,
-     "start": 39.869,
-     "end": 40.356
+     "start": 34.336,
+     "end": 34.707
     },
     {
      "text": "picked",
      "highlight": false,
-     "start": 40.356,
-     "end": 40.772
+     "start": 34.725,
+     "end": 34.985
     },
     {
      "text": "up",
      "highlight": false,
-     "start": 40.772,
-     "end": 40.911
+     "start": 35.004,
+     "end": 35.111
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 40.911,
-     "end": 40.981
+     "start": 35.129,
+     "end": 35.221
     },
     {
      "text": "stone.",
      "highlight": true,
-     "start": 40.981,
-     "end": 41.537
+     "start": 35.239,
+     "end": 35.5
     }
    ],
    "trans": "cut",
@@ -1108,14 +1091,13 @@
   },
   {
    "id": 18,
-   "start": 41.687,
-   "end": 43.604,
+   "start": 35.718,
+   "end": 37.591,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "Low angle: the mosque loudspeaker horns on a pole against the sky",
    "camera": "Slight tilt",
-   "vo_markup": "Then the mosque speaker *crackled.*",
    "vo": "Then the mosque speaker crackled.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1123,32 +1105,32 @@
     {
      "text": "Then",
      "highlight": false,
-     "start": 41.787,
-     "end": 42.002
+     "start": 35.818,
+     "end": 35.976
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 42.002,
-     "end": 42.163
+     "start": 35.995,
+     "end": 36.137
     },
     {
      "text": "mosque",
      "highlight": false,
-     "start": 42.163,
-     "end": 42.486
+     "start": 36.155,
+     "end": 36.457
     },
     {
      "text": "speaker",
      "highlight": false,
-     "start": 42.486,
-     "end": 42.862
+     "start": 36.475,
+     "end": 36.795
     },
     {
      "text": "crackled.",
      "highlight": true,
-     "start": 42.862,
-     "end": 43.454
+     "start": 36.813,
+     "end": 37.165
     }
    ],
    "trans": "cut",
@@ -1162,14 +1144,13 @@
   },
   {
    "id": 19,
-   "start": 43.604,
-   "end": 47.716,
+   "start": 37.591,
+   "end": 41.443,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "Medium: inside the mosque, the marbot (caretaker) reads a paper into a microphone; through the door, the crowd outside looks up",
    "camera": "Slow push-in",
-   "vo_markup": "The water had been tested. It was *clean.* It always had been.",
    "vo": "The water had been tested. It was clean. It always had been.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1177,74 +1158,74 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 43.704,
-     "end": 43.931
+     "start": 37.691,
+     "end": 37.831
     },
     {
      "text": "water",
      "highlight": false,
-     "start": 43.931,
-     "end": 44.31
+     "start": 37.849,
+     "end": 38.132
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 44.31,
-     "end": 44.537
+     "start": 38.15,
+     "end": 38.29
     },
     {
      "text": "been",
      "highlight": false,
-     "start": 44.537,
-     "end": 44.84
+     "start": 38.308,
+     "end": 38.465
     },
     {
      "text": "tested.",
      "highlight": false,
-     "start": 44.84,
-     "end": 45.37
+     "start": 38.483,
+     "end": 38.797
     },
     {
      "text": "It",
      "highlight": false,
-     "start": 45.37,
-     "end": 45.521
+     "start": 39.219,
+     "end": 39.377
     },
     {
      "text": "was",
      "highlight": false,
-     "start": 45.521,
-     "end": 45.749
+     "start": 39.395,
+     "end": 39.574
     },
     {
      "text": "clean.",
      "highlight": true,
-     "start": 45.749,
-     "end": 46.354
+     "start": 39.592,
+     "end": 39.831
     },
     {
      "text": "It",
      "highlight": false,
-     "start": 46.354,
-     "end": 46.506
+     "start": 40.271,
+     "end": 40.399
     },
     {
      "text": "always",
      "highlight": false,
-     "start": 46.506,
-     "end": 46.96
+     "start": 40.417,
+     "end": 40.724
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 46.96,
-     "end": 47.187
+     "start": 40.742,
+     "end": 40.885
     },
     {
      "text": "been.",
      "highlight": false,
-     "start": 47.187,
-     "end": 47.566
+     "start": 40.904,
+     "end": 41.082
     }
    ],
    "trans": "cut",
@@ -1259,14 +1240,13 @@
   },
   {
    "id": 20,
-   "start": 47.716,
-   "end": 49.32,
+   "start": 41.443,
+   "end": 42.775,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Close: the hand opens and the stone drops into the dirt; feet turn away",
    "camera": "Locked",
-   "vo_markup": "The crowd went *home.*",
    "vo": "The crowd went home.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1274,26 +1254,26 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 47.816,
-     "end": 48.03
+     "start": 41.543,
+     "end": 41.702
     },
     {
      "text": "crowd",
      "highlight": false,
-     "start": 48.03,
-     "end": 48.386
+     "start": 41.72,
+     "end": 41.916
     },
     {
      "text": "went",
      "highlight": false,
-     "start": 48.386,
-     "end": 48.671
+     "start": 41.935,
+     "end": 42.112
     },
     {
      "text": "home.",
      "highlight": true,
-     "start": 48.671,
-     "end": 49.17
+     "start": 42.13,
+     "end": 42.449
     }
    ],
    "trans": "cut",
@@ -1307,14 +1287,13 @@
   },
   {
    "id": 21,
-   "start": 49.32,
-   "end": 52.805,
+   "start": 42.775,
+   "end": 45.902,
    "act": 1,
    "set": "alley",
    "owner": "S",
    "framing": "Medium-wide: the young man alone in the alley picking up his scattered tools; the backs of the crowd leaving at the end of the alley",
    "camera": "Slow pull-back",
-   "vo_markup": "No one said sorry. No one asked who started it.",
    "vo": "No one said sorry. No one asked who started it.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1322,62 +1301,62 @@
     {
      "text": "No",
      "highlight": false,
-     "start": 49.42,
-     "end": 49.59
+     "start": 42.875,
+     "end": 43.008
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 49.59,
-     "end": 49.845
+     "start": 43.026,
+     "end": 43.292
     },
     {
      "text": "said",
      "highlight": false,
-     "start": 49.845,
-     "end": 50.186
+     "start": 43.31,
+     "end": 43.477
     },
     {
      "text": "sorry.",
      "highlight": false,
-     "start": 50.186,
-     "end": 50.697
+     "start": 43.495,
+     "end": 43.814
     },
     {
      "text": "No",
      "highlight": false,
-     "start": 50.697,
-     "end": 50.867
+     "start": 44.248,
+     "end": 44.371
     },
     {
      "text": "one",
      "highlight": false,
-     "start": 50.867,
-     "end": 51.122
+     "start": 44.389,
+     "end": 44.636
     },
     {
      "text": "asked",
      "highlight": false,
-     "start": 51.122,
-     "end": 51.548
+     "start": 44.655,
+     "end": 44.934
     },
     {
      "text": "who",
      "highlight": false,
-     "start": 51.548,
-     "end": 51.803
+     "start": 44.952,
+     "end": 45.09
     },
     {
      "text": "started",
      "highlight": false,
-     "start": 51.803,
-     "end": 52.399
+     "start": 45.108,
+     "end": 45.42
     },
     {
      "text": "it.",
      "highlight": false,
-     "start": 52.399,
-     "end": 52.655
+     "start": 45.438,
+     "end": 45.577
     }
    ],
    "trans": "cut",
@@ -1389,14 +1368,13 @@
   },
   {
    "id": 22,
-   "start": 52.805,
-   "end": 55.349,
+   "start": 45.902,
+   "end": 47.946,
    "act": 1,
    "set": "kampung",
    "owner": "C",
    "framing": "Wide: the water tower at dusk, birds circling, the kampung roofs below",
    "camera": "Very slow push-in",
-   "vo_markup": "The warning had been written long ago.",
    "vo": "The warning had been written long ago.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1404,44 +1382,44 @@
     {
      "text": "The",
      "highlight": false,
-     "start": 52.905,
-     "end": 53.12
+     "start": 46.002,
+     "end": 46.143
     },
     {
      "text": "warning",
      "highlight": false,
-     "start": 53.12,
-     "end": 53.622
+     "start": 46.161,
+     "end": 46.478
     },
     {
      "text": "had",
      "highlight": false,
-     "start": 53.622,
-     "end": 53.837
+     "start": 46.496,
+     "end": 46.637
     },
     {
      "text": "been",
      "highlight": false,
-     "start": 53.837,
-     "end": 54.123
+     "start": 46.655,
+     "end": 46.813
     },
     {
      "text": "written",
      "highlight": false,
-     "start": 54.123,
-     "end": 54.625
+     "start": 46.831,
+     "end": 47.148
     },
     {
      "text": "long",
      "highlight": false,
-     "start": 54.625,
-     "end": 54.912
+     "start": 47.166,
+     "end": 47.324
     },
     {
      "text": "ago.",
      "highlight": false,
-     "start": 54.912,
-     "end": 55.199
+     "start": 47.342,
+     "end": 47.609
     }
    ],
    "trans": "cut",
@@ -1453,14 +1431,13 @@
   },
   {
    "id": 23,
-   "start": 55.349,
-   "end": 59.461,
+   "start": 47.946,
+   "end": 52.44,
    "act": 1,
    "set": "market",
    "owner": "H",
    "framing": "Medium: the stall owner pulling down her stall shutter at dusk, pausing, looking down",
    "camera": "Slow push-in",
-   "vo_markup": "And the Prophet said that repeating everything you hear is lie enough.",
    "vo": "And the Prophet said that repeating everything you hear is lie enough.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1468,74 +1445,74 @@
     {
      "text": "And",
      "highlight": false,
-     "start": 55.449,
-     "end": 55.645
+     "start": 48.046,
+     "end": 48.22
     },
     {
      "text": "the",
      "highlight": false,
-     "start": 55.645,
-     "end": 55.842
+     "start": 48.238,
+     "end": 48.413
     },
     {
      "text": "Prophet",
      "highlight": false,
-     "start": 55.842,
-     "end": 56.3
+     "start": 48.431,
+     "end": 48.818
     },
     {
      "text": "said",
      "highlight": false,
-     "start": 56.3,
-     "end": 56.562
+     "start": 48.836,
+     "end": 49.03
     },
     {
      "text": "that",
      "highlight": false,
-     "start": 56.562,
-     "end": 56.823
+     "start": 49.048,
+     "end": 49.243
     },
     {
      "text": "repeating",
      "highlight": false,
-     "start": 56.823,
-     "end": 57.413
+     "start": 49.261,
+     "end": 49.82
     },
     {
      "text": "everything",
      "highlight": false,
-     "start": 57.413,
-     "end": 58.067
+     "start": 49.838,
+     "end": 50.712
     },
     {
      "text": "you",
      "highlight": false,
-     "start": 58.067,
-     "end": 58.263
+     "start": 50.73,
+     "end": 50.904
     },
     {
      "text": "hear",
      "highlight": false,
-     "start": 58.263,
-     "end": 58.525
+     "start": 50.922,
+     "end": 51.116
     },
     {
      "text": "is",
      "highlight": false,
-     "start": 58.525,
-     "end": 58.656
+     "start": 51.135,
+     "end": 51.289
     },
     {
      "text": "lie",
      "highlight": false,
-     "start": 58.656,
-     "end": 58.852
+     "start": 51.307,
+     "end": 51.863
     },
     {
      "text": "enough.",
      "highlight": false,
-     "start": 58.852,
-     "end": 59.311
+     "start": 51.881,
+     "end": 52.267
     }
    ],
    "trans": "cut",
@@ -1549,14 +1526,13 @@
   },
   {
    "id": 24,
-   "start": 59.461,
-   "end": 63.886,
+   "start": 52.44,
+   "end": 57.557,
    "act": 1,
    "set": "homes",
    "owner": "H",
    "framing": "Medium-wide: a dark terrace, two heads close together, one whispering; across the alley the lit window of the mosque",
    "camera": "Slow push-in",
-   "vo_markup": "That night, a new whisper began. This time, it named someone everyone *trusted.*",
    "vo": "That night, a new whisper began. This time, it named someone everyone trusted.",
    "voKind": "narration",
    "speaker": "narr",
@@ -1564,80 +1540,80 @@
     {
      "text": "That",
      "highlight": false,
-     "start": 59.561,
-     "end": 59.806
+     "start": 52.54,
+     "end": 52.675
     },
     {
      "text": "night,",
      "highlight": false,
-     "start": 59.806,
-     "end": 60.175
+     "start": 52.693,
+     "end": 52.855
     },
     {
      "text": "a",
      "highlight": false,
-     "start": 60.175,
-     "end": 60.236
+     "start": 52.874,
+     "end": 52.965
     },
     {
      "text": "new",
      "highlight": false,
-     "start": 60.236,
-     "end": 60.42
+     "start": 52.983,
+     "end": 53.103
     },
     {
      "text": "whisper",
      "highlight": false,
-     "start": 60.42,
-     "end": 60.85
+     "start": 53.121,
+     "end": 53.393
     },
     {
      "text": "began.",
      "highlight": false,
-     "start": 60.85,
-     "end": 61.218
+     "start": 53.411,
+     "end": 53.669
     },
     {
      "text": "This",
      "highlight": false,
-     "start": 61.218,
-     "end": 61.464
+     "start": 54.089,
+     "end": 54.272
     },
     {
      "text": "time,",
      "highlight": false,
-     "start": 61.464,
-     "end": 61.771
+     "start": 54.29,
+     "end": 54.617
     },
     {
      "text": "it",
      "highlight": false,
-     "start": 61.771,
-     "end": 61.894
+     "start": 54.992,
+     "end": 55.106
     },
     {
      "text": "named",
      "highlight": false,
-     "start": 61.894,
-     "end": 62.201
+     "start": 55.125,
+     "end": 55.386
     },
     {
      "text": "someone",
      "highlight": false,
-     "start": 62.201,
-     "end": 62.631
+     "start": 55.405,
+     "end": 55.8
     },
     {
      "text": "everyone",
      "highlight": false,
-     "start": 62.631,
-     "end": 63.122
+     "start": 55.818,
+     "end": 56.331
     },
     {
      "text": "trusted.",
      "highlight": true,
-     "start": 63.122,
-     "end": 63.736
+     "start": 56.349,
+     "end": 56.657
     }
    ],
    "trans": "cut",
@@ -1652,14 +1628,13 @@
   },
   {
    "id": 25,
-   "start": 63.886,
-   "end": 68.086,
+   "start": 57.557,
+   "end": 61.757,
    "act": 1,
    "set": "whisper",
    "owner": "P",
    "framing": "TITLE CARD on black",
    "camera": "Very slow push-in",
-   "vo_markup": "",
    "vo": "",
    "voKind": "none",
    "speaker": "narr",

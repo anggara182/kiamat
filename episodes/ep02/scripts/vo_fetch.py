@@ -30,9 +30,9 @@ while time.time() - t0 < limit * 60:
     st = t.get("status")
     if st == "done":
         m = t["metadata"]
-        dl(m["audio_url"], os.path.join(OUT, "narration.mp3"))
+        dl(m["audio_url"], os.path.join(OUT, os.environ.get("OUTNAME", "narration") + ".mp3"))
         if m.get("json_url"):
-            dl(m["json_url"], os.path.join(OUT, "narration.json"))
+            dl(m["json_url"], os.path.join(OUT, os.environ.get("OUTNAME", "narration") + ".json"))
         info["credits"] = t.get("credit_cost") or m.get("credit_cost")
         json.dump(info, open(os.path.join(OUT, "task.json"), "w"), indent=1)
         print("done", tid, flush=True); sys.exit(0)
