@@ -10,7 +10,10 @@
   "video": "media/ep01.mp4",
   "cover": "media/ep01-cover.jpg",
   "logline": "One ordinary day in a modern city, dawn to night. The minor signs described fourteen centuries ago sit quietly inside everyday life.",
-  "quote": {"text": "They ask you about the Hour: when is its arrival? Say, ‘Its knowledge is only with my Lord.’", "source": "Qur’an 7:187 · Sahih International"},
+  "quote": {
+   "text": "They ask you about the Hour: when is its arrival? Say, ‘Its knowledge is only with my Lord.’",
+   "source": "Qur’an 7:187 · Sahih International"
+  },
   "vo": "The world doesn't end with a bang. It ends slowly… one ordinary morning at a time.\nThis city wakes before the sun. Kitchen lights flicker on. Engines cough awake. The call to prayer rises over a hundred phone alarms.\nBy seven, the streets are full. Millions of people. One goal: survive one more day.\nThe towers keep rising. From the top, the people below are just dots.\nThe news moves faster now. An earthquake here. A war there. Whole peoples wiped out, while the world watches. A life taken over almost nothing. A man trusted with everything… betrays it all.\nRead. Swipe. Forgotten.\nAnd the days feel shorter. Morning starts… and suddenly, it's night again.\nNothing seems wrong. But all of this, towers racing for the sky, trust placed in the wrong hands, the earth shaking again and again, killing that no longer shocks anyone, time slipping away, was foretold by the Prophet Muhammad, fourteen hundred years ago.\nWhen the end will come, no one knows. Only God.\nNight falls like any other night. The lights go out, one by one.\nTomorrow morning, a message will spread through the entire city… about something that never happened.",
   "caption": "The world doesn't end with a bang. It ends one ordinary morning at a time.\n\nChapter 1 of THE LAST DAYS. Follow for Chapter 2.\n\n#endtimes #islam #signsofthehour",
   "sources": [
@@ -31,15 +34,18 @@
   "id": "ep02",
   "title": "Faster Than the Truth",
   "phase": "Phase 01 → 02 · The Age of Fitnah begins",
-  "status": "production",
-  "status_label": "In production",
-  "duration": "",
-  "video": "",
-  "cover": "",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "1:02",
+  "video": "media/ep02.mp4",
+  "cover": "media/ep02-cover.jpg",
   "logline": "A rumour that the water is poisoned spreads mouth to mouth and nearly ends with a crowd stoning an innocent newcomer. The water was clean all along.",
-  "quote": {"text": "Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.", "source": "Qur’an 49:6 · Abdel Haleem"},
-  "vo": "",
-  "caption": "",
+  "quote": {
+   "text": "Believers, if a troublemaker brings you news, check it first, in case you wrong others unwittingly and later regret what you have done.",
+   "source": "Qur’an 49:6 · Abdel Haleem"
+  },
+  "vo": "By sunrise, the whole city knew.\nThe only problem… none of it was true.\nIt started as one whisper at a food stall.\nThe water is poisoned.\nSomeone saw a stranger by the water tower last night.\nNobody asked who saw him.\nNobody asked how they knew.\nBy seven, the shelves were empty.\nMothers poured water down the drain.\nOld men argued at the mosque gate.\nAnd the story grew with every mouth it passed through.\nOne stranger became three. Poison became a plan.\nBy noon, they found him.\nA young man, new in the neighborhood.\nHe had been fixing a leaking pipe… for free.\nThe crowd closed in.\nSomeone picked up a stone.\nThen the mosque speaker crackled.\nThe water had been tested. It was clean. It always had been.\nThe crowd went home.\nNo one said sorry. No one asked who started it.\nThe warning had been written long ago.\nAnd the Prophet said that repeating everything you hear is lie enough.\nThat night, a new whisper began. This time, it named someone everyone trusted.",
+  "caption": "By sunrise, the whole city knew. None of it was true.\n\nChapter 2 of THE LAST DAYS. Follow for Chapter 3.\n\n#endtimes #islam #signsofthehour",
   "sources": [
    "Verify the news before acting: Qur’an 49:6",
    "Falsehood passed from tongue to tongue: Qur’an 24:15",
@@ -51,6 +57,6 @@
    "interpretation": "Presenting a viral false rumour as a picture of the age of fitnah.",
    "fiction": "The neighbourhood, every character, the water rumour, the crowd and the mosque announcement."
   },
-  "credits": ""
+  "credits": "VO ai33 eleven_v3 (Brian); word timing aligned from the audio (STT transcript unavailable) · original synthesised score · SFX reused from horrorluar / storiesafterdark libraries"
  }
 ]
