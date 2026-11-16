@@ -223,8 +223,8 @@ export const S10: React.FC = () => {
           <Lap hx={X} hy={1124} s={H / 1000} dir={1} c={OLD.bottom} c2="#3a342c" />
           <Side x={X} y={Y} h={H} pal={OLD} head="short" male noLegs lean={2} headTilt={-6 * u} handN={hN} handF={hF} bob={2 * Math.sin(t2 * 1.8)} rimO={0.8} />
           <CapBeard hx={hp[0]} hy={hp[1]} s={H / 1000} dir={1} tilt={2 - 6 * u} />
-          <Cushion x={830} y={1420} w={560} c="#2a2430" />
-          {[[700, 560, 1420], [960, 540, 1440], [830, 500, 1470]].map(([x, hh, fy], i) => (
+          <Cushion x={820} y={1300} w={560} c="#2a2430" />
+          {[[680, 640, 1290], [940, 620, 1300], [810, 580, 1330]].map(([x, hh, fy], i) => (
             <g key={i}>
               <Lap hx={x} hy={fy - 6} s={hh / 1000} dir={-1} c={KIDS[i].bottom} c2="#1a1a22" />
               <Side x={x} y={fy + 500 * (hh / 1000)} h={hh} dir={-1} pal={KIDS[i]} head={i === 1 ? 'scarf' : 'short'} male={i !== 1} noLegs headTilt={-10 * u - 4} handN={[160, -540]} handF={[140, -530]} bob={3 * Math.sin(t2 * 2 + i)} rimO={0.9} />

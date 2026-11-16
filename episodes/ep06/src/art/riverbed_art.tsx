@@ -13,14 +13,14 @@ export const bedEdge = (side: -1 | 1, f: number) => (side < 0 ? [60 + 540 * f, 2
 type RPal = { sky: string[]; far: string; bank: string; bankD: string; bankTop: string; bed: string[]; crack: string; crackHi: string; crowd: string[]; haze: string };
 const RPALS: Record<'day' | 'night', RPal> = {
   day: { sky: ['#e2d2b0', '#efe6d2', '#f4ecd8'], far: '#cdb48a', bank: '#b08a60', bankD: '#8a6a46', bankTop: '#c9a476', bed: ['#c49a6a', '#a07c55'], crack: '#4a3524', crackHi: '#d8b48a', crowd: ['#5a4a3e', '#3e3430', '#6a5244', '#2e2a2e', '#7a5a46'], haze: '#fff6e4' },
-  night: { sky: ['#03050c', '#070b16', '#121a30'], far: '#0e1426', bank: '#141a2c', bankD: '#0b0f1c', bankTop: '#2a3450', bed: ['#22293e', '#121626'], crack: '#05070e', crackHi: '#a9b8d6', crowd: ['#0a0c14', '#0a0c14', '#0a0c14', '#0a0c14', '#0a0c14'], haze: '#a9b8d6' },
+  night: { sky: ['#03050c', '#070b16', '#121a30'], far: '#0e1426', bank: '#182036', bankD: '#0e1322', bankTop: '#3a4868', bed: ['#34405e', '#1a2036'], crack: '#05070e', crackHi: '#a9b8d6', crowd: ['#0a0c14', '#0a0c14', '#0a0c14', '#0a0c14', '#0a0c14'], haze: '#a9b8d6' },
 };
 /** crowd positions on both banks (far small -> near big) */
 export const CROWD = (() => {
   const r = rng(12); const out: { x: number; y: number; s: number; c: number; ph: number }[] = [];
-  for (const side of [-1, 1] as const) for (let row = 0; row < 4; row++) for (let i = 0; i < 160; i++) {
+  for (const side of [-1, 1] as const) for (let row = 0; row < 6; row++) for (let i = 0; i < 230; i++) {
     const f = Math.pow(r(), 0.7); const [x, y] = bankTop(side, f);
-    const s = 0.25 + (1 - f) * 2.4;
+    const s = 0.35 + (1 - f) * 3.6;
     out.push({ x: x + (side < 0 ? -1 : 1) * row * 18 * s + (r() - 0.5) * 10 * s, y: y - row * 6 * s, s, c: Math.floor(r() * 5), ph: r() * 6 });
   }
   return out.sort((a, b) => a.s - b.s);

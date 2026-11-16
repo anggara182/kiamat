@@ -27,17 +27,17 @@ const Haze: React.FC<{ t: number; y0: number; y1: number; col: string }> = ({ t,
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const te = wordAt(1, /^Euphrates/i, 0.11);
-  const cam: Cam = { zoom: 1.02 + 0.06 * ramp(p, 0, 1, (n) => n), dx: 0, dy: 0, ox: 540, oy: 1140 };
+  const cam: Cam = { zoom: 1.12 + 0.06 * ramp(p, 0, 1, (n) => n), dx: 0, dy: 0, ty: 330, ox: 540, oy: 1140 };
   const flare = 0.6 + 0.4 * Math.sin(t * 4) * 0.3 + (t >= te ? 1.2 * Math.exp(-(t - te) * 2) : 0);
-  const near = CROWD.filter((q) => q.s > 1.6);
+  const near = CROWD.filter((q) => q.s > 2.4);
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="riverbed/day" k={0.95} cam={cam} />
       <Live k={0.95} cam={cam}>
         {near.map((q, i) => <CrowdFig key={i} x={q.x + Math.sin(t2 * 1.5 + q.ph) * 1.5 * q.s} y={q.y} s={q.s} col={['#5a4a3e', '#3e3430', '#6a5244', '#2e2a2e', '#7a5a46'][q.c]} />)}
-        <ellipse cx={648} cy={1336} rx={26} ry={7} fill="#e8b84a" />
-        <ellipse cx={644} cy={1334} rx={12} ry={3} fill="#fff0b0" />
-        <Flare x={648} y={1332} s={0.7 * flare} a={Math.min(1, flare)} />
+        <ellipse cx={648} cy={1336} rx={40} ry={11} fill="#e8b84a" />
+        <ellipse cx={642} cy={1333} rx={18} ry={5} fill="#fff0b0" />
+        <Flare x={648} y={1330} s={1.0 * flare} a={Math.min(1, flare)} />
         <Haze t={t} y0={1050} y1={1350} col="#fff6e4" />
       </Live>
       <Live k={1.15} cam={cam}>
@@ -100,7 +100,7 @@ export const S11: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: '#03050c' }}>
       <BandImg id="riverbed/night" k={1} cam={cam} />
       <Live k={1} cam={cam}>
-        <CapOldMan x={250} y={975} h={190} turn={turn} step={step} rim="#a9b8d6" />
+        <CapOldMan x={250} y={975} h={300} turn={turn} step={step} rim="#a9b8d6" />
         {Array.from({ length: 30 }).map((_, i) => { const x = r() * 1296, y = 1200 + r() * 900; return <circle key={i} cx={x + t * 8} cy={y - t * 4} r={1.5 + r() * 2} fill="#a9b8d6" opacity={0.15 + 0.15 * Math.sin(t * 2 + i)} />; })}
       </Live>
     </AbsoluteFill>
@@ -121,7 +121,7 @@ export const S16: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="riverbed/gold" k={1} cam={cam} />
       <Live k={1} cam={cam}>
-        {vs.map((v) => <Villager key={v.i} x={v.x} y={goldY(v.x) + 34} h={110} body={VCOLS[v.i % 6]} head="#8a5a44" scarf={v.i % 3 === 1} shovel={v.i % 2 === 0} sw={t2 * 1.4 + v.i} shadow={-30} />)}
+        {vs.map((v) => <Villager key={v.i} x={v.x} y={goldY(v.x) + 90} h={110} body={VCOLS[v.i % 6]} head="#8a5a44" scarf={v.i % 3 === 1} shovel={v.i % 2 === 0} sw={t2 * 1.4 + v.i} shadow={-30} />)}
         <Flare x={GM.cx - 60} y={goldY(GM.cx - 60) + 70} s={0.5 + g1} a={Math.min(1, 0.3 + g1)} />
         <Flare x={GM.cx + 160} y={GM.top + 420} s={0.6 + 1.2 * g2} a={Math.min(1, 0.2 + g2)} />
         <Flare x={GM.cx - 300} y={GM.top + 360} s={0.4 + 0.3 * Math.sin(t * 3)} a={0.4} />
@@ -136,7 +136,7 @@ export const S17: React.FC = () => {
   const th = wordAt(17, /^history/i, 0.86);
   const cam: Cam = { zoom: 1.6 + 0.08 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -260, ox: 520, oy: 960 };
   const fl = t >= th - 0.1 ? ramp(t, th - 0.1, th + 0.25) * (1 - 0.4 * ramp(t, th + 0.4, th + 1)) : 0;
-  const slope = (x: number) => goldY(x) + 30;
+  const slope = (x: number) => goldY(x) + 140;
   const kids = [0, 1].map((i) => { const k = ((t2 * 0.35 + i * 0.5) % 1); const x = 560 - k * 360; return { x, y: slope(x), ang: -24 - 8 * k, i }; });
   const people: [number, number, string, boolean, boolean][] = [[300, 140, VCOLS[0], false, true], [700, 150, VCOLS[1], true, false], [760, 135, VCOLS[3], false, false], [220, 130, VCOLS[4], true, true]];
   return (

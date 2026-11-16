@@ -43,7 +43,7 @@ export const GoldScene: React.FC<{ m: 'night' | 'day' | 'dawn' }> = ({ m }) => {
         <linearGradient id={`gfBed-${m}`} gradientUnits="userSpaceOnUse" x1="0" y1={g.base - 40} x2="0" y2={H}><stop offset="0" stopColor={p.bed[0]} /><stop offset="1" stopColor={p.bed[1]} /></linearGradient>
         <clipPath id={`gfClip-${m}`}><path d={dome} /></clipPath>
         <radialGradient id={`gfRelL-${m}`} cx="0.42" cy="0.38" r="0.6"><stop offset="0" stopColor={p.glint} stopOpacity={0.4} /><stop offset="1" stopColor={p.glint} stopOpacity={0} /></radialGradient>
-        <radialGradient id={`gfRelD-${m}`} cx="0.6" cy="0.65" r="0.6"><stop offset="0" stopColor={p.ridge} stopOpacity={0.55} /><stop offset="1" stopColor={p.ridge} stopOpacity={0} /></radialGradient>
+        <radialGradient id={`gfRelD-${m}`} cx="0.6" cy="0.65" r="0.6"><stop offset="0" stopColor={p.ridge} stopOpacity={0.28} /><stop offset="1" stopColor={p.ridge} stopOpacity={0} /></radialGradient>
       </defs>
       <rect x={0} y={0} width={W} height={H} fill={`url(#gfSky-${m})`} />
       {m === 'day' && <circle cx={240} cy={420} r={320} fill="#ffffff" opacity={0.6} />}
@@ -52,7 +52,7 @@ export const GoldScene: React.FC<{ m: 'night' | 'day' | 'dawn' }> = ({ m }) => {
       <ellipse cx={g.cx} cy={g.top + 280} rx={g.w * 0.55} ry={560} fill={`url(#gfHalo-${m})`} />
       <path d={dome} fill={`url(#gfGold-${m})`} />
       <g clipPath={`url(#gfClip-${m})`}>
-        {facets.map((f, i) => { const [cx, cy] = f.pts.split(' ')[0].split(',').map(Number); return <ellipse key={i} cx={cx} cy={cy} rx={90 + (i % 5) * 40} ry={40 + (i % 4) * 18} fill={`url(#gfRel${f.light ? 'L' : 'D'}-${m})`} transform={`rotate(${(i * 37) % 30 - 15} ${cx} ${cy})`} />; })}
+        {facets.map((f, i) => { const [cx, cy] = f.pts.split(' ')[0].split(',').map(Number); return <ellipse key={i} cx={cx} cy={cy} rx={120 + (i % 5) * 50} ry={26 + (i % 4) * 10} fill={`url(#gfRel${f.light ? 'L' : 'D'}-${m})`} transform={`rotate(${(i * 37) % 30 - 15} ${cx} ${cy})`} />; })}
         {Array.from({ length: 30 }).map((_, i) => { const x = g.cx + (r() - 0.5) * g.w * 0.8, y = g.top + 40 + r() * (g.base - g.top - 60); return <path key={`c${i}`} d={`M${x} ${y} l${r() * 40 - 20} ${16 + r() * 30} l${r() * 30 - 15} ${14 + r() * 24} l${r() * 20 - 10} ${10 + r() * 20}`} stroke={p.ridge} strokeWidth={2 + r() * 3} strokeOpacity={0.55} fill="none" />; })}
         {Array.from({ length: 120 }).map((_, i) => { const x = g.cx + (r() - 0.55) * g.w * 0.75, y = g.top + 20 + r() * (g.base - g.top - 40); return <circle key={`g${i}`} cx={x} cy={y} r={1.5 + r() * 3.5} fill={p.glint} opacity={0.35 + r() * 0.55} />; })}
         <rect x={0} y={g.base - 120} width={W} height={120} fill={p.gold[2]} opacity={0.5} />
