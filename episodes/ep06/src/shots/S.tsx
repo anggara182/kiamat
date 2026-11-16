@@ -62,7 +62,8 @@ export const S04: React.FC = () => {
   const tT = wordAt(4, /^thousands/i, 0.72);
   const rise = ramp(t, tT - 0.3, tT + 0.7, EIO);
   const cam: Cam = { zoom: 1.08 - 0.14 * rise, dx: 0, dy: -560 + 700 * rise, ox: 540, oy: 960 };
-  const fish = Array.from({ length: 34 }, (_, i) => ({ x: 90 + ((i * 263) % 1120), y: POOL.edge + 110 + ((i * 97) % 420), s: 0.9 + (i % 4) * 0.22, ph: i * 1.7, rot: ((i * 53) % 60) - 30 }));
+  const fr = (k: number) => { const v = Math.sin(k * 127.1 + 311.7) * 43758.5453; return v - Math.floor(v); };
+  const fish = Array.from({ length: 34 }, (_, i) => ({ x: 90 + fr(i) * 1120, y: POOL.edge + 110 + fr(i + 50) * 430, s: 0.9 + (i % 4) * 0.22, ph: i * 1.7, rot: fr(i + 99) * 70 - 35 }));
   const kid = (x: number, dir: number, look: Look, point: boolean, i: number) => {
     const G = POOL.edge + 70, h = 500;
     const pose: Pose = { lean: 8, head: 22, thA: 4, shA: 2, thB: -4, shB: -4, uaA: point ? 70 + 6 * Math.sin(t2 * 6) : 14, faA: point ? 76 : 30, uaB: 6, faB: 10, breath: 0.6 * Math.sin(t2 * 3 + i) };
@@ -204,7 +205,7 @@ export const S15: React.FC = () => {
   const cam: Cam = { zoom: 1.28 - 0.26 * ramp(p, 0, 1, EIO), dx: -60, dy: 0, ox: 560, oy: 1150 };
   const G = BED.ground + 40;
   // father digging with a shovel: first strike on "father"
-  const fx = 1330, fh = 640;
+  const fx = 1460, fh = 640; // blade lands right of the gold, well away from the girl
   const ph = Math.max(0, t2 - tF + 0.35) / 0.9;
   const u = ph % 1, push = u < 0.4 ? EIO(u / 0.4) : 1 - EIO((u - 0.4) / 0.6);
   const T: [number, number] = [fx - (0.1 + 0.08 * push) * fh, G - (0.66 - 0.14 * push) * fh], B: [number, number] = [fx - 0.44 * fh, G - (0.04 + 0.3 * (1 - push)) * fh];
@@ -215,23 +216,28 @@ export const S15: React.FC = () => {
   // villagers run down a visible earth bank (feet on the slope, dust), then spread over the bed behind the father on the 2nd "dug"
   const slopeTop: [number, number] = [860, 900], slopeBot: [number, number] = [1300, 1150];
   const slopeY = (x: number) => (x <= slopeTop[0] ? slopeTop[1] : x >= slopeBot[0] ? slopeBot[1] : slopeTop[1] + ((x - slopeTop[0]) / (slopeBot[0] - slopeTop[0])) * (slopeBot[1] - slopeTop[1]));
-  const crowd = Array.from({ length: 14 }, (_, i) => ({ x0: 620 + (i % 5) * 60 + Math.floor(i / 5) * 25, x1: 1040 + (i % 7) * 120, y1: 1180 + Math.floor(i / 7) * 70 + (i % 3) * 18, d: (i % 5) * 0.14 + Math.floor(i / 5) * 0.2, tool: i % 3 }));
+  // a loose diagonal stream: each villager has its own place in the line (gap along the path), its own depth row and bed spot
+  const NV = 12, GAP = 78, V = (440 + (NV - 1) * GAP + 260) / Math.max(1.2, tD);
+  const crowd = Array.from({ length: NV }, (_, i) => ({ s0: -i * GAP, row: i % 3, x1: 1060 + ((i * 5) % NV) * 70, y1: 1170 + (i % 3) * 55, tool: i % 3 }));
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="banks/bed" cam={cam} />
       <Live cam={cam} w={BED.w}>
         <Heat t={t} y={BED.horizon + 10} />
         {/* the near bank: an earth slope running down onto the riverbed */}
-        <polygon points={`560,${slopeTop[1] + 4} ${slopeTop[0]},${slopeTop[1]} ${slopeBot[0]},${slopeBot[1]} ${slopeBot[0] + 80},${slopeBot[1] + 40} 560,${slopeBot[1] + 40}`} fill="#b08a62" />
-        <path d={`M 560 ${slopeTop[1] + 4} L ${slopeTop[0]} ${slopeTop[1]} L ${slopeBot[0]} ${slopeBot[1]} L ${slopeBot[0] + 80} ${slopeBot[1] + 40}`} stroke="#d8c39a" strokeWidth={6} fill="none" />
+        <polygon points={`200,${slopeTop[1] - 120} ${slopeTop[0]},${slopeTop[1]} ${slopeBot[0]},${slopeBot[1]} ${slopeBot[0] + 80},${slopeBot[1] + 40} 200,${slopeBot[1] + 40}`} fill="#b08a62" />
+        <path d={`M 200 ${slopeTop[1] - 120} L ${slopeTop[0]} ${slopeTop[1]} L ${slopeBot[0]} ${slopeBot[1]} L ${slopeBot[0] + 80} ${slopeBot[1] + 40}`} stroke="#d8c39a" strokeWidth={6} fill="none" />
         {[[700, 1010], [900, 1060], [1100, 1110]].map(([x, y], i) => <path key={i} d={`M ${x} ${y} l 80 30`} stroke="#8a6a48" strokeWidth={4} opacity={0.6} />)}
         {crowd.map((c, i) => {
-          const run = clamp01((t2 - c.d) / Math.max(0.7, tD - c.d)), arrived = run >= 1;
-          // down the slope first (60%), then out across the bed to a spot behind the father
-          const onSlope = run < 0.6, k1 = run / 0.6, k2 = (run - 0.6) / 0.4;
-          const x = onSlope ? c.x0 + (slopeBot[0] - 40 - c.x0) * k1 : slopeBot[0] - 40 + (c.x1 - slopeBot[0] + 40) * k2;
-          const y = onSlope ? slopeY(x) : slopeBot[1] + (c.y1 - slopeBot[1]) * k2;
-          const h = 290 + 90 * Math.max(0, (y - 900) / 300);
+          const sp = c.s0 + V * t2; // distance travelled along the path from the slope top
+          const onSlope = sp < 440, rowY = c.row * 26;
+          const xs = slopeTop[0] + Math.min(sp, 440);
+          const bedK = clamp01((sp - 440) / 260);
+          const arrived = bedK >= 1;
+          const x = onSlope ? xs : slopeBot[0] - 40 + (c.x1 - slopeBot[0] + 40) * bedK;
+          const y = (onSlope ? slopeY(xs) : slopeBot[1] + (c.y1 - slopeBot[1]) * bedK) + rowY;
+          if (sp < -120) return null; // still beyond the crest
+          const h = 270 + 90 * Math.max(0, (y - 900) / 300) + c.row * 12;
           const pose: Pose = arrived ? { lean: 40 + 10 * Math.sin(t2 * 8 + i), head: 20, thA: 14, shA: 4, thB: -8, shB: -8, uaA: 70 + 40 * Math.sin(t2 * 8 + i), faA: 60, uaB: 50, faB: 40 } : { ...walkPose(t2 * 13 + i, false, 1.35), lean: onSlope ? 4 : 16, uaA: c.tool < 2 ? 140 : 50, faA: c.tool < 2 ? 160 : 80 };
           const [hx, hy] = handA(x, y, h, 1, pose);
           const L = 0.62 * h;
@@ -250,14 +256,14 @@ export const S15: React.FC = () => {
           );
         })}
         {t2 >= tD && t2 < tD + 0.6 && <ellipse cx={1150} cy={BED.horizon + 100} rx={300 + 300 * (t2 - tD)} ry={40} fill="#d8c39a" opacity={0.5 * (1 - (t2 - tD) / 0.6)} />}
-        <GoldPatch x={1150} y={G + 30} w={320} h={80} t={t} />
+        <GoldPatch x={1010} y={G + 30} w={260} h={74} t={t} />
         {/* the girl kneeling at the gold, scraping */}
         {(() => {
           // the girl kneels at the gold edge and digs with BOTH hands (alternating scoops), solid, fully opaque
-          const gx = 1000, gh = 470, kp: Pose = { ...kneelPose(38, 34, 0.5 * Math.sin(t2 * 3)) };
+          const gx = 860, gh = 470, kp: Pose = { ...kneelPose(38, 34, 0.5 * Math.sin(t2 * 3)) };
           const sw = Math.sin(t2 * 10);
-          const aN = ikArmA(gx, G, gh, 1, kp, 1080 + 30 * sw, G + 10 - 16 * Math.max(0, sw), -1);
-          const aF = ikArmA(gx, G, gh, 1, kp, 1110 - 30 * sw, G + 6 - 16 * Math.max(0, -sw), -1);
+          const aN = ikArmA(gx, G, gh, 1, kp, 935 + 24 * sw, G + 12 - 16 * Math.max(0, sw), -1);
+          const aF = ikArmA(gx, G, gh, 1, kp, 965 - 24 * sw, G + 8 - 16 * Math.max(0, -sw), -1);
           return <Figure x={gx} y={G} h={gh} dir={1} pose={{ ...kp, ...aN, uaB: aF.uaA, faB: aF.faA }} look={{ body: '#a85a48', far: '#7a3e32', skin: '#9a6a4e', hat: 'braids', hatCol: '#2a1e18', skirt: true, rim: '#fff6e0', rimO: 0.6 }} />;
         })()}
         <Shovel tx={T[0]} ty={T[1]} bx={B[0]} by={B[1]} s={fh / 600} />
