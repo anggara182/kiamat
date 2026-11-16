@@ -100,10 +100,10 @@ export const MistBand: React.FC = () => (
     <rect x={0} y={0} width={W} height={H} fill="url(#bmSky)" />
     <ellipse cx={648} cy={1260} rx={420} ry={260} fill="url(#bmSun)" />
     <path d="M-20 1300 Q300 1180 648 1290 Q1000 1180 1316 1300 L1316 1380 L-20 1380 Z" fill="#7a6e80" opacity={0.7} />
+    <rect x={-20} y={MIST.floor - 40} width={1340} height={H} fill="#4a4254" />
     {/* left and right slopes facing each other */}
     <path d={`M-20 ${H} L-20 1080 Q200 1060 420 1300 Q520 1400 560 ${MIST.floor} L560 ${H} Z`} fill="#5a5064" />
     <path d={`M1316 ${H} L1316 1060 Q1100 1050 880 1290 Q780 1400 740 ${MIST.floor} L740 ${H} Z`} fill="#544a5e" />
-    <rect x={400} y={MIST.floor - 40} width={500} height={H} fill="#3a3240" />
     <rect x={-20} y={1300} width={1340} height={360} fill="url(#bmMist)" />
   </g>
 );
