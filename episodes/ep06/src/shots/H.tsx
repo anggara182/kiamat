@@ -22,6 +22,19 @@ const CapBeard: React.FC<{ hx: number; hy: number; s: number; dir: 1 | -1; tilt?
   </g>
 );
 
+/** crossed legs (lap) of a seated figure facing dir, hip at (hx,hy); drawn BEFORE the figure (noLegs) */
+const Lap: React.FC<{ hx: number; hy: number; s: number; dir: 1 | -1; c: string; c2: string }> = ({ hx, hy, s, dir, c, c2 }) => (
+  <g transform={`translate(${hx} ${hy}) scale(${dir * s} ${s})`}>
+    <path d="M-80 -60 Q-90 40 -40 60 L240 60 Q290 40 270 -10 Q220 -70 120 -60 Z" fill={c} />
+    <path d="M40 -40 Q140 -70 250 -20" stroke={c2} strokeWidth={10} fill="none" opacity={0.6} />
+    <path d="M-40 60 L240 60" stroke={c2} strokeWidth={6} opacity={0.5} />
+  </g>
+);
+/** a flat cushion / mat under a seated figure */
+const Cushion: React.FC<{ x: number; y: number; w: number; c: string }> = ({ x, y, w, c }) => (
+  <g><ellipse cx={x} cy={y + 18} rx={w / 2} ry={24} fill={c} /><ellipse cx={x} cy={y + 10} rx={w / 2 - 10} ry={16} fill="#ffffff" opacity={0.08} /></g>
+);
+
 const OLD: Pal = { skin: '#8a5a44', skinD: '#5e3b2e', top: '#e8e2d4', topD: '#bcb6a8', bottom: '#8a8070', headC: '#e8e6e0', headD: '#bcbab4', rim: '#fff4dc' };
 
 /* ============ shot 5: a family loads the pickup; the dry pump squeaks on "dry"; the rope pulled tight on "trucks"; slow pull-back ============ */
@@ -55,7 +68,7 @@ export const S05: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           <g transform={`translate(${TX} ${TY}) scale(1.9) translate(${-TX} ${-TY})`}>
-            <Pickup x={TX} y={TY} bounce={2 * Math.abs(decay(t, tT, 6, 30))} />
+            <Pickup x={TX} y={TY} bounce={2 * Math.abs(decay(t, tT, 6, 30)) + 0.8 * Math.sin(t * 70)} />
             <Load x={TX} y={TY} />
           </g>
           <path d={`M${rope.x1} ${rope.y1} Q${rope.cx} ${rope.cy} ${mh[0]} ${mh[1]}`} stroke="#c9a870" strokeWidth={6} fill="none" />
@@ -97,7 +110,7 @@ export const S06: React.FC = () => {
   const tilt = ramp(t2, 0.2, tW, EIO);
   const dropT = (i: number) => lerp(0.35, tW, i / (coins - 1)) - 0.18;
   const give = ramp(t2, tW + 0.12, Math.min(sec, tW + 0.55), EOUT);
-  const lX = 600, lH = 900;
+  const lX = 620, lH = 900;
   const lHand: [number, number] = [(lX - (palm.x + 30)) / (lH / 1000), (palm.y - 70 - VS.ground - 250) / (lH / 1000)];
   const can = { x: lerp(330, 470, give), y: lerp(940, 1120, give) };
   const cam: Cam = { zoom: 1.12 + 0.14 * EIO(t / sec), dx: 0, dy: 0, ox: 440, oy: 1000 };
@@ -107,24 +120,32 @@ export const S06: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           <Tanker x={60} y={VS.ground + 40} />
-          {/* the mob: heads + shoulders, arms raised with jerrycans */}
-          {Array.from({ length: 7 }, (_, i) => {
-            const x = 660 + i * 85 + (i % 2) * 20, by = 1000 + (i % 3) * 40, up = 0.5 + 0.5 * Math.sin(t2 * 5 + i * 1.7);
-            const c = ['#5a5a6a', '#6a4a3a', '#3a4a5a', '#7a6a4a'][i % 4];
-            const hx = x - 30 + 10 * Math.sin(i), hy = by - 300 - 80 * up;
+          {/* the mob: a dense row of people, elbows bent, jerrycans held up by the handle */}
+          {Array.from({ length: 9 }, (_, i) => {
+            const row = i % 2, x = 650 + i * 62 + row * 10, by = 1020 + row * 70;
+            const up = 0.5 + 0.5 * Math.sin(t2 * 5 + i * 1.7);
+            const c = ['#5a5a6a', '#6a4a3a', '#3a4a5a', '#7a6a4a', '#4a5a4a'][i % 5];
+            const sh = { x: x + 34, y: by + 40 }, el = { x: x + 70, y: by - 40 - 20 * up }, hd = { x: x + 40, y: by - 150 - 50 * up };
             return (
               <g key={i}>
-                <ellipse cx={x} cy={by + 160} rx={90} ry={170} fill={c} />
-                <path d={`M${x - 30} ${by + 20} L${hx} ${hy + 40}`} stroke={c} strokeWidth={34} strokeLinecap="round" />
-                <circle cx={x} cy={by - 30} r={50} fill="#5e3b2e" />
-                <path d={`M${x - 50} ${by - 40} Q${x} ${by - 100} ${x + 50} ${by - 40} Z`} fill="#14121a" />
-                <circle cx={hx} cy={hy + 34} r={18} fill="#8a5a44" />
-                <rect x={hx - 45} y={hy - 80} width={90} height={110} rx={12} fill={['#3f7fb8', '#e0b040', '#d8d4c4'][i % 3]} transform={`rotate(${-10 + (i % 4) * 6} ${hx} ${hy})`} />
+                <path d={`M${x - 80} ${by + 400} Q${x - 86} ${by + 60} ${x - 40} ${by + 40} L${x + 40} ${by + 40} Q${x + 86} ${by + 60} ${x + 80} ${by + 400} Z`} fill={c} />
+                <path d={`M${sh.x} ${sh.y} L${el.x} ${el.y} L${hd.x} ${hd.y}`} stroke={c} strokeWidth={26} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+                <circle cx={hd.x} cy={hd.y} r={14} fill="#8a5a44" />
+                <g transform={`translate(${hd.x} ${hd.y + 6}) rotate(${(i % 3) * 5 - 5})`}>
+                  <path d="M-12 0 L-12 -12 Q0 -20 12 -12 L12 0" stroke={['#3f7fb8', '#e0b040', '#d8d4c4'][i % 3]} strokeWidth={8} fill="none" />
+                  <rect x={-42} y={4} width={84} height={100} rx={10} fill={['#3f7fb8', '#e0b040', '#d8d4c4'][i % 3]} />
+                </g>
+                <rect x={x - 12} y={by - 10} width={24} height={40} fill="#5e3b2e" />
+                <circle cx={x} cy={by - 40} r={42} fill="#6a4434" />
+                <path d={`M${x - 42} ${by - 46} Q${x} ${by - 100} ${x + 42} ${by - 46} Z`} fill="#14121a" />
               </g>
             );
           })}
           {/* the driver's arm out of the cab window, palm up */}
-          <path d={`M230 950 L${palm.x - 30} ${palm.y + 20}`} stroke={DR.top} strokeWidth={44} strokeLinecap="round" />
+          <circle cx={226} cy={936} r={42} fill={DR.skin} />
+          <path d="M184 930 Q190 880 226 878 Q266 880 270 920 Q240 906 214 916 Z" fill="#14121a" />
+          <path d="M190 980 Q226 960 262 980 L262 1010 L190 1010 Z" fill={DR.top} />
+          <path d={`M250 975 L${palm.x - 30} ${palm.y + 20}`} stroke={DR.top} strokeWidth={40} strokeLinecap="round" />
           <path d={`M${palm.x - 50} ${palm.y + 18} Q${palm.x} ${palm.y + 50} ${palm.x + 56} ${palm.y + 10} Q${palm.x + 10} ${palm.y + 26} ${palm.x - 50} ${palm.y + 18} Z`} fill={DR.skin} />
           {/* coins: piled in the palm + falling */}
           {Array.from({ length: coins }, (_, i) => {
@@ -134,7 +155,7 @@ export const S06: React.FC = () => {
             return <ellipse key={i} cx={palm.x + 6 + ((i * 11) % 30) - 15} cy={y} rx={13} ry={u < 1 ? 13 : 6} fill="#d9a441" stroke="#9a6a1c" strokeWidth={2} />;
           })}
           {give > 0 && <rect x={can.x - 50} y={can.y - 60} width={100} height={120} rx={12} fill="#3f7fb8" />}
-          <Side x={lX} y={VS.ground + 250} h={lH} dir={-1} pal={LA} head="short" male lean={14 - 4 * give} handN={give > 0.2 ? [(lX - can.x) / 0.9, (can.y - VS.ground - 250) / 0.9] : lHand} handF={[lHand[0] - 20, lHand[1] + 40]} headTilt={10} bob={3 * Math.sin(t2 * 3)} rimO={0.5} />
+          <Side x={lX} y={VS.ground + 250} h={lH} dir={-1} pal={LA} head="short" male lean={9 - 4 * give} footN={[40, 0]} footF={[-40, 0]} handN={give > 0.2 ? [(lX - can.x) / 0.9, (can.y - VS.ground - 250) / 0.9] : lHand} handF={give > 0.2 ? [140, -470] : [lHand[0] - 10, lHand[1] + 70]} headTilt={10} bob={3 * Math.sin(t2 * 3)} rimO={0.5} />
           {/* cement dust on his sleeve + back */}
           {[[640, 1020], [610, 1100], [660, 1180], [700, 1060]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={10 + (i % 2) * 6} fill="#e8e4dc" opacity={0.6} />)}
           <rect x={-200} y={-300} width={1500} height={2600} fill="#fff4dc" opacity={0.05 + 0.02 * Math.sin(t * 3)} />
@@ -152,9 +173,9 @@ export const S09: React.FC = () => {
   const moving = t2 < tR;
   const shift = (moving ? t2 : tR) * 1.6;
   const lift = ramp(t2, tR, Math.min(sec, tR + 0.6), EIO);
-  const X = 380, H = 920, Y = 1140 + 470 * (H / 1000);
-  const lean = 6 - 4 * lift;
-  const hn = toFrame(X, Y, H, 1, [180, -520]);
+  const X = 360, H = 920, Y = 1130 + 500 * (H / 1000);
+  const lean = 2 - 2 * lift;
+  const hn = toFrame(X, Y, H, 1, [180, -560]);
   const hp = leanPt(X, Y, H, 1, lean, [22, -930]);
   const tilt = 12 - 20 * lift;
   const cam: Cam = { zoom: 1.08 + 0.14 * EIO(t / sec), dx: 0, dy: 0, ox: 480, oy: 820 };
@@ -163,7 +184,9 @@ export const S09: React.FC = () => {
       <BandImg id="village/courtyard-day" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <Side x={X} y={Y} h={H} pal={OLD} head="short" male sit lean={lean} headTilt={tilt} handN={[180, -520]} handF={[160, -500]} bob={2 * Math.sin(t2 * 1.6)} rimO={0.6} />
+          <Cushion x={X + 80} y={1130} w={420} c="#8a3a34" />
+          <Lap hx={X} hy={1124} s={H / 1000} dir={1} c={OLD.bottom} c2="#5a5246" />
+          <Side x={X} y={Y} h={H} pal={OLD} head="short" male noLegs lean={lean} headTilt={tilt} handN={[180, -560]} handF={[160, -540]} bob={2 * Math.sin(t2 * 1.6)} rimO={0.6} />
           <CapBeard hx={hp[0]} hy={hp[1]} s={H / 1000} dir={1} tilt={lean * 0.5 + tilt} />
           <Beads x={hn[0] + 4} y={hn[1] - 30} shift={shift} />
           {Array.from({ length: 10 }, (_, i) => { const u = (t * 0.05 + i * 0.1) % 1; return <circle key={i} cx={760 + ((i * 97) % 280)} cy={700 + u * 500} r={3} fill="#fff8e0" opacity={0.5 * Math.sin(Math.PI * u)} />; })}
@@ -177,13 +200,13 @@ export const S09: React.FC = () => {
 export const S10: React.FC = () => {
   const { t, t2, sec } = useShot();
   const tG = wordAt(10, /^gold/i, 0.85);
-  const X = 300, H = 900, Y = 1250 + 470 * (H / 1000);
+  const X = 280, H = 900, Y = 1130 + 500 * (H / 1000);
   // hands rise from low and apart to the peak, meeting above his head on "gold"
   const u = ramp(t2, tG - 1.2, tG, EIO);
   const after = ramp(t2, tG + 0.1, tG + 0.6, EOUT);
   const hN: [number, number] = [lerp(360, 250, u) + 60 * after, lerp(-520, -1060, u) + 300 * after];
   const hF: [number, number] = [lerp(140, 230, u), lerp(-500, -1040, u) + 300 * after];
-  const hp = leanPt(X, Y, H, 1, 4, [22, -930]);
+  const hp = leanPt(X, Y, H, 1, 2, [22, -930]);
   const KIDS: Pal[] = [
     { skin: '#9a6650', skinD: '#6a4434', top: '#c96b4a', topD: '#a04a2e', bottom: '#4a3a3a', headC: '#14121a', headD: '#14121a', rim: '#ffcf86' },
     { skin: '#8a5a44', skinD: '#5e3b2e', top: '#e0b040', topD: '#a8802a', bottom: '#e0b040', headC: '#3a5a7a', headD: '#2a4060', rim: '#ffcf86' },
@@ -195,11 +218,17 @@ export const S10: React.FC = () => {
       <BandImg id="village/courtyard-night" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <OilLamp x={560} y={1400} t={t} />
-          <Side x={X} y={Y} h={H} pal={OLD} head="short" male sit lean={4} headTilt={-6 * u} handN={hN} handF={hF} bob={2 * Math.sin(t2 * 1.8)} rimO={0.8} />
+          <OilLamp x={520} y={1330} t={t} />
+          <Cushion x={X + 80} y={1130} w={420} c="#5a2a2a" />
+          <Lap hx={X} hy={1124} s={H / 1000} dir={1} c={OLD.bottom} c2="#3a342c" />
+          <Side x={X} y={Y} h={H} pal={OLD} head="short" male noLegs lean={2} headTilt={-6 * u} handN={hN} handF={hF} bob={2 * Math.sin(t2 * 1.8)} rimO={0.8} />
           <CapBeard hx={hp[0]} hy={hp[1]} s={H / 1000} dir={1} tilt={2 - 6 * u} />
-          {[[700, 560], [830, 500], [950, 540]].map(([x, hh], i) => (
-            <Side key={i} x={x} y={1420 + 0.47 * hh} h={hh} dir={-1} pal={KIDS[i]} head={i === 1 ? 'scarf' : 'short'} skirt={i === 1} male={i !== 1} sit headTilt={-10 * u - 4} handN={[150, -480]} handF={[130, -470]} bob={3 * Math.sin(t2 * 2 + i)} rimO={0.9} />
+          <Cushion x={830} y={1420} w={560} c="#2a2430" />
+          {[[700, 560, 1420], [960, 540, 1440], [830, 500, 1470]].map(([x, hh, fy], i) => (
+            <g key={i}>
+              <Lap hx={x} hy={fy - 6} s={hh / 1000} dir={-1} c={KIDS[i].bottom} c2="#1a1a22" />
+              <Side x={x} y={fy + 500 * (hh / 1000)} h={hh} dir={-1} pal={KIDS[i]} head={i === 1 ? 'scarf' : 'short'} male={i !== 1} noLegs headTilt={-10 * u - 4} handN={[160, -540]} handF={[140, -530]} bob={3 * Math.sin(t2 * 2 + i)} rimO={0.9} />
+            </g>
           ))}
         </Fr>
       </Live>

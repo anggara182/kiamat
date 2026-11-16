@@ -24,17 +24,19 @@ const Pair: React.FC<{
   id: string; ex: number; ey: number; s: number; dir?: 1 | -1;
   wh: PersonSpec; li: PersonSpec; talk: number; lean: number; wide: number; cup: number;
   liLean?: number; bob?: number; rim?: string; rimOp?: number; ws?: number;
-}> = ({ id, ex, ey, s, dir = 1, wh, li, talk, lean, wide, cup, liLean = 0, bob = 0, rim, rimOp, ws }) => {
+  gap?: number; behind?: boolean; // extra distance (local units) between her lips and his ear; draw the whisperer behind the listener
+}> = ({ id, ex, ey, s, dir = 1, wh, li, talk, lean, wide, cup, liLean = 0, bob = 0, rim, rimOp, ws, gap = 0, behind = false }) => {
   const sw = ws ?? s;
   const ear = facePt(0, 0, s, EAR, liLean, dir);
   const L = { x: ex - ear.x, y: ey - ear.y + bob };
-  const target = { x: ex - dir * 46 * s, y: ey + 10 * s };
+  const target = { x: ex - dir * (46 + gap) * s, y: ey + 10 * s };
   const m = facePt(0, 0, sw, MOUTH, lean, dir);
   const Wp = { x: target.x - m.x, y: target.y - m.y };
   return (
     <g>
+      {behind && <g transform={`translate(${Wp.x} ${Wp.y}) scale(${dir * sw} ${sw})`}><Person id={`${id}w`} p={wh} talk={talk} lean={lean} cup={cup} rim={rim} rimOp={rimOp} /></g>}
       <g transform={`translate(${L.x} ${L.y}) scale(${dir * s} ${s})`}><Person id={`${id}l`} p={li} wide={wide} lean={liLean} rim={rim} rimOp={rimOp} /></g>
-      <g transform={`translate(${Wp.x} ${Wp.y}) scale(${dir * sw} ${sw})`}><Person id={`${id}w`} p={wh} talk={talk} lean={lean} cup={cup} rim={rim} rimOp={rimOp} /></g>
+      {!behind && <g transform={`translate(${Wp.x} ${Wp.y}) scale(${dir * sw} ${sw})`}><Person id={`${id}w`} p={wh} talk={talk} lean={lean} cup={cup} rim={rim} rimOp={rimOp} /></g>}
     </g>
   );
 };
@@ -189,7 +191,7 @@ export const S15: React.FC = () => {
       <BandImg id="farcity/line" k={0.6} cam={cam} />
       <Live k={1} cam={cam}>
         <Fr>
-          <Pair id="p15" ex={600} ey={820} s={1.55} wh={P.oldWoman} li={P.youngMan} talk={flutter(t2, t2 > tw - 0.2 ? 1 : 0)}
+          <Pair id="p15" ex={700} ey={800} s={1.45} ws={1.32} gap={150} behind wh={P.oldWoman} li={P.youngMan} talk={flutter(t2, t2 > tw - 0.2 ? 1 : 0)}
             lean={-6 * look + 10 * ramp(t2, tw - 0.3, tw, EOUT)} wide={wide} cup={ramp(t2, tw - 0.3, tw, EOUT)} liLean={-8 * look - 3 * wide}
             bob={2 * Math.sin(t2 * 2)} rim="#ffd79a" rimOp={0.75} />
         </Fr>
