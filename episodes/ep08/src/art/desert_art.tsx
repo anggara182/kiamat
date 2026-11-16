@@ -67,27 +67,33 @@ export const DuskBand: React.FC = () => {
 
 /* ------------------------------------------------------------------ vehicles + people */
 /** armoured truck, front three-quarter (night, approaching); s scale; lights 0..1; bounce px */
-export const TruckFront: React.FC<{ x: number; y: number; s: number; bounce: number; col: string }> = ({ x, y, s, bounce, col }) => (
+export const TruckFront: React.FC<{ x: number; y: number; s: number; bounce: number; col: string; rim?: number }> = ({ x, y, s, bounce, col, rim = 0.8 }) => (
   <g transform={`translate(${x} ${y + bounce}) scale(${s})`}>
-    <ellipse cx={0} cy={6} rx={150} ry={22} fill="#000" opacity={0.4} />
+    <ellipse cx={0} cy={6} rx={150} ry={22} fill="#000" opacity={0.45} />
     <path d="M-120 0 L-120 -150 L-90 -200 L90 -200 L120 -150 L120 0 Z" fill={col} />
-    <path d="M-95 -195 L95 -195 L80 -150 L-80 -150 Z" fill="#141210" />
+    <path d="M-120 -150 L-90 -200 L90 -200 L120 -150 L95 -150 L80 -186 L-80 -186 L-95 -150 Z" fill="#3a352c" />
+    <path d="M-80 -186 L80 -186 L72 -152 L-72 -152 Z" fill="#0c0b09" />
+    <rect x={-66} y={-180} width={132} height={24} fill="#d89a4a" opacity={0.35} />
     <rect x={-125} y={-60} width={250} height={30} fill="#1a1814" />
-    <rect x={-110} y={-260} width={220} height={60} fill={col} opacity={0.85} />
-    {[-1, 1].map((sd) => <g key={sd}><rect x={sd * 115 - 18} y={-10} width={36} height={40} rx={8} fill="#141210" /><circle cx={sd * 80} cy={-95} r={16} fill="#fff3d0" /></g>)}
+    {[-60, -20, 20, 60].map((gx) => <rect key={gx} x={gx - 6} y={-140} width={12} height={60} fill="#141210" />)}
+    <rect x={-110} y={-262} width={220} height={60} fill={col} />
+    <path d="M-110 -262 L110 -262 M-120 -150 L-90 -200 L90 -200 L120 -150 M-120 -150 L-120 0 M120 -150 L120 0" stroke="#fff3d0" strokeOpacity={rim} strokeWidth={4} fill="none" />
+    {[-1, 1].map((sd) => <g key={sd}><rect x={sd * 115 - 18} y={-10} width={36} height={40} rx={8} fill="#141210" /><circle cx={sd * 80} cy={-95} r={18} fill="#fffaf0" /></g>)}
   </g>
 );
 /** headlight glow pair + beam on the ground */
-export const Headlights: React.FC<{ x: number; y: number; s: number; a?: number; tilt?: number }> = ({ x, y, s, a = 1, tilt = 0 }) => (
+export const Headlights: React.FC<{ x: number; y: number; s: number; a?: number; tilt?: number; beam?: [number, number] }> = ({ x, y, s, a = 1, tilt = 0, beam }) => (
   <g opacity={a} transform={`rotate(${tilt} ${x} ${y})`}>
-    <ellipse cx={x} cy={y + 60 * s} rx={160 * s} ry={50 * s} fill="url(#hlBeam)" />
-    {[-1, 1].map((sd) => <g key={sd}><circle cx={x + sd * 80 * s} cy={y} r={70 * s} fill="url(#hlGlow)" /><circle cx={x + sd * 80 * s} cy={y} r={12 * s} fill="#fffaf0" /></g>)}
+    {beam && [-1, 1].map((sd) => <path key={`b${sd}`} d={`M${x + sd * 80 * s - 10 * s} ${y} L${x + sd * 80 * s + 10 * s} ${y} L${beam[0] + sd * 260 * s + 160 * s} ${beam[1]} L${beam[0] + sd * 260 * s - 160 * s} ${beam[1]} Z`} fill="url(#hlCone)" />)}
+    <ellipse cx={x} cy={y + 60 * s} rx={180 * s} ry={55 * s} fill="url(#hlBeam)" />
+    {[-1, 1].map((sd) => <g key={sd}><circle cx={x + sd * 80 * s} cy={y} r={110 * s} fill="url(#hlGlow)" /><ellipse cx={x + sd * 80 * s} cy={y} rx={240 * s} ry={6 * s} fill="#fff3d0" opacity={0.35} /><circle cx={x + sd * 80 * s} cy={y} r={14 * s} fill="#fffef8" /></g>)}
   </g>
 );
 export const LightDefs: React.FC = () => (
   <defs>
     <radialGradient id="hlGlow" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#fff3d0" stopOpacity={0.9} /><stop offset="0.3" stopColor="#fff3d0" stopOpacity={0.35} /><stop offset="1" stopColor="#fff3d0" stopOpacity={0} /></radialGradient>
     <radialGradient id="hlBeam" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#fff3d0" stopOpacity={0.35} /><stop offset="1" stopColor="#fff3d0" stopOpacity={0} /></radialGradient>
+    <linearGradient id="hlCone" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#fff3d0" stopOpacity={0.4} /><stop offset="1" stopColor="#fff3d0" stopOpacity={0} /></linearGradient>
     <radialGradient id="dustG" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#8a7a60" stopOpacity={0.8} /><stop offset="1" stopColor="#8a7a60" stopOpacity={0} /></radialGradient>
     <radialGradient id="dustL" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#f0dcb0" stopOpacity={0.75} /><stop offset="1" stopColor="#f0dcb0" stopOpacity={0} /></radialGradient>
   </defs>
@@ -111,11 +117,12 @@ export const Soldier: React.FC<{ x: number; y: number; h: number; br: number; bo
       <rect x={x - u * 0.55} y={y - u * 0.05 + b} width={u * 0.6} height={u * 0.18} fill="#1a1814" />
       <path d={`M${x - u * 0.55} ${shY + u * 0.1} Q${x} ${shY - u * 0.15} ${x + u * 0.55} ${shY + u * 0.1} L${x + u * 0.5} ${y - h * 0.44 + b} L${x - u * 0.5} ${y - h * 0.44 + b} Z`} fill={uni} />
       {/* arm up to the rail behind him */}
-      <path d={`M${x + u * 0.2} ${shY + u * 0.2} L${x + u * 0.75} ${shY - u * 0.3} L${x + u * 0.85} ${shY - u * 1.0}`} stroke={uni} strokeWidth={u * 0.28} strokeLinecap="round" strokeLinejoin="round" fill="none" />
-      <circle cx={x + u * 0.85} cy={shY - u * 1.05} r={u * 0.14} fill={skin} />
+      <path d={`M${x + u * 0.2} ${shY + u * 0.2} L${x + u * 0.55} ${shY + u * 1.05} L${x + u * 0.95} ${shY + u * 0.25}`} stroke={uni} strokeWidth={u * 0.28} strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <circle cx={x + u * 0.95} cy={shY + u * 0.2} r={u * 0.14} fill={skin} />
       <path d={`M${x - u * 0.2} ${shY + u * 0.2} L${x - u * 0.3} ${shY + u * 1.2} L${x - u * 0.15} ${shY + u * 1.9}`} stroke={uniD} strokeWidth={u * 0.28} strokeLinecap="round" fill="none" />
       <rect x={x - u * 0.15} y={shY - u * 0.28} width={u * 0.3} height={u * 0.32} fill={skinD} />
       <ellipse cx={x - u * 0.05} cy={shY - u * 0.62} rx={u * 0.38} ry={u * 0.46} fill={skin} />
+      <ellipse cx={x - u * 0.22} cy={shY - u * 0.55} rx={u * 0.26} ry={u * 0.34} fill="#ffc880" opacity={0.45} />
       <path d={`M${x - u * 0.43} ${shY - u * 0.66} L${x - u * 0.5} ${shY - u * 0.55} L${x - u * 0.38} ${shY - u * 0.5} Z`} fill={skin} />
       <path d={`M${x - u * 0.3} ${shY - u * 0.66} l${u * 0.12} 0`} stroke="#1a1210" strokeWidth={u * 0.05} />
       <path d={`M${x - u * 0.38} ${shY - u * 0.42} l${u * 0.12} 0`} stroke={skinD} strokeWidth={u * 0.03} />

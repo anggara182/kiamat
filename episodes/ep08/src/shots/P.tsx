@@ -175,7 +175,7 @@ export const S15: React.FC = () => {
         <Fr>
           {/* far arms first (behind the bodies) */}
           <Arm S={[330, 1000]} E={[400, T + 30]} H={[540, T + 44]} suit={A.shirtD} skin={A.skin} shade={A.shade} />
-          <Arm S={[770, 990]} E={[740, T + 20]} H={[640, T - 40 + 4 * Math.sin(t2 * 3)]} suit={B.shirtD} skin={B.skin} shade={B.shade} />
+          <Arm S={[770, 990]} E={[740, T + 20]} H={[616 + 36 * capOn, T - 40 + 4 * Math.sin(t2 * 3)]} suit={B.shirtD} skin={B.skin} shade={B.shade} />
           {/* the two seated officials (ON TWOS: breathing); table hides them from mid-torso down */}
           <g transform={`translate(300 ${760 + 2 * Math.sin(t2 * 1.6)})`}><Person id="p15a" p={A} lean={12} rim="#ffd9a0" rimOp={0.6} /></g>
           <g transform={`translate(800 ${750 + 2 * Math.sin(t2 * 1.4 + 1)}) scale(-1 1)`}><Person id="p15b" p={B} lean={5 - 3 * smile} smile={smile} blink={0.45 * smile} rim="#ffd9a0" rimOp={0.6} /></g>
@@ -194,8 +194,8 @@ export const S15: React.FC = () => {
           <Arm S={[350, 1010]} E={[400, T + 40]} H={[penA[0] - 18, penA[1] - 6]} suit={A.shirt} skin={A.skin} shade={A.shade} />
           <rect x={penA[0] - 6} y={penA[1] - 54} width={8} height={56} rx={3} fill="#1a1a1a" transform={`rotate(28 ${penA[0]} ${penA[1]})`} />
           <g>
-            <rect x={612} y={T - 46 + 4 * Math.sin(t2 * 3)} width={100} height={9} rx={4} fill="#2a2a30" />
-            <rect x={590 + 30 * capOn} y={T - 48 + 4 * Math.sin(t2 * 3)} width={36} height={13} rx={4} fill="#c9a24a" />
+            <rect x={600} y={T - 48 + 4 * Math.sin(t2 * 3)} width={150} height={13} rx={6} fill="#2a2a30" />
+            <rect x={556 + 44 * capOn} y={T - 51 + 4 * Math.sin(t2 * 3)} width={48} height={19} rx={5} fill="#c9a24a" />
           </g>
           <Arm S={[760, 1000]} E={[740, T + 34]} H={[712, T - 36 + 4 * Math.sin(t2 * 3)]} suit={B.shirt} skin={B.skin} shade={B.shade} />
         </Fr>

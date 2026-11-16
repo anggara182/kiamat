@@ -10,38 +10,49 @@ const shake = (t: number, a: number) => ({ tx: a * (Math.sin(t * 53) * 0.6 + Mat
 /** soft dust puff */
 const Puff: React.FC<{ x: number; y: number; rx: number; ry: number; lit?: boolean; o?: number }> = ({ x, y, rx, ry, lit, o = 1 }) => <ellipse cx={x} cy={y} rx={rx} ry={ry} fill={`url(#${lit ? 'dustL' : 'dustG'})`} opacity={o} />;
 
-/** shot 1 — HOOK, night: an endless column of armoured trucks rolls toward camera, headlights bouncing in dust; a young soldier rides on the side of the nearest truck; the first crack runs through the sand on "man". Slow push-in. */
+/** shot 1 — HOOK, night: an endless column of armoured trucks rolls toward camera, headlight beams cutting through glowing dust; on the nearest truck (left third) a young soldier holds the side rail; the first crack glows through the sand on "man". Slow push-in. */
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tm = wordAt(1, /^man/i, 0.75);
-  const cam: Cam = { zoom: 1.12 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -200, ox: 540, oy: 1100 };
-  const A: [number, number] = [640, HZ.night + 4], B: [number, number] = [1180, 2420];
-  const trucks = Array.from({ length: 16 }).map((_, i) => { const u = ((i / 16) + t * 0.035) % 1; return { u, i }; }).filter((q) => q.u < 0.86).sort((a, b) => a.u - b.u);
+  const cam: Cam = { zoom: 1.12 + 0.06 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -200, ox: 600, oy: 1100 };
+  const A: [number, number] = [700, HZ.night + 4], B: [number, number] = [1180, 1920];
+  const trucks = Array.from({ length: 14 }).map((_, i) => { const u = ((i / 14) + t * 0.035) % 1; return { u, i }; }).filter((q) => q.u < 0.88).sort((a, b) => a.u - b.u);
   const crack = ramp(t, tm, tm + 0.45, (n) => n);
+  const crackD = "M360 1700 L450 1685 L520 1720 L600 1690 L680 1725 L760 1700 L840 1740 L930 1712 L1010 1748 L1100 1724 L1200 1760";
   return (
     <AbsoluteFill style={{ backgroundColor: '#05070f' }}>
       <BandImg id="desert/night" k={0.9} cam={cam} />
       <Live k={0.95} cam={cam}>
         <LightDefs />
         {trucks.map(({ u, i }) => {
-          const x = A[0] + (B[0] - A[0]) * u * u, y = A[1] + (B[1] - A[1]) * u * u; const s = 0.03 + 0.9 * u * u;
+          const x = A[0] + (B[0] - A[0]) * u * u, y = A[1] + (B[1] - A[1]) * u * u; const s = 0.04 + 0.85 * u * u;
           const bounce = Math.sin(t * 9 + i * 1.7) * 3 * s;
-          return <g key={i}>{s > 0.12 && <TruckFront x={x} y={y} s={s} bounce={bounce} col="#2e2a22" />}<Headlights x={x} y={y - 95 * s + bounce} s={s} /><Puff x={x + 60 * s} y={y - 40 * s} rx={260 * s} ry={90 * s} o={0.6} /></g>;
+          return <g key={i}>
+            <Puff x={x - 40 * s} y={y - 120 * s} rx={420 * s} ry={170 * s} lit o={0.55} />
+            {s > 0.1 && <TruckFront x={x} y={y} s={s} bounce={bounce} col="#2e2a22" rim={0.35 + 0.5 * (1 - u)} />}
+            <Headlights x={x} y={y - 95 * s + bounce} s={s} beam={s > 0.08 ? [x - 260 * s, y + 520 * s] : undefined} />
+          </g>;
         })}
-        {/* the first crack, running through the sand under the wheels */}
-        {crack > 0 && <path d="M80 1960 L180 1940 L240 1985 L330 1950 L420 1990 L520 1960 L600 2010 L720 1975 L820 2020 L940 1990 L1060 2040 L1200 2010" pathLength={1} strokeDasharray="1 1" strokeDashoffset={1 - crack} stroke="#0a0806" strokeWidth={6} fill="none" />}
-        {crack > 0 && <path d="M80 1964 L180 1944 L240 1989 L330 1954 L420 1994 L520 1964 L600 2014 L720 1979 L820 2024 L940 1994 L1060 2044 L1200 2014" pathLength={1} strokeDasharray="1 1" strokeDashoffset={1 - crack} stroke="#fff3d0" strokeOpacity={0.25} strokeWidth={2} fill="none" />}
+        {crack > 0 && <g>
+          <path d={crackD} pathLength={1} strokeDasharray="1 1" strokeDashoffset={1 - crack} stroke="#fff3d0" strokeOpacity={0.25} strokeWidth={18} fill="none" />
+          <path d={crackD} pathLength={1} strokeDasharray="1 1" strokeDashoffset={1 - crack} stroke="#0a0806" strokeWidth={6} fill="none" />
+          <path d={crackD} pathLength={1} strokeDasharray="1 1" strokeDashoffset={1 - crack} stroke="#fff3d0" strokeOpacity={0.6} strokeWidth={1.5} fill="none" transform="translate(0 4)" />
+        </g>}
       </Live>
-      <Live k={1.25} cam={cam}>
-        {/* the nearest truck's flank (left foreground) with the soldier on its side step */}
+      <Live k={1.2} cam={cam}>
+        {/* the nearest truck's armoured flank fills the left third; the soldier on its side step */}
         <g transform={`translate(0 ${Math.sin(t * 9) * 4})`}>
-          <path d="M-200 1020 L330 1060 L360 2000 L-200 2000 Z" fill="#1a1814" />
-          <path d="M330 1060 L360 2000" stroke="#fff3d0" strokeOpacity={0.35} strokeWidth={4} />
-          <rect x={-200} y={1240} width={560} height={14} fill="#2a2620" />
-          <rect x={404} y={1080} width={10} height={480} fill="#3a362e" /><rect x={330} y={1080} width={90} height={10} fill="#3a362e" />
-          <circle cx={130} cy={2010} r={130} fill="#0a0908" /><circle cx={130} cy={2010} r={50} fill="#1e1c18" />
-          <rect x={120} y={1960} width={260} height={18} fill="#2a2620" />
-          <Soldier x={320} y={1960} h={720} br={t2 * 2.4} bob={Math.sin(t2 * 9) * 3} />
+          <path d="M-220 900 L420 990 L440 1840 L-220 1900 Z" fill="#1e1b16" />
+          <path d="M-220 960 L420 1040 L425 1100 L-220 1030 Z" fill="#2c2820" />
+          {[0, 1, 2, 3].map((i) => <path key={i} d={`M${-150 + i * 140} ${1080 + i * 14} L${-150 + i * 140} ${1780 - i * 6}`} stroke="#120f0c" strokeWidth={6} />)}
+          <path d="M420 990 L440 1840" stroke="#fff3d0" strokeOpacity={0.7} strokeWidth={5} />
+          <path d="M-220 900 L420 990" stroke="#fff3d0" strokeOpacity={0.5} strokeWidth={4} />
+          <rect x={300} y={1220} width={150} height={10} fill="#4a443a" />
+          <rect x={442} y={1215} width={8} height={40} fill="#4a443a" />
+          <circle cx={110} cy={1850} r={150} fill="#0a0908" /><circle cx={110} cy={1850} r={60} fill="#1e1c18" /><path d="M-40 1850 A150 150 0 0 1 260 1850" stroke="#fff3d0" strokeOpacity={0.35} strokeWidth={4} fill="none" />
+          <rect x={150} y={1800} width={300} height={18} fill="#2a2620" />
+          <ellipse cx={420} cy={1180} rx={160} ry={120} fill="#ffc880" opacity={0.12} />
+          <g transform="translate(720 0) scale(-1 1)"><Soldier x={360} y={1800} h={700} br={t2 * 2.4} bob={Math.sin(t2 * 9) * 3} /></g>
         </g>
       </Live>
     </AbsoluteFill>
@@ -87,24 +98,28 @@ const colPt = (s: number): [number, number] => {
   return [a * p0[0] + b * p1[0] + c * p2[0] + d * p3[0], a * p0[1] + b * p1[1] + c * p2[1] + d * p3[1]];
 };
 
-/** shot 9 — day, extreme wide: the plain column snakes across the desert to the horizon with dust trailing; its full length is revealed on "horizon". High slow drift. */
+/** shot 9 — day, extreme wide: the plain column snakes across the desert to the horizon, separate vehicles with gaps, a long dust plume drifting sideways, heat shimmer; full length revealed on "horizon". High slow drift. */
 export const S09: React.FC = () => {
   const { p, t } = useShot();
   const tt = wordAt(9, /^trucks/i, 0.21), th = wordAt(9, /^horizon/i, 0.8);
   const out = ramp(t, tt, th, EIO);
   const cam: Cam = { zoom: 1.5 - 0.5 * out, dx: 0, dy: 0, ty: -120 * (1 - out) + 30 * p, ox: 400, oy: 1700 };
-  const N = 46;
+  const N = 34;
   return (
     <AbsoluteFill style={{ backgroundColor: '#f1e6cc' }}>
       <BandImg id="desert/day" k={1} cam={cam} />
       <Live k={1} cam={cam}>
         <LightDefs />
-        <path d={Array.from({ length: 61 }).map((_, i) => { const [x, y] = colPt(i / 60); return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ')} stroke="#c4a87a" strokeWidth={26} fill="none" opacity={0.6} />
+        <path d={Array.from({ length: 61 }).map((_, i) => { const [x, y] = colPt(i / 60); return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ')} stroke="#c9b08a" strokeWidth={14} fill="none" opacity={0.45} />
+        {/* the dust plume drifting sideways off the column */}
+        {Array.from({ length: 30 }).map((_, i) => { const s = i / 29; const [x, y] = colPt(s); const k = 1 - s; return <ellipse key={`d${i}`} cx={x + 90 + 160 * k + t * 12} cy={y - 40 - 70 * k} rx={160 + 260 * k} ry={40 + 70 * k} fill="url(#dustL)" opacity={0.5} />; })}
         {Array.from({ length: N }).map((_, i) => {
-          const s = ((i / N) + ((i * 37) % 11) / (N * 22) + t * 0.006) % 1; const [x, y] = colPt(s); const [x2, y2] = colPt(Math.max(0, s - 0.004));
-          const ang = (Math.atan2(y - y2, x - x2) * 180) / Math.PI; const k = 1 - s; const sc = 0.25 + 1.6 * k * k;
-          return <g key={i}><ellipse cx={x2 - (x - x2) * 3} cy={y2 - (y - y2) * 3 - 6 * sc} rx={70 * sc} ry={24 * sc} fill="url(#dustL)" opacity={0.9} /><TinyTruck x={x} y={y} s={sc} ang={ang} col={i % 3 ? '#8a7a5a' : '#6a6450'} /></g>;
+          const s = ((i / N) + t * 0.006) % 1; const [x, y] = colPt(s); const [x2, y2] = colPt(Math.max(0, s - 0.004));
+          const ang = (Math.atan2(y - y2, x - x2) * 180) / Math.PI; const k = 1 - s; const sc = 0.22 + 2.6 * Math.pow(k, 2.2);
+          return <g key={i}><ellipse cx={x + 6 * sc} cy={y + 10 * sc} rx={26 * sc} ry={9 * sc} fill="#6a5438" opacity={0.3} /><TinyTruck x={x} y={y} s={sc} ang={ang} col={i % 3 ? '#8a7a5a' : '#6a6450'} /><ellipse cx={x2 - (x - x2) * 4} cy={y2 - (y - y2) * 4 - 8 * sc} rx={34 * sc} ry={12 * sc} fill="url(#dustL)" opacity={0.85} /></g>;
         })}
+        {/* heat shimmer near the horizon */}
+        {Array.from({ length: 6 }).map((_, i) => { const k = ((t * 0.15 + i / 6) % 1); const y = HZ.day + 120 - k * 110; return <path key={`h${i}`} d={`M-100 ${y} Q300 ${y - 6 + Math.sin(t * 3 + i) * 5} 650 ${y} T1400 ${y}`} stroke="#fff8e8" strokeWidth={8} strokeOpacity={0.18 * Math.sin(k * Math.PI)} fill="none" />; })}
       </Live>
     </AbsoluteFill>
   );

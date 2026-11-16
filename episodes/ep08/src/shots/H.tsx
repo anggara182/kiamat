@@ -26,21 +26,21 @@ export const S04: React.FC = () => {
   const A: Pal = { skin: '#a06c52', skinD: '#6e4636', top: '#c96b4a', topD: '#a04a2e', bottom: '#4a3a4a', headC: '#3a5a7a', headD: '#2a4060', rim: '#fff4dc' };
   const B: Pal = { skin: '#8a5a44', skinD: '#5e3b2e', top: '#d8c8a0', topD: '#a8986e', bottom: '#5a4a3a', headC: '#8a3a4a', headD: '#5e2430', rim: '#fff4dc' };
   const M: Pal = { skin: '#9a6650', skinD: '#6a4434', top: '#4a5a6a', topD: '#32404e', bottom: '#2e2c34', headC: '#14121a', headD: '#14121a', rim: '#fff4dc' };
-  const oX = 620, oY = 1430, oH = 800, oLean = 10 + 6 * sL - 4 * moved;
+  const oX = 690, oY = 1430, oH = 800, oLean = 6 + 5 * sL - 4 * moved;
   const oh = leanPt(oX, oY - 3 * Math.sin(t2 * 2) * 0.8, oH, -1, oLean, [22, -930]);
-  const manX = lerp(1120, 1020, clamp01(t2 / (tW + 0.6)));
-  const cam: Cam = { zoom: 1.08, dx: 60 - 120 * EIO(p), dy: 0, ox: 540, oy: 1000 };
+  const manX = lerp(1150, 1080, clamp01(t2 / (tW + 0.6)));
+  const cam: Cam = { zoom: 1.04, dx: 30 - 60 * EIO(p), dy: 0, ox: 540, oy: 1000 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#d8cdb8' }}>
       <BandImg id="streets/day-market" cam={cam} />
       <Live cam={cam}>
         <Fr>
           {/* the whisper travels: two women further back, then a man stops and turns */}
-          <Side x={760} y={MK.ground + 20} h={560} pal={A} head="scarf" skirt lean={4 + 18 * w2} handN={[120 + 20 * w2, -860]} handF={[60, -480]} bob={2 * Math.sin(t2 * 2)} rimO={0.3} />
-          <Side x={880} y={MK.ground + 20} h={540} dir={-1} pal={B} head="scarf" skirt lean={-4 * w2} headTilt={8 * w2} handN={[90, -520]} bob={2 * Math.sin(t2 * 2.3)} rimO={0.3} />
+          <Side x={870} y={MK.ground} h={520} pal={A} head="scarf" skirt lean={4 + 18 * w2} handN={[120 + 20 * w2, -860]} handF={[60, -480]} bob={2 * Math.sin(t2 * 2)} rimO={0.3} />
+          <Side x={975} y={MK.ground} h={500} dir={-1} pal={B} head="scarf" skirt lean={-4 * w2} headTilt={8 * w2} handN={[90, -520]} bob={2 * Math.sin(t2 * 2.3)} rimO={0.3} />
           <Side x={manX} y={MK.ground + 10} h={580} dir={-1} pal={M} head="short" male face={m3 > 0.5 ? 'back' : 'side'} footN={[m3 > 0.5 ? 0 : 30 * Math.sin(t2 * 8), 0]} footF={[m3 > 0.5 ? 0 : -30 * Math.sin(t2 * 8), 0]} bob={m3 > 0.5 ? 0 : 5 * Math.abs(Math.sin(t2 * 8))} rimO={0.3} />
           {/* the seller leans over his fruit to the old woman */}
-          <Side x={200} y={1440} h={860} pal={SE} head="short" male lean={6 + 22 * sL} handN={[200 + 40 * sL, -880 + 40 * sL]} handF={[160, -560]} bob={2 * Math.sin(t2 * 2.6)} rimO={0.4} />
+          <Side x={190} y={1440} h={860} pal={SE} head="short" male lean={6 + 18 * sL} handN={[300 + 40 * sL, -900 + 30 * sL]} handF={[160, -560]} bob={2 * Math.sin(t2 * 2.6)} rimO={0.4} />
           <FruitStall x={220} y={1440} />
           <Side x={oX} y={oY} h={oH} dir={-1} pal={OW} head="scarf" skirt lean={oLean} headTilt={-10 * moved} handN={moved > 0.3 ? [90, -720] : [130, -560]} handF={[60, -480]} bob={3 * Math.sin(t2 * 2) * (1 - moved)} rimO={0.4} />
           {moved > 0.4 && <path d={`M${oh[0] - 30 * 0.8} ${oh[1] - 6} q-12 6 -24 0`} stroke="#3a2420" strokeWidth={4} fill="none" strokeLinecap="round" />}
