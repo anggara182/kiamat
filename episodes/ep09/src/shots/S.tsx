@@ -67,10 +67,10 @@ export const S05: React.FC = () => {
         {puff > 0 && puff < 2 && [0, 1, 2].map((k) => <circle key={k} cx={1000 + k * 30 + puff * 60} cy={PORT.sea - 130 - puff * 80 - k * 20} r={20 + puff * 30 + k * 6} fill="#ffffff" opacity={0.7 * (1 - puff / 2)} />)}
         {[0, 1, 2].map((i) => { const gx = ((t * 80 + i * 300) % 1500) - 100, gy = 500 + i * 60 + Math.sin(t * 2 + i) * 20; return <path key={i} d={`M ${gx - 14} ${gy - 4} Q ${gx - 6} ${gy - 10} ${gx} ${gy} Q ${gx + 6} ${gy - 10} ${gx + 14} ${gy - 4}`} stroke="#f2efe6" strokeWidth={3} fill="none" />; })}
         <Stall x={200} y={G - 40} w={300} col="#c94f3d" />
+        {/* merchant behind his counter laughing with a foreign buyer (the counter hides his legs) */}
+        <Figure x={600} y={G - 60} h={720} dir={1} pose={{ lean: -14 - 4 * laugh, head: -30 - 6 * laugh, thA: 3, shA: 1, thB: -3, shB: -3, uaA: 70, faA: 120, uaB: 50, faB: 100, bob: -laugh * 2 }} look={{ body: '#e8e2d4', far: '#c8c0b0', skin: '#8a5a40', hat: 'peci', hatCol: '#3a3430', beard: '#3a2a20', mouth: laugh }} />
         <Stall x={620} y={G - 40} w={320} col="#4f8a7a" />
         <Stall x={1040} y={G - 40} w={300} col="#e8b84a" />
-        {/* merchant behind his counter laughing with a foreign buyer */}
-        <Figure x={600} y={G - 160} h={620} dir={1} pose={{ lean: -14 - 4 * laugh, head: -30 - 6 * laugh, thA: 3, shA: 1, thB: -3, shB: -3, uaA: 70, faA: 120, uaB: 50, faB: 100, bob: -laugh * 2 }} look={{ body: '#e8e2d4', far: '#c8c0b0', skin: '#8a5a40', hat: 'peci', hatCol: '#3a3430', beard: '#3a2a20', mouth: laugh }} />
         <Figure x={790} y={G + 10} h={740} dir={-1} pose={{ ...stand(t2), lean: -10 - 3 * laugh, head: -24 - 6 * laugh, uaA: 60, faA: 100 }} look={{ body: '#6a7a8a', far: '#4a5868', skin: '#e0b898', hat: 'cap', hatCol: '#d8d0c0', mouth: laugh * 0.8, bag: 'shoulder', bagCol: '#8a6a44' }} />
         {/* kids chasing each other through the market */}
         {[0, 1].map((i) => <Figure key={i} x={runX(i)} y={G + 120 + i * 20} h={400 - i * 20} dir={1} pose={{ ...walkPose(t2 * 13 + i * 2, false, 1.4), lean: 16 }} look={{ body: i ? '#c94f3d' : '#5a7aa8', far: '#2a2a30', skin: '#b07a5a', hat: i ? 'braids' : null, hatCol: '#2a1e18', skirt: i === 1, mouth: 0.6 }} />)}
@@ -87,18 +87,18 @@ export const S07: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tQ = wordAt(7, /^quarrel/i, 0.4), tW = wordAt(7, /^was/i, 0.83);
   const hh = handheld(t, 1.1);
-  const cam: Cam = { zoom: 1.06 + 0.1 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, tx: hh.hx + jolt(t, tW, 10), ty: hh.hy, rot: hh.hr, ox: 600, oy: 1100 };
+  const cam: Cam = { zoom: 1.0 + 0.08 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, tx: hh.hx + jolt(t, tW, 10), ty: hh.hy + 60, rot: hh.hr, ox: 600, oy: 1200 };
   const G = 1720, h = 820;
   const shout = t2 > tQ - 0.1 ? Math.abs(Math.sin(t2 * 9)) : 0.2;
   const shove = ramp(t2, tW - 0.08, tW + 0.12, EOUT), back = ramp(t2, tW, tW + 0.4, EOUT);
-  const ax = 540, bx = 700 + 90 * back;
+  const ax = 470, bx = 720 + 90 * back;
   const aBase: Pose = { lean: 16 + 6 * shove, head: -4, thA: 14, shA: 4, thB: -10, shB: -10, uaA: 40, faA: 60, uaB: 30, faB: 70, breath: 0.6 * shout };
   const aArm = shove > 0 ? ikArmA(ax, G, h, 1, aBase, bx - 30, G - 0.66 * h, -1) : { uaA: 20, faA: 70 };
   const aPose: Pose = { ...aBase, ...aArm, uaB: shove > 0 ? aArm.uaA - 6 : 30, faB: shove > 0 ? aArm.faA - 4 : 70 };
   const bPose: Pose = { lean: 14 - 30 * back, head: -6 + 10 * back, thA: 10, shA: 4, thB: -14 - 10 * back, shB: -12, uaA: 30 + 40 * back, faA: 80, uaB: 20 + 30 * back, faB: 60, breath: 0.6 * shout };
   // the others rushing in from both sides (from "quarrel"), grabbing them from behind
   const k = ramp(t2, tQ, tQ + 0.9, EOUT);
-  const lx = -200 + (ax - 170 + 200) * k, rx = 1400 - (1400 - (bx + 180)) * k;
+  const lx = -200 + (ax - 230 + 200) * k, rx = 1400 - (1400 - (bx + 240)) * k;
   const grabL = k > 0.95, grabR = k > 0.95;
   const lBase: Pose = grabL ? { lean: -14, head: 4, thA: 12, shA: 4, thB: -16, shB: -14, uaA: 60, faA: 70, uaB: 50, faB: 60 } : { ...walkPose(t2 * 12, false, 1.3), lean: 18 };
   const lArm = grabL ? ikArmA(lx, G + 20, h * 0.97, 1, lBase, ax - 20, G - 0.72 * h, -1) : {};
@@ -143,8 +143,10 @@ export const S09: React.FC = () => {
       <Live cam={cam}>
         <defs><radialGradient id="pnLamp" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffb860" stopOpacity={0.6} /><stop offset="1" stopColor="#ffb860" stopOpacity={0} /></radialGradient></defs>
         {/* warships sliding in, dark, no markings */}
-        <Ship x={1500 - 140 * t} y={PORT.sea + 110} s={1.0} war col="#141820" col2="#141820" />
-        <Ship x={400 - 70 * t} y={PORT.sea + 60} s={0.6} war col="#10141c" col2="#10141c" />
+        <ellipse cx={648} cy={PORT.sea - 20} rx={900} ry={160} fill="#3a4868" opacity={0.55} />
+        <ellipse cx={300} cy={PORT.sea - 10} rx={500} ry={90} fill="#ffb860" opacity={0.12} />
+        <Ship x={1600 - 150 * t} y={PORT.sea + 130} s={1.5} war col="#06080e" col2="#06080e" />
+        <Ship x={420 - 80 * t} y={PORT.sea + 70} s={0.85} war col="#0a0d16" col2="#0a0d16" />
         {/* sea reflections of the lamp */}
         {[0, 1, 2, 3].map((k) => <rect key={k} x={960 - k * 8 + Math.sin(t * 2 + k) * 10} y={PORT.sea + 140 + k * 26} width={60 - k * 10} height={5} rx={2} fill="#ffb860" opacity={0.4} />)}
         <Stall x={200} y={G - 40} w={300} col="#c94f3d" night shutter={1} />
