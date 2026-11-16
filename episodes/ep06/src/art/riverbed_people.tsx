@@ -175,13 +175,13 @@ export const BankPerson: React.FC<{ x: number; y: number; h: number; dir: 1 | -1
 export const ShoulderRide: React.FC<{ x: number; y: number; h: number; lift: number; point: number; sw: number }> = ({ x, y, h, lift, point, sw }) => {
   const u = h / 7; const ox = Math.sin(sw) * u * 0.04; const k = lift;
   const mx = x + ox; const shY = y - h * 0.8;
-  const headX = mx - u * 0.12, headY = shY - u * 0.62;
+  const headX = mx - u * 0.38, headY = shY - u * 0.58;
   const cu = u * 0.78; // boy unit
   // boy hips: seated on the shoulders behind the head (k = 1), or held at the man's right side (k = 0)
-  const hipX = mx + u * 1.5 * (1 - k), hipY = shY - u * 0.15 + u * 1.9 * (1 - k);
+  const hipX = mx + u * 0.3 + u * 1.2 * (1 - k), hipY = shY - u * 0.5 + u * 2.2 * (1 - k);
   const bShY = hipY - cu * 1.5;
   const shinL: [number, number] = [mx - u * 0.72, shY + u * 0.95], shinR: [number, number] = [mx + u * 0.62, shY + u * 0.95];
-  const kneeL: [number, number] = [mx - u * 0.62, shY + u * 0.05], kneeR: [number, number] = [mx + u * 0.55, shY + u * 0.05];
+  const kneeL: [number, number] = [mx - u * 0.75, shY - u * 0.05], kneeR: [number, number] = [mx + u * 0.75, shY - u * 0.05];
   const handL: [number, number] = k > 0.5 ? [shinL[0] + u * 0.05, shinL[1] - u * 0.2] : [hipX - cu * 0.7, hipY - cu * 0.3];
   const handR: [number, number] = k > 0.5 ? [shinR[0] - u * 0.05, shinR[1] - u * 0.2] : [hipX + cu * 0.7, hipY - cu * 0.3];
   const shirt = '#d8ccb4', shirtD = '#a89c84', pants = '#4a4038', skin = '#7a4f3e';
@@ -202,10 +202,6 @@ export const ShoulderRide: React.FC<{ x: number; y: number; h: number; lift: num
       {limb([mx + u * 0.9, shY + u * 0.15], [mx + u * 1.25, shY + u * 0.95], handR, u * 0.28, shirtD)}
       <ellipse cx={handL[0]} cy={handL[1]} rx={u * 0.17} ry={u * 0.15} fill={skin} />
       <ellipse cx={handR[0]} cy={handR[1]} rx={u * 0.17} ry={u * 0.15} fill={skin} />
-      <rect x={headX - u * 0.15} y={shY - u * 0.3} width={u * 0.3} height={u * 0.35} fill={skin} />
-      <ellipse cx={headX} cy={headY} rx={u * 0.42} ry={u * 0.5} fill="#1d1a1a" />
-      <ellipse cx={headX - u * 0.36} cy={headY + u * 0.05} rx={u * 0.08} ry={u * 0.14} fill={skin} />
-      <path d={`M${headX - u * 0.45} ${headY - u * 0.25} Q${headX} ${headY - u * 0.65} ${headX + u * 0.45} ${headY - u * 0.25} L${headX + u * 0.42} ${headY - u * 0.1} L${headX - u * 0.42} ${headY - u * 0.1} Z`} fill="#e8e2d2" />
       {/* boy (back view): thighs over the shoulders, torso, head, pointing arm */}
       {k <= 0.5 && <g>{limb([hipX - cu * 0.3, hipY], [hipX - cu * 0.4, hipY + cu * 0.9], [hipX - cu * 0.3, hipY + cu * 1.7], cu * 0.3, '#5a4a3a')}{limb([hipX + cu * 0.3, hipY], [hipX + cu * 0.5, hipY + cu * 0.8], [hipX + cu * 0.4, hipY + cu * 1.6], cu * 0.3, '#5a4a3a')}</g>}
       {k > 0.5 && <g>{limb([hipX - cu * 0.45, hipY + cu * 0.1], [kneeL[0], kneeL[1]], kneeL, cu * 0.34, '#5a4a3a')}{limb([hipX + cu * 0.45, hipY + cu * 0.1], [kneeR[0], kneeR[1]], kneeR, cu * 0.34, '#5a4a3a')}</g>}
@@ -215,6 +211,10 @@ export const ShoulderRide: React.FC<{ x: number; y: number; h: number; lift: num
       <ellipse cx={hipX - cu * (1.0 + 1.5 * point)} cy={bShY + cu * (1.3 - 2.0 * point)} rx={cu * 0.14} ry={cu * 0.12} fill={skin} />
       <rect x={hipX - cu * 0.13} y={bShY - cu * 0.3} width={cu * 0.26} height={cu * 0.35} fill={skin} />
       <ellipse cx={hipX - cu * 0.05} cy={bShY - cu * 0.62} rx={cu * 0.5} ry={cu * 0.56} fill="#1d1a1a" />
+      <rect x={headX - u * 0.15} y={shY - u * 0.3} width={u * 0.3} height={u * 0.35} fill={skin} />
+      <ellipse cx={headX} cy={headY} rx={u * 0.42} ry={u * 0.5} fill="#1d1a1a" />
+      <ellipse cx={headX - u * 0.36} cy={headY + u * 0.05} rx={u * 0.08} ry={u * 0.14} fill={skin} />
+      <path d={`M${headX - u * 0.45} ${headY - u * 0.25} Q${headX} ${headY - u * 0.65} ${headX + u * 0.45} ${headY - u * 0.25} L${headX + u * 0.42} ${headY - u * 0.1} L${headX - u * 0.42} ${headY - u * 0.1} Z`} fill="#e8e2d2" />
     </g>
   );
 };
