@@ -195,5 +195,61 @@
    "fiction": "The two friends, the father and son, the soldiers without flags, the camp, the distant city. Violence implied only."
   },
   "credits": "VO ai33 eleven_v3 (Brian), word timing from the ai33 transcript · original synthesised score · SFX reused + synthesised"
+ },
+ {
+  "chapter": 8,
+  "id": "ep08",
+  "title": "The Refuge",
+  "phase": "Stage 4 · The awaited leader & the great war",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "1:02",
+  "video": "media/ep08.mp4",
+  "cover": "media/ep08-cover.jpg",
+  "logline": "An army marches into the desert to kill one man, and the desert swallows it. The faceless giver never claimed to be the promised one. He ran, to the Sacred House.",
+  "quote": {
+   "text": "A seeker of refuge would seek refuge in the Sacred House and an army would be sent to him, and when it would enter a plain ground, it would be made to sink.",
+   "source": "Sahih Muslim 2882"
+  },
+  "vo": "An army marched into the desert to kill one man.\nThe desert swallowed it.\nWeeks earlier, he was just a man in a quiet city, giving away gold without counting.\nPeople began to whisper that he was the one the Prophet had promised.\nA man from the Prophet's own family, who would fill the earth with justice... as it had been filled with oppression.\nHe never claimed it. He ran.\nHe fled to the one place no army should ever touch: the Sacred House in Mecca.\nBut the men who feared him sent an army after him.\nSoldiers, trucks, armour. A column longer than the horizon.\nFourteen centuries ago, the Prophet said a man would seek refuge in the House, an army would be sent against him, and when it reached open ground, the earth would swallow it.\nThen the sand began to tremble.\nAnd the ground opened.\nBy morning, there was only flat sand... and tire tracks that led nowhere.\nIn Mecca, a hundred thousand hands reached toward the man who had run.\nAnd far to the north, an empire signed a peace treaty it never meant to keep.",
+  "caption": "An army marched into the desert to kill one man. The desert swallowed it.\n\nChapter 8 of THE LAST DAYS. Follow for Chapter 9.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "A seeker of refuge in the Sacred House, an army sent against him, swallowed on open ground: Sahih Muslim 2882 (quoted on screen, Siddiqi translation)",
+   "A man from the Prophet's family who will fill the earth with justice as it was filled with oppression: Sunan Abi Dawud 4282 (hasan sahih per al-Albani; paraphrased)"
+  ],
+  "classification": {
+   "canonical": "The army swallowed by the earth on its way to the one who sought refuge at the House; a man from the Prophet's family who fills the earth with justice.",
+   "interpretation": "Identifying the one who seeks refuge (Muslim 2882) and the giver (Muslim 2913) with the awaited leader; the word 'Mahdi' is not used.",
+   "fiction": "The cities, the market, the barricade, the dark room, the army's size, the tire tracks, the hands, the treaty in the north. The House itself is not depicted."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), word timing from the ai33 transcript · original synthesised score · SFX reused + synthesised"
+ },
+ {
+  "chapter": 9,
+  "id": "ep09",
+  "title": "Eighty Banners",
+  "phase": "Stage 4 · The awaited leader & the great war",
+  "status": "final",
+  "status_label": "Final · not yet posted",
+  "duration": "1:09",
+  "video": "media/ep09.mp4",
+  "cover": "media/ep09-cover.jpg",
+  "logline": "Eighty banners, twelve thousand under each. It began with a handshake: years of peace, a shared victory, a quarrel, a burned treaty, and a million men marching under one broken promise.",
+  "quote": {
+   "text": "Then there will be a truce between you and Bani Al-Asfar who will betray you and attack you under eighty flags. Under each flag will be twelve thousand soldiers.",
+   "source": "Sahih al-Bukhari 3176"
+  },
+  "vo": "Eighty banners. Under each one, twelve thousand soldiers.\nNearly a million men, marching under one broken promise.\nIt began with a handshake.\nA truce between the believers and the Romans, exactly as the Prophet had foretold.\nFor years, it held. Ports opened. Markets filled. Children grew up without ever hearing a siren.\nTogether, they even marched against a common enemy... and won.\nBut on the day of victory, a quarrel broke out over whose victory it was.\nWithin a week, the treaty was ash.\nThe same ports that had sold them fruit now filled with their warships.\nThe Prophet had said there would be a truce with the Romans. They would betray it, and come under eighty banners, under each banner twelve thousand.\nIn every city, men answered the call. Farmers. Teachers. Boys too young to shave.\nSchools emptied. Factories fell silent. On every street, a mother stood at a window.\nThey drove north through the night, toward a valley none of them had ever seen.\nAnd at dawn, the two armies faced each other, at a place the Prophet had named fourteen centuries before.",
+  "caption": "Eighty banners. Under each one, twelve thousand soldiers.\n\nChapter 9 of THE LAST DAYS. Follow for Chapter 10.\n\n#endtimes #islam #signsofthehour",
+  "sources": [
+   "A truce with Bani al-Asfar, betrayal, eighty flags with twelve thousand under each: Sahih al-Bukhari 3176 (quoted on screen, Khan translation); Ibn Majah 4095",
+   "Peace with the Romans, a joint victory over a common enemy, then the truce broken: Sunan Abi Dawud 4292 (sahih; summarised)"
+  ],
+  "classification": {
+   "canonical": "The truce with the Romans, its betrayal, eighty banners of twelve thousand; a joint campaign before the betrayal.",
+   "interpretation": "The quarrel over the victory summarises Abu Dawud 4292 (the cross detail is deliberately not shown); the battlefield the Prophet named (Muslim 2897) is not named; 'the Romans' are not mapped to any modern nation; placing this after Chapter 8 is a dramatic choice.",
+   "fiction": "The handshake, the square, the port, the camp quarrel, the burned treaty, the warships, the volunteer and his mother, the empty classroom, the convoy."
+  },
+  "credits": "VO ai33 eleven_v3 (Brian), word timing from the ai33 transcript · original synthesised score · SFX reused + synthesised"
  }
 ]
