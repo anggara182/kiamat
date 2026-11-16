@@ -1,0 +1,1492 @@
+{
+ "id": "EP07",
+ "title": "Ninety-Nine",
+ "series": "The Last Days",
+ "chapter": 7,
+ "quote": {
+  "text": "The Last Hour would not come before the Euphrates uncovers a mountain of gold, for which people would fight.",
+  "source": "SAHIH MUSLIM 2894",
+  "fromShot": 11,
+  "toShot": 11
+ },
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 60.282,
+ "accent": "#d9a441",
+ "audio": true,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 2.791,
+   "act": 1,
+   "set": "goldfield",
+   "owner": "C",
+   "framing": "HOOK. Wide: night; a sea of thousands of lamps and torches covering a mountain of gold rising from the riverbed; in the foreground a man (30s, sweat, torn shirt) grips a shovel, breathing hard",
+   "camera": "Slow push-in past the man toward the gold",
+   "vo": "Ninety-nine out of every hundred will die for it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Ninety-nine",
+     "highlight": false,
+     "start": 0.291,
+     "end": 0.873
+    },
+    {
+     "text": "out",
+     "highlight": false,
+     "start": 0.927,
+     "end": 1.0
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 1.036,
+     "end": 1.109
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 1.164,
+     "end": 1.309
+    },
+    {
+     "text": "hundred",
+     "highlight": false,
+     "start": 1.382,
+     "end": 1.691
+    },
+    {
+     "text": "will",
+     "highlight": false,
+     "start": 1.745,
+     "end": 1.891
+    },
+    {
+     "text": "die",
+     "highlight": true,
+     "start": 1.927,
+     "end": 2.145
+    },
+    {
+     "text": "for",
+     "highlight": false,
+     "start": 2.182,
+     "end": 2.309
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 2.364,
+     "end": 2.473
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The sea of lights on the gold, the man's grip",
+   "notes": "Alive from frame 0 (lamps flicker, his chest heaving). Grip tightens on \"die\".",
+   "sync": [
+    "die"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 2.791,
+   "end": 5.591,
+   "act": 1,
+   "set": "goldfield",
+   "owner": "C",
+   "framing": "Close: the same man's face (simple), gold light reflected in his eyes; he swallows, then a small determined smile",
+   "camera": "Slow push-in",
+   "vo": "And every one of them believes he'll be the one who survives.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 2.891,
+     "end": 2.982
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 3.036,
+     "end": 3.182
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 3.291,
+     "end": 3.364
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 3.4,
+     "end": 3.473
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 3.509,
+     "end": 3.654
+    },
+    {
+     "text": "believes",
+     "highlight": false,
+     "start": 3.673,
+     "end": 4.0
+    },
+    {
+     "text": "he'll",
+     "highlight": false,
+     "start": 4.036,
+     "end": 4.164
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 4.182,
+     "end": 4.273
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 4.309,
+     "end": 4.364
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 4.436,
+     "end": 4.527
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 4.564,
+     "end": 4.655
+    },
+    {
+     "text": "survives.",
+     "highlight": true,
+     "start": 4.691,
+     "end": 5.218
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Gold reflected in his eyes",
+   "notes": "The smile on \"survives\".",
+   "sync": [
+    "survives"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 5.591,
+   "end": 10.609,
+   "act": 1,
+   "set": "farcity",
+   "owner": "P",
+   "framing": "Wide: dusty roads converging on the river; trucks overloaded with people, a donkey cart, a family walking with shovels on their shoulders, a grandmother carried on a chair",
+   "camera": "Slow lateral track",
+   "vo": "They came from every direction. Trucks, carts, whole families carrying shovels.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "They",
+     "highlight": false,
+     "start": 5.691,
+     "end": 5.8
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 5.855,
+     "end": 6.055
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 6.091,
+     "end": 6.2
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 6.255,
+     "end": 6.382
+    },
+    {
+     "text": "direction.",
+     "highlight": false,
+     "start": 6.436,
+     "end": 6.891
+    },
+    {
+     "text": "Trucks,",
+     "highlight": false,
+     "start": 7.418,
+     "end": 7.745
+    },
+    {
+     "text": "carts,",
+     "highlight": false,
+     "start": 8.091,
+     "end": 8.418
+    },
+    {
+     "text": "whole",
+     "highlight": false,
+     "start": 8.818,
+     "end": 8.945
+    },
+    {
+     "text": "families",
+     "highlight": false,
+     "start": 9.073,
+     "end": 9.491
+    },
+    {
+     "text": "carrying",
+     "highlight": false,
+     "start": 9.545,
+     "end": 9.8
+    },
+    {
+     "text": "shovels.",
+     "highlight": true,
+     "start": 9.891,
+     "end": 10.291
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Families with shovels",
+   "notes": "Shovels lift onto shoulders on \"shovels\".",
+   "sync": [
+    "shovels"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 10.609,
+   "end": 15.573,
+   "act": 1,
+   "set": "dig",
+   "owner": "S",
+   "framing": "Medium: two men (one tall in a cap, one stocky with a beard) digging side by side in a pit of gold-flecked mud; the tall one passes a water bottle and they both laugh",
+   "camera": "Static, slight drift",
+   "vo": "Two friends from the same street dug side by side. On the first day, they shared their water.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Two",
+     "highlight": false,
+     "start": 10.709,
+     "end": 10.818
+    },
+    {
+     "text": "friends",
+     "highlight": false,
+     "start": 10.945,
+     "end": 11.273
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 11.309,
+     "end": 11.418
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 11.455,
+     "end": 11.545
+    },
+    {
+     "text": "same",
+     "highlight": false,
+     "start": 11.6,
+     "end": 11.782
+    },
+    {
+     "text": "street",
+     "highlight": false,
+     "start": 11.891,
+     "end": 12.145
+    },
+    {
+     "text": "dug",
+     "highlight": false,
+     "start": 12.255,
+     "end": 12.418
+    },
+    {
+     "text": "side",
+     "highlight": false,
+     "start": 12.527,
+     "end": 12.745
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 12.782,
+     "end": 12.945
+    },
+    {
+     "text": "side.",
+     "highlight": false,
+     "start": 13.0,
+     "end": 13.327
+    },
+    {
+     "text": "On",
+     "highlight": false,
+     "start": 13.673,
+     "end": 13.727
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 13.764,
+     "end": 13.836
+    },
+    {
+     "text": "first",
+     "highlight": false,
+     "start": 13.873,
+     "end": 14.055
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 14.127,
+     "end": 14.345
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 14.436,
+     "end": 14.564
+    },
+    {
+     "text": "shared",
+     "highlight": false,
+     "start": 14.617,
+     "end": 14.818
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 14.855,
+     "end": 14.982
+    },
+    {
+     "text": "water.",
+     "highlight": true,
+     "start": 15.018,
+     "end": 15.291
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The bottle passed between them",
+   "notes": "Bottle handed over on \"water\".",
+   "sync": [
+    "water"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 15.573,
+   "end": 18.264,
+   "act": 1,
+   "set": "dig",
+   "owner": "S",
+   "framing": "Medium: the same two men, a rope pegged tight on the ground between them; each digs only on his side, glancing at the other",
+   "camera": "Slow push-in",
+   "vo": "On the second day, they marked their ground with rope.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "On",
+     "highlight": false,
+     "start": 15.673,
+     "end": 15.727
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 15.764,
+     "end": 15.836
+    },
+    {
+     "text": "second",
+     "highlight": false,
+     "start": 15.891,
+     "end": 16.109
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 16.2,
+     "end": 16.382
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 16.545,
+     "end": 16.655
+    },
+    {
+     "text": "marked",
+     "highlight": false,
+     "start": 16.709,
+     "end": 16.909
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 16.927,
+     "end": 17.073
+    },
+    {
+     "text": "ground",
+     "highlight": false,
+     "start": 17.109,
+     "end": 17.364
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 17.4,
+     "end": 17.527
+    },
+    {
+     "text": "rope.",
+     "highlight": true,
+     "start": 17.582,
+     "end": 17.836
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The rope between them, suspicious glances",
+   "notes": "The peg is hammered in on \"rope\".",
+   "sync": [
+    "rope"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 18.264,
+   "end": 20.791,
+   "act": 1,
+   "set": "dig",
+   "owner": "S",
+   "framing": "Wide: dawn; one man (the stocky one) walks up the bank alone, carrying TWO shovels over his shoulder, not looking back; the pit behind him empty",
+   "camera": "Static, long lens",
+   "vo": "On the third day, only one of them came back.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "On",
+     "highlight": false,
+     "start": 18.364,
+     "end": 18.418
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 18.455,
+     "end": 18.545
+    },
+    {
+     "text": "third",
+     "highlight": false,
+     "start": 18.582,
+     "end": 18.8
+    },
+    {
+     "text": "day,",
+     "highlight": false,
+     "start": 18.855,
+     "end": 19.055
+    },
+    {
+     "text": "only",
+     "highlight": false,
+     "start": 19.291,
+     "end": 19.473
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 19.545,
+     "end": 19.6
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 19.636,
+     "end": 19.709
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 19.727,
+     "end": 19.873
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 19.909,
+     "end": 20.091
+    },
+    {
+     "text": "back.",
+     "highlight": true,
+     "start": 20.127,
+     "end": 20.382
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Two shovels, one man",
+   "notes": "Implied only: no body, no blood. He reaches the top on \"back\".",
+   "sync": [
+    "back"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 20.791,
+   "end": 24.264,
+   "act": 1,
+   "set": "camp",
+   "owner": "H",
+   "framing": "Medium: inside a tent camp; a father and his grown son each with one hand on the same small gold block on a blanket, neither letting go, staring at each other",
+   "camera": "Slow push-in between them",
+   "vo": "Fathers stopped trusting their sons. Brothers stopped speaking.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Fathers",
+     "highlight": false,
+     "start": 20.891,
+     "end": 21.255
+    },
+    {
+     "text": "stopped",
+     "highlight": false,
+     "start": 21.327,
+     "end": 21.564
+    },
+    {
+     "text": "trusting",
+     "highlight": false,
+     "start": 21.618,
+     "end": 21.927
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 21.945,
+     "end": 22.055
+    },
+    {
+     "text": "sons.",
+     "highlight": false,
+     "start": 22.145,
+     "end": 22.509
+    },
+    {
+     "text": "Brothers",
+     "highlight": false,
+     "start": 22.964,
+     "end": 23.273
+    },
+    {
+     "text": "stopped",
+     "highlight": false,
+     "start": 23.327,
+     "end": 23.564
+    },
+    {
+     "text": "speaking.",
+     "highlight": true,
+     "start": 23.636,
+     "end": 23.982
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Two hands on one block",
+   "notes": "Neither moves; the son's jaw tightens on \"speaking\".",
+   "sync": [
+    "sons",
+    "speaking"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 24.264,
+   "end": 28.009,
+   "act": 1,
+   "set": "goldfield",
+   "owner": "C",
+   "framing": "Extreme wide: lines of generic armed men in plain uniforms (no flags, no insignia) in trucks fence the gold; on the far side two lines clash in dust and distant flashes (silhouettes only)",
+   "camera": "Slow push-in",
+   "vo": "Then the soldiers came to guard the gold. And the soldiers fought each other.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 24.364,
+     "end": 24.491
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.527,
+     "end": 24.618
+    },
+    {
+     "text": "soldiers",
+     "highlight": false,
+     "start": 24.673,
+     "end": 25.0
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 25.091,
+     "end": 25.273
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 25.309,
+     "end": 25.382
+    },
+    {
+     "text": "guard",
+     "highlight": false,
+     "start": 25.418,
+     "end": 25.6
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 25.618,
+     "end": 25.691
+    },
+    {
+     "text": "gold.",
+     "highlight": false,
+     "start": 25.727,
+     "end": 26.018
+    },
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 26.436,
+     "end": 26.509
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 26.545,
+     "end": 26.636
+    },
+    {
+     "text": "soldiers",
+     "highlight": false,
+     "start": 26.673,
+     "end": 27.018
+    },
+    {
+     "text": "fought",
+     "highlight": false,
+     "start": 27.127,
+     "end": 27.273
+    },
+    {
+     "text": "each",
+     "highlight": false,
+     "start": 27.309,
+     "end": 27.436
+    },
+    {
+     "text": "other.",
+     "highlight": true,
+     "start": 27.509,
+     "end": 27.673
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Two lines clashing in dust",
+   "notes": "No gore, no bodies; flash on \"other\".",
+   "sync": [
+    "soldiers",
+    "other"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 28.009,
+   "end": 30.645,
+   "act": 1,
+   "set": "camp",
+   "owner": "H",
+   "framing": "Wide: the tent camp at night; lanterns go out one by one; an empty tent flap moves in the wind",
+   "camera": "Slow drift",
+   "vo": "Every night, the camp grew a little quieter.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Every",
+     "highlight": false,
+     "start": 28.109,
+     "end": 28.291
+    },
+    {
+     "text": "night,",
+     "highlight": false,
+     "start": 28.364,
+     "end": 28.582
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 28.927,
+     "end": 29.0
+    },
+    {
+     "text": "camp",
+     "highlight": false,
+     "start": 29.055,
+     "end": 29.255
+    },
+    {
+     "text": "grew",
+     "highlight": false,
+     "start": 29.345,
+     "end": 29.49
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 29.545,
+     "end": 29.582
+    },
+    {
+     "text": "little",
+     "highlight": false,
+     "start": 29.618,
+     "end": 29.8
+    },
+    {
+     "text": "quieter.",
+     "highlight": true,
+     "start": 29.855,
+     "end": 30.236
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Lanterns going out",
+   "notes": "Last lantern in the row dies on \"quieter\".",
+   "sync": [
+    "quieter"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 30.645,
+   "end": 34.445,
+   "act": 1,
+   "set": "camp",
+   "owner": "H",
+   "framing": "Medium-low: dawn; a row of pairs of sandals outside empty tents, shovels stuck in the sand; a thin dog sniffs the sandals",
+   "camera": "Low lateral track",
+   "vo": "Sandals left at tent doors. Shovels no one came back for.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Sandals",
+     "highlight": false,
+     "start": 30.745,
+     "end": 31.145
+    },
+    {
+     "text": "left",
+     "highlight": false,
+     "start": 31.2,
+     "end": 31.382
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 31.418,
+     "end": 31.509
+    },
+    {
+     "text": "tent",
+     "highlight": false,
+     "start": 31.564,
+     "end": 31.745
+    },
+    {
+     "text": "doors.",
+     "highlight": false,
+     "start": 31.782,
+     "end": 32.145
+    },
+    {
+     "text": "Shovels",
+     "highlight": false,
+     "start": 32.582,
+     "end": 32.982
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 33.036,
+     "end": 33.164
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 33.2,
+     "end": 33.291
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 33.382,
+     "end": 33.564
+    },
+    {
+     "text": "back",
+     "highlight": false,
+     "start": 33.618,
+     "end": 33.818
+    },
+    {
+     "text": "for.",
+     "highlight": true,
+     "start": 33.873,
+     "end": 34.073
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Sandals, shovels, the dog",
+   "notes": "Implied loss only. Dog lifts its head on \"for\".",
+   "sync": [
+    "for"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 34.445,
+   "end": 40.591,
+   "act": 1,
+   "set": "goldfield",
+   "owner": "C",
+   "framing": "Extreme wide: the mountain of gold glowing at dusk-dawn, smoke drifting across it, tiny figures scattered on the slopes",
+   "camera": "Very slow push-in",
+   "vo": "Fourteen centuries ago, the Prophet said people would fight over it. And ninety-nine of every hundred would be killed.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Fourteen",
+     "highlight": false,
+     "start": 34.545,
+     "end": 34.891
+    },
+    {
+     "text": "centuries",
+     "highlight": false,
+     "start": 35.0,
+     "end": 35.345
+    },
+    {
+     "text": "ago,",
+     "highlight": false,
+     "start": 35.4,
+     "end": 35.636
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 36.0,
+     "end": 36.073
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 36.109,
+     "end": 36.418
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 36.509,
+     "end": 36.691
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 36.745,
+     "end": 36.982
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 37.0,
+     "end": 37.145
+    },
+    {
+     "text": "fight",
+     "highlight": false,
+     "start": 37.182,
+     "end": 37.345
+    },
+    {
+     "text": "over",
+     "highlight": false,
+     "start": 37.418,
+     "end": 37.582
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 37.618,
+     "end": 37.727
+    },
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 38.309,
+     "end": 38.4
+    },
+    {
+     "text": "ninety-nine",
+     "highlight": false,
+     "start": 38.455,
+     "end": 38.927
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 38.964,
+     "end": 39.036
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 39.073,
+     "end": 39.218
+    },
+    {
+     "text": "hundred",
+     "highlight": false,
+     "start": 39.309,
+     "end": 39.6
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 39.618,
+     "end": 39.727
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 39.764,
+     "end": 39.855
+    },
+    {
+     "text": "killed.",
+     "highlight": true,
+     "start": 39.909,
+     "end": 40.236
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Gold mountain in smoke",
+   "notes": "QUOTE overlay on this shot: keep the top ~15–40% dark and calm.",
+   "sync": [
+    "killed"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 40.591,
+   "end": 43.082,
+   "act": 1,
+   "set": "dig",
+   "owner": "S",
+   "framing": "Close: a trembling hand clutching a lump of gold against a chest; the eyes above it dart left and right",
+   "camera": "Slow push-in",
+   "vo": "Each one hoping... to be the one who lived.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Each",
+     "highlight": false,
+     "start": 40.691,
+     "end": 40.873
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 40.964,
+     "end": 41.073
+    },
+    {
+     "text": "hoping...",
+     "highlight": false,
+     "start": 41.127,
+     "end": 41.709
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 41.745,
+     "end": 41.818
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 41.855,
+     "end": 41.927
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 41.964,
+     "end": 42.036
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 42.091,
+     "end": 42.236
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 42.273,
+     "end": 42.382
+    },
+    {
+     "text": "lived.",
+     "highlight": true,
+     "start": 42.418,
+     "end": 42.745
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Trembling hand, darting eyes",
+   "notes": "Grip tightens on \"lived\".",
+   "sync": [
+    "lived"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 43.082,
+   "end": 47.118,
+   "act": 1,
+   "set": "goldfield",
+   "owner": "C",
+   "framing": "Wide: dawn; the gold mountain untouched and silent, abandoned shovels standing in the sand like markers, no people",
+   "camera": "Slow pull-back",
+   "vo": "When the dust settled, the gold was still there. It didn't care who owned it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "When",
+     "highlight": false,
+     "start": 43.182,
+     "end": 43.273
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 43.309,
+     "end": 43.4
+    },
+    {
+     "text": "dust",
+     "highlight": false,
+     "start": 43.436,
+     "end": 43.636
+    },
+    {
+     "text": "settled,",
+     "highlight": false,
+     "start": 43.691,
+     "end": 44.018
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 44.291,
+     "end": 44.382
+    },
+    {
+     "text": "gold",
+     "highlight": false,
+     "start": 44.436,
+     "end": 44.655
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 44.691,
+     "end": 44.8
+    },
+    {
+     "text": "still",
+     "highlight": false,
+     "start": 44.873,
+     "end": 45.055
+    },
+    {
+     "text": "there.",
+     "highlight": false,
+     "start": 45.109,
+     "end": 45.364
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 45.782,
+     "end": 45.836
+    },
+    {
+     "text": "didn't",
+     "highlight": false,
+     "start": 45.873,
+     "end": 46.073
+    },
+    {
+     "text": "care",
+     "highlight": false,
+     "start": 46.127,
+     "end": 46.327
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 46.364,
+     "end": 46.491
+    },
+    {
+     "text": "owned",
+     "highlight": true,
+     "start": 46.564,
+     "end": 46.745
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 46.782,
+     "end": 46.909
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The silent gold, the shovels",
+   "notes": "Wind lifts dust on \"owned\".",
+   "sync": [
+    "owned"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 47.118,
+   "end": 53.373,
+   "act": 1,
+   "set": "farcity",
+   "owner": "P",
+   "framing": "Medium-wide: a quiet old city street at night; a man seen ONLY FROM BEHIND (no face), backlit by a doorway, hands out cloth sacks to a long line of poor people, scooping by the handful",
+   "camera": "Slow push-in from behind him",
+   "vo": "And far from the river, in a city no one was watching, a man was giving wealth away... without even counting it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 47.218,
+     "end": 47.345
+    },
+    {
+     "text": "far",
+     "highlight": false,
+     "start": 47.382,
+     "end": 47.582
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 47.618,
+     "end": 47.727
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 47.764,
+     "end": 47.836
+    },
+    {
+     "text": "river,",
+     "highlight": false,
+     "start": 47.873,
+     "end": 48.127
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 48.582,
+     "end": 48.618
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 48.673,
+     "end": 48.727
+    },
+    {
+     "text": "city",
+     "highlight": false,
+     "start": 48.782,
+     "end": 49.018
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 49.073,
+     "end": 49.2
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 49.255,
+     "end": 49.345
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 49.4,
+     "end": 49.509
+    },
+    {
+     "text": "watching,",
+     "highlight": false,
+     "start": 49.564,
+     "end": 49.945
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 50.327,
+     "end": 50.382
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 50.436,
+     "end": 50.636
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 50.673,
+     "end": 50.782
+    },
+    {
+     "text": "giving",
+     "highlight": false,
+     "start": 50.818,
+     "end": 51.055
+    },
+    {
+     "text": "wealth",
+     "highlight": false,
+     "start": 51.091,
+     "end": 51.273
+    },
+    {
+     "text": "away...",
+     "highlight": false,
+     "start": 51.327,
+     "end": 51.618
+    },
+    {
+     "text": "without",
+     "highlight": false,
+     "start": 52.036,
+     "end": 52.273
+    },
+    {
+     "text": "even",
+     "highlight": false,
+     "start": 52.327,
+     "end": 52.509
+    },
+    {
+     "text": "counting",
+     "highlight": true,
+     "start": 52.564,
+     "end": 52.873
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 52.909,
+     "end": 53.036
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Handfuls given without counting",
+   "notes": "Faceless, backlit. Handful scooped on \"counting\".",
+   "sync": [
+    "counting"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 53.373,
+   "end": 56.082,
+   "act": 1,
+   "set": "farcity",
+   "owner": "P",
+   "framing": "Medium: two people in the line (an old woman and a young man) lean together whispering, glancing back toward the backlit doorway",
+   "camera": "Slow push-in",
+   "vo": "And people had started to whisper a name.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 53.473,
+     "end": 53.582
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 53.636,
+     "end": 53.855
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 53.891,
+     "end": 54.018
+    },
+    {
+     "text": "started",
+     "highlight": false,
+     "start": 54.073,
+     "end": 54.309
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 54.345,
+     "end": 54.436
+    },
+    {
+     "text": "whisper",
+     "highlight": false,
+     "start": 54.473,
+     "end": 54.745
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 54.8,
+     "end": 54.836
+    },
+    {
+     "text": "name.",
+     "highlight": true,
+     "start": 54.909,
+     "end": 55.182
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The whisper",
+   "notes": "CLIFFHANGER: heartbeat. The young man's eyes widen on \"name\".",
+   "sync": [
+    "name"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 56.082,
+   "end": 60.282,
+   "act": 1,
+   "set": "farcity",
+   "owner": "P",
+   "framing": "TITLE CARD: \"NINETY-NINE\" + \"CHAPTER 7 · THE LAST DAYS\" over dark smoke with a faint gold glow",
+   "camera": "Static, tiny push",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "Title",
+   "notes": "Deep bass drop on the cut.",
+   "sync": []
+  }
+ ],
+ "timingSource": "ai33 eleven_v3 transcript, gaps>0.9s cut to 0.5s, atempo x1.1, gaps>0.9s cut to 0.5s (0), atempo x1.1"
+}

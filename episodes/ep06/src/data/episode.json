@@ -1,0 +1,1641 @@
+{
+ "id": "EP06",
+ "title": "The River Runs Dry",
+ "series": "The Last Days",
+ "chapter": 6,
+ "quote": {
+  "text": "Soon the river Euphrates will disclose the treasure (the mountain) of gold, so whoever will be present at that time should not take anything of it.",
+  "source": "SAHIH AL-BUKHARI 7119",
+  "fromShot": 11,
+  "toShot": 11
+ },
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 68.082,
+ "accent": "#d9a441",
+ "audio": true,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 3.118,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "HOOK (flash-forward). Wide: a dry, cracked riverbed between high banks; THOUSANDS of small silhouettes line both banks, all frozen, staring at one tiny golden glint in the mud at centre; a man in the foreground lifts a boy onto his shoulders",
+   "camera": "Very slow push-in toward the glint",
+   "vo": "The Euphrates had flowed for ten thousand years.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 0.236,
+     "end": 0.291
+    },
+    {
+     "text": "Euphrates",
+     "highlight": true,
+     "start": 0.327,
+     "end": 0.836
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 0.873,
+     "end": 1.018
+    },
+    {
+     "text": "flowed",
+     "highlight": false,
+     "start": 1.091,
+     "end": 1.4
+    },
+    {
+     "text": "for",
+     "highlight": false,
+     "start": 1.436,
+     "end": 1.582
+    },
+    {
+     "text": "ten",
+     "highlight": false,
+     "start": 1.636,
+     "end": 1.8
+    },
+    {
+     "text": "thousand",
+     "highlight": false,
+     "start": 1.873,
+     "end": 2.218
+    },
+    {
+     "text": "years.",
+     "highlight": false,
+     "start": 2.309,
+     "end": 2.655
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The crowd staring, the glint pulsing",
+   "notes": "Alive from frame 0: dust drifting, people shifting weight, heat haze. The glint flares on \"Euphrates\".",
+   "sync": [
+    "Euphrates"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 3.118,
+   "end": 5.282,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Medium: an old fisherman (70s, grey stubble, rolled trousers) pushes his wooden boat into the river, but there is no water: the hull scrapes on cracked mud and stops dead",
+   "camera": "Handheld follow, then stop",
+   "vo": "Then, in one summer, it stopped.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then,",
+     "highlight": false,
+     "start": 3.218,
+     "end": 3.436
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 3.6,
+     "end": 3.69
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 3.782,
+     "end": 3.873
+    },
+    {
+     "text": "summer,",
+     "highlight": false,
+     "start": 4.018,
+     "end": 4.218
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 4.327,
+     "end": 4.418
+    },
+    {
+     "text": "stopped.",
+     "highlight": true,
+     "start": 4.491,
+     "end": 4.855
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "His shoulders shoving, the hull jolting to a halt",
+   "notes": "Hull halts on \"stopped\"; he straightens and stares down the empty riverbed.",
+   "sync": [
+    "stopped"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 5.282,
+   "end": 7.082,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "Wide: a row of painted wooden boats stranded on cracked mud, tilted; a young boatman jumps down from one, his feet crack the crust",
+   "camera": "Slow lateral track along the boats",
+   "vo": "First, the boats sat on the mud.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "First,",
+     "highlight": false,
+     "start": 5.382,
+     "end": 5.582
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 5.673,
+     "end": 5.745
+    },
+    {
+     "text": "boats",
+     "highlight": false,
+     "start": 5.782,
+     "end": 5.982
+    },
+    {
+     "text": "sat",
+     "highlight": false,
+     "start": 6.055,
+     "end": 6.2
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 6.236,
+     "end": 6.309
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 6.345,
+     "end": 6.4
+    },
+    {
+     "text": "mud.",
+     "highlight": true,
+     "start": 6.455,
+     "end": 6.709
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The jump and the crust cracking",
+   "notes": "Feet land on \"mud\" (a puff of dust, cracks spread).",
+   "sync": [
+    "mud"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 7.082,
+   "end": 10.118,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Medium-low: a shrinking pool full of silver fish flopping; two kids with buckets stand at its edge not knowing where to start",
+   "camera": "Low push-in at mud level",
+   "vo": "Then the fish came up gasping, by the thousands.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 7.182,
+     "end": 7.308
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 7.345,
+     "end": 7.436
+    },
+    {
+     "text": "fish",
+     "highlight": false,
+     "start": 7.491,
+     "end": 7.673
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 7.764,
+     "end": 7.909
+    },
+    {
+     "text": "up",
+     "highlight": false,
+     "start": 7.964,
+     "end": 8.073
+    },
+    {
+     "text": "gasping,",
+     "highlight": false,
+     "start": 8.127,
+     "end": 8.582
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 9.0,
+     "end": 9.091
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 9.145,
+     "end": 9.218
+    },
+    {
+     "text": "thousands.",
+     "highlight": true,
+     "start": 9.273,
+     "end": 9.8
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Silver fish flashing, the kids frozen with buckets",
+   "notes": "On \"thousands\" reveal how far the fish carpet goes (camera rises).",
+   "sync": [
+    "thousands"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 10.118,
+   "end": 14.1,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: a family loads a pickup truck: a father heaves a rolled mattress, a mother ties a rope over pots and a bicycle, a girl carries a caged hen; a dry hand-pump well in the foreground",
+   "camera": "Slow pull-back",
+   "vo": "The wells went dry. Whole villages loaded their lives onto trucks.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 10.218,
+     "end": 10.309
+    },
+    {
+     "text": "wells",
+     "highlight": false,
+     "start": 10.345,
+     "end": 10.618
+    },
+    {
+     "text": "went",
+     "highlight": false,
+     "start": 10.655,
+     "end": 10.818
+    },
+    {
+     "text": "dry.",
+     "highlight": false,
+     "start": 10.873,
+     "end": 11.2
+    },
+    {
+     "text": "Whole",
+     "highlight": false,
+     "start": 11.655,
+     "end": 11.8
+    },
+    {
+     "text": "villages",
+     "highlight": false,
+     "start": 11.891,
+     "end": 12.309
+    },
+    {
+     "text": "loaded",
+     "highlight": false,
+     "start": 12.364,
+     "end": 12.582
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 12.618,
+     "end": 12.745
+    },
+    {
+     "text": "lives",
+     "highlight": false,
+     "start": 12.782,
+     "end": 13.073
+    },
+    {
+     "text": "onto",
+     "highlight": false,
+     "start": 13.127,
+     "end": 13.327
+    },
+    {
+     "text": "trucks.",
+     "highlight": true,
+     "start": 13.382,
+     "end": 13.745
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Dry pump handle, father heaving the mattress",
+   "notes": "Pump handle squeaks dry on \"dry\"; rope pulled tight on \"trucks\".",
+   "sync": [
+    "dry",
+    "trucks"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 14.1,
+   "end": 16.718,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: a water tanker truck mobbed by hands holding jerrycans; a labourer (40s, cement dust on his clothes) empties all his coins into the driver's palm for one can",
+   "camera": "Slow push-in on the hands",
+   "vo": "A can of water cost more than a day's work.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 14.2,
+     "end": 14.255
+    },
+    {
+     "text": "can",
+     "highlight": false,
+     "start": 14.309,
+     "end": 14.455
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 14.509,
+     "end": 14.599
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 14.636,
+     "end": 14.855
+    },
+    {
+     "text": "cost",
+     "highlight": false,
+     "start": 14.964,
+     "end": 15.218
+    },
+    {
+     "text": "more",
+     "highlight": false,
+     "start": 15.273,
+     "end": 15.4
+    },
+    {
+     "text": "than",
+     "highlight": false,
+     "start": 15.436,
+     "end": 15.509
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 15.564,
+     "end": 15.618
+    },
+    {
+     "text": "day's",
+     "highlight": false,
+     "start": 15.673,
+     "end": 15.927
+    },
+    {
+     "text": "work.",
+     "highlight": true,
+     "start": 15.982,
+     "end": 16.255
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Coins pouring into the palm",
+   "notes": "Last coin drops on \"work\"; the driver hands one can down.",
+   "sync": [
+    "work"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 16.718,
+   "end": 19.718,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "Aerial wide: a vast desert; the river reduced to a thin brown thread winding through a broad pale scar of its old bed; tiny trucks crawl along the road beside it",
+   "camera": "High, slow drift downward",
+   "vo": "And the great river shrank to a thin brown thread.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 16.818,
+     "end": 16.891
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 16.927,
+     "end": 16.982
+    },
+    {
+     "text": "great",
+     "highlight": false,
+     "start": 17.036,
+     "end": 17.273
+    },
+    {
+     "text": "river",
+     "highlight": false,
+     "start": 17.309,
+     "end": 17.509
+    },
+    {
+     "text": "shrank",
+     "highlight": false,
+     "start": 17.636,
+     "end": 18.018
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 18.073,
+     "end": 18.145
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 18.2,
+     "end": 18.291
+    },
+    {
+     "text": "thin",
+     "highlight": false,
+     "start": 18.364,
+     "end": 18.6
+    },
+    {
+     "text": "brown",
+     "highlight": false,
+     "start": 18.655,
+     "end": 18.927
+    },
+    {
+     "text": "thread.",
+     "highlight": true,
+     "start": 18.982,
+     "end": 19.364
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The thread of water",
+   "notes": "On \"thread\" the last shimmer of water thins (subtle animation of the line).",
+   "sync": [
+    "thread"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 19.718,
+   "end": 24.464,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Medium: a farmer (50s, headcloth) kneels in a cracked, dead field and crumbles a dry stalk in his fist; the dust blows away; his young son stands behind with an empty bucket",
+   "camera": "Slow push-in",
+   "vo": "In the cities, water came by the cupful. In the fields, nothing grew.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "In",
+     "highlight": false,
+     "start": 19.818,
+     "end": 19.873
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 19.909,
+     "end": 20.0
+    },
+    {
+     "text": "cities,",
+     "highlight": false,
+     "start": 20.073,
+     "end": 20.455
+    },
+    {
+     "text": "water",
+     "highlight": false,
+     "start": 20.764,
+     "end": 21.055
+    },
+    {
+     "text": "came",
+     "highlight": false,
+     "start": 21.109,
+     "end": 21.291
+    },
+    {
+     "text": "by",
+     "highlight": false,
+     "start": 21.327,
+     "end": 21.418
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 21.455,
+     "end": 21.527
+    },
+    {
+     "text": "cupful.",
+     "highlight": false,
+     "start": 21.582,
+     "end": 22.018
+    },
+    {
+     "text": "In",
+     "highlight": false,
+     "start": 22.455,
+     "end": 22.509
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 22.545,
+     "end": 22.636
+    },
+    {
+     "text": "fields,",
+     "highlight": false,
+     "start": 22.709,
+     "end": 23.091
+    },
+    {
+     "text": "nothing",
+     "highlight": false,
+     "start": 23.4,
+     "end": 23.673
+    },
+    {
+     "text": "grew.",
+     "highlight": true,
+     "start": 23.727,
+     "end": 24.036
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The stalk crumbling to dust",
+   "notes": "Dust blows off his palm on \"grew\".",
+   "sync": [
+    "grew"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 24.464,
+   "end": 26.573,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: a shaded courtyard; an old man (80s, white beard, simple white cap) with prayer beads; the beads stop; he slowly lifts his eyes toward the river",
+   "camera": "Slow push-in to his face",
+   "vo": "And the old men began to remember.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 24.564,
+     "end": 24.636
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.673,
+     "end": 24.764
+    },
+    {
+     "text": "old",
+     "highlight": false,
+     "start": 24.855,
+     "end": 25.018
+    },
+    {
+     "text": "men",
+     "highlight": false,
+     "start": 25.073,
+     "end": 25.273
+    },
+    {
+     "text": "began",
+     "highlight": false,
+     "start": 25.309,
+     "end": 25.6
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 25.636,
+     "end": 25.709
+    },
+    {
+     "text": "remember.",
+     "highlight": true,
+     "start": 25.745,
+     "end": 26.182
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Beads stopping, eyes lifting",
+   "notes": "Beads stop on \"remember\".",
+   "sync": [
+    "remember"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 26.573,
+   "end": 32.009,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: night, lamplight; the old man speaks to three grandchildren sitting close; his hands trace the shape of a mountain in the air",
+   "camera": "Slow push-in",
+   "vo": "Fourteen centuries ago, the Prophet said this river would one day uncover a mountain of gold.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Fourteen",
+     "highlight": false,
+     "start": 26.673,
+     "end": 27.018
+    },
+    {
+     "text": "centuries",
+     "highlight": false,
+     "start": 27.145,
+     "end": 27.527
+    },
+    {
+     "text": "ago,",
+     "highlight": false,
+     "start": 27.582,
+     "end": 27.855
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 28.273,
+     "end": 28.364
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 28.4,
+     "end": 28.745
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 28.818,
+     "end": 28.982
+    },
+    {
+     "text": "this",
+     "highlight": false,
+     "start": 29.036,
+     "end": 29.199
+    },
+    {
+     "text": "river",
+     "highlight": false,
+     "start": 29.255,
+     "end": 29.545
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 29.564,
+     "end": 29.709
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 29.8,
+     "end": 29.891
+    },
+    {
+     "text": "day",
+     "highlight": false,
+     "start": 29.964,
+     "end": 30.145
+    },
+    {
+     "text": "uncover",
+     "highlight": false,
+     "start": 30.2,
+     "end": 30.6
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 30.655,
+     "end": 30.709
+    },
+    {
+     "text": "mountain",
+     "highlight": false,
+     "start": 30.764,
+     "end": 31.0
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 31.055,
+     "end": 31.145
+    },
+    {
+     "text": "gold.",
+     "highlight": true,
+     "start": 31.2,
+     "end": 31.527
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "His hands shaping a mountain, kids leaning in",
+   "notes": "Hands peak on \"gold\"; lamp flickers.",
+   "sync": [
+    "gold"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 32.009,
+   "end": 36.155,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "Wide: the empty dry riverbed under a deep night sky, moonlight on the cracks; one lone figure (the old man) stands small on the bank looking down at it",
+   "camera": "Very slow push-in",
+   "vo": "And he left one warning: whoever is there should take nothing from it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 32.109,
+     "end": 32.164
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 32.2,
+     "end": 32.273
+    },
+    {
+     "text": "left",
+     "highlight": false,
+     "start": 32.309,
+     "end": 32.527
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 32.618,
+     "end": 32.709
+    },
+    {
+     "text": "warning:",
+     "highlight": false,
+     "start": 32.818,
+     "end": 33.145
+    },
+    {
+     "text": "whoever",
+     "highlight": false,
+     "start": 33.6,
+     "end": 33.909
+    },
+    {
+     "text": "is",
+     "highlight": false,
+     "start": 33.964,
+     "end": 34.073
+    },
+    {
+     "text": "there",
+     "highlight": false,
+     "start": 34.127,
+     "end": 34.527
+    },
+    {
+     "text": "should",
+     "highlight": false,
+     "start": 34.6,
+     "end": 34.745
+    },
+    {
+     "text": "take",
+     "highlight": false,
+     "start": 34.8,
+     "end": 34.964
+    },
+    {
+     "text": "nothing",
+     "highlight": true,
+     "start": 35.018,
+     "end": 35.309
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 35.345,
+     "end": 35.509
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 35.545,
+     "end": 35.673
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Moonlit cracks, the lone figure",
+   "notes": "QUOTE overlay on this shot: keep the top ~15–40% dark and calm. The figure turns away on \"nothing\".",
+   "sync": [
+    "nothing"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 36.155,
+   "end": 37.536,
+   "act": 1,
+   "set": "village",
+   "owner": "H",
+   "framing": "Medium: young men at a roadside tea stall; one mimics the old man's mountain gesture, the others burst out laughing, slapping the table",
+   "camera": "Static, slight drift",
+   "vo": "Most people laughed.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Most",
+     "highlight": false,
+     "start": 36.255,
+     "end": 36.436
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 36.473,
+     "end": 36.673
+    },
+    {
+     "text": "laughed.",
+     "highlight": true,
+     "start": 36.764,
+     "end": 37.145
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The mocking gesture and the laugh",
+   "notes": "The laugh bursts on \"laughed\".",
+   "sync": [
+    "laughed"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 37.536,
+   "end": 41.1,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Medium-wide: a girl (9, two braids, faded dress) runs after a small goat across the cracked riverbed; she stops dead and turns: a glint in the mud",
+   "camera": "Track with her, then stop",
+   "vo": "Then a girl chasing her goat across the riverbed saw something shine.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 37.636,
+     "end": 37.727
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 37.764,
+     "end": 37.818
+    },
+    {
+     "text": "girl",
+     "highlight": false,
+     "start": 37.855,
+     "end": 38.073
+    },
+    {
+     "text": "chasing",
+     "highlight": false,
+     "start": 38.127,
+     "end": 38.4
+    },
+    {
+     "text": "her",
+     "highlight": false,
+     "start": 38.436,
+     "end": 38.582
+    },
+    {
+     "text": "goat",
+     "highlight": false,
+     "start": 38.618,
+     "end": 38.764
+    },
+    {
+     "text": "across",
+     "highlight": false,
+     "start": 38.818,
+     "end": 39.109
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 39.145,
+     "end": 39.2
+    },
+    {
+     "text": "riverbed",
+     "highlight": false,
+     "start": 39.255,
+     "end": 39.691
+    },
+    {
+     "text": "saw",
+     "highlight": false,
+     "start": 39.764,
+     "end": 39.927
+    },
+    {
+     "text": "something",
+     "highlight": false,
+     "start": 39.982,
+     "end": 40.273
+    },
+    {
+     "text": "shine.",
+     "highlight": true,
+     "start": 40.327,
+     "end": 40.709
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Running girl, the goat, the glint",
+   "notes": "Glint flares on \"shine\"; she freezes.",
+   "sync": [
+    "shine"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 41.1,
+   "end": 43.609,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Close: her small hands scraping mud away; a smooth yellow edge appears and keeps going, wider and wider under her fingers",
+   "camera": "Top-down, slow push",
+   "vo": "She dug with her hands. It didn't end.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "She",
+     "highlight": false,
+     "start": 41.2,
+     "end": 41.327
+    },
+    {
+     "text": "dug",
+     "highlight": false,
+     "start": 41.382,
+     "end": 41.545
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 41.564,
+     "end": 41.655
+    },
+    {
+     "text": "her",
+     "highlight": false,
+     "start": 41.691,
+     "end": 41.8
+    },
+    {
+     "text": "hands.",
+     "highlight": false,
+     "start": 41.855,
+     "end": 42.255
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 42.545,
+     "end": 42.636
+    },
+    {
+     "text": "didn't",
+     "highlight": false,
+     "start": 42.673,
+     "end": 42.909
+    },
+    {
+     "text": "end.",
+     "highlight": true,
+     "start": 43.0,
+     "end": 43.273
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Hands scraping, gold widening",
+   "notes": "On \"end\" her hands stop: the gold runs past both edges of the frame.",
+   "sync": [
+    "end"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 43.609,
+   "end": 46.409,
+   "act": 1,
+   "set": "banks",
+   "owner": "S",
+   "framing": "Wide: her father with a shovel digging beside her; behind him dozens of villagers run down the bank with shovels, hoes, bare hands",
+   "camera": "Slow pull-back",
+   "vo": "Her father dug. Then the whole village dug.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Her",
+     "highlight": false,
+     "start": 43.709,
+     "end": 43.836
+    },
+    {
+     "text": "father",
+     "highlight": false,
+     "start": 43.891,
+     "end": 44.127
+    },
+    {
+     "text": "dug.",
+     "highlight": false,
+     "start": 44.218,
+     "end": 44.491
+    },
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 44.964,
+     "end": 45.073
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 45.109,
+     "end": 45.164
+    },
+    {
+     "text": "whole",
+     "highlight": false,
+     "start": 45.218,
+     "end": 45.345
+    },
+    {
+     "text": "village",
+     "highlight": false,
+     "start": 45.436,
+     "end": 45.709
+    },
+    {
+     "text": "dug.",
+     "highlight": true,
+     "start": 45.8,
+     "end": 46.055
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Father's shovel, the crowd running down",
+   "notes": "Crowd hits the riverbed on \"dug\".",
+   "sync": [
+    "father",
+    "dug"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 46.409,
+   "end": 51.5,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "Extreme wide: a huge curved surface of raw gold emerging from the mud like the back of a buried mountain; the villagers tiny on top of it, stunned, shovels lowered",
+   "camera": "Slow tilt down then crane up",
+   "vo": "It wasn't a coin. It wasn't a nugget. It went down further than anyone could see.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 46.509,
+     "end": 46.582
+    },
+    {
+     "text": "wasn't",
+     "highlight": false,
+     "start": 46.636,
+     "end": 46.836
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 46.873,
+     "end": 46.927
+    },
+    {
+     "text": "coin.",
+     "highlight": false,
+     "start": 47.0,
+     "end": 47.345
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 47.855,
+     "end": 47.945
+    },
+    {
+     "text": "wasn't",
+     "highlight": false,
+     "start": 48.0,
+     "end": 48.218
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 48.255,
+     "end": 48.327
+    },
+    {
+     "text": "nugget.",
+     "highlight": false,
+     "start": 48.382,
+     "end": 48.691
+    },
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 49.127,
+     "end": 49.2
+    },
+    {
+     "text": "went",
+     "highlight": false,
+     "start": 49.255,
+     "end": 49.418
+    },
+    {
+     "text": "down",
+     "highlight": false,
+     "start": 49.473,
+     "end": 49.727
+    },
+    {
+     "text": "further",
+     "highlight": false,
+     "start": 49.8,
+     "end": 50.091
+    },
+    {
+     "text": "than",
+     "highlight": false,
+     "start": 50.127,
+     "end": 50.273
+    },
+    {
+     "text": "anyone",
+     "highlight": false,
+     "start": 50.345,
+     "end": 50.6
+    },
+    {
+     "text": "could",
+     "highlight": false,
+     "start": 50.673,
+     "end": 50.818
+    },
+    {
+     "text": "see.",
+     "highlight": true,
+     "start": 50.909,
+     "end": 51.145
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The scale: tiny people on gold",
+   "notes": "On \"see\" the crane rises to reveal the full curve.",
+   "sync": [
+    "coin",
+    "nugget",
+    "see"
+   ]
+  },
+  {
+   "id": 17,
+   "start": 51.5,
+   "end": 57.118,
+   "act": 1,
+   "set": "riverbed",
+   "owner": "C",
+   "framing": "Wide: sunset; the villagers sit and stand on the curved gold surface, stunned; an old woman touches it with her palm, kids slide down it, the girl and her goat at the centre, long shadows",
+   "camera": "Slow lateral drift",
+   "vo": "By sunset, the poorest village on the river was sitting on more gold than every king in history.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 51.6,
+     "end": 51.745
+    },
+    {
+     "text": "sunset,",
+     "highlight": false,
+     "start": 51.818,
+     "end": 52.291
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 52.655,
+     "end": 52.764
+    },
+    {
+     "text": "poorest",
+     "highlight": false,
+     "start": 52.818,
+     "end": 53.145
+    },
+    {
+     "text": "village",
+     "highlight": false,
+     "start": 53.2,
+     "end": 53.455
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 53.509,
+     "end": 53.582
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 53.618,
+     "end": 53.691
+    },
+    {
+     "text": "river",
+     "highlight": false,
+     "start": 53.727,
+     "end": 53.982
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 54.291,
+     "end": 54.4
+    },
+    {
+     "text": "sitting",
+     "highlight": false,
+     "start": 54.473,
+     "end": 54.673
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 54.727,
+     "end": 54.855
+    },
+    {
+     "text": "more",
+     "highlight": false,
+     "start": 54.909,
+     "end": 55.127
+    },
+    {
+     "text": "gold",
+     "highlight": false,
+     "start": 55.182,
+     "end": 55.436
+    },
+    {
+     "text": "than",
+     "highlight": false,
+     "start": 55.473,
+     "end": 55.636
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 55.709,
+     "end": 55.891
+    },
+    {
+     "text": "king",
+     "highlight": false,
+     "start": 56.0,
+     "end": 56.164
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 56.2,
+     "end": 56.273
+    },
+    {
+     "text": "history.",
+     "highlight": true,
+     "start": 56.309,
+     "end": 56.727
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Poor villagers on a mountain of gold",
+   "notes": "On \"history\" the low sun flares off the gold.",
+   "sync": [
+    "poorest",
+    "history"
+   ]
+  },
+  {
+   "id": 18,
+   "start": 57.118,
+   "end": 60.1,
+   "act": 1,
+   "set": "roads",
+   "owner": "P",
+   "framing": "Wide: desert night; headlights converge from every horizon along roads toward the river; a roadside tea stall radio glows, a trucker swings his wheel",
+   "camera": "Slow drift",
+   "vo": "By nightfall, the news had crossed every border.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 57.218,
+     "end": 57.364
+    },
+    {
+     "text": "nightfall,",
+     "highlight": false,
+     "start": 57.4,
+     "end": 57.873
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 58.199,
+     "end": 58.291
+    },
+    {
+     "text": "news",
+     "highlight": false,
+     "start": 58.345,
+     "end": 58.564
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 58.599,
+     "end": 58.709
+    },
+    {
+     "text": "crossed",
+     "highlight": false,
+     "start": 58.764,
+     "end": 59.108
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 59.2,
+     "end": 59.364
+    },
+    {
+     "text": "border.",
+     "highlight": true,
+     "start": 59.473,
+     "end": 59.782
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Streams of headlights",
+   "notes": "Headlights multiply on \"border\".",
+   "sync": [
+    "border"
+   ]
+  },
+  {
+   "id": 19,
+   "start": 60.1,
+   "end": 63.882,
+   "act": 1,
+   "set": "roads",
+   "owner": "P",
+   "framing": "Extreme wide: dawn; endless lines of people walking across the desert toward the riverbed, carrying shovels, sacks, children on shoulders; dust lit gold",
+   "camera": "Slow push-in",
+   "vo": "By morning, a million people were walking toward the river.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 60.2,
+     "end": 60.327
+    },
+    {
+     "text": "morning,",
+     "highlight": false,
+     "start": 60.4,
+     "end": 60.709
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 61.055,
+     "end": 61.145
+    },
+    {
+     "text": "million",
+     "highlight": true,
+     "start": 61.2,
+     "end": 61.491
+    },
+    {
+     "text": "people",
+     "highlight": false,
+     "start": 61.582,
+     "end": 61.855
+    },
+    {
+     "text": "were",
+     "highlight": false,
+     "start": 61.891,
+     "end": 62.018
+    },
+    {
+     "text": "walking",
+     "highlight": false,
+     "start": 62.055,
+     "end": 62.364
+    },
+    {
+     "text": "toward",
+     "highlight": false,
+     "start": 62.418,
+     "end": 62.582
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 62.618,
+     "end": 62.673
+    },
+    {
+     "text": "river.",
+     "highlight": false,
+     "start": 62.727,
+     "end": 62.982
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The endless lines",
+   "notes": "CLIFFHANGER: heartbeat. Reveal on \"million\" (camera rises over the lines).",
+   "sync": [
+    "million"
+   ]
+  },
+  {
+   "id": 20,
+   "start": 63.882,
+   "end": 68.082,
+   "act": 1,
+   "set": "roads",
+   "owner": "P",
+   "framing": "TITLE CARD: \"THE RIVER RUNS DRY\" + \"CHAPTER 6 · THE LAST DAYS\" over a dark riverbed with a faint gold glint",
+   "camera": "Static, tiny push",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "Title",
+   "notes": "Deep bass drop on the cut.",
+   "sync": []
+  }
+ ],
+ "timingSource": "ai33 eleven_v3 transcript, gaps>0.9s cut to 0.5s, atempo x1.1, gaps>0.9s cut to 0.5s (0), atempo x1.1"
+}

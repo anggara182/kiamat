@@ -1,5 +1,7 @@
 # ROADMAP: THE LAST DAYS (usulan, 13 Nov 2026)
 
+Revisi 16 Nov: tahap 3 dipadatkan jadi 2 chapter (taruhan dinaikkan), nomor chapter sesudahnya bergeser −1 (sekarang 27 chapter); tahap 5 dst. dinomori ulang saat ditulis.
+
 Prinsip (adrian): **tiap tahap 2–3 chapter, taruhan selalu naik**, dari keseharian sampai kosmik. Satu chapter = 60–80 dtk, tokoh baru, peristiwa besar dilihat lewat manusia kecil ("makro lewat mikro"). Tiap chapter ditutup kail ke chapter berikutnya.
 
 Status sumber: ✔ = nomor sudah dicek di sesi 13 Nov; *cek* = wajib diverifikasi (teks + nomor + derajat) sebelum chapter itu ditulis. Urutan antar-tanda yang tidak ditetapkan sumber adalah **pilihan dramatik** dan dicatat di rujukan episode (lihat `02-KRONOLOGI.md`).
@@ -8,15 +10,14 @@ Status sumber: ✔ = nomor sudah dicek di sesi 13 Nov; *cek* = wajib diverifikas
 |---|---|---|---|---|---|
 | 1 Keseharian | Kota | 1 | The Beginning of the End ✅ | Tanda kecil di hari biasa | Muslim 8; Bukhari 59, 7121; Qur'an 7:187 ✔ |
 | | Kampung | 2 | Faster Than the Truth ✅ | Kabar bohong nyaris jadi main hakim | Qur'an 49:6; Muslim Muqaddimah 5 ✔ |
-| 2 Fitnah & pendusta | Kota | 3 | The Man From Nowhere | Wali kota difitnah, kota terbakar, muncul pria yang mengaku utusan Tuhan | Bukhari 7121 (≈30 pendusta) ✔ |
-| | Negeri | 4 | The Loudest Voice | Urusan diserahkan kepada yang bukan ahlinya; pengikutnya menguasai kota-kota | Bukhari 59 ✔ |
-| | Negeri | 5 | Old Gods | Ilmu dicabut, berhala lama disembah lagi | Bukhari 80/81 ✔; Bukhari 7116, Muslim 2906/2907 *cek* |
-| 3 Bumi & harta | Kawasan | 6 | Too Much | Harta melimpah sampai sedekah ditolak | Bukhari 7121 ✔ |
-| | Kawasan | 7 | The Green Desert | Jazirah Arab kembali hijau, padang rumput dan sungai | Muslim 157 *cek* |
-| | Kawasan | 8 | The River of Gold | Efrat menyingkap gunung emas; 99 dari 100 terbunuh | Bukhari 7119, Muslim 2894 *cek* |
-| 4 Mahdi & perang | Dunia → Syam | 9 | The Awaited | Seorang pemimpin dari keluarga Nabi (tanpa wajah; INTERPRETASI) | Abu Dawud 4282/4284/4285 ✔ (hasan/sahih); Muslim 2913, 156 ✔ |
-| | Dunia | 10 | Eighty Banners | Gencatan senjata dikhianati, 80 panji × 12.000 | Bukhari 3176 *cek* |
-| | Syam | 11 | The Fall | Penaklukan besar, lalu teriakan bahwa Dajjal telah keluar | Muslim 2897 ✔; pasukan ditelan bumi Muslim 2882 ✔ |
+| 2 Fitnah & pendusta | Kota | 3 | The Man From Nowhere ✅ | Wali kota difitnah, kota terbakar, muncul pria yang mengaku utusan Tuhan | Bukhari 7121 (≈30 pendusta) ✔ |
+| | Negeri | 4 | The Loudest Voice ✅ | Urusan diserahkan kepada yang bukan ahlinya; pengikutnya menguasai kota-kota | Bukhari 59 ✔ |
+| | Negeri | 5 | Old Gods ✅ | Ilmu dicabut, berhala lama disembah lagi | Bukhari 80/81 ✔; Bukhari 7116, Muslim 2906/2907 *cek* |
+| 3 Bumi & harta | Kawasan | 6 | The River Runs Dry ✅ | Efrat mengering, gadis kecil menemukan kilau; gunung emas tersingkap, sejuta orang berjalan ke sungai (harta melimpah & jazirah hijau dilebur jadi latar) | Bukhari 7119, Muslim 2894 ✔ |
+| | Dunia → Efrat | 7 | Ninety-Nine ✅ | Perebutan emas; 99 dari 100 terbunuh; kail: pria tanpa wajah membagi harta tanpa menghitung | Muslim 2894a ✔; Muslim 2913 ✔ (INTERPRETASI) |
+| 4 Mahdi & perang | Dunia → Syam | 8 | The Awaited | Seorang pemimpin dari keluarga Nabi (tanpa wajah; INTERPRETASI) | Abu Dawud 4282/4284/4285 ✔ (hasan/sahih); Muslim 2913, 156 ✔ |
+| | Dunia | 9 | Eighty Banners | Gencatan senjata dikhianati, 80 panji × 12.000 | Bukhari 3176 *cek* |
+| | Syam | 10 | The Fall | Penaklukan besar, lalu teriakan bahwa Dajjal telah keluar | Muslim 2897 ✔; pasukan ditelan bumi Muslim 2882 ✔ |
 | 5 Kekeringan | Global | 12 | The Sky Holds Back | Tahun-tahun langit menahan hujan dan bumi menahan tanaman | Ibnu Majah 4077 *cek* (derajat diperselisihkan → INTERPRETASI bila lemah) |
 | | Global | 13 | Hunger | Kelaparan menyiapkan panggung bagi penipu terbesar | (sama) |
 | 6 Dajjal | Seluruh bumi | 14 | A Day Like a Year | Hari pertama Dajjal sepanjang setahun; pertanyaan soal salat | Muslim 2937 ✔ |
