@@ -91,19 +91,19 @@ export const S07: React.FC = () => {
   const G = 1720, h = 820;
   const shout = t2 > tQ - 0.1 ? Math.abs(Math.sin(t2 * 9)) : 0.2;
   const shove = ramp(t2, tW - 0.08, tW + 0.12, EOUT), back = ramp(t2, tW, tW + 0.4, EOUT);
-  const ax = 470, bx = 720 + 90 * back;
-  const aBase: Pose = { lean: 16 + 6 * shove, head: -4, thA: 14, shA: 4, thB: -10, shB: -10, uaA: 40, faA: 60, uaB: 30, faB: 70, breath: 0.6 * shout };
+  const ax = 450 - 40 * back, bx = 840 + 120 * back; // chest to chest with a clear gap between the faces; the shove opens a step
+  const aBase: Pose = { lean: 5 + 6 * shove, head: -4, thA: 14, shA: 4, thB: -10, shB: -10, uaA: 40, faA: 60, uaB: 30, faB: 70, breath: 0.6 * shout };
   const aArm = shove > 0 ? ikArmA(ax, G, h, 1, aBase, bx - 30, G - 0.66 * h, -1) : { uaA: 20, faA: 70 };
   const aPose: Pose = { ...aBase, ...aArm, uaB: shove > 0 ? aArm.uaA - 6 : 30, faB: shove > 0 ? aArm.faA - 4 : 70 };
-  const bPose: Pose = { lean: 14 - 30 * back, head: -6 + 10 * back, thA: 10, shA: 4, thB: -14 - 10 * back, shB: -12, uaA: 30 + 40 * back, faA: 80, uaB: 20 + 30 * back, faB: 60, breath: 0.6 * shout };
+  const bPose: Pose = { lean: 5 - 22 * back, head: -6 + 10 * back, thA: 10, shA: 4, thB: -14 - 10 * back, shB: -12, uaA: 30 + 40 * back, faA: 80, uaB: 20 + 30 * back, faB: 60, breath: 0.6 * shout };
   // the others rushing in from both sides (from "quarrel"), grabbing them from behind
   const k = ramp(t2, tQ, tQ + 0.9, EOUT);
-  const lx = -200 + (ax - 230 + 200) * k, rx = 1400 - (1400 - (bx + 240)) * k;
+  const lx = -260 + (ax - 270 + 260) * k, rx = 1560 - (1560 - (bx + 270)) * k; // from the far edges, stopping behind their own man
   const grabL = k > 0.95, grabR = k > 0.95;
   const lBase: Pose = grabL ? { lean: -14, head: 4, thA: 12, shA: 4, thB: -16, shB: -14, uaA: 60, faA: 70, uaB: 50, faB: 60 } : { ...walkPose(t2 * 12, false, 1.3), lean: 18 };
-  const lArm = grabL ? ikArmA(lx, G + 20, h * 0.97, 1, lBase, ax - 20, G - 0.72 * h, -1) : {};
+  const lArm = grabL ? ikArmA(lx, G + 20, h * 0.97, 1, lBase, ax - 0.06 * h, G - 0.74 * h, -1) : {};
   const rBase: Pose = grabR ? { lean: -14, head: 4, thA: 12, shA: 4, thB: -16, shB: -14, uaA: 60, faA: 70, uaB: 50, faB: 60 } : { ...walkPose(t2 * 12 + 1, false, 1.3), lean: 18 };
-  const rArm = grabR ? ikArmA(rx, G + 20, h * 0.97, -1, rBase, bx + 20, G - 0.72 * h, -1) : {};
+  const rArm = grabR ? ikArmA(rx, G + 20, h * 0.97, -1, rBase, bx + 0.06 * h, G - 0.74 * h, -1) : {};
   const GREY: Look = { body: '#7a7e84', far: '#5a5e64', skin: '#a8765a', hat: 'cap', hatCol: '#5a5e64' };
   const OLIVE: Look = { body: '#5f6a48', far: '#434c32', skin: '#8a5a40', hat: 'cap', hatCol: '#434c32' };
   return (
