@@ -37,8 +37,8 @@ export const S01: React.FC = () => {
         <LampFlicker t={t} />
         <Smoke t={t} y0={1250} y1={1700} col="#2a2228" n={8} seed={4} op={0.55} />
       </Live>
-      <Live k={1.55} cam={cam}>
-        <Digger x={250} y={2380} h={1500} br={t2 * 3.4} grip={grip} t2={t2} />
+      <Live k={1.2} cam={cam}>
+        <Digger x={440} y={2230} h={1120} br={t2 * 3.4} grip={grip} t2={t2} />
       </Live>
     </AbsoluteFill>
   );
@@ -65,7 +65,7 @@ export const S02: React.FC = () => {
 export const S08: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tsol = wordAt(8, /^soldiers/i, 0.11), to = wordAt(8, /^other/i, 0.87);
-  const cam: Cam = { zoom: 1.04 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 540, oy: 1300 };
+  const cam: Cam = { zoom: 1.06 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -200, ox: 540, oy: 1300 };
   const arrive = ramp(t, tsol, tsol + 0.9);
   const flashes = [to - 0.9, to - 0.5, to, to + 0.2];
   const fl = (tt: number) => (t >= tt ? Math.exp(-(t - tt) * 7) : 0);
@@ -75,17 +75,18 @@ export const S08: React.FC = () => {
     <AbsoluteFill style={{ backgroundColor: '#e6e2d6' }}>
       <BandImg id="goldfield/day" k={0.95} cam={cam} />
       <Live k={0.95} cam={cam}>
-        {/* far side: two lines clash in dust (left, on the far bank) */}
-        <Smoke t={t} y0={1420} y1={1500} col="#d8c4a0" n={6} v={20} seed={9} op={0.75} />
-        {Array.from({ length: 14 }).map((_, i) => <Tiny key={`a${i}`} x={90 + i * 16 + Math.sin(t2 * 6 + i) * 3} y={1478} s={0.9} col="#5a4a3a" ph={t2 * 8 + i} />)}
-        {Array.from({ length: 14 }).map((_, i) => <Tiny key={`b${i}`} x={420 - i * 14 + Math.sin(t2 * 6 + i) * 3} y={1482} s={0.9} col="#4a4038" ph={t2 * 8 + i + 1} />)}
-        {flashes.map((tt, i) => { const a = fl(tt) * (i === 2 ? 1.6 : 1); return a > 0.02 ? <g key={i}><circle cx={250 + i * 30} cy={1460} r={60 * a} fill="#fff6d8" opacity={Math.min(1, a)} /><circle cx={250 + i * 30} cy={1460} r={140 * a} fill="#ffe0a0" opacity={0.35 * Math.min(1, a)} /></g> : null; })}
+        {/* far side: two lines clash in dust (silhouettes only) */}
+        <Smoke t={t} y0={1400} y1={1500} col="#d8c4a0" n={8} v={18} seed={9} op={0.85} />
+        {Array.from({ length: 8 }).map((_, i) => <Tiny key={`a${i}`} x={250 + i * 34 + Math.sin(t2 * 6 + i) * 5 + 12 * Math.sin(t2 * 3)} y={1500 + (i % 2) * 8} s={2.6} col="#4a3a2c" ph={t2 * 8 + i} />)}
+        {Array.from({ length: 8 }).map((_, i) => <Tiny key={`b${i}`} x={860 - i * 34 + Math.sin(t2 * 6 + i) * 5 - 12 * Math.sin(t2 * 3)} y={1502 + (i % 2) * 8} s={2.6} col="#3a3430" ph={t2 * 8 + i + 1} />)}
+        <ellipse cx={555} cy={1470} rx={150 + 20 * Math.sin(t * 3)} ry={70} fill="#e8d4ac" opacity={0.75} />
+        {flashes.map((tt, i) => { const a = fl(tt) * (i === 2 ? 1.6 : 1); return a > 0.02 ? <g key={i}><circle cx={500 + i * 40} cy={1450 - (i % 2) * 20} r={70 * a} fill="#fff6d8" opacity={Math.min(1, a)} /><circle cx={500 + i * 40} cy={1450} r={180 * a} fill="#ffe0a0" opacity={0.35 * Math.min(1, a)} /></g> : null; })}
         {/* the fence line of soldiers and trucks in front of the gold */}
-        {[0, 1, 2, 3].map((i) => <Truck key={i} x={220 + i * 260 + (1 - arrive) * (700 + i * 120)} y={1720 + (i % 2) * 20} s={0.7} col="#5a5a50" dir={-1} />)}
-        {fence.map((q, i) => (i / fence.length < arrive ? <Tiny key={i} x={q.x} y={1765} s={1.8} col="#3e3e38" ph={t2 * 2 + q.ph} /> : null))}
-        <rect x={60} y={1752} width={1180} height={4} fill="#5a5a50" opacity={0.6 * arrive} />
-        {Array.from({ length: 12 }).map((_, i) => <rect key={`f${i}`} x={60 + i * 107} y={1722} width={5} height={36} fill="#5a5a50" opacity={arrive} />)}
-        <Smoke t={t} y0={1700} y1={1800} col="#e2c28a" n={5} v={40} seed={12} op={0.5} />
+        {[0, 1, 2, 3].map((i) => <Truck key={i} x={220 + i * 260 + (1 - arrive) * (700 + i * 120)} y={1650 + (i % 2) * 18} s={0.7} col="#5a5a50" dir={-1} />)}
+        {fence.map((q, i) => (i / fence.length < arrive ? <Tiny key={i} x={q.x} y={1695} s={1.8} col="#3e3e38" ph={t2 * 2 + q.ph} /> : null))}
+        <rect x={60} y={1682} width={1180} height={4} fill="#5a5a50" opacity={0.6 * arrive} />
+        {Array.from({ length: 12 }).map((_, i) => <rect key={`f${i}`} x={60 + i * 107} y={1652} width={5} height={36} fill="#5a5a50" opacity={arrive} />)}
+        <Smoke t={t} y0={1640} y1={1720} col="#e2c28a" n={5} v={40} seed={12} op={0.5} />
       </Live>
     </AbsoluteFill>
   );
@@ -117,9 +118,9 @@ export const S11: React.FC = () => {
 export const S13: React.FC = () => {
   const { p, t } = useShot();
   const tw = wordAt(13, /^owned/i, 0.86);
-  const cam: Cam = { zoom: 1.2 - 0.15 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 560, oy: 1250 };
+  const cam: Cam = { zoom: 1.22 - 0.14 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -220, ox: 560, oy: 1250 };
   const r = rng(51);
-  const shovels = Array.from({ length: 26 }).map(() => { const y = 1640 + Math.pow(r(), 1.3) * 560; const s = 0.35 + (y - 1640) / 560 * 1.1; return { x: r() * 1296, y, s, lean: r() * 16 - 8 }; }).sort((a, b) => a.y - b.y);
+  const shovels = Array.from({ length: 26 }).map(() => { const y = 1620 + Math.pow(r(), 1.3) * 520; const s = 0.5 + (y - 1620) / 520 * 1.4; return { x: r() * 1296, y, s, lean: r() * 16 - 8 }; }).sort((a, b) => a.y - b.y);
   return (
     <AbsoluteFill style={{ backgroundColor: '#2e2238' }}>
       <BandImg id="goldfield/dawn" k={0.9} cam={cam} />

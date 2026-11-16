@@ -4,7 +4,7 @@ import { loadFont as loadCinzel } from '@remotion/google-fonts/Cinzel';
 import { useShot, BandImg, Live, Cam, handheld, ramp, EIO, EOUT, clamp01 } from '../comp/Camera';
 import { wordAt } from '../data/ep';
 import { GREEN } from '../comp/Overlays';
-import { Figure, FigSpec } from '../art/farcity_people';
+import { Figure, FigSpec, BackFigure } from '../art/farcity_people';
 import { Person, PersonSpec, EAR, MOUTH, facePt } from '../art/farcity_profile';
 import { ROADS_W, DOOR } from '../sets/farcity';
 import { H } from '../art/world';
@@ -63,11 +63,11 @@ export const S03: React.FC = () => {
   const { t, t2, p } = useShot();
   const ts = wordAt(3, /^shovels/i, 0.86);
   const lift = ramp(t2, ts, ts + 0.2, EOUT); // shovels swing up onto the shoulders exactly on the word
-  const cam: Cam = { zoom: 1.04, dx: 0, dy: 0, tx: 260 - 520 * EIO(p), ty: 0, ox: 540, oy: 1000 };
+  const cam: Cam = { zoom: 1.04, dx: 0, dy: 0, tx: 120 - 300 * EIO(p), ty: 0, ox: 540, oy: 1000 };
   const walk = t2 * 8;
   const g = 0.36; // figure scale in the wide
   // everyone drifts toward the river on the right (the band is ROADS_W wide; draw in band coords)
-  const adv = 120 * p;
+  const adv = 380 + 160 * p; // the walkers keep pace with the track
   const fam = [{ f: F.father, x: 760 }, { f: F.mother, x: 640 }, { f: F.son, x: 900, s: 0.7 }];
   return (
     <AbsoluteFill style={{ backgroundColor: '#e2c28a' }}>
@@ -91,7 +91,7 @@ export const S03: React.FC = () => {
             <ellipse cx={80} cy={-200} rx={26} ry={30} fill="#2a2018" /><path d="M40 -170 L120 -170 L110 -100 L50 -100 Z" fill="#6a4a3a" />
           </g>
           {/* a grandmother carried on a chair by two men */}
-          <g transform={`translate(${300 + adv} 1380)`}>
+          <g transform={`translate(${300 + adv} 1290)`}>
             {[[-110, F.carrier, 0], [110, F.carrier, 2]].map(([dx, f, ph], k) => (
               <g key={k} transform={`translate(${dx as number} 0) scale(${g})`}><Figure f={f as FigSpec} walk={walk + (ph as number)} armF={[30, -40]} armB={[-10, 10]} /></g>
             ))}
@@ -105,9 +105,9 @@ export const S03: React.FC = () => {
           {fam.map((m, k) => {
             const s = g * (m.s ?? 1);
             return (
-              <g key={k} transform={`translate(${m.x + adv} ${1480}) scale(${s})`}>
-                <Figure f={m.f} walk={walk + k * 1.3} armF={[12 + 130 * lift, -20 - 110 * lift]} armB={[-10, -6]}
-                  hold={(h) => <g transform={`translate(${h.x} ${h.y})`}><Shovel a={-20 + 185 * lift} /></g>} />
+              <g key={k} transform={`translate(${m.x + adv} ${1350}) scale(${s})`}>
+                <Figure f={m.f} walk={walk + k * 1.3} armF={[12 + 110 * lift, -20 - 120 * lift]} armB={[-10, -6]}
+                  hold={(h) => <g transform={`translate(${h.x} ${h.y})`}><Shovel a={-20 + 95 * lift} /></g>} />
               </g>
             );
           })}
@@ -149,20 +149,24 @@ export const S14: React.FC = () => {
           <ellipse cx={G.x + 230} cy={G.y - 60} rx={170} ry={60} fill="#000" opacity={0.4} />
           <path d={`M${G.x + 150} ${G.y - 20} C${G.x + 140} ${G.y - 240} ${G.x + 330} ${G.y - 250} ${G.x + 320} ${G.y - 20} Z`} fill="#c9b48a" />
           <path d={`M${G.x + 170} ${G.y - 220} Q${G.x + 235} ${G.y - 270} ${G.x + 300} ${G.y - 220}`} stroke="#8a7450" strokeWidth={10} fill="none" />
-          {[[-4, -3], [4, -3], [0, -5]].map(([dx, dy], k) => (
-            <g key={k} transform={`translate(${G.x + dx} ${G.y + dy}) scale(${-G.s} ${G.s})`} opacity={0.9}>
-              <Figure f={{ ...F.giver, skin: '#ffd79a', hairC: '#ffd79a', top: '#ffd79a', topD: '#ffd79a', legs: '#ffd79a' }} armF={[40 + 60 * reach, -40 + 30 * reach]} armB={[-30 + 50 * (1 - reach), -10]} />
-            </g>
-          ))}
-          <g transform={`translate(${G.x} ${G.y}) scale(${-G.s} ${G.s})`}>
-            <Figure f={F.giver} armF={[40 + 60 * reach, -40 + 30 * reach]} armB={[-30 + 50 * (1 - reach), -10]} hold={(fh) => (
-              <g transform={`translate(${fh.x} ${fh.y})`}>
-                {/* the handful: grain/coins spilling as he gives, a bigger scoop on "counting" */}
-                <ellipse cx={20} cy={-6} rx={30 + 14 * scoop} ry={14 + 6 * scoop} fill="#e8b84a" opacity={0.25 + 0.75 * reach} />
-                {Array.from({ length: 4 + Math.round(6 * scoop) }, (_, k) => <circle key={k} cx={10 + (k % 4) * 10} cy={20 + ((t2 * 300 + k * 40) % 120)} r={5} fill="#ffcf86" opacity={reach > 0.5 ? 0.9 : 0} />)}
+          {(() => {
+            // seen FROM BEHIND: his left hand reaches forward to the first cupped hands, his right hand dips into the sack
+            const toL = (x: number, y: number) => ({ x: (x - G.x) / G.s, y: (y - G.y) / G.s });
+            const hl = toL(600 + 30 * reach, 1100 + 20 * (1 - reach)), hr = toL(G.x + 200 - 30 * reach, G.y - 230 + 60 * (1 - reach));
+            return (
+              <g>
+                {[[-5, -3], [5, -3], [0, -6]].map(([dx, dy], k) => (
+                  <g key={k} transform={`translate(${G.x + dx} ${G.y + dy}) scale(${G.s})`}><BackFigure f={F.giver} handL={hl} handR={hr} fill="#ffd79a" /></g>
+                ))}
+                <g transform={`translate(${G.x} ${G.y}) scale(${G.s})`}><BackFigure f={F.giver} handL={hl} handR={hr} /></g>
+                {/* the handful in his left hand: grain/coins spilling, a bigger scoop on "counting" */}
+                <g transform={`translate(${G.x + hl.x * G.s} ${G.y + hl.y * G.s})`}>
+                  <ellipse cx={0} cy={-10} rx={30 + 14 * scoop} ry={14 + 6 * scoop} fill="#e8b84a" opacity={0.3 + 0.7 * reach} />
+                  {Array.from({ length: 4 + Math.round(6 * scoop) }, (_, k) => <circle key={k} cx={-14 + (k % 4) * 10} cy={20 + ((t2 * 300 + k * 40) % 120)} r={5} fill="#ffcf86" opacity={reach > 0.5 ? 0.9 : 0} />)}
+                </g>
               </g>
-            )} />
-          </g>
+            );
+          })()}
         </Fr>
       </Live>
     </AbsoluteFill>

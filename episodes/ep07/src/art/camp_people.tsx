@@ -97,11 +97,11 @@ export type SideProps = {
   lean?: number; bob?: number; face?: 'side' | 'front' | 'back';
   handN?: P2; handF?: P2; footN?: P2; footF?: P2; skirt?: boolean; sit?: boolean; rimO?: number; male?: boolean;
   /** draw something in the near hand (local units, after the near arm) */
-  holdN?: React.ReactNode; holdF?: React.ReactNode; headTilt?: number;
+  holdN?: React.ReactNode; holdF?: React.ReactNode; headTilt?: number; noLegs?: boolean;
 };
 
 export const Side: React.FC<SideProps> = ({
-  x, y, h, dir = 1, pal, head, lean = 0, bob = 0, face = 'side', handN, handF, footN, footF, skirt = false, sit = false, rimO = 0.7, male = false, holdN, holdF, headTilt = 0,
+  x, y, h, dir = 1, pal, head, lean = 0, bob = 0, face = 'side', handN, handF, footN, footF, skirt = false, sit = false, rimO = 0.7, male = false, holdN, holdF, headTilt = 0, noLegs = false,
 }) => {
   const s = h / 1000;
   const rim = pal.rim ?? '#ffe0b8';
@@ -145,8 +145,8 @@ export const Side: React.FC<SideProps> = ({
     <g transform={`translate(${x} ${y - bob * s}) scale(${dir * s} ${s})`}>
       {arm(shF, aF, false)}
       {holdF}
-      {leg(legF, -12, false)}
-      {leg(legN, 12, true)}
+      {!noLegs && leg(legF, -12, false)}
+      {!noLegs && leg(legN, 12, true)}
       {skirt && !sit && <path d={`M${rot([-64, -560]).join(' ')} L${rot([64, -560]).join(' ')} L110 -40 L-96 -40 Z`} fill={pal.bottom} />}
       {skirt && sit && <path d={`M-70 -560 L60 -560 L${fN[0] + 40} -420 L${fN[0] + 30} -60 L${fN[0] - 70} -60 L${fN[0] - 70} -380 L-80 -380 Z`} fill={pal.bottom} />}
       <path d={torso} fill={pal.top} />

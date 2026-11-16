@@ -69,3 +69,39 @@ export const Figure: React.FC<{
     </g>
   );
 };
+
+/**
+ * BACK VIEW figure (seen from behind): back of the head (hair only, no face, no ear), both shoulders square to camera.
+ * Feet at (0,0), ~1000 tall. handL / handR are hand targets in local coords (arms reach toward them).
+ */
+export const BackFigure: React.FC<{ f: FigSpec; handL: { x: number; y: number }; handR: { x: number; y: number }; fill?: string; shift?: number }> = ({ f, handL, handR, fill, shift = 0 }) => {
+  const c = (x: string) => fill ?? x;
+  const arm = (sx: number, h: { x: number; y: number }, side: number) => {
+    const e = { x: (sx + h.x) / 2 + side * 46, y: (-830 + h.y) / 2 + 30 };
+    return (
+      <g>
+        <path d={limb(sx, -830, e.x, e.y, 34, 28)} fill={c(f.top)} />
+        <path d={limb(e.x, e.y, h.x, h.y, 28, 22)} fill={c(f.top)} />
+        <circle cx={h.x} cy={h.y} r={27} fill={c(f.skin)} />
+      </g>
+    );
+  };
+  return (
+    <g transform={`translate(${shift} 0)`}>
+      {/* legs (back view), heels toward us */}
+      <path d={limb(-42, -480, -50, -30, 44, 30)} fill={c(f.legs)} />
+      <path d={limb(42, -480, 50, -30, 44, 30)} fill={c(f.legs)} />
+      <ellipse cx={-52} cy={-12} rx={36} ry={18} fill={c(f.shoe ?? '#1d1a18')} />
+      <ellipse cx={52} cy={-12} rx={36} ry={18} fill={c(f.shoe ?? '#1d1a18')} />
+      {arm(-96, handL, -1)}
+      {arm(96, handR, 1)}
+      {/* torso: square shoulders, tapering to the waist; a shirt crease down the back */}
+      <path d="M-104 -846 C-60 -872 60 -872 104 -846 L90 -700 C84 -600 78 -520 72 -460 L-72 -460 C-78 -520 -84 -600 -90 -700 Z" fill={c(f.top)} />
+      <path d="M0 -860 C4 -700 -2 -560 4 -470" stroke={c(f.topD)} strokeWidth={6} fill="none" opacity={0.6} />
+      {/* neck + the back of the head (hair covers it all) */}
+      <path d={limb(0, -900, 0, -846, 30, 34)} fill={c(f.skin)} />
+      <ellipse cx={0} cy={-940} rx={62} ry={72} fill={c(f.hairC)} />
+      <path d="M-58 -900 C-30 -872 30 -872 58 -900 C40 -884 -40 -884 -58 -900 Z" fill={c(f.hairC)} />
+    </g>
+  );
+};

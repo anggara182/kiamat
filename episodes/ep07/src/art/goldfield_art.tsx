@@ -8,43 +8,56 @@ import { W, H, rng } from './world';
  */
 export type GPal = { sky: string[]; gold: string[]; ridge: string; glint: string; bed: string[]; crack: string; far: string; glow: number };
 export const GPALS: Record<'night' | 'day' | 'dawn', GPal> = {
-  night: { sky: ['#05060c', '#0a0b16', '#1a1420'], gold: ['#ffe8a0', '#e8b84a', '#8a5a1e'], ridge: '#6a4214', glint: '#fff6d0', bed: ['#2a1e16', '#0c0806'], crack: '#050302', far: '#0c0a12', glow: 0.9 },
+  night: { sky: ['#05060c', '#0a0b16', '#1a1420'], gold: ['#f0b850', '#a86e22', '#3a2208'], ridge: '#2a1806', glint: '#fff6d0', bed: ['#2a1e16', '#0c0806'], crack: '#050302', far: '#0c0a12', glow: 0.9 },
   day: { sky: ['#cdd6da', '#e6e2d6', '#f2e6c8'], gold: ['#fff0b0', '#e2b04a', '#a8782a'], ridge: '#8a5e22', glint: '#ffffff', bed: ['#d8b27a', '#a8865a'], crack: '#7a5a3a', far: '#bfae94', glow: 0.35 },
   dawn: { sky: ['#2e2238', '#5a4458', '#c9a08a'], gold: ['#ffd890', '#d8a04a', '#7a4e26'], ridge: '#5e3a20', glint: '#fff0d0', bed: ['#8a6a5a', '#3a2a2a'], crack: '#241818', far: '#4a3a48', glow: 0.6 },
 };
-export const GM = { cx: 700, top: 980, w: 1700, base: 1560 };
+export const GM = { cx: 700, top: 960, w: 2300, base: 1560 };
 
 /** the gold mountain + riverbed (static) */
 export const Goldfield: React.FC<{ m: 'night' | 'day' | 'dawn' }> = ({ m }) => {
   const p = GPALS[m]; const r = rng(7);
   const g = GM;
-  const dome = `M${g.cx - g.w / 2} ${g.base} C${g.cx - g.w * 0.38} ${g.top + 160} ${g.cx - g.w * 0.18} ${g.top - 10} ${g.cx} ${g.top} C${g.cx + g.w * 0.2} ${g.top + 10} ${g.cx + g.w * 0.36} ${g.top + 180} ${g.cx + g.w / 2} ${g.base} Z`;
+  // rough top edge: a broad curve broken by boulders and shoulders
+  const N = 36;
+  const edge = Array.from({ length: N + 1 }).map((_, i) => {
+    const f = i / N, x = g.cx - g.w / 2 + f * g.w;
+    const curve = g.top + (g.base - g.top) * Math.pow(Math.abs(f - 0.47) * 2, 1.8);
+    const bump = Math.sin(i * 2.3) * 22 + Math.sin(i * 5.1) * 12 + (r() - 0.5) * 30 - (i % 7 === 3 ? 40 : 0);
+    return [x, Math.min(g.base, curve + bump)] as [number, number];
+  });
+  const dome = `M${g.cx - g.w / 2} ${g.base} ` + edge.map(([x, y]) => `L${x.toFixed(1)} ${y.toFixed(1)}`).join(' ') + ` L${g.cx + g.w / 2} ${g.base} Z`;
+  // facets: irregular planes, lit from the upper left
+  const facets = Array.from({ length: 46 }).map(() => {
+    const cx = g.cx + (r() - 0.5) * g.w * 0.85, cy = g.top + 40 + r() * (g.base - g.top - 40);
+    const rr = 50 + r() * 140; const n = 5 + Math.floor(r() * 3);
+    const pts = Array.from({ length: n }).map((__, k) => { const a = (k / n) * Math.PI * 2 + r() * 0.5; return `${(cx + Math.cos(a) * rr * (0.6 + r() * 0.6)).toFixed(1)},${(cy + Math.sin(a) * rr * 0.55 * (0.6 + r() * 0.6)).toFixed(1)}`; }).join(' ');
+    return { pts, light: r() < 0.45, o: 0.12 + r() * 0.22 };
+  });
   return (
     <g>
       <defs>
         <linearGradient id={`gfSky-${m}`} gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2={g.base}>{p.sky.map((c, i) => <stop key={i} offset={i / (p.sky.length - 1)} stopColor={c} />)}</linearGradient>
-        <radialGradient id={`gfGold-${m}`} gradientUnits="userSpaceOnUse" cx={g.cx - 80} cy={g.top + 220} r={g.w * 0.55}><stop offset="0" stopColor={p.gold[0]} /><stop offset="0.45" stopColor={p.gold[1]} /><stop offset="1" stopColor={p.gold[2]} /></radialGradient>
+        <radialGradient id={`gfGold-${m}`} gradientUnits="userSpaceOnUse" cx={g.cx - 80} cy={g.top + 260} r={g.w * 0.5}><stop offset="0" stopColor={p.gold[0]} /><stop offset="0.45" stopColor={p.gold[1]} /><stop offset="1" stopColor={p.gold[2]} /></radialGradient>
         <radialGradient id={`gfHalo-${m}`} cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor={p.gold[0]} stopOpacity={0.5 * p.glow} /><stop offset="1" stopColor={p.gold[1]} stopOpacity={0} /></radialGradient>
         <linearGradient id={`gfBed-${m}`} gradientUnits="userSpaceOnUse" x1="0" y1={g.base - 40} x2="0" y2={H}><stop offset="0" stopColor={p.bed[0]} /><stop offset="1" stopColor={p.bed[1]} /></linearGradient>
+        <clipPath id={`gfClip-${m}`}><path d={dome} /></clipPath>
+        <radialGradient id={`gfRelL-${m}`} cx="0.42" cy="0.38" r="0.6"><stop offset="0" stopColor={p.glint} stopOpacity={0.4} /><stop offset="1" stopColor={p.glint} stopOpacity={0} /></radialGradient>
+        <radialGradient id={`gfRelD-${m}`} cx="0.6" cy="0.65" r="0.6"><stop offset="0" stopColor={p.ridge} stopOpacity={0.55} /><stop offset="1" stopColor={p.ridge} stopOpacity={0} /></radialGradient>
       </defs>
       <rect x={0} y={0} width={W} height={H} fill={`url(#gfSky-${m})`} />
       {m === 'day' && <circle cx={240} cy={420} r={320} fill="#ffffff" opacity={0.6} />}
       {m === 'dawn' && <ellipse cx={1080} cy={1500} rx={600} ry={300} fill="#ffc8a0" opacity={0.35} />}
-      {/* far banks: low hills */}
       <path d={`M-40 ${g.base - 20} Q200 ${g.base - 160} 420 ${g.base - 90} Q700 ${g.base - 200} 1000 ${g.base - 110} Q1200 ${g.base - 170} ${W + 40} ${g.base - 60} V${g.base + 40} H-40 Z`} fill={p.far} />
-      {/* halo of the gold into the air */}
-      <ellipse cx={g.cx} cy={g.top + 260} rx={g.w * 0.65} ry={520} fill={`url(#gfHalo-${m})`} />
-      {/* the mountain: rough curved back */}
+      <ellipse cx={g.cx} cy={g.top + 280} rx={g.w * 0.55} ry={560} fill={`url(#gfHalo-${m})`} />
       <path d={dome} fill={`url(#gfGold-${m})`} />
-      {Array.from({ length: 16 }).map((_, i) => {
-        const y = g.top + 40 + i * 34 + r() * 20; const span = (y - g.top) / (g.base - g.top);
-        const hw = g.w * 0.5 * Math.sqrt(span) * 0.95;
-        const pts = Array.from({ length: 9 }).map((__, k) => `${g.cx - hw + (k / 8) * hw * 2} ${y + Math.sin(k * 1.7 + i) * 8 + r() * 10}`).join(' L');
-        return <path key={i} d={`M${pts}`} stroke={p.ridge} strokeOpacity={0.35 + r() * 0.25} strokeWidth={3 + r() * 5} fill="none" />;
-      })}
-      {Array.from({ length: 40 }).map((_, i) => { const x = g.cx + (r() - 0.5) * g.w * 0.8, y = g.top + 60 + r() * (g.base - g.top - 80); return <path key={`c${i}`} d={`M${x} ${y} l${r() * 30 - 15} ${10 + r() * 20} l${r() * 24 - 12} ${10 + r() * 16}`} stroke={p.ridge} strokeWidth={2} strokeOpacity={0.5} fill="none" />; })}
-      {Array.from({ length: 90 }).map((_, i) => { const x = g.cx + (r() - 0.55) * g.w * 0.7, y = g.top + 30 + r() * (g.base - g.top - 60); return <circle key={`g${i}`} cx={x} cy={y} r={1.5 + r() * 3} fill={p.glint} opacity={0.4 + r() * 0.5} />; })}
-      <path d={`M${g.cx - g.w * 0.3} ${g.top + 220} C${g.cx - g.w * 0.16} ${g.top + 40} ${g.cx - 40} ${g.top + 10} ${g.cx + 80} ${g.top + 14}`} stroke={p.glint} strokeOpacity={0.5} strokeWidth={8} fill="none" />
+      <g clipPath={`url(#gfClip-${m})`}>
+        {facets.map((f, i) => { const [cx, cy] = f.pts.split(' ')[0].split(',').map(Number); return <ellipse key={i} cx={cx} cy={cy} rx={90 + (i % 5) * 40} ry={40 + (i % 4) * 18} fill={`url(#gfRel${f.light ? 'L' : 'D'}-${m})`} transform={`rotate(${(i * 37) % 30 - 15} ${cx} ${cy})`} />; })}
+        {Array.from({ length: 30 }).map((_, i) => { const x = g.cx + (r() - 0.5) * g.w * 0.8, y = g.top + 40 + r() * (g.base - g.top - 60); return <path key={`c${i}`} d={`M${x} ${y} l${r() * 40 - 20} ${16 + r() * 30} l${r() * 30 - 15} ${14 + r() * 24} l${r() * 20 - 10} ${10 + r() * 20}`} stroke={p.ridge} strokeWidth={2 + r() * 3} strokeOpacity={0.55} fill="none" />; })}
+        {Array.from({ length: 120 }).map((_, i) => { const x = g.cx + (r() - 0.55) * g.w * 0.75, y = g.top + 20 + r() * (g.base - g.top - 40); return <circle key={`g${i}`} cx={x} cy={y} r={1.5 + r() * 3.5} fill={p.glint} opacity={0.35 + r() * 0.55} />; })}
+        <rect x={0} y={g.base - 120} width={W} height={120} fill={p.gold[2]} opacity={0.5} />
+      </g>
+      <path d={edge.slice(6, 22).map(([x, y], i) => `${i ? 'L' : 'M'}${x} ${y + 4}`).join(' ')} stroke={p.glint} strokeOpacity={0.55} strokeWidth={6} fill="none" />
       {/* the dry cracked riverbed */}
       <rect x={0} y={g.base - 30} width={W} height={H - g.base + 30} fill={`url(#gfBed-${m})`} />
       {Array.from({ length: 140 }).map((_, i) => {
@@ -71,8 +84,7 @@ export const LAMPS = (() => {
 export const NightBand: React.FC = () => (
   <g>
     <Goldfield m="night" />
-    {LAMPS.map((q, i) => <circle key={i} cx={q.x} cy={q.y} r={1.6 * q.s} fill={q.warm ? '#ffcf86' : '#fff0c0'} opacity={0.75} />)}
-    {LAMPS.filter((_, i) => i % 3 === 0).map((q, i) => <rect key={`p${i}`} x={q.x - 1.5 * q.s} y={q.y + 2 * q.s} width={3 * q.s} height={8 * q.s} fill="#140c08" />)}
+    {LAMPS.map((q, i) => <circle key={i} cx={q.x} cy={q.y} r={2 * q.s} fill={q.warm ? '#ffd890' : '#fff4d0'} opacity={0.9} />)}
   </g>
 );
 /** live flicker: a glow + brightness wobble on a subset (on ones) */

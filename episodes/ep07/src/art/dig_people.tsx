@@ -29,6 +29,7 @@ export type Look = {
   bagCol?: string;
   vest?: string; // hi-vis vest colour (worker)
   beard?: string; // beard colour
+  mouth?: number; // 0..1 open mouth (laugh / shout), side view
 };
 
 const rad = (d: number) => (d * Math.PI) / 180;
@@ -125,7 +126,8 @@ export const Figure: React.FC<{ x: number; y: number; h: number; dir?: number; p
       <ellipse cx={hd[0]} cy={hd[1]} rx={5.4} ry={6.8} fill={skin} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />
       {/* hair / back of the head mass (dark) unless covered */}
       {look.hat !== 'hijab' && <path d={`M ${hd[0] - 5.4} ${hd[1] + 1} Q ${hd[0] - 6} ${hd[1] - 7.4} ${hd[0] + 0.5} ${hd[1] - 6.9} Q ${hd[0] + 4.8} ${hd[1] - 6.6} ${hd[0] + 5.2} ${hd[1] - 3} Q ${hd[0]} ${hd[1] - 4.8} ${hd[0] - 3} ${hd[1] + 3} Z`} fill={far} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />}
-      {look.beard && <path d={`M ${hd[0] - 1} ${hd[1] + 1} Q ${hd[0] + 5.6} ${hd[1] + 0.5} ${hd[0] + 5} ${hd[1] + 4.5} Q ${hd[0] + 2} ${hd[1] + 9} ${hd[0] - 2.5} ${hd[1] + 6} Z`} fill={look.beard} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />}
+      {look.beard && <path d={`M ${hd[0] - 2.5} ${hd[1] + 2.5} Q ${hd[0] + 1.5} ${hd[1] + 4.2} ${hd[0] + 4.6} ${hd[1] + 3.2} Q ${hd[0] + 4.4} ${hd[1] + 6.4} ${hd[0] + 1} ${hd[1] + 7.6} Q ${hd[0] - 2.4} ${hd[1] + 7.2} ${hd[0] - 3.6} ${hd[1] + 4.4} Z`} fill={look.beard} transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />}
+      {(look.mouth ?? 0) > 0.05 && <ellipse cx={hd[0] + 4.4} cy={hd[1] + 3.4} rx={1.5} ry={0.6 + 1.6 * (look.mouth ?? 0)} fill="#3a1a14" transform={`rotate(${headRot} ${hd[0]} ${hd[1]})`} />}
       {hat}
       {arm(P.uaA, P.faA, look.body, skin, 'aa', false)}
       {look.rim && <path d={`${look.hat === 'peci' || look.hat === 'hijab' ? '' : `M ${hd[0] - 4.6} ${hd[1] - 3.5} Q ${hd[0] - 1} ${hd[1] - 7.6} ${hd[0] + 3.6} ${hd[1] - 5.4} `}M ${sh[0] - px * 6.5} ${sh[1] - py * 6.5} Q ${sh[0] - px * 7.6} ${(sh[1] + hip[1]) / 2} ${hip[0] - px * 6.2} ${hip[1] - py * 6.2}`} stroke={look.rim} strokeWidth={1.1} fill="none" opacity={look.rimO ?? 0.8} />}

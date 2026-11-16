@@ -46,6 +46,28 @@ export const GoldBlock: React.FC<{ x: number; y: number }> = ({ x, y }) => (
   </g>
 );
 
+/** low wooden crate the block sits on */
+export const Crate: React.FC<{ x: number; top: number; floor: number }> = ({ x, top, floor }) => (
+  <g>
+    <rect x={x - 110} y={top} width={220} height={floor - top} fill="#8a6a44" />
+    <rect x={x - 110} y={top} width={220} height={14} fill="#a8865a" />
+    {[top + 60, top + 120].map((y) => <rect key={y} x={x - 110} y={y} width={220} height={6} fill="#5e4628" />)}
+    <rect x={x + 60} y={top} width={50} height={floor - top} fill="#6a4e32" opacity={0.6} />
+  </g>
+);
+
+/** kneeling lower body: thigh from the hip forward-down to the knee on the floor, shin back to the heel */
+export const Kneel: React.FC<{ hx: number; hy: number; dir: 1 | -1; floor: number; s: number; c: string; foot: string }> = ({ hx, hy, dir, floor, s, c, foot }) => {
+  const kx = hx + dir * 170 * s, ky = floor - 30 * s, ex = hx - dir * 110 * s;
+  return (
+    <g>
+      <path d={limb(kx, ky, ex, floor - 24 * s, 56 * s, 42 * s)} fill={c} />
+      <ellipse cx={ex - dir * 20 * s} cy={floor - 14 * s} rx={40 * s} ry={14 * s} fill={foot} />
+      <path d={limb(hx, hy, kx, ky, 90 * s, 62 * s)} fill={c} />
+    </g>
+  );
+};
+
 /** kneeling lower legs behind a kneeling figure: from the knee (kx) back to the heel, on the floor y */
 export const Shins: React.FC<{ kx: number; hx: number; y: number; w: number; c: string; foot: string }> = ({ kx, hx, y, w, c, foot }) => (
   <g>
