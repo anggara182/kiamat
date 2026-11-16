@@ -62,7 +62,7 @@ export const S04: React.FC = () => {
   const tT = wordAt(4, /^thousands/i, 0.72);
   const rise = ramp(t, tT - 0.3, tT + 0.7, EIO);
   const cam: Cam = { zoom: 1.08 - 0.14 * rise, dx: 0, dy: -560 + 700 * rise, ox: 540, oy: 960 };
-  const fish = Array.from({ length: 22 }, (_, i) => ({ x: 120 + ((i * 263) % 1080), y: POOL.edge + 140 + ((i * 97) % 360), s: 0.9 + (i % 4) * 0.2, ph: i * 1.7 }));
+  const fish = Array.from({ length: 34 }, (_, i) => ({ x: 90 + ((i * 263) % 1120), y: POOL.edge + 110 + ((i * 97) % 420), s: 0.9 + (i % 4) * 0.22, ph: i * 1.7, rot: ((i * 53) % 60) - 30 }));
   const kid = (x: number, dir: number, look: Look, point: boolean, i: number) => {
     const G = POOL.edge + 70, h = 500;
     const pose: Pose = { lean: 8, head: 22, thA: 4, shA: 2, thB: -4, shB: -4, uaA: point ? 70 + 6 * Math.sin(t2 * 6) : 14, faA: point ? 76 : 30, uaB: 6, faB: 10, breath: 0.6 * Math.sin(t2 * 3 + i) };
@@ -74,8 +74,9 @@ export const S04: React.FC = () => {
       <BandImg id="banks/pool" cam={cam} />
       <Live cam={cam} h={POOL.h}>
         {/* twinkles across the far fish carpet */}
-        {Array.from({ length: 30 }, (_, i) => { const y = POOL.horizon + 20 + ((i * 53) % 1200), x = (i * 211) % 1296, k = Math.max(0, Math.sin(t * 5 + i * 1.3)); return <circle key={i} cx={x} cy={y} r={2 + 4 * k} fill="#ffffff" opacity={0.8 * k} />; })}
-        {fish.map((f, i) => <Fish key={i} x={f.x} y={f.y} s={f.s} ph={t2 * (6 + (i % 3)) + f.ph} />)}
+        {Array.from({ length: 110 }, (_, i) => { const y = POOL.horizon + 14 + ((i * 53) % 1350), x = (i * 211 + (i % 7) * 37) % 1296, k = Math.max(0, Math.sin(t * 5 + i * 1.3)); return <circle key={i} cx={x} cy={y} r={1.5 + (y - POOL.horizon) / 400 + 4 * k} fill="#ffffff" opacity={0.85 * k} />; })}
+        {fish.map((f, i) => <Fish key={i} x={f.x} y={f.y} s={f.s} ph={t2 * (7 + (i % 4)) + f.ph} rot={f.rot} />)}
+        {fish.map((f, i) => { const k = Math.max(0, Math.sin(t * 6 + i * 2.1)); return <circle key={`g${i}`} cx={f.x + 6} cy={f.y - 8} r={2 + 5 * k} fill="#ffffff" opacity={0.9 * k} />; })}
         {kid(300, 1, { body: '#4f6f8a', far: '#3a5268', skin: '#a8765a', hat: 'cap', hatCol: '#d8d0c0' }, true, 0)}
         {kid(990, -1, { body: '#c9a06a', far: '#9a7a50', skin: '#9a6a4e', hat: 'hijab', hatCol: '#6a5a7a', skirt: true }, false, 1)}
         <Heat t={t} y={POOL.horizon + 6} w={1296} />
@@ -131,7 +132,8 @@ export const S13: React.FC = () => {
   const dir = turn < 0.5 ? 1 : -1;
   const cam: Cam = { zoom: 1.12, dx: 700 - 300 * Math.min(t, tS), dy: 0, ox: 540, oy: 1000 };
   const pose: Pose = stopped ? { lean: 6 + 10 * turn, head: 12, thA: 6, shA: 2, thB: -6, shB: -6, uaA: 20 + 30 * turn, faA: 40 + 30 * turn, uaB: 10, faB: 20, breath: 1.2 * Math.sin(t2 * 6) } : { ...walkPose(t2 * 13, false, 1.35), lean: 14 };
-  const goatX = 760 + 520 * t2;
+  const goatX = 760 + 340 * Math.min(t2, tS) + 50 * Math.max(0, Math.min(t2 - tS, 0.8));
+  const goatRun = t2 < tS + 0.5;
   const glX = gx - 300 + (stopped ? 0 : 0), glintX = 420 + 300 * tS - 240, glintK = Math.max(ramp(t, tS - 0.5, tS - 0.3) * 0.25, ramp(t, tS - 0.05, tS + 0.1) * (1 - 0.4 * ramp(t, tS + 0.4, tS + 1.2)));
   void glX;
   const sq = 1 - 0.2 * Math.sin(turn * Math.PI);
@@ -140,11 +142,11 @@ export const S13: React.FC = () => {
       <BandImg id="banks/bed" cam={cam} />
       <Live cam={cam} w={BED.w}>
         <Heat t={t} y={BED.horizon + 10} />
-        <Goat x={goatX} y={G - 30} s={1.9} t2={t2} />
+        <Goat x={goatX} y={G - 30} s={1.9} t2={t2} run={goatRun} />
         <Glint x={glintX} y={G + 50} k={glintK} s={1.6} />
         <ellipse cx={gx} cy={G + 4} rx={60} ry={8} fill="#2a2018" opacity={0.3} />
         <g transform={`translate(${gx} 0) scale(${sq} 1) translate(${-gx} 0)`}>
-          <Figure x={gx} y={G} h={h} dir={dir} pose={pose} look={{ body: '#c9a08a', far: '#a8806a', skin: '#a8765a', hat: 'braids', hatCol: '#2a1e18', skirt: true, rim: '#fff6e0', rimO: 0.6 }} />
+          <Figure x={gx} y={G} h={h} dir={dir} pose={pose} look={{ body: '#a85a48', far: '#7a3e32', skin: '#9a6a4e', hat: 'braids', hatCol: '#2a1e18', skirt: true, rim: '#fff6e0', rimO: 0.6 }} />
         </g>
         {!stopped && <ellipse cx={gx - 40} cy={G} rx={40} ry={10} fill="#d8c39a" opacity={0.6} />}
         <Dust t={t} w={BED.w} />
@@ -210,30 +212,54 @@ export const S15: React.FC = () => {
   const mid: [number, number] = [T[0] + (B[0] - T[0]) * 0.4, T[1] + (B[1] - T[1]) * 0.4];
   const aN = ikArmA(fx, G, fh, -1, fBase, mid[0], mid[1], -1), aF = ikArmA(fx, G, fh, -1, fBase, T[0], T[1], -1);
   const fPose: Pose = { ...fBase, ...aN, uaB: aF.uaA, faB: aF.faA };
-  // villagers pouring down the bank: start on the crest, run down the slope, reach the bed around "dug"
-  const crowd = Array.from({ length: 18 }, (_, i) => ({ x0: 40 + (i % 6) * 70 + Math.floor(i / 6) * 30, y0: 660 + (i % 6) * 22, x1: 900 + (i % 6) * 110 + Math.floor(i / 6) * 40, y1: BED.horizon + 70 + Math.floor(i / 6) * 40, d: (i % 5) * 0.12, tool: i % 3 }));
+  // villagers run down a visible earth bank (feet on the slope, dust), then spread over the bed behind the father on the 2nd "dug"
+  const slopeTop: [number, number] = [860, 900], slopeBot: [number, number] = [1300, 1150];
+  const slopeY = (x: number) => (x <= slopeTop[0] ? slopeTop[1] : x >= slopeBot[0] ? slopeBot[1] : slopeTop[1] + ((x - slopeTop[0]) / (slopeBot[0] - slopeTop[0])) * (slopeBot[1] - slopeTop[1]));
+  const crowd = Array.from({ length: 14 }, (_, i) => ({ x0: 620 + (i % 5) * 60 + Math.floor(i / 5) * 25, x1: 1040 + (i % 7) * 120, y1: 1180 + Math.floor(i / 7) * 70 + (i % 3) * 18, d: (i % 5) * 0.14 + Math.floor(i / 5) * 0.2, tool: i % 3 }));
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="banks/bed" cam={cam} />
       <Live cam={cam} w={BED.w}>
         <Heat t={t} y={BED.horizon + 10} />
+        {/* the near bank: an earth slope running down onto the riverbed */}
+        <polygon points={`560,${slopeTop[1] + 4} ${slopeTop[0]},${slopeTop[1]} ${slopeBot[0]},${slopeBot[1]} ${slopeBot[0] + 80},${slopeBot[1] + 40} 560,${slopeBot[1] + 40}`} fill="#b08a62" />
+        <path d={`M 560 ${slopeTop[1] + 4} L ${slopeTop[0]} ${slopeTop[1]} L ${slopeBot[0]} ${slopeBot[1]} L ${slopeBot[0] + 80} ${slopeBot[1] + 40}`} stroke="#d8c39a" strokeWidth={6} fill="none" />
+        {[[700, 1010], [900, 1060], [1100, 1110]].map(([x, y], i) => <path key={i} d={`M ${x} ${y} l 80 30`} stroke="#8a6a48" strokeWidth={4} opacity={0.6} />)}
         {crowd.map((c, i) => {
-          const k = clamp01((t2 - c.d) / Math.max(0.6, tD - c.d)), arrived = k >= 1;
-          const x = c.x0 + (c.x1 - c.x0) * k, y = c.y0 + (c.y1 - c.y0) * k, h = 150 + 70 * k;
-          const pose: Pose = arrived ? { lean: 40 + 10 * Math.sin(t2 * 8 + i), head: 20, thA: 14, shA: 4, thB: -8, shB: -8, uaA: 70 + 40 * Math.sin(t2 * 8 + i), faA: 60, uaB: 50, faB: 40 } : { ...walkPose(t2 * 14 + i, false, 1.4), lean: 16, uaA: c.tool < 2 ? 150 : 60, faA: c.tool < 2 ? 170 : 90 };
+          const run = clamp01((t2 - c.d) / Math.max(0.7, tD - c.d)), arrived = run >= 1;
+          // down the slope first (60%), then out across the bed to a spot behind the father
+          const onSlope = run < 0.6, k1 = run / 0.6, k2 = (run - 0.6) / 0.4;
+          const x = onSlope ? c.x0 + (slopeBot[0] - 40 - c.x0) * k1 : slopeBot[0] - 40 + (c.x1 - slopeBot[0] + 40) * k2;
+          const y = onSlope ? slopeY(x) : slopeBot[1] + (c.y1 - slopeBot[1]) * k2;
+          const h = 290 + 90 * Math.max(0, (y - 900) / 300);
+          const pose: Pose = arrived ? { lean: 40 + 10 * Math.sin(t2 * 8 + i), head: 20, thA: 14, shA: 4, thB: -8, shB: -8, uaA: 70 + 40 * Math.sin(t2 * 8 + i), faA: 60, uaB: 50, faB: 40 } : { ...walkPose(t2 * 13 + i, false, 1.35), lean: onSlope ? 4 : 16, uaA: c.tool < 2 ? 140 : 50, faA: c.tool < 2 ? 160 : 80 };
           const [hx, hy] = handA(x, y, h, 1, pose);
+          const L = 0.62 * h;
+          const tool = c.tool === 0
+            ? <g><path d={`M ${hx} ${hy} l ${arrived ? 0.3 * L : -0.45 * L} ${arrived ? 0.9 * L : -0.8 * L}`} stroke="#8a6a44" strokeWidth={6} /><rect x={hx + (arrived ? 0.3 * L : -0.45 * L) - 12} y={hy + (arrived ? 0.9 * L : -0.8 * L) - 6} width={24} height={30} rx={4} fill="#8a8e92" /></g>
+            : c.tool === 1
+              ? <g><path d={`M ${hx} ${hy} l ${arrived ? 0.35 * L : -0.4 * L} ${arrived ? 0.85 * L : -0.85 * L}`} stroke="#8a6a44" strokeWidth={6} /><path d={`M ${hx + (arrived ? 0.35 * L : -0.4 * L) - 4} ${hy + (arrived ? 0.85 * L : -0.85 * L)} l 36 14`} stroke="#8a8e92" strokeWidth={10} strokeLinecap="round" /></g>
+              : null;
           return (
             <g key={i}>
-              {c.tool < 2 && <path d={`M ${hx} ${hy} l ${arrived ? 30 : -20} ${arrived ? 60 : -50}`} stroke="#8a6a44" strokeWidth={4} />}
-              {c.tool < 2 && <rect x={hx + (arrived ? 26 : -26)} y={hy + (arrived ? 56 : -58)} width={14} height={c.tool ? 6 : 16} fill="#8a8e92" />}
-              <Figure x={x} y={y} h={h} dir={1} pose={pose} look={{ body: ['#6a5a48', '#4f6f8a', '#8a6a4a', '#c9a08a', '#3a4a3a'][i % 5], far: '#3a2e24', skin: '#8a5a40', hat: i % 4 === 0 ? 'wrap' : i % 4 === 2 ? 'hijab' : null, hatCol: i % 4 === 0 ? '#e2dccc' : '#6a5a7a', skirt: i % 4 === 2 }} />
+              <ellipse cx={x} cy={y + 3} rx={h * 0.16} ry={h * 0.025} fill="#2a2018" opacity={0.3} />
+              {!arrived && <ellipse cx={x - h * 0.15} cy={y - 4} rx={h * 0.12} ry={h * 0.035} fill="#d8c39a" opacity={0.7} />}
+              {tool}
+              <Figure x={x} y={y} h={h} dir={1} pose={pose} look={{ body: ['#6a5a48', '#4f6f8a', '#8a6a4a', '#7a3e32', '#3a4a3a'][i % 5], far: '#3a2e24', skin: '#8a5a40', hat: i % 4 === 0 ? 'wrap' : i % 4 === 2 ? 'hijab' : null, hatCol: i % 4 === 0 ? '#e2dccc' : '#6a5a7a', skirt: i % 4 === 2 }} />
             </g>
           );
         })}
         {t2 >= tD && t2 < tD + 0.6 && <ellipse cx={1150} cy={BED.horizon + 100} rx={300 + 300 * (t2 - tD)} ry={40} fill="#d8c39a" opacity={0.5 * (1 - (t2 - tD) / 0.6)} />}
         <GoldPatch x={1150} y={G + 30} w={320} h={80} t={t} />
         {/* the girl kneeling at the gold, scraping */}
-        {(() => { const gx = 1020, kp: Pose = { ...kneelPose(30, 30, 0.5 * Math.sin(t2 * 3)), uaA: 70 + 20 * Math.sin(t2 * 10), faA: 40, uaB: 60, faB: 30 }; return <Figure x={gx} y={G} h={440} dir={1} pose={kp} look={{ body: '#c9a08a', far: '#a8806a', skin: '#a8765a', hat: 'braids', hatCol: '#2a1e18', skirt: true }} />; })()}
+        {(() => {
+          // the girl kneels at the gold edge and digs with BOTH hands (alternating scoops), solid, fully opaque
+          const gx = 1000, gh = 470, kp: Pose = { ...kneelPose(38, 34, 0.5 * Math.sin(t2 * 3)) };
+          const sw = Math.sin(t2 * 10);
+          const aN = ikArmA(gx, G, gh, 1, kp, 1080 + 30 * sw, G + 10 - 16 * Math.max(0, sw), -1);
+          const aF = ikArmA(gx, G, gh, 1, kp, 1110 - 30 * sw, G + 6 - 16 * Math.max(0, -sw), -1);
+          return <Figure x={gx} y={G} h={gh} dir={1} pose={{ ...kp, ...aN, uaB: aF.uaA, faB: aF.faA }} look={{ body: '#a85a48', far: '#7a3e32', skin: '#9a6a4e', hat: 'braids', hatCol: '#2a1e18', skirt: true, rim: '#fff6e0', rimO: 0.6 }} />;
+        })()}
         <Shovel tx={T[0]} ty={T[1]} bx={B[0]} by={B[1]} s={fh / 600} />
         <ellipse cx={fx} cy={G + 4} rx={110} ry={12} fill="#2a2018" opacity={0.3} />
         <Figure x={fx} y={G} h={fh} dir={-1} pose={fPose} look={{ body: '#5a6a5a', far: '#3e4a3e', skin: '#8a5a40', hat: 'wrap', hatCol: '#e2dccc', beard: '#3a2a20', rim: '#fff6e0', rimO: 0.6 }} />

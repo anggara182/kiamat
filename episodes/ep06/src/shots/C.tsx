@@ -58,7 +58,7 @@ export const S01: React.FC = () => {
         <Haze t={t} y0={1050} y1={1350} col="#fff6e4" />
       </Live>
       <Live k={1.15} cam={cam}>
-        <ShoulderRide x={930} y={2230} h={820} lift={ramp(t2, 0, 0.9)} point={pt} sw={t2 * 1.5} />
+        <ShoulderRide x={930} y={2100} h={820} lift={ramp(t2, 0, 0.9)} point={pt} sw={t2 * 1.5} />
       </Live>
     </AbsoluteFill>
   );
