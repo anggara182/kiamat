@@ -14,18 +14,18 @@ Flash-forward hook: thousands of people on the banks of a dry riverbed staring a
 - Characters ON TWOS, camera/environment ON ONES. 24 fps. Hard cuts only.
 
 ## Palette
-- Scorched day (1–8, 11–15): bleached sky `#efe6d2` → `#d8c39a`, cracked mud `#a07c55` / cracks `#4a3524`, heat haze, harsh short shadows.
+- Scorched day (1–9, 12–16): bleached sky `#efe6d2` → `#d8c39a`, cracked mud `#a07c55` / cracks `#4a3524`, heat haze, harsh short shadows.
 - Gold `#e8b84a` core `#fff0b0`, rim `#9a6a1c`; glints with a soft star flare.
-- Night (9, 10, 16, 18): deep blue `#070b16`, moonlight `#a9b8d6`, lamp `#ffcf86`, headlights `#fff3d0`.
-- Dawn (17): `#2b2440` → `#f2a65e`, dust lit gold.
+- Night (10, 11, 18, 20): deep blue `#070b16`, moonlight `#a9b8d6`, lamp `#ffcf86`, headlights `#fff3d0`.
+- Sunset (17), dawn (19): `#2b2440` → `#f2a65e`, dust lit gold.
 - Accent `#d9a441`.
 
 ## Sets and ownership
 | Set | Owner file | Shots |
 |---|---|---|
-| `riverbed` | `C.tsx` | 1, 3, 7, 10, 15 |
-| `banks` | `S.tsx` | 2, 4, 12, 13, 14 |
-| `village` | `H.tsx` | 5, 6, 8, 9, 11 |
-| `roads` | `P.tsx` | 16, 17, 18 (title "THE RIVER RUNS DRY" + "CHAPTER 6 · THE LAST DAYS") |
+| `riverbed` | `C.tsx` | 1, 3, 7, 11, 16, 17 |
+| `banks` | `S.tsx` | 2, 4, 8, 13, 14, 15 |
+| `village` | `H.tsx` | 5, 6, 9, 10, 12 |
+| `roads` | `P.tsx` | 18, 19, 20 (title "THE RIVER RUNS DRY" + "CHAPTER 6 · THE LAST DAYS") |
 
-`sync` words in episode.json are binding (`wordAt`). Timing is an ESTIMATE until the real VO lands. Shot 10 carries the quote overlay (top ~15–40%): keep it dark and calm.
+`sync` words in episode.json are binding (`wordAt`). Timing is an ESTIMATE until the real VO lands. Shot 11 carries the quote overlay (top ~15–40%): keep it dark and calm.

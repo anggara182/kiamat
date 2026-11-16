@@ -146,18 +146,21 @@ export const S14: React.FC = () => {
             );
           })}
           {/* the giver: backlit silhouette with a warm rim, from behind; a cloth sack at his feet */}
-          <ellipse cx={G.x + 230} cy={G.y - 60} rx={170} ry={60} fill="#000" opacity={0.4} />
-          <path d={`M${G.x + 150} ${G.y - 20} C${G.x + 140} ${G.y - 240} ${G.x + 330} ${G.y - 250} ${G.x + 320} ${G.y - 20} Z`} fill="#c9b48a" />
-          <path d={`M${G.x + 170} ${G.y - 220} Q${G.x + 235} ${G.y - 270} ${G.x + 300} ${G.y - 220}`} stroke="#8a7450" strokeWidth={10} fill="none" />
           {(() => {
             // seen FROM BEHIND: his left hand reaches forward to the first cupped hands, his right hand dips into the sack
             const toL = (x: number, y: number) => ({ x: (x - G.x) / G.s, y: (y - G.y) / G.s });
-            const hl = toL(600 + 30 * reach, 1100 + 20 * (1 - reach)), hr = toL(G.x + 200 - 30 * reach, G.y - 230 + 60 * (1 - reach));
+            const hl = toL(600 + 30 * reach, 1100 + 20 * (1 - reach)), hr = toL(G.x + 150, G.y - 560 + 20 * Math.sin(t2 * 2));
             return (
               <g>
                 {[[-5, -3], [5, -3], [0, -6]].map(([dx, dy], k) => (
                   <g key={k} transform={`translate(${G.x + dx} ${G.y + dy}) scale(${G.s})`}><BackFigure f={F.giver} handL={hl} handR={hr} fill="#ffd79a" /></g>
                 ))}
+                {/* a cloth sack of grain hanging from his right hand */}
+                <g transform={`translate(${G.x + hr.x * G.s} ${G.y + hr.y * G.s})`}>
+                  <path d="M-40 0 C-110 60 -120 230 -60 270 L70 270 C130 230 120 60 50 0 Z" fill="#c9b48a" />
+                  <path d="M-40 0 C-110 60 -120 230 -60 270" stroke="#ffd79a" strokeWidth={4} fill="none" opacity={0.7} />
+                  <path d="M-30 10 Q6 -16 40 10" stroke="#8a7450" strokeWidth={10} fill="none" />
+                </g>
                 <g transform={`translate(${G.x} ${G.y}) scale(${G.s})`}><BackFigure f={F.giver} handL={hl} handR={hr} /></g>
                 {/* the handful in his left hand: grain/coins spilling, a bigger scoop on "counting" */}
                 <g transform={`translate(${G.x + hl.x * G.s} ${G.y + hl.y * G.s})`}>

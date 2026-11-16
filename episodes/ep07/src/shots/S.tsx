@@ -22,9 +22,9 @@ const digRig = (x: number, G: number, h: number, dir: number, u: number) => {
 };
 
 /** a digger: figure whose two hands hold the shovel (near hand mid-handle, far hand on the top grip) */
-const Digger: React.FC<{ x: number; G: number; h: number; dir: number; u: number; look: Look; bulk?: number; lean?: number; head?: number; stop?: number; nearTarget?: [number, number] }> = ({ x, G, h, dir, u, look, bulk = 1, lean = 0, head = 0, stop = 0, nearTarget }) => {
+const Digger: React.FC<{ x: number; G: number; h: number; dir: number; u: number; look: Look; bulk?: number; lean?: number; head?: number; stop?: number; nearTarget?: [number, number]; calm?: number }> = ({ x, G, h, dir, u, look, bulk = 1, lean = 0, head = 0, stop = 0, nearTarget, calm = 0 }) => {
   const rig = digRig(x, G, h, dir, stop > 0 ? 0.55 : u);
-  const base: Pose = { lean: 14 + 12 * rig.push * (1 - stop) + lean, head: 10 + 8 * rig.push * (1 - stop) + head, thA: 10, shA: 4, thB: -8, shB: -8, uaA: 40, faA: 60, uaB: 40, faB: 60 };
+  const base: Pose = { lean: (8 + 10 * rig.push * (1 - stop)) * (1 - 0.6 * calm) + lean, head: 10 + 8 * rig.push * (1 - stop) + head, thA: 10, shA: 4, thB: -8, shB: -8, uaA: 40, faA: 60, uaB: 40, faB: 60 };
   const mid: [number, number] = [rig.T[0] + (rig.B[0] - rig.T[0]) * 0.4, rig.T[1] + (rig.B[1] - rig.T[1]) * 0.4];
   const near = ikArmA(x, G, h, dir, base, ...(nearTarget ?? mid), -1);
   const far = ikArmA(x, G, h, dir, base, rig.T[0], rig.T[1], -1);
@@ -37,32 +37,41 @@ const Digger: React.FC<{ x: number; G: number; h: number; dir: number; u: number
   );
 };
 
-/** shot 4 — two friends dig side by side; A passes B the water bottle on "water" and they both laugh. */
+/** shot 4 — two friends dig side by side; A steps over and passes B the water bottle on "water"; they laugh, A slaps B's shoulder. */
 export const S04: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tW = wordAt(4, /^water/i, 0.89);
   const cam: Cam = { zoom: 1.04 + 0.03 * p, dx: 10 - 20 * p, dy: 0, ox: 540, oy: 1000 };
-  const G = 1660, lip = 1440, ax = 330, bx = 930, ah = 820, bh = 730;
-  const aStop = ramp(t2, tW - 1.0, tW - 0.8), bStop = ramp(t2, tW - 0.5, tW - 0.35);
-  const laugh = ramp(t2, tW + 0.15, tW + 0.35) * Math.abs(Math.sin(t2 * 9));
-  // the bottle: on the lip, picked up by A, handed across on the sync word, B lifts it
-  const meet: [number, number] = [(ax + bx) / 2 + 10, G - 0.58 * ah];
-  const k1 = ramp(t2, tW - 0.75, tW - 0.5, EOUT), k2 = ramp(t2, tW - 0.5, tW, EIO), k3 = ramp(t2, tW + 0.1, tW + 0.6, EIO);
-  const rim: [number, number] = [ax + 170, lip - 26];
-  const aHold: [number, number] = [ax + 0.25 * ah, G - 0.5 * ah];
+  const G = 1660, lip = 1440, ah = 820, bh = 730;
+  // apart while digging (they never touch), A steps in for the handover so the arms can meet
+  const step = ramp(t2, tW - 1.1, tW - 0.6, EIO);
+  const ax = 280 + 230 * step, bx = 980 - 60 * step;
+  const aStop = ramp(t2, tW - 1.2, tW - 1.0), bStop = ramp(t2, tW - 0.55, tW - 0.4);
+  const lt = ramp(t2, tW, tW + 0.12);
+  const shake = lt * Math.abs(Math.sin(t2 * 10));
+  const mouthA = lt * (0.5 + 0.5 * Math.abs(Math.sin(t2 * 10))), mouthB = lt * (0.5 + 0.5 * Math.abs(Math.sin(t2 * 10 + 1)));
+  // the bottle: from the lip into A's hand, across to B on the sync word, B drinks
+  const meet: [number, number] = [(ax + bx) / 2, G - 0.6 * ah];
+  const k1 = ramp(t2, tW - 0.9, tW - 0.6, EOUT), k2 = ramp(t2, tW - 0.45, tW, EIO), k3 = ramp(t2, tW + 0.06, tW + 0.4, EIO);
+  const rim: [number, number] = [500, lip - 26];
+  const aHold: [number, number] = [ax + 0.22 * ah, G - 0.52 * ah];
   let bot: [number, number] = rim;
   if (k1 > 0) bot = [rim[0] + (aHold[0] - rim[0]) * k1, rim[1] + (aHold[1] - rim[1]) * k1];
   if (k2 > 0) bot = [aHold[0] + (meet[0] - aHold[0]) * k2, aHold[1] + (meet[1] - aHold[1]) * k2];
-  const bMouth: [number, number] = [bx - 0.12 * bh, G - 0.86 * bh];
+  const bMouth: [number, number] = [bx - 0.14 * bh, G - 0.86 * bh];
   if (k3 > 0) bot = [meet[0] + (bMouth[0] - meet[0]) * k3, meet[1] + (bMouth[1] - meet[1]) * k3];
-  const aNear = k1 > 0 && t2 < tW + 0.1 ? bot : undefined;
+  // after the handover A's free hand slaps B's shoulder (twice, on twos)
+  const slapT = t2 - tW - 0.08;
+  const slap = slapT > 0 ? Math.abs(Math.sin(slapT * 9)) : 0;
+  const bShoulder: [number, number] = [bx + 0.03 * bh, G - (0.8 - 0.02 * slap) * bh];
+  const aNear = t2 < tW + 0.04 ? (k1 > 0 ? bot : undefined) : slapT > 0 ? bShoulder : undefined;
   const bNear = t2 >= tW - 0.25 ? bot : undefined;
   return (
     <AbsoluteFill style={{ backgroundColor: '#e9d4a8' }}>
       <BandImg id="dig/pit" cam={cam} />
       <Live cam={cam}>
-        <Digger x={ax} G={G} h={ah} dir={1} u={(t2 / 1.3) % 1} look={A_LOOK} stop={aStop} nearTarget={aNear} lean={-14 * laugh} head={-30 * laugh} />
-        <Digger x={bx} G={G} h={bh} dir={-1} u={(t2 / 1.3 + 0.5) % 1} look={B_LOOK} bulk={1.14} stop={bStop} nearTarget={bNear} lean={-12 * laugh} head={-34 * laugh + (k3 > 0.5 ? -20 : 0)} />
+        <Digger x={ax} G={G} h={ah} dir={1} u={(t2 / 1.3) % 1} look={{ ...A_LOOK, mouth: mouthA }} stop={aStop} nearTarget={aNear} lean={-18 * lt - 3 * shake} head={-24 * lt - 6 * shake} calm={step} />
+        <Digger x={bx} G={G} h={bh} dir={-1} u={(t2 / 1.3 + 0.5) % 1} look={{ ...B_LOOK, mouth: k3 > 0.3 && k3 < 1 ? 0 : mouthB }} bulk={1.14} stop={bStop} nearTarget={bNear} lean={-16 * lt - 3 * shake} head={-30 * lt - 6 * shake + (k3 > 0.5 && k3 < 1 ? -16 : 0)} />
         <Bottle x={bot[0]} y={bot[1]} rot={k3 * -60} s={1.3} />
         <PitLip y={lip} />
         <Dust t={t} />
@@ -76,8 +85,8 @@ export const S05: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tR = wordAt(5, /^rope/i, 0.75);
   const cam: Cam = { zoom: 1.02 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 560, oy: 1150, ty: jolt(t, tR, 5) };
-  const G = 1600, lip = 1700, ax = 300, ah = 800;
-  const peg: [number, number] = [610, 1610];
+  const G = 1600, lip = 1780, ax = 280, ah = 800;
+  const peg: [number, number] = [640, 1660];
   // mallet: two strikes, the second lands exactly on "rope"
   const strike = (at: number) => (t2 < at - 0.35 ? 0 : t2 < at ? EIO((t2 - at + 0.35) / 0.35) : 1 - ramp(t2, at, at + 0.4));
   const raise = t2 < tR - 0.9 ? strike(tR - 0.9 + 0.35) * 0 : Math.max(0, 1 - Math.max(strike(tR - 0.7) > 0 && t2 < tR - 0.7 ? 1 - strike(tR - 0.7) : 0, t2 >= tR - 0.35 && t2 < tR ? 1 - EIO((t2 - tR + 0.35) / 0.35) : 0));
@@ -98,16 +107,29 @@ export const S05: React.FC = () => {
       <BandImg id="dig/pit" cam={cam} />
       <Live cam={cam}>
         {/* the rope: from the peg, taut along the pit floor to a far peg */}
-        <path d={`M ${peg[0]} ${peg[1] - 30 + pegDown} L 620 ${PIT.rim + 90}`} stroke="#efe2bc" strokeWidth={9} />
-        <path d={`M ${peg[0]} ${peg[1] - 24 + pegDown} L 620 ${PIT.rim + 96}`} stroke="#2a2018" strokeWidth={4} opacity={0.25} />
-        <rect x={614} y={PIT.rim + 70} width={10} height={26} fill="#5a4028" />
+        {/* taut rope lying along the pit floor: from off-frame foreground, through the near peg, deep to a far peg (perspective) */}
+        {(() => {
+          const n: [number, number] = [740, 2340], f: [number, number] = [520, PIT.rim + 110];
+          const strip = (a: [number, number], b: [number, number], wa: number, wb: number) => `${a[0] - wa},${a[1]} ${a[0] + wa},${a[1]} ${b[0] + wb},${b[1]} ${b[0] - wb},${b[1]}`;
+          const pk: [number, number] = [peg[0], peg[1] - 6 + pegDown * 0.4];
+          return (
+            <g>
+              <polygon points={strip([n[0] + 18, n[1] + 10], [f[0] + 4, f[1] + 6], 14, 2)} fill="#2a2018" opacity={0.3} />
+              <polygon points={strip(n, pk, 14, 8)} fill="#efe2bc" />
+              <polygon points={strip(pk, f, 8, 2)} fill="#efe2bc" />
+              {[0.25, 0.5, 0.75].map((k) => <rect key={k} x={pk[0] + (f[0] - pk[0]) * k - 4} y={pk[1] + (f[1] - pk[1]) * k} width={8 * (1 - k) + 2} height={3} fill="#b8a478" />)}
+              <rect x={f[0] - 6} y={f[1] - 28} width={12} height={32} fill="#5a4028" />
+              <rect x={f[0] - 10} y={f[1] - 32} width={20} height={8} fill="#8a6a44" />
+            </g>
+          );
+        })()}
         <Digger x={ax} G={G} h={ah} dir={1} u={(t2 / 1.6) % 1} look={A_LOOK} lean={glanceA ? -10 : 0} head={glanceA ? -26 : 0} stop={t2 > tR ? 0.6 : 0} />
         {/* B kneeling at the peg with a mallet */}
         <ellipse cx={bxk} cy={G + 6} rx={150} ry={14} fill="#2a2018" opacity={0.3} />
         <Figure x={bxk} y={G} h={bh} dir={-1} pose={bPose} look={B_LOOK} />
-        <g transform={`translate(${mx} ${my}) rotate(${-100 + 80 * (1 - up)})`}><rect x={-8} y={-8} width={150} height={16} rx={6} fill="#a8865c" /><rect x={128} y={-34} width={52} height={68} rx={8} fill="#5a4430" /><rect x={128} y={-34} width={52} height={14} rx={6} fill="#7a5e44" /></g>
-        <rect x={peg[0] - 12} y={peg[1] - 70 + pegDown} width={24} height={80 - pegDown} fill="#6a4a30" />
-        <rect x={peg[0] - 16} y={peg[1] - 76 + pegDown} width={32} height={10} fill="#8a6a44" />
+        <g transform={`translate(${mx} ${my}) rotate(${-100 + 80 * (1 - up)}) scale(1.5)`}><rect x={-8} y={-8} width={150} height={16} rx={6} fill="#a8865c" /><rect x={128} y={-34} width={52} height={68} rx={8} fill="#5a4430" /><rect x={128} y={-34} width={52} height={14} rx={6} fill="#7a5e44" /></g>
+        <rect x={peg[0] - 16} y={peg[1] - 90 + pegDown} width={32} height={100 - pegDown} fill="#6a4a30" />
+        <rect x={peg[0] - 22} y={peg[1] - 98 + pegDown} width={44} height={12} fill="#8a6a44" />
         <PitLip y={lip} />
         {t2 >= tR && t2 < tR + 0.4 && <ellipse cx={peg[0]} cy={peg[1] + 10} rx={70 + 120 * (t2 - tR)} ry={14} fill="#c49a5e" opacity={0.6 * (1 - (t2 - tR) / 0.4)} />}
         <Dust t={t} />
@@ -124,7 +146,7 @@ export const S06: React.FC = () => {
   const x0 = 260, x1 = 900;
   const k = clamp01(t2 / tB), x = t2 <= tB ? x0 + (x1 - x0) * k : x1 + 60 * (t2 - tB);
   const y = bankY(x), h = 400;
-  const pose: Pose = { ...walkPose(t2 * 5.2, false, 0.75), lean: 12 * (x < x1 ? 1 : 0.4), head: 16, uaA: 168, faA: 200 };
+  const pose: Pose = { ...walkPose(t2 * 5.2, false, 0.75), lean: 12 * (x < x1 ? 1 : 0.4), head: 30, uaA: 22, faA: 150 };
   const [sx, sy] = handA(x, y, h, 1, pose);
   return (
     <AbsoluteFill style={{ backgroundColor: '#a8808a' }}>
@@ -134,7 +156,7 @@ export const S06: React.FC = () => {
         {/* long dawn shadow down the slope behind him */}
         <ellipse cx={x - 140} cy={y + 8} rx={200} ry={12} fill="#1e161c" opacity={0.45} transform={`rotate(-30 ${x} ${y})`} />
         {/* two shovels over his shoulder, blades trailing behind */}
-        {[0, 1].map((i) => <Shovel key={i} tx={sx + 14 + i * 6} ty={sy - 6 + i * 10} bx={sx - 230 + i * 20} by={sy + 70 + i * 26} s={0.6} />)}
+        {[0, 1].map((i) => <Shovel key={i} tx={sx + 36 - i * 8} ty={sy + 10 + i * 6} bx={sx - 200 + i * 14} by={sy - 96 + i * 18} s={0.6} />)}
         <Figure x={x} y={y} h={h} dir={1} pose={pose} look={{ ...B_LOOK, body: '#3a2a26', far: '#2a1e1c', skin: '#5a3a30', rim: '#ffe0c0', rimO: 0.9 }} />
         <Haze t={t} y={1500} o={0.25} />
         <Dust t={t} col="#f0d0c0" o={0.35} n={20} />
@@ -150,13 +172,14 @@ export const S12: React.FC = () => {
   const cam: Cam = { zoom: 1.0 + 0.08 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 540, oy: 700 };
   const grip = ramp(t2, tL - 0.05, tL + 0.18, EOUT);
   const seq = [-1, 0.9, -0.2, -1, 1, 0.1, -0.9, 1];
-  const dart = seq[Math.floor(t2 / 0.33) % seq.length];
+  const dart = seq[Math.floor(t2 / 0.25) % seq.length];
+  const turn = Math.sin(t2 * 2.2) * 0.6 + dart * 0.25;
   const trem = Math.sin(t2 * 47) * (3 + 5 * grip);
   return (
     <AbsoluteFill style={{ backgroundColor: '#c8a06a' }}>
       <BandImg id="dig/close" cam={cam} />
       <Live cam={cam}>
-        <Clutcher dart={dart} grip={grip} trem={trem} breath={4 * Math.sin(t2 * 6)} />
+        <Clutcher dart={dart} grip={grip} trem={trem} breath={4 * Math.sin(t2 * 6)} turn={turn} />
       </Live>
     </AbsoluteFill>
   );
