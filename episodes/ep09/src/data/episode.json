@@ -1,0 +1,1480 @@
+{
+ "id": "EP09",
+ "title": "Eighty Banners",
+ "series": "The Last Days",
+ "chapter": 9,
+ "quote": {
+  "text": "Then there will be a truce between you and Bani Al-Asfar who will betray you and attack you under eighty flags. Under each flag will be twelve thousand soldiers.",
+  "source": "SAHIH AL-BUKHARI 3176",
+  "fromShot": 10,
+  "toShot": 10
+ },
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 69.118,
+ "accent": "#d9a441",
+ "audio": true,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 3.918,
+   "act": 1,
+   "set": "banners",
+   "owner": "C",
+   "framing": "HOOK. Wide: a long hill crest under a pale sky; tall plain banners rise over it one after another until the ridge is full; in the foreground a shepherd boy (10) with his goats freezes and stares",
+   "camera": "Slow push-in past the boy",
+   "vo": "Eighty banners. Under each one, twelve thousand soldiers.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Eighty",
+     "highlight": false,
+     "start": 0.236,
+     "end": 0.382
+    },
+    {
+     "text": "banners.",
+     "highlight": false,
+     "start": 0.473,
+     "end": 0.891
+    },
+    {
+     "text": "Under",
+     "highlight": false,
+     "start": 1.291,
+     "end": 1.491
+    },
+    {
+     "text": "each",
+     "highlight": false,
+     "start": 1.545,
+     "end": 1.691
+    },
+    {
+     "text": "one,",
+     "highlight": false,
+     "start": 1.8,
+     "end": 2.018
+    },
+    {
+     "text": "twelve",
+     "highlight": false,
+     "start": 2.364,
+     "end": 2.636
+    },
+    {
+     "text": "thousand",
+     "highlight": false,
+     "start": 2.691,
+     "end": 3.0
+    },
+    {
+     "text": "soldiers.",
+     "highlight": true,
+     "start": 3.109,
+     "end": 3.564
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Banners rising over the ridge, the frozen boy",
+   "notes": "Alive from frame 0 (the first banners already rising, goats moving). Ridge fills on \"soldiers\". Banners have NO real symbols, crosses, crescents, or national colours: plain cloth in dark tones.",
+   "sync": [
+    "soldiers"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 3.918,
+   "end": 7.609,
+   "act": 1,
+   "set": "banners",
+   "owner": "C",
+   "framing": "Extreme wide: from above the ridge, the army pours down the far slope into a valley like a dark flood, banners swaying above it",
+   "camera": "High, slow crane",
+   "vo": "Nearly a million men, marching under one broken promise.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Nearly",
+     "highlight": false,
+     "start": 4.018,
+     "end": 4.273
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 4.327,
+     "end": 4.382
+    },
+    {
+     "text": "million",
+     "highlight": false,
+     "start": 4.436,
+     "end": 4.709
+    },
+    {
+     "text": "men,",
+     "highlight": false,
+     "start": 4.782,
+     "end": 5.018
+    },
+    {
+     "text": "marching",
+     "highlight": false,
+     "start": 5.491,
+     "end": 5.782
+    },
+    {
+     "text": "under",
+     "highlight": false,
+     "start": 5.836,
+     "end": 6.0
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 6.164,
+     "end": 6.291
+    },
+    {
+     "text": "broken",
+     "highlight": false,
+     "start": 6.382,
+     "end": 6.655
+    },
+    {
+     "text": "promise.",
+     "highlight": true,
+     "start": 6.727,
+     "end": 7.145
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The dark flood of men",
+   "notes": "Tiny silhouettes only. Reveal on \"promise\".",
+   "sync": [
+    "million",
+    "promise"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 7.609,
+   "end": 9.245,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium: a long table in a bright hall; two delegations (simple faces, plain suits, no insignia) stand; two leaders lean across and shake hands; cameras flash",
+   "camera": "Slow push-in on the hands",
+   "vo": "It began with a handshake.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "It",
+     "highlight": false,
+     "start": 7.709,
+     "end": 7.782
+    },
+    {
+     "text": "began",
+     "highlight": false,
+     "start": 7.818,
+     "end": 8.145
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 8.164,
+     "end": 8.255
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 8.291,
+     "end": 8.327
+    },
+    {
+     "text": "handshake.",
+     "highlight": true,
+     "start": 8.364,
+     "end": 8.873
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The handshake",
+   "notes": "Hands meet on \"handshake\"; flashes.",
+   "sync": [
+    "handshake"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 9.245,
+   "end": 13.827,
+   "act": 1,
+   "set": "peace",
+   "owner": "S",
+   "framing": "Wide: a city square full of people celebrating; a man lifts his daughter, an old couple embrace, paper confetti; NO flags",
+   "camera": "Slow crane down",
+   "vo": "A truce between the believers and the Romans, exactly as the Prophet had foretold.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 9.345,
+     "end": 9.4
+    },
+    {
+     "text": "truce",
+     "highlight": false,
+     "start": 9.473,
+     "end": 9.745
+    },
+    {
+     "text": "between",
+     "highlight": false,
+     "start": 9.782,
+     "end": 10.036
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 10.073,
+     "end": 10.145
+    },
+    {
+     "text": "believers",
+     "highlight": false,
+     "start": 10.182,
+     "end": 10.636
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 10.655,
+     "end": 10.727
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 10.764,
+     "end": 10.818
+    },
+    {
+     "text": "Romans,",
+     "highlight": false,
+     "start": 10.873,
+     "end": 11.255
+    },
+    {
+     "text": "exactly",
+     "highlight": false,
+     "start": 11.691,
+     "end": 12.164
+    },
+    {
+     "text": "as",
+     "highlight": false,
+     "start": 12.218,
+     "end": 12.291
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 12.327,
+     "end": 12.418
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 12.455,
+     "end": 12.764
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 12.8,
+     "end": 12.909
+    },
+    {
+     "text": "foretold.",
+     "highlight": true,
+     "start": 12.964,
+     "end": 13.455
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Celebrating families",
+   "notes": "Confetti burst on \"foretold\".",
+   "sync": [
+    "Romans",
+    "foretold"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 13.827,
+   "end": 20.318,
+   "act": 1,
+   "set": "peace",
+   "owner": "S",
+   "framing": "Medium-wide: a sunny port market; cranes and ships behind; kids chase each other between fruit stalls; a merchant laughs with a foreign buyer",
+   "camera": "Slow lateral track",
+   "vo": "For years, it held. Ports opened. Markets filled. Children grew up without ever hearing a siren.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "For",
+     "highlight": false,
+     "start": 13.927,
+     "end": 14.018
+    },
+    {
+     "text": "years,",
+     "highlight": false,
+     "start": 14.127,
+     "end": 14.418
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 14.473,
+     "end": 14.545
+    },
+    {
+     "text": "held.",
+     "highlight": false,
+     "start": 14.582,
+     "end": 14.873
+    },
+    {
+     "text": "Ports",
+     "highlight": false,
+     "start": 15.345,
+     "end": 15.582
+    },
+    {
+     "text": "opened.",
+     "highlight": false,
+     "start": 15.655,
+     "end": 15.964
+    },
+    {
+     "text": "Markets",
+     "highlight": false,
+     "start": 16.327,
+     "end": 16.636
+    },
+    {
+     "text": "filled.",
+     "highlight": false,
+     "start": 16.727,
+     "end": 17.018
+    },
+    {
+     "text": "Children",
+     "highlight": false,
+     "start": 17.673,
+     "end": 18.0
+    },
+    {
+     "text": "grew",
+     "highlight": false,
+     "start": 18.091,
+     "end": 18.255
+    },
+    {
+     "text": "up",
+     "highlight": false,
+     "start": 18.345,
+     "end": 18.455
+    },
+    {
+     "text": "without",
+     "highlight": false,
+     "start": 18.473,
+     "end": 18.8
+    },
+    {
+     "text": "ever",
+     "highlight": false,
+     "start": 18.891,
+     "end": 19.091
+    },
+    {
+     "text": "hearing",
+     "highlight": false,
+     "start": 19.127,
+     "end": 19.382
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 19.436,
+     "end": 19.491
+    },
+    {
+     "text": "siren.",
+     "highlight": true,
+     "start": 19.564,
+     "end": 19.927
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Kids running through the market",
+   "notes": "A child's kite rises on \"siren\" (ironic calm).",
+   "sync": [
+    "ports",
+    "siren"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 20.318,
+   "end": 24.209,
+   "act": 1,
+   "set": "banners",
+   "owner": "C",
+   "framing": "Extreme wide: two allied columns marching side by side across a plain toward a dust storm on the horizon; then the dust clears and the columns raise their arms; silhouettes, no gore",
+   "camera": "Slow push-in",
+   "vo": "Together, they even marched against a common enemy... and won.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Together,",
+     "highlight": false,
+     "start": 20.418,
+     "end": 20.8
+    },
+    {
+     "text": "they",
+     "highlight": false,
+     "start": 21.145,
+     "end": 21.236
+    },
+    {
+     "text": "even",
+     "highlight": false,
+     "start": 21.309,
+     "end": 21.491
+    },
+    {
+     "text": "marched",
+     "highlight": false,
+     "start": 21.545,
+     "end": 21.8
+    },
+    {
+     "text": "against",
+     "highlight": false,
+     "start": 21.855,
+     "end": 22.109
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 22.145,
+     "end": 22.2
+    },
+    {
+     "text": "common",
+     "highlight": false,
+     "start": 22.255,
+     "end": 22.509
+    },
+    {
+     "text": "enemy...",
+     "highlight": false,
+     "start": 22.582,
+     "end": 22.855
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 23.345,
+     "end": 23.455
+    },
+    {
+     "text": "won.",
+     "highlight": true,
+     "start": 23.527,
+     "end": 23.8
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Two columns as one, the cheer",
+   "notes": "Arms raised on \"won\".",
+   "sync": [
+    "won"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 24.209,
+   "end": 28.336,
+   "act": 1,
+   "set": "peace",
+   "owner": "S",
+   "framing": "Medium: an army camp at dusk; two soldiers from the two sides (plain uniforms of different grey/olive tones, no symbols) stand chest to chest shouting; others rush in to pull them apart",
+   "camera": "Handheld, push-in",
+   "vo": "But on the day of victory, a quarrel broke out over whose victory it was.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "But",
+     "highlight": false,
+     "start": 24.309,
+     "end": 24.382
+    },
+    {
+     "text": "on",
+     "highlight": false,
+     "start": 24.436,
+     "end": 24.491
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.527,
+     "end": 24.6
+    },
+    {
+     "text": "day",
+     "highlight": false,
+     "start": 24.655,
+     "end": 24.782
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 24.836,
+     "end": 24.927
+    },
+    {
+     "text": "victory,",
+     "highlight": false,
+     "start": 24.982,
+     "end": 25.382
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 25.709,
+     "end": 25.782
+    },
+    {
+     "text": "quarrel",
+     "highlight": false,
+     "start": 25.855,
+     "end": 26.109
+    },
+    {
+     "text": "broke",
+     "highlight": false,
+     "start": 26.2,
+     "end": 26.418
+    },
+    {
+     "text": "out",
+     "highlight": false,
+     "start": 26.491,
+     "end": 26.618
+    },
+    {
+     "text": "over",
+     "highlight": false,
+     "start": 26.673,
+     "end": 26.836
+    },
+    {
+     "text": "whose",
+     "highlight": false,
+     "start": 26.891,
+     "end": 27.091
+    },
+    {
+     "text": "victory",
+     "highlight": false,
+     "start": 27.145,
+     "end": 27.455
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 27.491,
+     "end": 27.582
+    },
+    {
+     "text": "was.",
+     "highlight": true,
+     "start": 27.636,
+     "end": 27.945
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dusk",
+   "hero": "Two men chest to chest",
+   "notes": "No weapons drawn, no blows. The shove on \"was\".",
+   "sync": [
+    "quarrel",
+    "was"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 28.336,
+   "end": 30.591,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Close: a hand drops the signed treaty into a fireplace; the paper curls and blackens; the signature burns last",
+   "camera": "Static macro",
+   "vo": "Within a week, the treaty was ash.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Within",
+     "highlight": false,
+     "start": 28.436,
+     "end": 28.636
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 28.691,
+     "end": 28.727
+    },
+    {
+     "text": "week,",
+     "highlight": false,
+     "start": 28.782,
+     "end": 29.018
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 29.309,
+     "end": 29.382
+    },
+    {
+     "text": "treaty",
+     "highlight": false,
+     "start": 29.436,
+     "end": 29.69
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 29.727,
+     "end": 29.855
+    },
+    {
+     "text": "ash.",
+     "highlight": true,
+     "start": 29.964,
+     "end": 30.218
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The burning signature",
+   "notes": "Paper collapses to ash on \"ash\".",
+   "sync": [
+    "ash"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 30.591,
+   "end": 34.191,
+   "act": 1,
+   "set": "peace",
+   "owner": "S",
+   "framing": "Wide: the sunny port market from shot 5, now at night: stalls shuttered, a merchant pulls down a metal shutter; behind him huge dark warship silhouettes (no flags, no markings) slide into the harbour",
+   "camera": "Slow push-in past the merchant",
+   "vo": "The same ports that had sold them fruit now filled with their warships.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 30.691,
+     "end": 30.764
+    },
+    {
+     "text": "same",
+     "highlight": false,
+     "start": 30.836,
+     "end": 31.055
+    },
+    {
+     "text": "ports",
+     "highlight": false,
+     "start": 31.109,
+     "end": 31.364
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 31.4,
+     "end": 31.473
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 31.509,
+     "end": 31.636
+    },
+    {
+     "text": "sold",
+     "highlight": false,
+     "start": 31.709,
+     "end": 31.891
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 31.909,
+     "end": 32.073
+    },
+    {
+     "text": "fruit",
+     "highlight": false,
+     "start": 32.145,
+     "end": 32.4
+    },
+    {
+     "text": "now",
+     "highlight": false,
+     "start": 32.455,
+     "end": 32.636
+    },
+    {
+     "text": "filled",
+     "highlight": false,
+     "start": 32.709,
+     "end": 32.909
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 32.945,
+     "end": 33.036
+    },
+    {
+     "text": "their",
+     "highlight": false,
+     "start": 33.073,
+     "end": 33.2
+    },
+    {
+     "text": "warships.",
+     "highlight": true,
+     "start": 33.255,
+     "end": 33.782
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Shutter coming down, warships behind",
+   "notes": "The shutter slams on \"warships\".",
+   "sync": [
+    "warships"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 34.191,
+   "end": 42.464,
+   "act": 1,
+   "set": "banners",
+   "owner": "C",
+   "framing": "Extreme wide: dusk; a dark coastline crowded with ships and endless camps, banners along the shore, campfires beginning to glow",
+   "camera": "Very slow push-in",
+   "vo": "The Prophet had said there would be a truce with the Romans. They would betray it, and come under eighty banners, under each banner twelve thousand.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 34.291,
+     "end": 34.364
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 34.4,
+     "end": 34.673
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 34.709,
+     "end": 34.836
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 34.909,
+     "end": 35.127
+    },
+    {
+     "text": "there",
+     "highlight": false,
+     "start": 35.164,
+     "end": 35.273
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 35.291,
+     "end": 35.4
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 35.436,
+     "end": 35.509
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 35.564,
+     "end": 35.618
+    },
+    {
+     "text": "truce",
+     "highlight": false,
+     "start": 35.709,
+     "end": 36.018
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 36.073,
+     "end": 36.145
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 36.182,
+     "end": 36.255
+    },
+    {
+     "text": "Romans.",
+     "highlight": false,
+     "start": 36.309,
+     "end": 36.745
+    },
+    {
+     "text": "They",
+     "highlight": false,
+     "start": 37.309,
+     "end": 37.4
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 37.418,
+     "end": 37.527
+    },
+    {
+     "text": "betray",
+     "highlight": false,
+     "start": 37.564,
+     "end": 37.891
+    },
+    {
+     "text": "it,",
+     "highlight": false,
+     "start": 37.945,
+     "end": 38.073
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 38.455,
+     "end": 38.545
+    },
+    {
+     "text": "come",
+     "highlight": false,
+     "start": 38.6,
+     "end": 38.745
+    },
+    {
+     "text": "under",
+     "highlight": false,
+     "start": 38.8,
+     "end": 39.073
+    },
+    {
+     "text": "eighty",
+     "highlight": false,
+     "start": 39.145,
+     "end": 39.309
+    },
+    {
+     "text": "banners,",
+     "highlight": false,
+     "start": 39.418,
+     "end": 39.855
+    },
+    {
+     "text": "under",
+     "highlight": false,
+     "start": 40.291,
+     "end": 40.509
+    },
+    {
+     "text": "each",
+     "highlight": false,
+     "start": 40.564,
+     "end": 40.764
+    },
+    {
+     "text": "banner",
+     "highlight": false,
+     "start": 40.818,
+     "end": 41.055
+    },
+    {
+     "text": "twelve",
+     "highlight": false,
+     "start": 41.2,
+     "end": 41.473
+    },
+    {
+     "text": "thousand.",
+     "highlight": true,
+     "start": 41.564,
+     "end": 42.036
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Ships and banners on the shore",
+   "notes": "QUOTE overlay on this shot: keep the top ~15–40% dark and calm.",
+   "sync": [
+    "thousand"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 42.464,
+   "end": 48.718,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium: dawn at a doorway; a young volunteer (18, no beard, a backpack) says goodbye to his mother; she presses a wrapped loaf into his hands and holds his face; behind him in the street other men walk past",
+   "camera": "Slow push-in",
+   "vo": "In every city, men answered the call. Farmers. Teachers. Boys too young to shave.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "In",
+     "highlight": false,
+     "start": 42.564,
+     "end": 42.636
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 42.691,
+     "end": 42.855
+    },
+    {
+     "text": "city,",
+     "highlight": false,
+     "start": 42.982,
+     "end": 43.218
+    },
+    {
+     "text": "men",
+     "highlight": false,
+     "start": 43.636,
+     "end": 43.891
+    },
+    {
+     "text": "answered",
+     "highlight": false,
+     "start": 43.982,
+     "end": 44.255
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 44.291,
+     "end": 44.364
+    },
+    {
+     "text": "call.",
+     "highlight": false,
+     "start": 44.418,
+     "end": 44.709
+    },
+    {
+     "text": "Farmers.",
+     "highlight": false,
+     "start": 45.2,
+     "end": 45.673
+    },
+    {
+     "text": "Teachers.",
+     "highlight": false,
+     "start": 46.091,
+     "end": 46.545
+    },
+    {
+     "text": "Boys",
+     "highlight": false,
+     "start": 47.055,
+     "end": 47.364
+    },
+    {
+     "text": "too",
+     "highlight": false,
+     "start": 47.418,
+     "end": 47.545
+    },
+    {
+     "text": "young",
+     "highlight": false,
+     "start": 47.582,
+     "end": 47.745
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 47.782,
+     "end": 47.873
+    },
+    {
+     "text": "shave.",
+     "highlight": true,
+     "start": 47.927,
+     "end": 48.291
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "The mother's hands on his face",
+   "notes": "Tender. She lets go on \"shave\".",
+   "sync": [
+    "farmers",
+    "shave"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 48.718,
+   "end": 54.427,
+   "act": 1,
+   "set": "homes",
+   "owner": "H",
+   "framing": "Medium: an empty classroom with chairs up, then (same shot, camera drifts) through its window a narrow street where a mother in a headscarf stands at an upstairs window, watching the road",
+   "camera": "Slow lateral drift",
+   "vo": "Schools emptied. Factories fell silent. On every street, a mother stood at a window.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Schools",
+     "highlight": false,
+     "start": 48.818,
+     "end": 49.145
+    },
+    {
+     "text": "emptied.",
+     "highlight": false,
+     "start": 49.255,
+     "end": 49.618
+    },
+    {
+     "text": "Factories",
+     "highlight": false,
+     "start": 50.073,
+     "end": 50.527
+    },
+    {
+     "text": "fell",
+     "highlight": false,
+     "start": 50.582,
+     "end": 50.764
+    },
+    {
+     "text": "silent.",
+     "highlight": false,
+     "start": 50.818,
+     "end": 51.2
+    },
+    {
+     "text": "On",
+     "highlight": false,
+     "start": 51.655,
+     "end": 51.745
+    },
+    {
+     "text": "every",
+     "highlight": false,
+     "start": 51.8,
+     "end": 51.945
+    },
+    {
+     "text": "street,",
+     "highlight": false,
+     "start": 52.073,
+     "end": 52.364
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 52.618,
+     "end": 52.655
+    },
+    {
+     "text": "mother",
+     "highlight": false,
+     "start": 52.709,
+     "end": 52.909
+    },
+    {
+     "text": "stood",
+     "highlight": false,
+     "start": 53.055,
+     "end": 53.218
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 53.236,
+     "end": 53.291
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 53.345,
+     "end": 53.382
+    },
+    {
+     "text": "window.",
+     "highlight": true,
+     "start": 53.418,
+     "end": 53.782
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Empty chairs, the mother at the window",
+   "notes": "She grips the curtain on \"window\".",
+   "sync": [
+    "silent",
+    "window"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 54.427,
+   "end": 58.517,
+   "act": 1,
+   "set": "road",
+   "owner": "P",
+   "framing": "Wide: a mountain road at night; a long line of trucks' headlights winding north; inside the nearest cab a middle-aged farmer looks at a small printed photo of his family, then puts it in his pocket",
+   "camera": "Slow drift alongside the cab",
+   "vo": "They drove north through the night, toward a valley none of them had ever seen.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "They",
+     "highlight": false,
+     "start": 54.527,
+     "end": 54.636
+    },
+    {
+     "text": "drove",
+     "highlight": false,
+     "start": 54.691,
+     "end": 54.964
+    },
+    {
+     "text": "north",
+     "highlight": false,
+     "start": 55.018,
+     "end": 55.273
+    },
+    {
+     "text": "through",
+     "highlight": false,
+     "start": 55.291,
+     "end": 55.436
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 55.473,
+     "end": 55.527
+    },
+    {
+     "text": "night,",
+     "highlight": false,
+     "start": 55.582,
+     "end": 55.836
+    },
+    {
+     "text": "toward",
+     "highlight": false,
+     "start": 56.255,
+     "end": 56.382
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 56.436,
+     "end": 56.491
+    },
+    {
+     "text": "valley",
+     "highlight": false,
+     "start": 56.545,
+     "end": 56.873
+    },
+    {
+     "text": "none",
+     "highlight": false,
+     "start": 56.927,
+     "end": 57.055
+    },
+    {
+     "text": "of",
+     "highlight": false,
+     "start": 57.091,
+     "end": 57.164
+    },
+    {
+     "text": "them",
+     "highlight": false,
+     "start": 57.2,
+     "end": 57.309
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 57.345,
+     "end": 57.436
+    },
+    {
+     "text": "ever",
+     "highlight": false,
+     "start": 57.491,
+     "end": 57.673
+    },
+    {
+     "text": "seen.",
+     "highlight": true,
+     "start": 57.727,
+     "end": 58.055
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The photo, the line of lights",
+   "notes": "No phone. Photo pocketed on \"seen\".",
+   "sync": [
+    "north",
+    "seen"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 58.517,
+   "end": 64.918,
+   "act": 1,
+   "set": "banners",
+   "owner": "C",
+   "framing": "Extreme wide: dawn mist in a valley; two vast armies face each other from opposite slopes, banners above both; a single bird crosses the gap",
+   "camera": "Slow push-in into the gap",
+   "vo": "And at dawn, the two armies faced each other, at a place the Prophet had named fourteen centuries before.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 58.617,
+     "end": 58.69
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 58.727,
+     "end": 58.836
+    },
+    {
+     "text": "dawn,",
+     "highlight": false,
+     "start": 58.89,
+     "end": 59.218
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 59.564,
+     "end": 59.655
+    },
+    {
+     "text": "two",
+     "highlight": false,
+     "start": 59.691,
+     "end": 59.836
+    },
+    {
+     "text": "armies",
+     "highlight": false,
+     "start": 59.909,
+     "end": 60.182
+    },
+    {
+     "text": "faced",
+     "highlight": false,
+     "start": 60.236,
+     "end": 60.455
+    },
+    {
+     "text": "each",
+     "highlight": false,
+     "start": 60.509,
+     "end": 60.618
+    },
+    {
+     "text": "other,",
+     "highlight": false,
+     "start": 60.691,
+     "end": 60.873
+    },
+    {
+     "text": "at",
+     "highlight": false,
+     "start": 61.291,
+     "end": 61.345
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 61.4,
+     "end": 61.436
+    },
+    {
+     "text": "place",
+     "highlight": false,
+     "start": 61.491,
+     "end": 61.727
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 61.764,
+     "end": 61.855
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 61.891,
+     "end": 62.182
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 62.218,
+     "end": 62.345
+    },
+    {
+     "text": "named",
+     "highlight": false,
+     "start": 62.382,
+     "end": 62.655
+    },
+    {
+     "text": "fourteen",
+     "highlight": false,
+     "start": 62.727,
+     "end": 63.091
+    },
+    {
+     "text": "centuries",
+     "highlight": false,
+     "start": 63.2,
+     "end": 63.564
+    },
+    {
+     "text": "before.",
+     "highlight": true,
+     "start": 63.618,
+     "end": 64.018
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Two armies, the empty valley between",
+   "notes": "CLIFFHANGER: heartbeat. The bird crosses on \"before\".",
+   "sync": [
+    "before"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 64.918,
+   "end": 69.118,
+   "act": 1,
+   "set": "road",
+   "owner": "P",
+   "framing": "TITLE CARD: \"EIGHTY BANNERS\" + \"CHAPTER 9 · THE LAST DAYS\" over dark mist with faint banners",
+   "camera": "Static, tiny push",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "Title",
+   "notes": "Deep bass drop on the cut.",
+   "sync": []
+  }
+ ],
+ "timingSource": "ai33 eleven_v3 transcript, gaps>0.9s cut to 0.5s, atempo x1.1, gaps>0.9s cut to 0.5s (1), atempo x1.1"
+}

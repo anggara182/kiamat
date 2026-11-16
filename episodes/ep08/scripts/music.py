@@ -1,0 +1,40 @@
+"""EP08 score: military pulse under the hook -> BOOM + braam on "swallowed", dead air -> the giver's warm eerie theme ->
+hope strings under the whispers -> minor turn on "oppression" -> one low note on "ran" -> luminous pad for Mecca ->
+dark strings + hit on "him" -> war drums for the column -> solemn quote + braam on "swallow" -> tremolo build, SILENCE,
+BOOM on "opened" -> empty wind piano -> luminous swell for the hands -> cliffhanger tremolo -> title drop."""
+import os, sys
+sys.path.insert(0, os.path.dirname(__file__))
+from scorelib import *  # noqa
+s = Score(os.path.join(os.path.dirname(__file__), ".."), 72)
+st, w = s.st, s.w
+s.pad("Dmb9", 0, st(2), 0.38, cutoff=700, a=0.05)
+s.drums(0, st(2), 0.55, dens=1.0)
+s.hit(w(1, r"^man"), 0.6)
+s.hit(w(2, r"^swallowed"), 0.95); s.braam(w(2, r"^swallowed"), 0.6)
+s.silence(w(2, r"^swallowed") + 0.9, st(3) + 0.1)
+s.pad("Fadd#11", st(3), st(4), 0.3, cutoff=1500, a=0.6)
+s.notes(st(3), [(0.4, "C6"), (1.4, "A5"), (2.4, "B5"), (3.4, "F5"), (4.4, "A5")], g=0.22, t_max=st(4))
+s.prog(["F", "C", "Bb", "F"], st(4), st(5), beats=2, g=0.3, kind="strings", bass_g=0.16)
+s.prog(["Dm", "Bb", "Gm", "A"], st(5), st(6), beats=2, g=0.32, kind="strings", bass_g=0.18)
+s.strings(["D2", "A2"], st(6), st(7), 0.22, a=0.3)
+s.hit(w(6, r"^ran"), 0.45)
+s.pad("F", st(7), st(8), 0.36, cutoff=2200, a=0.8)
+s.strings(["F4", "A4", "C5"], st(7), st(8), 0.22, a=1.2)
+s.swell(w(7, r"^mecca"), 1.4, 0.18)
+s.strings(["D2", "A2", "D3", "Eb3"], st(8), st(9), 0.32, a=0.3)
+s.hit(w(8, r"^him"), 0.65)
+s.drums(st(9), st(10), 0.7, dens=1.5)
+s.prog(["Dm", "Bb"], st(9), st(10), beats=1, g=0.34, kind="strings", bass_g=0.24)
+s.pad("Dm", st(10), st(11), 0.42, cutoff=900, a=0.6)
+s.notes(st(10), [(0.6, "A4"), (2.2, "F4"), (3.8, "E4"), (5.4, "D4")], t_max=w(10, r"^swallow"))
+s.braam(s.S[10]["words"][-1]["end"] + 0.05, 0.7)
+s.strings(["D3", "Eb3", "A3", "D4"], st(11), w(12, r"^opened"), 0.42, a=0.2, trem=0.9)
+s.swell(w(11, r"^tremble") + 0.5, 1.0, 0.3)
+s.silence(w(11, r"^tremble") + 0.55, w(12, r"^opened") - 0.02)
+s.hit(w(12, r"^opened"), 1.0); s.braam(w(12, r"^opened"), 0.5)
+s.pad("Dm", st(13), st(14), 0.25, cutoff=600, a=0.5)
+s.notes(st(13), [(0.5, "D4"), (1.8, "A3"), (3.0, "C4")], g=0.3, t_max=st(14))
+s.prog(["F", "C"], st(14), st(15), beats=3, g=0.36, kind="strings", bass_g=0.2)
+s.pad("F", st(14), st(15), 0.3, cutoff=2000, a=0.4)
+s.cliff(w(15, r"^treaty"), 0.36)
+s.render()

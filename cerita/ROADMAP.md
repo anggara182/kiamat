@@ -15,9 +15,9 @@ Status sumber: ✔ = nomor sudah dicek di sesi 13 Nov; *cek* = wajib diverifikas
 | | Negeri | 5 | Old Gods ✅ | Ilmu dicabut, berhala lama disembah lagi | Bukhari 80/81 ✔; Bukhari 7116, Muslim 2906/2907 *cek* |
 | 3 Bumi & harta | Kawasan | 6 | The River Runs Dry ✅ | Efrat mengering, gadis kecil menemukan kilau; gunung emas tersingkap, sejuta orang berjalan ke sungai (harta melimpah & jazirah hijau dilebur jadi latar) | Bukhari 7119, Muslim 2894 ✔ |
 | | Dunia → Efrat | 7 | Ninety-Nine ✅ | Perebutan emas; 99 dari 100 terbunuh; kail: pria tanpa wajah membagi harta tanpa menghitung | Muslim 2894a ✔; Muslim 2913 ✔ (INTERPRETASI) |
-| 4 Mahdi & perang | Dunia → Syam | 8 | The Awaited | Seorang pemimpin dari keluarga Nabi (tanpa wajah; INTERPRETASI) | Abu Dawud 4282/4284/4285 ✔ (hasan/sahih); Muslim 2913, 156 ✔ |
-| | Dunia | 9 | Eighty Banners | Gencatan senjata dikhianati, 80 panji × 12.000 | Bukhari 3176 *cek* |
-| | Syam | 10 | The Fall | Penaklukan besar, lalu teriakan bahwa Dajjal telah keluar | Muslim 2897 ✔; pasukan ditelan bumi Muslim 2882 ✔ |
+| 4 Mahdi & perang | Makkah → gurun | 8 | The Refuge ✅ | Pemberi tanpa wajah lari ke Baitullah; pasukan yang dikirim ditelan bumi; kail: perjanjian damai di utara | Muslim 2882 ✔; Abu Dawud 4282 ✔ (Mahdi: INTERPRETASI) |
+| | Dunia | 9 | Eighty Banners ✅ | Gencatan senjata dengan Romawi, menang bersama, lalu dikhianati: 80 panji × 12.000 | Bukhari 3176 ✔; Abu Dawud 4292 ✔ |
+| | Syam | 10 | The Fall | Pertempuran besar (sepertiga lari, sepertiga gugur, sepertiga menang), penaklukan, lalu teriakan bahwa Dajjal telah keluar | Muslim 2897 ✔ |
 | 5 Kekeringan | Global | 12 | The Sky Holds Back | Tahun-tahun langit menahan hujan dan bumi menahan tanaman | Ibnu Majah 4077 *cek* (derajat diperselisihkan → INTERPRETASI bila lemah) |
 | | Global | 13 | Hunger | Kelaparan menyiapkan panggung bagi penipu terbesar | (sama) |
 | 6 Dajjal | Seluruh bumi | 14 | A Day Like a Year | Hari pertama Dajjal sepanjang setahun; pertanyaan soal salat | Muslim 2937 ✔ |

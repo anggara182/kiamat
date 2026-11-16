@@ -1,0 +1,1530 @@
+{
+ "id": "EP08",
+ "title": "The Refuge",
+ "series": "The Last Days",
+ "chapter": 8,
+ "quote": {
+  "text": "A seeker of refuge would seek refuge in the Sacred House and an army would be sent to him, and when it would enter a plain ground, it would be made to sink.",
+  "source": "SAHIH MUSLIM 2882",
+  "fromShot": 10,
+  "toShot": 10
+ },
+ "fps": 24,
+ "width": 1080,
+ "height": 1920,
+ "durationSec": 62.391,
+ "accent": "#d9a441",
+ "audio": true,
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 3.009,
+   "act": 1,
+   "set": "desert",
+   "owner": "C",
+   "framing": "HOOK. Wide, low: night desert; an endless column of armoured trucks with headlights rolls toward camera across a flat plain; in the foreground a young soldier (20s, helmet, simple face) rides on the side of a truck, staring ahead; thin cracks start to run through the sand under the wheels",
+   "camera": "Slow push-in toward the column",
+   "vo": "An army marched into the desert to kill one man.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "An",
+     "highlight": false,
+     "start": 0.218,
+     "end": 0.345
+    },
+    {
+     "text": "army",
+     "highlight": false,
+     "start": 0.418,
+     "end": 0.6
+    },
+    {
+     "text": "marched",
+     "highlight": false,
+     "start": 0.691,
+     "end": 0.964
+    },
+    {
+     "text": "into",
+     "highlight": false,
+     "start": 1.0,
+     "end": 1.164
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 1.2,
+     "end": 1.273
+    },
+    {
+     "text": "desert",
+     "highlight": false,
+     "start": 1.309,
+     "end": 1.636
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 1.691,
+     "end": 1.782
+    },
+    {
+     "text": "kill",
+     "highlight": false,
+     "start": 1.836,
+     "end": 2.018
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 2.091,
+     "end": 2.182
+    },
+    {
+     "text": "man.",
+     "highlight": true,
+     "start": 2.255,
+     "end": 2.582
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The column of lights, the young soldier",
+   "notes": "Alive from frame 0 (headlights bouncing, dust). The first crack appears on \"man\".",
+   "sync": [
+    "man"
+   ]
+  },
+  {
+   "id": 2,
+   "start": 3.009,
+   "end": 4.445,
+   "act": 1,
+   "set": "desert",
+   "owner": "C",
+   "framing": "Extreme wide: the plain caves in under the column; the headlights tilt and sink into a vast collapsing pit, a wall of dust rising and swallowing the lights. No bodies",
+   "camera": "Static, then a small shake",
+   "vo": "The desert swallowed it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "The",
+     "highlight": false,
+     "start": 3.109,
+     "end": 3.182
+    },
+    {
+     "text": "desert",
+     "highlight": false,
+     "start": 3.236,
+     "end": 3.545
+    },
+    {
+     "text": "swallowed",
+     "highlight": true,
+     "start": 3.618,
+     "end": 3.927
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 3.964,
+     "end": 4.073
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Lights sinking, the dust wall",
+   "notes": "The collapse starts on \"swallowed\". Hard cut after.",
+   "sync": [
+    "swallowed"
+   ]
+  },
+  {
+   "id": 3,
+   "start": 4.445,
+   "end": 9.809,
+   "act": 1,
+   "set": "streets",
+   "owner": "P",
+   "framing": "Medium-wide: the quiet old stone street from Chapter 7; the giver seen ONLY FROM BEHIND (back of head, shoulders square to camera), backlit by the warm doorway, scooping handfuls into the hands of a line of poor people",
+   "camera": "Slow push-in from behind him",
+   "vo": "Weeks earlier, he was just a man in a quiet city, giving away gold without counting.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Weeks",
+     "highlight": false,
+     "start": 4.545,
+     "end": 4.727
+    },
+    {
+     "text": "earlier,",
+     "highlight": false,
+     "start": 4.836,
+     "end": 5.164
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 5.527,
+     "end": 5.6
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 5.636,
+     "end": 5.727
+    },
+    {
+     "text": "just",
+     "highlight": false,
+     "start": 5.782,
+     "end": 5.945
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 5.982,
+     "end": 6.036
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 6.091,
+     "end": 6.418
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 6.473,
+     "end": 6.527
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 6.564,
+     "end": 6.618
+    },
+    {
+     "text": "quiet",
+     "highlight": false,
+     "start": 6.673,
+     "end": 7.0
+    },
+    {
+     "text": "city,",
+     "highlight": false,
+     "start": 7.055,
+     "end": 7.327
+    },
+    {
+     "text": "giving",
+     "highlight": false,
+     "start": 7.745,
+     "end": 7.927
+    },
+    {
+     "text": "away",
+     "highlight": false,
+     "start": 7.982,
+     "end": 8.182
+    },
+    {
+     "text": "gold",
+     "highlight": false,
+     "start": 8.236,
+     "end": 8.545
+    },
+    {
+     "text": "without",
+     "highlight": false,
+     "start": 8.582,
+     "end": 8.855
+    },
+    {
+     "text": "counting.",
+     "highlight": true,
+     "start": 8.927,
+     "end": 9.273
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "Handfuls given",
+   "notes": "Faceless. A handful scooped on \"counting\".",
+   "sync": [
+    "counting"
+   ]
+  },
+  {
+   "id": 4,
+   "start": 9.809,
+   "end": 13.191,
+   "act": 1,
+   "set": "streets",
+   "owner": "H",
+   "framing": "Medium: a busy market; a fruit seller leans to an old customer and whispers; behind them two women whisper too, a man stops and turns; the whisper travels along the stalls",
+   "camera": "Slow lateral track",
+   "vo": "People began to whisper that he was the one the Prophet had promised.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "People",
+     "highlight": false,
+     "start": 9.909,
+     "end": 10.091
+    },
+    {
+     "text": "began",
+     "highlight": false,
+     "start": 10.127,
+     "end": 10.382
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 10.418,
+     "end": 10.509
+    },
+    {
+     "text": "whisper",
+     "highlight": false,
+     "start": 10.545,
+     "end": 10.891
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 10.945,
+     "end": 11.036
+    },
+    {
+     "text": "he",
+     "highlight": false,
+     "start": 11.091,
+     "end": 11.182
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 11.218,
+     "end": 11.309
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 11.364,
+     "end": 11.436
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 11.527,
+     "end": 11.618
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 11.655,
+     "end": 11.727
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 11.782,
+     "end": 12.055
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 12.073,
+     "end": 12.2
+    },
+    {
+     "text": "promised.",
+     "highlight": true,
+     "start": 12.236,
+     "end": 12.673
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The whisper passing from mouth to ear",
+   "notes": "On \"promised\" the old customer closes her eyes, moved.",
+   "sync": [
+    "whisper",
+    "promised"
+   ]
+  },
+  {
+   "id": 5,
+   "start": 13.191,
+   "end": 19.064,
+   "act": 1,
+   "set": "streets",
+   "owner": "H",
+   "framing": "Wide: a grey street behind a barbed-wire barricade; people queue for bread with empty bags under the eye of distant faceless guards; a boy holds his mother's hand and looks up",
+   "camera": "Slow push-in",
+   "vo": "A man from the Prophet's own family, who would fill the earth with justice... as it had been filled with oppression.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 13.291,
+     "end": 13.345
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 13.4,
+     "end": 13.636
+    },
+    {
+     "text": "from",
+     "highlight": false,
+     "start": 13.691,
+     "end": 13.782
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 13.818,
+     "end": 13.891
+    },
+    {
+     "text": "Prophet's",
+     "highlight": false,
+     "start": 13.945,
+     "end": 14.327
+    },
+    {
+     "text": "own",
+     "highlight": false,
+     "start": 14.382,
+     "end": 14.545
+    },
+    {
+     "text": "family,",
+     "highlight": false,
+     "start": 14.617,
+     "end": 14.982
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 15.364,
+     "end": 15.436
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 15.473,
+     "end": 15.6
+    },
+    {
+     "text": "fill",
+     "highlight": false,
+     "start": 15.673,
+     "end": 15.8
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 15.855,
+     "end": 15.945
+    },
+    {
+     "text": "earth",
+     "highlight": false,
+     "start": 16.018,
+     "end": 16.182
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 16.218,
+     "end": 16.364
+    },
+    {
+     "text": "justice...",
+     "highlight": false,
+     "start": 16.436,
+     "end": 16.873
+    },
+    {
+     "text": "as",
+     "highlight": false,
+     "start": 17.255,
+     "end": 17.327
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 17.364,
+     "end": 17.418
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 17.455,
+     "end": 17.545
+    },
+    {
+     "text": "been",
+     "highlight": false,
+     "start": 17.564,
+     "end": 17.727
+    },
+    {
+     "text": "filled",
+     "highlight": false,
+     "start": 17.8,
+     "end": 18.036
+    },
+    {
+     "text": "with",
+     "highlight": false,
+     "start": 18.073,
+     "end": 18.164
+    },
+    {
+     "text": "oppression.",
+     "highlight": true,
+     "start": 18.218,
+     "end": 18.709
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The bread queue behind the wire",
+   "notes": "No violence. The boy looks up on \"oppression\".",
+   "sync": [
+    "justice",
+    "oppression"
+   ]
+  },
+  {
+   "id": 6,
+   "start": 19.064,
+   "end": 21.336,
+   "act": 1,
+   "set": "streets",
+   "owner": "P",
+   "framing": "Medium: night, the giver (FROM BEHIND only) steps out of a side door with a small cloth bag over his shoulder and walks away down a dark alley toward a distant road",
+   "camera": "Static, long lens",
+   "vo": "He never claimed it. He ran.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 19.164,
+     "end": 19.255
+    },
+    {
+     "text": "never",
+     "highlight": false,
+     "start": 19.309,
+     "end": 19.509
+    },
+    {
+     "text": "claimed",
+     "highlight": false,
+     "start": 19.564,
+     "end": 19.836
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 19.891,
+     "end": 20.0
+    },
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 20.455,
+     "end": 20.6
+    },
+    {
+     "text": "ran.",
+     "highlight": true,
+     "start": 20.673,
+     "end": 21.018
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The back walking away",
+   "notes": "Faceless. He turns the corner on \"ran\".",
+   "sync": [
+    "ran"
+   ]
+  },
+  {
+   "id": 7,
+   "start": 21.336,
+   "end": 26.009,
+   "act": 1,
+   "set": "refuge",
+   "owner": "S",
+   "framing": "Wide: night; a vast sea of pilgrims in white seen from behind, flowing toward a great glow of white light beyond tall minarets (the House itself is NOT shown, only its light); the giver, a tiny figure from behind, merges into the crowd",
+   "camera": "Slow crane down into the crowd",
+   "vo": "He fled to the one place no army should ever touch: the Sacred House in Mecca.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "He",
+     "highlight": false,
+     "start": 21.436,
+     "end": 21.564
+    },
+    {
+     "text": "fled",
+     "highlight": false,
+     "start": 21.636,
+     "end": 21.836
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 21.873,
+     "end": 21.927
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 21.982,
+     "end": 22.055
+    },
+    {
+     "text": "one",
+     "highlight": false,
+     "start": 22.127,
+     "end": 22.218
+    },
+    {
+     "text": "place",
+     "highlight": false,
+     "start": 22.327,
+     "end": 22.618
+    },
+    {
+     "text": "no",
+     "highlight": false,
+     "start": 22.673,
+     "end": 22.818
+    },
+    {
+     "text": "army",
+     "highlight": false,
+     "start": 22.891,
+     "end": 23.109
+    },
+    {
+     "text": "should",
+     "highlight": false,
+     "start": 23.145,
+     "end": 23.273
+    },
+    {
+     "text": "ever",
+     "highlight": false,
+     "start": 23.327,
+     "end": 23.491
+    },
+    {
+     "text": "touch:",
+     "highlight": false,
+     "start": 23.564,
+     "end": 23.855
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 24.309,
+     "end": 24.4
+    },
+    {
+     "text": "Sacred",
+     "highlight": false,
+     "start": 24.473,
+     "end": 24.764
+    },
+    {
+     "text": "House",
+     "highlight": false,
+     "start": 24.818,
+     "end": 25.055
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 25.091,
+     "end": 25.182
+    },
+    {
+     "text": "Mecca.",
+     "highlight": true,
+     "start": 25.236,
+     "end": 25.636
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The white sea of people, the glow",
+   "notes": "Respectful, luminous. The glow swells softly on \"Mecca\".",
+   "sync": [
+    "Mecca"
+   ]
+  },
+  {
+   "id": 8,
+   "start": 26.009,
+   "end": 28.955,
+   "act": 1,
+   "set": "streets",
+   "owner": "H",
+   "framing": "Medium: a dark room; three faceless men in plain suits around a table lit from below by a desk lamp; an unnamed map with no borders or text; one fist comes down on the map",
+   "camera": "Slow push-in",
+   "vo": "But the men who feared him sent an army after him.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "But",
+     "highlight": false,
+     "start": 26.109,
+     "end": 26.2
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 26.255,
+     "end": 26.309
+    },
+    {
+     "text": "men",
+     "highlight": false,
+     "start": 26.364,
+     "end": 26.509
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 26.545,
+     "end": 26.673
+    },
+    {
+     "text": "feared",
+     "highlight": false,
+     "start": 26.745,
+     "end": 26.945
+    },
+    {
+     "text": "him",
+     "highlight": false,
+     "start": 26.982,
+     "end": 27.182
+    },
+    {
+     "text": "sent",
+     "highlight": false,
+     "start": 27.255,
+     "end": 27.418
+    },
+    {
+     "text": "an",
+     "highlight": false,
+     "start": 27.455,
+     "end": 27.545
+    },
+    {
+     "text": "army",
+     "highlight": false,
+     "start": 27.618,
+     "end": 27.836
+    },
+    {
+     "text": "after",
+     "highlight": false,
+     "start": 27.945,
+     "end": 28.145
+    },
+    {
+     "text": "him.",
+     "highlight": true,
+     "start": 28.182,
+     "end": 28.364
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The fist on the map",
+   "notes": "No flags, no insignia, no text on the map. The fist lands on \"him\".",
+   "sync": [
+    "him"
+   ]
+  },
+  {
+   "id": 9,
+   "start": 28.955,
+   "end": 33.336,
+   "act": 1,
+   "set": "desert",
+   "owner": "C",
+   "framing": "Extreme wide: blazing day; the army column snakes across the desert to the horizon, dust trailing; plain vehicles, NO flags or insignia",
+   "camera": "High, slow drift",
+   "vo": "Soldiers, trucks, armour. A column longer than the horizon.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Soldiers,",
+     "highlight": false,
+     "start": 29.055,
+     "end": 29.545
+    },
+    {
+     "text": "trucks,",
+     "highlight": false,
+     "start": 29.891,
+     "end": 30.255
+    },
+    {
+     "text": "armour.",
+     "highlight": false,
+     "start": 30.727,
+     "end": 30.982
+    },
+    {
+     "text": "A",
+     "highlight": false,
+     "start": 31.418,
+     "end": 31.473
+    },
+    {
+     "text": "column",
+     "highlight": false,
+     "start": 31.545,
+     "end": 31.891
+    },
+    {
+     "text": "longer",
+     "highlight": false,
+     "start": 31.945,
+     "end": 32.218
+    },
+    {
+     "text": "than",
+     "highlight": false,
+     "start": 32.236,
+     "end": 32.345
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 32.382,
+     "end": 32.436
+    },
+    {
+     "text": "horizon.",
+     "highlight": true,
+     "start": 32.473,
+     "end": 32.982
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The endless column",
+   "notes": "Reveal its full length on \"horizon\".",
+   "sync": [
+    "trucks",
+    "horizon"
+   ]
+  },
+  {
+   "id": 10,
+   "start": 33.336,
+   "end": 42.555,
+   "act": 1,
+   "set": "desert",
+   "owner": "C",
+   "framing": "Extreme wide: dusk; the column, tiny, enters a perfectly flat, pale plain ringed by low dark hills; long shadows; dust glowing",
+   "camera": "Very slow push-in",
+   "vo": "Fourteen centuries ago, the Prophet said a man would seek refuge in the House, an army would be sent against him, and when it reached open ground, the earth would swallow it.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Fourteen",
+     "highlight": false,
+     "start": 33.436,
+     "end": 33.782
+    },
+    {
+     "text": "centuries",
+     "highlight": false,
+     "start": 33.891,
+     "end": 34.255
+    },
+    {
+     "text": "ago,",
+     "highlight": false,
+     "start": 34.309,
+     "end": 34.582
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 34.927,
+     "end": 35.018
+    },
+    {
+     "text": "Prophet",
+     "highlight": false,
+     "start": 35.055,
+     "end": 35.364
+    },
+    {
+     "text": "said",
+     "highlight": false,
+     "start": 35.418,
+     "end": 35.527
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 35.564,
+     "end": 35.6
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 35.655,
+     "end": 35.873
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 35.909,
+     "end": 36.036
+    },
+    {
+     "text": "seek",
+     "highlight": false,
+     "start": 36.091,
+     "end": 36.273
+    },
+    {
+     "text": "refuge",
+     "highlight": false,
+     "start": 36.327,
+     "end": 36.673
+    },
+    {
+     "text": "in",
+     "highlight": false,
+     "start": 36.709,
+     "end": 36.782
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 36.818,
+     "end": 36.873
+    },
+    {
+     "text": "House,",
+     "highlight": false,
+     "start": 36.909,
+     "end": 37.236
+    },
+    {
+     "text": "an",
+     "highlight": false,
+     "start": 37.618,
+     "end": 37.745
+    },
+    {
+     "text": "army",
+     "highlight": false,
+     "start": 37.836,
+     "end": 38.073
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 38.091,
+     "end": 38.2
+    },
+    {
+     "text": "be",
+     "highlight": false,
+     "start": 38.236,
+     "end": 38.345
+    },
+    {
+     "text": "sent",
+     "highlight": false,
+     "start": 38.4,
+     "end": 38.564
+    },
+    {
+     "text": "against",
+     "highlight": false,
+     "start": 38.618,
+     "end": 38.927
+    },
+    {
+     "text": "him,",
+     "highlight": false,
+     "start": 38.945,
+     "end": 39.109
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 39.491,
+     "end": 39.582
+    },
+    {
+     "text": "when",
+     "highlight": false,
+     "start": 39.618,
+     "end": 39.691
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 39.727,
+     "end": 39.818
+    },
+    {
+     "text": "reached",
+     "highlight": false,
+     "start": 39.873,
+     "end": 40.127
+    },
+    {
+     "text": "open",
+     "highlight": false,
+     "start": 40.218,
+     "end": 40.418
+    },
+    {
+     "text": "ground,",
+     "highlight": false,
+     "start": 40.473,
+     "end": 40.818
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 41.091,
+     "end": 41.2
+    },
+    {
+     "text": "earth",
+     "highlight": false,
+     "start": 41.273,
+     "end": 41.491
+    },
+    {
+     "text": "would",
+     "highlight": false,
+     "start": 41.527,
+     "end": 41.655
+    },
+    {
+     "text": "swallow",
+     "highlight": true,
+     "start": 41.727,
+     "end": 42.018
+    },
+    {
+     "text": "it.",
+     "highlight": false,
+     "start": 42.073,
+     "end": 42.255
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Tiny column on the open plain",
+   "notes": "QUOTE overlay on this shot: keep the top ~15–40% dark and calm.",
+   "sync": [
+    "swallow"
+   ]
+  },
+  {
+   "id": 11,
+   "start": 42.555,
+   "end": 44.555,
+   "act": 1,
+   "set": "refuge",
+   "owner": "S",
+   "framing": "Close: a soldier's hand resting on the hot hood of a truck; grains of sand start to dance on the metal; a canteen beside it rattles; the hand lifts slightly",
+   "camera": "Static macro, tiny shake",
+   "vo": "Then the sand began to tremble.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "Then",
+     "highlight": false,
+     "start": 42.655,
+     "end": 42.818
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 42.855,
+     "end": 42.945
+    },
+    {
+     "text": "sand",
+     "highlight": false,
+     "start": 43.018,
+     "end": 43.309
+    },
+    {
+     "text": "began",
+     "highlight": false,
+     "start": 43.345,
+     "end": 43.6
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 43.636,
+     "end": 43.709
+    },
+    {
+     "text": "tremble.",
+     "highlight": true,
+     "start": 43.782,
+     "end": 44.182
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "Dancing sand, the rattling canteen",
+   "notes": "Sand jumps on \"tremble\".",
+   "sync": [
+    "tremble"
+   ]
+  },
+  {
+   "id": 12,
+   "start": 44.555,
+   "end": 45.9,
+   "act": 1,
+   "set": "desert",
+   "owner": "C",
+   "framing": "Extreme wide: the plain splits open in a huge ring around the column; the trucks tilt and slide down into the sinking ground amid towering dust; NO bodies, no people visible",
+   "camera": "Static, heavy shake",
+   "vo": "And the ground opened.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 44.655,
+     "end": 44.709
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 44.745,
+     "end": 44.8
+    },
+    {
+     "text": "ground",
+     "highlight": false,
+     "start": 44.855,
+     "end": 45.109
+    },
+    {
+     "text": "opened.",
+     "highlight": true,
+     "start": 45.2,
+     "end": 45.509
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "day",
+   "hero": "The ground opening",
+   "notes": "The split on \"opened\".",
+   "sync": [
+    "opened"
+   ]
+  },
+  {
+   "id": 13,
+   "start": 45.9,
+   "end": 50.045,
+   "act": 1,
+   "set": "refuge",
+   "owner": "S",
+   "framing": "Wide, low: dawn; perfectly flat sand; a set of tire tracks runs toward the horizon and simply ends; wind lifts a little dust; one helmet half-buried",
+   "camera": "Slow push-in along the tracks",
+   "vo": "By morning, there was only flat sand... and tire tracks that led nowhere.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "By",
+     "highlight": false,
+     "start": 46.0,
+     "end": 46.109
+    },
+    {
+     "text": "morning,",
+     "highlight": false,
+     "start": 46.164,
+     "end": 46.418
+    },
+    {
+     "text": "there",
+     "highlight": false,
+     "start": 46.473,
+     "end": 46.564
+    },
+    {
+     "text": "was",
+     "highlight": false,
+     "start": 46.582,
+     "end": 46.691
+    },
+    {
+     "text": "only",
+     "highlight": false,
+     "start": 46.745,
+     "end": 46.945
+    },
+    {
+     "text": "flat",
+     "highlight": false,
+     "start": 47.018,
+     "end": 47.291
+    },
+    {
+     "text": "sand...",
+     "highlight": false,
+     "start": 47.364,
+     "end": 47.727
+    },
+    {
+     "text": "and",
+     "highlight": false,
+     "start": 48.145,
+     "end": 48.236
+    },
+    {
+     "text": "tire",
+     "highlight": false,
+     "start": 48.291,
+     "end": 48.527
+    },
+    {
+     "text": "tracks",
+     "highlight": false,
+     "start": 48.582,
+     "end": 48.855
+    },
+    {
+     "text": "that",
+     "highlight": false,
+     "start": 48.891,
+     "end": 49.0
+    },
+    {
+     "text": "led",
+     "highlight": false,
+     "start": 49.036,
+     "end": 49.218
+    },
+    {
+     "text": "nowhere.",
+     "highlight": true,
+     "start": 49.273,
+     "end": 49.709
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Tracks ending in nothing",
+   "notes": "Camera reaches the end of the tracks on \"nowhere\".",
+   "sync": [
+    "nowhere"
+   ]
+  },
+  {
+   "id": 14,
+   "start": 50.045,
+   "end": 53.809,
+   "act": 1,
+   "set": "refuge",
+   "owner": "S",
+   "framing": "Wide: dawn; the white-clad crowd seen from behind, thousands of hands reaching toward a tiny figure in the distance (from behind, faceless) standing on a low step in front of the glow",
+   "camera": "Slow push-in over the hands",
+   "vo": "In Mecca, a hundred thousand hands reached toward the man who had run.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "In",
+     "highlight": false,
+     "start": 50.145,
+     "end": 50.236
+    },
+    {
+     "text": "Mecca,",
+     "highlight": false,
+     "start": 50.291,
+     "end": 50.618
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 51.018,
+     "end": 51.055
+    },
+    {
+     "text": "hundred",
+     "highlight": false,
+     "start": 51.109,
+     "end": 51.382
+    },
+    {
+     "text": "thousand",
+     "highlight": false,
+     "start": 51.455,
+     "end": 51.764
+    },
+    {
+     "text": "hands",
+     "highlight": false,
+     "start": 51.818,
+     "end": 52.145
+    },
+    {
+     "text": "reached",
+     "highlight": false,
+     "start": 52.2,
+     "end": 52.418
+    },
+    {
+     "text": "toward",
+     "highlight": false,
+     "start": 52.455,
+     "end": 52.6
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 52.636,
+     "end": 52.691
+    },
+    {
+     "text": "man",
+     "highlight": false,
+     "start": 52.745,
+     "end": 52.945
+    },
+    {
+     "text": "who",
+     "highlight": false,
+     "start": 52.982,
+     "end": 53.055
+    },
+    {
+     "text": "had",
+     "highlight": false,
+     "start": 53.073,
+     "end": 53.182
+    },
+    {
+     "text": "run.",
+     "highlight": true,
+     "start": 53.236,
+     "end": 53.473
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "dawn",
+   "hero": "Hands reaching, the tiny figure",
+   "notes": "Faceless. Hands rise on \"run\".",
+   "sync": [
+    "hands",
+    "run"
+   ]
+  },
+  {
+   "id": 15,
+   "start": 53.809,
+   "end": 58.191,
+   "act": 1,
+   "set": "north",
+   "owner": "P",
+   "framing": "Medium: a grand cold hall at night; two officials (simple faces, plain dark suits, no insignia) sign a document at a long table; one of them smiles slightly as he caps his pen; tall windows show snow",
+   "camera": "Slow push-in on the hands and the smile",
+   "vo": "And far to the north, an empire signed a peace treaty it never meant to keep.",
+   "voKind": "narration",
+   "speaker": "narr",
+   "words": [
+    {
+     "text": "And",
+     "highlight": false,
+     "start": 53.909,
+     "end": 54.018
+    },
+    {
+     "text": "far",
+     "highlight": false,
+     "start": 54.091,
+     "end": 54.255
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 54.291,
+     "end": 54.364
+    },
+    {
+     "text": "the",
+     "highlight": false,
+     "start": 54.4,
+     "end": 54.455
+    },
+    {
+     "text": "north,",
+     "highlight": false,
+     "start": 54.509,
+     "end": 54.782
+    },
+    {
+     "text": "an",
+     "highlight": false,
+     "start": 54.818,
+     "end": 54.891
+    },
+    {
+     "text": "empire",
+     "highlight": false,
+     "start": 54.964,
+     "end": 55.364
+    },
+    {
+     "text": "signed",
+     "highlight": false,
+     "start": 55.418,
+     "end": 55.6
+    },
+    {
+     "text": "a",
+     "highlight": false,
+     "start": 55.655,
+     "end": 55.709
+    },
+    {
+     "text": "peace",
+     "highlight": false,
+     "start": 55.764,
+     "end": 55.982
+    },
+    {
+     "text": "treaty",
+     "highlight": false,
+     "start": 56.018,
+     "end": 56.291
+    },
+    {
+     "text": "it",
+     "highlight": false,
+     "start": 56.345,
+     "end": 56.436
+    },
+    {
+     "text": "never",
+     "highlight": false,
+     "start": 56.491,
+     "end": 56.691
+    },
+    {
+     "text": "meant",
+     "highlight": false,
+     "start": 56.727,
+     "end": 56.855
+    },
+    {
+     "text": "to",
+     "highlight": false,
+     "start": 56.909,
+     "end": 56.982
+    },
+    {
+     "text": "keep.",
+     "highlight": true,
+     "start": 57.055,
+     "end": 57.291
+    }
+   ],
+   "trans": "cut",
+   "caption": true,
+   "light": "night",
+   "hero": "The signature, the small smile",
+   "notes": "CLIFFHANGER: heartbeat. The smile on \"keep\".",
+   "sync": [
+    "keep"
+   ]
+  },
+  {
+   "id": 16,
+   "start": 58.191,
+   "end": 62.391,
+   "act": 1,
+   "set": "north",
+   "owner": "P",
+   "framing": "TITLE CARD: \"THE REFUGE\" + \"CHAPTER 8 · THE LAST DAYS\" over dark drifting sand with a faint white glow",
+   "camera": "Static, tiny push",
+   "vo": "",
+   "voKind": "none",
+   "speaker": "narr",
+   "words": [],
+   "trans": "cut",
+   "caption": false,
+   "light": "night",
+   "hero": "Title",
+   "notes": "Deep bass drop on the cut.",
+   "sync": []
+  }
+ ],
+ "timingSource": "ai33 eleven_v3 transcript, gaps>0.9s cut to 0.5s, atempo x1.1, gaps>0.9s cut to 0.5s (0), atempo x1.1"
+}
