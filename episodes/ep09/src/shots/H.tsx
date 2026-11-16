@@ -23,23 +23,23 @@ export const S03: React.FC = () => {
   const B: Pal = { skin: '#c48a6a', skinD: '#8a5a44', top: '#4a4640', topD: '#34302c', bottom: '#2a2a32', headC: '#6a5040', headD: '#4a3428', rim: '#ffffff' };
   const A2: Pal = { ...A, skin: '#8a5a44', top: '#3a4050' };
   const B2: Pal = { ...B, skin: '#b07a5e', top: '#55504a', headC: '#c9c2b2' };
-  const LX = 380, RX = 700, Y = 1700, Hh = 920;
+  const LX = 300, RX = 780, Y = 1700, Hh = 920;
   const lh = loc(LX, Y, Hh, 1, lerp(470, gx - 14, reach), lerp(1150, gy, reach));
   const rh = loc(RX, Y, Hh, -1, lerp(610, gx + 14, reach), lerp(1150, gy, reach));
   const flashes = [tH, tH + 0.18, tH + 0.5];
   const fa = (i: number) => { const d = t - flashes[i]; return d < 0 || d > 0.12 ? 0 : 1 - d / 0.12; };
-  const cam: Cam = { zoom: 1.08 + 0.04 * EIO(t / sec), dx: 0, dy: 0, ox: 540, oy: 1000 };
+  const cam: Cam = { zoom: 1.22 + 0.04 * EIO(t / sec), dx: 0, dy: 0, ox: 540, oy: 1120 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#f6efe0' }}>
       <BandImg id="homes/hall" cam={cam} />
       <Live cam={cam}>
         <Fr>
-          <Side x={150} y={Y} h={880} pal={A2} head="short" male bob={2 * Math.sin(t2 * 2)} headTilt={-4} rimO={0.3} />
-          <Side x={250} y={Y} h={900} pal={A} head="short" male bob={2 * Math.sin(t2 * 2.2)} rimO={0.3} />
-          <Side x={930} y={Y} h={890} dir={-1} pal={B2} head="short" male bob={2 * Math.sin(t2 * 2.1)} rimO={0.3} />
-          <Side x={830} y={Y} h={900} dir={-1} pal={B} head="short" male bob={2 * Math.sin(t2 * 1.9)} rimO={0.3} />
-          <Side x={LX} y={Y} h={Hh} pal={A} head="short" male lean={8 + 16 * reach} handN={lh} handF={[60, -480]} rimO={0.4} />
-          <Side x={RX} y={Y} h={Hh} dir={-1} pal={B} head="short" male lean={8 + 16 * reach} handN={rh} handF={[60, -480]} rimO={0.4} />
+          <Side x={60} y={Y} h={880} pal={A2} head="short" male bob={2 * Math.sin(t2 * 2)} headTilt={-4} rimO={0.3} />
+          <Side x={170} y={Y} h={900} pal={A} head="short" male bob={2 * Math.sin(t2 * 2.2)} rimO={0.3} />
+          <Side x={1020} y={Y} h={890} dir={-1} pal={B2} head="short" male bob={2 * Math.sin(t2 * 2.1)} rimO={0.3} />
+          <Side x={910} y={Y} h={900} dir={-1} pal={B} head="short" male bob={2 * Math.sin(t2 * 1.9)} rimO={0.3} />
+          <Side x={LX} y={Y} h={Hh} pal={A} head="short" male lean={6 + 13 * reach} handN={lh} handF={[60, -480]} rimO={0.4} />
+          <Side x={RX} y={Y} h={Hh} dir={-1} pal={B} head="short" male lean={6 + 13 * reach} handN={rh} handF={[60, -480]} rimO={0.4} />
           <LongTable />
           <Flash id="hf0" x={60} y={1560} a={fa(0)} />
           <Flash id="hf1" x={1020} y={1520} a={fa(1)} />

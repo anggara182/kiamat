@@ -87,23 +87,26 @@ export const BurningTreaty: React.FC<{ x: number; y: number; rot: number; burn: 
   return (
     <g transform={`translate(${x} ${y}) rotate(${rot})`} opacity={1 - ash}>
       <defs>
+        <clipPath id="hbPaper"><path d={`M${-W / 2} ${-Hh / 2} L${W / 2} ${-Hh / 2 - 30 * curl} Q${W / 2 + 40 * curl} 0 ${W / 2} ${Hh / 2} L${-W / 2} ${Hh / 2 + 20 * curl} Q${-W / 2 - 30 * curl} 0 ${-W / 2} ${-Hh / 2} Z`} /></clipPath>
         <mask id="hbBurn">
           <rect x={-400} y={-500} width={1400} height={1400} fill="#fff" />
           <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R} fill="#000" />
         </mask>
       </defs>
-      <g mask="url(#hbBurn)">
+      <g mask="url(#hbBurn)" clipPath="url(#hbPaper)">
         <path d={`M${-W / 2} ${-Hh / 2} L${W / 2} ${-Hh / 2 - 30 * curl} Q${W / 2 + 40 * curl} 0 ${W / 2} ${Hh / 2} L${-W / 2} ${Hh / 2 + 20 * curl} Q${-W / 2 - 30 * curl} 0 ${-W / 2} ${-Hh / 2} Z`} fill="#f2ead6" />
-        {Array.from({ length: 9 }, (_, i) => <rect key={i} x={-W / 2 + 50} y={-Hh / 2 + 70 + i * 48} width={i % 3 === 2 ? 260 : 400} height={10} fill="#8a8070" />)}
+        {Array.from({ length: 9 }, (_, i) => <rect key={i} x={-W / 2 + 50} y={-Hh / 2 + 200 + i * 48} width={i % 3 === 2 ? 260 : 400} height={10} fill="#8a8070" />)}
         {/* signature, upper right */}
-        <path d={`M${40} ${Hh / 2 - 120} q30 -40 50 0 t50 -10 q20 -30 40 10 t50 -6`} stroke="#1a1a4a" strokeWidth={6} fill="none" />
-        <rect x={30} y={Hh / 2 - 90} width={200} height={4} fill="#8a8070" />
+        <path d={`M${50} ${-Hh / 2 + 110} q30 -40 50 0 t50 -10 q20 -30 40 10 t50 -6`} stroke="#1a1a4a" strokeWidth={6} fill="none" />
+        <rect x={40} y={-Hh / 2 + 140} width={200} height={4} fill="#8a8070" />
         {/* browning near the front */}
         <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R + 60} fill="#8a5a2a" opacity={0.35} />
       </g>
       {/* glowing burn front */}
-      {burn > 0 && burn < 1 && <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R} fill="none" stroke="#ffb04a" strokeWidth={10} opacity={0.9} strokeDasharray="30 14" />}
-      {burn > 0 && burn < 1 && <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R - 12} fill="none" stroke="#1a0e0a" strokeWidth={18} opacity={0.8} />}
+      <g clipPath="url(#hbPaper)">
+        {burn > 0 && burn < 1 && <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R + 8} fill="none" stroke="#1a0e0a" strokeWidth={22} opacity={0.85} />}
+        {burn > 0 && burn < 1 && <circle cx={-W / 2 - 40} cy={Hh / 2 + 40} r={R} fill="none" stroke="#ffb04a" strokeWidth={10} opacity={0.95} strokeDasharray="30 14" />}
+      </g>
     </g>
   );
 };
