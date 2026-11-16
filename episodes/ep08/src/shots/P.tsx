@@ -158,8 +158,8 @@ export const S15: React.FC = () => {
       <Live k={1} cam={cam}>
         <Fr>
           {/* two officials facing each other across the document (ON TWOS: breathing, the signing hand) */}
-          <g transform={`translate(230 ${1010 + 2 * Math.sin(t2 * 1.6)}) scale(1.05)`}><Person id="p15a" p={OFF.a} lean={14} rim="#ffd9a0" rimOp={0.6} /></g>
-          <g transform={`translate(860 ${1000 + 2 * Math.sin(t2 * 1.4 + 1)}) scale(-1.05 1.05)`}><Person id="p15b" p={OFF.b} lean={6 - 4 * smile} smile={smile} rim="#ffd9a0" rimOp={0.6} /></g>
+          <g transform={`translate(200 ${950 + 2 * Math.sin(t2 * 1.6)}) scale(1.05)`}><Person id="p15a" p={OFF.a} lean={14} rim="#ffd9a0" rimOp={0.6} /></g>
+          <g transform={`translate(900 ${940 + 2 * Math.sin(t2 * 1.4 + 1)}) scale(-1.05 1.05)`}><Person id="p15b" p={OFF.b} lean={6 - 4 * smile} smile={smile} rim="#ffd9a0" rimOp={0.6} /></g>
           {/* the treaty on the table */}
           <path d={`M380 ${TABLE_Y - 60} L700 ${TABLE_Y - 72} L720 ${TABLE_Y - 14} L370 ${TABLE_Y - 2} Z`} fill="#efe9dc" />
           {[0, 1, 2].map((k) => <path key={k} d={`M410 ${TABLE_Y - 50 + k * 12} L660 ${TABLE_Y - 59 + k * 12}`} stroke="#a89f8c" strokeWidth={3} />)}
@@ -171,7 +171,7 @@ export const S15: React.FC = () => {
             <rect x={-6} y={-60} width={8} height={70} rx={3} fill="#1a1a1a" transform="rotate(25)" />
           </g>
           {/* official B caps his pen on "keep" */}
-          <g transform={`translate(${760} ${TABLE_Y - 110})`}>
+          <g transform={`translate(${790} ${TABLE_Y - 40})`}>
             <path d="M200 120 C120 100 60 80 20 60 L30 30 C80 40 140 60 210 80 Z" fill="#22262e" />
             <path d="M0 20 C-30 10 -40 40 -20 60 C0 72 30 60 30 40 Z" fill="#d0a88c" />
             <rect x={-24} y={-40} width={8} height={70} rx={3} fill="#2a2a30" transform="rotate(-20)" />
