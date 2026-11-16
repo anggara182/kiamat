@@ -72,42 +72,43 @@ export const Glow: React.FC<{ k: number; mood: Mood }> = ({ k, mood }) => {
   );
 };
 
-/** the white-clad crowd from behind as perspective rows of dotted strokes; flows toward the glow (people: ON TWOS).
- *  arms 0..1 = hands raised toward the glow (S14) */
+/** the white-clad crowd from behind: layered rows of individual heads + shoulders with random jitter and size
+ *  variation, mostly white with a few cream/grey tones, flowing slowly toward the glow and swaying (people: ON TWOS).
+ *  arms 0..1 = hands raised toward the glow (S14). One path per tone per row keeps it cheap. */
 export const WhiteCrowd: React.FC<{ t2: number; mood: Mood; arms?: number; z0?: number; z1?: number }> = ({ t2, mood, arms = 0, z0 = 9, z1 = 220 }) => {
   const rows: React.ReactNode[] = [];
-  const r = rng(911);
-  const white = mood === 'night' ? '#dfe4ee' : '#f4f1ea', shade = mood === 'night' ? '#9aa6bc' : '#c9cfd8';
-  const flow = (t2 * 0.9) % 1;
+  const tones = mood === 'night' ? ['#e4e8f0', '#cfd5e2', '#d8d0c0', '#9aa2b2'] : ['#f6f3ec', '#e6e0d2', '#ddd4c0', '#b8bec8'];
+  const flow = (t2 * 0.35) % 1;
   for (let i = 0; ; i++) {
-    const z = z1 / Math.pow(1.045, i) * (1 + 0.045 * flow);
+    const z = (z1 / Math.pow(1.05, i)) * (1 + 0.05 * flow);
     if (z < z0) break;
     const s = M.f / z;
-    const [xl, y] = mp(-60, 1.5, z), [xr] = mp(60, 1.5, z);
-    const gap = 0.6 * s, ph = (r() * gap) % gap;
-    const lit = Math.max(0, 1 - Math.abs(y - M.YH) / 900);
-    const fade = (c: string) => mix(c, mood === 'night' ? '#2a3a5a' : '#cfd8e6', Math.min(0.75, z / 260));
-    rows.push(
-      <g key={i}>
-        <path d={`M ${xl} ${y + 0.3 * s} L ${xr} ${y + 0.3 * s}`} stroke={fade(mix(shade, white, lit))} strokeWidth={0.42 * s} strokeDasharray={`${0.46 * s} ${gap - 0.46 * s}`} strokeDashoffset={-ph} strokeLinecap="round" />
-        <path d={`M ${xl} ${y} L ${xr} ${y}`} stroke={fade('#1e1a18')} strokeWidth={0.24 * s} strokeDasharray={`0.01 ${gap * 2}`} strokeDashoffset={-ph} strokeLinecap="round" />
-        <path d={`M ${xl} ${y - 0.02 * s} L ${xr} ${y - 0.02 * s}`} stroke={fade(white)} strokeWidth={0.26 * s} strokeDasharray={`0.01 ${gap * 2}`} strokeDashoffset={-ph - gap} strokeLinecap="round" />
-      </g>,
-    );
-    if (arms > 0.02 && z < 90) {
-      let d = '';
-      const n = Math.floor((xr - xl) / (gap * 1.6));
-      for (let k = 0; k < n; k++) {
-        if ((k * 7 + i * 3) % 5 > 3 * arms + 1) continue;
-        const ax = xl + ((k * 1.618 * gap + i * 41) % (xr - xl)), up = (0.35 + 0.5 * arms + 0.08 * Math.sin(t2 * 4 + k + i)) * s;
-        const lean = (M.glowX - ax) * 0.0008 * s;
-        d += `M ${ax.toFixed(1)} ${(y + 0.15 * s).toFixed(1)} l ${lean.toFixed(1)} ${(-up).toFixed(1)} `;
-      }
-      if (d) {
-        rows.push(<path key={`a${i}`} d={d} stroke={fade(white)} strokeWidth={Math.max(1, 0.1 * s)} strokeLinecap="round" />);
-        rows.push(<path key={`h${i}`} d={d.replace(/l ([-\d.]+) ([-\d.]+) /g, (_m, a, b) => `m ${a} ${b} l 0.01 0 `)} stroke={fade('#a8765a')} strokeWidth={Math.max(1.6, 0.15 * s)} strokeLinecap="round" />);
+    const r = rng(931 + i);
+    const [, y] = mp(0, 1.5, z);
+    const half = 700 / s; // only what can be seen
+    const fade = (c: string) => mix(c, mood === 'night' ? '#2a3a5a' : '#cfd8e6', Math.min(0.7, z / 280));
+    const body = ['', '', '', ''], heads = ['', ''], armD: string[] = [];
+    for (let X = -half; X < half; X += 0.55 + r() * 0.2) {
+      const x = M.VX + (X + (r() - 0.5) * 0.25 + Math.sin(t2 * 1.6 + X * 2 + i) * 0.04) * s;
+      const sc = (0.85 + r() * 0.3) * s, yy = y + (r() - 0.5) * 0.18 * s;
+      const w = 0.24 * sc, hh = 0.42 * sc, hr = 0.11 * sc;
+      const tone = r() < 0.72 ? 0 : r() < 0.55 ? 1 : r() < 0.6 ? 2 : 3;
+      body[tone] += `M ${(x - w).toFixed(1)} ${(yy + hh).toFixed(1)} Q ${(x - w).toFixed(1)} ${(yy + 0.06 * sc).toFixed(1)} ${x.toFixed(1)} ${(yy + 0.04 * sc).toFixed(1)} Q ${(x + w).toFixed(1)} ${(yy + 0.06 * sc).toFixed(1)} ${(x + w).toFixed(1)} ${(yy + hh).toFixed(1)} Z `;
+      const hk = r() < 0.7 ? 0 : 1; // dark hair or white headscarf
+      heads[hk] += `M ${(x - hr).toFixed(1)} ${(yy - 0.06 * sc).toFixed(1)} a ${hr.toFixed(1)} ${(hr * 1.15).toFixed(1)} 0 1 0 ${(2 * hr).toFixed(1)} 0 a ${hr.toFixed(1)} ${(hr * 1.15).toFixed(1)} 0 1 0 ${(-2 * hr).toFixed(1)} 0 Z `;
+      if (arms > 0.02 && z < 90 && r() < 0.25 + 0.6 * arms) {
+        const up = (0.3 + 0.55 * arms + 0.06 * Math.sin(t2 * 4 + X)) * sc, lean = (M.glowX - x) * 0.0006 * sc;
+        armD.push(`M ${(x + w * 0.6).toFixed(1)} ${(yy + 0.1 * sc).toFixed(1)} l ${lean.toFixed(1)} ${(-up).toFixed(1)}`);
       }
     }
+    rows.push(
+      <g key={i}>
+        {body.map((d, k) => d && <path key={k} d={d} fill={fade(tones[k])} />)}
+        {heads[0] && <path d={heads[0]} fill={fade('#241c18')} />}
+        {heads[1] && <path d={heads[1]} fill={fade(tones[0])} />}
+        {armD.length > 0 && <path d={armD.join(' ')} stroke={fade(tones[0])} strokeWidth={Math.max(1, 0.09 * s)} strokeLinecap="round" />}
+      </g>,
+    );
   }
   return <g>{rows}</g>;
 };

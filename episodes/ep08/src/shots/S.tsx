@@ -21,7 +21,9 @@ const ReachBack: React.FC<{ x: number; y: number; h: number; raise: number; lean
   };
   return (
     <g transform={`translate(${x} ${y + Math.sin(t2 * 2) * 2}) rotate(${lean}) scale(${s})`}>
-      <path d="M -10 -50 L 10 -50 L 9 0 L -9 0 Z" fill={shade} />
+      {/* long white wrap down to the ankles: fully opaque */}
+      <path d="M -13 -52 L 13 -52 L 15 6 L -15 6 Z" fill={white} />
+      <path d="M 4 -52 L 15 6 L 8 6 Z" fill={shade} />
       <path d="M -12 -81 Q 0 -85 12 -81 L 13 -60 L 10 -46 L -10 -46 L -13 -60 Z" fill={white} />
       <path d="M -12 -81 L 10 -46" stroke={shade} strokeWidth={2} opacity={0.6} />
       {arm(-1)}{arm(1)}
@@ -39,16 +41,17 @@ export const S07: React.FC = () => {
   const cam: Cam = { zoom: 1.0 + 0.12 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: 240 - 300 * ramp(p, 0, 1, EIO), ox: 540, oy: 1100 };
   const k = ramp(t, tM - 0.3, tM + 0.9, EIO);
   // the man: tiny, from behind, plain clothes, walking forward into the crowd (merges by the end)
-  const z = 26 + 10 * clamp01(t2 / 4.5);
-  const [mx, my] = mp(0.6, 0, z);
+  const kk = clamp01(t2 / 4.4);
+  const z = 17 + 9 * kk;
+  const [mx, my] = mp(-7 + 7.5 * EOUT(kk), 0, z);
   return (
     <AbsoluteFill style={{ backgroundColor: '#0a1426' }}>
       <BandImg id="refuge/mecca-night" cam={cam} />
       <Live cam={cam}>
         <Glow k={k} mood="night" />
         <WhiteCrowd t2={t2} mood="night" z0={8} z1={240} />
-        {[[200, 2010, 620, 0], [480, 2090, 680, 1.3], [820, 2030, 650, 2.6], [1100, 2110, 700, 3.4]].map(([x, y, h, ph], i) => <BackWalker key={i} x={x} y={y - 30 * t2} h={h} ph={t2 * 6 + ph} col="#e9edf4" shirt={i % 2 ? '#dfe4ee' : '#f4f1ea'} hat={i === 2 ? 'hijab' : null} opacity={0.97} />)}
-        <BackWalker x={mx} y={my} h={(1.75 * M.f) / z} ph={t2 * 6} col="#5a5048" shirt="#b8a88a" opacity={1 - 0.5 * clamp01((t2 - 3) / 1.5)} />
+        {[[200, 2010, 620, 0], [480, 2090, 680, 1.3], [820, 2030, 650, 2.6], [1100, 2110, 700, 3.4]].map(([x, y, h, ph], i) => <BackWalker key={i} x={x + Math.sin(t2 * 2.6 + ph) * 6} y={y - 34 * t2} h={h} ph={t2 * 5.2 + ph} col="#e9edf4" shirt={i % 2 ? '#dfe4ee' : '#f4f1ea'} hat={i === 2 ? 'hijab' : null} />)}
+        <BackWalker x={mx} y={my} h={(1.75 * M.f) / z} ph={t2 * 6} col="#4a4038" shirt="#8a7a62" />
       </Live>
     </AbsoluteFill>
   );
@@ -111,7 +114,7 @@ export const S14: React.FC = () => {
         <rect x={fx - 70} y={fy} width={140} height={14} fill="#e9eef4" />
         <DepthWalker x={fx} y={fy} h={46} ph={0} col="#2a2a30" />
         <WhiteCrowd t2={t2 * 0.4} mood="dawn" arms={arms} z0={6} z1={58} />
-        {[[200, 2160, 820, 0], [520, 2220, 900, 1], [860, 2170, 860, 0], [1150, 2240, 920, 2]].map(([x, y, h, hat], i) => <ReachBack key={i} x={x} y={y} h={h} raise={clamp01(arms + 0.06 * Math.sin(t2 * 3 + i))} lean={(648 - x) * 0.01} hijab={hat === 1} t2={t2 + i} />)}
+        {[[360, 2110, 760, 0], [1000, 2120, 780, 0], [690, 2090, 720, 2], [200, 2160, 820, 0], [520, 2220, 900, 1], [860, 2170, 860, 0], [1150, 2240, 920, 2]].map(([x, y, h, hat], i) => <ReachBack key={i} x={x} y={y} h={h} raise={clamp01(arms + 0.06 * Math.sin(t2 * 3 + i))} lean={(648 - x) * 0.01} hijab={hat === 1} t2={t2 + i} />)}
       </Live>
     </AbsoluteFill>
   );

@@ -51,8 +51,8 @@ export const S01: React.FC = () => {
           <rect x={442} y={1215} width={8} height={40} fill="#4a443a" />
           <circle cx={110} cy={1850} r={150} fill="#0a0908" /><circle cx={110} cy={1850} r={60} fill="#1e1c18" /><path d="M-40 1850 A150 150 0 0 1 260 1850" stroke="#fff3d0" strokeOpacity={0.35} strokeWidth={4} fill="none" />
           <rect x={150} y={1800} width={300} height={18} fill="#2a2620" />
-          <ellipse cx={420} cy={1180} rx={160} ry={120} fill="#ffc880" opacity={0.12} />
-          <g transform="translate(720 0) scale(-1 1)"><Soldier x={360} y={1800} h={700} br={t2 * 2.4} bob={Math.sin(t2 * 9) * 3} /></g>
+          <defs><radialGradient id="dsDash" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#ffc880" stopOpacity={0.35} /><stop offset="1" stopColor="#ffc880" stopOpacity={0} /></radialGradient></defs><ellipse cx={280} cy={1200} rx={170} ry={140} fill="url(#dsDash)" />
+          <Soldier x={330} y={1800} h={700} br={t2 * 2.4} bob={Math.sin(t2 * 9) * 3} />
         </g>
       </Live>
     </AbsoluteFill>
@@ -104,15 +104,16 @@ export const S09: React.FC = () => {
   const tt = wordAt(9, /^trucks/i, 0.21), th = wordAt(9, /^horizon/i, 0.8);
   const out = ramp(t, tt, th, EIO);
   const cam: Cam = { zoom: 1.5 - 0.5 * out, dx: 0, dy: 0, ty: -120 * (1 - out) + 30 * p, ox: 400, oy: 1700 };
-  const N = 34;
+  const N = 24;
   return (
     <AbsoluteFill style={{ backgroundColor: '#f1e6cc' }}>
       <BandImg id="desert/day" k={1} cam={cam} />
       <Live k={1} cam={cam}>
         <LightDefs />
         <path d={Array.from({ length: 61 }).map((_, i) => { const [x, y] = colPt(i / 60); return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ')} stroke="#c9b08a" strokeWidth={14} fill="none" opacity={0.45} />
+        <defs><radialGradient id="dsPlume" cx="0.5" cy="0.5" r="0.5"><stop offset="0" stopColor="#b89a6a" stopOpacity={0.45} /><stop offset="1" stopColor="#b89a6a" stopOpacity={0} /></radialGradient></defs>
         {/* the dust plume drifting sideways off the column */}
-        {Array.from({ length: 30 }).map((_, i) => { const s = i / 29; const [x, y] = colPt(s); const k = 1 - s; return <ellipse key={`d${i}`} cx={x + 90 + 160 * k + t * 12} cy={y - 40 - 70 * k} rx={160 + 260 * k} ry={40 + 70 * k} fill="url(#dustL)" opacity={0.5} />; })}
+        {Array.from({ length: 30 }).map((_, i) => { const s = i / 29; const [x, y] = colPt(s); const k = 1 - s; return <ellipse key={`d${i}`} cx={x + 90 + 160 * k + t * 12} cy={y - 40 - 70 * k} rx={160 + 260 * k} ry={40 + 70 * k} fill="url(#dsPlume)" />; })}
         {Array.from({ length: N }).map((_, i) => {
           const s = ((i / N) + t * 0.006) % 1; const [x, y] = colPt(s); const [x2, y2] = colPt(Math.max(0, s - 0.004));
           const ang = (Math.atan2(y - y2, x - x2) * 180) / Math.PI; const k = 1 - s; const sc = 0.22 + 2.6 * Math.pow(k, 2.2);
