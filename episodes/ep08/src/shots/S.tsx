@@ -8,6 +8,30 @@ import { BackWalker, DepthWalker } from '../art/refuge_people';
 /* EP08 refuge. The Sacred House is never drawn; the awaited man is always a tiny faceless figure.
  * Clocks: camera + environment (glow, dust, grains, canteen) ON ONES (p/t); people ON TWOS (p2/t2). */
 
+/** a pilgrim in white seen from behind raising BOTH hands toward the glow (raise 0 = arms down, 1 = reaching high) — ON TWOS */
+const ReachBack: React.FC<{ x: number; y: number; h: number; raise: number; lean: number; hijab?: boolean; t2: number }> = ({ x, y, h, raise, lean, hijab, t2 }) => {
+  const s = h / 100, white = '#f1efe8', shade = '#c9cdd6';
+  const arm = (side: number) => {
+    const sx = side * 11, sy = -80;
+    const a = (side * (10 + 12 * raise) + 180 * raise * 0.86) * (Math.PI / 180); // from straight down, swinging up and a little out
+    const ex = sx + Math.sin(a) * side * 15 * (raise > 0.5 ? 1 : 1), ey = sy + Math.cos(a) * 15;
+    const a2 = a - side * 0.1 * raise;
+    const hx = ex + Math.sin(a2) * side * 14, hy = ey + Math.cos(a2) * 14;
+    return <g key={side}><path d={`M ${sx} ${sy} L ${ex} ${ey} L ${hx} ${hy}`} stroke={white} strokeWidth={4.8} strokeLinecap="round" strokeLinejoin="round" fill="none" /><ellipse cx={hx} cy={hy} rx={2.6} ry={2.9} fill="#a8765a" /></g>;
+  };
+  return (
+    <g transform={`translate(${x} ${y + Math.sin(t2 * 2) * 2}) rotate(${lean}) scale(${s})`}>
+      <path d="M -10 -50 L 10 -50 L 9 0 L -9 0 Z" fill={shade} />
+      <path d="M -12 -81 Q 0 -85 12 -81 L 13 -60 L 10 -46 L -10 -46 L -13 -60 Z" fill={white} />
+      <path d="M -12 -81 L 10 -46" stroke={shade} strokeWidth={2} opacity={0.6} />
+      {arm(-1)}{arm(1)}
+      <rect x={-2.3} y={-88} width={4.6} height={6} fill="#8a5a40" />
+      <ellipse cx={0} cy={-93} rx={6} ry={7} fill={hijab ? white : '#2a1e18'} />
+      {hijab && <path d="M -7 -91 Q -7 -102 0 -101 Q 7 -102 7 -91 Q 9 -82 12 -78 L -12 -78 Q -9 -82 -7 -91 Z" fill={white} />}
+    </g>
+  );
+};
+
 /** shot 7 — night: a vast sea of white-clad pilgrims from behind flows toward the great glow beyond tall minarets; a tiny figure merges in; the glow swells on "Mecca". Slow crane down. */
 export const S07: React.FC = () => {
   const { p, t, t2 } = useShot();
@@ -23,7 +47,7 @@ export const S07: React.FC = () => {
       <Live cam={cam}>
         <Glow k={k} mood="night" />
         <WhiteCrowd t2={t2} mood="night" z0={8} z1={240} />
-        {[[180, 1950, 760, 0], [470, 2050, 840, 1.3], [820, 1990, 800, 2.6], [1110, 2080, 880, 3.4]].map(([x, y, h, ph], i) => <BackWalker key={i} x={x} y={y - 30 * t2} h={h} ph={t2 * 6 + ph} col="#e9edf4" shirt={i % 2 ? '#dfe4ee' : '#f4f1ea'} hat={i === 2 ? 'hijab' : null} opacity={0.97} />)}
+        {[[200, 2010, 620, 0], [480, 2090, 680, 1.3], [820, 2030, 650, 2.6], [1100, 2110, 700, 3.4]].map(([x, y, h, ph], i) => <BackWalker key={i} x={x} y={y - 30 * t2} h={h} ph={t2 * 6 + ph} col="#e9edf4" shirt={i % 2 ? '#dfe4ee' : '#f4f1ea'} hat={i === 2 ? 'hijab' : null} opacity={0.97} />)}
         <BackWalker x={mx} y={my} h={(1.75 * M.f) / z} ph={t2 * 6} col="#5a5048" shirt="#b8a88a" opacity={1 - 0.5 * clamp01((t2 - 3) / 1.5)} />
       </Live>
     </AbsoluteFill>
@@ -87,12 +111,7 @@ export const S14: React.FC = () => {
         <rect x={fx - 70} y={fy} width={140} height={14} fill="#e9eef4" />
         <DepthWalker x={fx} y={fy} h={46} ph={0} col="#2a2a30" />
         <WhiteCrowd t2={t2 * 0.4} mood="dawn" arms={arms} z0={6} z1={58} />
-        {[[200, 2140, 820], [520, 2200, 900], [860, 2150, 860], [1150, 2220, 920]].map(([x, y, h], i) => (
-          <g key={i}>
-            <BackWalker x={x} y={y} h={h} ph={0} col="#e9edf4" shirt="#f4f1ea" point={clamp01(arms * 1.1 - 0.1 + 0.05 * Math.sin(t2 * 3 + i))} hat={i === 1 ? 'hijab' : null} />
-            <g transform={`translate(${x} 0) scale(-1 1) translate(${-x} 0)`}><BackWalker x={x} y={y} h={h} ph={0} col="#e9edf4" shirt="#f4f1ea" point={clamp01(arms * 1.1 - 0.25)} hat={i === 1 ? 'hijab' : null} /></g>
-          </g>
-        ))}
+        {[[200, 2160, 820, 0], [520, 2220, 900, 1], [860, 2170, 860, 0], [1150, 2240, 920, 2]].map(([x, y, h, hat], i) => <ReachBack key={i} x={x} y={y} h={h} raise={clamp01(arms + 0.06 * Math.sin(t2 * 3 + i))} lean={(648 - x) * 0.01} hijab={hat === 1} t2={t2 + i} />)}
       </Live>
     </AbsoluteFill>
   );

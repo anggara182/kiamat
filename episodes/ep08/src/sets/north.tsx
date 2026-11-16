@@ -9,7 +9,7 @@ const glow = (id: string, c: string, o: number) => <radialGradient id={id} cx="0
 
 /** grand cold hall: tall windows (snow is live), panelled walls, a long table, a desk lamp */
 export const WINS = [[60, 140], [420, 140], [780, 140]] as const;
-export const TABLE_Y = 1180;
+export const TABLE_Y = 1080; // table top edge (~56% of frame); the table itself is drawn live in front of the officials
 const hall = () => (
   <FR>
     <defs>{glow('nhLamp', '#ffd9a0', 0.5)}</defs>
@@ -18,10 +18,7 @@ const hall = () => (
     {WINS.map(([x, y], i) => <g key={i}>{R(x - 20, y - 20, 280, 700, '#121722')}{R(x, y, 240, 660, '#3a4458')}<path d={`M${x} ${y + 100} Q${x + 120} ${y - 40} ${x + 240} ${y + 100} L${x + 240} ${y} L${x} ${y} Z`} fill="#121722" />{R(x + 116, y, 8, 660, '#121722')}{R(x, y + 330, 240, 8, '#121722')}</g>)}
     {/* heavy curtains */}
     {[-60, 340, 700, 1060].map((x, i) => <path key={i} d={`M${x} -230 L${x + 80} -230 Q${x + 60} 400 ${x + 90} 880 L${x - 10} 880 Q${x + 20} 400 ${x} -230 Z`} fill="#3a1e24" />)}
-    {/* long table */}
-    <path d={`M-140 ${TABLE_Y} L1230 ${TABLE_Y - 30} L1230 ${TABLE_Y + 80} L-140 ${TABLE_Y + 110} Z`} fill="#3a2418" />
-    <path d={`M-140 ${TABLE_Y} L1230 ${TABLE_Y - 30}`} stroke="#6a4a30" strokeWidth={6} />
-    {R(-140, TABLE_Y + 110, 1370, 1000, '#141824')}
+    {R(-140, TABLE_Y + 60, 1370, 1100, '#141824')}
     <ellipse cx={540} cy={TABLE_Y - 40} rx={520} ry={260} fill="url(#nhLamp)" />
   </FR>
 );

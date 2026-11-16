@@ -130,53 +130,74 @@ export const S06: React.FC = () => {
 
 /* ============ shot 15 (night, cliffhanger): two officials sign a treaty in a cold hall; one smiles as he caps his pen on "keep" ============ */
 const OFF: Record<string, PersonSpec> = {
-  a: { skin: '#c49a7e', shade: '#8a6450', hair: 'short', hairC: '#8a8580', shirt: '#1e222c', shirtD: '#14171e' },
-  b: { skin: '#d0a88c', shade: '#94705a', hair: 'bald', hairC: '#5a524c', shirt: '#22262e', shirtD: '#16191f', mustache: true },
+  a: { skin: '#c49a7e', shade: '#8a6450', hair: 'short', hairC: '#9a958e', shirt: '#1e222c', shirtD: '#14171e' },
+  b: { skin: '#d0a88c', shade: '#94705a', hair: 'short', hairC: '#1c1714', shirt: '#22262e', shirtD: '#16191f' },
 };
+/** tapered capsule between points */
+const cap = (x1: number, y1: number, x2: number, y2: number, w1: number, w2: number) => {
+  const dx = x2 - x1, dy = y2 - y1, L = Math.hypot(dx, dy) || 1, nx = -dy / L, ny = dx / L;
+  return `M${x1 + nx * w1} ${y1 + ny * w1} L${x2 + nx * w2} ${y2 + ny * w2} A${w2} ${w2} 0 0 0 ${x2 - nx * w2} ${y2 - ny * w2} L${x1 - nx * w1} ${y1 - ny * w1} A${w1} ${w1} 0 0 0 ${x1 + nx * w1} ${y1 + ny * w1} Z`;
+};
+/** a suit arm from shoulder S via elbow E to hand H (mitten hand with a cuff) */
+const Arm: React.FC<{ S: [number, number]; E: [number, number]; H: [number, number]; suit: string; skin: string; shade: string }> = ({ S, E, H, suit, skin, shade }) => (
+  <g>
+    <path d={cap(S[0], S[1], E[0], E[1], 36, 30)} fill={suit} />
+    <path d={cap(E[0], E[1], H[0], H[1], 30, 24)} fill={suit} />
+    <circle cx={H[0] + (H[0] - E[0]) * 0.08} cy={H[1] + (H[1] - E[1]) * 0.08} r={26} fill={skin} />
+    <path d={`M${H[0] - 14} ${H[1] + 14} q14 8 28 0`} stroke={shade} strokeWidth={3} fill="none" opacity={0.6} />
+  </g>
+);
 export const S15: React.FC = () => {
   const { t, t2, p } = useShot();
   const tsg = wordAt(15, /^signed/i, 0.37), tk = wordAt(15, /^keep/i, 0.74);
-  const sign = clamp01((t2 - tsg) / 0.9); // the pen moves across the line, ON TWOS
-  const cap = ramp(t2, tk - 0.15, tk, EOUT), smile = ramp(t2, tk, tk + 0.2, EOUT);
+  const sign = clamp01((t2 - tsg) / 0.9); // the pen moves along the signature line, ON TWOS
+  const capOn = ramp(t2, tk - 0.15, tk, EOUT), smile = ramp(t2, tk, tk + 0.2, EOUT);
   const beat = (x: number) => Math.max(bump(x % 0.85, 0, 0.09), 0.6 * bump(x % 0.85, 0.15, 0.08));
-  const cam: Cam = { zoom: 1 + 0.1 * EIO(p) + 0.01 * beat(t), dx: 0, dy: 0, tx: 0, ty: 0, ox: 560, oy: 1000 };
+  const cam: Cam = { zoom: 1 + 0.08 * EIO(p) + 0.01 * beat(t), dx: 0, dy: 0, tx: 0, ty: 0, ox: 560, oy: 900 };
   const flakes = Array.from({ length: 60 }, (_, i) => ({ w: i % 3, x: ((i * 53) % 230) + 5, sp: 50 + (i % 5) * 18, ph: i * 1.3 }));
-  const penX = 470 + 140 * sign;
+  const T = TABLE_Y;
+  const scrib = 4 * Math.sin(t2 * 30) * (sign > 0 && sign < 1 ? 1 : 0);
+  const penA: [number, number] = [470 + 110 * sign, T + 28 + scrib];
+  const A = OFF.a, B = OFF.b;
   return (
     <AbsoluteFill style={{ backgroundColor: '#1c2230' }}>
       <BandImg id="north/hall" k={0.8} cam={cam} />
       <Live k={0.8} cam={cam}>
         <Fr>
-          {/* snow falling past the tall windows (environment, on ones) */}
           {flakes.map((f, i) => {
             const [wx, wy] = WINS[f.w];
-            const y = wy + (((i * 97) % 660) + t * f.sp) % 660, x = wx + f.x + 8 * Math.sin(t * 1.3 + f.ph);
+            const y = wy + ((((i * 97) % 660) + t * f.sp) % 660), x = wx + f.x + 8 * Math.sin(t * 1.3 + f.ph);
             return <circle key={i} cx={x} cy={y} r={2.5 + (i % 3)} fill="#cfd8e3" opacity={0.8} />;
           })}
         </Fr>
       </Live>
       <Live k={1} cam={cam}>
         <Fr>
-          {/* two officials facing each other across the document (ON TWOS: breathing, the signing hand) */}
-          <g transform={`translate(200 ${950 + 2 * Math.sin(t2 * 1.6)}) scale(1.05)`}><Person id="p15a" p={OFF.a} lean={14} rim="#ffd9a0" rimOp={0.6} /></g>
-          <g transform={`translate(900 ${940 + 2 * Math.sin(t2 * 1.4 + 1)}) scale(-1.05 1.05)`}><Person id="p15b" p={OFF.b} lean={6 - 4 * smile} smile={smile} rim="#ffd9a0" rimOp={0.6} /></g>
-          {/* the treaty on the table */}
-          <path d={`M380 ${TABLE_Y - 60} L700 ${TABLE_Y - 72} L720 ${TABLE_Y - 14} L370 ${TABLE_Y - 2} Z`} fill="#efe9dc" />
-          {[0, 1, 2].map((k) => <path key={k} d={`M410 ${TABLE_Y - 50 + k * 12} L660 ${TABLE_Y - 59 + k * 12}`} stroke="#a89f8c" strokeWidth={3} />)}
-          <path d={`M470 ${TABLE_Y - 18} Q${470 + 70 * sign} ${TABLE_Y - 30} ${penX} ${TABLE_Y - 20}`} stroke="#1c2a4a" strokeWidth={4} fill="none" opacity={sign > 0 ? 1 : 0} />
-          {/* official A's hand with the pen */}
-          <g transform={`translate(${penX} ${TABLE_Y - 22 - 6 * Math.abs(Math.sin(t2 * 14)) * (sign > 0 && sign < 1 ? 1 : 0)})`}>
-            <path d="M-260 30 C-180 0 -80 -10 -20 -20 L-10 20 C-80 40 -180 60 -260 70 Z" fill="#1e222c" />
-            <path d="M-40 -30 C0 -40 30 -20 30 6 C30 26 0 34 -30 30 Z" fill="#c49a7e" />
-            <rect x={-6} y={-60} width={8} height={70} rx={3} fill="#1a1a1a" transform="rotate(25)" />
+          {/* far arms first (behind the bodies) */}
+          <Arm S={[330, 1000]} E={[400, T + 30]} H={[540, T + 44]} suit={A.shirtD} skin={A.skin} shade={A.shade} />
+          <Arm S={[770, 990]} E={[740, T + 20]} H={[640, T - 40 + 4 * Math.sin(t2 * 3)]} suit={B.shirtD} skin={B.skin} shade={B.shade} />
+          {/* the two seated officials (ON TWOS: breathing); table hides them from mid-torso down */}
+          <g transform={`translate(300 ${760 + 2 * Math.sin(t2 * 1.6)})`}><Person id="p15a" p={A} lean={12} rim="#ffd9a0" rimOp={0.6} /></g>
+          <g transform={`translate(800 ${750 + 2 * Math.sin(t2 * 1.4 + 1)}) scale(-1 1)`}><Person id="p15b" p={B} lean={5 - 3 * smile} smile={smile} blink={0.45 * smile} rim="#ffd9a0" rimOp={0.6} /></g>
+          {/* side parting on the dark-haired man */}
+          <path d="M720 600 Q760 588 800 596" transform="translate(0 -8)" stroke="#3a322c" strokeWidth={4} fill="none" opacity={0.8} />
+          {/* the long table: top surface + front face */}
+          <path d={`M-140 ${T} L1230 ${T} L1230 ${T + 70} L-140 ${T + 70} Z`} fill="#4a2e1e" />
+          <path d={`M-140 ${T} L1230 ${T}`} stroke="#7a5638" strokeWidth={6} />
+          <path d={`M-140 ${T + 70} L1230 ${T + 70} L1230 ${T + 420} L-140 ${T + 420} Z`} fill="#2a1a12" />
+          <ellipse cx={540} cy={T + 30} rx={360} ry={40} fill="#ffd9a0" opacity={0.18} />
+          {/* the treaty */}
+          <path d={`M410 ${T + 12} L690 ${T + 10} L700 ${T + 56} L400 ${T + 58} Z`} fill="#efe9dc" />
+          {[0, 1].map((k) => <path key={k} d={`M440 ${T + 22 + k * 10} L660 ${T + 21 + k * 10}`} stroke="#a89f8c" strokeWidth={3} />)}
+          <path d={`M470 ${T + 46} Q${470 + 55 * sign} ${T + 38} ${penA[0]} ${T + 46}`} stroke="#1c2a4a" strokeWidth={4} fill="none" opacity={sign > 0 ? 1 : 0} />
+          {/* near arms: A's elbow on the table, hand signing; B holds the pen up in both hands and caps it on "keep" */}
+          <Arm S={[350, 1010]} E={[400, T + 40]} H={[penA[0] - 18, penA[1] - 6]} suit={A.shirt} skin={A.skin} shade={A.shade} />
+          <rect x={penA[0] - 6} y={penA[1] - 54} width={8} height={56} rx={3} fill="#1a1a1a" transform={`rotate(28 ${penA[0]} ${penA[1]})`} />
+          <g>
+            <rect x={612} y={T - 46 + 4 * Math.sin(t2 * 3)} width={100} height={9} rx={4} fill="#2a2a30" />
+            <rect x={590 + 30 * capOn} y={T - 48 + 4 * Math.sin(t2 * 3)} width={36} height={13} rx={4} fill="#c9a24a" />
           </g>
-          {/* official B caps his pen on "keep" */}
-          <g transform={`translate(${790} ${TABLE_Y - 40})`}>
-            <path d="M200 120 C120 100 60 80 20 60 L30 30 C80 40 140 60 210 80 Z" fill="#22262e" />
-            <path d="M0 20 C-30 10 -40 40 -20 60 C0 72 30 60 30 40 Z" fill="#d0a88c" />
-            <rect x={-24} y={-40} width={8} height={70} rx={3} fill="#2a2a30" transform="rotate(-20)" />
-            <rect x={-26 - 30 * (1 - cap)} y={-60 - 20 * (1 - cap)} width={10} height={26} rx={3} fill="#c9a24a" transform="rotate(-20)" />
-          </g>
+          <Arm S={[760, 1000]} E={[740, T + 34]} H={[712, T - 36 + 4 * Math.sin(t2 * 3)]} suit={B.shirt} skin={B.skin} shade={B.shade} />
         </Fr>
       </Live>
     </AbsoluteFill>
