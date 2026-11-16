@@ -3,9 +3,9 @@ import { AbsoluteFill } from 'remotion';
 import { useShot, BandImg, Live, Cam, ramp, EIO, clamp01 } from '../comp/Camera';
 import { wordAt } from '../data/ep';
 import { rng } from '../art/world';
-import { CROWD, CrowdFig, Boat, Aerial } from '../art/riverbed_art';
+import { Boat, Aerial, bankTop } from '../art/riverbed_art';
 import { GM } from '../art/riverbed_gold';
-import { FatherBoy, Boatman, CapOldMan, Villager, KneelWoman, SlideKid, GirlGoat } from '../art/riverbed_people';
+import { ShoulderRide, BankPerson, Boatman, CapOldMan, Villager, KneelWoman, SlideKid, GirlGoat } from '../art/riverbed_people';
 
 /** y of the gold mountain's top edge at x (smooth base curve of the rough edge) */
 const goldY = (x: number) => { const f = (x - (GM.cx - GM.w / 2)) / GM.w; return GM.top + (GM.base - GM.top) * Math.pow(Math.abs(f - 0.47) * 2, 1.8); };
@@ -24,24 +24,41 @@ const Haze: React.FC<{ t: number; y0: number; y1: number; col: string }> = ({ t,
 );
 
 /** shot 1 — HOOK (flash-forward): thousands line the high banks of the dry bed, frozen, staring at one gold glint that flares on "Euphrates"; a man lifts a boy onto his shoulders. Very slow push-in. */
+/** bank-top spectators: 3 depth rows per bank, shrinking with distance, facing the bed centre */
+const BANK_PPL = (() => {
+  const r = rng(77); const out: { x: number; y: number; h: number; dir: 1 | -1; body: string; head: string; scarf: boolean; point: boolean; ph: number }[] = [];
+  const cols = ['#5a4a3e', '#3e4a5a', '#7a5a46', '#4a3a48', '#6a6a52', '#8a4a3a', '#d8ccb4', '#2e3440'];
+  for (const side of [-1, 1] as const) for (let row = 2; row >= 0; row--) {
+    let f = 0.02 + r() * 0.03;
+    while (f < 0.93) {
+      const [bx, by] = bankTop(side, f); const s = 1 - f; const kid = r() < 0.12;
+      const h = (16 + 150 * Math.pow(s, 1.6)) * (kid ? 0.62 : 1) * (1 - row * 0.06);
+      out.push({ x: bx - side * row * h * 0.35, y: by + 4 - row * h * 0.12, h, dir: (side < 0 ? 1 : -1), body: cols[Math.floor(r() * cols.length)], head: r() < 0.5 ? '#8a5a44' : '#a8765c', scarf: r() < 0.3, point: r() < 0.14, ph: r() * 6 });
+      f += (0.012 + 0.05 * Math.pow(s, 1.5)) * (0.7 + r() * 0.6);
+    }
+  }
+  return out.sort((a, b) => a.h - b.h);
+})();
+
+/** shot 1 — HOOK (flash-forward): people line both high banks of the dry bed, all facing one gold glint that flares on "Euphrates"; in front a father has a boy on his shoulders who points at it. Very slow push-in. */
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const te = wordAt(1, /^Euphrates/i, 0.11);
   const cam: Cam = { zoom: 1.04 + 0.06 * ramp(p, 0, 1, (n) => n), dx: 0, dy: 0, ty: 60, ox: 540, oy: 1140 };
-  const flare = 0.6 + 0.4 * Math.sin(t * 4) * 0.3 + (t >= te ? 1.2 * Math.exp(-(t - te) * 2) : 0);
-  const near = CROWD.filter((q) => q.s > 3.2);
+  const flare = 0.75 + 0.15 * Math.sin(t * 4) + (t >= te ? 1.6 * Math.exp(-(t - te) * 1.6) : 0);
+  const pt = ramp(t2, te - 0.05, te + 0.25);
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="riverbed/day" k={0.95} cam={cam} />
       <Live k={0.95} cam={cam}>
-        {near.map((q, i) => <CrowdFig key={i} x={q.x + Math.sin(t2 * 1.5 + q.ph) * 1.5 * q.s} y={q.y} s={q.s} col={['#5a4a3e', '#3e3430', '#6a5244', '#2e2a2e', '#7a5a46'][q.c]} />)}
-        <ellipse cx={648} cy={1336} rx={40} ry={11} fill="#e8b84a" />
-        <ellipse cx={642} cy={1333} rx={18} ry={5} fill="#fff0b0" />
-        <Flare x={648} y={1330} s={1.0 * flare} a={Math.min(1, flare)} />
+        {BANK_PPL.map((q, i) => <BankPerson key={i} x={q.x} y={q.y} h={q.h} dir={q.dir} body={q.body} head={q.head} scarf={q.scarf} point={q.point ? 0.7 + 0.3 * Math.sin(t2 * 2 + q.ph) * 0.3 : 0} sw={i % 3 === 0 ? t2 * 1.8 + q.ph : 0} />)}
+        <ellipse cx={648} cy={1336} rx={56} ry={15} fill="#e8b84a" />
+        <ellipse cx={640} cy={1332} rx={26} ry={7} fill="#fff0b0" />
+        <Flare x={648} y={1328} s={1.3 * flare} a={Math.min(1, flare)} />
         <Haze t={t} y0={1050} y1={1350} col="#fff6e4" />
       </Live>
       <Live k={1.15} cam={cam}>
-        <FatherBoy x={930} y={2200} h={760} lift={ramp(t2, 0, 1.7)} sw={t2 * 1.5} />
+        <ShoulderRide x={930} y={2230} h={820} lift={ramp(t2, 0, 0.9)} point={pt} sw={t2 * 1.5} />
       </Live>
     </AbsoluteFill>
   );
@@ -114,14 +131,14 @@ export const S16: React.FC = () => {
   const { t, t2 } = useShot();
   const tc = wordAt(16, /^coin/i, 0.12), tn = wordAt(16, /^nugget/i, 0.39), ts = wordAt(16, /^see/i, 0.88);
   const down = ramp(t, 0.1, tn, EIO), up = ramp(t, tn, ts, EIO);
-  const cam: Cam = { zoom: 1.9 - 0.9 * up, dx: 0, dy: 0, ty: -560 * down * (1 - up), ox: 592, oy: 770 };
+  const cam: Cam = { zoom: 1.9 - 0.9 * up, dx: 0, dy: 0, ty: -240 * down * (1 - up), ox: 592, oy: 820 };
   const vs = [-260, -180, -110, -40, 30, 90, 170, 250].map((dx, i) => ({ x: GM.cx + dx, i }));
   const g1 = t >= tc ? Math.exp(-(t - tc) * 2.5) : 0, g2 = t >= tn ? Math.exp(-(t - tn) * 2) : 0;
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="riverbed/gold" k={1} cam={cam} />
       <Live k={1} cam={cam}>
-        {vs.map((v) => <Villager key={v.i} x={v.x} y={goldY(v.x) + 90} h={110} body={VCOLS[v.i % 6]} head="#8a5a44" scarf={v.i % 3 === 1} shovel={v.i % 2 === 0} sw={t2 * 1.4 + v.i} shadow={-30} />)}
+        {vs.map((v) => <g key={v.i}><ellipse cx={v.x - 4} cy={goldY(v.x) + 92} rx={20} ry={5} fill="#6a4418" opacity={0.45} /><Villager x={v.x} y={goldY(v.x) + 90} h={110} body={VCOLS[v.i % 6]} head="#8a5a44" scarf={v.i % 3 === 1} shovel={v.i % 2 === 0} sw={t2 * 1.4 + v.i} /></g>)}
         <Flare x={GM.cx - 60} y={goldY(GM.cx - 60) + 70} s={0.5 + g1} a={Math.min(1, 0.3 + g1)} />
         <Flare x={GM.cx + 160} y={GM.top + 420} s={0.6 + 1.2 * g2} a={Math.min(1, 0.2 + g2)} />
         <Flare x={GM.cx - 300} y={GM.top + 360} s={0.4 + 0.3 * Math.sin(t * 3)} a={0.4} />

@@ -94,27 +94,33 @@ export const PoolBand: React.FC = () => {
         if (y > POOL.edge - 200) return null;
         const s = 0.2 + row * 0.04, n = Math.floor(W / (16 * s));
         let d = '';
-        for (let k = 0; k < n; k += 2) { const x = k * 16 * s + r() * 10 * s; d += `M ${x.toFixed(1)} ${y + r() * 6 * s} l ${(10 * s).toFixed(1)} ${(-2 * s).toFixed(1)} `; }
-        return <path key={row} d={d} stroke={row % 3 ? '#cfd6d8' : '#a9b2b6'} strokeWidth={Math.max(1, 2.6 * s)} strokeLinecap="round" opacity={0.55} />;
+        for (let k = 0; k < n; k++) { const x = k * 16 * s + r() * 10 * s; d += `M ${x.toFixed(1)} ${y + r() * 6 * s} l ${(10 * s).toFixed(1)} ${(-2 * s).toFixed(1)} `; }
+        return <path key={row} d={d} stroke={row % 3 ? '#cfd6d8' : '#a9b2b6'} strokeWidth={Math.max(1, 3 * s)} strokeLinecap="round" opacity={0.85} />;
       })}
       {cracks(812, W, POOL.horizon + 20, POOL.edge - 160, '#5a4430', 20, 120).map((n, i) => <g key={i} opacity={0.4}>{n}</g>)}
-      {/* the near pool: murky, shallow, a ring of wet mud */}
-      <ellipse cx={640} cy={POOL.edge + 260} rx={900} ry={360} fill="#6a5238" />
-      <ellipse cx={640} cy={POOL.edge + 270} rx={820} ry={310} fill="#7a8a7e" />
-      <ellipse cx={600} cy={POOL.edge + 220} rx={500} ry={90} fill="#c9d4cc" opacity={0.35} />
+      {/* the near pool is all but gone: a ring of wet brown mud, a few shallow brown puddles with sky glints */}
+      <ellipse cx={640} cy={POOL.edge + 280} rx={900} ry={380} fill="#6a5238" />
+      <ellipse cx={640} cy={POOL.edge + 300} rx={760} ry={300} fill="#5a4430" />
+      <ellipse cx={520} cy={POOL.edge + 260} rx={260} ry={60} fill="#8a7458" />
+      <ellipse cx={880} cy={POOL.edge + 380} rx={200} ry={44} fill="#8a7458" />
+      <ellipse cx={500} cy={POOL.edge + 250} rx={150} ry={14} fill="#e6dcc4" opacity={0.4} />
+      <ellipse cx={870} cy={POOL.edge + 374} rx={110} ry={10} fill="#e6dcc4" opacity={0.4} />
     </g>
   );
 };
 
-/** a silver fish flopping: ph = phase (people/animals ON TWOS) */
-export const Fish: React.FC<{ x: number; y: number; s: number; ph: number }> = ({ x, y, s, ph }) => {
-  const bend = Math.sin(ph) * 22, hop = Math.max(0, Math.sin(ph * 0.5)) * 30;
+/** a silver fish lying on wet mud: tail flicks and the body curls (ON TWOS: pass t2-based ph); occasional small flop */
+export const Fish: React.FC<{ x: number; y: number; s: number; ph: number; rot?: number }> = ({ x, y, s, ph, rot = 0 }) => {
+  const flick = Math.sin(ph) * 26, hop = Math.max(0, Math.sin(ph * 0.31) - 0.85) * 120;
   return (
-    <g transform={`translate(${x} ${y - hop}) rotate(${bend * 0.6}) scale(${s})`}>
-      <path d={`M -40 0 Q -10 -16 26 -4 Q 36 0 26 6 Q -10 18 -40 4 Z`} fill="#c9d2d6" />
-      <path d={`M -40 0 Q -10 -16 26 -4`} stroke="#ffffff" strokeWidth={3} fill="none" opacity={0.8} />
-      <path d={`M -38 2 L ${-58} ${-12 + bend * 0.4} L ${-56} ${16 + bend * 0.4} Z`} fill="#a9b2b6" />
+    <g transform={`translate(${x} ${y - hop}) rotate(${rot + flick * 0.25}) scale(${s})`}>
+      <ellipse cx={0} cy={8 + hop / s} rx={40} ry={5} fill="#2a1e14" opacity={0.35} />
+      <path d="M -36 0 Q -8 -15 26 -4 Q 36 0 26 6 Q -8 17 -36 4 Z" fill="#c9d2d6" />
+      <path d="M -30 -2 Q -8 -12 22 -4" stroke="#ffffff" strokeWidth={3} fill="none" opacity={0.85} />
+      <path d="M -10 6 Q 4 10 20 5" stroke="#8a969c" strokeWidth={2} fill="none" />
+      <g transform={`rotate(${flick} -34 2)`}><path d="M -34 2 L -56 -12 L -52 2 L -56 16 Z" fill="#a9b2b6" /></g>
       <circle cx={18} cy={-1} r={3} fill="#1a1a1e" />
+      <path d="M 10 -6 q 3 4 0 9" stroke="#8a969c" strokeWidth={1.5} fill="none" />
     </g>
   );
 };

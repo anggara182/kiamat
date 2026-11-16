@@ -156,3 +156,65 @@ export const GirlGoat: React.FC<{ x: number; y: number; h: number; sw: number; r
     </g>
   );
 };
+
+/** small bank-top spectator facing the bed centre (dir: +1 faces right). point 0..1 raises an arm toward the glint. */
+export const BankPerson: React.FC<{ x: number; y: number; h: number; dir: 1 | -1; body: string; head: string; scarf: boolean; point: number; sw: number }> = ({ x, y, h, dir, body, head, scarf, point, sw }) => {
+  const u = h / 7; const ox = Math.sin(sw) * u * 0.08; const shY = y - h * 0.78; const cx = x + ox;
+  return (
+    <g>
+      <path d={`M${cx - u * 0.55} ${y} L${cx - u * 0.75} ${shY + u * 0.2} Q${cx} ${shY - u * 0.15} ${cx + u * 0.75} ${shY + u * 0.2} L${cx + u * 0.55} ${y} Z`} fill={body} />
+      {point > 0.01 && <path d={`M${cx + dir * u * 0.6} ${shY + u * 0.25} L${cx + dir * u * (1.0 + 0.8 * point)} ${shY + u * (0.6 - 0.9 * point)} L${cx + dir * u * (1.3 + 1.3 * point)} ${shY + u * (0.9 - 1.6 * point)}`} stroke={body} strokeWidth={u * 0.28} strokeLinecap="round" strokeLinejoin="round" fill="none" />}
+      {scarf ? <g><path d={`M${cx - u * 0.48} ${shY - u * 0.5} Q${cx - u * 0.6} ${shY + u * 0.1} ${cx - u * 0.8} ${shY + u * 0.3} L${cx + u * 0.8} ${shY + u * 0.3} Q${cx + u * 0.6} ${shY + u * 0.1} ${cx + u * 0.48} ${shY - u * 0.5} Z`} fill="#4a3434" /><ellipse cx={cx} cy={shY - u * 0.58} rx={u * 0.48} ry={u * 0.54} fill="#4a3434" /><ellipse cx={cx + dir * u * 0.15} cy={shY - u * 0.55} rx={u * 0.24} ry={u * 0.33} fill={head} /></g>
+        : <g><rect x={cx - u * 0.13} y={shY - u * 0.25} width={u * 0.26} height={u * 0.3} fill={head} /><ellipse cx={cx} cy={shY - u * 0.6} rx={u * 0.42} ry={u * 0.5} fill={head} /><path d={`M${cx - u * 0.44} ${shY - u * 0.62} Q${cx - dir * u * 0.1} ${shY - u * 1.2} ${cx + u * 0.44} ${shY - u * 0.72} Q${cx - dir * u * 0.2} ${shY - u * 0.85} ${cx - u * 0.44} ${shY - u * 0.62} Z`} fill="#1d1a1a" /></g>}
+    </g>
+  );
+};
+
+/** man from behind (three-quarter, turned left toward the glint) with a boy sitting on his shoulders.
+ *  lift 0..1: the boy is raised from his side onto his shoulders; point 0..1: the boy's arm points ahead-left. */
+export const ShoulderRide: React.FC<{ x: number; y: number; h: number; lift: number; point: number; sw: number }> = ({ x, y, h, lift, point, sw }) => {
+  const u = h / 7; const ox = Math.sin(sw) * u * 0.04; const k = lift;
+  const mx = x + ox; const shY = y - h * 0.8;
+  const headX = mx - u * 0.12, headY = shY - u * 0.62;
+  const cu = u * 0.78; // boy unit
+  // boy hips: seated on the shoulders behind the head (k = 1), or held at the man's right side (k = 0)
+  const hipX = mx + u * 1.5 * (1 - k), hipY = shY - u * 0.15 + u * 1.9 * (1 - k);
+  const bShY = hipY - cu * 1.5;
+  const shinL: [number, number] = [mx - u * 0.72, shY + u * 0.95], shinR: [number, number] = [mx + u * 0.62, shY + u * 0.95];
+  const kneeL: [number, number] = [mx - u * 0.62, shY + u * 0.05], kneeR: [number, number] = [mx + u * 0.55, shY + u * 0.05];
+  const handL: [number, number] = k > 0.5 ? [shinL[0] + u * 0.05, shinL[1] - u * 0.2] : [hipX - cu * 0.7, hipY - cu * 0.3];
+  const handR: [number, number] = k > 0.5 ? [shinR[0] - u * 0.05, shinR[1] - u * 0.2] : [hipX + cu * 0.7, hipY - cu * 0.3];
+  const shirt = '#d8ccb4', shirtD = '#a89c84', pants = '#4a4038', skin = '#7a4f3e';
+  return (
+    <g>
+      {/* boy's shins hanging down the man's chest (seated) */}
+      {k > 0.5 && <g>
+        {limb([hipX - cu * 0.4, hipY], kneeL, shinL, cu * 0.3, '#5a4a3a')}
+        {limb([hipX + cu * 0.4, hipY], kneeR, shinR, cu * 0.3, '#5a4a3a')}
+        <ellipse cx={shinL[0]} cy={shinL[1] + cu * 0.15} rx={cu * 0.2} ry={cu * 0.13} fill="#2a2420" />
+        <ellipse cx={shinR[0]} cy={shinR[1] + cu * 0.15} rx={cu * 0.2} ry={cu * 0.13} fill="#2a2420" />
+      </g>}
+      {/* man */}
+      <path d={`M${mx - u * 0.6} ${y - h * 0.47} L${mx + u * 0.6} ${y - h * 0.47} L${mx + u * 0.5} ${y} L${mx - u * 0.5} ${y} Z`} fill={pants} />
+      <path d={`M${mx - u} ${shY + u * 0.1} Q${mx} ${shY - u * 0.15} ${mx + u} ${shY + u * 0.1} L${mx + u * 0.75} ${y - h * 0.44} L${mx - u * 0.75} ${y - h * 0.44} Z`} fill={shirt} />
+      <path d={`M${mx + u * 0.1} ${shY} Q${mx + u * 0.8} ${shY} ${mx + u} ${shY + u * 0.1} L${mx + u * 0.75} ${y - h * 0.44} L${mx + u * 0.2} ${y - h * 0.44} Z`} fill={shirtD} opacity={0.6} />
+      {limb([mx - u * 0.9, shY + u * 0.15], [mx - u * 1.25, shY + u * 0.95], handL, u * 0.28, shirt)}
+      {limb([mx + u * 0.9, shY + u * 0.15], [mx + u * 1.25, shY + u * 0.95], handR, u * 0.28, shirtD)}
+      <ellipse cx={handL[0]} cy={handL[1]} rx={u * 0.17} ry={u * 0.15} fill={skin} />
+      <ellipse cx={handR[0]} cy={handR[1]} rx={u * 0.17} ry={u * 0.15} fill={skin} />
+      <rect x={headX - u * 0.15} y={shY - u * 0.3} width={u * 0.3} height={u * 0.35} fill={skin} />
+      <ellipse cx={headX} cy={headY} rx={u * 0.42} ry={u * 0.5} fill="#1d1a1a" />
+      <ellipse cx={headX - u * 0.36} cy={headY + u * 0.05} rx={u * 0.08} ry={u * 0.14} fill={skin} />
+      <path d={`M${headX - u * 0.45} ${headY - u * 0.25} Q${headX} ${headY - u * 0.65} ${headX + u * 0.45} ${headY - u * 0.25} L${headX + u * 0.42} ${headY - u * 0.1} L${headX - u * 0.42} ${headY - u * 0.1} Z`} fill="#e8e2d2" />
+      {/* boy (back view): thighs over the shoulders, torso, head, pointing arm */}
+      {k <= 0.5 && <g>{limb([hipX - cu * 0.3, hipY], [hipX - cu * 0.4, hipY + cu * 0.9], [hipX - cu * 0.3, hipY + cu * 1.7], cu * 0.3, '#5a4a3a')}{limb([hipX + cu * 0.3, hipY], [hipX + cu * 0.5, hipY + cu * 0.8], [hipX + cu * 0.4, hipY + cu * 1.6], cu * 0.3, '#5a4a3a')}</g>}
+      {k > 0.5 && <g>{limb([hipX - cu * 0.45, hipY + cu * 0.1], [kneeL[0], kneeL[1]], kneeL, cu * 0.34, '#5a4a3a')}{limb([hipX + cu * 0.45, hipY + cu * 0.1], [kneeR[0], kneeR[1]], kneeR, cu * 0.34, '#5a4a3a')}</g>}
+      <path d={`M${hipX - cu * 0.62} ${hipY + cu * 0.15} L${hipX - cu * 0.62} ${bShY + cu * 0.2} Q${hipX} ${bShY - cu * 0.15} ${hipX + cu * 0.62} ${bShY + cu * 0.2} L${hipX + cu * 0.62} ${hipY + cu * 0.15} Z`} fill="#3e6a8a" />
+      {limb([hipX + cu * 0.55, bShY + cu * 0.25], [hipX + cu * 0.9, bShY + cu * 0.9], [hipX + cu * 0.7, bShY + cu * 1.3], cu * 0.24, '#3e6a8a')}
+      {limb([hipX - cu * 0.55, bShY + cu * 0.25], [hipX - cu * (0.9 + 0.6 * point), bShY + cu * (0.8 - 1.3 * point)], [hipX - cu * (1.0 + 1.5 * point), bShY + cu * (1.3 - 2.0 * point)], cu * 0.24, '#3e6a8a')}
+      <ellipse cx={hipX - cu * (1.0 + 1.5 * point)} cy={bShY + cu * (1.3 - 2.0 * point)} rx={cu * 0.14} ry={cu * 0.12} fill={skin} />
+      <rect x={hipX - cu * 0.13} y={bShY - cu * 0.3} width={cu * 0.26} height={cu * 0.35} fill={skin} />
+      <ellipse cx={hipX - cu * 0.05} cy={bShY - cu * 0.62} rx={cu * 0.5} ry={cu * 0.56} fill="#1d1a1a" />
+    </g>
+  );
+};
