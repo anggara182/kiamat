@@ -49,7 +49,7 @@ export const S02: React.FC = () => {
         {stopped && t < tS + 0.6 && <ellipse cx={bx + 360} cy={G - 10} rx={120 + 200 * (t - tS)} ry={30} fill="#d8c39a" opacity={0.6 * (1 - (t - tS) / 0.6)} />}
         <Boat x={bx} y={G} s={1.1} />
         <ellipse cx={fx} cy={G + 4} rx={110} ry={12} fill="#2a2018" opacity={0.3} />
-        <Figure x={fx} y={G} h={h} dir={1} pose={pose} look={{ body: '#7a8a8e', far: '#5a6a6e', skin: '#8a5a40', beard: '#c9c2b8', rim: '#fff6e0', rimO: 0.7 }} />
+        <Figure x={fx} y={G} h={h} dir={1} pose={pose} look={{ body: '#7a8a8e', far: '#5a6a6e', skin: '#8a5a40', beard: '#7a7068', rim: '#fff6e0', rimO: 0.7 }} />
         <Dust t={t} w={BED.w} />
       </Live>
     </AbsoluteFill>
@@ -129,10 +129,10 @@ export const S13: React.FC = () => {
   const stopped = t2 >= tS;
   const turn = ramp(t2, tS, tS + 0.17);
   const dir = turn < 0.5 ? 1 : -1;
-  const cam: Cam = { zoom: 1.12, dx: 360 - 300 * Math.min(t, tS) * 0.95, dy: 0, ox: 540, oy: 1000 };
+  const cam: Cam = { zoom: 1.12, dx: 700 - 300 * Math.min(t, tS), dy: 0, ox: 540, oy: 1000 };
   const pose: Pose = stopped ? { lean: 6 + 10 * turn, head: 12, thA: 6, shA: 2, thB: -6, shB: -6, uaA: 20 + 30 * turn, faA: 40 + 30 * turn, uaB: 10, faB: 20, breath: 1.2 * Math.sin(t2 * 6) } : { ...walkPose(t2 * 13, false, 1.35), lean: 14 };
   const goatX = 760 + 520 * t2;
-  const glX = gx - 300 + (stopped ? 0 : 0), glintX = 420 + 300 * tS - 280, glintK = Math.max(ramp(t, tS - 0.5, tS - 0.3) * 0.25, ramp(t, tS - 0.05, tS + 0.1) * (1 - 0.4 * ramp(t, tS + 0.4, tS + 1.2)));
+  const glX = gx - 300 + (stopped ? 0 : 0), glintX = 420 + 300 * tS - 240, glintK = Math.max(ramp(t, tS - 0.5, tS - 0.3) * 0.25, ramp(t, tS - 0.05, tS + 0.1) * (1 - 0.4 * ramp(t, tS + 0.4, tS + 1.2)));
   void glX;
   const sq = 1 - 0.2 * Math.sin(turn * Math.PI);
   return (
@@ -141,7 +141,7 @@ export const S13: React.FC = () => {
       <Live cam={cam} w={BED.w}>
         <Heat t={t} y={BED.horizon + 10} />
         <Goat x={goatX} y={G - 30} s={1.9} t2={t2} />
-        <Glint x={glintX} y={G + 40} k={glintK} s={1.2} />
+        <Glint x={glintX} y={G + 50} k={glintK} s={1.6} />
         <ellipse cx={gx} cy={G + 4} rx={60} ry={8} fill="#2a2018" opacity={0.3} />
         <g transform={`translate(${gx} 0) scale(${sq} 1) translate(${-gx} 0)`}>
           <Figure x={gx} y={G} h={h} dir={dir} pose={pose} look={{ body: '#c9a08a', far: '#a8806a', skin: '#a8765a', hat: 'braids', hatCol: '#2a1e18', skirt: true, rim: '#fff6e0', rimO: 0.6 }} />
