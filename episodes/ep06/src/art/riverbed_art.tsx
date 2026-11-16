@@ -20,13 +20,13 @@ export const CROWD = (() => {
   const r = rng(12); const out: { x: number; y: number; s: number; c: number; ph: number }[] = [];
   for (const side of [-1, 1] as const) for (let row = 0; row < 6; row++) for (let i = 0; i < 230; i++) {
     const f = Math.pow(r(), 0.7); const [x, y] = bankTop(side, f);
-    const s = 0.35 + (1 - f) * 3.6;
+    const s = 0.4 + Math.pow(1 - f, 1.4) * 6.5;
     out.push({ x: x + (side < 0 ? -1 : 1) * row * 18 * s + (r() - 0.5) * 10 * s, y: y - row * 6 * s, s, c: Math.floor(r() * 5), ph: r() * 6 });
   }
   return out.sort((a, b) => a.s - b.s);
 })();
 export const CrowdFig: React.FC<{ x: number; y: number; s: number; col: string }> = ({ x, y, s, col }) => (
-  <g fill={col}><rect x={x - 4 * s} y={y - 24 * s} width={8 * s} height={24 * s} rx={3 * s} /><circle cx={x} cy={y - 28 * s} r={3.8 * s} /></g>
+  <g fill={col}><path d={`M${x - 6 * s} ${y} L${x - 6.5 * s} ${y - 18 * s} Q${x} ${y - 22 * s} ${x + 6.5 * s} ${y - 18 * s} L${x + 6 * s} ${y} Z`} /><circle cx={x} cy={y - 25 * s} r={4.4 * s} /></g>
 );
 
 export const RiverScene: React.FC<{ m: 'day' | 'night'; crowd?: boolean }> = ({ m, crowd = true }) => {

@@ -27,9 +27,9 @@ const Haze: React.FC<{ t: number; y0: number; y1: number; col: string }> = ({ t,
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const te = wordAt(1, /^Euphrates/i, 0.11);
-  const cam: Cam = { zoom: 1.12 + 0.06 * ramp(p, 0, 1, (n) => n), dx: 0, dy: 0, ty: 330, ox: 540, oy: 1140 };
+  const cam: Cam = { zoom: 1.04 + 0.06 * ramp(p, 0, 1, (n) => n), dx: 0, dy: 0, ty: 60, ox: 540, oy: 1140 };
   const flare = 0.6 + 0.4 * Math.sin(t * 4) * 0.3 + (t >= te ? 1.2 * Math.exp(-(t - te) * 2) : 0);
-  const near = CROWD.filter((q) => q.s > 2.4);
+  const near = CROWD.filter((q) => q.s > 3.2);
   return (
     <AbsoluteFill style={{ backgroundColor: '#efe6d2' }}>
       <BandImg id="riverbed/day" k={0.95} cam={cam} />
@@ -41,7 +41,7 @@ export const S01: React.FC = () => {
         <Haze t={t} y0={1050} y1={1350} col="#fff6e4" />
       </Live>
       <Live k={1.15} cam={cam}>
-        <FatherBoy x={920} y={2290} h={820} lift={ramp(t2, 0, 1.7)} sw={t2 * 1.5} />
+        <FatherBoy x={930} y={2200} h={760} lift={ramp(t2, 0, 1.7)} sw={t2 * 1.5} />
       </Live>
     </AbsoluteFill>
   );
@@ -92,7 +92,7 @@ export const S07: React.FC = () => {
 export const S11: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tn = wordAt(11, /^nothing/i, 0.73);
-  const cam: Cam = { zoom: 1.15 + 0.03 * p, dx: 0, dy: 0, ty: 300, ox: 540, oy: 1000 };
+  const cam: Cam = { zoom: 1.2 + 0.03 * p, dx: 0, dy: 0, ty: 420, ox: 540, oy: 1000 };
   const turn = ramp(t2, tn - 0.05, tn + 0.15);
   const step = ramp(t2, tn + 0.15, tn + 1.2, (n) => n);
   const r = rng(5);

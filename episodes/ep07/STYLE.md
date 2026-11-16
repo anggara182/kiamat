@@ -27,4 +27,4 @@ Hook: "Ninety-nine out of every hundred will die for it." A sea of lamps over th
 | `camp` | `H.tsx` | 7, 9, 10 |
 | `farcity` | `P.tsx` | 3, 14, 15, 16 (title "NINETY-NINE" + "CHAPTER 7 · THE LAST DAYS") |
 
-`sync` words in episode.json are binding (`wordAt`). Timing is an ESTIMATE until the real VO lands. Shot 11 carries the quote overlay (top ~15–40%): keep it dark and calm.
+`sync` words in episode.json are binding (`wordAt`). Timing is FINAL (real VO). Shot 11 carries the quote overlay (top ~15–40%): keep it dark and calm.

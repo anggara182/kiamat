@@ -28,4 +28,4 @@ Flash-forward hook: thousands of people on the banks of a dry riverbed staring a
 | `village` | `H.tsx` | 5, 6, 9, 10, 12 |
 | `roads` | `P.tsx` | 18, 19, 20 (title "THE RIVER RUNS DRY" + "CHAPTER 6 · THE LAST DAYS") |
 
-`sync` words in episode.json are binding (`wordAt`). Timing is an ESTIMATE until the real VO lands. Shot 11 carries the quote overlay (top ~15–40%): keep it dark and calm.
+`sync` words in episode.json are binding (`wordAt`). Timing is FINAL (real VO). Shot 11 carries the quote overlay (top ~15–40%): keep it dark and calm.

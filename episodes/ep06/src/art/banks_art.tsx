@@ -94,8 +94,8 @@ export const PoolBand: React.FC = () => {
         if (y > POOL.edge - 200) return null;
         const s = 0.2 + row * 0.04, n = Math.floor(W / (16 * s));
         let d = '';
-        for (let k = 0; k < n; k++) { const x = k * 16 * s + r() * 10 * s; d += `M ${x.toFixed(1)} ${y + r() * 6 * s} l ${(10 * s).toFixed(1)} ${(-2 * s).toFixed(1)} `; }
-        return <path key={row} d={d} stroke={row % 3 ? '#cfd6d8' : '#a9b2b6'} strokeWidth={Math.max(1, 3.4 * s)} strokeLinecap="round" />;
+        for (let k = 0; k < n; k += 2) { const x = k * 16 * s + r() * 10 * s; d += `M ${x.toFixed(1)} ${y + r() * 6 * s} l ${(10 * s).toFixed(1)} ${(-2 * s).toFixed(1)} `; }
+        return <path key={row} d={d} stroke={row % 3 ? '#cfd6d8' : '#a9b2b6'} strokeWidth={Math.max(1, 2.6 * s)} strokeLinecap="round" opacity={0.55} />;
       })}
       {cracks(812, W, POOL.horizon + 20, POOL.edge - 160, '#5a4430', 20, 120).map((n, i) => <g key={i} opacity={0.4}>{n}</g>)}
       {/* the near pool: murky, shallow, a ring of wet mud */}

@@ -57,11 +57,13 @@ export const Boatman: React.FC<{ x: number; y: number; h: number; crouch: number
 export const CapOldMan: React.FC<{ x: number; y: number; h: number; turn: number; step: number; rim: string }> = ({ x, y, h, turn, step, rim }) => {
   const u = h / 7; const back = turn > 0.5;
   const shY = y - h * 0.78; const lean = back ? 0 : u * 0.15;
-  const robe = '#cfd6e2', robeD = '#7a8296';
+  const robe = '#7a8498', robeD = '#3e4456';
   return (
     <g transform={`translate(${-step * u * 0.6} 0)`}>
-      <path d={`M${x - u * 0.7} ${shY + u * 0.15} Q${x + lean} ${shY - u * 0.15} ${x + u * 0.7} ${shY + u * 0.15} L${x + u * 0.85} ${y} L${x - u * 0.8} ${y} Z`} fill={robe} />
+      <path d={`M${x - u * 0.75} ${shY + u * 0.15} Q${x + lean} ${shY - u * 0.15} ${x + u * 0.75} ${shY + u * 0.15} L${x + u * 0.65} ${y} L${x - u * 0.6} ${y} Z`} fill={robe} />
       <path d={`M${x + u * 0.1} ${shY} Q${x + u * 0.6} ${shY} ${x + u * 0.7} ${shY + u * 0.15} L${x + u * 0.85} ${y} L${x + u * 0.2} ${y} Z`} fill={robeD} opacity={0.7} />
+      <path d={`M${x + u * 0.6} ${shY + u * 0.25} L${x + u * (back ? 0.75 : 0.9)} ${shY + u * 1.5}`} stroke={robeD} strokeWidth={u * 0.24} strokeLinecap="round" />
+      <path d={`M${x - u * 0.6} ${shY + u * 0.25} L${x - u * 0.75} ${shY + u * 1.5}`} stroke={robe} strokeWidth={u * 0.24} strokeLinecap="round" />
       <ellipse cx={x + lean + (back ? 0 : u * 0.1)} cy={shY - u * 0.55} rx={u * 0.38} ry={u * 0.46} fill={back ? '#2a2e3a' : '#5a4a44'} />
       {!back && <path d={`M${x + lean + u * 0.38} ${shY - u * 0.45} Q${x + lean + u * 0.5} ${shY - u * 0.05} ${x + lean + u * 0.1} ${shY + u * 0.05} L${x + lean} ${shY - u * 0.3} Z`} fill="#e8ecf2" />}
       <path d={`M${x + lean - u * 0.38} ${shY - u * 0.62} Q${x + lean} ${shY - u * 1.1} ${x + lean + u * 0.38} ${shY - u * 0.62} Z`} fill="#f2f4f8" />
