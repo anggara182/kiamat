@@ -14,9 +14,9 @@ const Puff: React.FC<{ x: number; y: number; rx: number; ry: number; lit?: boole
 export const S01: React.FC = () => {
   const { p, t, t2 } = useShot();
   const tm = wordAt(1, /^man/i, 0.75);
-  const cam: Cam = { zoom: 1.03 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ox: 540, oy: 1100 };
-  const A: [number, number] = [660, HZ.night + 4], B: [number, number] = [120, 2500];
-  const trucks = Array.from({ length: 16 }).map((_, i) => { const u = ((i / 16) + t * 0.035) % 1; return { u, i }; }).filter((q) => q.u < 0.82).sort((a, b) => a.u - b.u);
+  const cam: Cam = { zoom: 1.12 + 0.07 * ramp(p, 0, 1, EIO), dx: 0, dy: 0, ty: -200, ox: 540, oy: 1100 };
+  const A: [number, number] = [640, HZ.night + 4], B: [number, number] = [1180, 2420];
+  const trucks = Array.from({ length: 16 }).map((_, i) => { const u = ((i / 16) + t * 0.035) % 1; return { u, i }; }).filter((q) => q.u < 0.86).sort((a, b) => a.u - b.u);
   const crack = ramp(t, tm, tm + 0.45, (n) => n);
   return (
     <AbsoluteFill style={{ backgroundColor: '#05070f' }}>
@@ -38,7 +38,7 @@ export const S01: React.FC = () => {
           <path d="M-200 1020 L330 1060 L360 2000 L-200 2000 Z" fill="#1a1814" />
           <path d="M330 1060 L360 2000" stroke="#fff3d0" strokeOpacity={0.35} strokeWidth={4} />
           <rect x={-200} y={1240} width={560} height={14} fill="#2a2620" />
-          <rect x={250} y={1100} width={8} height={420} fill="#3a362e" />
+          <rect x={404} y={1080} width={10} height={480} fill="#3a362e" /><rect x={330} y={1080} width={90} height={10} fill="#3a362e" />
           <circle cx={130} cy={2010} r={130} fill="#0a0908" /><circle cx={130} cy={2010} r={50} fill="#1e1c18" />
           <rect x={120} y={1960} width={260} height={18} fill="#2a2620" />
           <Soldier x={320} y={1960} h={720} br={t2 * 2.4} bob={Math.sin(t2 * 9) * 3} />
@@ -93,7 +93,7 @@ export const S09: React.FC = () => {
   const tt = wordAt(9, /^trucks/i, 0.21), th = wordAt(9, /^horizon/i, 0.8);
   const out = ramp(t, tt, th, EIO);
   const cam: Cam = { zoom: 1.5 - 0.5 * out, dx: 0, dy: 0, ty: -120 * (1 - out) + 30 * p, ox: 400, oy: 1700 };
-  const N = 90;
+  const N = 46;
   return (
     <AbsoluteFill style={{ backgroundColor: '#f1e6cc' }}>
       <BandImg id="desert/day" k={1} cam={cam} />
@@ -101,9 +101,9 @@ export const S09: React.FC = () => {
         <LightDefs />
         <path d={Array.from({ length: 61 }).map((_, i) => { const [x, y] = colPt(i / 60); return `${i ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`; }).join(' ')} stroke="#c4a87a" strokeWidth={26} fill="none" opacity={0.6} />
         {Array.from({ length: N }).map((_, i) => {
-          const s = ((i / N) + t * 0.006) % 1; const [x, y] = colPt(s); const [x2, y2] = colPt(Math.max(0, s - 0.004));
+          const s = ((i / N) + ((i * 37) % 11) / (N * 22) + t * 0.006) % 1; const [x, y] = colPt(s); const [x2, y2] = colPt(Math.max(0, s - 0.004));
           const ang = (Math.atan2(y - y2, x - x2) * 180) / Math.PI; const k = 1 - s; const sc = 0.25 + 1.6 * k * k;
-          return <g key={i}><ellipse cx={x2 - (x - x2) * 3} cy={y2 - (y - y2) * 3 - 6 * sc} rx={40 * sc} ry={14 * sc} fill="url(#dustL)" opacity={0.8} /><TinyTruck x={x} y={y} s={sc} ang={ang} col={i % 3 ? '#8a7a5a' : '#6a6450'} /></g>;
+          return <g key={i}><ellipse cx={x2 - (x - x2) * 3} cy={y2 - (y - y2) * 3 - 6 * sc} rx={70 * sc} ry={24 * sc} fill="url(#dustL)" opacity={0.9} /><TinyTruck x={x} y={y} s={sc} ang={ang} col={i % 3 ? '#8a7a5a' : '#6a6450'} /></g>;
         })}
       </Live>
     </AbsoluteFill>

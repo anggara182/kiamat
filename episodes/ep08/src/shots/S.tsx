@@ -23,6 +23,7 @@ export const S07: React.FC = () => {
       <Live cam={cam}>
         <Glow k={k} mood="night" />
         <WhiteCrowd t2={t2} mood="night" z0={8} z1={240} />
+        {[[180, 1950, 760, 0], [470, 2050, 840, 1.3], [820, 1990, 800, 2.6], [1110, 2080, 880, 3.4]].map(([x, y, h, ph], i) => <BackWalker key={i} x={x} y={y - 30 * t2} h={h} ph={t2 * 6 + ph} col="#e9edf4" shirt={i % 2 ? '#dfe4ee' : '#f4f1ea'} hat={i === 2 ? 'hijab' : null} opacity={0.97} />)}
         <BackWalker x={mx} y={my} h={(1.75 * M.f) / z} ph={t2 * 6} col="#5a5048" shirt="#b8a88a" opacity={1 - 0.5 * clamp01((t2 - 3) / 1.5)} />
       </Live>
     </AbsoluteFill>
@@ -43,7 +44,7 @@ export const S11: React.FC = () => {
       <BandImg id="refuge/hood" cam={cam} />
       <Live cam={cam}>
         <Grains t={t} k={k} jump={jump} />
-        <Canteen x={940} y={1520} s={1.5} rot={Math.sin(t * 47) * (2 + 6 * k) + 10 * jump * Math.sin(t * 30)} hop={Math.abs(Math.sin(t * 38)) * (3 * k + 30 * jump)} />
+        <Canteen x={1000} y={1150} s={1.3} rot={Math.sin(t * 47) * (2 + 6 * k) + 10 * jump * Math.sin(t * 30)} hop={Math.abs(Math.sin(t * 38)) * (3 * k + 30 * jump)} />
         <HoodHand x={500} y={1440} lift={lift} trem={Math.sin(t2 * 40) * (1 + 3 * k)} />
       </Live>
     </AbsoluteFill>
@@ -86,6 +87,12 @@ export const S14: React.FC = () => {
         <rect x={fx - 70} y={fy} width={140} height={14} fill="#e9eef4" />
         <DepthWalker x={fx} y={fy} h={46} ph={0} col="#2a2a30" />
         <WhiteCrowd t2={t2 * 0.4} mood="dawn" arms={arms} z0={6} z1={58} />
+        {[[200, 2140, 820], [520, 2200, 900], [860, 2150, 860], [1150, 2220, 920]].map(([x, y, h], i) => (
+          <g key={i}>
+            <BackWalker x={x} y={y} h={h} ph={0} col="#e9edf4" shirt="#f4f1ea" point={clamp01(arms * 1.1 - 0.1 + 0.05 * Math.sin(t2 * 3 + i))} hat={i === 1 ? 'hijab' : null} />
+            <g transform={`translate(${x} 0) scale(-1 1) translate(${-x} 0)`}><BackWalker x={x} y={y} h={h} ph={0} col="#e9edf4" shirt="#f4f1ea" point={clamp01(arms * 1.1 - 0.25)} hat={i === 1 ? 'hijab' : null} /></g>
+          </g>
+        ))}
       </Live>
     </AbsoluteFill>
   );

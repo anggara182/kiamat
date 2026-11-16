@@ -26,9 +26,9 @@ export const S04: React.FC = () => {
   const A: Pal = { skin: '#a06c52', skinD: '#6e4636', top: '#c96b4a', topD: '#a04a2e', bottom: '#4a3a4a', headC: '#3a5a7a', headD: '#2a4060', rim: '#fff4dc' };
   const B: Pal = { skin: '#8a5a44', skinD: '#5e3b2e', top: '#d8c8a0', topD: '#a8986e', bottom: '#5a4a3a', headC: '#8a3a4a', headD: '#5e2430', rim: '#fff4dc' };
   const M: Pal = { skin: '#9a6650', skinD: '#6a4434', top: '#4a5a6a', topD: '#32404e', bottom: '#2e2c34', headC: '#14121a', headD: '#14121a', rim: '#fff4dc' };
-  const oX = 720, oY = 1430, oH = 800, oLean = 10 + 6 * sL - 4 * moved;
+  const oX = 620, oY = 1430, oH = 800, oLean = 10 + 6 * sL - 4 * moved;
   const oh = leanPt(oX, oY - 3 * Math.sin(t2 * 2) * 0.8, oH, -1, oLean, [22, -930]);
-  const manX = lerp(980, 900, clamp01(t2 / (tW + 0.6)));
+  const manX = lerp(1120, 1020, clamp01(t2 / (tW + 0.6)));
   const cam: Cam = { zoom: 1.08, dx: 60 - 120 * EIO(p), dy: 0, ox: 540, oy: 1000 };
   return (
     <AbsoluteFill style={{ backgroundColor: '#d8cdb8' }}>
@@ -36,12 +36,12 @@ export const S04: React.FC = () => {
       <Live cam={cam}>
         <Fr>
           {/* the whisper travels: two women further back, then a man stops and turns */}
-          <Side x={500} y={MK.ground + 20} h={560} pal={A} head="scarf" skirt lean={4 + 18 * w2} handN={[120 + 20 * w2, -860]} handF={[60, -480]} bob={2 * Math.sin(t2 * 2)} rimO={0.3} />
-          <Side x={620} y={MK.ground + 20} h={540} dir={-1} pal={B} head="scarf" skirt lean={-4 * w2} headTilt={8 * w2} handN={[90, -520]} bob={2 * Math.sin(t2 * 2.3)} rimO={0.3} />
+          <Side x={760} y={MK.ground + 20} h={560} pal={A} head="scarf" skirt lean={4 + 18 * w2} handN={[120 + 20 * w2, -860]} handF={[60, -480]} bob={2 * Math.sin(t2 * 2)} rimO={0.3} />
+          <Side x={880} y={MK.ground + 20} h={540} dir={-1} pal={B} head="scarf" skirt lean={-4 * w2} headTilt={8 * w2} handN={[90, -520]} bob={2 * Math.sin(t2 * 2.3)} rimO={0.3} />
           <Side x={manX} y={MK.ground + 10} h={580} dir={-1} pal={M} head="short" male face={m3 > 0.5 ? 'back' : 'side'} footN={[m3 > 0.5 ? 0 : 30 * Math.sin(t2 * 8), 0]} footF={[m3 > 0.5 ? 0 : -30 * Math.sin(t2 * 8), 0]} bob={m3 > 0.5 ? 0 : 5 * Math.abs(Math.sin(t2 * 8))} rimO={0.3} />
           {/* the seller leans over his fruit to the old woman */}
-          <Side x={300} y={1440} h={860} pal={SE} head="short" male lean={6 + 22 * sL} handN={[200 + 40 * sL, -880 + 40 * sL]} handF={[160, -560]} bob={2 * Math.sin(t2 * 2.6)} rimO={0.4} />
-          <FruitStall x={300} y={1440} />
+          <Side x={200} y={1440} h={860} pal={SE} head="short" male lean={6 + 22 * sL} handN={[200 + 40 * sL, -880 + 40 * sL]} handF={[160, -560]} bob={2 * Math.sin(t2 * 2.6)} rimO={0.4} />
+          <FruitStall x={220} y={1440} />
           <Side x={oX} y={oY} h={oH} dir={-1} pal={OW} head="scarf" skirt lean={oLean} headTilt={-10 * moved} handN={moved > 0.3 ? [90, -720] : [130, -560]} handF={[60, -480]} bob={3 * Math.sin(t2 * 2) * (1 - moved)} rimO={0.4} />
           {moved > 0.4 && <path d={`M${oh[0] - 30 * 0.8} ${oh[1] - 6} q-12 6 -24 0`} stroke="#3a2420" strokeWidth={4} fill="none" strokeLinecap="round" />}
           <path d={`M${oX + 60} ${oY - 470} L${oX + 90} ${oY}`} stroke="#6a4e32" strokeWidth={10} strokeLinecap="round" />
@@ -78,7 +78,7 @@ export const S05: React.FC = () => {
         <Fr>
           <Guards t2={t2} />
           <SunShaft a={shaft} />
-          {[[540, 760], [660, 740], [780, 780]].map(([x, hh], i) => {
+          {[[640, 760], [760, 740], [880, 780]].map(([x, hh], i) => {
             const bag = toFrame(x, 1440, hh, 1, [40, -430]);
             return (
               <g key={i}>
@@ -119,7 +119,13 @@ export const S08: React.FC = () => {
           <Front x={540} y={1760} h={1040} pal={SUIT} head="short" handL={[-150, -540]} handR={[fistX, fistY]} tilt={4 * down} bob={2 * Math.sin(t2 * 1.6)} rimO={0.9} />
           <MapTable jump={14 * Math.max(0, j)} wob={4 * j} />
           {/* the fist on the map (drawn over the table) */}
-          {down > 0.9 && <ellipse cx={540 + fistX * 1.04} cy={1760 + fistY * 1.04 + 20} rx={46} ry={30} fill="#16120f" />}
+          {down > 0.3 && (
+            <g>
+              <path d={`M${540 + 230 * 1.04} ${1760 - 640 * 1.04} L${540 + fistX * 1.04} ${1760 + fistY * 1.04}`} stroke={SUIT.top} strokeWidth={50} strokeLinecap="round" />
+              <ellipse cx={540 + fistX * 1.04} cy={1760 + fistY * 1.04 + 10} rx={40} ry={30} fill="#2a2018" />
+              <path d={`M${540 + fistX * 1.04 - 30} ${1760 + fistY * 1.04 + 20} q30 14 60 0`} stroke="#ffd9a0" strokeWidth={3} fill="none" opacity={0.6} />
+            </g>
+          )}
           <rect x={-200} y={-300} width={1500} height={2600} fill="#0a0b10" opacity={0.15} />
         </Fr>
       </Live>

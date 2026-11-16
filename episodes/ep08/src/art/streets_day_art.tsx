@@ -141,7 +141,7 @@ export const MapTable: React.FC<{ jump: number; wob: number }> = ({ jump, wob })
 export const UnderLight: React.FC<{ wob: number; t: number }> = ({ wob, t }) => (
   <g>
     <Glow id="srPool" x={520 + wob * 6} y={1290} rx={460} ry={180} c="#ffd9a0" o={0.55 + 0.02 * Math.sin(t * 17)} mid={0.3} />
-    <Glow id="srUp" x={540} y={1000} rx={520} ry={340} c="#ffd9a0" o={0.14} mid={0.3} />
+    <Glow id="srUp" x={540} y={1060} rx={560} ry={360} c="#ffd9a0" o={0.24} mid={0.3} />
   </g>
 );
 

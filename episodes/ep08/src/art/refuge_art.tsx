@@ -43,10 +43,10 @@ export const MeccaBand: React.FC<{ mood: Mood }> = ({ mood }) => {
       <rect x={0} y={M.YH - 120} width={W} height={130} fill={C.min} />
       {Array.from({ length: 22 }, (_, i) => <path key={i} d={`M ${i * 62} ${M.YH - 10} L ${i * 62} ${M.YH - 70} Q ${i * 62 + 31} ${M.YH - 104} ${i * 62 + 62} ${M.YH - 70} L ${i * 62 + 62} ${M.YH - 10}`} fill={C.minLit} opacity={0.35} />)}
       {/* tall generic minarets around the glow */}
-      {minaret(180, M.YH - 100, 620, 46, C.min, C.minLit, 'm1')}
-      {minaret(360, M.YH - 100, 760, 52, C.min, C.minLit, 'm2')}
-      {minaret(940, M.YH - 100, 780, 52, C.min, C.minLit, 'm3')}
-      {minaret(1120, M.YH - 100, 640, 46, C.min, C.minLit, 'm4')}
+      {minaret(170, M.YH - 100, 560, 70, C.min, C.minLit, 'm1')}
+      {minaret(330, M.YH - 100, 660, 80, C.min, C.minLit, 'm2')}
+      {minaret(966, M.YH - 100, 680, 80, C.min, C.minLit, 'm3')}
+      {minaret(1126, M.YH - 100, 570, 70, C.min, C.minLit, 'm4')}
       {/* the court floor, pale, receding */}
       <rect x={0} y={M.YH} width={W} height={H - M.YH} fill={C.ground} />
       <rect x={0} y={M.YH} width={W} height={40} fill={C.haze} opacity={0.6} />
@@ -61,12 +61,11 @@ export const Glow: React.FC<{ k: number; mood: Mood }> = ({ k, mood }) => {
     <g>
       <defs>
         <radialGradient id={`rfGlow${mood}`} cx="0.5" cy="0.5" r="0.5">
-          <stop offset="0" stopColor="#ffffff" stopOpacity={1} /><stop offset="0.35" stopColor="#ffffff" stopOpacity={0.85} />
+          <stop offset="0" stopColor="#ffffff" stopOpacity={1} /><stop offset="0.18" stopColor="#ffffff" stopOpacity={0.9} /><stop offset="0.4" stopColor="#fdf8ec" stopOpacity={0.65} />
           <stop offset="0.62" stopColor="#f3dca0" stopOpacity={0.45} /><stop offset="0.8" stopColor="#f3dca0" stopOpacity={0.12} /><stop offset="1" stopColor="#f3dca0" stopOpacity={0} />
         </radialGradient>
       </defs>
       <ellipse cx={M.glowX} cy={M.glowY} rx={r * 1.5} ry={r} fill={`url(#rfGlow${mood})`} opacity={mood === 'night' ? 0.95 : 0.8} />
-      <ellipse cx={M.glowX} cy={M.glowY + 40} rx={r * 0.5} ry={r * 0.22} fill="#ffffff" opacity={0.85} />
       {/* soft light thrown across the court floor */}
       <ellipse cx={M.glowX} cy={M.YH + 260} rx={r * 1.8} ry={r * 0.6} fill="#f6efe0" opacity={(mood === 'night' ? 0.18 : 0.12) * (1 + 0.5 * k)} />
     </g>
@@ -177,8 +176,6 @@ export const HoodBand: React.FC = () => {
       <path d={`M -40 ${HOOD.top} Q 648 ${HOOD.top - 60} ${W + 40} ${HOOD.top} L ${W + 40} ${H} L -40 ${H} Z`} fill="url(#rhMetal)" />
       <path d={`M -40 ${HOOD.top} Q 648 ${HOOD.top - 60} ${W + 40} ${HOOD.top}`} stroke="#fff2d0" strokeWidth={6} fill="none" opacity={0.8} />
       {/* panel seam, rivets, scuffs */}
-      <path d={`M 100 ${H} Q 300 1500 380 ${HOOD.top + 40}`} stroke="#7a6648" strokeWidth={5} fill="none" opacity={0.7} />
-      {Array.from({ length: 6 }, (_, i) => <circle key={i} cx={140 + i * 50} cy={2200 - i * 180} r={7} fill="#7a6648" />)}
       {Array.from({ length: 14 }, (_, i) => <path key={`s${i}`} d={`M ${r() * W} ${HOOD.top + 120 + r() * 1000} l ${40 + r() * 60} ${-4 + r() * 8}`} stroke="#e8d8b4" strokeWidth={3} opacity={0.5} />)}
     </g>
   );
